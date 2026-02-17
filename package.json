@@ -1,0 +1,10 @@
+{
+    "name": "mancorakiteclub",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm run dev --prefix client\" \"node server/index.js\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}

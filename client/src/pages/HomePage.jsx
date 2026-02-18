@@ -1,10 +1,11 @@
 import SEO from '../components/SEO.jsx'
-import CTA from '../sections/home/CTA.jsx'
-import Gallery from '../sections/home/Gallery.jsx'
-import HeroVideo from '../sections/home/HeroVideo.jsx'
-import Highlights from '../sections/home/Highlights.jsx'
-import Packages from '../sections/home/Packages.jsx'
+import BuilderPreview from '../sections/home/BuilderPreview.jsx'
+import Hero from '../sections/home/Hero.jsx'
+import Instruction from '../sections/home/Instruction.jsx'
+import Stay from '../sections/home/Stay.jsx'
 import Testimonials from '../sections/home/Testimonials.jsx'
+import Team from '../sections/home/Team.jsx'
+import Trips from '../sections/home/Trips.jsx'
 
 function HomePage() {
   return (
@@ -15,12 +16,13 @@ function HomePage() {
         canonicalPath="/"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />
-      <HeroVideo />
-      <Highlights />
-      <Packages />
-      <Gallery />
+      <Hero />
+      <Trips />
+      <Instruction />
+      <Stay />
+      <BuilderPreview />
       <Testimonials />
-      <CTA />
+      <Team />
     </>
   )
 }

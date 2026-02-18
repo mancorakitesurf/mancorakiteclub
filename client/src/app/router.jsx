@@ -1,0 +1,66 @@
+import { createBrowserRouter } from 'react-router-dom'
+import MainLayout from './layouts/MainLayout.jsx'
+import BlogPage from '../pages/BlogPage.jsx'
+import EquipmentRentalPage from '../pages/EquipmentRentalPage.jsx'
+import FaqPage from '../pages/FaqPage.jsx'
+import FourStarsHotelPage from '../pages/FourStarsHotelPage.jsx'
+import HomePage from '../pages/HomePage.jsx'
+import HostelPage from '../pages/HostelPage.jsx'
+import KitesurfingPage from '../pages/KitesurfingPage.jsx'
+import KiteClubHotelPage from '../pages/KiteClubHotelPage.jsx'
+import LearnKitesurfPage from '../pages/LearnKitesurfPage.jsx'
+import LearnWingfoilPage from '../pages/LearnWingfoilPage.jsx'
+import NotFound from '../pages/NotFound.jsx'
+import SoloSurfPage from '../pages/SoloSurfPage.jsx'
+import SupPage from '../pages/SupPage.jsx'
+import WingfoilPage from '../pages/WingfoilPage.jsx'
+import BlogEsPage from '../pages/es/BlogEsPage.jsx'
+import EquipmentEsPage from '../pages/es/EquipmentEsPage.jsx'
+import FaqEsPage from '../pages/es/FaqEsPage.jsx'
+import FourEstrellasEsPage from '../pages/es/FourEstrellasEsPage.jsx'
+import HomeEsPage from '../pages/es/HomeEsPage.jsx'
+import HostalEsPage from '../pages/es/HostalEsPage.jsx'
+import HotelKiteEsPage from '../pages/es/HotelKiteEsPage.jsx'
+import KitesurfingEsPage from '../pages/es/KitesurfingEsPage.jsx'
+import LearnKitesurfEsPage from '../pages/es/LearnKitesurfEsPage.jsx'
+import LearnWingfoilEsPage from '../pages/es/LearnWingfoilEsPage.jsx'
+import SoloSurfEsPage from '../pages/es/SoloSurfEsPage.jsx'
+import SupEsPage from '../pages/es/SupEsPage.jsx'
+import WingfoilEsPage from '../pages/es/WingfoilEsPage.jsx'
+
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+    children: [
+      { index: true, element: <HomePage /> },
+      { path: 'learn/kitesurf', element: <LearnKitesurfPage /> },
+      { path: 'learn/wingfoil', element: <LearnWingfoilPage /> },
+      { path: 'kitesurfing', element: <KitesurfingPage /> },
+      { path: 'wingfoil', element: <WingfoilPage /> },
+      { path: 'sup', element: <SupPage /> },
+      { path: 'equipment-rental', element: <EquipmentRentalPage /> },
+      { path: 'solo-surf', element: <SoloSurfPage /> },
+      { path: 'hostel', element: <HostelPage /> },
+      { path: 'kite-club-hotel', element: <KiteClubHotelPage /> },
+      { path: '4-stars-hotel', element: <FourStarsHotelPage /> },
+      { path: 'faq', element: <FaqPage /> },
+      { path: 'blog', element: <BlogPage /> },
+      { path: 'esp', element: <HomeEsPage /> },
+      { path: 'aprende/kitesurf/esp', element: <LearnKitesurfEsPage /> },
+      { path: 'aprende/wingfoil/esp', element: <LearnWingfoilEsPage /> },
+      { path: 'kitesurfing/esp', element: <KitesurfingEsPage /> },
+      { path: 'wingfoil/esp', element: <WingfoilEsPage /> },
+      { path: 'sup/esp', element: <SupEsPage /> },
+      { path: 'equipment/esp', element: <EquipmentEsPage /> },
+      { path: 'solo-surf/esp', element: <SoloSurfEsPage /> },
+      { path: 'acommodation/hostal/esp', element: <HostalEsPage /> },
+      { path: 'acommodation/hotel-kite/esp', element: <HotelKiteEsPage /> },
+      { path: 'acommodation/4-estrellas/esp', element: <FourEstrellasEsPage /> },
+      { path: 'faq/esp', element: <FaqEsPage /> },
+      { path: 'blog/esp', element: <BlogEsPage /> },
+      { path: '*', element: <NotFound /> },
+    ],
+  },
+])
+

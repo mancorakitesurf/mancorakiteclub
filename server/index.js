@@ -1,19 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
+const env = require('./config/env');
+const trailingSlashRedirect = require('./middleware/trailingSlash');
+const healthRoutes = require('./routes/health');
+const saludoRoutes = require('./routes/saludo');
+const sitemapRoutes = require('./routes/sitemap');
 
 const app = express();
 
-// Middlewares
-app.use(cors()); // Permite que tu React (puerto 5173) hable con Node (puerto 5000)
+app.use(cors());
 app.use(express.json());
+app.use(trailingSlashRedirect);
 
-// Ruta de prueba
-app.get('/api/saludo', (req, res) => {
-  res.json({ mensaje: "¡Hola desde el backend de Node.js!" });
-});
+app.use('/api', healthRoutes);
+app.use('/api', saludoRoutes);
+app.use(sitemapRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+app.listen(env.port, () => {
+  console.log(`Server running on http://localhost:${env.port}`);
 });

@@ -43,3 +43,17 @@ body {
 * {
   box-sizing: border-box;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}

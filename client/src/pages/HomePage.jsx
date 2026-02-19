@@ -5,6 +5,7 @@ import Instruction from '../sections/home/Instruction.jsx'
 import Stay from '../sections/home/Stay.jsx'
 import Testimonials from '../sections/home/Testimonials.jsx'
 import Team from '../sections/home/Team.jsx'
+import Movements from '../sections/home/Movements.jsx'
 import Trips from '../sections/home/Trips.jsx'
 
 function HomePage() {
@@ -17,6 +18,7 @@ function HomePage() {
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />
       <Hero />
+      <Movements />
       <Trips />
       <Instruction />
       <Stay />

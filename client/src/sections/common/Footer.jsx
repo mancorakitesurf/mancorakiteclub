@@ -51,7 +51,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="text-center md:text-left md:pl-8">
+          <div className="text-center md:text-left md:pl-11">
             <h4 className="mb-6 font-bold text-slate-900 dark:text-white">Explore</h4>
             <ul className="space-y-3 text-sm text-gray-500 dark:text-gray-400">
               <li>

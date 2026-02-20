@@ -1,7 +1,7 @@
-export const WHATSAPP_LINK = '#'
+import heroImage from '../../assets/imagenes-home/posicion5.jpg'
 
-export const HERO_IMAGE =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuB168wQtI2xiA0NgIJzAUtVPI6YJl4nDuO2Xc865NvvMnMwjotawqLXpmonHVRCzUOm0vEWFuebQ24EfNprBjdz2eexVGWzpU_yJBxstFPwrPtGizbmMCL2vE-NHaj9mpPY31mOJfrFC-LcR6VsD4CnkgPf4mzfUb20bcXfTKwNFeLSPk5AKHqJagLPC6Epm-mcGmXsWJ7ZfYP9JlfhHlcpDUBa7yGq_cETuFvad5pHAq6iJhx243R0NRW6L4aNOYLqeA1BbDs6Jq4'
+export const WHATSAPP_LINK = '#'
+export const HERO_IMAGE = heroImage
 
 export const TRIPS = [
   {

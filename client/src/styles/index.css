@@ -57,3 +57,8 @@ body {
   width: max-content;
   animation: marquee 20s linear infinite;
 }
+
+@keyframes slowZoom {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.15); }
+}

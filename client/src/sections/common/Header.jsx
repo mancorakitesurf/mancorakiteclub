@@ -5,11 +5,12 @@ import { useI18n } from '../../app/providers/i18nContext.js'
 import clubLogo from '../../assets/Logo/the-club-logo.png'
 
 const NAV_ITEMS = [
-  { id: 'trips', label: 'Trips' },
-  { id: 'classes', label: 'Classes' },
-  { id: 'stay', label: 'Stay' },
-  { id: 'packages', label: 'Packages' },
-  { id: 'testimonials', label: 'Testimonials' },
+  { to: '/trips', label: 'Trips' },
+  { to: '/classes', label: 'Classes' },
+  { to: '/stay', label: 'Stay with us' },
+  { to: '/build', label: 'Build your trip' },
+  { to: '/reviews', label: 'Reviews' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 function Header() {
@@ -73,13 +74,13 @@ function Header() {
         {/* Desktop Nav */}
         <nav className="hidden items-center space-x-8 md:flex">
           {NAV_ITEMS.map((item) => (
-            <a
-              key={item.id}
+            <Link
+              key={item.to}
               className="text-sm font-medium text-white/80 transition-colors hover:text-primary"
-              href={`${homePath}#${item.id}`}
+              to={item.to}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -151,14 +152,14 @@ function Header() {
         <nav className="border-t border-white/10 bg-[#0b1120] px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3">
             {NAV_ITEMS.map((item) => (
-              <a
-                key={item.id}
+              <Link
+                key={item.to}
                 className="text-sm font-medium text-white/80 hover:text-primary"
-                href={`${homePath}#${item.id}`}
+                to={item.to}
                 onClick={() => setIsMobileOpen(false)}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         </nav>

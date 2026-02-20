@@ -1,6 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout.jsx'
 import BlogPage from '../pages/BlogPage.jsx'
+import BuildPage from '../pages/BuildPage.jsx'
+import ClassesPage from '../pages/ClassesPage.jsx'
+import ContactPage from '../pages/ContactPage.jsx'
 import EquipmentRentalPage from '../pages/EquipmentRentalPage.jsx'
 import FaqPage from '../pages/FaqPage.jsx'
 import FourStarsHotelPage from '../pages/FourStarsHotelPage.jsx'
@@ -11,8 +14,11 @@ import KiteClubHotelPage from '../pages/KiteClubHotelPage.jsx'
 import LearnKitesurfPage from '../pages/LearnKitesurfPage.jsx'
 import LearnWingfoilPage from '../pages/LearnWingfoilPage.jsx'
 import NotFound from '../pages/NotFound.jsx'
+import ReviewsPage from '../pages/ReviewsPage.jsx'
 import SoloSurfPage from '../pages/SoloSurfPage.jsx'
+import StayPage from '../pages/StayPage.jsx'
 import SupPage from '../pages/SupPage.jsx'
+import TripsPage from '../pages/TripsPage.jsx'
 import WingfoilPage from '../pages/WingfoilPage.jsx'
 import BlogEsPage from '../pages/es/BlogEsPage.jsx'
 import EquipmentEsPage from '../pages/es/EquipmentEsPage.jsx'
@@ -46,6 +52,12 @@ export const router = createBrowserRouter([
       { path: '4-stars-hotel', element: <FourStarsHotelPage /> },
       { path: 'faq', element: <FaqPage /> },
       { path: 'blog', element: <BlogPage /> },
+      { path: 'trips', element: <TripsPage /> },
+      { path: 'classes', element: <ClassesPage /> },
+      { path: 'stay', element: <StayPage /> },
+      { path: 'build', element: <BuildPage /> },
+      { path: 'reviews', element: <ReviewsPage /> },
+      { path: 'contact', element: <ContactPage /> },
       { path: 'esp', element: <HomeEsPage /> },
       { path: 'aprende/kitesurf/esp', element: <LearnKitesurfEsPage /> },
       { path: 'aprende/wingfoil/esp', element: <LearnWingfoilEsPage /> },
@@ -63,4 +75,3 @@ export const router = createBrowserRouter([
     ],
   },
 ])
-

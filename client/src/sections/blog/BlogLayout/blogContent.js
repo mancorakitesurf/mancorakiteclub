@@ -12,7 +12,8 @@ export const POST_1_trending = trending1
 export const POST_2_trending = trending2
 
 export const POSTS = [
-  {
+  { 
+    slug: "world-best-kitesurfing-waves",
     category: 'KITESURF WAVE RIDING',
     title: "The 20 World's best destinations...",
     date: 'May 25, 2022',

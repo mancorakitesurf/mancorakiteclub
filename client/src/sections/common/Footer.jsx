@@ -113,7 +113,7 @@ function Footer() {
                 <FaEnvelope className="text-primary" /> hello@mancorakiteclub.com
               </li>
               <li className="flex items-center justify-center gap-3 md:justify-start">
-                <FaWhatsapp className="text-primary" /> +51 999 999 999
+                <FaWhatsapp className="text-primary" /> +51 996 557 689
               </li>
             </ul>
           </div>

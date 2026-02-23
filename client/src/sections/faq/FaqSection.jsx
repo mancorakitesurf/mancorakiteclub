@@ -10,7 +10,7 @@ function FaqSection({ category, questions }) {
 
   return (
     <section className="space-y-6">
-      
+
       <h3 className="text-center font-display text-xl tracking-widest text-primary uppercase">
         {category}
       </h3>

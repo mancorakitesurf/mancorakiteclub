@@ -3,7 +3,7 @@ import FaqSection from "./FaqSection"
 
 function FaqList() {
   return (
-    <main className="mx-auto max-w-4xl space-y-20 px-4 py-24">
+    <div className="space-y-20">
       {FAQ_DATA.map((section, index) => (
         <FaqSection
           key={index}
@@ -11,7 +11,7 @@ function FaqList() {
           questions={section.questions}
         />
       ))}
-    </main>
+    </div>
   )
 }
 

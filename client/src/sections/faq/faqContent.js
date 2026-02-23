@@ -1,54 +1,51 @@
-import heroImage from '../../assets/imagenes-home/posicion5.jpg'
-
-export const FAQ_HERO_IMAGE = heroImage
 export const FAQ_DATA = [
   {
-    category: "Sobre Aprender Kitesurfing",
+    category: "About Learning Kitesurfing",
     questions: [
       {
-        question: "¿El Kitesurfing es peligroso?",
+        question: "Is Kitesurfing dangerous?",
         answer:
-          "Con el equipo adecuado, instructores certificados y protocolos de seguridad, el kitesurf es un deporte muy seguro. En Mancora Kite Club priorizamos la seguridad en cada sesión."
+          "With the right equipment, certified instructors, and safety protocols, kitesurfing is a very safe sport. At Mancora Kite Club, we prioritize safety in every session."
       },
       {
-        question: "¿Necesito experiencia previa?",
+        question: "Do I need previous experience?",
         answer:
-          "No. Nuestros cursos están diseñados para principiantes absolutos y progresión avanzada."
+          "No. Our courses are designed for absolute beginners and advanced progression."
       },
       {
-        question: "¿Máncora es buen lugar para aprender?",
+        question: "Is Máncora a good place to learn?",
         answer:
-          "Sí. Máncora ofrece viento constante, aguas amplias y condiciones ideales para progresar rápidamente."
+          "Yes. Máncora offers constant wind, wide waters, and ideal conditions to progress quickly."
       }
     ]
   },
   {
-    category: "Equipamiento",
+    category: "Equipment",
     questions: [
       {
-        question: "¿El equipo está incluido en el curso?",
+        question: "Is equipment included in the course?",
         answer:
-          "Sí. Todo el equipo profesional está incluido: kite, arnés, tabla, casco y chaleco."
+          "Yes. All professional equipment is included: kite, harness, board, helmet, and impact vest."
       },
       {
-        question: "¿Qué marcas utilizan?",
+        question: "What brands do you use?",
         answer:
-          "Trabajamos con marcas premium reconocidas internacionalmente."
+          "We work with premium internationally recognized brands."
       }
     ]
   },
   {
-    category: "Reservas y Pagos",
+    category: "Bookings and Payments",
     questions: [
       {
-        question: "¿Cómo puedo reservar?",
+        question: "How can I book?",
         answer:
-          "Puedes reservar directamente desde nuestra web o contactarnos por WhatsApp."
+          "You can book directly on our website or contact us via WhatsApp."
       },
       {
-        question: "¿Qué métodos de pago aceptan?",
+        question: "What payment methods do you accept?",
         answer:
-          "Aceptamos tarjetas, transferencias bancarias y pagos internacionales."
+          "We accept cards, bank transfers, and international payments."
       }
     ]
   }

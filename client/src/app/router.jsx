@@ -8,8 +8,8 @@ import EquipmentRentalPage from '../pages/EquipmentRentalPage.jsx'
 import FaqPage from '../pages/FaqPage.jsx'
 import FourStarsHotelPage from '../pages/FourStarsHotelPage.jsx'
 import HomePage from '../pages/HomePage.jsx'
-import BlogPage1 from "../pages/blog/top-20-kitesurf-destinations-part-1.jsx"
-import BlogPage2 from "../pages/blog/7-Different-plans-of-a-kitesurf-trip-to-Perú.jsx"
+import BlogPage1 from '../pages/blog/top-20-kitesurf-destinations-part-1.jsx'
+import BlogPage2 from '../pages/blog/7-different-plans-of-a-kitesurf-trip-to-peru.jsx'
 import HostelPage from '../pages/HostelPage.jsx'
 import KitesurfingPage from '../pages/KitesurfingPage.jsx'
 import KiteClubHotelPage from '../pages/KiteClubHotelPage.jsx'
@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
       { path: 'faq', element: <FaqPage /> },
       { path: 'blog', element: <BlogPage /> },
       { path: 'blog/top-20-kitesurf-destinations-part-1', element: <BlogPage1 /> },
-      { path: 'blog/7-different-plans-of-a-kitesurf-trip-to-perú', element: <BlogPage2 /> },
+      { path: 'blog/7-different-plans-of-a-kitesurf-trip-to-peru', element: <BlogPage2 /> },
       { path: 'trips', element: <TripsPage /> },
       { path: 'trips/first-fly', element: <FirstFlyTripPage /> },
       { path: 'trips/olas-y-viento', element: <OlasYVientoTripPage /> },

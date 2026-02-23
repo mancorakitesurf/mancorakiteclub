@@ -1,25 +1,31 @@
-import { BLOGHERO_IMAGE } from '../BlogLayout/blogContent.js'
+import { motion } from "framer-motion"
+import { BLOGHERO_IMAGE } from "../BlogLayout/blogContent.js"
 
 function BlogHero() {
   return (
-    <section className="relative overflow-hidden py-32">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
-      {/* Imagen de fondo */}
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={BLOGHERO_IMAGE}
           alt="Kite surfer jumping over waves in Mancora"
-          className="h-full w-full object-cover"
+          className="w-full h-full object-cover"
         />
-        
-        {/* Overlay premium oscuro elegante */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+
+        {/* Premium overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
       </div>
 
-      {/* Contenido */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
-        
-        {/* Mini etiqueta */}
+      {/* Content */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative z-10 mx-auto max-w-6xl px-6 text-center text-white"
+      >
+
+        {/* Mini label */}
         <div className="mb-6 flex items-center justify-center gap-3">
           <span className="h-[2px] w-10 bg-primary" />
           <span className="text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
@@ -28,24 +34,24 @@ function BlogHero() {
           <span className="h-[2px] w-10 bg-primary" />
         </div>
 
-        {/* Título */}
-        <h1 className="font-display text-5xl font-bold leading-tight tracking-tight text-white md:text-7xl">
-          Kitesurfing Perú <br />
+        {/* Title */}
+        <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+          Kitesurfing Peru <br />
           <span className="text-primary">
             Wave Riding & Ocean Stories
           </span>
         </h1>
 
-        {/* Línea elegante */}
+        {/* Divider */}
         <div className="mx-auto mt-8 h-[3px] w-24 rounded-full bg-primary/80" />
 
-        {/* Subtexto */}
-        <p className="mx-auto mt-10 max-w-3xl text-lg font-light leading-relaxed text-white/80 md:text-xl">
-          Exploramos el viento, las olas y la cultura oceánica del norte del Perú.
-          Historias reales, técnica y lifestyle desde Máncora.
+        {/* Subtitle */}
+        <p className="mx-auto mt-10 max-w-3xl text-lg md:text-xl font-light leading-relaxed text-white/80">
+          We explore the wind, the waves, and the ocean culture of northern Peru.
+          Real stories, technique, and lifestyle from Máncora.
         </p>
 
-      </div>
+      </motion.div>
     </section>
   )
 }

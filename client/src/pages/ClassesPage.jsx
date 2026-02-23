@@ -1,42 +1,40 @@
 import SEO from "../components/SEO"
-import Container from "../components/ui/Container"
-import Button from "../components/ui/Button"
-import EquipmentSection from "../sections/classes/equipment/EquipmentSection"
-import { WHATSAPP_LINK } from "../sections/home/homeContent"
+import ClassesHero from "../sections/ClassesPage/ClassesHero.jsx"
+import ClassesIntro from "../sections/ClassesPage/ClassesIntro.jsx"
+import ClassesPricing from "../sections/ClassesPage/ClassesPricing.jsx"
+import ClassesBenefits from "../sections/ClassesPage/ClassesBenefits.jsx"
+import ClassesSteps from "../sections/ClassesPage/ClassesSteps.jsx"
+import ClassesGallery from "../sections/ClassesPage/ClassesGallery.jsx"
+import WingfoilIntro from "../sections/ClassesPage/WingfoilIntro.jsx"
+import WingfoilWithUs from "../sections/ClassesPage/WingfoilWithUs.jsx"
+import WingfoilClasses from "../sections/ClassesPage/WingfoilClasses.jsx"
+import WingfoilBenefits from "../sections/ClassesPage/WingfoilBenefits.jsx"
 
 function ClassesPage() {
   return (
     <>
       <SEO
-        title="Classes | Mancora Kite Club"
-        description="Private and small-group kite & wingfoil sessions."
+        title="Mancora Kite Club | Classes"
+        description="Private and small-group sessions without accommodation."
         canonicalPath="/classes"
         hreflang={{ en: "/classes", es: "/esp", default: "/" }}
       />
 
-      {/* Hero simple */}
-      <section className="py-24 bg-[#1E3130] text-white text-center">
-        <Container>
-          <h1 className="text-4xl font-bold mb-6">
-            Private & Small Group Classes
-          </h1>
+      {/* Bloques de Kitesurf */}
+      <ClassesHero />
+      <ClassesIntro />
+      <ClassesPricing />
+      <ClassesBenefits />
+      <ClassesSteps />
 
-          <p className="max-w-3xl mx-auto text-lg opacity-80 mb-10">
-            High-performance equipment and certified instructors.
-          </p>
+      {/* Bloques de Wingfoil */}
+      <WingfoilIntro />
+      <WingfoilWithUs />
+      <WingfoilClasses />
+      <WingfoilBenefits />
 
-          <Button
-            as="a"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book via WhatsApp
-          </Button>
-        </Container>
-      </section>
-
-      <EquipmentSection />
+      {/* Collage premium */}
+      <ClassesGallery />
     </>
   )
 }

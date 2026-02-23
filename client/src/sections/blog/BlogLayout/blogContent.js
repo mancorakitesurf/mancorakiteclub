@@ -13,15 +13,15 @@ export const POST_2_trending = trending2
 
 export const POSTS = [
   { 
-    slug: "world-best-kitesurfing-waves",
+    slug: "top-20-kitesurf-destinations-part-1",
     category: 'KITESURF WAVE RIDING',
     title: "The 20 World's best destinations...",
     date: 'May 25, 2022',
     author: 'Axel',
     image: posicionK2,
   },
-
   {
+    slug: "7-different-plans-of-a-kitesurf-trip-to-peru",
     category: 'KITESURFING PERU',
     title: '7 Different plans of a kitesurf trip to Perú',
     date: 'May 16, 2022',

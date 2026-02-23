@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { I18nProvider } from '../providers/I18nProvider.jsx'
-import FloatingWhatsApp from '../../components/FloatingWhatsApp'
+import FloatingWhatsApp from "../../components/FloatingWhatsApp.jsx"
 import Footer from '../../sections/common/Footer.jsx'
 import Header from '../../sections/common/Header.jsx'
 

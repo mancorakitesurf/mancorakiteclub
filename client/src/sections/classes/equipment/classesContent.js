@@ -35,6 +35,7 @@ export const KITESURF_DATA = [
     label: "Harnesses and Safety Gear",
     subtitle: "Impact vests and helmets",
   },
+  
 ]
 
 export const WINGFOIL_DATA = [

@@ -1,5 +1,6 @@
 import StandardPage from './StandardPage.jsx'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
+import FaqList from '../sections/faq/FaqList.jsx'
 
 function ContactPage() {
   return (
@@ -13,7 +14,10 @@ function ContactPage() {
         label: 'Contact via WhatsApp',
         href: buildWhatsAppUrl(defaultInquiryMessage({ page: 'contact' })),
       }}
-    />
+    >
+      <FaqList />
+    </StandardPage>
+
   )
 }
 

@@ -5,10 +5,12 @@ import ClassesPricing from "../sections/ClassesPage/ClassesPricing.jsx"
 import ClassesBenefits from "../sections/ClassesPage/ClassesBenefits.jsx"
 import ClassesSteps from "../sections/ClassesPage/ClassesSteps.jsx"
 import ClassesGallery from "../sections/ClassesPage/ClassesGallery.jsx"
+import EquipmentKite from "../sections/classes/equipment/EquipmentKite.jsx"
 import WingfoilIntro from "../sections/ClassesPage/WingfoilIntro.jsx"
 import WingfoilWithUs from "../sections/ClassesPage/WingfoilWithUs.jsx"
 import WingfoilClasses from "../sections/ClassesPage/WingfoilClasses.jsx"
 import WingfoilBenefits from "../sections/ClassesPage/WingfoilBenefits.jsx"
+import EquipmentWing from "../sections/classes/equipment/EquipmentWing.jsx"
 
 function ClassesPage() {
   return (
@@ -26,12 +28,15 @@ function ClassesPage() {
       <ClassesPricing />
       <ClassesBenefits />
       <ClassesSteps />
+      <EquipmentKite />
 
       {/* Bloques de Wingfoil */}
       <WingfoilIntro />
       <WingfoilWithUs />
       <WingfoilClasses />
       <WingfoilBenefits />
+      <EquipmentWing />
+
 
       {/* Collage premium */}
       <ClassesGallery />

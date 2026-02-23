@@ -30,14 +30,14 @@ function EquipmentSelector({ data, reverse = false }) {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`p-6 text-left border-l-4 transition ${
+            className={`flex-1 p-6 text-left border-l-4 transition flex flex-col justify-center ${
               activeIndex === index
                 ? "border-primary bg-white"
                 : "border-transparent hover:bg-white"
-            }`}
+            } ${reverse ? "lg:border-l-0 lg:border-r-4" : ""}`}
           >
-            <h5 className="font-bold">{item.label}</h5>
-            <p className="text-xs text-gray-500">{item.subtitle}</p>
+            <h5 className="font-bold text-black">{item.label}</h5>
+            <p className="text-xs text-black">{item.subtitle}</p>
           </button>
         ))}
       </div>

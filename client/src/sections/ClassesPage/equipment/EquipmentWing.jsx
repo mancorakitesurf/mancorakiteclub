@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import Container from "../../../components/ui/Container"
 import EquipmentSelector from "./EquipmentSelector"
 import { WINGFOIL_DATA } from "./classesContent"
@@ -9,9 +10,15 @@ function EquipmentWing() {
 
         {/* WINGFOIL */}
         <div>
-          <h3 className="text-3xl font-bold text-white mb-8 uppercase text-right">
+          <motion.h3 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl font-bold text-white mb-8 uppercase text-right"
+          >
             Wingfoil Equipment
-          </h3>
+          </motion.h3>
           <EquipmentSelector data={WINGFOIL_DATA} reverse />
         </div>
 

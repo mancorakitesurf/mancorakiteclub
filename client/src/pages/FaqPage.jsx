@@ -4,10 +4,12 @@ function FaqPage() {
   return (
     <StandardPage
       title="Mancora Kite Club | FAQ"
-      description="TODO: contenido real"
+      description="Frequently asked questions about kitesurfing lessons, equipment and reservations."
       canonicalPath="/faq"
       hreflang={{ en: '/faq', es: '/faq/esp', default: '/' }}
-    />
+      subtitle="Everything you need to know before starting your adventure."
+    >
+    </StandardPage>
   )
 }
 

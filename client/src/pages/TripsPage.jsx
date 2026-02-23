@@ -1,13 +1,7 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO.jsx'
 import { trips } from '../content/trips.js'
-import { WHATSAPP_LINK } from '../sections/home/homeContent.js'
-
-function buildWhatsAppLink(baseUrl, message) {
-  if (!baseUrl || baseUrl === '#') return '#'
-  const separator = baseUrl.includes('?') ? '&' : '?'
-  return `${baseUrl}${separator}text=${encodeURIComponent(message)}`
-}
+import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
 function TripsPage() {
   return (
@@ -32,7 +26,7 @@ function TripsPage() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {trips.map((trip) => {
-              const whatsappHref = buildWhatsAppLink(WHATSAPP_LINK, trip.whatsappMessage)
+              const whatsappHref = buildWhatsAppUrl(trip.whatsappMessage)
 
               return (
                 <article

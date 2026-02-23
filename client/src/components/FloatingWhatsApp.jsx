@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 import clubLogo from '../assets/Logo/LOGO-kite-new.png'
-import { WHATSAPP_LINK } from '../sections/home/homeContent.js'
+import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
-type FloatingWhatsAppProps = {
-  link?: string
-  message?: string
-}
-
-function FloatingWhatsApp({ link = WHATSAPP_LINK, message = '' }: FloatingWhatsAppProps) {
+function FloatingWhatsApp({ link, message = '' }) {
   const [isVisible, setIsVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [isAttentionOpen, setIsAttentionOpen] = useState(false)
@@ -38,10 +33,7 @@ function FloatingWhatsApp({ link = WHATSAPP_LINK, message = '' }: FloatingWhatsA
     return () => window.clearInterval(intervalId)
   }, [isHovered])
 
-  const href =
-    message && link.includes('whatsapp')
-      ? `${link}${link.includes('?') ? '&' : '?'}text=${encodeURIComponent(message)}`
-      : link
+  const href = link || buildWhatsAppUrl(message)
 
   return (
     <a
@@ -73,12 +65,12 @@ function FloatingWhatsApp({ link = WHATSAPP_LINK, message = '' }: FloatingWhatsA
         <span className="pointer-events-none absolute inset-0 rounded-full bg-emerald-500/15 animate-pulse" />
 
         <span className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border border-slate-200 bg-white text-emerald-600 shadow-xl">
-        <img
-          src={clubLogo}
-          alt="Máncora Kite Club"
-          className="h-9 w-9 object-contain opacity-100 scale-100 transition-all duration-300 group-hover:opacity-0 group-hover:scale-90 group-active:opacity-0 group-active:scale-90"
-        />
-        <FaWhatsapp className="absolute text-2xl opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-active:opacity-100 group-active:scale-100" />
+          <img
+            src={clubLogo}
+            alt="Máncora Kite Club"
+            className="h-9 w-9 object-contain opacity-100 scale-100 transition-all duration-300 group-hover:opacity-0 group-hover:scale-90 group-active:opacity-0 group-active:scale-90"
+          />
+          <FaWhatsapp className="absolute text-2xl opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-active:opacity-100 group-active:scale-100" />
         </span>
       </span>
     </a>

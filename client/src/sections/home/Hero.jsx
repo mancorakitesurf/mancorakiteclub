@@ -1,5 +1,6 @@
 import { FaChevronDown, FaWhatsapp } from 'react-icons/fa'
-import { HERO_IMAGE, WHATSAPP_LINK } from './homeContent.js'
+import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
+import { HERO_IMAGE } from './homeContent.js'
 
 function Hero() {
   return (
@@ -24,7 +25,9 @@ function Hero() {
 
         <div className="flex justify-center">
           <a
-            href={WHATSAPP_LINK}
+            href={buildWhatsAppUrl(defaultInquiryMessage('Mancora Kite Club'))}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-lg font-semibold text-white shadow-xl transition-all hover:-translate-y-1 hover:bg-teal-600 hover:shadow-teal-500/40"
           >
             <FaWhatsapp className="text-xl" /> Book on WhatsApp

@@ -1,11 +1,5 @@
 import SEO from '../../components/SEO.jsx'
-import { WHATSAPP_LINK } from '../../sections/home/homeContent.js'
-
-function buildWhatsAppLink(baseUrl, message) {
-  if (!baseUrl || baseUrl === '#') return '#'
-  const separator = baseUrl.includes('?') ? '&' : '?'
-  return `${baseUrl}${separator}text=${encodeURIComponent(message)}`
-}
+import { buildWhatsAppUrl } from '../../lib/whatsapp.js'
 
 function formatUsd(value) {
   return `$${value}`
@@ -14,7 +8,7 @@ function formatUsd(value) {
 function TripDetailPage({ trip }) {
   if (!trip) return null
 
-  const whatsappHref = buildWhatsAppLink(WHATSAPP_LINK, trip.whatsappMessage)
+  const whatsappHref = buildWhatsAppUrl(trip.whatsappMessage)
 
   return (
     <>

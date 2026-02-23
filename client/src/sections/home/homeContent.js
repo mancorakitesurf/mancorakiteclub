@@ -1,6 +1,7 @@
 import heroImage from '../../assets/imagenes-home/posicion5.jpg'
+import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 
-export const WHATSAPP_LINK = '#'
+export const WHATSAPP_LINK = buildWhatsAppUrl(defaultInquiryMessage())
 export const HERO_IMAGE = heroImage
 
 export const TRIPS = [

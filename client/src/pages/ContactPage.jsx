@@ -1,5 +1,5 @@
 import StandardPage from './StandardPage.jsx'
-import { WHATSAPP_LINK } from '../sections/home/homeContent.js'
+import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
 
 function ContactPage() {
   return (
@@ -9,7 +9,7 @@ function ContactPage() {
       description="Contact Máncora Kite Club for trips, classes, and stay."
       canonicalPath="/contact"
       hreflang={{ en: '/contact', es: '/esp', default: '/' }}
-      cta={{ label: 'WhatsApp', href: WHATSAPP_LINK }}
+      cta={{ label: 'WhatsApp', href: buildWhatsAppUrl(defaultInquiryMessage('your trip')) }}
     />
   )
 }

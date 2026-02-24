@@ -12,6 +12,7 @@ export const EN_TO_ES_ROUTE_MAP = {
   '/4-stars-hotel': '/acommodation/4-estrellas/esp',
   '/faq': '/faq/esp',
   '/blog': '/blog/esp',
+  '/waves': '/waves/esp',
 }
 
 export const ES_TO_EN_ROUTE_MAP = Object.fromEntries(
@@ -44,4 +45,3 @@ export function getLanguageSwitchPath(pathname = '/') {
 
   return '/'
 }
-

@@ -22,6 +22,7 @@ import StayPage from '../pages/StayPage.jsx'
 import SupPage from '../pages/SupPage.jsx'
 import TripsPage from '../pages/TripsPage.jsx'
 import WingfoilPage from '../pages/WingfoilPage.jsx'
+import WavesPage from '../pages/waves/Waves.jsx'
 import FirstFlyTripPage from '../pages/trips/FirstFlyTripPage.jsx'
 import OlasYVientoTripPage from '../pages/trips/OlasYVientoTripPage.jsx'
 import RideTheCoastTripPage from '../pages/trips/RideTheCoastTripPage.jsx'
@@ -65,6 +66,7 @@ export const router = createBrowserRouter([
       { path: 'trips/olas-y-viento', element: <OlasYVientoTripPage /> },
       { path: 'trips/solo-surf', element: <SoloSurfTripPage /> },
       { path: 'trips/ride-the-coast', element: <RideTheCoastTripPage /> },
+      { path: 'waves', element: <WavesPage /> },
       { path: 'classes', element: <ClassesPage /> },
       { path: 'stay', element: <StayPage /> },
       { path: 'build', element: <BuildPage /> },
@@ -83,6 +85,7 @@ export const router = createBrowserRouter([
       { path: 'acommodation/4-estrellas/esp', element: <FourEstrellasEsPage /> },
       { path: 'faq/esp', element: <FaqEsPage /> },
       { path: 'blog/esp', element: <BlogEsPage /> },
+      { path: 'waves/esp', element: <WavesPage canonicalPath="/waves/esp" /> },
       { path: '*', element: <NotFound /> },
     ],
   },

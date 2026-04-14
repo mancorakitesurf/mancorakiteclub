@@ -1,12 +1,23 @@
+import { useParams } from 'react-router-dom'
 import SEO from '../../components/SEO.jsx'
 import { buildWhatsAppUrl } from '../../lib/whatsapp.js'
+import { trips, getTripBySlug } from '../../content/trips.js'
 
 function formatUsd(value) {
   return `$${value}`
 }
 
-function TripDetailPage({ trip }) {
-  if (!trip) return null
+function TripDetailPage() {
+  const { slug } = useParams()
+  const trip = getTripBySlug(slug)
+
+  if (!trip) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <p>Trip not found</p>
+      </div>
+    )
+  }
 
   const whatsappHref = buildWhatsAppUrl(trip.whatsappMessage)
 

@@ -3,3 +3,9 @@ client/node_modules/
 server/node_modules/
 .env
 dist/
+
+# Archivos generados por agentes/IA
+AGENTS.md
+**/AGENTS.md
+*.agent.md
+*.instructions.md

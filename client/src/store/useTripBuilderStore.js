@@ -48,14 +48,14 @@ export const useTripBuilderStore = create((set, get) => ({
 
   generarLinkWhatsApp: () => {
     const { actividad, noches, horas, extras, datosUsuario } = get()
-    const mensaje = `¡Hola Máncora Kite Club! 🏄
+    const mensaje = `¡Hola Máncora Kite Club! 
 Quiero armar mi paquete:
-🏋️ Actividad: ${actividad}
-🌙 Noches: ${noches}
-⏱️ Horas de clase: ${horas}
-✨ Extras: ${extras.join(', ')}
-👤 Mi nombre es: ${datosUsuario.nombre}
-📧 Email: ${datosUsuario.email}`
+ Actividad: ${actividad}
+ Noches: ${noches}
+ Horas de clase: ${horas}
+ Extras: ${extras.join(', ')}
+ Mi nombre es: ${datosUsuario.nombre}
+ Email: ${datosUsuario.email}`
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`
   },
 }))

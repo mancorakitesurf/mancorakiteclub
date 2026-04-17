@@ -2,7 +2,7 @@ import SEO from '../../components/SEO'
 import BlogHeroPage1 from '../../sections/blogPage1/BlogHeroPage1/BlogHeroPage1'
 import BlogEditorialIntro from '../../sections/blogPage1/BlogLayoutPage1/BlogEditorialIntro'
 import BlogClosing from '../../sections/blogPage1/BlogLayoutPage1/BlogClosing'
-import TopDestinationsSection from "../../sections/blogPage1/BlogTop/BlogTop/TopDestinationsSection.jsx"
+import TopDestinationsSection from "../../sections/blogPage1/BlogTop/TopDestinationsSection.jsx"
 
 function BlogPage1() {
   return (

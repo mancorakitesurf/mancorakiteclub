@@ -1,5 +1,5 @@
 import PlanSection from "./PlanSection"
-import { PLANS } from "./plansData"
+import { PLANS } from "../plansData"
 
 function PlansScroller() {
   return (

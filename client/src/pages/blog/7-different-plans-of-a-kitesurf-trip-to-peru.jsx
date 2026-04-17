@@ -1,8 +1,8 @@
 import SEO from '../../components/SEO.jsx'
-import HeroSevenPlans from '../../sections/blogPage2/sevenPlans/HeroSevenPlans.jsx'
-import IntroStatement from '../../sections/blogPage2/sevenPlans/IntroStatement.jsx'
-import PlansScroller from '../../sections/blogPage2/sevenPlans/PlansScroller.jsx'
-import FinalCallToAction from '../../sections/blogPage2/sevenPlans/FinalCallToAction.jsx'
+import HeroSevenPlans from '../../sections/blogPage2/BlogHeroPage2/HeroSevenPlans.jsx'
+import IntroStatement from '../../sections/blogPage2/BlogLayoutPage2/IntroStatement.jsx'
+import PlansScroller from '../../sections/blogPage2/BlogLayoutPage2/PlansScroller.jsx'
+import FinalCallToAction from '../../sections/blogPage2/BlogLayoutPage2/FinalCallToAction.jsx'
 
 function BlogPage2() {
   return (
@@ -22,4 +22,4 @@ function BlogPage2() {
   )
 }
 
-export default BlogPage2
+export default BlogPage2;

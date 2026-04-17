@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import ctaBg from '../../../assets/imagenes-kitesurfing/posicionkt9.jpg'
+import ctaBg from '../../../assets/imagenes-kitsurfing-lessons/posicionk4.jpg'
 
 function FinalCallToAction() {
   return (

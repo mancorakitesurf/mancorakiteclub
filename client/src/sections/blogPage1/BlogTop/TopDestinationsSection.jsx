@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
-import DestinationCard from "../../../../sections/blogPage1/BlogLayoutPage1/DestinationCard"
-import { DESTINATIONS } from "../../../../sections/blogPage1/destinationsData"
-import sectionBg from "../../../../assets/imagenes-kitsurfing-lessons/posicionk4.jpg"
+import DestinationCard from "../BlogLayoutPage1/DestinationCard"
+import { DESTINATIONS } from "../destinationsData"
+import sectionBg from "../../../assets/imagenes-wingfoil/posicionw5.jpg"
 
 function TopDestinationsSection() {
   return (

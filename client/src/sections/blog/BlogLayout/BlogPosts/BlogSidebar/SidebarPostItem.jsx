@@ -1,6 +1,8 @@
-function SidebarPostItem({ title, image }) {
+import { Link } from "react-router-dom"
+
+function SidebarPostItem({ title, image, slug }) {
   return (
-    <div className="flex gap-4 group cursor-pointer">
+    <Link to={`/blog/${slug}`} className="flex gap-4 group cursor-pointer">
       <img
         src={image}
         alt={title}
@@ -9,8 +11,6 @@ function SidebarPostItem({ title, image }) {
       <p className="text-sm text-slate-700 transition group-hover:text-primary">
         {title}
       </p>
-    </div>
+    </Link>
   )
 }
-
-export default SidebarPostItem

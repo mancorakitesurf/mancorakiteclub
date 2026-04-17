@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { INTRO_DATA } from './introData.js'
+import { INTRO_DATA } from '../introData.js'
 
 function IntroStatement() {
   return (

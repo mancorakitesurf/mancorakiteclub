@@ -8,8 +8,10 @@ import {
   FaWind,
   FaYoutube,
 } from 'react-icons/fa'
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 function Footer() {
+  const { t } = useI18n()
   return (
     <footer className="border-t border-gray-200 bg-surface-light pb-8 pt-16 dark:border-white/10 dark:bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -24,8 +26,7 @@ function Footer() {
               </span>
             </div>
             <p className="mb-6 text-sm leading-relaxed text-justify text-gray-500 mb-8 dark:text-gray-400">
-              Premium kiteboarding experiences in Northern Peru. Ride, stay, and connect with a
-              community of ocean lovers.
+              {t('footer.tagline')}
             </p>
             <div className="flex justify-center gap-4 md:justify-start">
               <a
@@ -121,7 +122,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 md:flex-row dark:border-white/10">
-          <p className="text-xs text-gray-400">© All Rights Reserved | Máncora Kite Club</p>
+          <p className="text-xs text-gray-400">{t('footer.rights')}</p>
           <div className="flex gap-6 text-xs text-gray-400">
             <a className="hover:text-white" href="#">
               Terms

@@ -7,6 +7,7 @@
     "classes": "Clases",
     "blog": "Blog",
     "contact": "Contacto",
+    "reviews": "Reseñas",
     "bookNow": "Reservar ahora"
   },
   "hero": {
@@ -32,5 +33,50 @@
     "contactUs": "Contáctanos",
     "loading": "Cargando...",
     "error": "Algo salió mal"
+  },
+  "trips": {
+    "title": "Viajes de Kitesurf",
+    "subtitle": "La costa norte peruana tiene las mejores olas para el Kitesurf en el mundo",
+    "viewAll": "Ver todos los viajes",
+    "bookNow": "Reservar ahora",
+    "duration": "Duración",
+    "includes": "Incluye",
+    "price": "Precio",
+    "fullDay": "Kite Safari Día Completo",
+    "fullDayDesc": "Un día completo de acción, olas y adrenalina. Ideal para una escapada inolvidable.",
+    "threeDays": "Viaje de Kite Surf de 3 Días",
+    "threeDaysDesc": "Ideal para quienes buscan progresar rápidamente y descubrir nuevas playas",
+    "sevenDays": "Experiencia de Kite Surf de 7 Días",
+    "sevenDaysDesc": "El paquete completo para vivir una semana épica de kitesurf, mejorar tu nivel y llevarte recuerdos únicos."
+  },
+  "classes": {
+    "title": "Tu Clase Ideal",
+    "subtitle": "Estarás en manos de entrenadores súper profesionales y un equipo de seguridad de primera",
+    "beginner": "Primera vez",
+    "beginnerDesc": "Clases para principiantes diseñadas para introducirte al mundo del Kitesurf de manera segura y divertida",
+    "intermediate": "Intermedio",
+    "intermediateDesc": "Encuentra los mejores spots y el acompañamiento ideal. Todos comprometidos en apoyarte a mejorar tu nivel",
+    "advanced": "Avanzado con ProRider",
+    "advancedDesc": "Si ya tienes experiencia en el Kitesurf y deseas llevar tus habilidades al siguiente nivel",
+    "private": "Clases Privadas",
+    "group": "Clases en Grupo"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Ponte en contacto con nosotros para más información",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "whatsapp": "Contacta por WhatsApp",
+    "phone": "+51 996 557 689"
+  },
+  "seo": {
+    "homeTitle": "Escuela de Kitesurf & Wingfoil en Máncora, Perú | Máncora Kite Club",
+    "homeDesc": "Aprende kitesurf y wingfoiling en Máncora, Perú. Coaching profesional, alquiler de equipo y paquetes de alojamiento.",
+    "tripsTitle": "Viajes de Kitesurf en Perú | Máncora Kite Club",
+    "tripsDesc": "Descubre viajes de kitesurf en los mejores spots del norte de Perú. Paquetes de día completo, 3 días y 7 días.",
+    "classesTitle": "Clases de Kitesurf & Wingfoiling en Máncora | Máncora Kite Club",
+    "classesDesc": "Clases profesionales de kitesurf y wingfoiling para todos los niveles en Máncora, Perú."
   }
 }

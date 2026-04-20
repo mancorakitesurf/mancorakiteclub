@@ -4,13 +4,14 @@ import { FaBars } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import clubLogo from '../../assets/Logo/the-club-logo.png'
 
+// Navigation items now use i18n keys instead of hardcoded labels
 const NAV_ITEMS = [
-  { to: '/trips', label: 'Trips' },
-  { to: '/classes', label: 'Classes' },
-  { to: '/stay', label: 'Stay with us' },
-  { to: '/build', label: 'Build your trip' },
-  { to: '/reviews', label: 'Reviews' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/trips', label: 'nav.trips' },
+  { to: '/classes', label: 'nav.classes' },
+  { to: '/stay', label: 'nav.stay' },
+  { to: '/build', label: 'nav.build' },
+  { to: '/reviews', label: 'nav.reviews' },
+  { to: '/contact', label: 'nav.contact' },
 ]
 
 function Header() {
@@ -18,7 +19,7 @@ function Header() {
   const [isLangOpen, setIsLangOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef(null)
-  const { isSpanish, changeLanguage, currentLang } = useI18n()
+  const { isSpanish, changeLanguage, currentLang, t } = useI18n()
   const homePath = isSpanish ? '/esp' : '/'
 
   // Detectar scroll
@@ -79,7 +80,7 @@ function Header() {
               className="text-sm font-medium text-white/80 transition-colors hover:text-primary"
               to={item.to}
             >
-              {item.label}
+              {t(item.label)}
             </Link>
           ))}
         </nav>
@@ -124,7 +125,7 @@ function Header() {
                   }`}
                 >
                   <span>
-                    {lang.flag} {lang.label}
+                    {lang.flag} {t(`header.${lang.code === 'en' ? 'english' : lang.code === 'es' ? 'spanish' : 'french'}`)}
                   </span>
 
                   {currentLang === lang.code && (
@@ -158,7 +159,7 @@ function Header() {
                 to={item.to}
                 onClick={() => setIsMobileOpen(false)}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             ))}
           </div>

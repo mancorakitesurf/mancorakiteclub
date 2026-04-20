@@ -7,6 +7,7 @@
     "classes": "Classes",
     "blog": "Blog",
     "contact": "Contact",
+    "reviews": "Reviews",
     "bookNow": "Book Now"
   },
   "hero": {
@@ -32,5 +33,50 @@
     "contactUs": "Contact Us",
     "loading": "Loading...",
     "error": "Something went wrong"
+  },
+  "trips": {
+    "title": "Kitesurf Trips",
+    "subtitle": "The northern Peruvian coast has the best waves for Kitesurfing in the world",
+    "viewAll": "View All Trips",
+    "bookNow": "Book Now",
+    "duration": "Duration",
+    "includes": "Includes",
+    "price": "Price",
+    "fullDay": "Kite Safari Full Day",
+    "fullDayDesc": "A full day of action, waves and adrenaline. Ideal for an unforgettable getaway.",
+    "threeDays": "3-Day Kite Surf Trip",
+    "threeDaysDesc": "Ideal for those looking to progress quickly and discover new beaches",
+    "sevenDays": "7-Day Kite Surf Experience",
+    "sevenDaysDesc": "The complete package to live an epic week of kitesurfing, improve your level and take home unique memories."
+  },
+  "classes": {
+    "title": "Your Ideal Classes",
+    "subtitle": "You will be in the hands of super professional trainers and top-notch safety equipment",
+    "beginner": "First Time",
+    "beginnerDesc": "Classes for beginners designed to introduce you to the world of Kitesurfing in a safe and fun way",
+    "intermediate": "Intermediate",
+    "intermediateDesc": "Find the best spots and ideal accompaniment. All committed to supporting you to improve your level",
+    "advanced": "Advanced with ProRider",
+    "advancedDesc": "If you already have experience in Kitesurfing and want to take your skills to the next level",
+    "private": "Private Lessons",
+    "group": "Group Lessons"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for more information",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "whatsapp": "Contact on WhatsApp",
+    "phone": "+51 996 557 689"
+  },
+  "seo": {
+    "homeTitle": "Kitesurf & Wingfoil School in Mancora, Peru | Máncora Kite Club",
+    "homeDesc": "Learn kitesurfing and wingfoiling in Máncora, Peru. Professional coaching, equipment rental, and accommodation packages.",
+    "tripsTitle": "Kitesurf Trips in Peru | Máncora Kite Club",
+    "tripsDesc": "Discover kitesurf trips in the best spots of northern Peru. Full-day, 3-day, and 7-day packages available.",
+    "classesTitle": "Kitesurfing & Wingfoiling Lessons in Máncora | Máncora Kite Club",
+    "classesDesc": "Professional kitesurfing and wingfoiling classes for all levels in Máncora, Peru."
   }
 }

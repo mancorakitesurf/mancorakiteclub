@@ -7,6 +7,7 @@
     "classes": "Cours",
     "blog": "Blog",
     "contact": "Contact",
+    "reviews": "Avis",
     "bookNow": "Réserver maintenant"
   },
   "hero": {
@@ -32,5 +33,50 @@
     "contactUs": "Nous contacter",
     "loading": "Chargement...",
     "error": "Quelque chose s'est mal passé"
+  },
+  "trips": {
+    "title": "Voyages de Kitesurf",
+    "subtitle": "La côte nord du Pérou offre les meilleures vagues pour le kitesurf au monde",
+    "viewAll": "Voir tous les voyages",
+    "bookNow": "Réserver maintenant",
+    "duration": "Durée",
+    "includes": "Inclut",
+    "price": "Prix",
+    "fullDay": "Safari Kite Journée Complète",
+    "fullDayDesc": "Une journée complète d'action, de vagues et d'adrénaline. Idéal pour une escapade inoubliable.",
+    "threeDays": "Voyage de Kitesurf 3 Jours",
+    "threeDaysDesc": "Idéal pour ceux qui souhaitent progresser rapidement et découvrir de nouvelles plages",
+    "sevenDays": "Expérience de Kitesurf 7 Jours",
+    "sevenDaysDesc": "Le forfait complet pour vivre une semaine épique de kitesurf, améliorer votre niveau et ramener des souvenirs uniques."
+  },
+  "classes": {
+    "title": "Vos Cours Idéaux",
+    "subtitle": "Vous serez entre les mains d'instructeurs très professionnels et d'équipement de sécurité de premier ordre",
+    "beginner": "Première Fois",
+    "beginnerDesc": "Cours pour débutants conçus pour vous initier au monde du kitesurf de manière sûre et amusante",
+    "intermediate": "Intermédiaire",
+    "intermediateDesc": "Trouvez les meilleurs spots et l'accompagnement idéal. Tous engagés à vous aider à améliorer votre niveau",
+    "advanced": "Avancé avec ProRider",
+    "advancedDesc": "Si vous avez déjà de l'expérience en kitesurf et souhaitez amener vos compétences au niveau suivant",
+    "private": "Cours Privés",
+    "group": "Cours en Groupe"
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Contactez-nous pour plus d'informations",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "whatsapp": "Contactez-nous sur WhatsApp",
+    "phone": "+51 996 557 689"
+  },
+  "seo": {
+    "homeTitle": "École de Kitesurf & Wingfoil à Máncora, Pérou | Máncora Kite Club",
+    "homeDesc": "Apprenez le kitesurf et le wingfoil à Máncora, Pérou. Coaching professionnel, location d'équipement et forfaits d'hébergement.",
+    "tripsTitle": "Voyages de Kitesurf au Pérou | Máncora Kite Club",
+    "tripsDesc": "Découvrez les voyages de kitesurf dans les meilleurs spots du nord du Pérou. Forfaits journée complète, 3 jours et 7 jours.",
+    "classesTitle": "Cours de Kitesurf & Wingfoil à Máncora | Máncora Kite Club",
+    "classesDesc": "Cours professionnels de kitesurf et de wingfoil pour tous les niveaux à Máncora, Pérou."
   }
 }

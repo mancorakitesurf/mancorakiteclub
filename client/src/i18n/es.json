@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "trips": "Viajes",
+    "stay": "Hospedaje",
+    "build": "Arma tu viaje",
+    "classes": "Clases",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "bookNow": "Reservar ahora"
+  },
+  "hero": {
+    "title": "Máncora Kite Club",
+    "subtitle": "Aprende a volar en el club con entrenadores profesionales",
+    "cta": "Reservar"
+  },
+  "header": {
+    "language": "Idioma",
+    "english": "English",
+    "spanish": "Español",
+    "french": "Français"
+  },
+  "footer": {
+    "tagline": "Escuela de Kitesurf con sede en Máncora, Perú",
+    "rights": "© Todos los derechos reservados | Máncora Kite Club",
+    "phone": "+51 996 557 689",
+    "email": "kiteclub.mancora@gmail.com"
+  },
+  "common": {
+    "learnMore": "Saber más",
+    "bookNow": "Reservar ahora",
+    "contactUs": "Contáctanos",
+    "loading": "Cargando...",
+    "error": "Algo salió mal"
+  }
+}

@@ -16,10 +16,12 @@ function ClassesPage() {
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Classes"
-        description="Private and small-group sessions without accommodation."
+        titleKey="seo.classesTitle"
+        descKey="seo.classesDesc"
+        titleFallback="Kitesurfing & Wingfoiling Lessons in Máncora | Máncora Kite Club"
+        descFallback="Professional kitesurfing and wingfoiling classes for all levels in Máncora, Peru. Private and group sessions."
         canonicalPath="/classes"
-        hreflang={{ en: "/classes", es: "/esp", default: "/" }}
+        hreflang={{ en: "/classes", es: "/esp/clases", default: "/" }}
       />
 
       {/* Bloques de Kitesurf */}

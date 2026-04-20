@@ -7,10 +7,12 @@ function TripsPage() {
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Trips"
-        description="Core trip packages with stay included."
+        titleKey="seo.tripsTitle"
+        descKey="seo.tripsDesc"
+        titleFallback="Kitesurf Trips in Máncora, Peru | Core Packages"
+        descFallback="Discover kitesurf trips in the best spots of northern Peru. Full-day, 3-day, and 7-day packages available."
         canonicalPath="/trips"
-        hreflang={{ en: '/trips', es: '/esp', default: '/' }}
+        hreflang={{ en: '/trips', es: '/esp/viajes', default: '/' }}
       />
       <section className="bg-background-light py-24 dark:bg-background-dark">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -12,8 +12,10 @@ function HomePage() {
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Home"
-        description="TODO: contenido real"
+        titleKey="seo.homeTitle"
+        descKey="seo.homeDesc"
+        titleFallback="Máncora Kite Club | Kitesurf & Wingfoil School"
+        descFallback="Learn kitesurfing and wingfoiling in Máncora, Peru with professional coaching and equipment rental."
         canonicalPath="/"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />

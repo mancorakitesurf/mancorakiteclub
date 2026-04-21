@@ -4,31 +4,36 @@ import heroImg from '../../assets/imagenes-kitesurfing/posicionkt1.jpg'
 
 function HeroMistakesKite() {
     const { hero } = COACHING_DATA9;
+
     return (
-        <section className="relative min-h-[70vh] flex flex-col justify-end pb-24 px-6 md:px-24 bg-[#031015] overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
             <div className="absolute inset-0 z-0">
-                <img src={heroImg} className="w-full h-full object-cover opacity-50" alt="Mistakes Hero" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/40 to-transparent" />
+                <img 
+                    src={heroImg} 
+                    className="w-full h-full object-cover opacity-60" 
+                    alt="Mistakes Hero" 
+                />
+                <div className="absolute inset-0 bg-black/60" />
             </div>
             
             <motion.div 
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative z-10 max-w-4xl"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="relative z-10 text-center text-white max-w-5xl px-6"
             >
-                <div className="flex gap-3 mb-6">
-                    <span className="bg-[#192f37] text-white text-[10px] px-3 py-1 rounded font-bold tracking-widest uppercase">{hero.category1}</span>
-                    <span className="bg-[#192f37] text-white text-[10px] px-3 py-1 rounded font-bold tracking-widest uppercase">{hero.category2}</span>
-                </div>
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[0.9] mb-6 uppercase">
+                <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
+                    {hero.category1} <span className="mx-2 text-white/30">|</span> {hero.category2}
+                </p>
+                <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-[0.95] uppercase mb-8">
                     {hero.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-[#9eadb4] max-w-2xl font-light">
+                <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
                     {hero.subtitle}
                 </p>
             </motion.div>
         </section>
     );
 }
+
 export default HeroMistakesKite;

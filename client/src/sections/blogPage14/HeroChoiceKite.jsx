@@ -4,44 +4,63 @@ import heroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg";
 
 function HeroChoiceKite() {
     const { hero } = CHOICE_DATA14;
+
     return (
-        <section className="relative w-full min-h-[85vh] flex flex-col justify-end pb-24 px-6 md:px-24 bg-[#031015]">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+            {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0">
-                <img src={heroImg} className="w-full h-full object-cover opacity-60" alt="Peru Swell" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
+                <img 
+                    src={heroImg} 
+                    className="w-full h-full object-cover opacity-60" 
+                    alt="Peru Swell" 
+                />
+                <div className="absolute inset-0 bg-black/50" />
             </div>
 
+            {/* Main Content - Centered */}
             <motion.div 
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="relative z-10 max-w-5xl"
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="relative z-10 text-center text-white max-w-5xl px-6"
             >
-                <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#132930]/60 backdrop-blur-md border border-white/10 rounded-full">
-                    <span className="material-symbols-outlined text-[#5af8fb] text-sm fill">water</span>
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#5af8fb] font-bold">{hero.tag}</span>
-                </div>
-                <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6">
+                {/* Tag style de la imagen 2 */}
+                <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
+                    {hero.tag}
+                </p>
+
+                {/* Title */}
+                <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-tight mb-6">
                     {hero.title}<br/>
-                    <span className="text-[#ff9069]">{hero.highlight}</span>
+                    {hero.highlight}
                 </h1>
-                <p className="text-lg md:text-xl text-[#9eaeb4] max-w-2xl font-light leading-relaxed italic">
+
+                {/* Description */}
+                <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-white/80 font-light leading-relaxed italic">
                     {hero.description}
                 </p>
             </motion.div>
 
-            {/* Data Anchors */}
-            <div className="absolute right-6 md:right-24 bottom-24 hidden md:flex flex-col gap-4">
+            {/* Anchors/Stats - Reubicados horizontalmente abajo para mantener la simetría centrada */}
+            <div className="absolute bottom-12 left-0 w-full z-10 hidden md:flex justify-center gap-8">
                 {hero.anchors.map((anchor, i) => (
-                    <div key={i} className="bg-[#132930]/60 backdrop-blur-md p-4 rounded-xl border border-white/10 min-w-[160px]">
+                    <motion.div 
+                        key={i} 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5 + i * 0.1 }}
+                        className="text-center border-l border-white/20 pl-8 first:border-none"
+                    >
                         <p className="text-[10px] uppercase tracking-widest text-[#9eaeb4] mb-1">{anchor.sub}</p>
                         <p className="text-3xl font-bold text-white tracking-tighter">
                             {anchor.value}<span className="text-sm ml-1 opacity-50">{anchor.unit || ""}</span>
                         </p>
                         <p className="text-[10px] text-[#5af8fb] font-bold uppercase mt-1">{anchor.label}</p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>
     );
 }
+
 export default HeroChoiceKite;

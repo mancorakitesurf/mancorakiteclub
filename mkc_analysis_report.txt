@@ -1,0 +1,264 @@
+================================================================================
+MANCORA KITE CLUB - COMPREHENSIVE PROJECT ANALYSIS
+================================================================================
+
+## 1. PROJECT OVERVIEW
+
+TYPE: Monorepo with React SPA frontend + Express API backend
+BUSINESS: Adventure sports booking platform (kitesurfing, wingfoiling, surfing)
+FRAMEWORK: React 19 + Vite 7 + Tailwind v4 (frontend), Express 5 (backend)
+LANGUAGE SUPPORT: English (primary), Spanish (partial), French (planned)
+
+================================================================================
+## 2. COMPLETE TECH STACK
+
+ROOT DEPENDENCIES:
+- concurrently ^9.2.1
+- zustand ^5.0.12
+
+FRONTEND (client/):
+Production:
+  - react ^19.2.0
+  - react-dom ^19.2.0
+  - react-router-dom ^7.13.0
+  - react-icons ^5.5.0
+  - framer-motion ^12.34.3
+  - zustand ^5.0.12
+
+Build/Dev:
+  - vite ^7.3.1
+  - @vitejs/plugin-react-swc ^4.2.2
+  - tailwindcss ^4.1.18
+  - @tailwindcss/postcss ^4.1.18
+  - eslint ^9.39.1 with react plugins
+  - autoprefixer ^10.4.24
+  - postcss ^8.5.6
+
+BACKEND (server/):
+- express ^5.2.1
+- cors ^2.8.6
+- dotenv ^17.2.4
+
+================================================================================
+## 3. FRONTEND FILE STRUCTURE SUMMARY
+
+Directory Tree:
+client/src/
+├── app/                    Bootstrap & routing (App, router, providers)
+├── pages/                  56 page components (EN + ES)
+│   ├── HomePage, TripsPage, ClassesPage, StayPage, BuildPage, etc.
+│   ├── trips/              Trip detail pages (4 trips)
+│   ├── blog/               Blog post pages (15 posts)
+│   ├── waves/              Waves/surfing page
+│   └── es/                 Spanish versions (13 pages)
+├── sections/               126 component blocks by feature
+│   ├── common/             Header, Footer, LanguageSwitch
+│   ├── home/               Hero, Highlights, Packages, Testimonials, etc.
+│   ├── blog/               Blog layout & sidebar
+│   ├── blogPage1-15/       Individual blog post sections
+│   ├── ClassesPage/        Classes & equipment sections
+│   ├── faq/                FAQ components
+│   └── waves/              Wave/surf components
+├── components/             Global reusable components
+│   ├── SEO.jsx            SEO metadata injector
+│   ├── FloatingWhatsApp.jsx
+│   ├── FloatingCart.jsx
+│   └── ui/                 Button, Card, Container
+├── lib/                    Utility functions
+│   ├── routes.js           EN/ES route mapping & helpers
+│   ├── seo.js             SEO tag management
+│   └── whatsapp.js        WhatsApp constants
+├── store/                  Zustand state
+│   └── useTripBuilderStore.js (Trip customization wizard)
+├── styles/                 Global CSS
+├── content/                Data files (trips.js)
+└── assets/                 Images, logos, icons
+
+FILE COUNTS:
+- Total JS/JSX files: 220
+- Page components: 56
+- Section components: 126
+- Approx LOC: 1,646 lines
+
+================================================================================
+## 4. INTERNATIONALIZATION (i18n) IMPLEMENTATION
+
+APPROACH: Custom Context-based (NOT using i18next/next-intl)
+
+CORE ARCHITECTURE:
+
+File 1: client/src/app/providers/i18nContext.js
+  - Context definition
+  - Properties: isSpanish (boolean), language ('en' or 'es')
+  - Hook: useI18n() for consumption
+
+File 2: client/src/app/providers/I18nProvider.jsx
+  - Wraps MainLayout
+  - Detects language from URL pathname
+  - Calls isSpanishPath() to determine language
+
+File 3: client/src/lib/routes.js - Route mapping
+  - EN_TO_ES_ROUTE_MAP: Maps English routes to Spanish
+  - ES_TO_EN_ROUTE_MAP: Reverse mapping
+  - isSpanishPath(pathname): Returns true if path ends with '/esp'
+  - getLanguageSwitchPath(pathname): Toggles language version
+  - normalizePath(pathname): Removes trailing slashes
+
+LANGUAGE DETECTION:
+- English (default): Any path NOT ending with '/esp'
+- Spanish: Paths ending with '/esp'
+- Examples:
+  EN: /, /trips, /classes, /learn/kitesurf, /blog
+  ES: /esp, /trips/esp, /classes/esp, /aprende/kitesurf/esp, /blog/esp
+
+COMPLETE EN↔ES ROUTE MAPPINGS (14 pairs):
+/                           ↔ /esp
+/learn/kitesurf            ↔ /aprende/kitesurf/esp
+/learn/wingfoil            ↔ /aprende/wingfoil/esp
+/kitesurfing               ↔ /kitesurfing/esp
+/wingfoil                  ↔ /wingfoil/esp
+/sup                       ↔ /sup/esp
+/equipment-rental          ↔ /equipment/esp
+/solo-surf                 ↔ /solo-surf/esp
+/hostel                    ↔ /acommodation/hostal/esp
+/kite-club-hotel           ↔ /acommodation/hotel-kite/esp
+/4-stars-hotel             ↔ /acommodation/4-estrellas/esp
+/faq                       ↔ /faq/esp
+/blog                      ↔ /blog/esp
+/waves                     ↔ /waves/esp
+
+LANGUAGE SWITCHERS:
+1. LanguageSwitch.jsx - Simple EN/ES toggle button
+2. Header.jsx - Advanced dropdown with 3 languages (has issues - see below)
+
+CONTENT STRATEGY:
+- NO translation files (JSON/YAML)
+- All content hardcoded in React components
+- Separate JSX files for EN and ES versions
+- Pages manually duplicated for each language
+- Not using external i18n libraries
+
+PAGE COVERAGE:
+- English pages: 54 total
+- Spanish pages: 13 total (HOME + key pages)
+- Asymmetric coverage (not all EN pages have ES versions)
+
+================================================================================
+## 5. CRITICAL i18n ISSUES FOUND
+
+⚠️ ISSUE #1: Header Component Context Mismatch
+
+Location: client/src/sections/common/Header.jsx, line 21
+Code: const { isSpanish, changeLanguage, currentLang } = useI18n()
+
+PROBLEM:
+The Header tries to destructure THREE properties from context:
+- isSpanish
+- changeLanguage (FUNCTION)
+- currentLang (STRING)
+
+But i18nContext.js ONLY provides TWO:
+- isSpanish
+- language
+
+MISSING IMPLEMENTATIONS:
+1. changeLanguage() function - for dynamic language switching
+2. currentLang property - should probably be 'language'
+3. Navigation doesn't support dynamic switching
+
+IMPACT: Header language dropdown displays but clicking buttons does nothing
+
+---
+
+⚠️ ISSUE #2: French Language Incomplete
+
+Location: client/src/sections/common/Header.jsx, lines 47-51
+Code defines 3 languages:
+{ code: 'es', label: 'Español', flag: '🇪🇸' }
+{ code: 'en', label: 'English', flag: '🇬🇧' }
+{ code: 'fr', label: 'Français', flag: '🇫🇷' }
+
+PROBLEM:
+- French option exists in UI
+- But NO FR routes in routes.js
+- No French pages implemented
+- No way to navigate to French
+
+IMPACT: Clicking French in dropdown won't work
+
+---
+
+⚠️ ISSUE #3: SEO Description Placeholders
+
+27+ occurrences of "TODO: contenido real" found:
+
+Files:
+- client/src/lib/seo.js (line 36 default)
+- client/src/pages/*.jsx (10+ files)
+- client/src/pages/es/*.jsx (13 files)
+
+Example:
+description="TODO: contenido real"
+
+IMPACT: SEO meta descriptions are placeholders, not real content
+
+---
+
+⚠️ ISSUE #4: Trip Content Placeholders
+
+Location: client/src/content/trips.js
+
+Multiple TODO items in 4 trip packages:
+
+FIRST FLY trip:
+- 'Extra class hours (TODO)'
+- 'Additional wellness session (TODO)'
+- 'Can I do this as a beginner? ... TODO: final level policy.'
+- 'Can I request custom dates? ... TODO: availability confirmation.'
+- FAQ answers incomplete
+
+OLAS & VIENTO trip:
+- 'Extra surf class (TODO)'
+- 'Extra kite class (TODO)'
+- Similar FAQ gaps
+
+SOLO SURF trip:
+- 'Extra surf session (TODO)'
+- FAQ gaps
+
+RIDE THE COAST trip:
+- 'Extra safari day (TODO)'
+- FAQ gaps
+
+IMPACT: Product information incomplete for bookings
+
+================================================================================
+## 6. STATE MANAGEMENT
+
+Tool: Zustand ^5.0.12
+
+File: client/src/store/useTripBuilderStore.js
+
+Purpose: Manage trip customization wizard (5-step process)
+
+STATE STRUCTURE:
+{
+  paso: number (1-5, current step),
+  actividad: string (e.g., 'Kite', 'Wingfoil', 'Surf'),
+  noches: number (nights duration),
+  horas: number (class hours),
+  extras: array (selected add-ons),
+  datosUsuario: {
+    nombre: string,
+    email: string
+  }
+}
+
+METHODS:
+- setActividad(actividad)
+- setNoches(noches)
+- setHoras(horas)
+- toggleExtra(extra) - Add/remove from array
+- setDatosUsuario(datos) - Merge user info
+- siguientePaso() - Next step (caps at 5)
+- anteriorPaso() - Previous step (

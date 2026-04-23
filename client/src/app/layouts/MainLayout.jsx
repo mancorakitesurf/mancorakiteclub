@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { I18nProvider } from '../providers/I18nProvider.jsx'
 import FloatingWhatsApp from "../../components/FloatingWhatsApp.jsx"
+import FloatingChatbot from "../../components/FloatingChatbot.jsx"
 import FloatingCart from "../../components/FloatingCart.jsx"
 import Footer from '../../sections/common/Footer.jsx'
 import Header from '../../sections/common/Header.jsx'
@@ -15,6 +16,7 @@ function MainLayout() {
         </main>
         <Footer />
         <FloatingCart />
+        <FloatingChatbot />
         <FloatingWhatsApp />
       </div>
     </I18nProvider>

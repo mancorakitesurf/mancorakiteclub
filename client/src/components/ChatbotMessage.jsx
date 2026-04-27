@@ -1,4 +1,5 @@
 import { useI18n } from '../app/providers/i18nContext'
+import chatbotVideo from '../assets/chatbot ia.mp4'
 
 /**
  * ChatbotMessage Component
@@ -14,16 +15,31 @@ function ChatbotMessage({ message, isBot = true }) {
 
   return (
     <div
-      className={`flex mb-3 ${isBot ? 'justify-start' : 'justify-end'}`}
+      className={`mb-3 flex ${isBot ? 'justify-start' : 'justify-end'}`}
     >
-      <div
-        className={`max-w-xs rounded-lg px-4 py-2 text-sm leading-relaxed ${
-          isBot
-            ? 'bg-surface-dark/50 border border-primary/30 text-gray-100'
-            : 'bg-primary/20 border border-primary/40 text-gray-100'
-        }`}
-      >
-        {displayMessage}
+      <div className={`flex items-end gap-2 ${isBot ? '' : 'flex-row-reverse'}`}>
+        {isBot ? (
+          <div className="relative h-9 w-9 flex-shrink-0 overflow-hidden rounded-full border border-primary/30 bg-primary/10 shadow-sm">
+            <video
+              src={chatbotVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover object-center scale-110"
+            />
+          </div>
+        ) : null}
+
+        <div
+          className={`max-w-xs rounded-2xl px-4 py-2 text-sm leading-relaxed ${
+            isBot
+              ? 'border border-primary/30 bg-background-dark text-white'
+              : 'bg-primary text-white'
+          }`}
+        >
+          {displayMessage}
+        </div>
       </div>
     </div>
   )

@@ -2,7 +2,6 @@ import { useState, useRef, useEffect } from 'react'
 import { IoClose } from 'react-icons/io5'
 import { useI18n } from '../app/providers/i18nContext'
 import ChatbotMessage from './ChatbotMessage'
-import Button from './ui/Button'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 import { chatbotFlows, buildWhatsAppMessage } from '../lib/chatbotFlows'
 
@@ -81,13 +80,13 @@ function ChatbotWindow({ isOpen, onClose }) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-2rem)] rounded-2xl border border-white/10 bg-surface-dark shadow-2xl backdrop-blur-lg transition-all duration-300 z-[99] flex flex-col max-h-[600px]">
+    <div className="fixed bottom-24 right-6 z-[100] flex max-h-[600px] w-96 max-w-[calc(100vw-2rem)] flex-col rounded-2xl border border-primary/20 bg-surface-dark shadow-2xl backdrop-blur-lg transition-all duration-300">
       {/* Header */}
-      <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
+      <div className="flex items-center justify-between rounded-t-2xl bg-primary px-6 py-4 text-white">
         <h3 className="text-lg font-bold text-white">{t('chatbot.title')}</h3>
         <button
           onClick={onClose}
-          className="text-gray-400 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+          className="rounded transition-colors hover:text-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
           aria-label="Close chatbot"
         >
           <IoClose className="text-xl" />
@@ -95,7 +94,7 @@ function ChatbotWindow({ isOpen, onClose }) {
       </div>
 
       {/* Messages Area */}
-      <div className="flex-1 overflow-y-auto px-6 py-4 space-y-3">
+      <div className="flex-1 space-y-3 overflow-y-auto bg-surface-dark px-6 py-4">
         {messages.map((msg) => (
           <ChatbotMessage
             key={msg.id}
@@ -107,7 +106,7 @@ function ChatbotWindow({ isOpen, onClose }) {
       </div>
 
       {/* Options Area */}
-      <div className="border-t border-white/10 px-6 py-4 space-y-2">
+      <div className="space-y-2 border-t border-primary/20 bg-surface-dark px-6 py-4">
         {currentFlow?.options && currentFlow.options.length > 0 ? (
           currentFlow.id === 'contact' ? (
             // Final step - WhatsApp button
@@ -123,7 +122,7 @@ function ChatbotWindow({ isOpen, onClose }) {
               <button
                 key={idx}
                 onClick={() => handleOptionClick(option, option.action)}
-                className="w-full rounded-full border border-primary/40 bg-primary/10 px-4 py-2.5 text-xs font-medium text-white transition-all hover:bg-primary/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                className="w-full rounded-full border border-primary/30 bg-background-dark px-4 py-2.5 text-xs font-medium text-white transition-all hover:bg-primary/15 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
               >
                 {t(option.label)}
               </button>

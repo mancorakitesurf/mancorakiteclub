@@ -28,7 +28,7 @@ function FloatingCart() {
       type="button"
       onClick={() => navigate('/build')}
       aria-label="Continue building your trip"
-      className={`group fixed bottom-24 right-6 z-[100] flex items-center transition-all duration-300 ${
+      className={`group fixed bottom-24 right-6 z-[98] flex items-center transition-all duration-300 ${
         isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
       }`}
     >

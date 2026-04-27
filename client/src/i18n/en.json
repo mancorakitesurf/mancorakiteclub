@@ -71,12 +71,33 @@
     "whatsapp": "Contact on WhatsApp",
     "phone": "+51 996 557 689"
   },
-  "seo": {
+   "seo": {
     "homeTitle": "Kitesurf & Wingfoil School in Mancora, Peru | Máncora Kite Club",
     "homeDesc": "Learn kitesurfing and wingfoiling in Máncora, Peru. Professional coaching, equipment rental, and accommodation packages.",
     "tripsTitle": "Kitesurf Trips in Peru | Máncora Kite Club",
     "tripsDesc": "Discover kitesurf trips in the best spots of northern Peru. Full-day, 3-day, and 7-day packages available.",
     "classesTitle": "Kitesurfing & Wingfoiling Lessons in Máncora | Máncora Kite Club",
     "classesDesc": "Professional kitesurfing and wingfoiling classes for all levels in Máncora, Peru."
+  },
+  "chatbot": {
+    "title": "AI Assistant",
+    "welcome": "Hi! 👋 I'm the AI assistant for Máncora Kite Club. How can I help you today?",
+    "askClasses": "I want to learn about classes",
+    "askTrips": "I'm interested in a trip",
+    "askStay": "I need accommodation",
+    "selectLevel": "Which level are you looking for?",
+    "beginner": "Beginner / First Time",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "selectDuration": "How many days?",
+    "oneDay": "One Day (Full Day Safari)",
+    "threeDays": "3 Days",
+    "sevenDays": "7 Days",
+    "selectSize": "What size do you need?",
+    "studioApt": "Studio Apartment",
+    "oneBedroomApt": "1 Bedroom Apartment",
+    "twoPlusBedroomApt": "2+ Bedroom Apartment",
+    "finalMessage": "Perfect! Let's connect on WhatsApp so we can give you all the details and help you book. Click the button below! 🚀",
+    "contactWhatsApp": "Contact on WhatsApp"
   }
 }

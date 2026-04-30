@@ -7,6 +7,7 @@ import Testimonials from '../sections/home/Testimonials.jsx'
 import Team from '../sections/home/Team.jsx'
 import Movements from '../sections/home/Movements.jsx'
 import Trips from '../sections/home/Trips.jsx'
+import WeatherSection from '../sections/home/WeatherSection.jsx'
 
 function HomePage() {
   return (
@@ -21,6 +22,7 @@ function HomePage() {
       />
       <Hero />
       <Movements />
+      <WeatherSection />
       <Trips />
       <Instruction />
       <Stay />

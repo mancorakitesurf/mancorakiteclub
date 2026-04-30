@@ -7,7 +7,7 @@ import ProTipsSection from "../../sections/blogPage8/ProTipsSection";
 
 function BlogPage8() {
     return (
-        <>
+        <div className="bg-[#031015] min-h-screen">
             <SEO
                 title="Blog | Techniques for kitesurfing in waves: reading the swell, timing and control (intermediate level)"
                 description="Techniques for kitesurfing in waves: reading the swell, timing and control (intermediate level)"
@@ -20,7 +20,7 @@ function BlogPage8() {
             <TechniquesContent8 />
             <KiteControlSection />
             <ProTipsSection />
-        </>
+        </div>
     );
 }
 

@@ -4,7 +4,7 @@ import TechnicalBentoKite from "../../sections/blogPage13/TechnicalBentoKite";
 import ItineraryDriftKite from "../../sections/blogPage13/ItineraryDriftKite";
 import TacticalLoadoutKite from "../../sections/blogPage13/TacticalLoadoutKite";
 
-function BlogPage7() {
+function BlogPage13() {
     return (
         <main className="bg-[#031015] min-h-screen selection:bg-[#ff9069]/30 selection:text-white">
             <SEO
@@ -22,4 +22,4 @@ function BlogPage7() {
     );
 }
 
-export default BlogPage7;
+export default BlogPage13;

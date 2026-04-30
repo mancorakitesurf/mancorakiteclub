@@ -4,31 +4,44 @@ import heroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg";
 
 function HeroWhaleSeason() {
     const { hero } = WHALE_SEASON_DATA12;
+
     return (
-        <section className="relative min-h-[70vh] flex items-end pb-16 px-8 lg:px-16 overflow-hidden bg-[#031015]">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+            {/* Fondo con imagen y overlay uniforme (Estilo Imagen 2) */}
             <div className="absolute inset-0 z-0">
-                <img src={heroImg} className="w-full h-full object-cover opacity-60 mix-blend-luminosity" alt="Whale Season" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/80 to-transparent" />
+                <img 
+                    src={heroImg} 
+                    className="w-full h-full object-cover opacity-60" 
+                    alt="Whale Season" 
+                />
+                <div className="absolute inset-0 bg-black/50" />
             </div>
 
+            {/* Contenido Centrado y Minimalista */}
             <motion.div 
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="relative z-10 max-w-4xl"
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="relative z-10 text-center text-white max-w-5xl px-6"
             >
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#132930]/50 backdrop-blur-md rounded-full border border-white/10 mb-6">
-                    <span className="material-symbols-outlined text-[#5af8fb] text-sm">location_on</span>
-                    <span className="text-[10px] font-bold tracking-widest text-white uppercase">{hero.location}</span>
-                </div>
-                <h1 className="text-6xl md:text-8xl font-black text-white leading-none mb-4 tracking-tighter uppercase">
-                    {hero.title} <span className="text-[#ff9069] block">{hero.highlight}</span>
+                {/* Tag: Texto puro con tracking ancho, sin cápsula ni blur */}
+                <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
+                    {hero.location}
+                </p>
+
+                {/* Título Principal */}
+                <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-6">
+                    {hero.title}<br />
+                    {hero.highlight}
                 </h1>
-                <p className="text-lg md:text-xl text-[#9eaeb4] max-w-2xl font-light leading-relaxed">
+
+                {/* Descripción Centrada */}
+                <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-white/80 font-light leading-relaxed">
                     {hero.description}
                 </p>
             </motion.div>
         </section>
     );
 }
+
 export default HeroWhaleSeason;

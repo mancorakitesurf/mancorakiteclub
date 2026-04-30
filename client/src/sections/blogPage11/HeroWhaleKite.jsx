@@ -4,30 +4,43 @@ import whaleHeroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg";
 
 function HeroWhaleKite() {
     const { hero } = WHALE_DATA11;
+
     return (
-        <section className="relative w-full h-[80vh] min-h-[600px] flex items-end pb-12 px-6 bg-[#031015]">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+            {/* Background Image & Uniform Dark Overlay */}
             <div className="absolute inset-0 z-0">
-                <img src={whaleHeroImg} className="w-full h-full object-cover" alt="Whale Breaching" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/60 to-transparent" />
+                <img 
+                    src={whaleHeroImg} 
+                    className="w-full h-full object-cover opacity-60" 
+                    alt="Whale Breaching" 
+                />
+                <div className="absolute inset-0 bg-black/50" />
             </div>
 
+            {/* Content Centered - "Image 2" Style */}
             <motion.div 
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className="relative z-10 w-full max-w-4xl mx-auto"
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="relative z-10 text-center text-white max-w-5xl px-6"
             >
-                <div className="inline-flex items-center px-3 py-1 mb-6 rounded-md bg-[#00696b]/80 backdrop-blur-md border border-white/10 text-[#5af8fb] text-[10px] tracking-[0.2em] uppercase font-bold">
+                {/* Tag Minimalista: Texto puro con tracking ancho */}
+                <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
                     {hero.tag}
-                </div>
-                <h1 className="text-5xl md:text-8xl font-bold leading-tight mb-4 tracking-tighter text-white uppercase italic">
+                </p>
+
+                {/* Título: Eliminamos el 'italic' para un look más limpio y moderno */}
+                <h1 className="text-5xl md:text-8xl font-black leading-tight tracking-tighter uppercase mb-6">
                     {hero.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-[#9eaeb4] font-light max-w-2xl leading-relaxed">
+
+                {/* Subtítulo centrado y con opacidad suave */}
+                <p className="mt-8 max-w-2xl mx-auto text-xl md:text-2xl text-white/80 font-light leading-relaxed">
                     {hero.subtitle}
                 </p>
             </motion.div>
         </section>
     );
 }
+
 export default HeroWhaleKite;

@@ -13,7 +13,7 @@ function TripDetailPage() {
 
   if (!trip) {
     return (
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center px-4 text-center">
         <p>Trip not found</p>
       </div>
     )
@@ -31,21 +31,21 @@ function TripDetailPage() {
       />
 
       <section className="bg-background-light dark:bg-background-dark">
-        <div className="relative h-[62vh] min-h-[420px]">
+        <div className="relative min-h-[70vh]">
           <img src={trip.heroImage} alt={trip.heroAlt} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
                 {trip.subtitle}
               </p>
-              <h1 className="mt-4 font-display text-4xl text-white md:text-6xl">{trip.title}</h1>
-              <p className="mt-4 max-w-2xl text-sm text-white/85 md:text-base">{trip.summary}</p>
+              <h1 className="mt-4 font-display text-2xl leading-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">{trip.title}</h1>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/85 sm:text-base">{trip.summary}</p>
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex rounded-lg border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
+                className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white sm:w-auto"
               >
                 Book on WhatsApp
               </a>
@@ -54,9 +54,9 @@ function TripDetailPage() {
         </div>
       </section>
 
-      <section className="bg-background-light py-20 dark:bg-background-dark">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
+      <section className="bg-background-light py-16 sm:py-20 lg:py-28 dark:bg-background-dark">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:px-8 lg:gap-10">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
             <h2 className="font-display text-2xl text-slate-900 dark:text-white">
               This trip is for you if...
             </h2>
@@ -67,7 +67,7 @@ function TripDetailPage() {
             </ul>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
             <h2 className="font-display text-2xl text-slate-900 dark:text-white">What&apos;s included</h2>
             <ul className="mt-4 grid gap-2 text-sm text-slate-600 dark:text-slate-300 md:grid-cols-2">
               {trip.includes.slice(0, 8).map((item) => (
@@ -76,7 +76,7 @@ function TripDetailPage() {
             </ul>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
             <h2 className="font-display text-2xl text-slate-900 dark:text-white">Choose duration</h2>
             <div className="mt-4 flex flex-wrap gap-3">
               {trip.durations.map((duration) => (
@@ -90,9 +90,9 @@ function TripDetailPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
             <h2 className="font-display text-2xl text-slate-900 dark:text-white">Pricing</h2>
-            <div className="mt-5 overflow-hidden rounded-lg border border-gray-200 dark:border-white/10">
+            <div className="mt-5 overflow-x-auto rounded-2xl border border-gray-200 dark:border-white/10">
               <table className="w-full text-left text-sm">
                 <thead className="bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                   <tr>
@@ -117,7 +117,7 @@ function TripDetailPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
             <h2 className="font-display text-2xl text-slate-900 dark:text-white">Add-ons</h2>
             <ul className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
               {trip.addOns.map((item) => (
@@ -126,7 +126,7 @@ function TripDetailPage() {
             </ul>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
+          <div className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
             <h2 className="font-display text-2xl text-slate-900 dark:text-white">FAQ</h2>
             <div className="mt-4 space-y-4">
               {trip.faq.slice(0, 4).map((item) => (
@@ -138,13 +138,13 @@ function TripDetailPage() {
             </div>
           </div>
 
-          <div className="rounded-xl border border-primary/40 bg-white p-10 text-center dark:bg-surface-dark">
-            <h2 className="font-display text-3xl text-slate-900 dark:text-white">Ready to book?</h2>
+          <div className="rounded-2xl border border-primary/40 bg-white p-6 text-center dark:bg-surface-dark sm:p-8 lg:p-10">
+            <h2 className="font-display text-2xl text-slate-900 dark:text-white sm:text-3xl">Ready to book?</h2>
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex rounded-lg bg-primary px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90"
+              className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90 sm:w-auto sm:px-8"
             >
               Book on WhatsApp
             </a>

@@ -8,10 +8,10 @@ import trending1 from '../../../assets/imagenes-kitsurfing-lessons/posicionk6.jp
 import trending2 from '../../../assets/imagenes-wingfoil/posicionw4.jpg'
 import BlogPage1 from '../../../pages/blog/top-20-kitesurf-destinations-part-1.jsx'
 import BlogPage2 from '../../../pages/blog/7-different-plans-of-a-kitesurf-trip-to-peru.jsx'
-import BlogPage3 from '../../../pages/blog/chicama-Longest-Wave-SurfTrip.jsx'
-import BlogPage4 from '../../../pages/blog/mancora-vs-lobitos-vs-cabo-blanco-wave-kitesurf-comparison.jsx' 
-import BlogPage5 from '../../../pages/blog/peru-kitesurf-north-vs-south-spots-seasons-wind.jsx' 
-import BlogPage6 from '../../../pages/blog/pacasmayo-peru-the-ultimate-point-break-surf-guide.jsx'
+import BlogPage3 from '../../../pages/blog/ChicamaPage.jsx'
+import BlogPage4 from '../../../pages/blog/MancoraVsLobitosPage.jsx'
+import BlogPage5 from '../../../pages/blog/PeruKitesurfPage.jsx'
+import BlogPage6 from '../../../pages/blog/PacasmayoPage.jsx'
 import BlogPage7 from '../../../pages/blog/why-mancora-is-different-kitesurf-wave-progression-guide.jsx'
 import BlogPage8 from '../../../pages/blog/7-Nights-in-Mancora-Progression-Plan7-Nights-in-Mancora-Progression-Plan.jsx'
 import BlogPage9 from '../../../pages/blog/Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level).jsx'
@@ -172,38 +172,45 @@ export const POSTS = [
 
 export const TRENDING_POSTS = [
   {
+    slug: "top-20-kitesurf-destinations-part-1",
     title: "The 20 World's best destinations for kitesurfing waves",
     image: trending1,
     alt: 'Kitesurfing wave destination',
   },
   {
+    slug: "peru-kitesurf-north-vs-south",
     title: 'The guide of the best Kitesurfing Spots in Peru',
     image: trending2,
     alt: 'Kitesurfing in Peru',
   },
   {
+    slug: "chicama-peru-surf-trip",
     title: "Chicama, Peru: The Longest Wave in the World + How to Build the Ultimate Surf Trip",
     image: BLOGHERO_IMAGE,
     alt: 'Chicama surf trip',
   },
-{   title: "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru",
+  {
+    slug: "mancora-vs-lobitos-vs-cabo-blanco",
+    title: "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru",
     image: BLOGHERO_IMAGE,
     alt: 'Mancora vs Lobitos vs Cabo Blanco',
   },
   {
     title: "Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide",
+    slug: "peru-kitesurf-north-vs-south",
     image: BLOGHERO_IMAGE,
     alt: 'Peru Kitesurf North vs South',  
   },
   {
+    slug: "pacasmayo-peru-the-ultimate-point-break-surf-guide",
     title: "Pacasmayo, Peru: The Ultimate Point Break Surf Guide",
     image: BLOGHERO_IMAGE,
     alt: 'Pacasmayo surf guide',  
   },
   {
+    slug: "why-mancora-is-different-kitesurf-wave-progression-guide",
     title: "Why Mancora is Different: Kitesurf Wave Progression Guide",
     image: BLOGHERO_IMAGE,
     alt: 'Mancora wave progression guide',  
   },  
 ]
-

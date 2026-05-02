@@ -3,18 +3,18 @@ import { WHALE_DATA11 } from "./introData11";
 function ProtocolWhaleKite() {
     const { timing, protocol } = WHALE_DATA11;
     return (
-        <section className="py-24 px-6 bg-[#05161b]">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <section className="bg-[#05161b] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+            <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
                 
                 {/* Columna Izquierda: Timing */}
                 <div className="space-y-8">
                     <div>
-                        <h3 className="text-3xl font-bold text-white mb-2 uppercase tracking-tighter italic">{timing.title}</h3>
-                        <p className="text-[#9eaeb4] font-light">{timing.subtitle}</p>
+                        <h3 className="mb-2 text-2xl font-bold uppercase tracking-tighter italic text-white sm:text-3xl md:text-4xl">{timing.title}</h3>
+                        <p className="text-sm font-light leading-relaxed text-[#9eaeb4] sm:text-base">{timing.subtitle}</p>
                     </div>
                     <div className="space-y-4">
                         {timing.items.map((item, i) => (
-                            <div key={i} className="flex items-start gap-4 p-5 rounded-lg bg-[#091c22] border border-white/5">
+                            <div key={i} className="flex items-start gap-4 rounded-2xl border border-white/5 bg-[#091c22] p-4 sm:p-5">
                                 <span className="material-symbols-outlined text-[#ff9069] mt-1">{item.icon}</span>
                                 <div>
                                     <h4 className="font-bold text-white uppercase tracking-tight text-sm">{item.label}</h4>
@@ -26,12 +26,12 @@ function ProtocolWhaleKite() {
                 </div>
 
                 {/* Columna Derecha: Protocolo de Seguridad (Glowing Box) */}
-                <div className="p-8 md:p-10 rounded-xl bg-[#0e2229] border border-[#5af8fb]/20 shadow-[0_0_40px_rgba(90,248,251,0.05)] relative overflow-hidden">
+                <div className="relative overflow-hidden rounded-2xl border border-[#5af8fb]/20 bg-[#0e2229] p-6 shadow-[0_0_40px_rgba(90,248,251,0.05)] sm:p-8 md:p-10">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-[#5af8fb]/5 rounded-full blur-3xl -mr-10 -mt-10" />
                     
                     <div className="flex items-center gap-3 mb-8 border-b border-white/10 pb-4">
                         <span className="material-symbols-outlined text-[#5af8fb]">security</span>
-                        <h3 className="text-xl font-bold text-white tracking-[0.2em] uppercase italic">{protocol.title}</h3>
+                        <h3 className="text-lg font-bold uppercase tracking-[0.2em] italic text-white sm:text-xl">{protocol.title}</h3>
                     </div>
 
                     <ul className="space-y-8">

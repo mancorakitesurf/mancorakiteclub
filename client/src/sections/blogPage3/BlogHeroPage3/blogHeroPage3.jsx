@@ -1,31 +1,44 @@
-import heroImg from '../../../assets/imagenes-home/posicion2.jpg'
+import { motion } from "framer-motion"
+import heroImg from "../../../assets/imagenes-home/posicion2.jpg"
 
 function BlogHeroPage3() {
   return (
-    <section className="relative h-[85vh] flex items-center justify-center text-center">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-[#031015] md:min-h-screen">
+      <div className="absolute inset-0 z-0">
+        <motion.img
+          src={heroImg}
+          alt="Chicama Peru longest wave"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+          className="w-full h-full object-cover opacity-60"
+        />
 
-      <img
-        src={heroImg}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
+      </div>
 
-      <div className="absolute inset-0 bg-black/60" />
-
-      <div className="relative z-10 max-w-4xl px-6">
-
-        <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-          Chicama, Peru:
-          <span className="block text-cyan-400">
-            The Longest Wave in the World
-          </span>
-        </h1>
-
-        <p className="mt-6 text-lg text-gray-200">
-          And how to turn this into the ultimate surf & wind experience
-          by combining it with Mancora.
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative z-10 max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
+      >
+        <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
+          Surf & Wind Experience
         </p>
 
-      </div>
+        <h1 className="mb-6 text-4xl font-black uppercase leading-[0.95] tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          Chicama, Peru:
+          <br />
+          The Longest Wave
+          <br />
+          In The World
+        </h1>
+
+        <p className="mx-auto mt-8 max-w-2xl text-base font-light leading-relaxed text-white/80 sm:text-lg md:text-xl">
+          Turn Chicama into the ultimate surf and wind experience by combining it with Mancora.
+        </p>
+      </motion.div>
     </section>
   )
 }

@@ -3,7 +3,7 @@ import { BLOGHERO_IMAGE } from "../BlogLayout/blogContent.js"
 
 function BlogHero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-screen">
 
       {/* Background image */}
       <div className="absolute inset-0">
@@ -22,7 +22,7 @@ function BlogHero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 mx-auto max-w-6xl px-6 text-center text-white"
+        className="relative z-10 mx-auto max-w-7xl px-4 text-center text-white sm:px-6 lg:px-8"
       >
 
         {/* Mini label */}
@@ -35,7 +35,7 @@ function BlogHero() {
         </div>
 
         {/* Title */}
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+        <h1 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
           Kitesurfing Peru <br />
           <span className="text-primary">
             Wave Riding & Ocean Stories
@@ -46,7 +46,7 @@ function BlogHero() {
         <div className="mx-auto mt-8 h-[3px] w-24 rounded-full bg-primary/80" />
 
         {/* Subtitle */}
-        <p className="mx-auto mt-10 max-w-3xl text-lg md:text-xl font-light leading-relaxed text-white/80">
+        <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-relaxed text-white/80 sm:text-lg md:text-xl">
           We explore the wind, the waves, and the ocean culture of northern Peru.
           Real stories, technique, and lifestyle from Máncora.
         </p>

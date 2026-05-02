@@ -17,20 +17,20 @@ function WingfoilIntro() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent" />
 
       {/* Contenido */}
-      <div className="relative max-w-5xl mx-auto text-center py-40 px-6">
+      <div className="relative mx-auto max-w-5xl px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8 lg:py-40">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-extrabold tracking-tight"
+          className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
         >
           ABOUT WINGFOIL
         </motion.h2>
-        <p className="mt-6 text-lg text-gray-300 max-w-2xl mx-auto text-justify">
+        <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg md:text-left">
           The first time someone was seen practicing wingfoil was in 2019, when Robby NAish appeared in Hawaii on a board with a foil and handling a wing. Those images caused so much emotion that in a few months we began to see videos and photos on all social networks of different types of wings and people practicing this strange sport. 
         </p>
-        <button className="mt-10 px-8 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition rounded-full">
+        <button className="mt-10 min-h-12 w-full rounded-full border border-cyan-400 px-6 py-3 text-cyan-400 transition hover:bg-cyan-400 hover:text-black sm:w-auto sm:px-8">
           JOIN THE CLUB
         </button>
       </div>

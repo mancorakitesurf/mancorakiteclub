@@ -3,7 +3,7 @@ import { PRIVATE_CLASSES } from "./classesData"
 
 function ClassesSteps() {
   return (
-    <section className="relative bg-[#0f1416] py-32 px-6 text-white">
+    <section className="relative bg-[#0f1416] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
       {/* Header */}
       <motion.div
@@ -11,21 +11,21 @@ function ClassesSteps() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-4xl mx-auto text-center mb-20"
+        className="mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
           YOUR KITESURF JOURNEY
         </h2>
-        <p className="mt-6 text-lg text-gray-400">
+        <p className="mt-6 text-sm leading-relaxed text-gray-400 sm:text-base md:text-lg">
           Step by step progression with certified instructors and premium gear.
         </p>
       </motion.div>
 
       {/* Timeline vertical */}
       <div className="relative max-w-5xl mx-auto">
-        <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 to-transparent -translate-x-1/2" />
+        <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 bg-gradient-to-b from-cyan-400 to-transparent md:block" />
 
-        <div className="space-y-24">
+        <div className="space-y-16 sm:space-y-20 lg:space-y-24">
           {PRIVATE_CLASSES.map((item, index) => (
             <motion.div
               key={item.id}
@@ -33,12 +33,12 @@ function ClassesSteps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className={`flex flex-col md:flex-row items-center gap-10 ${
+              className={`flex flex-col items-center gap-8 md:flex-row md:gap-10 ${
                 index % 2 === 0 ? "md:flex-row-reverse" : ""
               }`}
             >
               {/* Imagen con hover swap */}
-              <div className="relative w-full md:w-1/2 h-[320px] rounded-2xl overflow-hidden shadow-xl group">
+              <div className="group relative h-[260px] w-full overflow-hidden rounded-3xl shadow-xl sm:h-[320px] md:w-1/2">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -54,7 +54,7 @@ function ClassesSteps() {
               </div>
 
               {/* Contenido centrado */}
-              <div className="w-full md:w-1/2 text-center">
+              <div className="w-full text-center md:w-1/2">
                 <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                 <span className="text-sm uppercase tracking-wider text-gray-400">
                   {item.duration}
@@ -73,7 +73,7 @@ function ClassesSteps() {
                     </li>
                   ))}
                 </ul>
-                <button className="rounded-full bg-cyan-400 px-6 py-2 font-bold text-[#0f1416] hover:bg-white transition">
+                <button className="min-h-12 w-full rounded-full bg-cyan-400 px-6 py-3 font-bold text-[#0f1416] transition hover:bg-white sm:w-auto">
                   BOOK NOW
                 </button>
               </div>

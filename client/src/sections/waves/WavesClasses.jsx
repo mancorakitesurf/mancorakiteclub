@@ -2,10 +2,10 @@ import { CLASSES } from './wavesContent.js'
 
 function WavesClasses({ classes = CLASSES }) {
   return (
-    <section className="bg-[#8FB38A] py-24">
+    <section className="bg-[#8FB38A] py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="font-display text-4xl font-bold text-background-dark md:text-5xl">
+          <h2 className="font-display text-2xl font-bold text-background-dark sm:text-3xl md:text-4xl lg:text-5xl">
             Classes For All Levels
           </h2>
         </div>
@@ -23,16 +23,17 @@ function WavesClasses({ classes = CLASSES }) {
                 <img
                   src={cls.image}
                   alt={cls.alt}
-                  className="h-80 w-full rounded-2xl object-cover shadow-lg"
+                  loading="lazy"
+                  className="h-64 w-full rounded-3xl object-cover shadow-lg sm:h-80"
                 />
               </div>
 
               {/* Text */}
               <div className="lg:w-1/2">
-                <h3 className="mb-4 font-display text-2xl font-bold text-background-dark">
+                <h3 className="mb-4 font-display text-2xl font-bold text-background-dark sm:text-3xl">
                   {cls.title}
                 </h3>
-                <p className="text-lg leading-relaxed text-background-dark/80">
+                <p className="text-sm leading-relaxed text-background-dark/80 sm:text-base md:text-lg">
                   {cls.description}
                 </p>
               </div>

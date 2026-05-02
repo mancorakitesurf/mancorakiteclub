@@ -10,18 +10,19 @@ function BlogCard({ slug, category, title, date, author, image }) {
           <img
             src={image}
             alt={title}
-            className="h-[420px] w-full object-cover transition duration-700 group-hover:scale-110"
+            loading="lazy"
+            className="h-64 w-full object-cover transition duration-700 group-hover:scale-110 sm:h-80 lg:h-[420px]"
           />
 
           {/* Badge categoría */}
-          <span className="absolute left-6 top-6 rounded-full bg-black/70 px-4 py-1 text-xs font-semibold uppercase tracking-widest text-white backdrop-blur-sm">
+          <span className="absolute left-4 top-4 rounded-full bg-black/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white backdrop-blur-sm sm:left-6 sm:top-6 sm:px-4 sm:text-xs">
             {category}
           </span>
         </div>
 
         {/* Contenido */}
-        <div className="p-8">
-          <h2 className="text-2xl font-bold leading-snug text-slate-900 transition group-hover:text-primary">
+        <div className="p-4 sm:p-6 lg:p-8">
+          <h2 className="text-xl font-bold leading-snug text-slate-900 transition group-hover:text-primary sm:text-2xl">
             {title}
           </h2>
 

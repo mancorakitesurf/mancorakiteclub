@@ -5,6 +5,8 @@ import ChatbotMessage from './ChatbotMessage'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 import { chatbotFlows, buildWhatsAppMessage } from '../lib/chatbotFlows'
 
+const WELCOME_MESSAGE = { id: 'welcome', messageKey: 'chatbot.welcome', isBot: true }
+
 /**
  * ChatbotWindow Component
  * Modal window containing the chatbot conversation interface
@@ -12,21 +14,25 @@ import { chatbotFlows, buildWhatsAppMessage } from '../lib/chatbotFlows'
 function ChatbotWindow({ isOpen, onClose }) {
   const { t } = useI18n()
   const [currentStep, setCurrentStep] = useState('welcome')
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState(() => [WELCOME_MESSAGE])
   const [selections, setSelections] = useState({})
   const messagesEndRef = useRef(null)
-
-  // Initialize messages when window opens
-  useEffect(() => {
-    if (isOpen && messages.length === 0) {
-      setMessages([{ id: 'welcome', messageKey: 'chatbot.welcome', isBot: true }])
-    }
-  }, [isOpen])
 
   // Auto-scroll to bottom
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  const resetConversation = () => {
+    setCurrentStep('welcome')
+    setSelections({})
+    setMessages([WELCOME_MESSAGE])
+  }
+
+  const handleClose = () => {
+    resetConversation()
+    onClose()
+  }
 
   const handleOptionClick = (option, action) => {
     const nextId = option.nextId
@@ -72,7 +78,7 @@ function ChatbotWindow({ isOpen, onClose }) {
     const message = buildWhatsAppMessage(selections)
     const whatsappLink = buildWhatsAppUrl(message)
     window.open(whatsappLink, '_blank', 'noopener,noreferrer')
-    onClose()
+    handleClose()
   }
 
   const currentFlow = chatbotFlows[currentStep]
@@ -85,7 +91,7 @@ function ChatbotWindow({ isOpen, onClose }) {
       <div className="flex items-center justify-between rounded-t-2xl bg-primary px-6 py-4 text-white">
         <h3 className="text-lg font-bold text-white">{t('chatbot.title')}</h3>
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="rounded transition-colors hover:text-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
           aria-label="Close chatbot"
         >

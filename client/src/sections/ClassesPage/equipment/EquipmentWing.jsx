@@ -5,8 +5,8 @@ import { WINGFOIL_DATA } from "./classesContent"
 
 function EquipmentWing() {
   return (
-    <section className="py-24 bg-[#1E3130] text-white">
-      <Container className="space-y-24">
+    <section className="bg-[#1E3130] py-16 text-white sm:py-20 lg:py-28">
+      <Container className="space-y-16 sm:space-y-20 lg:space-y-24">
 
         {/* WINGFOIL */}
         <div>
@@ -15,7 +15,7 @@ function EquipmentWing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-bold text-white mb-8 uppercase text-right"
+            className="mb-8 text-2xl font-bold uppercase text-white sm:text-3xl md:text-4xl md:text-right"
           >
             Wingfoil Equipment
           </motion.h3>

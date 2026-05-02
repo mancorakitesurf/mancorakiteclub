@@ -70,7 +70,7 @@ const WINGFOIL_CLASSES = [
 
 function WingfoilClasses() {
   return (
-    <section className="relative py-32 px-6 bg-gradient-to-b from-[#0f2e2c] to-[#071a19] text-white overflow-hidden">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
       {/* Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(130,153,152,0.25),_transparent_65%)]" />
@@ -81,18 +81,18 @@ function WingfoilClasses() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9 }}
-        className="relative z-10 max-w-4xl mx-auto text-center mb-24"
+        className="relative z-10 mx-auto mb-16 max-w-4xl text-center sm:mb-20 lg:mb-24"
       >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-widest">
+        <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
           WINGFOIL CLASSES
         </h2>
-        <p className="mt-6 text-lg text-white/70">
+        <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
           Private sessions with expert instructors and premium equipment.
         </p>
       </motion.div>
 
       {/* Grid – 4 en línea */}
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
         {WINGFOIL_CLASSES.map((item, index) => (
           <motion.div
             key={item.id}
@@ -100,10 +100,10 @@ function WingfoilClasses() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.12 }}
-            className="group relative flex flex-col rounded-2xl overflow-hidden bg-white text-[#0E201F] shadow-xl hover:shadow-2xl transition"
+            className="group relative flex flex-col overflow-hidden rounded-3xl bg-white text-[#0E201F] shadow-xl transition hover:shadow-2xl"
           >
             {/* Image */}
-            <div className="relative h-56 overflow-hidden">
+            <div className="relative h-64 overflow-hidden">
               <img
                 src={item.image}
                 alt={item.title}
@@ -115,7 +115,7 @@ function WingfoilClasses() {
                 className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-black/50" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 text-white">
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white">
                 <h3 className="text-xl font-bold">{item.title}</h3>
                 <span className="mt-1 text-xs uppercase tracking-wider opacity-80">
                   {item.duration}
@@ -127,7 +127,7 @@ function WingfoilClasses() {
             </div>
 
             {/* Content */}
-            <div className="flex flex-col flex-1 p-6 text-center">
+            <div className="flex flex-1 flex-col p-4 text-center sm:p-6">
               <ul className="space-y-2 mb-6 text-sm">
                 {item.features.map((feature, i) => (
                   <li key={i} className="flex justify-center gap-2 text-black/70">
@@ -137,7 +137,7 @@ function WingfoilClasses() {
                 ))}
               </ul>
 
-              <button className="mt-auto rounded-full bg-[#829988] px-6 py-2 font-bold text-[#0E201F] hover:bg-[#0E201F] hover:text-white transition">
+              <button className="mt-auto min-h-12 w-full rounded-full bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-[#0E201F] hover:text-white">
                 BOOK NOW
               </button>
             </div>

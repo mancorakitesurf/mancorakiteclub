@@ -15,12 +15,12 @@ function BlogPage14() {
 
             <HeroChoiceKite />
             
-            <section className="py-24 px-6 md:px-24 bg-[#031015]">
+            <section className="bg-[#031015] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
                 <div className="max-w-4xl mx-auto space-y-8">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tighter uppercase italic">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tighter uppercase italic">
                         The Kinetic Duality of the Humboldt Current
                     </h2>
-                    <div className="space-y-6 text-[#9eaeb4] text-lg font-light leading-relaxed italic">
+                    <div className="space-y-6 text-sm sm:text-base md:text-lg text-[#9eaeb4] font-light leading-relaxed italic">
                         <p>Peru's coastline offers a mechanical perfection rarely seen elsewhere. Driven by the cold, relentless push of the Humboldt Current, the thermal winds and endless pointbreaks present a unique laboratory for wind-driven water sports.</p>
                         <p>We analyze the 'kinetic duality' of these disciplines. While kitesurfing harnesses vertical power, wingfoiling taps into surface energy to surf rolling swells with minimal drag.</p>
                     </div>

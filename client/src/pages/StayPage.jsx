@@ -19,33 +19,33 @@ function StayPage() {
       hreflang={{ en: '/stay', es: '/esp', default: '/' }}
     >
       <div className="space-y-10">
-        <section className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
-          <h2 className="font-display text-2xl text-slate-900 dark:text-white">What it is</h2>
-          <p className="mt-4 max-w-3xl text-slate-600 dark:text-slate-300">
+        <section className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
+          <h2 className="font-display text-2xl text-slate-900 dark:text-white sm:text-3xl">What it is</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
             Stay with us is a focused accommodation option designed for riders who want comfort,
             simplicity, and easy planning.
           </p>
-          <p className="mt-3 max-w-3xl text-slate-600 dark:text-slate-300">
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
             Clean spaces, flexible structure, and a premium atmosphere close to your sessions.
           </p>
         </section>
 
-        <section className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
-          <h2 className="font-display text-2xl text-slate-900 dark:text-white">Amenities</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4 dark:border-white/10">
+        <section className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
+          <h2 className="font-display text-2xl text-slate-900 dark:text-white sm:text-3xl">Amenities</h2>
+          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="flex items-center gap-3 rounded-2xl border border-gray-200 p-4 dark:border-white/10">
               <FaWifi className="text-primary" />
               <span className="text-sm text-slate-700 dark:text-slate-200">WiFi</span>
             </div>
-            <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4 dark:border-white/10">
+            <div className="flex items-center gap-3 rounded-2xl border border-gray-200 p-4 dark:border-white/10">
               <FaRegSnowflake className="text-primary" />
               <span className="text-sm text-slate-700 dark:text-slate-200">A/C</span>
             </div>
-            <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4 dark:border-white/10">
+            <div className="flex items-center gap-3 rounded-2xl border border-gray-200 p-4 dark:border-white/10">
               <FaShower className="text-primary" />
               <span className="text-sm text-slate-700 dark:text-slate-200">Hot water</span>
             </div>
-            <div className="flex items-center gap-3 rounded-lg border border-gray-200 p-4 dark:border-white/10">
+            <div className="flex items-center gap-3 rounded-2xl border border-gray-200 p-4 dark:border-white/10">
               <FaUtensils className="text-primary" />
               <span className="text-sm text-slate-700 dark:text-slate-200">
                 Breakfast (TODO confirm)
@@ -54,13 +54,13 @@ function StayPage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
-          <h2 className="font-display text-2xl text-slate-900 dark:text-white">Location</h2>
+        <section className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
+          <h2 className="font-display text-2xl text-slate-900 dark:text-white sm:text-3xl">Location</h2>
           <div className="mt-5 grid gap-5 lg:grid-cols-[1.2fr_1fr]">
-            <div className="flex min-h-[220px] items-center justify-center rounded-lg border border-dashed border-gray-300 bg-slate-100 text-sm text-slate-500 dark:border-white/20 dark:bg-slate-800/40 dark:text-slate-300">
+            <div className="flex min-h-[220px] items-center justify-center rounded-2xl border border-dashed border-gray-300 bg-slate-100 p-4 text-center text-sm text-slate-500 dark:border-white/20 dark:bg-slate-800/40 dark:text-slate-300">
               Map placeholder (TODO)
             </div>
-            <div className="rounded-lg border border-gray-200 p-5 dark:border-white/10">
+            <div className="rounded-2xl border border-gray-200 p-5 dark:border-white/10">
               <p className="flex items-center gap-2 text-sm text-slate-700 dark:text-slate-200">
                 <FaMapMarkerAlt className="text-primary" />
                 Máncora, Peru
@@ -70,39 +70,40 @@ function StayPage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-gray-200 bg-white p-8 dark:border-white/10 dark:bg-surface-dark">
-          <h2 className="font-display text-2xl text-slate-900 dark:text-white">Gallery</h2>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <div className="relative h-80 overflow-hidden rounded-xl md:h-[430px]">
-              <img src={roomMain} alt="Stay main room" className="h-full w-full object-cover" />
+        <section className="rounded-2xl border border-gray-200 bg-white p-4 dark:border-white/10 dark:bg-surface-dark sm:p-6 lg:p-8">
+          <h2 className="font-display text-2xl text-slate-900 dark:text-white sm:text-3xl">Gallery</h2>
+          <div className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <div className="relative h-72 overflow-hidden rounded-2xl sm:h-80 lg:h-[430px]">
+              <img src={roomMain} alt="Stay main room" loading="lazy" className="h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
             </div>
             <div className="grid gap-4">
-              <div className="relative h-[205px] overflow-hidden rounded-xl">
+              <div className="relative h-56 overflow-hidden rounded-2xl sm:h-[205px]">
                 <img
                   src={roomSecondary}
                   alt="Stay secondary room"
+                  loading="lazy"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
               </div>
-              <div className="relative h-[205px] overflow-hidden rounded-xl">
-                <img src={commonArea} alt="Stay common area" className="h-full w-full object-cover" />
+              <div className="relative h-56 overflow-hidden rounded-2xl sm:h-[205px]">
+                <img src={commonArea} alt="Stay common area" loading="lazy" className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="rounded-xl border border-primary/40 bg-white p-8 text-center dark:bg-surface-dark">
-          <h2 className="font-display text-3xl text-slate-900 dark:text-white">Plan your stay</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-slate-600 dark:text-slate-300">
+        <section className="rounded-2xl border border-primary/40 bg-white p-4 text-center dark:bg-surface-dark sm:p-6 lg:p-8">
+          <h2 className="font-display text-2xl text-slate-900 dark:text-white sm:text-3xl">Plan your stay</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
             Build your package or contact us directly on WhatsApp.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
             <Link
               to="/build"
-              className="inline-flex rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90 sm:w-auto"
             >
               Build your trip
             </Link>
@@ -110,7 +111,7 @@ function StayPage() {
               href={buildWhatsAppUrl(stayMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex rounded-lg border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
+              className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white sm:w-auto"
             >
               Book on WhatsApp
             </a>

@@ -2,12 +2,13 @@ import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 
 function TripCard({ trip }) {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-xl border border-white/5 bg-surface-dark">
+    <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/5 bg-surface-dark">
       {/* Image */}
       <div className="relative h-52 overflow-hidden">
         <img
           src={trip.image}
           alt={trip.alt}
+          loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>
@@ -53,7 +54,7 @@ function TripCard({ trip }) {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full border-2 border-white px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-background-dark"
+            className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-background-dark sm:w-auto"
           >
             Book Now
           </a>
@@ -65,18 +66,18 @@ function TripCard({ trip }) {
 
 function WavesTrips({ title, trips }) {
   return (
-    <section className="bg-background-dark py-24">
+    <section className="bg-background-dark py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {title && (
           <div className="mb-12 text-center">
-            <h2 className="mb-4 font-display text-4xl font-bold text-white md:text-5xl">
+            <h2 className="mb-4 font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {title}
             </h2>
             <div className="mx-auto h-1 w-20 rounded-full bg-primary" />
           </div>
         )}
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-3">
           {trips.map((trip) => (
             <TripCard key={trip.title} trip={trip} />
           ))}

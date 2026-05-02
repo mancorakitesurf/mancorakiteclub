@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { lazy, Suspense } from 'react'
 import MainLayout from './layouts/MainLayout.jsx'
-import NotFound from '../pages/NotFound.jsx'
+import NotFoundPage from '../pages/NotFoundPage.jsx'
 
 const HomePage = lazy(() => import('../pages/HomePage.jsx'))
 const TripsPage = lazy(() => import('../pages/TripsPage.jsx'))
@@ -18,7 +18,7 @@ const BlogPostPage = lazy(() => import('../pages/blog/BlogPostPage.jsx'))
 
 
 function Loading() {
-  return <div className="flex h-screen items-center justify-center">Loading...</div>
+  return <div className="flex min-h-screen items-center justify-center px-4 text-center">Loading...</div>
 }
 
 export const router = createBrowserRouter([
@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
       { path: 'contact', element: <ContactPage /> },
       { path: 'reviews', element: <ReviewsPage /> },
       { path: 'waves', element: <WavesPage /> },
-      { path: '*', element: <NotFound /> },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
 ])

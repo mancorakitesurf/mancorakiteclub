@@ -3,7 +3,7 @@ import { CLASSES_HERO } from "./classesData"
 
 function ClassesHero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-screen">
 
       {/* Background image */}
       <img
@@ -20,13 +20,13 @@ function ClassesHero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 text-center text-white max-w-4xl px-6"
+        className="relative z-10 max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
       >
-        <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+        <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
           {CLASSES_HERO.title}
         </h1>
 
-        <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl opacity-80">
+        <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed opacity-80 sm:text-lg md:text-xl">
           {CLASSES_HERO.subtitle}
         </p>
       </motion.div>

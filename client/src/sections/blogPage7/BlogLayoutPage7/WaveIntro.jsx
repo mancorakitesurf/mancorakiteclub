@@ -2,17 +2,15 @@ import { motion } from "framer-motion"
 
 function WaveIntro() {
   return (
-    <section className="relative py-32 bg-white">
-
-      <div className="max-w-4xl mx-auto px-6 text-center">
-
+    <section className="relative bg-white py-32">
+      <div className="mx-auto max-w-4xl px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-bold text-black leading-tight"
+          className="text-4xl font-bold leading-tight text-black md:text-5xl"
         >
-          Most kitesurfers don’t struggle because of skill.
+          Most kitesurfers don&apos;t struggle because of skill.
         </motion.h2>
 
         <motion.p
@@ -21,16 +19,16 @@ function WaveIntro() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-8 text-lg text-gray-600"
         >
-          They struggle because they’re in the wrong conditions.
+          They struggle because they&apos;re in the wrong conditions.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-6 text-gray-500 max-w-2xl mx-auto"
+          className="mx-auto mt-6 max-w-2xl text-gray-500"
         >
-          Gusty wind, overcrowded spots, cold water, inconsistent waves…
+          Gusty wind, overcrowded spots, cold water, inconsistent waves...
           all of it slows progression without you even realizing it.
         </motion.p>
 
@@ -44,15 +42,13 @@ function WaveIntro() {
             Progression is not random.
           </p>
 
-          <p className="mt-2 text-cyan-500 font-semibold">
-            It’s built by the environment.
+          <p className="mt-2 font-semibold text-cyan-500">
+            It&apos;s built by the environment.
           </p>
         </motion.div>
-
       </div>
-
     </section>
   )
 }
 
-export default WaveIntro;
+export default WaveIntro

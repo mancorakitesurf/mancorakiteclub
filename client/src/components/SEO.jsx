@@ -14,6 +14,8 @@ import { setSeoTags } from '../lib/seo.js'
  * @param {object} hreflang - Objeto con rutas por idioma {en: '/', es: '/esp', default: '/'}
  */
 function SEO({
+  title,
+  description,
   titleKey = 'seo.homeTitle',
   descKey = 'seo.homeDesc',
   titleFallback = 'Máncora Kite Club',
@@ -24,20 +26,19 @@ function SEO({
   const { t } = useI18n()
 
   // Obtener título y descripción del i18n o fallback
-  const title = t(titleKey) !== titleKey ? t(titleKey) : titleFallback
-  const description = t(descKey) !== descKey ? t(descKey) : descFallback
+  const resolvedTitle = title ?? (t(titleKey) !== titleKey ? t(titleKey) : titleFallback)
+  const resolvedDescription = description ?? (t(descKey) !== descKey ? t(descKey) : descFallback)
 
   useEffect(() => {
     setSeoTags({
-      title,
-      description,
+      title: resolvedTitle,
+      description: resolvedDescription,
       canonicalPath,
       hreflang,
     })
-  }, [title, description, canonicalPath, hreflang])
+  }, [resolvedTitle, resolvedDescription, canonicalPath, hreflang])
 
   return null
 }
 
 export default SEO
-

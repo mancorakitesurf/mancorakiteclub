@@ -1,49 +1,49 @@
-import { motion } from "framer-motion";
-import { SEVEN_PLANS_DATA7 } from "./introData13";
-import heroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg";
+import { motion } from "framer-motion"
+import { SEVEN_PLANS_DATA7 } from "./introData13"
+import heroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg"
 
 function HeroProgressionKite() {
-    const { hero } = SEVEN_PLANS_DATA7;
+  const { hero } = SEVEN_PLANS_DATA7
 
-    return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
-            {/* Fondo con imagen y overlay uniforme */}
-            <div className="absolute inset-0 z-0">
-                <img 
-                    src={heroImg} 
-                    className="w-full h-full object-cover opacity-50" 
-                    alt="Mancora" 
-                />
-                {/* Overlay oscuro simple para que el texto resalte */}
-                <div className="absolute inset-0 bg-black/50" />
-            </div>
+  return (
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-[#031015] md:min-h-screen">
+      <div className="absolute inset-0 z-0">
+        <motion.img
+          src={heroImg}
+          alt="Mancora"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+          className="w-full h-full object-cover opacity-60"
+        />
 
-            {/* Contenido centrado al estilo de la Referencia 2 */}
-            <motion.div 
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="relative z-10 text-center text-white max-w-5xl px-6"
-            >
-                {/* Tag Minimalista: Sin bordes ni fondos */}
-                <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
-                    {hero.location}
-                </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
+      </div>
 
-                {/* Título Principal Impactante */}
-                <h1 className="text-5xl md:text-8xl font-black tracking-tighter leading-tight uppercase mb-6">
-                    {hero.title}<br/>
-                    {hero.highlight}<br/>
-                    {hero.subtitle}
-                </h1>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative z-10 max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
+      >
+        <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
+          {hero.location}
+        </p>
 
-                {/* Descripción Centrada */}
-                <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-white/80 leading-relaxed font-light">
-                    {hero.description}
-                </p>
-            </motion.div>
-        </section>
-    );
+        <h1 className="mb-6 text-4xl font-black uppercase leading-[0.95] tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          {hero.title}
+          <br />
+          {hero.highlight}
+          <br />
+          {hero.subtitle}
+        </h1>
+
+        <p className="mx-auto mt-8 max-w-2xl text-base font-light leading-relaxed text-white/80 sm:text-lg md:text-xl">
+          {hero.description}
+        </p>
+      </motion.div>
+    </section>
+  )
 }
 
-export default HeroProgressionKite;
+export default HeroProgressionKite

@@ -2,7 +2,7 @@ import { SAFETY_DATA15 } from "./introData15";
 
 function DataStripSafety() {
     return (
-        <div className="grid grid-cols-3 gap-4 py-8 border-b border-white/10 max-w-5xl mx-auto px-6">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 border-b border-white/10 px-4 py-8 sm:grid-cols-2 sm:px-6 lg:grid-cols-3 lg:px-8">
             {SAFETY_DATA15.stats.map((stat, i) => (
                 <div key={i} className="flex flex-col gap-1">
                     <span className="text-[#9eaeb4] text-[10px] uppercase tracking-widest font-bold">{stat.label}</span>

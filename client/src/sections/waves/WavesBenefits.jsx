@@ -3,10 +3,10 @@ import { BENEFITS } from './wavesContent.js'
 
 function WavesBenefits() {
   return (
-    <section className="bg-background-dark py-24">
+    <section className="bg-background-dark py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="font-display text-4xl font-bold text-white md:text-5xl">Benefits</h2>
+          <h2 className="font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">Benefits</h2>
         </div>
 
         <ul className="space-y-8">
@@ -17,7 +17,7 @@ function WavesBenefits() {
               </span>
               <div>
                 <h4 className="text-lg font-bold text-white">{benefit.title}</h4>
-                <p className="mt-1 text-gray-400">{benefit.description}</p>
+                <p className="mt-1 text-sm leading-relaxed text-gray-400 sm:text-base">{benefit.description}</p>
               </div>
             </li>
           ))}

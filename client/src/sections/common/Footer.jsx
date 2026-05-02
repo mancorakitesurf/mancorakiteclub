@@ -13,9 +13,9 @@ import { useI18n } from '../../app/providers/i18nContext.js'
 function Footer() {
   const { t } = useI18n()
   return (
-    <footer className="border-t border-gray-200 bg-surface-light pb-8 pt-16 dark:border-white/10 dark:bg-black">
+    <footer className="border-t border-gray-200 bg-surface-light pb-8 pt-16 sm:pt-20 lg:pt-24 dark:border-white/10 dark:bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12 xl:grid-cols-4">
           <div className="col-span-1 text-center md:text-left">
             <div className="flex items-center justify-center gap-4 mb-5 md:justify-start">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
@@ -25,7 +25,7 @@ function Footer() {
                 Máncora Kite Club
               </span>
             </div>
-            <p className="mb-6 text-sm leading-relaxed text-justify text-gray-500 mb-8 dark:text-gray-400">
+            <p className="mb-8 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
               {t('footer.tagline')}
             </p>
             <div className="flex justify-center gap-4 md:justify-start">
@@ -53,7 +53,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="text-center md:text-left md:pl-11">
+          <div className="text-center md:text-left xl:pl-8">
             <h4 className="mb-6 font-bold text-slate-900 dark:text-white">Explore</h4>
             <ul className="space-y-3 text-sm text-gray-500 dark:text-gray-400">
               <li>
@@ -108,13 +108,13 @@ function Footer() {
           <div className="text-center md:text-left">
             <h4 className="mb-6 font-bold text-slate-900 dark:text-white">Contact</h4>
             <ul className="space-y-3 text-sm text-gray-500 dark:text-gray-400">
-              <li className="flex items-center justify-center gap-3 md:justify-start">
+              <li className="flex items-center justify-center gap-3 break-all md:justify-start md:break-normal">
                 <FaMapMarkerAlt className="text-primary" /> Máncora Beach, Piura, Peru
               </li>
-              <li className="flex items-center justify-center gap-3 md:justify-start">
+              <li className="flex items-center justify-center gap-3 break-all md:justify-start md:break-normal">
                 <FaEnvelope className="text-primary" /> hello@mancorakiteclub.com
               </li>
-              <li className="flex items-center justify-center gap-3 md:justify-start">
+              <li className="flex items-center justify-center gap-3 break-all md:justify-start md:break-normal">
                 <FaWhatsapp className="text-primary" /> +51 996 557 689
               </li>
             </ul>

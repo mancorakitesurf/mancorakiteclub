@@ -37,11 +37,22 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: "Inter", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 @keyframes marquee {
@@ -62,4 +73,3 @@ body {
   0% { transform: scale(1.05); }
   100% { transform: scale(1.15); }
 }
-

@@ -6,7 +6,7 @@ function HeroChoiceKite() {
     const { hero } = CHOICE_DATA14;
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black md:min-h-screen">
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0">
                 <img 
@@ -22,7 +22,7 @@ function HeroChoiceKite() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="relative z-10 text-center text-white max-w-5xl px-6"
+                className="relative z-10 max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
             >
                 {/* Tag style de la imagen 2 */}
                 <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
@@ -30,19 +30,19 @@ function HeroChoiceKite() {
                 </p>
 
                 {/* Title */}
-                <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-tight mb-6">
+                <h1 className="mb-6 text-4xl font-black uppercase leading-tight tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
                     {hero.title}<br/>
                     {hero.highlight}
                 </h1>
 
                 {/* Description */}
-                <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-white/80 font-light leading-relaxed italic">
+                <p className="mx-auto mt-8 max-w-2xl text-base font-light italic leading-relaxed text-white/80 sm:text-lg md:text-xl">
                     {hero.description}
                 </p>
             </motion.div>
 
             {/* Anchors/Stats - Reubicados horizontalmente abajo para mantener la simetría centrada */}
-            <div className="absolute bottom-12 left-0 w-full z-10 hidden md:flex justify-center gap-8">
+            <div className="absolute bottom-12 left-0 z-10 hidden w-full justify-center gap-8 lg:flex">
                 {hero.anchors.map((anchor, i) => (
                     <motion.div 
                         key={i} 

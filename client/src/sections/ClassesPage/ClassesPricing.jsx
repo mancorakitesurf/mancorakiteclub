@@ -3,7 +3,7 @@ import { PRIVATE_CLASSES } from "./classesData"
 
 function ClassesPricing() {
   return (
-    <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] py-32 px-6 text-white">
+    <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
       {/* Header */}
       <motion.div
@@ -11,18 +11,18 @@ function ClassesPricing() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="max-w-3xl mx-auto text-center mb-20"
+        className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
       >
-        <h2 className="text-4xl md:text-5xl font-bold tracking-[0.35em]">
+        <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
           KITE CLASSES
         </h2>
-        <p className="mt-6 text-lg text-white/70">
+        <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
           Enjoy 100% personalized experience with IKO certified instructors and premium equipment.
         </p>
       </motion.div>
 
       {/* GRID → 4 HORIZONTALES */}
-      <div className="mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
 
         {PRIVATE_CLASSES.map((item, index) => (
           <motion.div
@@ -31,11 +31,11 @@ function ClassesPricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
-            className="relative flex flex-col overflow-hidden rounded-3xl bg-[#0c2523]"
+            className="group relative flex flex-col overflow-hidden rounded-3xl bg-[#0c2523]"
           >
 
             {/* IMAGE HOVER CHANGE */}
-            <div className="relative h-52 overflow-hidden">
+            <div className="relative h-56 overflow-hidden">
               <img
                 src={item.image}
                 alt={item.title}
@@ -51,7 +51,7 @@ function ClassesPricing() {
             </div>
 
             {/* CONTENT */}
-            <div className="flex flex-col flex-1 p-8 text-center">
+            <div className="flex flex-1 flex-col p-4 text-center sm:p-6 lg:p-8">
               <h3 className="text-xl font-semibold mb-2">
                 {item.title}
               </h3>
@@ -76,7 +76,7 @@ function ClassesPricing() {
                 ))}
               </ul>
 
-              <button className="rounded-xl bg-[#8ac43f] py-3 font-bold text-[#071a19] transition hover:bg-white">
+              <button className="min-h-12 w-full rounded-full bg-[#8ac43f] px-6 py-3 font-bold text-[#071a19] transition hover:bg-white">
                 BOOK NOW
               </button>
             </div>

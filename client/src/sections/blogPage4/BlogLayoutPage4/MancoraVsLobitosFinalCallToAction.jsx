@@ -1,0 +1,17 @@
+import ArticleFinalCallToActionBase from "../../blogShared/ArticleFinalCallToActionBase.jsx"
+import ctaImage from "../../../assets/imagenes-home/posicion5.jpg"
+
+function MancoraVsLobitosFinalCallToAction() {
+  return (
+    <ArticleFinalCallToActionBase
+      eyebrow="Best Base"
+      title="When the comparison ends, the most bookable answer still points to Mancora"
+      description="Lobitos and Cabo Blanco give the article its tension, but Mancora is the destination that closes the decision with warmth, versatility, and a much stronger long-stay feel."
+      image={ctaImage}
+      imageAlt="Premium beach destination atmosphere in northern Peru"
+      buttonLabel="Ir a Máncora Kite Club"
+    />
+  )
+}
+
+export default MancoraVsLobitosFinalCallToAction

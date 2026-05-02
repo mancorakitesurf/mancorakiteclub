@@ -2,21 +2,21 @@ import { SAFARI_DATA10 } from "./introData10";
 
 function FeaturedSpotsKite() {
     return (
-        <section className="py-24 px-6 md:px-12 bg-[#05161b]">
-            <div className="max-w-7xl mx-auto">
-                <div className="mb-12 border-l-4 border-[#ff9069] pl-6">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white uppercase tracking-tighter">Featured Spots</h2>
-                    <p className="text-[#9eaeb4] text-lg font-light">The Peruvian Wave Circuit</p>
+        <section className="bg-[#05161b] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+            <div className="mx-auto max-w-7xl">
+                <div className="mb-10 border-l-4 border-[#ff9069] pl-4 sm:mb-12 sm:pl-6">
+                    <h2 className="text-2xl font-bold uppercase tracking-tighter text-white sm:text-3xl md:text-4xl lg:text-5xl">Featured Spots</h2>
+                    <p className="text-sm font-light leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">The Peruvian Wave Circuit</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+                <div className="grid grid-cols-1 gap-6 auto-rows-[240px] sm:auto-rows-[280px] lg:grid-cols-12 lg:auto-rows-[300px]">
                     {SAFARI_DATA10.spots.map((spot, i) => (
                         <div key={i} className={`${spot.colSpan} rounded-2xl overflow-hidden relative group border border-white/5`}>
-                            <img src={`https://picsum.photos/800/600?random=${i}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={spot.name} />
+                            <img src={`https://picsum.photos/800/600?random=${i}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" alt={spot.name} />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
-                            <div className="absolute bottom-8 left-8">
+                            <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8">
                                 <span className="text-[10px] font-bold text-[#5af8fb] uppercase tracking-[0.2em] mb-2 block">{spot.tag}</span>
-                                <h3 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tight">{spot.name}</h3>
-                                {spot.desc && <p className="text-[#9eaeb4] text-sm mt-2 max-w-xs hidden md:block">{spot.desc}</p>}
+                                <h3 className="text-2xl font-bold uppercase tracking-tight text-white sm:text-3xl md:text-4xl lg:text-5xl">{spot.name}</h3>
+                                {spot.desc && <p className="mt-2 hidden max-w-xs text-sm leading-relaxed text-[#9eaeb4] lg:block">{spot.desc}</p>}
                             </div>
                         </div>
                     ))}

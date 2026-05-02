@@ -6,11 +6,11 @@ function TechniquesContent8() {
     return (
         <div className="bg-[#031015] text-[#e6f6fd]">
             {/* Reading the Swell */}
-            <section className="py-24 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-                <div className="w-full md:w-1/2 relative group">
+            <section className="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-16 sm:gap-10 sm:px-6 sm:py-20 lg:flex-row lg:gap-16 lg:px-8 lg:py-28">
+                <div className="group relative w-full lg:w-1/2">
                     <div className="absolute -inset-4 bg-[#132930]/50 rounded-xl blur-xl" />
-                    <img src="https://picsum.photos/800/1000" className="relative z-10 rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" alt="Swell" />
-                    <div className="absolute -bottom-8 -right-8 bg-[#132930]/80 backdrop-blur-md p-6 rounded-xl border border-white/10 w-64 hidden md:block z-20 shadow-2xl">
+                    <img src="https://picsum.photos/800/1000" loading="lazy" className="relative z-10 w-full rounded-3xl shadow-2xl grayscale transition-all duration-700 hover:grayscale-0" alt="Swell" />
+                    <div className="absolute -bottom-8 -right-8 z-20 hidden w-64 rounded-2xl border border-white/10 bg-[#132930]/80 p-6 shadow-2xl backdrop-blur-md lg:block">
                         <div className="flex items-center gap-3 mb-2">
                             <span className="material-symbols-outlined text-[#5af8fb] text-sm">visibility</span>
                             <h4 className="font-bold text-xs tracking-widest uppercase">Focus Point</h4>
@@ -18,26 +18,26 @@ function TechniquesContent8() {
                         <p className="text-xs text-[#9eaeb4]">{swell.focus}</p>
                     </div>
                 </div>
-                <div className="w-full md:w-1/2">
-                    <h2 className="text-4xl md:text-6xl font-bold mb-6 italic tracking-tighter">
+                <div className="w-full lg:w-1/2">
+                    <h2 className="mb-6 text-2xl font-bold italic tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
                         {swell.title}<br/><span className="text-[#ff9069]">{swell.highlight}</span>
                     </h2>
-                    <p className="text-lg text-[#9eaeb4] mb-6">{swell.p1}</p>
-                    <p className="text-lg text-[#9eaeb4]">{swell.p2}</p>
+                    <p className="mb-6 text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">{swell.p1}</p>
+                    <p className="text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">{swell.p2}</p>
                 </div>
             </section>
 
             {/* Timing Your Turns */}
-            <section className="py-24 px-6 bg-[#05161b]">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
-                    <div className="w-full md:w-1/2">
-                        <img src="https://picsum.photos/800/600" className="rounded-xl shadow-2xl" alt="Turns" />
+            <section className="bg-[#05161b] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+                <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-16">
+                    <div className="w-full lg:w-1/2">
+                        <img src="https://picsum.photos/800/600" loading="lazy" className="w-full rounded-3xl shadow-2xl" alt="Turns" />
                     </div>
-                    <div className="w-full md:w-1/2">
-                        <h2 className="text-4xl md:text-6xl font-bold mb-6 italic tracking-tighter">
+                    <div className="w-full lg:w-1/2">
+                        <h2 className="mb-6 text-2xl font-bold italic tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
                             {turns.title}<br/><span className="text-[#5af8fb]">{turns.highlight}</span>
                         </h2>
-                        <div className="space-y-6 text-[#9eaeb4] text-lg">
+                        <div className="space-y-6 text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">
                             <p>{turns.p1}</p>
                             <p><strong className="text-white uppercase text-sm block mb-1">The Bottom Turn:</strong> {turns.p2}</p>
                             <p><strong className="text-white uppercase text-sm block mb-1">The Top Turn:</strong> {turns.p3}</p>

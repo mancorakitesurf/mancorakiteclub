@@ -29,16 +29,16 @@ const BENEFITS = [
 
 function WingfoilWithUs() {
   return (
-    <section className="relative bg-[#0E201F] py-32 px-6 text-white overflow-hidden">
+    <section className="relative overflow-hidden bg-[#0E201F] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       
       {/* Header */}
-      <div className="max-w-6xl mx-auto mb-24">
+      <div className="mx-auto mb-16 max-w-7xl sm:mb-20 lg:mb-24">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
-          className="text-4xl md:text-6xl font-extrabold tracking-tight"
+          className="text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl lg:text-6xl"
         >
           WE BROUGHT THE WINGFOIL NORTH
         </motion.h2>
@@ -48,7 +48,7 @@ function WingfoilWithUs() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 max-w-2xl text-lg text-white/80"
+          className="mt-6 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base md:text-lg"
         >
           Come fly with us. Learn this modern water sport with top instructors
           and premium gear in a safe, inspiring environment.
@@ -56,7 +56,7 @@ function WingfoilWithUs() {
       </div>
 
       {/* Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-14">
         {BENEFITS.map((benefit, i) => (
           <motion.article
             key={i}
@@ -64,24 +64,25 @@ function WingfoilWithUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: i * 0.15 }}
-            className="group relative rounded-3xl overflow-hidden"
+            className="group relative overflow-hidden rounded-3xl"
           >
             {/* Image */}
             <img
               src={benefit.image}
               alt={benefit.title}
-              className="w-full h-[360px] object-cover transform group-hover:scale-110 transition-transform duration-700"
+              loading="lazy"
+              className="h-[280px] w-full transform object-cover transition-transform duration-700 group-hover:scale-110 sm:h-[320px] lg:h-[360px]"
             />
 
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#0E201F]/90 via-[#0E201F]/40 to-transparent" />
 
             {/* Content */}
-            <div className="absolute bottom-0 p-8">
-              <h3 className="text-2xl font-bold tracking-wide mb-3">
+            <div className="absolute bottom-0 p-4 sm:p-6 lg:p-8">
+              <h3 className="mb-3 text-xl font-bold tracking-wide sm:text-2xl">
                 {benefit.title}
               </h3>
-              <p className="text-sm leading-relaxed text-white/85 max-w-sm">
+              <p className="max-w-sm text-sm leading-relaxed text-white/85">
                 {benefit.text}
               </p>
             </div>

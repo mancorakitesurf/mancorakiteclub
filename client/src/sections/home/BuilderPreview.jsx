@@ -1,19 +1,19 @@
 function BuilderPreview() {
   return (
-    <section id="packages" className="relative overflow-hidden bg-surface-dark py-24 text-white">
+    <section id="packages" className="relative overflow-hidden bg-surface-dark py-16 text-white sm:py-20 lg:py-28">
       <div className="absolute right-0 top-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-0 left-0 h-64 w-64 -translate-x-1/2 translate-y-1/2 rounded-full bg-secondary/10 blur-3xl" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 font-display text-4xl font-bold md:text-5xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center sm:mb-16">
+          <h2 className="mb-4 font-display text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
             Build Your Custom Package
           </h2>
-          <p className="text-gray-300">Create the perfect holiday tailored to your needs.</p>
+          <p className="text-sm leading-relaxed text-gray-300 sm:text-base">Create the perfect holiday tailored to your needs.</p>
         </div>
 
-        <div className="rounded-2xl border border-white/10 bg-surface-dark p-8 shadow-2xl backdrop-blur-sm md:p-10">
-          <div className="grid grid-cols-1 items-end gap-6 md:grid-cols-4">
+        <div className="rounded-3xl border border-white/10 bg-surface-dark p-4 shadow-2xl backdrop-blur-sm sm:p-6 lg:p-10">
+          <div className="grid grid-cols-1 items-end gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-primary">
                 <span className="flex h-6 w-6 items-center justify-center rounded-full border border-primary text-xs">
@@ -75,7 +75,7 @@ function BuilderPreview() {
             <div>
               <button
                 type="button"
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:bg-teal-600"
+                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-bold text-white shadow-lg transition-all hover:bg-teal-600"
               >
                 Calculate &amp; Book
               </button>

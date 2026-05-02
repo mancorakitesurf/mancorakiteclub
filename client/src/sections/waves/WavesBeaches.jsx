@@ -9,10 +9,10 @@ function WavesBeaches() {
   const negritos = BEACHES.find((b) => b.name === 'Negritos')
 
   return (
-    <section className="bg-background-dark py-24">
+    <section className="bg-background-dark py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="font-display text-4xl font-bold text-white md:text-5xl">
+          <h2 className="font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
             Featured Beaches in Northern Peru
           </h2>
         </div>
@@ -21,10 +21,11 @@ function WavesBeaches() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
           {/* Row 1: Mancora (large left) + Los Organos & Cabo Blanco (stacked right) */}
           {mancora && (
-            <div className="group relative h-96 overflow-hidden rounded-2xl md:col-span-7 md:row-span-2 md:h-full">
+            <div className="group relative h-80 overflow-hidden rounded-3xl md:col-span-7 md:row-span-2 md:h-full">
               <img
                 src={mancora.image}
                 alt={mancora.alt}
+                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
@@ -36,10 +37,11 @@ function WavesBeaches() {
           )}
 
           {losOrganos && (
-            <div className="group relative h-56 overflow-hidden rounded-2xl md:col-span-5 md:h-full">
+            <div className="group relative h-64 overflow-hidden rounded-3xl md:col-span-5 md:h-full">
               <img
                 src={losOrganos.image}
                 alt={losOrganos.alt}
+                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
@@ -51,10 +53,11 @@ function WavesBeaches() {
           )}
 
           {caboBlanco && (
-            <div className="group relative h-56 overflow-hidden rounded-2xl md:col-span-5 md:h-full">
+            <div className="group relative h-64 overflow-hidden rounded-3xl md:col-span-5 md:h-full">
               <img
                 src={caboBlanco.image}
                 alt={caboBlanco.alt}
+                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
@@ -67,10 +70,11 @@ function WavesBeaches() {
 
           {/* Row 2: Lobitos (wide) */}
           {lobitos && (
-            <div className="group relative h-72 overflow-hidden rounded-2xl md:col-span-12">
+            <div className="group relative h-72 overflow-hidden rounded-3xl md:col-span-12">
               <img
                 src={lobitos.image}
                 alt={lobitos.alt}
+                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
@@ -83,10 +87,11 @@ function WavesBeaches() {
 
           {/* Row 3: Negritos (large) */}
           {negritos && (
-            <div className="group relative h-96 overflow-hidden rounded-2xl md:col-span-12">
+            <div className="group relative h-80 overflow-hidden rounded-3xl md:col-span-12 md:h-96">
               <img
                 src={negritos.image}
                 alt={negritos.alt}
+                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />

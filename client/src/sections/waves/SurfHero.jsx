@@ -1,4 +1,4 @@
-import { FaWhatsapp } from 'react-icons/fa'
+import { motion } from "framer-motion"
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { SURF_HERO_IMAGE } from './wavesContent.js'
 
@@ -6,15 +6,23 @@ function SurfHero() {
   return (
     <section className="relative flex min-h-[70vh] items-end overflow-hidden md:min-h-screen md:items-center">
       <div className="absolute inset-0 z-0">
-        <img
+        <motion.img
           src={SURF_HERO_IMAGE}
           alt="Surfer riding a big green wave in northern Peru"
-          className="h-full w-full object-cover"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+          className="h-full w-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-12 text-center sm:px-6 md:pb-0 md:text-left lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-12 text-center sm:px-6 md:pb-0 md:text-left lg:px-8"
+      >
         <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
           Surfing <br /> Experience
         </h2>
@@ -26,7 +34,7 @@ function SurfHero() {
         >
           Book Now
         </a>
-      </div>
+      </motion.div>
     </section>
   )
 }

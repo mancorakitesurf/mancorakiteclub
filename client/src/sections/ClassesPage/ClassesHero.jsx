@@ -4,18 +4,17 @@ import { CLASSES_HERO } from "./classesData"
 function ClassesHero() {
   return (
     <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-screen">
-
-      {/* Background image */}
-      <img
+      <motion.img
         src={CLASSES_HERO.image}
         alt={CLASSES_HERO.title}
-        className="absolute inset-0 w-full h-full object-cover"
+        initial={{ scale: 1.08 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 2.2, ease: "easeOut" }}
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-      {/* Content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -30,7 +29,6 @@ function ClassesHero() {
           {CLASSES_HERO.subtitle}
         </p>
       </motion.div>
-
     </section>
   )
 }

@@ -4,8 +4,6 @@ import heroImg from "../../../assets/imagenes-kitesurfing/posicionkt2.jpg"
 function WaveHero() {
   return (
     <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-black text-white md:min-h-screen">
-      
-      {/* Background */}
       <div className="absolute inset-0 z-0">
         <motion.img
           src={heroImg}
@@ -16,10 +14,9 @@ function WaveHero() {
           className="w-full h-full object-cover opacity-60"
         />
 
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </div>
 
-      {/* Content */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

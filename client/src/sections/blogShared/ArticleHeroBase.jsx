@@ -4,20 +4,23 @@ function ArticleHeroBase({ eyebrow, title, description, meta = [], image, imageA
   return (
     <section className="relative overflow-hidden bg-slate-950 pt-24 text-white sm:pt-28">
       <div className="absolute inset-0">
-        <img
+        <motion.img
           src={image}
           alt={imageAlt}
-          className="h-full w-full object-cover"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+          className="h-full w-full object-cover opacity-60"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/75 via-slate-950/55 to-cyan-950/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-transparent" />
       </div>
 
       <div className="relative mx-auto flex min-h-[70vh] max-w-7xl items-end px-4 pb-16 sm:px-6 md:min-h-screen lg:px-8 lg:pb-20">
         <motion.div
-          initial={{ opacity: 0, y: 36 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-4xl"
         >
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/85">

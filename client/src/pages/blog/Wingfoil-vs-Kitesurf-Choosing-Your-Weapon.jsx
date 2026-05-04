@@ -8,7 +8,7 @@ function BlogPage14() {
         <div className="bg-[#031015] min-h-screen selection:bg-[#ff9069]/30 selection:text-[#ff9069]">
             <SEO
                 title="Blog | Wingfoil vs Kitesurf in Peru: Choosing Your Weapon"
-                description="A technical analysis of wind intensity, wave dynamics, and rider progression in the Humboldt Current of Peru."
+                description="Wingfoil vs kitesurf in Peru: technical analysis of wind intensity, wave dynamics, and rider progression under the Humboldt Current. Choose your weapon wisely."
                 canonicalPath="/blog/Wingfoil-vs-Kitesurf-Choosing-Your-Weapon"
                 hreflang={{ en: '/', es: '/esp', default: '/' }}
             />

@@ -9,7 +9,7 @@ function ChicamaPage() {
     <>
       <SEO
         title="Chicama, Peru: The Longest Wave in the World + How to Build the Ultimate Surf Trip"
-        description="Discover when to surf Chicama, how to build the route correctly, and why the smartest premium finish still points toward Mancora."
+        description="Discover when to surf Chicama, the longest wave, how to build the route, and why the smartest premium finish points toward Máncora for kitesurfing. Book your trip."
         canonicalPath="/blog/chicama-peru-surf-trip"
         hreflang={{ en: "/", es: "/esp", default: "/" }}
       />

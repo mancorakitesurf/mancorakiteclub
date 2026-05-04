@@ -73,3 +73,10 @@ img {
   0% { transform: scale(1.05); }
   100% { transform: scale(1.15); }
 }
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(42,157,143,0.5), 0 20px 40px rgba(42,157,143,0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(42,157,143,0), 0 20px 40px rgba(42,157,143,0.15); }
+}
+
+.cta-pulse { animation: ctaPulse 2.5s ease-in-out infinite; }

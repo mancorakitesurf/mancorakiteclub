@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { IoChatbubble } from 'react-icons/io5'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -13,6 +13,18 @@ import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
 function ActionHub() {
   const [isOpen, setIsOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 140)
+    }
+
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleToggle = () => {
     setIsOpen((prev) => !prev)
@@ -48,7 +60,11 @@ function ActionHub() {
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-[99] flex flex-col-reverse items-center gap-3">
+      <div
+        className={`fixed bottom-6 right-6 z-[99] flex flex-col-reverse items-center gap-3 transition-all duration-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-4'
+        }`}
+      >
         <button
           onClick={handleToggle}
           aria-label="Open action menu"

@@ -37,7 +37,7 @@ function Hero() {
             href={buildWhatsAppUrl(defaultInquiryMessage('Mancora Kite Club'))}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-primary px-6 py-3 text-base font-semibold text-white shadow-xl transition-all hover:bg-teal-600 hover:shadow-teal-500/40 sm:w-auto"
+            className="cta-pulse flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-primary px-6 py-3 text-base font-semibold text-white shadow-xl transition-all hover:bg-teal-600 hover:shadow-teal-500/40 sm:w-auto"
           >
             <FaWhatsapp className="text-lg sm:text-xl" /> Book on WhatsApp
           </a>

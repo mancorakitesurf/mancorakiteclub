@@ -10,7 +10,7 @@ function FloatingWhatsApp({ link, message = '' }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 300)
+      setIsVisible(window.scrollY > 140)
     }
 
     handleScroll()
@@ -47,7 +47,7 @@ function FloatingWhatsApp({ link, message = '' }) {
         setIsAttentionOpen(false)
       }}
       className={`group fixed bottom-6 right-6 z-[100] flex items-center ${
-        isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
+        isVisible ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-4'
       } transition-all duration-300`}
     >
       <span

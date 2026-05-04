@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "all": "^0.0.0",
     "dotenv": "^17.4.2",
     "framer-motion": "^12.34.3",
     "lucide-react": "^1.14.0",

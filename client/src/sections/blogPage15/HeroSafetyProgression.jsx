@@ -45,4 +45,4 @@ function HeroSafetyProgression() {
     );
 }
 
-export default HeroSafetyProgression;
+export default HeroSafetyProgression

@@ -9,7 +9,7 @@ function MancoraVsLobitosPage() {
     <>
       <SEO
         title="Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru"
-        description="Compare Mancora, Lobitos, and Cabo Blanco for wave kitesurfing in Peru, including comfort, progression, trip style, and the best final base."
+        description="Compare Mancora, Lobitos, and Cabo Blanco for wave kitesurfing in Peru. Detailed analysis of comfort, progression, and why Mancora is the best base. Book now!"
         canonicalPath="/blog/mancora-vs-lobitos-vs-cabo-blanco"
         hreflang={{ en: "/", es: "/esp", default: "/" }}
       />

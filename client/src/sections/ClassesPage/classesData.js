@@ -23,7 +23,7 @@ import gallery10 from '../../assets/imagenes-home/posicion14y27.jpg'
 import gallery11 from '../../assets/imagenes-home/posicion13.jpg'
 
 /* ===========================
-   HERO SECTION
+  HERO SECTION
 =========================== */
 export const CLASSES_HERO = {
   title: "KITESURF AND WINGFOIL IN THE CLUB",
@@ -32,7 +32,7 @@ export const CLASSES_HERO = {
 }
 
 /* ===========================
-   INTRO SECTION
+  INTRO SECTION
 =========================== */
 export const CLASSES_INTRO = {
   title: "Learn Kitesurf in The Club",

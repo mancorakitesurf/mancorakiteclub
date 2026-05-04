@@ -8,7 +8,7 @@ import wingImg2 from '../../../assets/imagenes-wingfoil/posicionw2.jpg'
 import wingImg3 from '../../../assets/imagenes-wingfoil/posicionw4.jpg'
 import wingImg4 from '../../../assets/imagenes-wingfoil/posicionw5.jpg'
 import wingImg5 from '../../../assets/imagenes-wingfoil/posicionw6.jpg'
- 
+
 export const KITESURF_DATA = [
   {
     title: "Latest Generation Kites",

@@ -9,7 +9,7 @@ function PeruKitesurfPage() {
     <>
       <SEO
         title="Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide"
-        description="Understand the real difference between north and south Peru for kitesurfing, including seasons, trip style, progression, and why Mancora remains the strongest base."
+        description="Kitesurfing guide to northern and southern Peru: seasons, travel style, progression, and why Máncora remains the best base for wind and waves. Book now!"
         canonicalPath="/blog/peru-kitesurf-north-vs-south"
         hreflang={{ en: "/", es: "/esp", default: "/" }}
       />

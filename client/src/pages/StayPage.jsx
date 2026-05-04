@@ -14,7 +14,7 @@ function StayPage() {
     <StandardPage
       title="Stay with us"
       subtitle="A calm, premium base for your time in Máncora."
-      description="Accommodation options for your Máncora stay."
+      description="Premium accommodation in Máncora for kitesurfers and riders. Clean rooms with A/C, WiFi, hot water, breakfast. Calm base close to the best spots. Book direct!"
       canonicalPath="/stay"
       hreflang={{ en: '/stay', es: '/esp', default: '/' }}
     >

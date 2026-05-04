@@ -9,7 +9,7 @@ function BlogPage1() {
     <>
       <SEO
         title="Blog | The 20 World's best destinations..."
-        description="Artículo sobre kitesurf en Perú"
+        description="Discover the top 20 kitesurf destinations worldwide. From Máncora to Brazil, find the best spots for wind, waves, and adventure. Part 1 of our global guide."
         canonicalPath="/blog/top-20-kitesurf-destinations-part-1"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />

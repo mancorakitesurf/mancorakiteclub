@@ -8,7 +8,7 @@ function NotFoundPage() {
         titleKey="seo.notFoundTitle"
         descKey="seo.notFoundDesc"
         titleFallback="Mancora Kite Club | 404"
-        descFallback="The page you are looking for does not exist."
+        descFallback="Page not found. The kitesurfing spot, trip, or page you are looking for does not exist. Return to home and keep riding with Máncora Kite Club in Peru."
         canonicalPath="/"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />

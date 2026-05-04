@@ -7,7 +7,7 @@ function BlogPage() {
     <>
       <SEO
         title="Blog | Mancora Kite Club"
-        description="Artículos sobre kitesurf en Perú"
+        description="Kitesurfing, wingfoil, and surf blog from Máncora, Peru. Read guides, spot breakdowns, trip reports, and coaching. Stay updated with the best wind and waves."
         canonicalPath="/blog"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />

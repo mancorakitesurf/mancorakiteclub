@@ -5,7 +5,7 @@ function WingfoilIntro() {
   return (
     <section className="relative bg-[#0f1416] text-white overflow-hidden">
       {/* Imagen de fondo */}
-     <div className="absolute inset-0">
+    <div className="absolute inset-0">
         <img
             src={heroWingfoil}
             alt="Wingfoil Hero"

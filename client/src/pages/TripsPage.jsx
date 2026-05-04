@@ -10,7 +10,7 @@ function TripsPage() {
         titleKey="seo.tripsTitle"
         descKey="seo.tripsDesc"
         titleFallback="Kitesurf Trips in Máncora, Peru | Core Packages"
-        descFallback="Discover kitesurf trips in the best spots of northern Peru. Full-day, 3-day, and 7-day packages available."
+        descFallback="Discover kitesurfing, wingfoil, and surf trips in northern Peru. Full-day, 3-day, and 7-day packages with accommodation, coaching, and gear. Book your trip now."
         canonicalPath="/trips"
         hreflang={{ en: '/trips', es: '/esp/viajes', default: '/' }}
       />

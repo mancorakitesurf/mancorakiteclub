@@ -1,0 +1,66 @@
+[
+  {
+    "id": 3,
+    "author_name": "King Lewis Aldair",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=King%20Lewis%20Aldair&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "Me encantó aprender kite aquí en la mejor escuela del norte",
+    "relative_time_description": "Hace 2 meses"
+  },
+  {
+    "id": 1,
+    "author_name": "Deuf",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=Deuf&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "muy buena escuela , super ambiente y Mancora es un lugar maravilloso, en el cual tuve la suerte de navegar al lado de las ballenas y de los dolfines....que mas quieres😅😅??",
+    "relative_time_description": "Hace 5 meses"
+  },
+  {
+    "id": 6,
+    "author_name": "NEKANDER GARCIA ESTELA",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=NEKANDER%20GARCIA%20ESTELA&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "Muy buena experiencia en mancora kitebsurf, kike te hace sentir cómodo, motivado, cuenta con mucha experiencia y dominio total de este deporte. Totalmente recomendado!",
+    "relative_time_description": "Hace 6 meses"
+  },
+  {
+    "id": 2,
+    "author_name": "Martin Landucci",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=Martin%20Landucci&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "Grandes instructores y mejores personas! Fuimos con mi pareja y ella tomó clases, salió encantada. Sin duda volveremos para compartir y por supuesto KITEAR!",
+    "relative_time_description": "Hace 9 meses"
+  },
+  {
+    "id": 7,
+    "author_name": "Jazmín Repetto",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=Jazm%C3%ADn%20Repetto&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "Gracias Kike por darme la mejor experiencia en la Escuela ! Mucha paciencia y dedicación.  Perfecta atención",
+    "relative_time_description": "Hace 11 meses"
+  },
+  {
+    "id": 8,
+    "author_name": "Jorge Orcasita",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=Jorge%20Orcasita&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "Estuve una semana para practicar kitesurf y pude hacerlo sin problemas gracias al equipo que trabaja con la escuela, conocimos el spot principal de Máncora pero en días de poco viento salimos en búsqueda de él así que pudimos navegar!\n\nEl equipo de la escuela es amable y amigable.",
+    "relative_time_description": "Hace 11 meses"
+  },
+  {
+    "id": 4,
+    "author_name": "Ruth Espinoza garcia",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=Ruth%20Espinoza%20garcia&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "“Viajamos en familia y mis hijos adolescentes tomaron clases de kitesurf en Máncora Kite Club. ¡Quedamos fascinados! El trato fue súper amable, todo el equipo fue paciente y motivador con los chicos. El clima es ideal, y el ambiente del club es seguro y acogedor. Además, nos unimos a un kite trip familiar que fue lo más divertido del viaje. Nos llevamos recuerdos inolvidables. Mil gracias al equipo por su dedicación y buena energía.”",
+    "relative_time_description": "Hace un año"
+  },
+  {
+    "id": 5,
+    "author_name": "Carlos Bellatin",
+    "profile_photo_url": "https://ui-avatars.com/api/?name=Carlos%20Bellatin&background=1A2421&color=F3F1E7",
+    "rating": 5,
+    "text": "Una escuela de Kite muy profesional en el norte del Perú. Saben llevarte a los mejores spots de Kite y Kite surf. Ask for Kike🙌🏼🤙🏼🤙🏼",
+    "relative_time_description": "Hace 2 años"
+  }
+]

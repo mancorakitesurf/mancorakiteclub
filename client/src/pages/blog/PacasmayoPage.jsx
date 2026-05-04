@@ -9,7 +9,7 @@ function PacasmayoPage() {
     <>
       <SEO
         title="Pacasmayo, Peru: The Ultimate Point Break Surf Guide"
-        description="A premium Pacasmayo guide with season timing, wave expectations, trip pacing, and the smart reason many surfers finish farther north in Mancora."
+        description="Premium Pacasmayo surf guide: season timing, wave expectations, trip pacing, and why many surfers finish their journey in Mancora. Best kitesurfing base in Peru."
         canonicalPath="/blog/pacasmayo-peru-the-ultimate-point-break-surf-guide"
         hreflang={{ en: "/", es: "/esp", default: "/" }}
       />

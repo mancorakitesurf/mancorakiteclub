@@ -12,7 +12,7 @@ function BlogPage7() {
     <>
       <SEO
         title="Why Mancora is Different: The Ultimate Wave Kitesurf Progression Guide"
-        description="Discover why Mancora is one of the best places in the world to progress in wave kitesurfing."
+        description="Why Mancora is one of the best places to progress in wave kitesurfing. Learn about wind, waves, coaching, and lifestyle. Complete progression guide for all levels."
         canonicalPath="/blog/why-mancora-is-different-kitesurf-wave-progression-guide"
         hreflang={{ en: '/blog/why-mancora-is-different-kitesurf-wave-progression-guide', es: '/esp', default: '/' }}
       />

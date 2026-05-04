@@ -8,7 +8,7 @@ function NotFound() {
     <>
       <SEO
         title="Mancora Kite Club | Not Found"
-        description="TODO: contenido real"
+        description="Page not found. The kitesurfing spot, trip, or page you are looking for does not exist. Return to home and keep riding with Máncora Kite Club. Best prices!"
         canonicalPath="/"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />
@@ -16,7 +16,7 @@ function NotFound() {
         <Container className="text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">404</p>
           <h1 className="mt-3 text-4xl font-black text-slate-900">Page not found</h1>
-          <p className="mt-4 text-slate-700">TODO: contenido real</p>
+          <p className="mt-4 text-slate-700">The page you are looking for does not exist or has been moved.</p>
           <div className="mt-8">
             <Button as={Link} to="/">
               Go home

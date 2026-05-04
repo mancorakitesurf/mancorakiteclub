@@ -11,7 +11,7 @@ function HomeEsPage() {
     <>
       <SEO
         title="Mancora Kite Club | Inicio"
-        description="TODO: contenido real"
+        description="Máncora Kite Club – best kitesurfing and wingfoil spot in Peru. Lessons, beachfront stays, epic trips. IKO certified. Book your adventure online now!!!"
         canonicalPath="/esp"
         hreflang={{ en: '/', es: '/esp', default: '/' }}
       />

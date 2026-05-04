@@ -3,6 +3,11 @@ import { FaWhatsapp } from 'react-icons/fa'
 import clubLogo from '../assets/Logo/LOGO-kite-new.png'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
+// Scroll and animation thresholds
+const SCROLL_THRESHOLD = 300 // Show WhatsApp button after scrolling 300px
+const ATTENTION_ANIMATION_INTERVAL = 8000 // ms - Time between attention animations
+const ATTENTION_ANIMATION_DURATION = 3000 // ms - Duration of each attention animation
+
 function FloatingWhatsApp({ link, message = '' }) {
   const [isVisible, setIsVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
@@ -10,7 +15,7 @@ function FloatingWhatsApp({ link, message = '' }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 300)
+      setIsVisible(window.scrollY > SCROLL_THRESHOLD)
     }
 
     handleScroll()
@@ -27,8 +32,8 @@ function FloatingWhatsApp({ link, message = '' }) {
 
       window.setTimeout(() => {
         if (!isHovered) setIsAttentionOpen(false)
-      }, 3000)
-    }, 8000)
+      }, ATTENTION_ANIMATION_DURATION)
+    }, ATTENTION_ANIMATION_INTERVAL)
 
     return () => window.clearInterval(intervalId)
   }, [isHovered])

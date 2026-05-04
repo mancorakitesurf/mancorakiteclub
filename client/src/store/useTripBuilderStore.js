@@ -1,8 +1,15 @@
 import { create } from 'zustand'
 import { WHATSAPP_NUMBER } from '../lib/whatsapp.js'
 
+// Step bounds for the trip builder
+const MIN_STEP = 1
+const MAX_STEP = 5
+const INITIAL_STEP = 1
+// Minimum quantity for extras
+const MIN_EXTRA_QTY = 1
+
 const initialState = {
-  paso: 1,
+  paso: INITIAL_STEP,
   actividad: null,
   noches: 0,
   horas: 0,
@@ -35,7 +42,7 @@ export const useTripBuilderStore = create((set, get) => ({
 
   setExtraQty: (extraId, qty) =>
     set((state) => ({
-      extrasQty: { ...state.extrasQty, [extraId]: Math.max(1, qty) },
+      extrasQty: { ...state.extrasQty, [extraId]: Math.max(MIN_EXTRA_QTY, qty) },
     })),
 
   setDatosUsuario: (datos) =>
@@ -45,12 +52,12 @@ export const useTripBuilderStore = create((set, get) => ({
 
   siguientePaso: () =>
     set((state) => ({
-      paso: Math.min(state.paso + 1, 5),
+      paso: Math.min(state.paso + 1, MAX_STEP),
     })),
 
   anteriorPaso: () =>
     set((state) => ({
-      paso: Math.max(state.paso - 1, 1),
+      paso: Math.max(state.paso - 1, MIN_STEP),
     })),
 
   reiniciar: () => set(initialState),

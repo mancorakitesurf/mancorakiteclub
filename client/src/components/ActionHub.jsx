@@ -4,7 +4,7 @@ import { IoChatbubble } from 'react-icons/io5'
 import { FaWhatsapp } from 'react-icons/fa'
 import ChatbotWindow from './ChatbotWindow'
 import chatbotVideo from '../assets/chatbot ia.mp4'
-import logoKite from '../assets/Logo/LOGO-kite-new.png'
+import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
 
 /**
  * ActionHub Component

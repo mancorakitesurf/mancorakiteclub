@@ -21,6 +21,7 @@ import gallery8 from '../../assets/imagenes-wingfoil/posicionw5.jpg'
 import gallery9 from '../../assets/imagenes-home/posicion22.png'
 import gallery10 from '../../assets/imagenes-home/posicion14y27.jpg'
 import gallery11 from '../../assets/imagenes-home/posicion13.jpg'
+import gallery12 from '../../assets/imagenes-home/posicion13.jpg'
 
 /* ===========================
   HERO SECTION
@@ -128,5 +129,6 @@ export const CLASSES_GALLERY = [
   gallery8,
   gallery9,
   gallery10,
-  gallery11
+  gallery11,
+  gallery12
 ]

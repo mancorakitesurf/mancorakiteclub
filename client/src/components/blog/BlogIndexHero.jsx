@@ -1,20 +1,28 @@
+import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import MotionReveal from "./MotionReveal.jsx"
 
 function BlogIndexHero({ featuredPost }) {
   return (
     <section className="relative overflow-hidden border-b border-white/10 bg-[#040b13] pt-28">
       <div className="absolute inset-0">
-        <img
+        <motion.img
           src={featuredPost.heroImage}
           alt={featuredPost.title}
-          className="h-full w-full object-cover opacity-30"
+          initial={{ scale: 1.08 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
+          className="h-full w-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.15),transparent_35%),linear-gradient(180deg,rgba(2,6,23,0.18),rgba(2,6,23,0.9)_48%,rgba(2,6,23,1))]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#040b13] via-[#040b13]/65 to-transparent" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24">
-        <MotionReveal className="max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="max-w-4xl"
+        >
           <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200">
             The Peru Ocean Journal
           </div>
@@ -38,7 +46,7 @@ function BlogIndexHero({ featuredPost }) {
               Explore Mancora
             </Link>
           </div>
-        </MotionReveal>
+        </motion.div>
       </div>
     </section>
   )

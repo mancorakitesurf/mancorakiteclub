@@ -1,38 +1,93 @@
+import { motion } from "framer-motion"
+
+import logoOzone from "../../assets/LOGOS KITE CLUB/Logo_ozone.webp"
+import logoDuotone from "../../assets/LOGOS KITE CLUB/Logo-duotone.webp"
+import logoSlingshot from "../../assets/LOGOS KITE CLUB/Logo-slingshot.webp"
+import logoRide from "../../assets/LOGOS KITE CLUB/Logo-Ride.webp"
+
+const sponsors = [
+  {
+    name: "Ozone",
+    logo: logoOzone,
+  },
+  {
+    name: "Ride Engine",
+    logo: logoRide,
+  },
+  {
+    name: "Duotone",
+    logo: logoDuotone,
+  },
+  {
+    name: "Slingshot",
+    logo: logoSlingshot,
+  },
+]
+
 function Movements() {
+  const sponsorList = [...sponsors, ...sponsors, ...sponsors]
+
   return (
-    <section className="relative overflow-hidden bg-[#DCEEDC] py-3 border-y border-gray-200">
-      
-      {/* Fade izquierdo */}
-      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent" />
+    <section className="relative overflow-hidden border-y border-white/10 bg-[#071a19] py-10 text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(42,157,143,0.22),_transparent_65%)]" />
 
-      {/* Fade derecho */}
-      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-32 bg-gradient-to-r from-[#071a19] to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-32 bg-gradient-to-l from-[#071a19] to-transparent" />
 
-      <div className="whitespace-nowrap overflow-hidden">
-        <div className="marquee flex items-center gap-16 w-max">
-          
-          {/* BLOQUE ORIGINAL */}
-          <span className="font-display text-3xl font-black uppercase tracking-widest text-primary">
-            Tu pasión a un siguiente nivel
-          </span>
-          <span className="font-display text-3xl font-black uppercase tracking-widest text-black">
-            Tu pasión a un siguiente nivel
-          </span>
-          <span className="font-display text-3xl font-black uppercase tracking-widest text-primary">
-            Tu pasión a un siguiente nivel
-          </span>
+      <div className="relative z-10">
+        <div className="mb-8 text-center">
+          <p className="text-[11px] font-bold uppercase tracking-[0.45em] text-primary">
+            Official Partners
+          </p>
+        </div>
 
-          {/* DUPLICADO EXACTO */}
-          <span className="font-display text-3xl font-black uppercase tracking-widest text-primary">
-            Tu pasión a un siguiente nivel
-          </span>
-          <span className="font-display text-3xl font-black uppercase tracking-widest text-black">
-            Tu pasión a un siguiente nivel
-          </span>
-          <span className="font-display text-3xl font-black uppercase tracking-widest text-primary">
-            Tu pasión a un siguiente nivel
-          </span>
-
+        <div className="overflow-hidden whitespace-nowrap">
+          <motion.div
+            animate={{ x: ["0%", "-33.333%"] }}
+            transition={{
+              duration: 28,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+            className="flex w-max items-center gap-7"
+          >
+            {sponsorList.map((sponsor, index) => (
+              <div
+                key={`${sponsor.name}-${index}`}
+                className="
+                  group flex h-24 min-w-[220px] items-center justify-center
+                  rounded-3xl border border-white/10
+                  bg-white/[0.07] px-8
+                  shadow-[0_22px_55px_rgba(0,0,0,0.28)]
+                  backdrop-blur-md
+                  transition duration-500
+                  hover:-translate-y-1
+                  hover:border-primary/60
+                  hover:bg-white/[0.11]
+                  hover:shadow-[0_25px_75px_rgba(42,157,143,0.24)]
+                "
+              >
+                <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    loading="lazy"
+                    className={`
+                      object-contain
+                      opacity-80 grayscale
+                      transition duration-500
+                      group-hover:opacity-100
+                      group-hover:grayscale-0
+                      group-hover:scale-105
+                      ${
+                        sponsor.name === "Duotone"
+                          ? "max-h-[82px] max-w-[195px]"
+                          : "max-h-14 max-w-[150px]"
+                      }
+                    `}
+                  />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

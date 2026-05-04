@@ -19,9 +19,9 @@ function HeroTechniquesKite() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
         className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8"
       >
         <span className="inline-block py-1 px-4 rounded-full bg-[#00696b] text-[#d9ffff] text-[10px] tracking-[0.2em] uppercase mb-6 font-bold shadow-[0_0_15px_rgba(90,248,251,0.2)]">

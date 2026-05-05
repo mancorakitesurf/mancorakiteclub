@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { IoChatbubble } from 'react-icons/io5'
 import { FaWhatsapp } from 'react-icons/fa'
+import { useUIStore } from '../store/useUIStore.js'
 import ChatbotWindow from './ChatbotWindow'
 import chatbotVideo from '../assets/chatbot ia.mp4'
 import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
@@ -11,6 +12,7 @@ import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
  * Floating action hub with KiteBot video trigger and vertical action stack.
  */
 function ActionHub() {
+  const { isMobileMenuOpen } = useUIStore()
   const [isOpen, setIsOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -57,6 +59,9 @@ function ActionHub() {
       label: 'WhatsApp',
     },
   ]
+
+  // Hide the hub if the mobile menu is open
+  if (isMobileMenuOpen) return null
 
   return (
     <>
@@ -156,3 +161,4 @@ function ActionHub() {
 }
 
 export default ActionHub
+

@@ -1,5 +1,8 @@
 import { CLASSES_GALLERY } from "./classesData"
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+
+const MotionLink = motion.create(Link)
 
 function ClassesGallery() {
   const galleryItems = CLASSES_GALLERY.map((image, index) => ({
@@ -60,17 +63,18 @@ function ClassesGallery() {
           Real stories, real adrenaline, and the tribe that rides with the wind.
         </motion.p>
 
-        <motion.button
+        <MotionLink
+          to="/build"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
           transition={{ duration: 0.7, delay: 0.25 }}
           viewport={{ once: true }}
-          className="mt-8 min-h-12 w-full rounded-full border border-cyan-400 px-8 py-3 text-sm font-bold uppercase tracking-[0.24em] text-cyan-400 transition hover:bg-cyan-400 hover:text-black sm:w-auto"
+          className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cyan-400 px-8 py-3 text-sm font-bold uppercase tracking-[0.24em] text-cyan-400 transition hover:bg-cyan-400 hover:text-black sm:w-auto"
         >
           Join the Tribe
-        </motion.button>
+        </MotionLink>
       </div>
 
       {/* MOBILE / TABLET: se mantiene simple y limpio */}

@@ -5,6 +5,17 @@ export function buildWhatsAppUrl(message = '') {
   return `https://api.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}&type=phone_number&app_absent=0`
 }
 
+export function buildClassInquiryMessage(classItem) {
+  const title = classItem?.title || 'this class'
+  const duration = classItem?.duration || '...'
+  const price = classItem?.price || '...'
+  const features = Array.isArray(classItem?.features) && classItem.features.length > 0
+    ? classItem.features.join(', ')
+    : '...'
+
+  return `Hi! I'd like more information about this class: ${title}. Duration: ${duration}. Price: ${price}. Includes: ${features}.`
+}
+
 export function defaultInquiryMessage(context) {
   if (!context) return 'Hi! I need information.'
 

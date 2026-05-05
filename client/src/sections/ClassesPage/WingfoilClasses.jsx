@@ -3,6 +3,7 @@ import wingIntro from "../../assets/imagenes-wingfoil/posicionw1.jpg"
 import wingFundamental from "../../assets/imagenes-wingfoil/posicionw2.jpg"
 import wingAdvanced from "../../assets/imagenes-wingfoil/posicionw4.jpg"
 import wingMaster from "../../assets/imagenes-wingfoil/posicionw5.jpg"
+import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 
 const WINGFOIL_CLASSES = [
   {
@@ -137,9 +138,14 @@ function WingfoilClasses() {
                 ))}
               </ul>
 
-              <button className="mt-auto min-h-12 w-full rounded-full bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-[#0E201F] hover:text-white">
+              <a
+                href={buildWhatsAppUrl(buildClassInquiryMessage(item))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-[#0E201F] hover:text-white"
+              >
                 BOOK NOW
-              </button>
+              </a>
             </div>
 
             {/* MOST POPULAR */}

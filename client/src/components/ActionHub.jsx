@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { IoChatbubble } from 'react-icons/io5'
 import { FaWhatsapp } from 'react-icons/fa'
+import { useUIStore } from '../store/useUIStore.js'
 import ChatbotWindow from './ChatbotWindow'
 import chatbotVideo from '../assets/chatbot ia.mp4'
 import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
@@ -11,6 +12,7 @@ import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
  * Floating action hub with KiteBot video trigger and vertical action stack.
  */
 function ActionHub() {
+  const { isMobileMenuOpen } = useUIStore()
   const [isOpen, setIsOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -58,24 +60,25 @@ function ActionHub() {
     },
   ]
 
+  // Hide the hub if the mobile menu is open
+  if (isMobileMenuOpen) return null
+
   return (
     <>
       <div
-        className={`fixed bottom-6 right-6 z-[99] flex flex-col-reverse items-center gap-3 transition-all duration-300 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-4'
-        }`}
+        className={`fixed bottom-6 right-6 z-[99] flex flex-col-reverse items-center gap-3 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-4'
+          }`}
       >
         <button
           onClick={handleToggle}
           aria-label="Open action menu"
-          className={`group relative flex h-14 w-14 items-center justify-center transition-transform active:scale-95 ${
-            isOpen ? 'scale-95' : 'scale-100'
-          }`}
+          className={`group relative flex h-14 w-14 items-center justify-center transition-transform active:scale-95 ${isOpen ? 'scale-95' : 'scale-100'
+            }`}
         >
           <span className="pointer-events-none absolute inset-[-8px] rounded-full bg-primary/35 animate-ping" />
           <span className="pointer-events-none absolute inset-[-4px] rounded-full bg-primary/20 animate-pulse" />
           <span className="pointer-events-none absolute inset-0 rounded-full border border-primary/30 bg-primary/10 blur-[1px]" />
-          <span className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-2 border-primary bg-primary shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_28px_rgba(42,157,143,0.55)]">
+          <span className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border-2 border-white/10 bg-white shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_0_28px_rgba(42,157,143,0.55)]">
             {isChatOpen ? (
               <video
                 src={chatbotVideo}
@@ -96,11 +99,10 @@ function ActionHub() {
         </button>
 
         <div
-          className={`flex flex-col gap-3 transition-all duration-300 ${
-            isOpen
+          className={`flex flex-col gap-3 transition-all duration-300 ${isOpen
               ? 'translate-y-0 opacity-100'
               : 'pointer-events-none translate-y-10 opacity-0'
-          }`}
+            }`}
         >
           {secondaryButtons.map((btn, idx) => (
             <motion.div
@@ -159,3 +161,4 @@ function ActionHub() {
 }
 
 export default ActionHub
+

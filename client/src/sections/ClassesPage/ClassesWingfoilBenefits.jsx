@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { PRIVATE_CLASSES } from "./classesData"
+import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 
 function ClassesWingfoilBenefits() {
   return (
@@ -70,9 +71,14 @@ function ClassesWingfoilBenefits() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full rounded-2xl bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-white hover:text-[#0E201F] sm:w-auto sm:self-center">
+              <a
+                href={buildWhatsAppUrl(buildClassInquiryMessage(item))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-2xl bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-white hover:text-[#0E201F] sm:w-auto sm:self-center"
+              >
                 BOOK NOW
-              </button>
+              </a>
             </div>
 
             {/* ⭐ FEATURED CHIP ANIMATION */}

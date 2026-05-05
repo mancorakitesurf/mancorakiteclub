@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { PRIVATE_CLASSES } from "./classesData"
+import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 
 function ClassesSteps() {
   return (
@@ -73,9 +74,14 @@ function ClassesSteps() {
                     </li>
                   ))}
                 </ul>
-                <button className="min-h-12 w-full rounded-full bg-cyan-400 px-6 py-3 font-bold text-[#0f1416] transition hover:bg-white sm:w-auto">
+                <a
+                  href={buildWhatsAppUrl(buildClassInquiryMessage(item))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 font-bold text-[#0f1416] transition hover:bg-white sm:w-auto"
+                >
                   BOOK NOW
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}

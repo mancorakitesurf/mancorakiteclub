@@ -3,10 +3,9 @@ import { FaWhatsapp } from 'react-icons/fa'
 import clubLogo from '../assets/Logo/LOGO-kite-new.png'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
-// Scroll and animation thresholds
-const SCROLL_THRESHOLD = 300 // Show WhatsApp button after scrolling 300px
-const ATTENTION_ANIMATION_INTERVAL = 8000 // ms - Time between attention animations
-const ATTENTION_ANIMATION_DURATION = 3000 // ms - Duration of each attention animation
+const SCROLL_THRESHOLD = 140
+const ATTENTION_ANIMATION_INTERVAL = 8000
+const ATTENTION_ANIMATION_DURATION = 3000
 
 function FloatingWhatsApp({ link, message = '' }) {
   const [isVisible, setIsVisible] = useState(false)
@@ -31,7 +30,9 @@ function FloatingWhatsApp({ link, message = '' }) {
       setIsAttentionOpen(true)
 
       window.setTimeout(() => {
-        if (!isHovered) setIsAttentionOpen(false)
+        if (!isHovered) {
+          setIsAttentionOpen(false)
+        }
       }, ATTENTION_ANIMATION_DURATION)
     }, ATTENTION_ANIMATION_INTERVAL)
 
@@ -51,18 +52,20 @@ function FloatingWhatsApp({ link, message = '' }) {
         setIsHovered(false)
         setIsAttentionOpen(false)
       }}
-      className={`group fixed bottom-6 right-6 z-[100] flex items-center ${
-        isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
-      } transition-all duration-300`}
+      className={`group fixed bottom-6 right-6 z-[100] flex items-center transition-all duration-300 ${
+        isVisible
+          ? 'translate-y-0 opacity-100'
+          : 'pointer-events-none translate-y-4 opacity-0'
+      }`}
     >
       <span
-        className={`mr-3 overflow-hidden whitespace-nowrap rounded-full border border-white/20 bg-slate-900/90 py-2 text-xs font-medium tracking-wide text-white transition-all duration-700 ${
+        className={`mr-3 overflow-hidden whitespace-nowrap rounded-full border border-white/20 bg-slate-900/90 py-2 text-xs font-medium tracking-wide text-white shadow-xl backdrop-blur-md transition-all duration-700 ${
           isAttentionOpen
             ? 'max-w-xs px-3 opacity-100'
             : 'max-w-0 px-0 opacity-0 group-hover:max-w-xs group-hover:px-3 group-hover:opacity-100'
         }`}
       >
-        Prepárate para volar
+        Get ready to fly
       </span>
 
       <span className="relative flex h-14 w-14 items-center justify-center transition-transform duration-300 group-hover:scale-105 active:scale-95">
@@ -75,6 +78,7 @@ function FloatingWhatsApp({ link, message = '' }) {
             alt="Máncora Kite Club"
             className="h-9 w-9 object-contain opacity-100 scale-100 transition-all duration-300 group-hover:opacity-0 group-hover:scale-90 group-active:opacity-0 group-active:scale-90"
           />
+
           <FaWhatsapp className="absolute text-2xl opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100 group-active:opacity-100 group-active:scale-100" />
         </span>
       </span>

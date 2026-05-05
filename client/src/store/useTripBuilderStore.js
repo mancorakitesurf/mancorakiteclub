@@ -5,6 +5,7 @@ import { WHATSAPP_NUMBER } from '../lib/whatsapp.js'
 const MIN_STEP = 1
 const MAX_STEP = 5
 const INITIAL_STEP = 1
+
 // Minimum quantity for extras
 const MIN_EXTRA_QTY = 1
 
@@ -31,23 +32,39 @@ export const useTripBuilderStore = create((set, get) => ({
   setHoras: (horas) => set({ horas }),
 
   toggleExtra: (extra) =>
-    set((state) => ({
-      extras: state.extras.includes(extra)
-        ? state.extras.filter((e) => e !== extra)
-        : [...state.extras, extra],
-      extrasQty: state.extras.includes(extra)
-        ? Object.fromEntries(Object.entries(state.extrasQty).filter(([k]) => k !== extra))
-        : { ...state.extrasQty, [extra]: state.extrasQty[extra] || 1 },
-    })),
+    set((state) => {
+      const alreadySelected = state.extras.includes(extra)
+
+      return {
+        extras: alreadySelected
+          ? state.extras.filter((e) => e !== extra)
+          : [...state.extras, extra],
+
+        extrasQty: alreadySelected
+          ? Object.fromEntries(
+              Object.entries(state.extrasQty).filter(([key]) => key !== extra),
+            )
+          : {
+              ...state.extrasQty,
+              [extra]: state.extrasQty[extra] || MIN_EXTRA_QTY,
+            },
+      }
+    }),
 
   setExtraQty: (extraId, qty) =>
     set((state) => ({
-      extrasQty: { ...state.extrasQty, [extraId]: Math.max(MIN_EXTRA_QTY, qty) },
+      extrasQty: {
+        ...state.extrasQty,
+        [extraId]: Math.max(MIN_EXTRA_QTY, Number(qty) || MIN_EXTRA_QTY),
+      },
     })),
 
   setDatosUsuario: (datos) =>
     set((state) => ({
-      datosUsuario: { ...state.datosUsuario, ...datos },
+      datosUsuario: {
+        ...state.datosUsuario,
+        ...datos,
+      },
     })),
 
   siguientePaso: () =>
@@ -64,20 +81,23 @@ export const useTripBuilderStore = create((set, get) => ({
 
   generarLinkWhatsApp: () => {
     const { actividad, noches, horas, extras, extrasQty, datosUsuario } = get()
+
     const extrasDetalle = extras
       .map((id) => {
         const qty = extrasQty[id]
-        return qty && qty > 1 ? `${id} x${qty}` : id
+        return qty && qty > MIN_EXTRA_QTY ? `${id} x${qty}` : id
       })
       .join(', ')
+
     const mensaje = `¡Hola Máncora Kite Club! 🏄
 Quiero armar mi paquete:
-🏋️ Actividad: ${actividad}
+🏋️ Actividad: ${actividad || 'No seleccionada'}
 🌙 Noches: ${noches}
 ⏱️ Horas de clase: ${horas}
-✨ Extras: ${extrasDetalle}
- Mi nombre es: ${datosUsuario.nombre}
- Email: ${datosUsuario.email}`
+✨ Extras: ${extrasDetalle || 'Sin extras'}
+Mi nombre es: ${datosUsuario.nombre || 'No indicado'}
+Email: ${datosUsuario.email || 'No indicado'}`
+
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`
   },
 }))

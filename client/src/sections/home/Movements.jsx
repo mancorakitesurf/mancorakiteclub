@@ -1,76 +1,90 @@
 import { motion } from "framer-motion"
 
+import logoOzone from "../../assets/LOGOS KITE CLUB/Logo_ozone.webp"
+import logoDuotone from "../../assets/LOGOS KITE CLUB/Logo-duotone.webp"
+import logoSlingshot from "../../assets/LOGOS KITE CLUB/Logo-slingshot.webp"
+import logoRide from "../../assets/LOGOS KITE CLUB/Logo-Ride.webp"
+
 const sponsors = [
-  "Slingshot",
-  "Ride Engine",
-  "Duotone",
-  "Ozone",
-  "ION",
-  "Mystic",
-  "North",
-  "Cabrinha",
+  {
+    name: "Ozone",
+    logo: logoOzone,
+  },
+  {
+    name: "Ride Engine",
+    logo: logoRide,
+  },
+  {
+    name: "Duotone",
+    logo: logoDuotone,
+  },
+  {
+    name: "Slingshot",
+    logo: logoSlingshot,
+  },
 ]
 
 function Movements() {
-  const sponsorList = [...sponsors, ...sponsors]
+  const sponsorList = [...sponsors, ...sponsors, ...sponsors]
 
   return (
-    <section className="relative overflow-hidden border-y border-white/10 bg-[#071a19] py-8 text-white">
-      
-      {/* Background glow */}
+    <section className="relative overflow-hidden border-y border-white/10 bg-[#071a19] py-10 text-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(42,157,143,0.22),_transparent_65%)]" />
 
-      {/* Fade izquierdo */}
       <div className="pointer-events-none absolute left-0 top-0 z-20 h-full w-32 bg-gradient-to-r from-[#071a19] to-transparent" />
-
-      {/* Fade derecho */}
       <div className="pointer-events-none absolute right-0 top-0 z-20 h-full w-32 bg-gradient-to-l from-[#071a19] to-transparent" />
 
       <div className="relative z-10">
-        {/* Header pequeño */}
-        <div className="mb-7 text-center">
+        <div className="mb-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.45em] text-primary">
             Official Partners
           </p>
         </div>
 
-        {/* Marquee */}
         <div className="overflow-hidden whitespace-nowrap">
           <motion.div
-            animate={{ x: ["0%", "-50%"] }}
+            animate={{ x: ["0%", "-33.333%"] }}
             transition={{
               duration: 28,
               ease: "linear",
               repeat: Infinity,
             }}
-            className="flex w-max items-center gap-6"
+            className="flex w-max items-center gap-7"
           >
             {sponsorList.map((sponsor, index) => (
               <div
-                key={`${sponsor}-${index}`}
+                key={`${sponsor.name}-${index}`}
                 className="
-                  group flex min-w-[190px] items-center justify-center
-                  rounded-2xl border border-white/10
-                  bg-white/[0.06] px-8 py-5
-                  shadow-[0_20px_50px_rgba(0,0,0,0.25)]
+                  group flex h-24 min-w-[220px] items-center justify-center
+                  rounded-3xl border border-white/10
+                  bg-white/[0.07] px-8
+                  shadow-[0_22px_55px_rgba(0,0,0,0.28)]
                   backdrop-blur-md
                   transition duration-500
                   hover:-translate-y-1
                   hover:border-primary/60
-                  hover:bg-primary/10
-                  hover:shadow-[0_25px_70px_rgba(42,157,143,0.22)]
+                  hover:bg-white/[0.11]
+                  hover:shadow-[0_25px_75px_rgba(42,157,143,0.24)]
                 "
               >
-                <span
-                  className="
-                    font-display text-base font-black uppercase
-                    tracking-[0.35em] text-white/75
-                    transition duration-500
-                    group-hover:text-white
-                  "
-                >
-                  {sponsor}
-                </span>
+                <img
+                    src={sponsor.logo}
+                    alt={`${sponsor.name} logo`}
+                    loading="lazy"
+                    className={`
+                      object-contain
+                      opacity-80 grayscale
+                      transition duration-500
+                      group-hover:opacity-100
+                      group-hover:grayscale-0
+                      group-hover:scale-105
+                      ${
+                        sponsor.name === "Duotone"
+                          ? "max-h-[82px] max-w-[195px]"
+                          : "max-h-14 max-w-[150px]"
+                      }
+                    `}
+                  />
               </div>
             ))}
           </motion.div>

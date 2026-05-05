@@ -42,6 +42,10 @@ export const POSTS = [
     author: "Axel",
     image: posicionK2,
     component: BlogPage1,
+    metaTitle: "Top 20 Kitesurf Wave Destinations Worldwide",
+    metaDescription: "Discover the 20 best kitesurfing wave spots around the globe. From Peru to Indonesia, find your next perfect wave ride.",
+    readingTime: 4,
+    tags: ["kitesurf", "wave riding", "destinations", "travel", "spots"]
   },
   {
     slug: "7-different-plans-of-a-kitesurf-trip-to-peru",
@@ -51,6 +55,10 @@ export const POSTS = [
     author: "Sergio Agamez",
     image: posicionK3,
     component: BlogPage2,
+    metaTitle: "7 Kitesurf Trip Plans for Peru: Best Itineraries",
+    metaDescription: "Plan your perfect kitesurf trip to Peru with 7 different itineraries – from budget to luxury, solo to family, coast to mountains.",
+    readingTime: 7,
+    tags: ["peru", "kitesurf trip", "itineraries", "travel planning", "spots"]
   },
   {
     slug: "chicama-peru-surf-trip",
@@ -60,14 +68,23 @@ export const POSTS = [
     author: "Axel",
     image: BLOGHERO_IMAGE,
     component: BlogPage3,
+    metaTitle: "Chicama Peru: Longest Wave & Ultimate Surf Trip Guide",
+    metaDescription: "Complete guide to Chicama, Peru – the longest left-hand wave in the world. Best seasons, accommodation, and tips for surfers.",
+    readingTime: 6,
+    tags: ["surf", "chicama", "peru", "longest wave", "surf trip", "point break"]
   },
-  {   slug: "mancora-vs-lobitos-vs-cabo-blanco",
-      title: "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru",
-      category: "KITESURFING PERU",
-      date: "June 20, 2024",
-      author: "Sergio Agamez",
-      image: BLOGHERO_IMAGE,
-      component: BlogPage4,
+  {
+    slug: "mancora-vs-lobitos-vs-cabo-blanco",
+    title: "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru",
+    category: "KITESURFING PERU",
+    date: "June 20, 2024",
+    author: "Sergio Agamez",
+    image: BLOGHERO_IMAGE,
+    component: BlogPage4,
+    metaTitle: "Mancora vs Lobitos vs Cabo Blanco: Best Kitesurf Spot",
+    metaDescription: "Compare Mancora, Lobitos and Cabo Blanco for wave kitesurfing in Peru. Wind, waves, season and vibe – which spot wins?",
+    readingTime: 6,
+    tags: ["kitesurf", "peru", "mancora", "lobitos", "cabo blanco", "wave spots"]
   },
   {
     slug: "peru-kitesurf-north-vs-south",
@@ -77,15 +94,23 @@ export const POSTS = [
     author: "Miguelo",
     image: BLOGHERO_IMAGE,
     component: BlogPage5,
+    metaTitle: "Peru Kitesurf: North vs South – Complete Wind & Spot Guide",
+    metaDescription: "North vs South Peru for kitesurfing: compare wind conditions, best spots, seasons, and what suits your level. Expert guide.",
+    readingTime: 7,
+    tags: ["peru", "kitesurf", "north vs south", "wind guide", "spots"]
   },
   {
     slug: "pacasmayo-peru-the-ultimate-point-break-surf-guide",
     title: "Pacasmayo, Peru: The Ultimate Point Break Surf Guide",
     category: "SURFING PERU",
-    date: "July 10, 2024", 
+    date: "July 10, 2024",
     author: "Axel",
     image: BLOGHERO_IMAGE,
     component: BlogPage6,
+    metaTitle: "Pacasmayo Peru: Ultimate Point Break Surf Guide",
+    metaDescription: "Everything about Pacasmayo, Peru's legendary point break. Best swell directions, winds, tides, and local tips for surfers.",
+    readingTime: 5,
+    tags: ["surf", "pacasmayo", "peru", "point break", "longboard", "wave"]
   },
   {
     slug: "why-mancora-is-different-kitesurf-wave-progression-guide",
@@ -95,6 +120,10 @@ export const POSTS = [
     author: "Sergio Agamez",
     image: BLOGHERO_IMAGE,
     component: BlogPage7,
+    metaTitle: "Why Mancora is Different: Kitesurf Wave Progression",
+    metaDescription: "Learn why Mancora is ideal for kitesurf wave progression. Step-by-step guide to improve your wave riding skills in perfect conditions.",
+    readingTime: 4,
+    tags: ["kitesurf", "mancora", "wave progression", "coaching", "peru"]
   },
   {
     slug: "7-Nights-in-Mancora-Progression-Plan",
@@ -104,6 +133,10 @@ export const POSTS = [
     author: 'Axel',
     image: posicionW1,
     component: BlogPage8,
+    metaTitle: "7 Nights in Mancora: Kitesurf Progression Plan",
+    metaDescription: "A complete 7-day training plan to accelerate your kitesurf progression in Mancora. Daily sessions, drills and video analysis.",
+    readingTime: 4,
+    tags: ["kitesurf", "mancora", "progression", "training plan", "coaching"]
   },
   {
     slug: "Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level)",
@@ -113,6 +146,10 @@ export const POSTS = [
     author: 'Sergio Agamez',
     image: posicionK1,
     component: BlogPage9,
+    metaTitle: "Kitesurf Waves Technique: Read Swell, Timing & Control",
+    metaDescription: "Intermediate guide to kitesurfing waves: how to read the swell, perfect your timing, and maintain control in the surf zone.",
+    readingTime: 5,
+    tags: ["kitesurf", "waves", "technique", "reading swell", "timing", "intermediate"]
   },
   {
     slug: "Typical-mistakes-of-the-intermediate-rider-in-waves-and-how-to-correct-them-(real-coaching)",
@@ -122,6 +159,10 @@ export const POSTS = [
     author: 'Axel',
     image: posicionK4,
     component: BlogPage10,
+    metaTitle: "5 Common Kitesurf Wave Mistakes & How to Fix Them",
+    metaDescription: "Real coaching advice for intermediate kitesurfers: avoid typical wave riding errors, improve your technique and ride cleaner.",
+    readingTime: 4,
+    tags: ["kitesurf", "wave mistakes", "coaching", "intermediate", "correction"]
   },
   {
     slug: "Kite-Safari-Northern-Peru",
@@ -131,6 +172,10 @@ export const POSTS = [
     author: 'Sergio Agamez',
     image: posicionW5,
     component: BlogPage11,
+    metaTitle: "Kite Safari Northern Peru: Expedition Experience",
+    metaDescription: "Join a kite safari through Northern Peru's hidden spots. Multi-day expedition with downwinders, wild camps and pristine waves.",
+    readingTime: 4,
+    tags: ["kite safari", "northern peru", "expedition", "downwinder", "adventure"]
   },
   {
     slug: "Whale-Season-in-Northern-Peru",
@@ -140,6 +185,10 @@ export const POSTS = [
     author: 'Axel',
     image: posicionW6,
     component: BlogPage12,
+    metaTitle: "Whale Season Northern Peru: Sail with Humpbacks",
+    metaDescription: "Experience whale season in Northern Peru. When and where to see humpback whales while kitesurfing – a magical encounter.",
+    readingTime: 4,
+    tags: ["whales", "northern peru", "wildlife", "kitesurf", "lifestyle"]
   },
   {
     slug: "Mancora-Whale-Season",
@@ -149,6 +198,10 @@ export const POSTS = [
     author: 'Sergio Agamez',
     image: posicionW7,
     component: BlogPage13,
+    metaTitle: "Mancora Whale Season: Kitesurf with Humpbacks",
+    metaDescription: "Detailed guide to whale season in Mancora. Best months, safety tips, and how to share the waves with gentle giants.",
+    readingTime: 4,
+    tags: ["mancora", "whale season", "humpbacks", "kitesurf", "safety"]
   },
   {
     slug: "Wingfoil-vs-Kitesurf-Choosing-Your-Weapon",
@@ -158,6 +211,10 @@ export const POSTS = [
     author: 'Axel',
     image: posicionW2,
     component: BlogPage14,
+    metaTitle: "Wingfoil vs Kitesurf: Which Sport is Right for You?",
+    metaDescription: "Compare wingfoil and kitesurf: learning curve, gear, conditions, and fun factor. Help choosing the best foil sport.",
+    readingTime: 4,
+    tags: ["wingfoil", "kitesurf", "comparison", "foil", "beginner guide"]
   },
   {
     slug: "Safety-and-Progression-The-Technical-Edge",
@@ -167,6 +224,10 @@ export const POSTS = [
     author: 'Sergio Agamez',
     image: posicionK6,
     component: BlogPage15,
+    metaTitle: "Kitesurf Safety & Progression: Technical Edge Guide",
+    metaDescription: "Essential safety practices and technical drills to progress faster in kitesurfing. Reduce risk and improve performance.",
+    readingTime: 4,
+    tags: ["safety", "progression", "kitesurf technique", "drills", "gear"]
   },
 ]
 

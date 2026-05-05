@@ -1,52 +1,69 @@
-import {
-  FaEnvelope,
-  FaFacebookF,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaWhatsapp,
-  FaWind,
-  FaYoutube,
-} from 'react-icons/fa'
+import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'
+import footerBrandLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
+import logoDuotone from '../../assets/LOGOS KITE CLUB/Logo-duotone.webp'
+import logoOzone from '../../assets/LOGOS KITE CLUB/Logo_ozone.webp'
+import logoRide from '../../assets/LOGOS KITE CLUB/Logo-Ride.webp'
+import logoSlingshot from '../../assets/LOGOS KITE CLUB/Logo-slingshot.webp'
+
+const SPONSORS = [
+  {
+    name: 'Slingshot',
+    logo: logoSlingshot,
+  },
+  {
+    name: 'Ride Engine',
+    logo: logoRide,
+  },
+  {
+    name: 'Duotone',
+    logo: logoDuotone,
+  },
+  {
+    name: 'Ozone',
+    logo: logoOzone,
+  },
+]
 
 function Footer() {
   const { t } = useI18n()
 
   return (
-    <footer className="overflow-hidden border-t border-gray-200 bg-surface-light pb-8 pt-16 sm:pt-20 lg:pt-24 dark:border-white/10 dark:bg-black">
+    <footer className="overflow-hidden bg-[#1e3130] pb-8 pt-16 text-white sm:pt-20 lg:pt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-8">
         <div className="mb-12 grid grid-cols-1 justify-items-center gap-10 sm:gap-10 md:grid-cols-2 md:gap-10 lg:grid-cols-4 lg:justify-items-start lg:gap-10 xl:gap-12">
           <div className="col-span-1 flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:text-left">
             <div className="mb-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-white">
-                <FaWind className="text-sm" />
-              </div>
-              <span className="text-base font-semibold tracking-[0.02em] text-slate-900 dark:text-white">
-                Mancora Kite Club
-              </span>
+              <img
+                src={footerBrandLogo}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                className="h-10 w-auto max-w-[92px] shrink-0 object-contain sm:h-11 sm:max-w-[104px] -ml-2"
+              />
             </div>
 
-            <p className="mb-8 max-w-sm text-sm leading-7 text-gray-500 dark:text-gray-400">
+            <p className="mb-8 max-w-sm text-sm leading-7 text-white">
               {t('footer.tagline')}
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
               <a
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-surface-dark dark:text-gray-400"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
                 href="#"
                 aria-label="Instagram"
               >
                 <FaInstagram />
               </a>
               <a
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-surface-dark dark:text-gray-400"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
                 href="#"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
               <a
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all hover:bg-primary hover:text-white dark:bg-surface-dark dark:text-gray-400"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
                 href="#"
                 aria-label="YouTube"
               >
@@ -56,25 +73,25 @@ function Footer() {
           </div>
 
           <div className="flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:px-2 lg:text-left xl:pl-8">
-            <h4 className="mb-5 text-base font-bold text-slate-900 dark:text-white">Explore</h4>
-            <ul className="space-y-1.5 text-sm text-gray-500 dark:text-gray-400">
+            <h4 className="mb-5 text-base font-bold text-white">Explore</h4>
+            <ul className="space-y-1.5 text-sm text-white">
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Our Trips
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Accommodation
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Kite Lessons
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Packages
                 </a>
               </li>
@@ -82,25 +99,25 @@ function Footer() {
           </div>
 
           <div className="flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:text-left">
-            <h4 className="mb-5 text-base font-bold text-slate-900 dark:text-white">Company</h4>
-            <ul className="space-y-1.5 text-sm text-gray-500 dark:text-gray-400">
+            <h4 className="mb-5 text-base font-bold text-white">Company</h4>
+            <ul className="space-y-1.5 text-sm text-white">
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   About Us
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Our Instructors
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Contact
                 </a>
               </li>
               <li>
-                <a className="inline-flex min-h-10 items-center transition-colors hover:text-primary" href="#">
+                <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
                   Privacy Policy
                 </a>
               </li>
@@ -108,37 +125,53 @@ function Footer() {
           </div>
 
           <div className="flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:text-left">
-            <h4 className="mb-5 text-base font-bold text-slate-900 dark:text-white">Contact</h4>
-            <ul className="space-y-3 text-sm leading-7 text-gray-500 dark:text-gray-400">
+            <h4 className="mb-5 text-base font-bold text-white">Contact</h4>
+            <ul className="space-y-3 text-sm leading-7 text-white">
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
-                <FaMapMarkerAlt className="mt-1 shrink-0 text-primary" />
+                <FaMapMarkerAlt className="mt-1 shrink-0 text-white" />
                 <span className="max-w-xs break-words">Mancora Beach, Piura, Peru</span>
               </li>
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
-                <FaEnvelope className="mt-1 shrink-0 text-primary" />
+                <FaEnvelope className="mt-1 shrink-0 text-white" />
                 <span className="max-w-xs break-all sm:break-words">hello@mancorakiteclub.com</span>
               </li>
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
-                <FaWhatsapp className="mt-1 shrink-0 text-primary" />
+                <FaWhatsapp className="mt-1 shrink-0 text-white" />
                 <span className="max-w-xs break-words">+51 996 557 689</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-4 border-t border-gray-200 pt-8 text-center lg:flex-row lg:justify-between lg:text-left dark:border-white/10">
-          <p className="max-w-md text-xs leading-6 text-gray-400">{t('footer.rights')}</p>
+        <div className="flex flex-col items-center gap-4 pt-8 text-center lg:flex-row lg:justify-center">
+          <p className="max-w-md text-xs leading-6 text-white">
+            {t('footer.rights')}
+          </p>
+        </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray-400 lg:justify-end">
-            <a className="inline-flex min-h-9 items-center hover:text-white" href="#">
-              Terms
-            </a>
-            <a className="inline-flex min-h-9 items-center hover:text-white" href="#">
-              Privacy
-            </a>
-            <a className="inline-flex min-h-9 items-center hover:text-white" href="#">
-              Sitemap
-            </a>
+        <div className="mt-8 pt-8 text-center">
+          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-white">
+            Official Partners
+          </p>
+
+          <div className="mt-6 grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-6 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-10 xl:gap-x-14">
+            {SPONSORS.map((sponsor) => (
+              <div
+                key={sponsor.name}
+                className="flex h-16 w-full max-w-[132px] items-center justify-center sm:max-w-[150px] lg:max-w-[170px]"
+              >
+                <img
+                  src={sponsor.logo}
+                  alt={`${sponsor.name} logo`}
+                  loading="lazy"
+                  className={`object-contain opacity-95 [filter:brightness(0)_saturate(100%)_invert(81%)_sepia(20%)_saturate(457%)_hue-rotate(103deg)_brightness(96%)_contrast(89%)] ${
+                    sponsor.name === 'Duotone'
+                      ? 'max-h-[64px] max-w-[132px] sm:max-w-[150px] lg:max-w-[170px]'
+                      : 'max-h-10 max-w-[112px] sm:max-h-12 sm:max-w-[130px] lg:max-w-[145px]'
+                  }`}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

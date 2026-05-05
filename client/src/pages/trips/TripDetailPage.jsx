@@ -23,8 +23,9 @@ function TripDetailPage() {
 
   const whatsappHref = buildWhatsAppUrl(trip.whatsappMessage)
 
-  // Clase base para las tarjetas
   const cardClass = "bg-[#162e2e] border border-[#284b4b] rounded-[1rem] p-6 sm:p-8 overflow-hidden"
+  
+  const imageContainerClass = "w-full md:w-[280px] lg:w-[340px] h-[240px] md:h-[280px] lg:h-[320px] flex-shrink-0 rounded-xl overflow-hidden border border-[#284b4b]"
 
   return (
     <>
@@ -35,7 +36,6 @@ function TripDetailPage() {
         hreflang={{ en: trip.path, es: '/esp', default: '/' }}
       />
 
-      {/* --- NUEVO HERO ANIMADO --- */}
       <header className="relative flex min-h-[70vh] items-center justify-center overflow-hidden pt-20 md:min-h-screen bg-[#0e2222]">
         <div className="absolute inset-0 z-0">
           <motion.img
@@ -46,7 +46,6 @@ function TripDetailPage() {
             transition={{ duration: 2.2, ease: "easeOut" }}
             className="h-full w-full object-cover opacity-50 mix-blend-luminosity"
           />
-          {/* El gradiente termina en el color de fondo de la siguiente sección para una transición suave */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0e2222] via-[#0e2222]/50 to-transparent" />
         </div>
 
@@ -102,38 +101,38 @@ function TripDetailPage() {
                 ))}
               </ul>
             </div>
-            <div className="w-full md:w-1/3 h-48 md:h-auto rounded-lg overflow-hidden border border-[#284b4b] flex-shrink-0">
+            {/* Imagen 1 con contenedor unificado */}
+            <div className={imageContainerClass}>
               <img 
-                alt="Lifestyle" 
+                alt={`${trip.title} lifestyle`} 
                 className="w-full h-full object-cover opacity-80" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtUsK1ngTmbKLLgUQRc2rn3TRrVPWbZ8x0zbPz_gbNJ-pG6m4vAdEYqU3BM5cy2ttXfOG2UU6B_NTtA2WwDpdkbyanL9gfUJFXID1KgcXsMcb-2HnKthgq2MfXYBGZ_Q3vwPzozu-e2HdZsdFAZOeF2FrIFKo675d6wS_b0kd4hNY3b_yn6UnuHjrI4o3qGz6pum_PMtLDcNPEjNyiNsvtkQ2xjR5obtoxhZY6OkW8RShq60tjs5Z4iImL7M-B1NWupD_rDlGM67E"
+                src={trip.image1}
               />
             </div>
           </div>
 
           {/* 2. What's included */}
-          <div className={cardClass}>
-            <div className="flex flex-col lg:flex-row gap-10">
-              <div className="flex-1">
-                <h2 className="text-2xl font-serif mb-6 text-white">What&apos;s included</h2>
-                <div className="grid grid-cols-1 gap-y-6">
-                  {trip.includes.map((item) => (
-                    <div key={item} className="flex items-start gap-4">
-                      <div className="text-[#3ea59b] mt-1 flex-shrink-0">
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path></svg>
-                      </div>
-                      <p className="text-[#f0f4f4] font-light leading-snug">{item}</p>
+          <div className={`${cardClass} flex flex-col md:flex-row gap-8 items-center`}>
+            <div className="flex-1">
+              <h2 className="text-2xl font-serif mb-6 text-white">What&apos;s included</h2>
+              <div className="grid grid-cols-1 gap-y-6">
+                {trip.includes.map((item) => (
+                  <div key={item} className="flex items-start gap-4">
+                    <div className="text-[#3ea59b] mt-1 flex-shrink-0">
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path></svg>
                     </div>
-                  ))}
-                </div>
+                    <p className="text-[#f0f4f4] font-light leading-snug">{item}</p>
+                  </div>
+                ))}
               </div>
-              <div className="w-full lg:w-2/5 rounded-xl overflow-hidden border border-[#284b4b] hidden md:block">
-                <img 
-                  alt="Kite surfing action" 
-                  className="w-full h-full object-cover" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjdpPjaU4zKJogDR2HjWsNswJlmHWUIUu_YT5Et_EKvxmG8bFiLoq8bPtV_fg0nszPEGYc2dDOQxgHCJzU6dy1vObSyhp59MIsub9VT3hTkiuJYpZ3gvGkyCq3Yc9oVHNIgAmQLE4sDf4Lnlr96VU0_PF5o835QQKBNe1TJbUov9oEqtT_TQfO53cOSXvylIMkuKtETrfiGqdbm8uUr-83R1ZxCkPSimDekVv98APzCl5ohQDEAwaLgcnshZrvGGc_i5XqPZijU3Q"
-                />
-              </div>
+            </div>
+            {/* Imagen 2 con contenedor unificado */}
+            <div className={`${imageContainerClass} hidden md:block`}>
+              <img 
+                alt={`${trip.title} action`} 
+                className="w-full h-full object-cover opacity-80" 
+                src={trip.image2}
+              />
             </div>
           </div>
 

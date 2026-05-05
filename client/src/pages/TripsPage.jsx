@@ -1,7 +1,28 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { FaArrowRight, FaWind } from 'react-icons/fa'
 import SEO from '../components/SEO.jsx'
 import { trips } from '../content/trips.js'
-import { buildWhatsAppUrl } from '../lib/whatsapp.js'
+
+import heroImg from '../assets/imagenes-kitesurfing/posicionkt2.jpg'
+import firstFlyImg from '../assets/imagenes-kitesurfing/posicionkt1.jpg'
+import olasVientoImg from '../assets/imagenes-kitesurfing/posicionkt8.jpg'
+import soloSurfImg from '../assets/imagenes-home/posicion12.jpg'
+import rideCoastImg from '../assets/imagenes-wingfoil/posicionw4.jpg'
+
+const tripImages = [
+  firstFlyImg,
+  olasVientoImg,
+  soloSurfImg,
+  rideCoastImg,
+]
+
+const tripLabels = [
+  'First Fly',
+  'Olas y Viento',
+  'Solo Surf',
+  'Ride the Coast',
+]
 
 function TripsPage() {
   return (
@@ -14,64 +35,191 @@ function TripsPage() {
         canonicalPath="/trips"
         hreflang={{ en: '/trips', es: '/esp/viajes', default: '/' }}
       />
-      <section className="bg-background-light py-16 sm:py-20 lg:py-28 dark:bg-background-dark">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Trips</p>
-            <h1 className="mt-4 font-display text-2xl text-slate-900 dark:text-white sm:text-3xl md:text-4xl lg:text-5xl">
-              Choose your trip
-            </h1>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">
-              Four core formats with stay included.
+
+      <main className="overflow-hidden bg-[#031015] text-white">
+        {/* HERO */}
+        <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-6 text-center sm:min-h-[80vh] lg:min-h-screen">
+          <div className="absolute inset-0 z-0">
+            <motion.img
+              src={heroImg}
+              alt="Mancora Kite Club trips"
+              initial={{ scale: 1.08 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2.4, ease: 'easeOut' }}
+              className="h-full w-full object-cover opacity-60"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/35 to-transparent" />
+            <div className="absolute inset-0 bg-black/30" />
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 45 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="relative z-10 mx-auto max-w-5xl"
+          >
+            <p className="mb-6 text-xs font-black uppercase tracking-[0.45em] text-[#5af8fb]">
+              Mancora Kite Club
             </p>
-          </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
-            {trips.map((trip) => {
-              const whatsappHref = buildWhatsAppUrl(trip.whatsappMessage)
+            <h1 className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tighter sm:text-7xl lg:text-8xl">
+              Our
+              <br />
+              Trips
+            </h1>
 
-              return (
-                <article
-                  key={trip.slug}
-                  className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-white/10 dark:bg-surface-dark sm:p-6"
+            <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
+              Choose your route through wind, waves, coaching, surf, and the north coast of Peru.
+            </p>
+
+            <a
+              href="#trip-list"
+              className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full border border-[#5af8fb]/60 px-8 text-sm font-black uppercase tracking-[0.22em] text-[#5af8fb] transition hover:bg-[#5af8fb] hover:text-black"
+            >
+              Explore Trips
+            </a>
+          </motion.div>
+        </section>
+
+        {/* TRIP LIST */}
+        <section id="trip-list" className="relative">
+          {trips.map((trip, index) => {
+            const image = tripImages[index % tripImages.length]
+            const label = tripLabels[index] || trip.title
+            const isEven = index % 2 === 0
+
+            return (
+              <Link
+                key={trip.slug}
+                to={trip.path}
+                className="group block"
+              >
+                <motion.article
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, ease: 'easeOut' }}
+                  viewport={{ once: true, amount: 0.25 }}
+                  className="relative flex min-h-[68vh] items-center overflow-hidden border-t border-white/10 px-5 py-20 sm:min-h-[76vh] sm:px-8 lg:min-h-screen lg:px-16"
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                    {trip.subtitle}
-                  </p>
-                  <h2 className="mt-3 font-display text-2xl text-slate-900 dark:text-white">{trip.title}</h2>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-300 sm:text-base">{trip.summary}</p>
+                  {/* Background image */}
+                  <div className="absolute inset-0 z-0">
+                    <img
+                      src={image}
+                      alt={trip.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-1000 group-hover:scale-110"
+                    />
 
-                  <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                    <Link
-                      to={trip.path}
-                      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white sm:w-auto"
-                    >
-                      View details
-                    </Link>
-                    <a
-                      href={whatsappHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-medium text-slate-700 transition-colors hover:border-primary hover:text-primary dark:border-slate-600 dark:text-slate-200 sm:w-auto"
-                    >
-                      Book on WhatsApp
-                    </a>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/25 to-transparent" />
+                    <div
+                      className={`absolute inset-0 ${
+                        isEven
+                          ? 'bg-gradient-to-r from-[#031015]/75 via-[#031015]/20 to-transparent'
+                          : 'bg-gradient-to-l from-[#031015]/75 via-[#031015]/20 to-transparent'
+                      }`}
+                    />
                   </div>
-                </article>
-              )
-            })}
-          </div>
 
-          <div className="mt-10">
+                  {/* Number */}
+                  <div
+                    className={`absolute top-8 z-10 text-6xl font-black leading-none text-white/15 transition duration-500 group-hover:text-[#5af8fb]/25 sm:text-8xl lg:text-9xl ${
+                      isEven ? 'right-6 lg:right-16' : 'left-6 lg:left-16'
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+
+                  {/* Content */}
+                  <div
+                    className={`relative z-10 mx-auto flex w-full max-w-7xl ${
+                      isEven ? 'justify-start text-left' : 'justify-end text-right'
+                    }`}
+                  >
+                    <div className="max-w-4xl">
+                      <p
+                        className={`mb-5 flex items-center gap-3 text-xs font-black uppercase tracking-[0.35em] text-[#5af8fb] ${
+                          isEven ? 'justify-start' : 'justify-end'
+                        }`}
+                      >
+                        <FaWind />
+                        {trip.subtitle || 'Trip Experience'}
+                      </p>
+
+                      <h2
+                        className="
+                          font-display text-5xl font-black uppercase leading-[0.82] tracking-tighter
+                          text-transparent transition duration-500
+                          [-webkit-text-stroke:1.5px_rgba(255,255,255,0.78)]
+                          group-hover:text-white group-hover:[-webkit-text-stroke:1.5px_rgba(90,248,251,0.35)]
+                          sm:text-7xl md:text-8xl lg:text-[8.5rem]
+                        "
+                      >
+                        {label}
+                      </h2>
+
+                      <p
+                        className={`mt-7 max-w-xl text-sm leading-7 text-white/75 sm:text-base ${
+                          isEven ? 'mr-auto' : 'ml-auto'
+                        }`}
+                      >
+                        {trip.summary}
+                      </p>
+
+                      <div
+                        className={`mt-8 flex ${
+                          isEven ? 'justify-start' : 'justify-end'
+                        }`}
+                      >
+                        <span className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-7 text-sm font-black uppercase tracking-[0.2em] text-black transition group-hover:bg-white">
+                          View Details
+                          <FaArrowRight className="transition duration-300 group-hover:translate-x-1" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom strip */}
+                  <div className="absolute bottom-0 left-0 right-0 z-10 h-px bg-gradient-to-r from-transparent via-[#5af8fb]/50 to-transparent" />
+                </motion.article>
+              </Link>
+            )
+          })}
+        </section>
+
+        {/* FINAL CTA */}
+        <section className="relative overflow-hidden px-6 py-24 text-center sm:px-10 lg:px-16">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(90,248,251,0.18),_transparent_60%)]" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 45 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, ease: 'easeOut' }}
+            viewport={{ once: true }}
+            className="relative mx-auto max-w-4xl"
+          >
+            <p className="text-xs font-black uppercase tracking-[0.4em] text-[#5af8fb]">
+              Custom Trip Builder
+            </p>
+
+            <h2 className="mt-5 font-display text-4xl font-black uppercase leading-tight text-white sm:text-5xl lg:text-6xl">
+              Build the trip that fits your wind, level and time.
+            </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
+              Create your own Máncora route with coaching, accommodation, extra activities and the best rhythm for your stay.
+            </p>
+
             <Link
               to="/build"
-              className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90 sm:w-auto"
+              className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-8 text-sm font-black uppercase tracking-[0.22em] text-black transition hover:bg-white sm:w-auto"
             >
-              Build your trip
+              Build Your Trip
+              <FaArrowRight />
             </Link>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </section>
+      </main>
     </>
   )
 }

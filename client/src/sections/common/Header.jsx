@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'
-import clubLogo from '../../assets/LOGOS KITE CLUB/1150f6f9887d0d43f04c75200a1aacbd.webp'
+import clubLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
 
 const NAV_ITEMS = [
   { to: '/trips', label: 'nav.trips' },
@@ -59,7 +59,6 @@ function Header() {
 
   const currentLanguage = languages.find((language) => language.code === currentLang)
   const currentLanguageLabel = currentLanguage ? t(currentLanguage.labelKey) : t('header.language')
-  const logoTextClass = scrolled ? 'text-slate-950 dark:text-white' : 'text-white'
   const navTextClass = scrolled ? 'text-slate-700 dark:text-white/80' : 'text-white/80'
   const controlClass = scrolled
     ? 'border-slate-200 bg-white/90 text-slate-900 shadow-sm hover:border-primary hover:bg-primary/10 dark:border-white/10 dark:bg-background-dark/80 dark:text-white'
@@ -80,14 +79,6 @@ function Header() {
           onClick={() => setIsMobileOpen(false)}
         >
           <img src={clubLogo} alt="THE CLUB logo" className="h-8 w-auto shrink-0 sm:h-9 lg:h-10" />
-          <div className="min-w-0">
-            <span className={`block truncate font-display text-lg leading-none sm:text-xl ${logoTextClass}`}>
-              Mancora
-            </span>
-            <span className="block truncate text-[10px] font-bold uppercase tracking-[0.28em] text-primary sm:text-xs">
-              Kite Club
-            </span>
-          </div>
         </Link>
 
         <nav className="hidden items-center gap-5 lg:flex xl:gap-8">

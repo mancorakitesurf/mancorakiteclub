@@ -1,15 +1,23 @@
 import { motion } from "framer-motion"
-import { Link } from 'react-router-dom'
-import { FaMapMarkerAlt, FaBed, FaWhatsapp, FaDumbbell, FaUmbrellaBeach } from 'react-icons/fa'
-import { GiLotus, GiWhaleTail, GiScubaMask, GiTurtle } from 'react-icons/gi'
-import StandardPage from './StandardPage.jsx'
-import { buildWhatsAppUrl } from '../lib/whatsapp.js'
-import heroImg from '../assets/HOSPEDAJE KITE HOUSE/main.webp'
-import img1 from '../assets/HOSPEDAJE KITE HOUSE/cuartonazi.webp'
-import img2 from '../assets/HOSPEDAJE KITE HOUSE/habitacion.webp'
-import img3 from '../assets/HOSPEDAJE KITE HOUSE/nightcaption.webp'
-import img4 from '../assets/HOSPEDAJE KITE HOUSE/piscinabuenarda.webp'
-import img5 from '../assets/HOSPEDAJE KITE HOUSE/image.webp'
+import { Link } from "react-router-dom"
+import {
+  FaMapMarkerAlt,
+  FaBed,
+  FaWhatsapp,
+  FaDumbbell,
+  FaUmbrellaBeach,
+} from "react-icons/fa"
+import { GiLotus, GiWhaleTail, GiScubaMask, GiTurtle } from "react-icons/gi"
+
+import StandardPage from "./StandardPage.jsx"
+import { buildWhatsAppUrl } from "../lib/whatsapp.js"
+
+import heroImg from "../assets/HOSPEDAJE KITE HOUSE/main.webp"
+import img1 from "../assets/HOSPEDAJE KITE HOUSE/cuartonazi.webp"
+import img2 from "../assets/HOSPEDAJE KITE HOUSE/habitacion.webp"
+import img3 from "../assets/HOSPEDAJE KITE HOUSE/nightcaption.webp"
+import img4 from "../assets/HOSPEDAJE KITE HOUSE/piscinabuenarda.webp"
+import img5 from "../assets/HOSPEDAJE KITE HOUSE/image.webp"
 
 function StayPage() {
   const stayMessage =
@@ -18,47 +26,47 @@ function StayPage() {
   const amenities = [
     {
       icon: <GiLotus />,
-      title: 'Yoga',
-      text: 'Start your morning with yoga sessions by the sea.',
+      title: "Yoga",
+      text: "Start your morning with yoga sessions by the sea.",
     },
     {
       icon: <GiWhaleTail />,
-      title: 'Whale Watching',
-      text: 'Witness humpback whales in the warm Pacific waters of Mancora.',
+      title: "Whale Watching",
+      text: "Witness humpback whales in the warm Pacific waters of Máncora.",
     },
     {
       icon: <GiScubaMask />,
-      title: 'Scuba Diving',
-      text: 'Explore vibrant reefs and underwater life along the coast.',
+      title: "Scuba Diving",
+      text: "Explore vibrant reefs and underwater life along the coast.",
     },
     {
       icon: <GiTurtle />,
-      title: 'Swim with Turtles',
-      text: 'Snorkel alongside sea turtles in their natural habitat.',
+      title: "Swim with Turtles",
+      text: "Snorkel alongside sea turtles in their natural habitat.",
     },
     {
       icon: <FaDumbbell />,
-      title: 'Gym',
-      text: 'Keep training with our on-site fitness area, anytime.',
+      title: "Gym",
+      text: "Keep training with our on-site fitness area.",
     },
     {
       icon: <FaUmbrellaBeach />,
-      title: 'Beachfront Bungalows',
-      text: 'Fall asleep to the sound of waves in our oceanfront bungalows.',
+      title: "Beachfront Bungalows",
+      text: "Fall asleep to the sound of waves in oceanfront bungalows.",
     },
   ]
 
   const pricing = [
     {
       guests: 1,
-      label: '1 Person',
-      sublabel: 'Private room',
+      label: "1 Person",
+      sublabel: "Private room",
       price: 50,
     },
     {
       guests: 2,
-      label: '2 Persons',
-      sublabel: 'Same room',
+      label: "2 Persons",
+      sublabel: "Same room",
       price: 80,
     },
   ]
@@ -66,28 +74,28 @@ function StayPage() {
   const gallery = [
     {
       image: img1,
-      title: 'Private Room',
-      label: 'Comfort',
+      title: "Private Room",
+      label: "Comfort",
     },
     {
       image: img2,
-      title: 'Bedroom',
-      label: 'Rest',
+      title: "Bedroom",
+      label: "Rest",
     },
     {
       image: img3,
-      title: 'Night View',
-      label: 'Atmosphere',
+      title: "Night View",
+      label: "Atmosphere",
     },
     {
       image: img4,
-      title: 'Swimming Pool',
-      label: 'Lifestyle',
+      title: "Swimming Pool",
+      label: "Lifestyle",
     },
     {
       image: img5,
-      title: 'The Lodge',
-      label: 'Experience',
+      title: "The Lodge",
+      label: "Experience",
     },
   ]
 
@@ -97,53 +105,67 @@ function StayPage() {
       subtitle="A calm, premium base for your time in Máncora."
       description="Premium accommodation in Máncora for kitesurfers and riders. Clean rooms with A/C, WiFi, hot water, breakfast. Calm base close to the best spots. Book direct!"
       canonicalPath="/stay"
-      hreflang={{ en: '/stay', es: '/esp', default: '/' }}
+      hreflang={{ en: "/stay", es: "/esp", default: "/" }}
       fullWidth
     >
-      <div className="overflow-hidden rounded-[2rem] bg-white shadow-[0_30px_90px_rgba(15,23,42,0.10)] dark:bg-surface-dark">
-        
+      <div className="overflow-hidden bg-white dark:bg-surface-dark">
         {/* HERO */}
-        <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-screen">
+        <section className="relative flex min-h-[78vh] items-center justify-center overflow-hidden md:min-h-screen">
           <div className="absolute inset-0 z-0">
             <motion.img
               src={heroImg}
-              alt="Stay with us in Mancora"
+              alt="Stay with us in Máncora"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}
               transition={{ duration: 2.2, ease: "easeOut" }}
-              className="h-full w-full object-cover opacity-60"
+              className="h-full w-full object-cover opacity-70"
               loading="eager"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
           </div>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="relative z-10 mx-auto max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
+            className="relative z-10 mx-auto max-w-7xl px-6 text-center text-white sm:px-10 lg:px-16"
           >
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-              Stay in Mancora
+            <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-primary">
+              Stay in Máncora
             </p>
 
-            <h1 className="font-display text-5xl font-bold tracking-tight text-white drop-shadow-lg sm:text-6xl lg:text-7xl">
-              Stay with us in Mancora
+            <h1 className="font-display text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl">
+              A calm base
+              <br />
+              for wind, waves
+              <br />
+              and rest.
             </h1>
 
             <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-              Simple, comfortable accommodation designed for riders and travelers
-              who want easy planning, clean spaces, and a relaxed atmosphere close
-              to the ocean.
+              Premium accommodation for riders and travelers who want clean spaces,
+              easy planning, and a relaxed atmosphere close to the ocean.
             </p>
 
-            <div className="mt-10 flex justify-center">
+            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
                 to="/build"
                 className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-primary/90 sm:w-auto"
               >
                 Build your trip
               </Link>
+
+              <a
+                href={buildWhatsAppUrl(stayMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/50 px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-slate-950 sm:w-auto"
+              >
+                <FaWhatsapp />
+                Book on WhatsApp
+              </a>
             </div>
           </motion.div>
         </section>
@@ -163,7 +185,7 @@ function StayPage() {
           <div className="space-y-5 text-base leading-8 text-slate-600 dark:text-slate-300">
             <p>
               Stay with us is a focused accommodation option for riders who want
-              comfort, simplicity, and easy planning during their time in Mancora.
+              comfort, simplicity, and easy planning during their time in Máncora.
             </p>
 
             <p>
@@ -213,9 +235,11 @@ function StayPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
               Rates
             </p>
+
             <h2 className="mt-4 font-display text-4xl font-bold text-slate-950 dark:text-white">
               Bali Lodge Accommodation
             </h2>
+
             <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">
               Base prices per night — breakfast included with every stay.
             </p>
@@ -231,9 +255,14 @@ function StayPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 text-sm font-bold text-primary transition duration-300 group-hover:bg-primary group-hover:text-white">
                     {plan.guests}
                   </div>
+
                   <div>
-                    <p className="font-bold text-slate-950 dark:text-white">{plan.label}</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">{plan.sublabel}</p>
+                    <p className="font-bold text-slate-950 dark:text-white">
+                      {plan.label}
+                    </p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                      {plan.sublabel}
+                    </p>
                   </div>
                 </div>
 
@@ -241,7 +270,9 @@ function StayPage() {
                   <span className="font-display text-5xl font-bold text-slate-950 dark:text-white">
                     ${plan.price}
                   </span>
-                  <span className="mb-2 text-sm text-slate-500 dark:text-slate-400">/ night</span>
+                  <span className="mb-2 text-sm text-slate-500 dark:text-slate-400">
+                    / night
+                  </span>
                 </div>
 
                 <p className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
@@ -267,18 +298,17 @@ function StayPage() {
             </div>
 
             <p className="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-              A visual preview of the room, details, and shared spaces designed
-              for a quiet and comfortable stay in Mancora.
+              A visual preview of the room, details, pool, and lodge atmosphere
+              designed for a quiet and comfortable stay in Máncora.
             </p>
           </div>
 
-          {/* Row 1: large + medium */}
           <div className="grid gap-5 lg:grid-cols-12">
-            {[gallery[0], gallery[1]].map((item, i) => (
+            {[gallery[0], gallery[1]].map((item, index) => (
               <article
                 key={item.title}
                 className={`group relative h-[400px] overflow-hidden rounded-[2rem] ${
-                  i === 0 ? 'lg:col-span-7' : 'lg:col-span-5'
+                  index === 0 ? "lg:col-span-7" : "lg:col-span-5"
                 }`}
               >
                 <img
@@ -287,16 +317,26 @@ function StayPage() {
                   loading="lazy"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
                 <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">{item.label}</p>
-                  <h3 className={`mt-2 font-bold ${ i === 0 ? 'text-3xl' : 'text-2xl'}`}>{item.title}</h3>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+                    {item.label}
+                  </p>
+
+                  <h3
+                    className={`mt-2 font-bold ${
+                      index === 0 ? "text-3xl" : "text-2xl"
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
                 </div>
               </article>
             ))}
           </div>
 
-          {/* Row 2: three equal */}
           <div className="mt-5 grid gap-5 lg:grid-cols-3">
             {[gallery[2], gallery[3], gallery[4]].map((item) => (
               <article
@@ -309,9 +349,14 @@ function StayPage() {
                   loading="lazy"
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+
                 <div className="absolute bottom-6 left-6 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">{item.label}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+                    {item.label}
+                  </p>
+
                   <h3 className="mt-2 text-xl font-bold">{item.title}</h3>
                 </div>
               </article>
@@ -322,7 +367,7 @@ function StayPage() {
         {/* LOCATION */}
         <section className="grid gap-8 bg-slate-50 px-6 py-20 dark:bg-background-dark sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-16">
           <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-surface-dark">
-            <div className="overflow-hidden rounded-[1.5rem]" style={{ height: '380px' }}>
+            <div className="overflow-hidden rounded-[1.5rem]" style={{ height: "380px" }}>
               <iframe
                 title="Mancora Kite House location"
                 src="https://maps.google.com/maps?q=hotel+samana+chakra+Mancora+Peru&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -330,7 +375,11 @@ function StayPage() {
                 height="100%"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                style={{ filter: 'invert(1) hue-rotate(180deg) grayscale(0.15) brightness(0.85)', border: 0 }}
+                style={{
+                  filter:
+                    "invert(1) hue-rotate(180deg) grayscale(0.15) brightness(0.85)",
+                  border: 0,
+                }}
               />
             </div>
           </div>
@@ -341,7 +390,7 @@ function StayPage() {
             </p>
 
             <h2 className="mt-4 font-display text-4xl font-bold text-slate-950 dark:text-white">
-              Mancora, Peru
+              Máncora, Peru
             </h2>
 
             <p className="mt-5 flex items-start gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
@@ -350,8 +399,8 @@ function StayPage() {
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
-              Located right on the Panamericana Norte, minutes from the beach and the
-              kite spot. Easy arrival from Piura or Tumbes airports.
+              Located right on the Panamericana Norte, minutes from the beach and
+              the kite spot. Easy arrival from Piura or Tumbes airports.
             </p>
           </div>
         </section>

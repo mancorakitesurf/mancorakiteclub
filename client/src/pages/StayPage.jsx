@@ -370,7 +370,7 @@ function StayPage() {
             <div className="overflow-hidden rounded-[1.5rem]" style={{ height: "380px" }}>
               <iframe
                 title="Mancora Kite House location"
-                src="https://maps.google.com/maps?q=hotel+samana+chakra+Mancora+Peru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.5971273445416!2d-81.0530883!3d-4.1020847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x903691315a6adf53%3A0x11242dabd794a228!2sMancora%20Kite%20Club%20-%20Escuela%20kitesurf%20y%20wingfoil!5e0!3m2!1sen!2spe!4v1778131649396!5m2!1sen!2spe"
                 width="100%"
                 height="100%"
                 loading="lazy"
@@ -395,7 +395,7 @@ function StayPage() {
 
             <p className="mt-5 flex items-start gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
               <FaMapMarkerAlt className="mt-1 shrink-0 text-primary" />
-              Panamericana Norte, Av. Piura s/n — Hotel Samana Chakra, Máncora, Peru
+              Hotel The Point, Av. Piura s/n, Máncora 20851
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-300">

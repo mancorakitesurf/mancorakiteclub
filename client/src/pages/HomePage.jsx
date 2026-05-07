@@ -5,6 +5,7 @@ import Instruction from '../sections/home/Instruction.jsx'
 import Stay from '../sections/home/Stay.jsx'
 import Testimonials from '../sections/home/Testimonials.jsx'
 import InstructorsSection from '../components/InstructorsSection.jsx'
+import OurStory from '../sections/home/OurStory.jsx'
 import Trips from '../sections/home/Trips.jsx'
 import WeatherSection from '../sections/home/WeatherSection.jsx'
 
@@ -28,6 +29,7 @@ function HomePage() {
       <BuilderPreview />
       <Testimonials />
       <InstructorsSection />
+      <OurStory />
     </>
   )
 }

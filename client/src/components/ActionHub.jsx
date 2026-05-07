@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { IoChatbubble } from 'react-icons/io5'
 import { FaWhatsapp } from 'react-icons/fa'
@@ -11,8 +12,21 @@ import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
  * ActionHub Component
  * Floating action hub with KiteBot video trigger and vertical action stack.
  */
+const SECTION_MAP = [
+  { pattern: /^\/classes(\/|$)|\/learn\/|^\/aprende\//, message: 'Hola, Kite Club! Quiero mas información sobre las clases que brindan' },
+  { pattern: /^\/trips(\/|$)/, message: 'Hola, Kite Club! Quiero mas información sobre los trips que ofrecen' },
+  { pattern: /^\/stay(\/|$)|\/hostel|kite-club-hotel|4-stars-hotel|\/acommodation\//, message: 'Hola, Kite Club! Quiero mas información sobre el hospedaje' },
+]
+
+function getWhatsAppHref(pathname) {
+  const match = SECTION_MAP.find(({ pattern }) => pattern.test(pathname))
+  const text = match ? match.message : 'Hola, Kite Club! Quiero mas información'
+  return `https://wa.me/51996557689?text=${encodeURIComponent(text)}`
+}
+
 function ActionHub() {
   const { isMobileMenuOpen } = useUIStore()
+  const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -55,7 +69,7 @@ function ActionHub() {
       icon: FaWhatsapp,
       color: 'bg-[#25D366]',
       iconColor: 'text-white',
-      href: 'https://wa.me/51996557689?text=Hola!%20Quiero%20más%20información',
+      href: getWhatsAppHref(location.pathname),
       label: 'WhatsApp',
     },
   ]

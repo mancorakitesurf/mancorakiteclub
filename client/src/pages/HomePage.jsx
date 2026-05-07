@@ -8,6 +8,8 @@ import InstructorsSection from '../components/InstructorsSection.jsx'
 import OurStory from '../sections/home/OurStory.jsx'
 import Trips from '../sections/home/Trips.jsx'
 import WeatherSection from '../sections/home/WeatherSection.jsx'
+import WindguruReport from '../components/WindguruReport.jsx'
+
 
 function HomePage() {
   return (
@@ -23,6 +25,7 @@ function HomePage() {
       />
       <Hero />
       <WeatherSection />
+      <WindguruReport />
       <Trips />
       <Instruction />
       <Stay />

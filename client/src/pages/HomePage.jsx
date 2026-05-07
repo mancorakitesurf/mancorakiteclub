@@ -8,7 +8,8 @@ import InstructorsSection from '../components/InstructorsSection.jsx'
 import OurStory from '../sections/home/OurStory.jsx'
 import Trips from '../sections/home/Trips.jsx'
 import WeatherSection from '../sections/home/WeatherSection.jsx'
-import WindguruReport from '../components/WindguruReport.jsx'
+import WindWidget from '../components/WindWidget.jsx'
+
 
 
 function HomePage() {
@@ -25,7 +26,8 @@ function HomePage() {
       />
       <Hero />
       <WeatherSection />
-      <WindguruReport />
+      <WindWidget />
+
       <Trips />
       <Instruction />
       <Stay />

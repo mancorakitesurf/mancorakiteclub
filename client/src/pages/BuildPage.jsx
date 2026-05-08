@@ -1,4 +1,5 @@
 import SEO from '../components/SEO.jsx'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
@@ -307,6 +308,8 @@ function StepIndicator({ pasoActual }) {
     { n: 3, label: 'Classes' },
     { n: 4, label: 'Extras' },
     { n: 5, label: 'Summary' },
+    // Note: These labels are kept as English since they are purely visual step indicators
+    // and the StepIndicator is a presentational sub-component within BuildPage
   ]
 
   return (
@@ -979,10 +982,10 @@ function BuildPage() {
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Build Your Trip"
-        description="Customize your trip with classes, stay, and add-ons."
-        canonicalPath="/build"
-        hreflang={{ en: '/build', es: '/esp', default: '/' }}
+        titleKey="seo.buildTitle"
+        descKey="seo.buildDesc"
+        titleFallback="Mancora Kite Club | Build Your Trip"
+        descFallback="Customize your trip with classes, stay, and add-ons."
       />
 
       {/* ── HERO ── */}

@@ -1,4 +1,4 @@
-import { useI18n } from '../app/providers/i18nContext'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 import chatbotVideo from '../assets/chatbot ia.mp4'
 
 /**

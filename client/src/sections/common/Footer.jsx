@@ -1,5 +1,5 @@
-import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaWhatsapp, FaYoutube } from 'react-icons/fa'
-import { useI18n } from '../../app/providers/i18nContext.js'
+import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import { useI18n } from '../../app/providers/i18nContext.jsx';
 import footerBrandLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
 import logoDuotone from '../../assets/LOGOS KITE CLUB/Logo-duotone.webp'
 import logoOzone from '../../assets/LOGOS KITE CLUB/Logo_ozone.webp'
@@ -50,24 +50,31 @@ function Footer() {
             <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
               <a
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
-                href="#"
+                href="https://www.instagram.com/kiteclubmancora?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"
                 aria-label="Instagram"
               >
                 <FaInstagram />
               </a>
               <a
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
-                href="#"
+                href="https://www.facebook.com/MancoraKiteClub" target="_blank"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
               <a
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
-                href="#"
+                href="https://www.youtube.com/@mancorakiteclub4328" target="_blank"
                 aria-label="YouTube"
               >
                 <FaYoutube />
+              </a>
+              <a
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
+                href="https://www.tiktok.com/@kiteclubmancora?_r=1&_t=ZS-965ufttiqJt" target="_blank"
+                aria-label="Tiktok"
+              >
+                <FaTiktok />
               </a>
             </div>
           </div>
@@ -133,7 +140,7 @@ function Footer() {
               </li>
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
                 <FaEnvelope className="mt-1 shrink-0 text-white" />
-                <span className="max-w-xs break-all sm:break-words">hello@mancorakiteclub.com</span>
+                <span className="max-w-xs break-all sm:break-words">kiteclub.mancora@gmail.com</span>
               </li>
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
                 <FaWhatsapp className="mt-1 shrink-0 text-white" />

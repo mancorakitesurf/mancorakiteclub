@@ -7,10 +7,10 @@ function BlogPage15() {
     return (
         <div className="bg-[#031015] min-h-screen selection:bg-[#ff9069]/30 selection:text-white font-body">
             <SEO
-                title="Blog | Safety & Progression: The Technical Edge | KINETIC TIDE"
-                description="Rapid advancement in wave riding through mathematical precision, bar mechanics, and video feedback analysis. Improve your technique with coaching in Máncora."
-                canonicalPath="/blog/Safety-and-Progression-The-Technical-Edge"
-                hreflang={{ en: '/', es: '/esp', default: '/' }}
+                titleKey="seo.blogDataStripSafetyTitle"
+                descKey="seo.blogDataStripSafetyDesc"
+                titleFallback="Blog | Safety & Progression: The Technical Edge | KINETIC TIDE"
+                descFallback="Rapid advancement in wave riding through mathematical precision, bar mechanics, and video feedback analysis. Improve your technique with coaching in Máncora."
             />
 
             <HeroSafetyProgression />

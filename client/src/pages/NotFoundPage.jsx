@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO.jsx'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 
 function NotFoundPage() {
+  const { t } = useI18n()
+
   return (
     <>
       <SEO
@@ -9,8 +12,6 @@ function NotFoundPage() {
         descKey="seo.notFoundDesc"
         titleFallback="Mancora Kite Club | 404"
         descFallback="Page not found. The kitesurfing spot, trip, or page you are looking for does not exist. Return to home and keep riding with Máncora Kite Club in Peru."
-        canonicalPath="/"
-        hreflang={{ en: '/', es: '/esp', default: '/' }}
       />
 
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#031015] px-4 py-16 text-center text-white sm:px-6 lg:px-8">
@@ -19,16 +20,16 @@ function NotFoundPage() {
 
         <div className="relative mx-auto max-w-3xl rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.35)] backdrop-blur-md sm:p-8 lg:p-10">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary sm:text-sm">
-            Lost In The Wind
+            {t('notFound.label')}
           </p>
           <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-            404 &mdash; You&apos;ve gone off route
+            {t('notFound.title')}
           </h1>
           <p className="mt-5 text-base leading-relaxed text-white/80 sm:text-lg md:text-xl">
-            This page doesn&apos;t exist or the wind took you somewhere else.
+            {t('notFound.subtitle')}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-white/65 sm:text-base">
-            Let&apos;s get you back to where the real adventure begins.
+            {t('notFound.desc')}
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -36,13 +37,13 @@ function NotFoundPage() {
               to="/"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-[0_0_28px_rgba(42,157,143,0.35)] sm:w-auto"
             >
-              Back to Home
+              {t('common.backToHome')}
             </Link>
             <Link
               to="/trips"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-xl border border-primary/60 bg-white/5 px-6 py-3 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary/10 hover:text-white sm:w-auto"
             >
-              Explore Trips
+              {t('common.exploreTrips')}
             </Link>
           </div>
         </div>

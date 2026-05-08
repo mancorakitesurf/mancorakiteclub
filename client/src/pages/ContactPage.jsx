@@ -1,16 +1,20 @@
 import StandardPage from './StandardPage.jsx'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
 
 function ContactPage() {
+  const { t } = useI18n()
+
   return (
     <StandardPage
-      title="Contact | Mancora Kite Club"
-      subtitle="Reach us for availability, pricing, and trip guidance."
-      description="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
-      canonicalPath="/contact"
-      hreflang={{ en: '/contact', es: '/esp', default: '/' }}
+      titleKey="seo.contactTitle"
+      descKey="seo.contactDesc"
+      titleFallback="Contact | Mancora Kite Club"
+      descFallback="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
+      title={t('contactPage.title')}
+      subtitle={t('contactPage.subtitle')}
       cta={{
-        label: 'Contact via WhatsApp',
+        label: t('contactPage.ctaLabel'),
         href: buildWhatsAppUrl(defaultInquiryMessage({ page: 'contact' })),
       }}
     >

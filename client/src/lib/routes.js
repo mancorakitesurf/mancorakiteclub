@@ -1,47 +1,24 @@
-export const EN_TO_ES_ROUTE_MAP = {
-  '/': '/esp',
-  '/learn/kitesurf': '/aprende/kitesurf/esp',
-  '/learn/wingfoil': '/aprende/wingfoil/esp',
-  '/kitesurfing': '/kitesurfing/esp',
-  '/wingfoil': '/wingfoil/esp',
-  '/sup': '/sup/esp',
-  '/equipment-rental': '/equipment/esp',
-  '/solo-surf': '/solo-surf/esp',
-  '/hostel': '/acommodation/hostal/esp',
-  '/kite-club-hotel': '/acommodation/hotel-kite/esp',
-  '/4-stars-hotel': '/acommodation/4-estrellas/esp',
-  '/faq': '/faq/esp',
-  '/blog': '/blog/esp',
-  '/waves': '/waves/esp',
-}
-
-export const ES_TO_EN_ROUTE_MAP = Object.fromEntries(
-  Object.entries(EN_TO_ES_ROUTE_MAP).map(([enPath, esPath]) => [esPath, enPath]),
-)
+// Este archivo ha sido simplificado. 
+// La lógica de rutas multi-idioma ahora vive directamente en i18nContext.js y router.jsx
+// Se mantienen estas funciones por compatibilidad con código existente.
 
 export function normalizePath(pathname = '/') {
   if (pathname.length > 1 && pathname.endsWith('/')) {
     return pathname.slice(0, -1)
   }
-
   return pathname || '/'
 }
 
+// Actualizado para soportar el nuevo estándar de prefijos
 export function isSpanishPath(pathname = '/') {
   const normalized = normalizePath(pathname)
-  return normalized === '/esp' || normalized.endsWith('/esp')
+  return normalized === '/esp' || normalized.startsWith('/esp/')
 }
 
-export function getLanguageSwitchPath(pathname = '/') {
+export function isFrenchPath(pathname = '/') {
   const normalized = normalizePath(pathname)
-
-  if (EN_TO_ES_ROUTE_MAP[normalized]) {
-    return EN_TO_ES_ROUTE_MAP[normalized]
-  }
-
-  if (ES_TO_EN_ROUTE_MAP[normalized]) {
-    return ES_TO_EN_ROUTE_MAP[normalized]
-  }
-
-  return '/'
+  return normalized === '/fr' || normalized.startsWith('/fr/')
 }
+
+// Ya no necesitamos los mapas de diccionarios, 
+// el contexto hace el cambio dinámico.

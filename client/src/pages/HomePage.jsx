@@ -16,8 +16,6 @@ function HomePage() {
         descKey="seo.homeDesc"
         titleFallback="Máncora Kite Club | Kitesurf & Wingfoil School"
         descFallback="Learn kitesurfing and wingfoiling in Máncora, Peru with professional IKO certified coaching, equipment rental, beachfront stays, and epic trips. Book now!"
-        canonicalPath="/"
-        hreflang={{ en: '/', es: '/esp', default: '/' }}
       />
       <Hero />
       <WeatherSection />

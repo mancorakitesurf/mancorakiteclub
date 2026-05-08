@@ -1,18 +1,8 @@
 import { useEffect } from 'react'
-import { useI18n } from '../app/providers/i18nContext.js'
+import { useLocation } from 'react-router-dom'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 import { setSeoTags } from '../lib/seo.js'
 
-/**
- * Componente SEO mejorado con soporte multi-idioma
- * Usa el sistema i18n (t()) para traducciones dinámicas de meta tags
- *
- * @param {string} titleKey - Clave del JSON para el título (ej: 'seo.homeTitle')
- * @param {string} descKey - Clave del JSON para la descripción (ej: 'seo.homeDesc')
- * @param {string} titleFallback - Fallback si la key no existe
- * @param {string} descFallback - Fallback si la key no existe
- * @param {string} canonicalPath - Ruta canónica relativa (ej: '/', '/trips')
- * @param {object} hreflang - Objeto con rutas por idioma {en: '/', es: '/esp', default: '/'}
- */
 function SEO({
   title,
   description,
@@ -20,23 +10,31 @@ function SEO({
   descKey = 'seo.homeDesc',
   titleFallback = 'Máncora Kite Club',
   descFallback = 'Escuela de Kitesurf y Wingfoil en Máncora, Perú',
-  canonicalPath = '/',
-  hreflang = { en: '/', es: '/esp', default: '/' },
 }) {
   const { t } = useI18n()
+  const location = useLocation()
 
-  // Obtener título y descripción del i18n o fallback
   const resolvedTitle = title ?? (t(titleKey) !== titleKey ? t(titleKey) : titleFallback)
   const resolvedDescription = description ?? (t(descKey) !== descKey ? t(descKey) : descFallback)
+
+  const basePath = location.pathname.replace(/^\/(esp|fr)(\/|$)/, '/');
+  const cleanPath = basePath === '/' ? '' : basePath;
+
+  const dynamicHreflang = {
+    en: cleanPath || '/',
+    es: `/esp${cleanPath}`,
+    fr: `/fr${cleanPath}`,
+    default: cleanPath || '/'
+  };
 
   useEffect(() => {
     setSeoTags({
       title: resolvedTitle,
       description: resolvedDescription,
-      canonicalPath,
-      hreflang,
+      canonicalPath: location.pathname,
+      hreflang: dynamicHreflang,
     })
-  }, [resolvedTitle, resolvedDescription, canonicalPath, hreflang])
+  }, [resolvedTitle, resolvedDescription, location.pathname])
 
   return null
 }

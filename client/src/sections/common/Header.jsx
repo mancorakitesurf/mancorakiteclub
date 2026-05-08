@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import clubLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
+import { localizePath } from '../../lib/routes.js'
 import { useUIStore } from '../../store/useUIStore.js'
 
-const NAV_ITEMS = [
+const BASE_NAV_ITEMS = [
   { to: '/', label: 'nav.home' },
   { to: '/trips', label: 'nav.trips' },
   { to: '/classes', label: 'nav.classes' },
@@ -28,8 +29,13 @@ function Header() {
   )
   const dropdownRef = useRef(null)
   const headerRef = useRef(null)
-  const { isSpanish, changeLanguage, currentLang, t } = useI18n()
-  const homePath = isSpanish ? '/esp' : '/'
+  const { changeLanguage, currentLang, t } = useI18n()
+
+  const NAV_ITEMS = BASE_NAV_ITEMS.map((item) => ({
+    ...item,
+    to: localizePath(item.to, currentLang),
+  }))
+  const homePath = localizePath('/', currentLang)
 
   const whatsappUrl = buildWhatsAppUrl(defaultInquiryMessage('Header'))
 

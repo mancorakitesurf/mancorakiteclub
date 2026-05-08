@@ -1,3 +1,5 @@
+import { useI18n } from '../app/providers/i18nContext.js'
+import { localizePath } from '../lib/routes.js'
 import SEO from '../components/SEO.jsx'
 import BuilderPreview from '../sections/home/BuilderPreview.jsx'
 import Hero from '../sections/home/Hero.jsx'
@@ -10,9 +12,9 @@ import Trips from '../sections/home/Trips.jsx'
 import WeatherSection from '../sections/home/WeatherSection.jsx'
 import WindWidget from '../components/WindWidget.jsx'
 
-
-
 function HomePage() {
+  const { currentLang } = useI18n()
+
   return (
     <>
       <SEO
@@ -21,8 +23,8 @@ function HomePage() {
         titleFallback="Máncora Kite Club | Kitesurf & Wingfoil School"
         descFallback="Learn kitesurfing and wingfoiling in Máncora, Peru with professional IKO certified coaching, equipment rental, beachfront stays, and epic trips. Book now!"
         image="https://www.mancorakiteclub.com/assets/main-CpaNiQFq.webp"
-        canonicalPath="/"
-        hreflang={{ en: '/', es: '/esp', default: '/' }}
+        canonicalPath={localizePath('/', currentLang)}
+        hreflang={{ en: '/', es: '/esp', fr: '/fr', default: '/' }}
       />
       <Hero />
       <WeatherSection />

@@ -37,17 +37,16 @@ function translate(key, language) {
 }
 
 /**
- * Detectar idioma de la URL actual
- * @param {string} pathname - Ruta actual
+ * Detectar idioma de la URL actual usando prefijo
+ * @param {string} pathname - Ruta actual (ej: '/', '/esp', '/fr/trips')
  * @returns {string} - 'en', 'es' o 'fr'
  */
 function getLanguageFromPath(pathname) {
-  // Normalizar: remover trailing slash si existe
   const normalized =
     pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname || '/'
 
-  if (normalized === '/esp' || normalized.endsWith('/esp')) return 'es'
-  if (normalized === '/fr' || normalized.endsWith('/fr')) return 'fr'
+  if (normalized === '/esp' || normalized.startsWith('/esp/')) return 'es'
+  if (normalized === '/fr' || normalized.startsWith('/fr/')) return 'fr'
   return 'en'
 }
 

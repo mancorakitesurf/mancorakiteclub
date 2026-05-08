@@ -1,19 +1,21 @@
 import { Link, useLocation } from 'react-router-dom'
-import { getLanguageSwitchPath, isSpanishPath } from '../../lib/routes.js'
+import { getLanguageSwitchPath, getLanguage } from '../../lib/routes.js'
 
 function LanguageSwitch() {
   const location = useLocation()
   const currentPath = location.pathname
   const targetPath = getLanguageSwitchPath(currentPath)
-  const isSpanish = isSpanishPath(currentPath)
+  const currentLang = getLanguage(currentPath)
+
+  const nextLabel = currentLang === 'en' ? 'ES' : currentLang === 'es' ? 'FR' : 'EN'
 
   return (
     <Link
       to={targetPath}
       className="rounded-full border border-slate-300 px-3 py-1 text-xs font-semibold tracking-wide text-slate-700 transition hover:border-slate-500 hover:text-slate-950"
-      aria-label={isSpanish ? 'Switch to English' : 'Cambiar a espanol'}
+      aria-label={`Switch to ${nextLabel}`}
     >
-      {isSpanish ? 'EN' : 'ES'}
+      {nextLabel}
     </Link>
   )
 }

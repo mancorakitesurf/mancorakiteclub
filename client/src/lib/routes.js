@@ -1,18 +1,16 @@
+/**
+ * Prepend language prefix to a path.
+ * EN paths have no prefix; ES gets /esp, FR gets /fr.
+ */
+export function localizePath(path, lang) {
+  if (lang === 'en') return path
+  const prefix = `/${lang}`
+  return path === '/' ? prefix : `${prefix}${path}`
+}
+
+/** Aliases for backward compatibility */
 export const EN_TO_ES_ROUTE_MAP = {
   '/': '/esp',
-  '/learn/kitesurf': '/aprende/kitesurf/esp',
-  '/learn/wingfoil': '/aprende/wingfoil/esp',
-  '/kitesurfing': '/kitesurfing/esp',
-  '/wingfoil': '/wingfoil/esp',
-  '/sup': '/sup/esp',
-  '/equipment-rental': '/equipment/esp',
-  '/solo-surf': '/solo-surf/esp',
-  '/hostel': '/acommodation/hostal/esp',
-  '/kite-club-hotel': '/acommodation/hotel-kite/esp',
-  '/4-stars-hotel': '/acommodation/4-estrellas/esp',
-  '/faq': '/faq/esp',
-  '/blog': '/blog/esp',
-  '/waves': '/waves/esp',
 }
 
 export const ES_TO_EN_ROUTE_MAP = Object.fromEntries(
@@ -29,19 +27,30 @@ export function normalizePath(pathname = '/') {
 
 export function isSpanishPath(pathname = '/') {
   const normalized = normalizePath(pathname)
-  return normalized === '/esp' || normalized.endsWith('/esp')
+  return normalized.startsWith('/esp')
+}
+
+export function isFrenchPath(pathname = '/') {
+  const normalized = normalizePath(pathname)
+  return normalized.startsWith('/fr')
+}
+
+export function getLanguage(pathname = '/') {
+  const normalized = normalizePath(pathname)
+  if (normalized.startsWith('/esp')) return 'es'
+  if (normalized.startsWith('/fr')) return 'fr'
+  return 'en'
 }
 
 export function getLanguageSwitchPath(pathname = '/') {
   const normalized = normalizePath(pathname)
+  const currentLang = getLanguage(normalized)
 
-  if (EN_TO_ES_ROUTE_MAP[normalized]) {
-    return EN_TO_ES_ROUTE_MAP[normalized]
-  }
+  // Strip the current language prefix
+  const pathWithoutLang = normalized.replace(/^\/(?:esp|fr)(\/|$)/, (_, slash) => slash || '/') || '/'
 
-  if (ES_TO_EN_ROUTE_MAP[normalized]) {
-    return ES_TO_EN_ROUTE_MAP[normalized]
-  }
+  // Toggle to the next language (en -> es -> fr -> en)
+  const nextLang = currentLang === 'en' ? 'es' : currentLang === 'es' ? 'fr' : 'en'
 
-  return '/'
+  return localizePath(pathWithoutLang, nextLang)
 }

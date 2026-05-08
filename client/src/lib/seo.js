@@ -75,11 +75,15 @@ export function setSeoTags({ title, description, image, canonicalPath, hreflang 
 
   const hreflangEn = ensureLinkTag('link[rel="alternate"][hreflang="en"]', 'alternate')
   hreflangEn.setAttribute('hreflang', 'en')
-  hreflangEn.setAttribute('href', toAbsoluteUrl(hreflang.en))
+  hreflangEn.setAttribute('href', toAbsoluteUrl(hreflang.en || hreflang.default))
 
   const hreflangEs = ensureLinkTag('link[rel="alternate"][hreflang="es"]', 'alternate')
   hreflangEs.setAttribute('hreflang', 'es')
-  hreflangEs.setAttribute('href', toAbsoluteUrl(hreflang.es))
+  hreflangEs.setAttribute('href', toAbsoluteUrl(hreflang.es || hreflang.default))
+
+  const hreflangFr = ensureLinkTag('link[rel="alternate"][hreflang="fr"]', 'alternate')
+  hreflangFr.setAttribute('hreflang', 'fr')
+  hreflangFr.setAttribute('href', toAbsoluteUrl(hreflang.fr || hreflang.default))
 
   const hreflangDefault = ensureLinkTag(
     'link[rel="alternate"][hreflang="x-default"]',

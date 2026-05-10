@@ -1,10 +1,8 @@
+import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
-import wingIntro from "../../assets/imagenes-wingfoil/posicionw1.jpg"
-import wingFundamental from "../../assets/imagenes-wingfoil/posicionw2.jpg"
-import wingAdvanced from "../../assets/imagenes-wingfoil/posicionw4.jpg"
-import wingMaster from "../../assets/imagenes-wingfoil/posicionw5.jpg"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 
+const { wingIntro, wingFundamental, wingAdvanced, wingMaster } = componentImages["sections/ClassesPage/WingfoilClasses.jsx"]
 const WINGFOIL_CLASSES = [
   {
     id: "intro",

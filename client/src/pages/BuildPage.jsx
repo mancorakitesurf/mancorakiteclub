@@ -1,23 +1,13 @@
+import { componentImages } from '../config/images.js'
 import SEO from '../components/SEO.jsx'
+import FullscreenHero from '../components/ui/FullscreenHero.jsx'
+import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
-import actividadKitesurf from '../assets/imagenes-home/posicion6.jpg'
-import actividadWingfoil from '../assets/imagenes-home/posicion5.jpg'
-import actividadSurf from '../assets/imagenes-home/posicion4.jpg'
-import actividadSup from '../assets/imagenes-home/posicion3.jpg'
-import nightcaption from '../assets/HOSPEDAJE KITE HOUSE/nightcaption.webp'
-import DSC05231 from '../assets/HOSPEDAJE KITE HOUSE/DSC05231.webp'
-import DSC05128Panoramica from '../assets/HOSPEDAJE KITE HOUSE/DSC05128-Panorámica.webp'
-import DSC05120HDR from '../assets/HOSPEDAJE KITE HOUSE/DSC05120-HDR.webp'
-import DSC05085HDR from '../assets/HOSPEDAJE KITE HOUSE/DSC05085-HDR.webp'
-import hora0 from '../assets/fotos clases/DSC04672.webp'
-import hora3 from '../assets/fotos clases/DSC05456.webp'
-import hora6 from '../assets/fotos clases/DSC05783.webp'
-import hora10 from '../assets/fotos clases/DSC05905.webp'
-import hora15 from '../assets/fotos clases/DSC05924.webp'
+import { AnimatePresence, motion } from 'framer-motion'
 
 
+const { actividadKitesurf, actividadWingfoil, actividadSurf, actividadSup, nightcaption, DSC05231, DSC05128Panoramica, DSC05120HDR, DSC05085HDR, hora0, hora3, hora6, hora10, hora15 } = componentImages["pages/BuildPage.jsx"]
 function IconKite({ className = 'h-7 w-7' }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -945,15 +935,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
 
 /* ─── MAIN PAGE ───────────────────────────────────────────────────────────── */
 function BuildPage() {
-  const heroRef = useRef(null)
-  const wizardRef = useRef(null)
   const directionRef = useRef(1)
-
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  })
-  const heroImageY = useTransform(scrollYProgress, [0, 1], ['-4%', '12%'])
 
   const {
     paso, actividad, noches, horas, extras, extrasQty, datosUsuario,
@@ -969,9 +951,6 @@ function BuildPage() {
 
   const precioTotal = calcularPrecio(actividad, noches, horas, extras, extrasQty)
 
-  const scrollToWizard = () =>
-    wizardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-
   const handleNext = () => { directionRef.current = 1; siguientePaso() }
   const handleBack = () => { directionRef.current = -1; anteriorPaso() }
   const handleReset = () => { directionRef.current = -1; reiniciar() }
@@ -985,98 +964,27 @@ function BuildPage() {
         hreflang={{ en: '/build', es: '/esp', default: '/' }}
       />
 
-      {/* ── HERO ── */}
-      <section
-        ref={heroRef}
-        className="relative flex min-h-[72vh] items-center justify-center overflow-hidden bg-[#080f0d] px-4 py-24 text-center md:min-h-screen"
-      >
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <motion.img
-            src={actividadKitesurf}
-            alt=""
-            aria-hidden="true"
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 2.4, ease: 'easeOut' }}
-            style={{ y: heroImageY }}
-            className="h-[115%] w-full object-cover opacity-50"
-          />
-          {/* Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080f0d] via-black/25 to-transparent" />
-          {/* Grain */}
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.07]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-              backgroundSize: '300px 300px',
-            }}
-          />
-        </div>
-
-        {/* Rotated side label */}
-        <div className="absolute left-5 top-1/2 z-10 hidden -translate-y-1/2 -rotate-90 items-center gap-3 lg:flex">
-          <div className="h-px w-12 bg-[#b7e28a]/30" />
-          <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-white/30">
-            4°06′N 81°03′W · Máncora, Perú
-          </span>
-        </div>
-
-        {/* Main content */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-4"
-        >
-          {/* Eyebrow */}
-          <motion.div
-            initial={{ y: 10, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="mb-6 flex items-center gap-3"
-          >
-            <div className="h-px w-8 bg-[#b7e28a]/40" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.38em] text-[#b7e28a]/70">
-              Mancora Kite Club
-            </span>
-            <div className="h-px w-8 bg-[#b7e28a]/40" />
-          </motion.div>
-
-          <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-tight text-white drop-shadow-2xl sm:text-7xl lg:text-[6.5rem]">
-            Build Your
-            <br />
-            <span className="text-[#b7e28a]">Trip</span>
-          </h1>
-
-          <p className="mt-6 max-w-md text-sm font-medium uppercase tracking-[0.22em] text-white/40">
-            Customize every detail · Get your instant estimate
-          </p>
-
-          <motion.button
-            type="button"
-            onClick={scrollToWizard}
-            whileHover={{ y: -3 }}
-            whileTap={{ scale: 0.97 }}
-            className="mt-10 flex items-center gap-2 rounded-full border border-[#b7e28a]/30 bg-[#b7e28a]/10 px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#b7e28a] backdrop-blur transition hover:bg-[#b7e28a]/18 hover:border-[#b7e28a]/50"
-          >
-            Start building
-            <motion.span
-              animate={{ y: [0, 3, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
-            >
-              ↓
-            </motion.span>
-          </motion.button>
-        </motion.div>
-
-        {/* Bottom fade into next section */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#080f0d] to-transparent" />
-      </section>
+      <FullscreenHero
+        as="section"
+        eyebrow="Mancora Kite Club"
+        title="Build Your Trip"
+        subtitle="Customize every detail and get your instant estimate."
+        slides={createPresetHeroSlides('kite', {
+          desktop: [actividadKitesurf, actividadWingfoil, actividadSurf, actividadSup],
+          alt: 'Kitesurf trip builder in Mancora',
+          imageClassName: 'object-[58%_center] md:object-center',
+        })}
+        actions={[
+          {
+            href: '#trip-builder',
+            label: 'Start building',
+          },
+        ]}
+      />
 
       {/* ── WIZARD ── */}
       <section
-        ref={wizardRef}
+        id="trip-builder"
         className="bg-[#080f0d] px-3 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       >
         <div className="mx-auto max-w-5xl">

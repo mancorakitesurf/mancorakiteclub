@@ -1,18 +1,6 @@
-import firstFlyHero from '../assets/fotos trip/_DSC8071.webp'
-import firstFlyImg1 from '../assets/fotos trip/DSC04250.webp'
-import firstFlyImg2 from '../assets/fotos trip/DSC01083.webp'
+import { tripsImages } from '../config/images.js'
 
-import olasHero from '../assets/fotos paquetes surf y hotel/DSC05544.webp'
-import olasImg1 from '../assets/fotos mancora y mas/DSC03697.webp'
-import olasImg2 from '../assets/fotos mancora y mas/DSC05505 2.webp'
-
-import soloSurfHero from '../assets/fotos mancora y mas/IMG_3893.webp'
-import soloSurfImg1 from '../assets/fotos trip/DSC03805.webp'
-import soloSurfImg2 from '../assets/fotos mancora y mas/DSC09961.webp'
-
-import rideHero from '../assets/HOSPEDAJE KITE HOUSE/DSC05173.webp'
-import rideImg1 from '../assets/fotos clases/DSC02370.webp'
-import rideImg2 from '../assets/fotos trip/DSC03756.webp'
+const { firstFly, olasViento, soloSurf, rideTheCoast } = tripsImages
 
 export const trips = [
   {
@@ -21,10 +9,10 @@ export const trips = [
     title: 'FIRST FLY',
     subtitle: 'Kite/Wing + Stay with us',
     summary: 'Entry package focused on progression with stay included.',
-    heroImage: firstFlyHero,
+    heroImage: firstFly.hero,
     heroAlt: 'First Fly trip',
-    image1: firstFlyImg1,
-    image2: firstFlyImg2,
+    image1: firstFly.image1,
+    image2: firstFly.image2,
     whatsappMessage:
       "Hi! I'm interested in the FIRST FLY trip (with accommodation).\nDates: ...\nDuration: 3 or 7 nights (or Custom)\nPeople: 1 or 2\nLevel: ...\nMy name is ...",
     forYouIf: [
@@ -60,10 +48,10 @@ export const trips = [
     title: 'OLAS & VIENTO',
     subtitle: 'Surf + Kite + Stay with us',
     summary: 'Surf and kite mix with accommodation included.',
-    heroImage: olasHero,
+    heroImage: olasViento.hero,
     heroAlt: 'Olas y Viento trip',
-    image1: olasImg1,
-    image2: olasImg2,
+    image1: olasViento.image1,
+    image2: olasViento.image2,
     whatsappMessage:
       "Hi! I'm interested in the OLAS & VIENTO trip (with accommodation).\nDates: ...\nDuration: 3 or 7 nights (or Custom)\nPeople: 1 or 2\nLevel: ...\nMy name is ...",
     forYouIf: [
@@ -99,10 +87,10 @@ export const trips = [
     title: 'SOLO SURF',
     subtitle: 'Surf + Stay with us',
     summary: 'Surf-first package with accommodation included.',
-    heroImage: soloSurfHero,
+    heroImage: soloSurf.hero,
     heroAlt: 'Solo Surf trip',
-    image1: soloSurfImg1,
-    image2: soloSurfImg2,
+    image1: soloSurf.image1,
+    image2: soloSurf.image2,
     whatsappMessage:
       "Hi! I'm interested in the SOLO SURF trip (with accommodation).\nDates: ...\nDuration: 3 or 7 nights (or Custom)\nPeople: 1 or 2\nLevel: ...\nMy name is ...",
     forYouIf: [
@@ -137,10 +125,10 @@ export const trips = [
     title: 'RIDE THE COAST',
     subtitle: 'Kite/Wing Safari + Stay with us',
     summary: 'Safari-style kite/wing package with stay included.',
-    heroImage: rideHero,
+    heroImage: rideTheCoast.hero,
     heroAlt: 'Ride the Coast trip',
-    image1: rideImg1,
-    image2: rideImg2,
+    image1: rideTheCoast.image1,
+    image2: rideTheCoast.image2,
     whatsappMessage:
       "Hi! I'm interested in the RIDE THE COAST trip (with accommodation).\nDates: ...\nDuration: 3 or 7 nights (or Custom)\nPeople: 1 or 2\nLevel: ...\nMy name is ...",
     forYouIf: [

@@ -1,7 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleIntroBase from "../../blogShared/ArticleIntroBase.jsx"
-import imageOne from "../../../assets/imagenes-home/posicion14y27.jpg"
-import imageTwo from "../../../assets/imagenes-home/posicion15.jpg"
 
+const { imageOne, imageTwo } = componentImages["sections/blogPage3/BlogLayoutPage3/IntroChicama.jsx"]
 function IntroChicama() {
   return (
     <ArticleIntroBase

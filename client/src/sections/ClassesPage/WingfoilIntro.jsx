@@ -1,7 +1,8 @@
+import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import heroWingfoil from '../../assets/imagenes-wingfoil/posicionw7.jpg'
 
+const { heroWingfoil } = componentImages["sections/ClassesPage/WingfoilIntro.jsx"]
 function WingfoilIntro() {
   return (
     <section className="relative bg-[#0f1416] text-white overflow-hidden">

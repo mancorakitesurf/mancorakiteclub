@@ -1,11 +1,4 @@
-import blogheroImage from '../../../assets/imagenes-wingfoil/posicionw8.jpg'
-import posicionK1 from '../../../assets/imagenes-kitsurfing-lessons/posicionk1.jpg'
-import posicionK2 from '../../../assets/imagenes-kitsurfing-lessons/posicionk2.jpg'
-import posicionK3 from '../../../assets/imagenes-kitsurfing-lessons/posicionk5.jpg'
-import posicionK4 from '../../../assets/imagenes-kitsurfing-lessons/posicionk4.jpg'
-import posicionK6 from '../../../assets/imagenes-kitsurfing-lessons/posicionk6.jpg'
-import trending1 from '../../../assets/imagenes-kitsurfing-lessons/posicionk6.jpg'
-import trending2 from '../../../assets/imagenes-wingfoil/posicionw4.jpg'
+import { componentImages } from '../../../config/images.js'
 import BlogPage1 from '../../../pages/blog/top-20-kitesurf-destinations-part-1.jsx'
 import BlogPage2 from '../../../pages/blog/7-different-plans-of-a-kitesurf-trip-to-peru.jsx'
 import BlogPage3 from '../../../pages/blog/ChicamaPage.jsx'
@@ -21,12 +14,8 @@ import BlogPage12 from '../../../pages/blog/Whale-season-in-northern-Peru-what-i
 import BlogPage13 from '../../../pages/blog/Mancora-Whale-Season.jsx'
 import BlogPage14 from '../../../pages/blog/Wingfoil-vs-Kitesurf-Choosing-Your-Weapon.jsx'
 import BlogPage15 from '../../../pages/blog/Data-Strip-Safety.jsx'
-import posicionW1 from '../../../assets/imagenes-wingfoil/posicionw1.jpg'
-import posicionW2 from '../../../assets/imagenes-wingfoil/posicionw2.jpg'
-import posicionW5 from '../../../assets/imagenes-wingfoil/posicionw5.jpg'
-import posicionW6 from '../../../assets/imagenes-wingfoil/posicionw6.jpg'
-import posicionW7 from '../../../assets/imagenes-wingfoil/posicionw7.jpg'
 
+const { blogheroImage, posicionK1, posicionK2, posicionK3, posicionK4, posicionK6, trending1, trending2, posicionW1, posicionW2, posicionW5, posicionW6, posicionW7 } = componentImages["sections/blog/BlogLayout/blogContent.js"]
 export const BLOGHERO_IMAGE = blogheroImage
 export const POST_1_IMAGE = posicionK2
 export const POST_2_IMAGE = posicionK3

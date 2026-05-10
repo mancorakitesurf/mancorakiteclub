@@ -108,7 +108,7 @@ function BlogPostPage() {
               Back to Blog
             </Link>
             <Link
-              to="/"
+              to="/home"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-800 transition hover:border-cyan-700 hover:text-cyan-700 sm:w-auto"
             >
               Go Home

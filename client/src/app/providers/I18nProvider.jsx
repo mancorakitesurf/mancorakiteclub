@@ -4,6 +4,7 @@ import { I18nContext } from './i18nContext.js'
 import en from '../../i18n/en.json'
 import es from '../../i18n/es.json'
 import fr from '../../i18n/fr.json'
+import { navigateWithLoader } from '../../lib/loadingNavigation.js'
 
 /**
  * Función de traducción con fallback
@@ -76,9 +77,11 @@ export function I18nProvider({ children }) {
       }
       // Si es EN, mantener el path sin prefijo
 
-      navigate(newPath)
+      navigateWithLoader(navigate, newPath, {
+        currentPath: `${location.pathname}${location.search}${location.hash}`,
+      })
     },
-    [location.pathname, navigate]
+    [location, navigate]
   )
 
   // Valor del context con todas las propiedades requeridas

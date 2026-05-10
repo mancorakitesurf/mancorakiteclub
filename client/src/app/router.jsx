@@ -1,6 +1,7 @@
-import { createBrowserRouter } from 'react-router-dom'
-import { lazy, Suspense } from 'react'
+import { createBrowserRouter, Navigate } from 'react-router-dom'
+import { lazy } from 'react'
 import MainLayout from './layouts/MainLayout.jsx'
+import LoadingPage from '../pages/LoadingPage.jsx'
 import NotFoundPage from '../pages/NotFoundPage.jsx'
 
 const HomePage = lazy(() => import('../pages/HomePage.jsx'))
@@ -16,8 +17,8 @@ const WavesPage = lazy(() => import('../pages/waves/Waves.jsx'))
 const BlogPage = lazy(() => import('../pages/BlogPage.jsx'))
 const BlogPostPage = lazy(() => import('../pages/blog/BlogPostPage.jsx'))
 
-const ROUTES = [
-  { index: true, element: <HomePage /> },
+const SITE_ROUTES = [
+  { path: 'home', element: <HomePage /> },
   { path: 'trips', element: <TripsPage /> },
   { path: 'trips/:slug', element: <TripDetailPage /> },
   { path: 'classes', element: <ClassesPage /> },
@@ -31,23 +32,24 @@ const ROUTES = [
   { path: 'waves', element: <WavesPage /> },
 ]
 
-function Loading() {
-  return <div className="flex min-h-screen items-center justify-center px-4 text-center">Loading...</div>
-}
-
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: (
-      <Suspense fallback={<Loading />}>
-        <MainLayout />
-      </Suspense>
-    ),
     children: [
-      ...ROUTES,
-      { path: 'esp', children: ROUTES.map(r => r.index ? { index: true, element: r.element } : { ...r }) },
-      { path: 'fr', children: ROUTES.map(r => r.index ? { index: true, element: r.element } : { ...r }) },
-      { path: '*', element: <NotFoundPage /> },
+      { index: true, element: <Navigate to="/loading" replace state={{ redirectTo: '/home' }} /> },
+      { path: 'loading', element: <LoadingPage /> },
+      { path: 'intro', element: <Navigate to="/loading" replace state={{ redirectTo: '/home' }} /> },
+      { path: 'esp', element: <Navigate to="/loading" replace state={{ redirectTo: '/esp/home' }} /> },
+      { path: 'fr', element: <Navigate to="/loading" replace state={{ redirectTo: '/fr/home' }} /> },
+      {
+        element: <MainLayout />,
+        children: [
+          ...SITE_ROUTES,
+          { path: 'esp', children: SITE_ROUTES.map((route) => ({ ...route })) },
+          { path: 'fr', children: SITE_ROUTES.map((route) => ({ ...route })) },
+          { path: '*', element: <NotFoundPage /> },
+        ],
+      },
     ],
   },
 ])

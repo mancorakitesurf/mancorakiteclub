@@ -1,6 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import { motion } from "framer-motion"
-import ctaBg from '../../../assets/imagenes-kitsurfing-lessons/posicionk4.jpg'
 
+const { ctaBg } = componentImages["sections/blogPage2/BlogLayoutPage2/FinalCallToAction.jsx"]
 function FinalCallToAction() {
   return (
     <section className="relative py-56 overflow-hidden text-white">

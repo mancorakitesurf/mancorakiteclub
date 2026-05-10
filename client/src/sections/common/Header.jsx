@@ -1,15 +1,16 @@
+import { brandImages } from '../../config/images.js'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
-import clubLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { localizePath } from '../../lib/routes.js'
 import { useUIStore } from '../../store/useUIStore.js'
 
+const clubLogo = brandImages.logoComplete
 const BASE_NAV_ITEMS = [
-  { to: '/', label: 'nav.home' },
+  { to: '/home', label: 'nav.home' },
   { to: '/trips', label: 'nav.trips' },
   { to: '/classes', label: 'nav.classes' },
   { to: '/stay', label: 'nav.stay' },
@@ -35,7 +36,7 @@ function Header() {
     ...item,
     to: localizePath(item.to, currentLang),
   }))
-  const homePath = localizePath('/', currentLang)
+  const homePath = localizePath('/home', currentLang)
 
   const whatsappUrl = buildWhatsAppUrl(defaultInquiryMessage('Header'))
 
@@ -160,7 +161,7 @@ function Header() {
 
           {/* Nav desktop */}
           <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
-            {NAV_ITEMS.filter((i) => i.to !== '/').map((item) => (
+            {NAV_ITEMS.filter((item) => item.label !== 'nav.home').map((item) => (
               <MotionLink
                 key={item.to}
                 className={`group relative text-sm font-medium transition-colors ${navTextClass}`}
@@ -413,6 +414,4 @@ function Header() {
 }
 
 export default Header
-
-
 

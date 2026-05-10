@@ -1,6 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleFinalCallToActionBase from "../../blogShared/ArticleFinalCallToActionBase.jsx"
-import ctaImage from "../../../assets/imagenes-home/posicion20.jpg"
 
+const { ctaImage } = componentImages["sections/blogPage6/BlogLayoutPage6/PacasmayoFinalCallToAction.jsx"]
 function PacasmayoFinalCallToAction() {
   return (
     <ArticleFinalCallToActionBase

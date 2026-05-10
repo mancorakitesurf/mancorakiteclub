@@ -1,11 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleScrollerBase from "../../blogShared/ArticleScrollerBase.jsx"
-import imageOne from "../../../assets/imagenes-kitesurfing/posicionkt7.jpg"
-import supportOne from "../../../assets/imagenes-kitesurfing/posicionkt9.jpg"
-import imageTwo from "../../../assets/imagenes-home/posicion24.jpg"
-import supportTwo from "../../../assets/imagenes-home/posicion25.png"
-import imageThree from "../../../assets/imagenes-home/posicion29.jpg"
-import supportThree from "../../../assets/imagenes-home/posicion22.png"
 
+const { imageOne, supportOne, imageTwo, supportTwo, imageThree, supportThree } = componentImages["sections/blogPage4/BlogLayoutPage4/MancoraVsLobitosScroller.jsx"]
 const COMPARISON_SECTIONS = [
   {
     eyebrow: "Lobitos",

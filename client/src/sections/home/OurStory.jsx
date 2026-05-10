@@ -1,94 +1,163 @@
-import { FaWater, FaUsers, FaShieldAlt, FaStar } from 'react-icons/fa'
-import founderImg from '../../assets/fotos equipo/DSC07657.webp'
+import { homeImages } from '../../config/images.js'
+import { motion } from 'framer-motion'
+import { FaShieldAlt, FaStar, FaUsers, FaWater } from 'react-icons/fa'
 
+const founderImg = homeImages.storyFounder
 const VALUES = [
-  { icon: FaWater, text: 'Dominio del spot: 15+ años navegando las olas del norte del Perú' },
-  { icon: FaStar, text: 'Progresión real: cada alumno aprende a moverse en el mar con confianza' },
-  { icon: FaShieldAlt, text: 'Seguridad ante todo: radios, equipo premium y acompañamiento constante' },
-  { icon: FaUsers, text: 'Más que una escuela: deporte, mar, comunidad y conexión con el entorno' },
+  {
+    icon: FaWater,
+    title: 'Spot knowledge',
+    text: '15+ years reading wind, swell and current in northern Peru.',
+  },
+  {
+    icon: FaStar,
+    title: 'Real progression',
+    text: 'Coaching that helps riders move with confidence in the ocean.',
+  },
+  {
+    icon: FaShieldAlt,
+    title: 'Safe sessions',
+    text: 'Radio support, premium gear and close guidance on the water.',
+  },
+  {
+    icon: FaUsers,
+    title: 'Ocean culture',
+    text: 'Sport, community and a slower connection with Mancora.',
+  },
 ]
+
+const easeOut = [0.16, 1, 0.3, 1]
+
+const viewport = { once: true, amount: 0.35 }
+
+const imageFrame = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.75, ease: easeOut },
+  },
+}
+
+const imageReveal = {
+  hidden: { scale: 1.05 },
+  visible: {
+    scale: 1,
+    transition: { duration: 1, ease: easeOut },
+  },
+}
+
+const textContainer = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: easeOut,
+      staggerChildren: 0.1,
+      delayChildren: 0.08,
+    },
+  },
+}
+
+const textItem = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: easeOut },
+  },
+}
 
 function OurStory() {
   return (
     <section
       id="our-story"
-      className="border-y border-gray-200 bg-surface-light py-16 sm:py-20 lg:py-28 dark:border-white/5 dark:bg-surface-dark/30"
+      className="border-y border-gray-200 bg-surface-light py-14 sm:py-20 lg:py-28 dark:border-white/5 dark:bg-surface-dark/30"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="mb-12 text-center">
-          <span className="mb-3 inline-block text-xs font-bold uppercase tracking-widest text-primary">
-            Our Story
-          </span>
-          <h2 className="font-display text-2xl font-bold dark:text-white sm:text-3xl md:text-4xl lg:text-5xl">
-            Más de 15 años en el agua
-          </h2>
-        </div>
-
-        {/* Main content: photo + story */}
-        <div className="flex flex-col items-start gap-10 sm:gap-12 lg:flex-row lg:gap-16">
-          {/* Photo */}
-          <div className="relative w-full lg:w-2/5">
-            <div className="absolute -left-4 -top-4 h-24 w-24 rounded-full bg-primary/20 blur-2xl" />
-            <img
+        <div className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+          <motion.figure
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            variants={imageFrame}
+            className="relative aspect-[4/5] h-full overflow-hidden rounded-lg md:aspect-auto md:min-h-[560px]"
+          >
+            <motion.img
+              variants={imageReveal}
               src={founderImg}
-              alt="Enrique, fundador de Máncora Kite Club"
+              alt="Enrique, founder of Mancora Kite Club"
               loading="lazy"
-              className="relative z-10 h-[380px] w-full rounded-3xl object-cover shadow-xl sm:h-[460px] lg:h-[540px]"
+              className="absolute inset-0 h-full w-full object-cover object-[52%_center]"
             />
-            {/* Founder label */}
-            <div className="absolute bottom-4 left-4 z-20 rounded-2xl bg-white/90 px-5 py-3 shadow-lg backdrop-blur-sm dark:bg-slate-900/90">
-              <p className="text-sm font-bold text-slate-900 dark:text-white">Enrique</p>
-              <p className="text-xs font-medium text-primary">Fundador &amp; Head Instructor</p>
-            </div>
-          </div>
+            <figcaption className="absolute bottom-4 left-4 rounded-lg border border-white/25 bg-white/85 px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.16)] backdrop-blur-md dark:border-white/10 dark:bg-slate-950/75">
+              <p className="text-sm font-semibold text-slate-950 dark:text-white">Enrique</p>
+              <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary">
+                Founder & Head Instructor
+              </p>
+            </figcaption>
+          </motion.figure>
 
-          {/* Story text + values */}
-          <div className="w-full lg:w-3/5">
-            <div className="space-y-5 text-base leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg">
-              <p>
-                Soy Enrique, fundador de Máncora Kite Club. Llevo más de 15 años viviendo y navegando
-                en este spot, conociendo a fondo cada condición de viento y, sobre todo, las olas del
-                norte del Perú.
-              </p>
-              <p>
-                Lo que más me apasiona es navegar con tabla de surf, aprovechando el potencial único
-                que tienen estos spots. El norte del Perú es especial porque combina viento constante
-                con olas de calidad, algo que no se encuentra fácilmente en otros lugares. Esa
-                combinación es la base de todo lo que hacemos.
-              </p>
-              <p>
-                Mi enfoque es que cada persona que llega no solo aprenda, sino que realmente progrese
-                y entienda cómo moverse en el mar, incluso en condiciones de olas. Trabajamos con
-                equipos de calidad, sesiones seguras con radios y acompañamiento constante en el agua,
-                para que cada alumno se sienta confiado desde el primer día y pueda avanzar de forma
-                real.
-              </p>
-              <p>
-                Más que una escuela, esto es un estilo de vida. Buscamos que cada persona viva la
-                experiencia completa: deporte, mar, comunidad y conexión con el entorno. La idea es
-                que no solo vengas a tomar clases, sino que descubras un lugar al que siempre quieras
-                volver.
-              </p>
-            </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            variants={textContainer}
+            className="flex h-full flex-col justify-center rounded-lg border border-slate-200 bg-white px-6 py-8 shadow-[0_24px_70px_rgba(15,23,42,0.06)] dark:border-white/10 dark:bg-white/[0.04] sm:px-8 sm:py-10 md:min-h-[560px] lg:px-10"
+          >
+            <div className="max-w-prose">
+              <motion.p variants={textItem} className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">
+                Our Story
+              </motion.p>
+              <motion.h2
+                variants={textItem}
+                className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl"
+              >
+                15 years reading Mancora's water.
+              </motion.h2>
 
-            {/* Values */}
-            <ul className="mt-10 space-y-4">
-              {VALUES.map((value) => {
-                const Icon = value.icon
-                return (
-                  <li key={value.text} className="group flex items-center gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white dark:bg-primary/20">
-                      <Icon />
-                    </span>
-                    <span className="text-sm font-medium leading-relaxed text-gray-700 dark:text-gray-200 sm:text-base">
-                      {value.text}
-                    </span>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+              <motion.div
+                variants={textItem}
+                className="mt-6 max-w-prose space-y-4 text-justify text-sm leading-7 text-slate-600 [text-align-last:left] dark:text-slate-300 sm:text-base sm:leading-8"
+              >
+                <p>
+                  I am Enrique, founder of Mancora Kite Club. I have spent more than 15 years living,
+                  riding and reading this coastline: wind, swell, current and the small details that
+                  make northern Peru special.
+                </p>
+                <p>
+                  Our work is simple: safe coaching, real progression and an ocean experience that
+                  feels personal. More than a school, it is a way to understand the sea and want to
+                  come back to it.
+                </p>
+              </motion.div>
+
+              <motion.ul variants={textItem} className="mt-8 grid gap-4 sm:grid-cols-2">
+                {VALUES.map((value) => {
+                  const Icon = value.icon
+
+                  return (
+                    <motion.li
+                      key={value.title}
+                      variants={textItem}
+                      className="border-t border-slate-200 pt-4 dark:border-white/10"
+                    >
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/20">
+                        <Icon className="text-sm" aria-hidden="true" />
+                      </span>
+                      <p className="mt-3 text-sm font-semibold text-slate-950 dark:text-white">
+                        {value.title}
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                        {value.text}
+                      </p>
+                    </motion.li>
+                  )
+                })}
+              </motion.ul>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

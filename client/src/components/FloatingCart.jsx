@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+import { useLoadingNavigation } from '../lib/loadingNavigation.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 
 function FloatingCart() {
   const { actividad, paso } = useTripBuilderStore()
   const location = useLocation()
-  const navigate = useNavigate()
+  const navigateWithLoader = useLoadingNavigation()
   const [isVisible, setIsVisible] = useState(false)
 
   const isOnBuildPage = location.pathname === '/build'
@@ -26,7 +27,7 @@ function FloatingCart() {
   return (
     <button
       type="button"
-      onClick={() => navigate('/build')}
+      onClick={() => navigateWithLoader('/build')}
       aria-label="Continue building your trip"
       className={`group fixed bottom-24 right-6 z-[98] flex items-center transition-all duration-300 ${
         isVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'

@@ -1,3 +1,5 @@
+import { seoImages } from '../config/images.js'
+
 function ensureMetaTag(selector, attributeName, attributeValue) {
   let tag = document.querySelector(selector)
 
@@ -44,7 +46,7 @@ export function setSeoTags({ title, description, image, canonicalPath, hreflang 
   ogDescription.setAttribute('content', description || 'Escuela de Kitesurf y Wingfoil en Máncora, Perú')
 
   const ogImage = ensureMetaTag('meta[property="og:image"]', 'property', 'og:image')
-  ogImage.setAttribute('content', image || 'https://www.mancorakiteclub.com/assets/main-CpaNiQFq.webp')
+  ogImage.setAttribute('content', image || seoImages.defaultOpenGraph)
 
   const ogUrl = ensureMetaTag('meta[property="og:url"]', 'property', 'og:url')
   ogUrl.setAttribute('content', canonicalPath ? toAbsoluteUrl(canonicalPath) : window.location.href)
@@ -66,7 +68,7 @@ export function setSeoTags({ title, description, image, canonicalPath, hreflang 
   twitterDescription.setAttribute('content', description || 'Escuela de Kitesurf y Wingfoil en Máncora, Perú')
 
   const twitterImage = ensureMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image')
-  twitterImage.setAttribute('content', image || 'https://www.mancorakiteclub.com/assets/main-CpaNiQFq.webp')
+  twitterImage.setAttribute('content', image || seoImages.defaultOpenGraph)
 
   if (canonicalPath) {
     const canonicalTag = ensureLinkTag('link[rel="canonical"]', 'canonical')
@@ -92,4 +94,3 @@ export function setSeoTags({ title, description, image, canonicalPath, hreflang 
   hreflangDefault.setAttribute('hreflang', 'x-default')
   hreflangDefault.setAttribute('href', toAbsoluteUrl(hreflang.default))
 }
-

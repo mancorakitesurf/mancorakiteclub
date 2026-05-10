@@ -14,6 +14,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
+  min-height: 100%;
+  background: #030405;
   scroll-behavior: smooth;
 }
 
@@ -38,12 +40,15 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
+  background: #030405;
+  color: #ffffff;
   font-family: "Inter", sans-serif;
 }
 
 #root {
   min-height: 100vh;
   overflow-x: hidden;
+  background: #030405;
 }
 
 * {

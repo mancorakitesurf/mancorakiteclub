@@ -1,8 +1,9 @@
+import { brandImages } from '../config/images.js'
 import { useEffect, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
-import clubLogo from '../assets/Logo/LOGO-kite-new.png'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
+const clubLogo = brandImages.floatingWhatsAppMark
 const SCROLL_THRESHOLD = 140
 const ATTENTION_ANIMATION_INTERVAL = 8000
 const ATTENTION_ANIMATION_DURATION = 3000

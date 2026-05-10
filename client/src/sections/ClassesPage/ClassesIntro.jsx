@@ -1,7 +1,8 @@
+import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
 import { CLASSES_INTRO } from "./classesData"
-import introHover from "../../assets/imagenes-kitesurfing/posicionkt3.jpg"
 
+const { introHover } = componentImages["sections/ClassesPage/ClassesIntro.jsx"]
 function ClassesIntro() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">

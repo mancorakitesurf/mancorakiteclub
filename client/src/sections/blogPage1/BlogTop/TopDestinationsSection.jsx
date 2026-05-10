@@ -1,8 +1,9 @@
+import { componentImages } from '../../../config/images.js'
 import { motion } from "framer-motion"
 import DestinationCard from "../BlogLayoutPage1/DestinationCard"
 import { DESTINATIONS } from "../destinationsData"
-import sectionBg from "../../../assets/imagenes-wingfoil/posicionw5.jpg"
 
+const { sectionBg } = componentImages["sections/blogPage1/BlogTop/TopDestinationsSection.jsx"]
 function TopDestinationsSection() {
   return (
     <section

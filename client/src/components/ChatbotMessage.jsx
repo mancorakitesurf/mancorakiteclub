@@ -1,6 +1,7 @@
+import { mediaAssets } from '../config/images.js'
 import { useI18n } from '../app/providers/i18nContext'
-import chatbotVideo from '../assets/chatbot ia.mp4'
 
+const chatbotVideo = mediaAssets.chatbotVideo
 /**
  * ChatbotMessage Component
  * Renders individual messages in the chatbot conversation

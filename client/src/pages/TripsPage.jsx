@@ -1,15 +1,14 @@
+import { componentImages } from '../config/images.js'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaWind } from 'react-icons/fa'
 import SEO from '../components/SEO.jsx'
+import FullscreenHero from '../components/ui/FullscreenHero.jsx'
 import { trips } from '../content/trips.js'
+import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
 
-import heroImg from '../assets/imagenes-kitesurfing/posicionkt2.jpg'
-import firstFlyImg from '../assets/imagenes-kitesurfing/posicionkt1.jpg'
-import olasVientoImg from '../assets/imagenes-kitesurfing/posicionkt8.jpg'
-import soloSurfImg from '../assets/imagenes-home/posicion12.jpg'
-import rideCoastImg from '../assets/imagenes-wingfoil/posicionw4.jpg'
 
+const { heroImg, firstFlyImg, olasVientoImg, soloSurfImg, rideCoastImg } = componentImages["pages/TripsPage.jsx"]
 const tripImages = [
   firstFlyImg,
   olasVientoImg,
@@ -37,50 +36,23 @@ function TripsPage() {
       />
 
       <main className="overflow-hidden bg-[#031015] text-white">
-        {/* HERO */}
-        <section className="relative flex min-h-[72vh] items-center justify-center overflow-hidden px-6 text-center sm:min-h-[80vh] lg:min-h-screen">
-          <div className="absolute inset-0 z-0">
-            <motion.img
-              src={heroImg}
-              alt="Mancora Kite Club trips"
-              initial={{ scale: 1.08 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 2.4, ease: 'easeOut' }}
-              className="h-full w-full object-cover opacity-60"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/35 to-transparent" />
-            <div className="absolute inset-0 bg-black/30" />
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 45 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            className="relative z-10 mx-auto max-w-5xl"
-          >
-            <p className="mb-6 text-xs font-black uppercase tracking-[0.45em] text-[#5af8fb]">
-              Mancora Kite Club
-            </p>
-
-            <h1 className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tighter sm:text-7xl lg:text-8xl">
-              Our
-              <br />
-              Trips
-            </h1>
-
-            <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
-              Choose your route through wind, waves, coaching, surf, and the north coast of Peru.
-            </p>
-
-            <a
-              href="#trip-list"
-              className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full border border-[#5af8fb]/60 px-8 text-sm font-black uppercase tracking-[0.22em] text-[#5af8fb] transition hover:bg-[#5af8fb] hover:text-black"
-            >
-              Explore Trips
-            </a>
-          </motion.div>
-        </section>
+        <FullscreenHero
+          as="section"
+          eyebrow="Mancora Kite Club"
+          title="Our Trips"
+          subtitle="Choose your route through wind, waves, coaching, surf, and the north coast of Peru."
+          slides={createPresetHeroSlides('kite', {
+            desktop: [heroImg, firstFlyImg, olasVientoImg, soloSurfImg, rideCoastImg],
+            alt: 'Mancora Kite Club trips',
+            imageClassName: 'object-[52%_center] md:object-center',
+          })}
+          actions={[
+            {
+              href: '#trip-list',
+              label: 'Explore Trips',
+            },
+          ]}
+        />
 
         {/* TRIP LIST */}
         <section id="trip-list" className="relative">

@@ -1,24 +1,5 @@
-import heroImg from '../../assets/imagenes-home/posicion5.jpg'
-import surfHeroImg from '../../assets/imagenes-home/posicion4.jpg'
-import kiteSafariImg from '../../assets/imagenes-kitesurfing/posicionkt1.jpg'
-import kiteTripImg from '../../assets/imagenes-kitesurfing/posicionkt2.jpg'
-import kiteExperienceImg from '../../assets/imagenes-kitesurfing/posicionkt3.jpg'
-import wingDayImg from '../../assets/imagenes-wingfoil/posicionw1.jpg'
-import wingProgressionImg from '../../assets/imagenes-wingfoil/posicionw2.jpg'
-import wingExperienceImg from '../../assets/imagenes-wingfoil/posicionw4.jpg'
-import classBeginnerImg from '../../assets/imagenes-wingfoil/posicionw5.jpg'
-import classAdvancedImg from '../../assets/imagenes-wingfoil/posicionw6.jpg'
-import surfIntroImg from '../../assets/imagenes-home/posicion12.jpg'
-import surfAdventureImg from '../../assets/imagenes-home/posicion13.jpg'
-import surfImmersionImg from '../../assets/imagenes-home/posicion16.jpg'
-import surfClassBeginnerImg from '../../assets/imagenes-kitsurfing-lessons/posicionk1.jpg'
-import surfClassAdvancedImg from '../../assets/imagenes-home/posicion17.jpg'
-import mancoraImg from '../../assets/imagenes-home/posicion3.jpg'
-import negritosImg from '../../assets/imagenes-wingfoil/posicionw7.jpg'
-import losOrganosImg from '../../assets/imagenes-home/posicion15.jpg'
-import caboBlancoImg from '../../assets/imagenes-home/posicion18.jpg'
-import lobitosImg from '../../assets/imagenes-home/posicion20.jpg'
-
+import { componentImages } from '../../config/images.js'
+const { heroImg, surfHeroImg, kiteSafariImg, kiteTripImg, kiteExperienceImg, wingDayImg, wingProgressionImg, wingExperienceImg, classBeginnerImg, classAdvancedImg, surfIntroImg, surfAdventureImg, surfImmersionImg, surfClassBeginnerImg, surfClassAdvancedImg, mancoraImg, negritosImg, losOrganosImg, caboBlancoImg, lobitosImg } = componentImages["sections/waves/wavesContent.js"]
 export const HERO_IMAGE = heroImg
 export const SURF_HERO_IMAGE = surfHeroImg
 

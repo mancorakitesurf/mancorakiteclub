@@ -1,7 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleIntroBase from "../../blogShared/ArticleIntroBase.jsx"
-import imageOne from "../../../assets/imagenes-kitsurfing-lessons/posicionk6.jpg"
-import imageTwo from "../../../assets/imagenes-home/posicion3.jpg"
 
+const { imageOne, imageTwo } = componentImages["sections/blogPage5/BlogLayoutPage5/IntroPeruKitesurf.jsx"]
 function IntroPeruKitesurf() {
   return (
     <ArticleIntroBase

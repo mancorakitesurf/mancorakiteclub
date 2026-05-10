@@ -22,7 +22,7 @@ function ArticleFinalCallToActionBase({ eyebrow, title, description, image, imag
 
               <div className="mt-8">
                 <Link
-                  to="/"
+                  to="/home"
                   className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-cyan-200 sm:w-auto sm:px-7"
                 >
                   {buttonLabel}

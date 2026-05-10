@@ -1,11 +1,9 @@
+import { brandImages } from '../../config/images.js'
 import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'
-import footerBrandLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
-import logoDuotone from '../../assets/LOGOS KITE CLUB/Logo-duotone.webp'
-import logoOzone from '../../assets/LOGOS KITE CLUB/Logo_ozone.webp'
-import logoRide from '../../assets/LOGOS KITE CLUB/Logo-Ride.webp'
-import logoSlingshot from '../../assets/LOGOS KITE CLUB/Logo-slingshot.webp'
 
+const footerBrandLogo = brandImages.logoComplete
+const { duotone: logoDuotone, ozone: logoOzone, ride: logoRide, slingshot: logoSlingshot } = brandImages.sponsors
 const SPONSORS = [
   {
     name: 'Slingshot',
@@ -133,7 +131,7 @@ function Footer() {
               </li>
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
                 <FaEnvelope className="mt-1 shrink-0 text-white" />
-                <span className="max-w-xs break-all sm:break-words">hello@mancorakiteclub.com</span>
+                <span className="max-w-xs break-all sm:break-words">kiteclub.mancora@gmail.com</span>
               </li>
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
                 <FaWhatsapp className="mt-1 shrink-0 text-white" />

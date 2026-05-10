@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
-import { motion } from "framer-motion"
-import { FaChevronDown, FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
 import SEO from '../../components/SEO.jsx'
+import FullscreenHero from '../../components/ui/FullscreenHero.jsx'
+import { createPresetHeroSlides } from '../../lib/fullscreenHeroSlides.js'
 import { buildWhatsAppUrl } from '../../lib/whatsapp.js'
 import { trips, getTripBySlug } from '../../content/trips.js'
 
@@ -36,51 +37,24 @@ function TripDetailPage() {
         hreflang={{ en: trip.path, es: '/esp', default: '/' }}
       />
 
-      <header className="relative flex min-h-[70vh] items-center justify-center overflow-hidden pt-20 md:min-h-screen bg-[#0e2222]">
-        <div className="absolute inset-0 z-0">
-          <motion.img
-            src={trip.heroImage}
-            alt={trip.heroAlt}
-            initial={{ scale: 1.08 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 2.2, ease: "easeOut" }}
-            className="h-full w-full object-cover opacity-50 mix-blend-luminosity"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0e2222] via-[#0e2222]/50 to-transparent" />
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 flex flex-col items-center"
-        >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#3ea59b]">
-            {trip.subtitle}
-          </p>
-          <h1 className="mb-6 font-display text-4xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
-            {trip.title}
-          </h1>
-          <p className="mx-auto mb-8 max-w-3xl text-base font-light leading-relaxed tracking-wide text-gray-200 drop-shadow-md sm:text-lg md:text-xl">
-            {trip.summary}
-          </p>
-
-          <div className="flex justify-center">
-            <a
-              href={whatsappHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-pulse flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#3ea59b] px-6 py-3 text-base font-semibold text-[#0e2222] shadow-xl transition-all hover:bg-opacity-90 sm:w-auto"
-            >
-              <FaWhatsapp className="text-lg sm:text-xl" /> Book on WhatsApp
-            </a>
-          </div>
-        </motion.div>
-
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-white/70 md:bottom-10 z-10">
-          <FaChevronDown className="text-2xl" />
-        </div>
-      </header>
+      <FullscreenHero
+        eyebrow={trip.subtitle}
+        title={trip.title}
+        subtitle={trip.summary}
+        slides={createPresetHeroSlides('kite', {
+          desktop: [trip.heroImage, trip.image1, trip.image2],
+          alt: trip.heroAlt || trip.title,
+          imageClassName: 'object-[55%_center] md:object-center',
+        })}
+        actions={[
+          {
+            href: whatsappHref,
+            label: 'Book on WhatsApp',
+            icon: FaWhatsapp,
+            external: true,
+          },
+        ]}
+      />
 
       {/* --- SECCIÓN DE CONTENIDO --- */}
       <section className="bg-[#0e2222] py-16 sm:py-20 lg:py-28 font-sans antialiased selection:bg-[#3ea59b] selection:text-white">

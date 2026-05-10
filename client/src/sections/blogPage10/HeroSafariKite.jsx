@@ -1,46 +1,25 @@
-import { motion } from "framer-motion"
+import { componentImages } from '../../config/images.js'
+import FullscreenHero from "../../components/ui/FullscreenHero.jsx"
+import { createPresetHeroSlides } from "../../lib/fullscreenHeroSlides.js"
 import { SAFARI_DATA10 } from "./introData10"
-import heroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg"
 
+const { heroImg } = componentImages["sections/blogPage10/HeroSafariKite.jsx"]
 function HeroSafariKite() {
   const { hero } = SAFARI_DATA10
 
   return (
-    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-[#031015] md:min-h-screen">
-      <div className="absolute inset-0 z-0">
-        <motion.img
-          src={heroImg}
-          alt="Peru Safari"
-          initial={{ scale: 1.08 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2.2, ease: "easeOut" }}
-          className="w-full h-full object-cover opacity-60"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
-      >
-        <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
-          {hero.tag}
-        </p>
-
-        <h1 className="mb-6 text-4xl font-black uppercase leading-[0.95] tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          {hero.title}
-          <br />
-          {hero.highlight}
-        </h1>
-
-        <p className="mx-auto mt-8 max-w-2xl text-base font-light leading-relaxed text-white/80 sm:text-lg md:text-xl">
-          {hero.description}
-        </p>
-      </motion.div>
-    </section>
+    <FullscreenHero
+      as="section"
+      eyebrow={hero.tag}
+      title={`${hero.title} ${hero.highlight}`}
+      subtitle={hero.description}
+      slides={createPresetHeroSlides('kite', {
+        desktop: [heroImg],
+        alt: 'Peru kite safari',
+        imageClassName: 'object-[52%_center] md:object-center',
+      })}
+      contentClassName="max-w-3xl md:max-w-4xl"
+    />
   )
 }
 

@@ -5,7 +5,7 @@ function Breadcrumbs({ title }) {
   return (
     <MotionReveal>
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.28em] text-white/60">
-        <Link className="transition hover:text-cyan-300" to="/">
+        <Link className="transition hover:text-cyan-300" to="/home">
           Home
         </Link>
         <span className="text-white/30">/</span>

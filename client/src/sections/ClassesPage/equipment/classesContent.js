@@ -1,14 +1,5 @@
-import kiteImage from '../../../assets/imagenes-kitsurfing-lessons/posicionk1.jpg'
-import kiteImage2 from '../../../assets/imagenes-kitsurfing-lessons/posicionk2.jpg'
-import kiteImage3 from '../../../assets/imagenes-kitsurfing-lessons/posicionk3.jpg'
-import kiteImage4 from '../../../assets/imagenes-kitsurfing-lessons/posicionk4.jpg'
-
-import wingImg from '../../../assets/imagenes-wingfoil/posicionw1.jpg'
-import wingImg2 from '../../../assets/imagenes-wingfoil/posicionw2.jpg'
-import wingImg3 from '../../../assets/imagenes-wingfoil/posicionw4.jpg'
-import wingImg4 from '../../../assets/imagenes-wingfoil/posicionw5.jpg'
-import wingImg5 from '../../../assets/imagenes-wingfoil/posicionw6.jpg'
-
+import { componentImages } from '../../../config/images.js'
+const { kiteImage, kiteImage2, kiteImage3, kiteImage4, wingImg, wingImg2, wingImg3, wingImg4, wingImg5 } = componentImages["sections/ClassesPage/equipment/classesContent.js"]
 export const KITESURF_DATA = [
   {
     title: "Latest Generation Kites",

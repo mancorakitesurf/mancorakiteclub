@@ -16,7 +16,7 @@ function CTASection({ title, body }) {
         </div>
 
         <Link
-          to="/"
+          to="/home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="inline-flex min-h-14 items-center justify-center rounded-full bg-white px-7 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-cyan-200"
         >

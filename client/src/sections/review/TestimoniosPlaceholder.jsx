@@ -11,13 +11,12 @@ import reviewsData from '../../data/reviews.json';
 
 function TestimoniosPlaceholder() {
   return (
-    // Se agregó bg-[#0A1113] para el fondo sólido, relative y z-10
     <section className="relative z-10 w-full overflow-hidden bg-[#0A1113] px-6 py-20 sm:px-10 lg:px-16 border-t border-b border-transparent">
       <div className="mx-auto max-w-6xl text-center relative z-20">
         <h2 className="text-3xl md:text-4xl font-serif text-[#F4F2EA] mb-24 tracking-wide uppercase">
           Nuestros Testimonios
         </h2>
-        
+
         {reviewsData && reviewsData.length > 0 ? (
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
@@ -36,30 +35,33 @@ function TestimoniosPlaceholder() {
           >
             {reviewsData.map((review) => (
               <SwiperSlide key={review.id} className="!h-auto flex pt-16">
-                
-                <div className="bg-[#F4F2EA] w-full flex flex-col rounded-2xl p-8 relative items-center text-center shadow-lg">
+                <div className="bg-[#F4F2EA] w-full min-h-[420px] md:min-h-[450px] flex flex-col rounded-2xl p-8 relative items-center text-center shadow-lg">
                   
                   <div className="absolute -top-12 w-[100px] h-[100px] rounded-full border-4 border-[#F4F2EA] overflow-hidden bg-[#0A1113] flex items-center justify-center shadow-md">
-                    <img 
-                      src={review.profile_photo_url} 
-                      alt={`Foto de ${review.author_name}`} 
+                    <img
+                      src={review.profile_photo_url}
+                      alt={`Foto de ${review.author_name}`}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  
+
                   <div className="flex gap-1 mt-10 mb-4 text-[#C19B6C]">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star key={i} size={20} fill="currentColor" stroke="none" />
                     ))}
                   </div>
 
-                  <p className="text-sm md:text-base mb-8 font-medium italic text-[#0A1113] flex-grow line-clamp-5 leading-relaxed">
-                    "{review.text}"
-                  </p>
+                  <div className="flex-grow flex items-center">
+                    <p className="text-sm md:text-base font-medium italic text-[#0A1113] line-clamp-5 leading-relaxed">
+                      "{review.text}"
+                    </p>
+                  </div>
 
-                  <div className="mt-auto">
-                    <h4 className="font-bold text-lg text-[#0A1113]">{review.author_name}</h4>
+                  <div className="mt-8">
+                    <h4 className="font-bold text-lg text-[#0A1113]">
+                      {review.author_name}
+                    </h4>
                     <p className="text-sm text-gray-500 font-medium capitalize mt-1">
                       {review.relative_time_description}
                     </p>
@@ -70,7 +72,9 @@ function TestimoniosPlaceholder() {
           </Swiper>
         ) : (
           <div className="mt-8 rounded-2xl border border-dashed border-[#F4F2EA]/30 bg-[#0A1113] p-8 shadow-sm text-center">
-            <p className="text-[#F4F2EA]">Cargando testimonios de la tribu...</p>
+            <p className="text-[#F4F2EA]">
+              Cargando testimonios de la tribu...
+            </p>
           </div>
         )}
       </div>

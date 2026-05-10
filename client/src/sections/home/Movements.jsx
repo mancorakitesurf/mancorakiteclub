@@ -1,10 +1,8 @@
+import { brandImages } from '../../config/images.js'
 import { motion } from "framer-motion"
 
-import logoOzone from "../../assets/LOGOS KITE CLUB/Logo_ozone.webp"
-import logoDuotone from "../../assets/LOGOS KITE CLUB/Logo-duotone.webp"
-import logoSlingshot from "../../assets/LOGOS KITE CLUB/Logo-slingshot.webp"
-import logoRide from "../../assets/LOGOS KITE CLUB/Logo-Ride.webp"
 
+const { ozone: logoOzone, duotone: logoDuotone, slingshot: logoSlingshot, ride: logoRide } = brandImages.sponsors
 const sponsors = [
   {
     name: "Ozone",

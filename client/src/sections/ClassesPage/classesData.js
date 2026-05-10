@@ -1,27 +1,10 @@
+import { componentImages } from '../../config/images.js'
+const { heroKite, introKite, introClassImg, fundamentalClassImg, introClassImgHover, advanceClassImg, masterClassImg, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12 } = componentImages["sections/ClassesPage/classesData.js"]
 // HERO
-import heroKite from '../../assets/imagenes-kitesurfing/posicionkt1.jpg'
 // INTRO
-import introKite from '../../assets/imagenes-kitesurfing/posicionkt2.jpg'
 // PRICING IMAGES
-import introClassImg from '../../assets/imagenes-kitesurfing/posicionkt3.jpg'
-import fundamentalClassImg from '../../assets/imagenes-kitesurfing/posicionkt4.jpg'
-import introClassImgHover from '../../assets/imagenes-kitesurfing/posicionkt8.jpg'
-import advanceClassImg from '../../assets/imagenes-kitesurfing/posicionkt7.jpg'
-import masterClassImg from '../../assets/imagenes-kitesurfing/posicionkt6.jpg'
 
 // GALLERY FINAL (prototipo con repetidas)
-import gallery1 from '../../assets/imagenes-wingfoil/posicionw1.jpg'
-import gallery2 from '../../assets/imagenes-wingfoil/posicionw2.jpg'
-import gallery3 from '../../assets/imagenes-wingfoil/posicionw4.jpg'
-import gallery4 from '../../assets/imagenes-wingfoil/posicionw5.jpg'
-import gallery5 from '../../assets/imagenes-wingfoil/posicionw1.jpg'
-import gallery6 from '../../assets/imagenes-wingfoil/posicionw2.jpg'
-import gallery7 from '../../assets/imagenes-wingfoil/posicionw4.jpg'
-import gallery8 from '../../assets/imagenes-wingfoil/posicionw5.jpg'
-import gallery9 from '../../assets/imagenes-home/posicion22.png'
-import gallery10 from '../../assets/imagenes-home/posicion14y27.jpg'
-import gallery11 from '../../assets/imagenes-home/posicion13.jpg'
-import gallery12 from '../../assets/imagenes-home/posicion13.jpg'
 
 /* ===========================
   HERO SECTION

@@ -1,9 +1,7 @@
+import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
-import gallery1 from "../../assets/imagenes-wingfoil/posicionw1.jpg"
-import gallery2 from "../../assets/imagenes-wingfoil/posicionw2.jpg"
-import gallery3 from "../../assets/imagenes-wingfoil/posicionw4.jpg"
-import gallery4 from "../../assets/imagenes-wingfoil/posicionw5.jpg"
 
+const { gallery1, gallery2, gallery3, gallery4 } = componentImages["sections/ClassesPage/WingfoilWithUs.jsx"]
 const BENEFITS = [
   {
     title: "SIMPLE AND AMAZING",

@@ -1,60 +1,49 @@
-import heroImage from '../../assets/imagenes-home/posicion5.jpg'
+import { homeImages, remoteImages } from '../../config/images.js'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 
+const { actionDesktop, actionMobile, waveDesktop, waveMobile, lifestyle, beach } = homeImages.hero
 export const WHATSAPP_LINK = buildWhatsAppUrl(defaultInquiryMessage())
-export const HERO_IMAGE = heroImage
 
-export const TRIPS = [
+export const HOME_HERO_SLIDES = [
   {
-    level: 'Beginner',
-    title: '3 Nights Discovery',
-    description:
-      'Your intro to kiting. Includes discovery lessons, equipment, and beachside relaxation.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAutrWEwRxeuJakAThHaPGcRRjom7HKo92elUds_TtTXxyv6rfk2RwDXBK-_Hnsb1g3GFcemMOQTaaBj6BZ1G-c3AdncRMucyt2v5_xKdll0R3yF9ce8frfmtB5sE_oUruEAu-BpD5NGRjtRiTZmUTtCdOZH51QmVgGEM20Hush7p1FnNy9GMhl6X5sOD7tnxvFU6UeX8S1zjWMxjm08XZ8ZhyZZ1Epijum9AobdW6fbEJvbvGHTukHhWM3kUkcQeu1bkeEo5X4bVc',
-    alt: 'Tropical beach landscape',
+    desktopSrc: actionDesktop,
+    mobileSrc: actionMobile,
+    alt: 'Kitesurfer riding wind and waves in Mancora',
+    imageClassName: 'object-[58%_center] md:object-center',
   },
   {
-    level: 'Intermediate',
-    title: '7 Nights Progression',
-    description: 'Master back rolls and transitions. Intensive coaching with video analysis.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAKBcsXzXQq3-xwXFI1zMFa480fh33xt-phVnvo7MHWSizDD6gVMKj_LmZV3oLmKYbDJkUBdL56Glw8pRzMwuq60eU7sX43rVRnRaFJkIgffFv2d_7hUDAZ2jykOds41sOUn1eEDVMrVwl3EzU_8L0q_UZf6mdmWOcmP2U8AB4Kpec5Y1zpATCOO4dqFej5rc9x7et9uCCHOMsLrKjMyahjMdIqqMfbMvc2J4ymEmKopzN9un0iCp_5IWv0MkFOmn-pmc-bMCRGWno',
-    alt: 'Kite surfing silhouette',
+    desktopSrc: waveDesktop,
+    mobileSrc: waveMobile,
+    alt: 'Kitesurf session over Pacific waves in northern Peru',
+    imageClassName: 'object-[48%_center] md:object-center',
   },
   {
-    level: 'Advanced',
-    title: '5 Nights Intensive',
-    description:
-      'Focused coaching on specific tricks. Travel to secret spots for perfect conditions.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCvrhfEqX2LQLrPRPbIjOAdSYSES0UxblwPN5oew5NMExsJRVikZ2HCu8KqMh5YRQgttpYTFnX5StGk457MMgTB-0dZ_l6-lOSgMsAf5S4CQdceHDCTuGKXkE2DyY3v6kR8F74VtrAuf1GW3EUBSyB4lYfGb3EkKVoRFCNxkbTYOu5Ax7A8DtLYhnh6cBOHU1QbfyrxYk6wQtQgUNT2necPwkWg3PfgYeRr8-u26Nxv9ynRYI7p9yd7D824Tr5okfYkz7zTvYWHlv4',
-    alt: 'Kite surfing close up',
+    desktopSrc: lifestyle,
+    mobileSrc: lifestyle,
+    alt: 'Mancora Kite Club coaching on the beach',
+    imageClassName: 'object-[56%_center] md:object-center',
   },
   {
-    level: 'Pro',
-    title: '10 Nights Explorer',
-    description: 'The ultimate kite safari. Explore hidden lagoons and endless downwinders.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDR-YzwmddnNXrA5_TO2eXFeaI0SxOW4QYRm2HjH1sSuZzGqt0rZz9CA7249K2YlH8eipE0nyPnI8dDBQ7kCjggyTyoLm2lfHdIfKLTtecrw6qyhCh7AMo5Y9R9xVdHie2J_cxy1IQOVQzTzUYRXCHa9P8l2CZZnwF1RmxU2idOM1dasHs1eHHYHj5bDfci9czeV0H__GvX8h2QZ5X1P3e9bq8fo61ySO2Kh61wxQYeja6DOhIjn5Fx6N4gbdk7kXtSDRn8T55KfcY',
-    alt: 'Kite surfing sunset',
+    desktopSrc: beach,
+    mobileSrc: beach,
+    alt: 'Beachside kite setup with ocean wind in Mancora',
+    imageClassName: 'object-[62%_center] md:object-center',
   },
 ]
 
-export const INSTRUCTION_IMAGE =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuAML1mu-LNo92EeJ6szY9MR_KpSUP60PlnM2bn6LnDGtZ2cWuxS-E66wK_VBrI-19VXNOYGffEFEHTovQROlJQGUYs0bStenpXjz-XorvpSL8IXMYgJstXcZNjSQSayxHXcVQKwOefF_BqkQJyohuGio8ejw-RHHCyVNXAevJh0G6Lqw61MJl1y9I2NrVuwJBkzwPF9pr-N1OuNA1HymZQdF-mzk25oJcS6FvjlYbDpv5eNDiQBfENosSoM1Q1yMY0mJA-hDtrwlG8'
+export const INSTRUCTION_IMAGE = remoteImages.homeInstruction
 
 export const STAY_IMAGES = {
   main: {
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDqiWaJ4hr065bpxicTwV-zlCOkcmUY5vMP-gR0ofE3XqbhIt_RmU96S972fds9wdELTe_yE2nFb5J8W-4f_YwYj1Gf5k32jqP_xf5IQAuJa6FSm68IIoq2yWIZshr5bfTH-_MaXp1Z0ZsnnRj4Bk9hvYPBU2rgcvaktB4pnA6HDCyOxrHQCNOETUXmLzfy5MW_Dz8qYzyJrqvsHkUjqQck-gmlosGSPN3XXG6PL-pLZVYc1CEGizItrsctg9mXWBinwDOTytzs7I',
+    src: remoteImages.homeStay.main,
     alt: 'Luxury Villa Exterior',
   },
   pool: {
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAkyCFK87pG-hkRsQHUVWWp2BkhB5QzKw41F-8F7kjwv9NQNOyhkUgz8gxF0ySAUqmXS2owlDsK-192g73EAQTiWnzQtvpy8i-TFzSmEkrGZPrAoV_O5xzB8I7wzIHPX2dH2HN4_nDz5YUyCDVk-Oxxx_1NLCnSBHrPaGTJQn_W5lU3MrKebFiPSWyARXfg1ETvz-jm29MJKwUSDlGsfTG3Ozcm9hy31yHHYbEdP30WfVZR-87ZkrHDhO1cfY_6jsC8HzOQ-VhBfb0',
+    src: remoteImages.homeStay.pool,
     alt: 'Poolside View',
   },
   bedroom: {
-    src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA4EJUcl5NkTRdevFflwflOv1et8IsgADkACeVWtBI3T5qHf6AA5lTZWrhu61AlKYotin4_pKHz0M7_qZKa3T9LdulxPGnekUu21NkHe6RAzKxQb1s_sAwxDhKnAAyw13AwOCanQFzpPlQaaXH7pa1wyrM-kapGpUrkNRbMNf0803D4GbZ_p6twwXz5S2mqhrQYsFmQIIqVWy6YGPpr65NSqf8o8ZbG5V8P4gGGL3Y8QJVlGrCD69H8Y6nyST19-2TuyvTdNgse7ro',
+    src: remoteImages.homeStay.bedroom,
     alt: 'Bedroom Interior',
   },
 }
@@ -64,21 +53,18 @@ export const TESTIMONIALS = [
     name: 'Tina Moller',
     country: 'Germany',
     text: '"The best kitesurfing trip of my life. The instructors were incredibly patient and the location is just magical. Highly recommend!"',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuADwIebK31onezkPi-7H2oLjGB0ROCg9LOWfrmdyKHeAmXjmQIXz5tBMK3Wr-egWFADu5Lsk6CtVvQhYMcA-zcpfjDWIWhg-CbMpgsGyPscOGe-GZcY7_T7X3zdEdkYxKKuvbfFSerr4HVkosM-G-ob_tfNYee9JaVzvC_7a2p5LBUtJcHxCaoxaJS_hwZ10Xd3c27_A_nY8URH0vjzB-3WQd4l_dwvsYhFRpkN2IJCv09YgPlhu-7L1cV2HcG5_tD_Es8LVobs8yY',
+    image: remoteImages.homeTestimonials.tina,
   },
   {
     name: 'Sarah Jenkins',
     country: 'UK',
-    text: `"Máncora Kite Club strikes the perfect balance between professional coaching and a relaxed, fun atmosphere. I'll be back!"`,
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCjRFPkZdffqDFRLqVXlMfFUgXOdFRNRqt9aH0wUsI1o67ZwNC9CrKUMxRwDl8jHdTBeYYiRPRaI6O3b9hCBOlzl_xMqLjIcBpNmu63qPwXO9T1maPJUDxs4kJY08ve_Mcbw1xvshz2J2h1k4E_PHuQdjNYXz0P5a3WT_VCOiQkc7lf0V1UUVyy3WEvUX_IhXNTxWx0vgayTbmxSktusMBYiLfShwqU8MHDqIVkkDAuO81BgTiTy71-5BiwnViwrFo4TsV70eBQ7Qs',
+    text: `"Mancora Kite Club strikes the perfect balance between professional coaching and a relaxed, fun atmosphere. I'll be back!"`,
+    image: remoteImages.homeTestimonials.sarah,
   },
   {
     name: 'Marc Dubois',
     country: 'France',
     text: '"From the airport pickup to the final sunset session, everything was seamless. The villa is stunning and the food is amazing."',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCvAmnaV7iTZVNL3F_JXjoRgWMylZoDPRdbXg-MDiwSexxAyYYtHTClfsIAUbJSooVVJLCFoI0o6-JK6AjGJgD_WtZ2pKS3TsPwQpXdD6F-mz6sYO2lpmM09x3vJfXNUrGw31hUTGozw7xt8qoEo4va-Wasbe5IdisyU04XdiQKKissdr8Ca4NOTgYZGXZ6uycL15p8P-g-HE2tMGVY3ORS_kfsDdgIah-WLebgvCwITvwTfYdnUCcBHqTITa8TIvOXbFxTwJtWtE4',
+    image: remoteImages.homeTestimonials.marc,
   },
 ]

@@ -4,7 +4,7 @@
  */
 export function localizePath(path, lang) {
   if (lang === 'en') return path
-  const prefix = `/${lang}`
+  const prefix = lang === 'fr' ? '/fr' : '/esp'
   return path === '/' ? prefix : `${prefix}${path}`
 }
 

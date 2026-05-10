@@ -9,8 +9,8 @@ function NotFoundPage() {
         descKey="seo.notFoundDesc"
         titleFallback="Mancora Kite Club | 404"
         descFallback="Page not found. The kitesurfing spot, trip, or page you are looking for does not exist. Return to home and keep riding with Máncora Kite Club in Peru."
-        canonicalPath="/"
-        hreflang={{ en: '/', es: '/esp', default: '/' }}
+        canonicalPath="/home"
+        hreflang={{ en: '/home', es: '/esp/home', fr: '/fr/home', default: '/home' }}
       />
 
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#031015] px-4 py-16 text-center text-white sm:px-6 lg:px-8">
@@ -33,7 +33,7 @@ function NotFoundPage() {
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              to="/"
+              to="/home"
               className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary/90 hover:shadow-[0_0_28px_rgba(42,157,143,0.35)] sm:w-auto"
             >
               Back to Home

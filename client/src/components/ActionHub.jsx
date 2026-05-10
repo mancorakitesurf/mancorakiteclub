@@ -1,3 +1,4 @@
+import { brandImages, mediaAssets } from '../config/images.js'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
@@ -5,9 +6,9 @@ import { IoChatbubble } from 'react-icons/io5'
 import { FaWhatsapp } from 'react-icons/fa'
 import { useUIStore } from '../store/useUIStore.js'
 import ChatbotWindow from './ChatbotWindow'
-import chatbotVideo from '../assets/chatbot ia.mp4'
-import logoKite from '../assets/LOGOS KITE CLUB/LOGO-kite-new.webp'
 
+const chatbotVideo = mediaAssets.chatbotVideo
+const logoKite = brandImages.logoMark
 /**
  * ActionHub Component
  * Floating action hub with KiteBot video trigger and vertical action stack.
@@ -175,4 +176,3 @@ function ActionHub() {
 }
 
 export default ActionHub
-

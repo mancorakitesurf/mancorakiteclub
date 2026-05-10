@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useI18n } from '../app/providers/i18nContext.js'
+import { seoImages } from '../config/images.js'
 import { setSeoTags } from '../lib/seo.js'
 
 /**
@@ -17,7 +18,7 @@ import { setSeoTags } from '../lib/seo.js'
 function SEO({
   title,
   description,
-  image = 'https://www.mancorakiteclub.com/assets/main-CpaNiQFq.webp',
+  image = seoImages.defaultOpenGraph,
   titleKey = 'seo.homeTitle',
   descKey = 'seo.homeDesc',
   titleFallback = 'Máncora Kite Club',

@@ -1,6 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleFinalCallToActionBase from "../../blogShared/ArticleFinalCallToActionBase.jsx"
-import ctaImage from "../../../assets/imagenes-home/posicion24.jpg"
 
+const { ctaImage } = componentImages["sections/blogPage3/BlogLayoutPage3/ChicamaFinalCallToAction.jsx"]
 function ChicamaFinalCallToAction() {
   return (
     <ArticleFinalCallToActionBase

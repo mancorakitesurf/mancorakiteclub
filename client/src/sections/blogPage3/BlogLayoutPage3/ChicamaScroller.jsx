@@ -1,11 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleScrollerBase from "../../blogShared/ArticleScrollerBase.jsx"
-import imageOne from "../../../assets/imagenes-home/posicion16.jpg"
-import supportOne from "../../../assets/imagenes-home/posicion17.jpg"
-import imageTwo from "../../../assets/imagenes-home/posicion18.jpg"
-import supportTwo from "../../../assets/imagenes-home/posicion19.jpg"
-import imageThree from "../../../assets/imagenes-home/posicion20.jpg"
-import supportThree from "../../../assets/imagenes-home/posicion21.jpg"
 
+const { imageOne, supportOne, imageTwo, supportTwo, imageThree, supportThree } = componentImages["sections/blogPage3/BlogLayoutPage3/ChicamaScroller.jsx"]
 const CHICAMA_SECTIONS = [
   {
     eyebrow: "Wave Reality",

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { componentImages } from '../config/images.js'
 import { Link } from "react-router-dom"
 import {
   FaMapMarkerAlt,
@@ -10,15 +10,12 @@ import {
 import { GiLotus, GiWhaleTail, GiScubaMask, GiTurtle } from "react-icons/gi"
 
 import StandardPage from "./StandardPage.jsx"
+import FullscreenHero from "../components/ui/FullscreenHero.jsx"
+import { createPresetHeroSlides } from "../lib/fullscreenHeroSlides.js"
 import { buildWhatsAppUrl } from "../lib/whatsapp.js"
 
-import heroImg from "../assets/HOSPEDAJE KITE HOUSE/main.webp"
-import img1 from "../assets/HOSPEDAJE KITE HOUSE/cuartonazi.webp"
-import img2 from "../assets/HOSPEDAJE KITE HOUSE/habitacion.webp"
-import img3 from "../assets/HOSPEDAJE KITE HOUSE/nightcaption.webp"
-import img4 from "../assets/HOSPEDAJE KITE HOUSE/piscinabuenarda.webp"
-import img5 from "../assets/HOSPEDAJE KITE HOUSE/image.webp"
 
+const { heroImg, img1, img2, img3, img4, img5 } = componentImages["pages/StayPage.jsx"]
 function StayPage() {
   const stayMessage =
     "Hi! I'm interested in staying with you. My name is ... Dates: ... Number of guests: ..."
@@ -109,66 +106,26 @@ function StayPage() {
       fullWidth
     >
       <div className="overflow-hidden bg-white dark:bg-surface-dark">
-        {/* HERO */}
-        <section className="relative flex min-h-[78vh] items-center justify-center overflow-hidden md:min-h-screen">
-          <div className="absolute inset-0 z-0">
-            <motion.img
-              src={heroImg}
-              alt="Stay with us in Máncora"
-              initial={{ scale: 1.08 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 2.2, ease: "easeOut" }}
-              className="h-full w-full object-cover opacity-70"
-              loading="eager"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-transparent" />
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative z-10 mx-auto max-w-7xl px-6 text-center text-white sm:px-10 lg:px-16"
-          >
-            <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-primary">
-              Stay in Máncora
-            </p>
-
-            <h1 className="font-display text-5xl font-bold leading-[0.95] tracking-tight sm:text-6xl lg:text-8xl">
-              A calm base
-              <br />
-              for wind, waves
-              <br />
-              and rest.
-            </h1>
-
-            <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/80 sm:text-lg">
-              Premium accommodation for riders and travelers who want clean spaces,
-              easy planning, and a relaxed atmosphere close to the ocean.
-            </p>
-
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                to="/build"
-                className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-primary/90 sm:w-auto"
-              >
-                Build your trip
-              </Link>
-
-              <a
-                href={buildWhatsAppUrl(stayMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/50 px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-slate-950 sm:w-auto"
-              >
-                <FaWhatsapp />
-                Book on WhatsApp
-              </a>
-            </div>
-          </motion.div>
-        </section>
+        <FullscreenHero
+          as="section"
+          eyebrow="Kite House"
+          title="Stay in Mancora"
+          subtitle="Clean rooms, calm spaces and easy beach days."
+          density="compact"
+          slides={createPresetHeroSlides('stay', {
+            desktop: [heroImg, img4, img5],
+            alt: 'Stay with us in Mancora',
+            imageClassName: 'object-[52%_center] md:object-center',
+          })}
+          actions={[
+            {
+              href: buildWhatsAppUrl(stayMessage),
+              label: 'Book on WhatsApp',
+              icon: FaWhatsapp,
+              external: true,
+            },
+          ]}
+        />
 
         {/* INTRO */}
         <section className="grid gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[1fr_1.15fr] lg:px-16 lg:py-24">

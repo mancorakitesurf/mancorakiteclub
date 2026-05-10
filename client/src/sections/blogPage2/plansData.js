@@ -1,11 +1,5 @@
-import planAImg from '../../assets/imagenes-kitesurfing/posicionkt2.jpg'
-import planBImg from '../../assets/imagenes-kitesurfing/posicionkt3.jpg'
-import planCImg from '../../assets/imagenes-home/posicion3.jpg'
-import planDImg from '../../assets/imagenes-home/posicion2.jpg'
-import planEImg from '../../assets/imagenes-home/posicion14y27.jpg'
-import planFImg from '../../assets/imagenes-home/posicion23.jpg'
-import planGImg from '../../assets/imagenes-home/posicion26.jpg'
-
+import { componentImages } from '../../config/images.js'
+const { planAImg, planBImg, planCImg, planDImg, planEImg, planFImg, planGImg } = componentImages["sections/blogPage2/plansData.js"]
 export const PLANS = [
   {
     letter: "A",

@@ -1,11 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import DestinationCard from '../BlogLayoutPage1/DestinationCard.jsx'
-import mancoraImg from '../../../assets/imagenes-kitsurfing-lessons/posicionk6.jpg'
-import hawaiiImg from '../../../assets/imagenes-kitsurfing-lessons/posicionk1.jpg'
-import tarifaImg from '../../../assets/imagenes-kitsurfing-lessons/posicionk2.jpg'
-import capeTownImg from '../../../assets/imagenes-kitsurfing-lessons/posicionk3.jpg'
-import dakhlaImg from '../../../assets/imagenes-kitsurfing-lessons/posicionk4.jpg'
-import sectionBg from '../../../assets/imagenes-kitsurfing-lessons/posicionk5.jpg'
 
+const { mancoraImg, hawaiiImg, tarifaImg, capeTownImg, dakhlaImg, sectionBg } = componentImages["sections/blogPage1/BlogLayoutPage1/BlogLayoutPage1.jsx"]
 function BlogLayoutPage1() {
   return (
     <section className="relative py-24">

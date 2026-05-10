@@ -1,11 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleScrollerBase from "../../blogShared/ArticleScrollerBase.jsx"
-import imageOne from "../../../assets/imagenes-home/posicion18.jpg"
-import supportOne from "../../../assets/imagenes-home/posicion19.jpg"
-import imageTwo from "../../../assets/imagenes-home/posicion23.jpg"
-import supportTwo from "../../../assets/imagenes-home/posicion26.jpg"
-import imageThree from "../../../assets/imagenes-home/posicion17.jpg"
-import supportThree from "../../../assets/imagenes-home/posicion24.jpg"
 
+const { imageOne, supportOne, imageTwo, supportTwo, imageThree, supportThree } = componentImages["sections/blogPage6/BlogLayoutPage6/PacasmayoScroller.jsx"]
 const PACASMAYO_SECTIONS = [
   {
     eyebrow: "Conditions",

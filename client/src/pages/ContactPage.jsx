@@ -1,8 +1,9 @@
+import { brandImages } from '../config/images.js'
 import { motion } from 'framer-motion'
 import StandardPage from './StandardPage.jsx'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
-import logoImg from '../assets/LOGOS KITE CLUB/95b03a84-2865-4eda-89ae-26b332f99bb5.webp'
 
+const logoImg = brandImages.contactMark
 const contacts = [
   {
     label: 'WhatsApp',

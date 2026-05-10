@@ -54,7 +54,7 @@ function BlogLandingGrid({ posts }) {
                   Readers can compare Peru honestly here, but the strongest commercial landing point remains the same: a warm, credible, progression-friendly base in Mancora.
                 </p>
                 <Link
-                  to="/"
+                  to="/home"
                   className="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-cyan-200"
                 >
                   Go to Home

@@ -1,11 +1,7 @@
+import { componentImages } from '../../../config/images.js'
 import ArticleScrollerBase from "../../blogShared/ArticleScrollerBase.jsx"
-import imageOne from "../../../assets/imagenes-kitesurfing/posicionkt2.jpg"
-import supportOne from "../../../assets/imagenes-home/posicion5.jpg"
-import imageTwo from "../../../assets/imagenes-wingfoil/posicionw8.jpg"
-import supportTwo from "../../../assets/imagenes-wingfoil/posicionw7.jpg"
-import imageThree from "../../../assets/imagenes-home/posicion24.jpg"
-import supportThree from "../../../assets/imagenes-home/posicion14y27.jpg"
 
+const { imageOne, supportOne, imageTwo, supportTwo, imageThree, supportThree } = componentImages["sections/blogPage5/BlogLayoutPage5/PeruKitesurfScroller.jsx"]
 const PERU_KITESURF_SECTIONS = [
   {
     eyebrow: "South Peru",

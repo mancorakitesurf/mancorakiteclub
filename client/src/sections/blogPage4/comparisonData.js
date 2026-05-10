@@ -1,7 +1,5 @@
-import mancoraImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg"
-import lobitosImg from "../../assets/imagenes-kitesurfing/posicionkt3.jpg"
-import caboImg from "../../assets/imagenes-kitesurfing/posicionkt4.jpg"
-
+import { componentImages } from '../../config/images.js'
+const { mancoraImg, lobitosImg, caboImg } = componentImages["sections/blogPage4/comparisonData.js"]
 export const SPOTS = [
   {
     name: "Mancora",

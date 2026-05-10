@@ -1,6 +1,5 @@
-import mancoraImg from '../../assets/imagenes-kitsurfing-lessons/posicionk2.jpg'
-import hawaiiImg from '../../assets/imagenes-kitsurfing-lessons/posicionk5.jpg'
-
+import { componentImages } from '../../config/images.js'
+const { mancoraImg, hawaiiImg } = componentImages["sections/blogPage1/blogContentPage1.js"]
 export const DESTINATIONS = [
   {
     title: "Mancora, Peru – Mancora Kite Club",

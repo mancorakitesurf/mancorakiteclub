@@ -865,6 +865,136 @@
       "whyMancora": { "title": "Por qué Máncora es diferente: Guía de progresión en olas", "alt": "Guía de progresión de olas en Máncora" }
     }
   },
+  "tripsPage": {
+    "heroTitle1": "NUESTROS",
+    "heroTitle2": "PAQUETES",
+    "heroSubtitle": "Descubre viajes de kitesurf, wingfoil y surf en el norte de Perú.",
+    "exploreTrips": "Explorar Viajes",
+    "tripExperience": "Experiencia de Viaje",
+    "viewDetails": "Ver Detalles",
+    "ctaLabel": "Únete a la tribu",
+    "ctaTitle": "Comienza tu Historia",
+    "ctaDesc": "Dinos tus fechas, nivel y el tipo de experiencia que quieres construir.",
+    "ctaBtnText": "Armar mi viaje"
+  },
+  "tripsData": {
+    "firstFly": {
+      "title": "FIRST FLY",
+      "subtitle": "Kite/Wing + Hospedaje incluido",
+      "summary": "Paquete de entrada enfocado en la progresión con estadía incluida.",
+      "heroAlt": "Viaje First Fly",
+      "whatsappMessage": "¡Hola! Estoy interesado en el viaje FIRST FLY (con alojamiento).\nFechas: ...\nDuración: 3 o 7 noches (o Personalizado)\nPersonas: 1 o 2\nNivel: ...\nMi nombre es ...",
+      "forYouIf": [
+        "Quieres clases privadas de kite o wing con una estructura clara.",
+        "Prefieres el alojamiento incluido en el mismo paquete.",
+        "Buscas un formato de 3 o 7 noches."
+      ],
+      "includes": [
+        "Clases privadas (6h en 3 noches o 10h en 7 noches).",
+        "Equipo completo.",
+        "Walkie-talkies durante las sesiones.",
+        "Fotos del viaje.",
+        "Sesión(es) de yoga.",
+        "Sesión(es) de masaje.",
+        "Alojamiento incluido."
+      ],
+      "durations": ["3 noches", "7 noches", "Personalizado"],
+      "addOns": ["Horas de clase extra (TODO)", "Sesión de bienestar adicional (TODO)", "Complemento personalizado (TODO)"],
+      "faq": [
+        { "question": "¿Puedo hacer esto si soy principiante?", "answer": "El nivel se coordina antes de reservar. TODO: política de nivel." },
+        { "question": "¿Puedo solicitar fechas personalizadas?", "answer": "Las fechas personalizadas son posibles. TODO: confirmación de disponibilidad." },
+        { "question": "¿Qué incluye exactamente el equipo?", "answer": "El equipo completo está incluido. TODO: lista final de artículos." },
+        { "question": "¿Cómo confirmo mi reserva?", "answer": "Las reservas se manejan vía WhatsApp. TODO: pasos de pago/depósito." }
+      ]
+    },
+    "olasViento": {
+      "title": "OLAS & VIENTO",
+      "subtitle": "Surf + Kite + Hospedaje incluido",
+      "summary": "Mezcla de surf y kite con alojamiento incluido.",
+      "heroAlt": "Viaje Olas y Viento",
+      "whatsappMessage": "¡Hola! Estoy interesado en el viaje OLAS & VIENTO (con alojamiento).\nFechas: ...\nDuración: 3 o 7 noches (o Personalizado)\nPersonas: 1 o 2\nNivel: ...\nMi nombre es ...",
+      "forYouIf": [
+        "Quieres combinar clases de surf con progresión en kite.",
+        "Prefieres un paquete con estadía incluida.",
+        "Buscas un formato de entrenamiento corto o de semana completa."
+      ],
+      "includes": [
+        "2 clases de surf + clases de kite (6h en 3 noches).",
+        "10h clases de kite + viaje de surf (7 noches).",
+        "Equipo y asistencia en el agua.",
+        "Fotos del viaje.",
+        "Sesión(es) de yoga.",
+        "Sesión(es) de masaje.",
+        "Alojamiento incluido."
+      ],
+      "durations": ["3 noches", "7 noches", "Personalizado"],
+      "addOns": ["Clase de surf extra (TODO)", "Clase de kite extra (TODO)", "Complemento personalizado (TODO)"],
+      "faq": [
+        { "question": "¿Puedo priorizar surf o kite?", "answer": "El enfoque del programa se puede revisar. TODO: política de ajuste." },
+        { "question": "¿Hay diferencia entre los paquetes de 3 y 7 noches?", "answer": "Sí, el volumen de entrenamiento varía. TODO: detalle final." },
+        { "question": "¿Qué equipo está incluido?", "answer": "El equipo está incluido. TODO: desglose exacto de equipo." },
+        { "question": "¿Cómo confirmo mi reserva?", "answer": "Las reservas se manejan vía WhatsApp. TODO: pasos de pago/depósito." }
+      ]
+    },
+    "soloSurf": {
+      "title": "SOLO SURF",
+      "subtitle": "Surf + Hospedaje incluido",
+      "summary": "Paquete centrado en el surf con alojamiento incluido.",
+      "heroAlt": "Viaje Solo Surf",
+      "whatsappMessage": "¡Hola! Estoy interesado en el viaje SOLO SURF (con alojamiento).\nFechas: ...\nDuración: 3 o 7 noches (o Personalizado)\nPersonas: 1 o 2\nNivel: ...\nMi nombre es ...",
+      "forYouIf": [
+        "Quieres un viaje centrado en el surf con coaching.",
+        "Prefieres la estadía incluida en el mismo paquete.",
+        "Buscas un plan de progresión de 3 o 7 noches."
+      ],
+      "includes": [
+        "3 noches: 3 clases de surf (1.5h) + 1 viaje de surf.",
+        "7 noches: 5 clases + 2 viajes de surf + 1 sesión de coaching libre.",
+        "Fotos diarias + galería final.",
+        "Análisis en video.",
+        "Sesión(es) de yoga.",
+        "Alojamiento incluido."
+      ],
+      "durations": ["3 noches", "7 noches", "Personalizado"],
+      "addOns": ["Sesión de surf extra (TODO)", "Paquete de medios adicional (TODO)", "Complemento personalizado (TODO)"],
+      "faq": [
+        { "question": "¿Este paquete es solo de surf?", "answer": "Sí, este formato está enfocado exclusivamente en el surf." },
+        { "question": "¿Qué cambia entre 3 y 7 noches?", "answer": "El volumen de clases/viajes cambia según la duración. TODO: plan diario final." },
+        { "question": "¿Las fotos y video están incluidos?", "answer": "Las fotos y el análisis en video están incluidos como se indica." },
+        { "question": "¿Cómo confirmo mi reserva?", "answer": "Las reservas se manejan vía WhatsApp. TODO: pasos de pago/depósito." }
+      ]
+    },
+    "rideCoast": {
+      "title": "RIDE THE COAST",
+      "subtitle": "Safari Kite/Wing + Hospedaje",
+      "summary": "Paquete estilo safari de kite/wing con estadía incluida.",
+      "heroAlt": "Viaje Ride the Coast",
+      "whatsappMessage": "¡Hola! Estoy interesado en el viaje RIDE THE COAST (con alojamiento).\nFechas: ...\nDuración: 3 o 7 noches (o Personalizado)\nPersonas: 1 o 2\nNivel: ...\nMi nombre es ...",
+      "forYouIf": [
+        "Buscas un formato tipo safari por la costa.",
+        "Haces kite o wing y quieres sesiones guiadas.",
+        "Prefieres el alojamiento incluido en un solo paquete."
+      ],
+      "includes": [
+        "3 o 6 sesiones de safari (según la duración).",
+        "Transporte y asistencia en ruta.",
+        "Snacks durante los días de safari.",
+        "Fotos del viaje.",
+        "Fotos con dron en formato de 7 noches.",
+        "Sesión(es) de yoga.",
+        "Sesión(es) de masaje.",
+        "Alojamiento incluido."
+      ],
+      "durations": ["3 noches", "7 noches", "Personalizado"],
+      "addOns": ["Día de safari extra (TODO)", "Servicio de asistencia adicional (TODO)", "Complemento personalizado (TODO)"],
+      "faq": [
+        { "question": "¿Los spots de safari son siempre los mismos?", "answer": "La selección del spot depende de las condiciones diarias." },
+        { "question": "¿Cuántos días de safari se incluyen?", "answer": "3 o 6 safaris dependiendo de la duración del paquete." },
+        { "question": "¿El transporte está incluido?", "answer": "El transporte está incluido. TODO: flujo exacto de recogida/regreso." },
+        { "question": "¿Cómo confirmo mi reserva?", "answer": "Las reservas se manejan vía WhatsApp. TODO: pasos de pago/depósito." }
+      ]
+    }
+  },
   "build": {
     "buildEstimate": "Crea tu presupuesto",
     "estimatedTotal": "Total estimado",

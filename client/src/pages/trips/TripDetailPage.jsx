@@ -23,7 +23,8 @@ function TripDetailPage() {
     )
   }
 
-  const whatsappHref = buildWhatsAppUrl(trip.whatsappMessage)
+  // Aplicamos t() al mensaje de WhatsApp
+  const whatsappHref = buildWhatsAppUrl(t(trip.whatsappMessage))
 
   const cardClass = "bg-[#162e2e] border border-[#284b4b] rounded-[1rem] p-6 sm:p-8 overflow-hidden"
   
@@ -34,15 +35,15 @@ function TripDetailPage() {
       <SEO
         titleKey="seo.tripsTitle"
         descKey="seo.tripsDesc"
-        titleFallback={`${trip.title} | Mancora Kite Club`}
-        descFallback={trip.summary}
+        titleFallback={`${t(trip.title)} | Mancora Kite Club`}
+        descFallback={t(trip.summary)}
       />
 
       <header className="relative flex min-h-[70vh] items-center justify-center overflow-hidden pt-20 md:min-h-screen bg-[#0e2222]">
         <div className="absolute inset-0 z-0">
           <motion.img
             src={trip.heroImage}
-            alt={trip.heroAlt}
+            alt={t(trip.heroAlt)}
             initial={{ scale: 1.08 }}
             animate={{ scale: 1 }}
             transition={{ duration: 2.2, ease: "easeOut" }}
@@ -58,13 +59,13 @@ function TripDetailPage() {
           className="relative z-10 mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8 flex flex-col items-center"
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#3ea59b]">
-            {trip.subtitle}
+            {t(trip.subtitle)}
           </p>
           <h1 className="mb-6 font-display text-4xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
-            {trip.title}
+            {t(trip.title)}
           </h1>
           <p className="mx-auto mb-8 max-w-3xl text-base font-light leading-relaxed tracking-wide text-gray-200 drop-shadow-md sm:text-lg md:text-xl">
-            {trip.summary}
+            {t(trip.summary)}
           </p>
 
           <div className="flex justify-center">
@@ -98,7 +99,7 @@ function TripDetailPage() {
                 {trip.forYouIf.map((item) => (
                   <li key={item} className="relative pl-6">
                     <span className="absolute left-0 text-[#f0f4f4]">•</span>
-                    {item}
+                    {t(item)}
                   </li>
                 ))}
               </ul>
@@ -106,7 +107,7 @@ function TripDetailPage() {
             {/* Imagen 1 con contenedor unificado */}
             <div className={imageContainerClass}>
               <img 
-                alt={`${trip.title} lifestyle`} 
+                alt={`${t(trip.title)} lifestyle`} 
                 className="w-full h-full object-cover opacity-80" 
                 src={trip.image1}
               />
@@ -123,7 +124,7 @@ function TripDetailPage() {
                     <div className="text-[#3ea59b] mt-1 flex-shrink-0">
                       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path></svg>
                     </div>
-                    <p className="text-[#f0f4f4] font-light leading-snug">{item}</p>
+                    <p className="text-[#f0f4f4] font-light leading-snug">{t(item)}</p>
                   </div>
                 ))}
               </div>
@@ -131,7 +132,7 @@ function TripDetailPage() {
             {/* Imagen 2 con contenedor unificado */}
             <div className={`${imageContainerClass} hidden md:block`}>
               <img 
-                alt={`${trip.title} action`} 
+                alt={`${t(trip.title)} action`} 
                 className="w-full h-full object-cover opacity-80" 
                 src={trip.image2}
               />
@@ -173,7 +174,7 @@ function TripDetailPage() {
               {trip.addOns.map((item) => (
                 <li key={item} className="relative pl-6">
                   <span className="absolute left-0 text-[#f0f4f4]">•</span>
-                  {item}
+                  {t(item)}
                 </li>
               ))}
             </ul>
@@ -185,8 +186,8 @@ function TripDetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
               {trip.faq.map((item) => (
                 <div key={item.question}>
-                  <h3 className="text-white font-medium mb-1">{item.question}</h3>
-                  <p className="text-[#a8c0c0] font-light text-sm leading-relaxed">{item.answer}</p>
+                  <h3 className="text-white font-medium mb-1">{t(item.question)}</h3>
+                  <p className="text-[#a8c0c0] font-light text-sm leading-relaxed">{t(item.answer)}</p>
                 </div>
               ))}
             </div>
@@ -204,7 +205,6 @@ function TripDetailPage() {
               {t('common.bookOnWhatsApp')}
             </a>
           </div>
-
         </div>
       </section>
     </>

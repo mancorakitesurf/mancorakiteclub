@@ -1,3 +1,6 @@
+import heroImg from '../../assets/imagenes-home/posicion1.jpg'
+
+export const HERO_IMAGE = heroImg
 export const TRIPS = [
   {
     level: 'sections.Trips-home.Beginner.level',

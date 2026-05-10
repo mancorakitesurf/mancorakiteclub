@@ -18,15 +18,16 @@ const tripImages = [
   rideCoastImg,
 ]
 
-const tripLabels = [
-  'First Fly',
-  'Olas y Viento',
-  'Solo Surf',
-  'Ride the Coast',
-]
-
 function TripsPage() {
   const { t } = useI18n()
+
+  // Truco ninja: Traducimos los títulos y sumarios al vuelo
+  const translatedTrips = trips.map(trip => ({
+    ...trip,
+    title: t(trip.title),
+    subtitle: t(trip.subtitle),
+    summary: t(trip.summary)
+  }))
 
   return (
     <>
@@ -85,9 +86,8 @@ function TripsPage() {
 
         {/* TRIP LIST */}
         <section id="trip-list" className="relative">
-          {trips.map((trip, index) => {
+          {translatedTrips.map((trip, index) => {
             const image = tripImages[index % tripImages.length]
-            const label = tripLabels[index] || trip.title
             const isEven = index % 2 === 0
 
             return (
@@ -156,7 +156,7 @@ function TripsPage() {
                           sm:text-7xl md:text-8xl lg:text-[8.5rem]
                         "
                       >
-                        {label}
+                        {trip.title}
                       </h2>
 
                       <p

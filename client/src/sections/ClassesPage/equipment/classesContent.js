@@ -11,78 +11,78 @@ import wingImg5 from '../../../assets/imagenes-wingfoil/posicionw6.jpg'
 
 export const KITESURF_DATA = [
   {
-    title: "Latest Generation Kites",
-    description: "Recent models checked daily to ensure your safety and maximum performance.",
+    title: "classesPage.equipment.kite.kites.title",
+    description: "classesPage.equipment.kite.kites.description",
     image: kiteImage,
-    label: "Kite",
-    subtitle: "Various sizes (5m - 14m)",
+    label: "classesPage.equipment.kite.kites.label",
+    subtitle: "classesPage.equipment.kite.kites.subtitle",
     icon: "kitesurfing"
   },
   {
-    title: "Premium TwinTip Boards",
-    description: "High-performance boards designed for freeride and advanced freestyle.",
+    title: "classesPage.equipment.kite.boards.title",
+    description: "classesPage.equipment.kite.boards.description",
     image: kiteImage2,
-    label: "TwinTip Boards",
-    subtitle: "For freeride and freestyle",
+    label: "classesPage.equipment.kite.boards.label",
+    subtitle: "classesPage.equipment.kite.boards.subtitle",
     icon: "surfing"
   },
   {
-    title: "Bars and Control Systems",
-    description: "Control systems with resistant lines and certified quick-release safety systems.",
+    title: "classesPage.equipment.kite.bars.title",
+    description: "classesPage.equipment.kite.bars.description",
     image: kiteImage3,
-    label: "Bar and Control Systems",
-    subtitle: "Modern safety systems",
+    label: "classesPage.equipment.kite.bars.label",
+    subtitle: "classesPage.equipment.kite.bars.subtitle",
     icon: "linear_scale"
   },
   {
-    title: "Harnesses and Safety Gear",
-    description: "Essential comfort and protection with ergonomic harnesses, impact vests, and adjustable helmets.",
+    title: "classesPage.equipment.kite.safety.title",
+    description: "classesPage.equipment.kite.safety.description",
     image: kiteImage4,
-    label: "Harnesses and Safety Gear",
-    subtitle: "Impact vests and helmets",
+    label: "classesPage.equipment.kite.safety.label",
+    subtitle: "classesPage.equipment.kite.safety.subtitle",
     icon: "accessibility_new"
   }
 ]
 
 export const WINGFOIL_DATA = [
   {
-    title: "Light and Powerful Wings",
-    description: "Equipment designed to take advantage of the light and strong winds...",
+    title: "classesPage.equipment.wing.wings.title",
+    description: "classesPage.equipment.wing.wings.description",
     image: wingImg,
-    label: "Wing",
-    subtitle: "Duotone Units and Slicks",
+    label: "classesPage.equipment.wing.wings.label",
+    subtitle: "classesPage.equipment.wing.wings.subtitle",
     icon: "paragliding"
   },
   {
-    title: "Specialized Foil Boards",
-    description: "Stable and light boards with ideal volumes for beginners and experts...",
+    title: "classesPage.equipment.wing.boards.title",
+    description: "classesPage.equipment.wing.boards.description",
     image: wingImg2,
-    label: "Specialized Foil Boards",
-    subtitle: "Volumes from 80L to 120L",
+    label: "classesPage.equipment.wing.boards.label",
+    subtitle: "classesPage.equipment.wing.boards.subtitle",
     icon: "layers"
   },
   {
-    title: "Carbon Hydrofoils",
-    description: "High-modulus carbon masts and wings for smooth gliding and maximum speed.",
+    title: "classesPage.equipment.wing.foils.title",
+    description: "classesPage.equipment.wing.foils.description",
     image: wingImg3,
-    label: "Carbon Hydrofoils",
-    subtitle: "Carbon masts and wings",
+    label: "classesPage.equipment.wing.foils.label",
+    subtitle: "classesPage.equipment.wing.foils.subtitle",
     icon: "flight_takeoff"
   },
   {
-    title: "Inflation and Maintenance Kit",
-    description: "Everything you need to get your gear ready: high-pressure pumps and repair kits.",
+    title: "classesPage.equipment.wing.pump.title",
+    description: "classesPage.equipment.wing.pump.description",
     image: wingImg4,
-    label: "Pump and Accessories",
-    subtitle: "Fast inflation and repair",
+    label: "classesPage.equipment.wing.pump.label",
+    subtitle: "classesPage.equipment.wing.pump.subtitle",
     icon: "air"
   },
   {
-    title: "Certified Safety Leash",
-    description: "Keep your equipment connected to you at all times.",
+    title: "classesPage.equipment.wing.leash.title",
+    description: "classesPage.equipment.wing.leash.description",
     image: wingImg5,
-    label: "Safety Leash",
-    subtitle: "Coil leash for wrist and waist",
+    label: "classesPage.equipment.wing.leash.label",
+    subtitle: "classesPage.equipment.wing.leash.subtitle",
     icon: "link"
   }
 ]

@@ -21,6 +21,182 @@
     "spanish": "Español",
     "french": "Français"
   },
+"classesPage": {
+    "hero": {
+      "title": "KITESURF Y WINGFOIL EN EL CLUB",
+      "subtitle": "Sesiones privadas y en grupos pequeños sin alojamiento."
+    },
+    "intro": {
+      "title": "Aprende Kitesurf en el Club",
+      "text": "La primera vez que se vio a alguien practicando wingfoil fue en 2019, cuando Robby Naish apareció en Hawái sobre una tabla con un foil y manejando un ala. Esas imágenes causaron tanta emoción que en pocos meses empezamos a ver videos y fotos en todas las redes sociales de diferentes tipos de alas y personas practicando este extraño deporte. Bueno, no ha pasado mucho tiempo para que podamos ver el auge de este deporte e innumerables velas por todas las playas y lagos. Sin duda un deporte que dejará muchos fans.",
+      "hoverAlt": "Acción en clase de kitesurf"
+    },
+    "pricing": {
+      "intro": {
+        "title": "Clase Introductoria",
+        "duration": "1 día | 2 horas/día",
+        "price": "$120 / persona",
+        "features": [
+          "Ideal para primera experiencia",
+          "Instrucción personalizada",
+          "Todo el equipo premium incluido",
+          "Soporte por walkie-talkie"
+        ]
+      },
+      "fundamental": {
+        "title": "Clase Fundamental",
+        "duration": "3 días | 2 horas/día",
+        "price": "$350 / persona",
+        "features": [
+          "Diseñada por instructores expertos",
+          "Progresión personalizada",
+          "Equipo premium incluido",
+          "Foto profesional durante la clase"
+        ]
+      },
+      "advance": {
+        "title": "Clase Avanzada",
+        "duration": "3 días | 3 horas/día",
+        "price": "$500 / persona",
+        "features": [
+          "Enfoque en técnica avanzada",
+          "Más tiempo de práctica",
+          "Grabación y análisis en video",
+          "Tomas opcionales con dron"
+        ]
+      },
+      "master": {
+        "title": "Masterclass Completa",
+        "duration": "5 días | Horario flexible",
+        "price": "$600 / persona",
+        "features": [
+          "Programa completo",
+          "Análisis detallado de técnica",
+          "Seguimiento de rendimiento",
+          "Sesión de evaluación final"
+        ]
+      }
+    },
+    "wingfoilPricing": {
+      "intro": {
+        "title": "Clase Introductoria",
+        "duration": "1 día | 2 horas/día",
+        "price": "$120 / persona",
+        "features": [
+          "Descubre los conceptos básicos del Wingfoil",
+          "Teoría + ejercicios de equilibrio en tierra",
+          "Sesión en agua para maniobras básicas",
+          "Equipo completo proporcionado",
+          "Experiencia personalizada"
+        ]
+      },
+      "fundamental": {
+        "title": "Clase Fundamental",
+        "duration": "3 días | 2 horas/día",
+        "price": "$350 / persona",
+        "features": [
+          "Base sólida y técnicas de seguridad",
+          "Ejercicios de dominio del ala",
+          "Entrenamiento de equilibrio en foil",
+          "Maniobras específicas en el agua",
+          "Equipo completo proporcionado"
+        ]
+      },
+      "advanced": {
+        "title": "Curso Avanzado",
+        "duration": "3 días | 3 horas/día",
+        "price": "$500 / persona",
+        "features": [
+          "Perfecciona maniobras avanzadas",
+          "Sesiones técnicas + teóricas",
+          "Control en condiciones variadas",
+          "Análisis de video opcional",
+          "Equipo premium"
+        ]
+      },
+      "master": {
+        "title": "Masterclass Completa",
+        "duration": "5 días | Horario flexible",
+        "price": "$600 / persona",
+        "features": [
+          "De fundamentos a avanzado",
+          "Entrenamiento técnico en profundidad",
+          "Ejercicios avanzados de Wingfoil",
+          "Sesiones de análisis en video",
+          "Certificado de finalización"
+        ]
+      }
+    },
+    "benefits": {
+      "item1": "Calidad Garantizada – Instructores certificados con amplia experiencia.",
+      "item2": "Equipo de Vanguardia – Últimas tecnologías en alas y tablas.",
+      "item3": "Seguridad Prioritaria – Grupos pequeños y soporte constante.",
+      "item4": "Recuerdos Inolvidables – Material visual profesional.",
+      "item5": "Flexibilidad Total – Programas adaptados a tus necesidades."
+    },
+    "equipment": {
+      "kitesurfTitle": "Equipo de Kitesurf",
+      "wingfoilTitle": "Equipo de Wingfoil",
+      "kite": {
+        "kites": {
+          "title": "Cometas de Última Generación",
+          "description": "Modelos recientes revisados diariamente para garantizar tu seguridad y máximo rendimiento.",
+          "label": "Cometa",
+          "subtitle": "Varias medidas (5m - 14m)"
+        },
+        "boards": {
+          "title": "Tablas TwinTip Premium",
+          "description": "Tablas de alto rendimiento diseñadas para freeride y freestyle avanzado.",
+          "label": "Tablas TwinTip",
+          "subtitle": "Para freeride y freestyle"
+        },
+        "bars": {
+          "title": "Barras y Sistemas de Control",
+          "description": "Sistemas de control con líneas resistentes y sistemas de seguridad de liberación rápida certificados.",
+          "label": "Barra y Sistemas de Control",
+          "subtitle": "Sistemas de seguridad modernos"
+        },
+        "safety": {
+          "title": "Arneses y Equipo de Seguridad",
+          "description": "Comodidad y protección esenciales con arneses ergonómicos, chalecos de impacto y cascos ajustables.",
+          "label": "Arneses y Equipo de Seguridad",
+          "subtitle": "Chalecos de impacto y cascos"
+        }
+      },
+      "wing": {
+        "wings": {
+          "title": "Alas Ligeras y Potentes",
+          "description": "Equipo diseñado para aprovechar tanto vientos ligeros como fuertes...",
+          "label": "Ala",
+          "subtitle": "Duotone Units y Slicks"
+        },
+        "boards": {
+          "title": "Tablas Especializadas de Foil",
+          "description": "Tablas estables y ligeras con volúmenes ideales para principiantes y expertos...",
+          "label": "Tablas de Foil Especializadas",
+          "subtitle": "Volúmenes desde 80L hasta 120L"
+        },
+        "foils": {
+          "title": "Hydrofoils de Carbono",
+          "description": "Mástiles y alas de carbono de alto módulo para un deslizamiento suave y máxima velocidad.",
+          "label": "Hydrofoils de Carbono",
+          "subtitle": "Mástiles y alas de carbono"
+        },
+        "pump": {
+          "title": "Kit de Inflado y Mantenimiento",
+          "description": "Todo lo que necesitas para preparar tu equipo: bombas de alta presión y kits de reparación.",
+          "label": "Bomba y Accesorios",
+          "subtitle": "Inflado rápido y reparación"
+        },
+        "leash": {
+          "title": "Leash de Seguridad Certificado",
+          "description": "Mantén tu equipo conectado a ti en todo momento.",
+          "label": "Leash de Seguridad",
+          "subtitle": "Leash tipo espiral para muñeca y cintura"
+        }
+      }
+    }
+  },
   "footer": {
     "tagline": "Escuela de Kitesurf con sede en Máncora, Perú",
     "rights": "© Todos los derechos reservados | Máncora Kite Club",

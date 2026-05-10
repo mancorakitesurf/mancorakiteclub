@@ -1,17 +1,18 @@
 import ArticleFinalCallToActionBase from "../../blogShared/ArticleFinalCallToActionBase.jsx"
 import ctaImage from "../../../assets/imagenes-home/posicion5.jpg"
+import { useI18n } from '../../../app/providers/i18nContext'
 
 function MancoraVsLobitosFinalCallToAction() {
+  const { t } = useI18n()
+
   return (
     <ArticleFinalCallToActionBase
-      eyebrow="Best Base"
-      title="When the comparison ends, the most bookable answer still points to Mancora"
-      description="Lobitos and Cabo Blanco give the article its tension, but Mancora is the destination that closes the decision with warmth, versatility, and a much stronger long-stay feel."
+      eyebrow={t('blogMancoraVsLobitos.cta.eyebrow')}
+      title={t('blogMancoraVsLobitos.cta.title')}
+      description={t('blogMancoraVsLobitos.cta.desc')}
       image={ctaImage}
-      imageAlt="Premium beach destination atmosphere in northern Peru"
-      buttonLabel="Ir a Máncora Kite Club"
+      buttonLabel={t('blogMancoraVsLobitos.cta.btn')}
     />
   )
 }
-
 export default MancoraVsLobitosFinalCallToAction

@@ -1,27 +1,30 @@
 import ArticleIntroBase from "../../blogShared/ArticleIntroBase.jsx"
 import imageOne from "../../../assets/imagenes-kitsurfing-lessons/posicionk6.jpg"
 import imageTwo from "../../../assets/imagenes-home/posicion3.jpg"
+import { useI18n } from '../../../app/providers/i18nContext'
 
 function IntroPeruKitesurf() {
+  const { t } = useI18n()
+
   return (
     <ArticleIntroBase
-      eyebrow="North vs South"
-      title="Peru makes more sense when you stop asking only where the wind blows and start asking what kind of week you want."
+      eyebrow={t('blogNorthVsSouth.intro.eyebrow')}
+      title={t('blogNorthVsSouth.intro.title')}
       paragraphs={[
-        "Southern Peru is efficient, colder, and often more mission-driven. Northern Peru is warmer, more flexible, and easier to enjoy as a full travel experience rather than a session-count exercise. Neither is automatically better. The difference is in the kind of rider and traveler each coast serves.",
-        "That is why the best Peru guide cannot just list spots. It has to explain atmosphere, recovery, mixed-group appeal, and where a stay is most likely to extend naturally. When those factors matter, Mancora starts to look less like one option among many and more like the strongest final base.",
+        t('blogNorthVsSouth.intro.p1'),
+        t('blogNorthVsSouth.intro.p2'),
       ]}
-      quote="The best region is not the one with the loudest reputation. It is the one that matches the trip you are actually trying to build."
+      quote={t('blogNorthVsSouth.intro.quote')}
       images={[
         {
           src: imageOne,
           alt: "Beginner-friendly kitesurf setup and instruction zone",
-          caption: "For progression blocks, the environment around the session matters almost as much as the wind itself.",
+          caption: t('blogNorthVsSouth.intro.caption1'),
         },
         {
           src: imageTwo,
           alt: "Wide travel landscape and Peru coast atmosphere",
-          caption: "Peru feels like two different kitesurf countries depending on whether you head south for efficiency or north for range.",
+          caption: t('blogNorthVsSouth.intro.caption2'),
         },
       ]}
     />

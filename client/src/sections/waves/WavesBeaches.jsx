@@ -1,6 +1,8 @@
 import { BEACHES } from './wavesContent.js'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function WavesBeaches() {
+  const { t } = useI18n()
   // Split beaches into layout groups
   const mancora = BEACHES.find((b) => b.name === 'Mancora')
   const losOrganos = BEACHES.find((b) => b.name === 'Los Organos')
@@ -13,7 +15,7 @@ function WavesBeaches() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
-            Featured Beaches in Northern Peru
+            {t('sections.waves.featuredBeaches')}
           </h2>
         </div>
 

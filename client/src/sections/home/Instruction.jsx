@@ -6,15 +6,18 @@ import {
   FaVideo,
 } from 'react-icons/fa'
 import { INSTRUCTION_IMAGE } from './homeContent.js'
-
-const BENEFITS = [
-  { icon: FaCertificate, text: 'Certified IKO Instructors' },
-  { icon: FaUserFriends, text: 'Small Group Sizes (Max 2:1)' },
-  { icon: FaVideo, text: 'Video Analysis & Radio Helmets' },
-  { icon: FaShieldAlt, text: 'Premium Safety Equipment' },
-]
+import { useI18n } from '../../app/providers/i18nContext'
 
 function Instruction() {
+  const { t } = useI18n()
+
+  const BENEFITS = [
+    { icon: FaCertificate, key: 'sections.home.instructionBenefit1' },
+    { icon: FaUserFriends, key: 'sections.home.instructionBenefit2' },
+    { icon: FaVideo, key: 'sections.home.instructionBenefit3' },
+    { icon: FaShieldAlt, key: 'sections.home.instructionBenefit4' },
+  ]
+
   return (
     <section
       id="classes"
@@ -33,23 +36,21 @@ function Instruction() {
           </div>
           <div className="w-full lg:w-1/2">
             <h2 className="mb-6 font-display text-2xl font-bold dark:text-white sm:text-3xl md:text-4xl lg:text-5xl">
-              World-Class Instruction
+              {t('sections.home.instructionTitle')}
             </h2>
             <p className="mb-8 text-base leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg">
-              Learn from the best. Our certified IKO instructors ensure safety while pushing your
-              limits. Whether it&apos;s your first time on a board or you&apos;re landing kiteloops,
-              we have the expertise to guide you.
+              {t('sections.home.instructionDesc')}
             </p>
             <ul className="mb-10 space-y-4">
               {BENEFITS.map((benefit) => {
                 const Icon = benefit.icon
                 return (
-                  <li key={benefit.text} className="group flex items-center gap-4">
+                  <li key={benefit.key} className="group flex items-center gap-4">
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white dark:bg-primary/20">
                       <Icon />
                     </span>
                     <span className="text-sm font-medium leading-relaxed text-gray-700 dark:text-gray-200 sm:text-base">
-                      {benefit.text}
+                      {t(benefit.key)}
                     </span>
                   </li>
                 )
@@ -59,7 +60,7 @@ function Instruction() {
               href="#team"
               className="inline-flex min-h-12 items-center gap-2 border-b-2 border-primary pb-1 text-sm font-bold uppercase tracking-widest text-primary transition-colors hover:text-teal-400"
             >
-              Meet Our Team <FaArrowRight />
+              {t('sections.home.meetOurTeam')} <FaArrowRight />
             </a>
           </div>
         </div>

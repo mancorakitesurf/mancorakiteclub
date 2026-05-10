@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
 import { PRIVATE_CLASSES } from "./classesData"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function ClassesSteps() {
+  const { t } = useI18n()
   return (
     <section className="relative bg-[#0f1416] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -15,10 +17,10 @@ function ClassesSteps() {
         className="mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
-          YOUR KITESURF JOURNEY
+          {t('sections.classes.journeyTitle')}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-gray-400 sm:text-base md:text-lg">
-          Step by step progression with certified instructors and premium gear.
+          {t('sections.classes.journeyDesc')}
         </p>
       </motion.div>
 
@@ -80,7 +82,7 @@ function ClassesSteps() {
                   rel="noopener noreferrer"
                   className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 font-bold text-[#0f1416] transition hover:bg-white sm:w-auto"
                 >
-                  BOOK NOW
+                  {t('sections.classes.bookNow')}
                 </a>
               </div>
             </motion.div>

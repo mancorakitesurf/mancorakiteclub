@@ -1,5 +1,5 @@
 import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa'
-import { useI18n } from '../../app/providers/i18nContext.jsx';
+import { useI18n } from '../../app/providers/i18nContext';
 import footerBrandLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
 import logoDuotone from '../../assets/LOGOS KITE CLUB/Logo-duotone.webp'
 import logoOzone from '../../assets/LOGOS KITE CLUB/Logo_ozone.webp'
@@ -80,59 +80,59 @@ function Footer() {
           </div>
 
           <div className="flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:px-2 lg:text-left xl:pl-8">
-            <h4 className="mb-5 text-base font-bold text-white">Explore</h4>
+            <h4 className="mb-5 text-base font-bold text-white">{t('sections.footer.explore')}</h4>
             <ul className="space-y-1.5 text-sm text-white">
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Our Trips
+                  {t('sections.footer.ourTrips')}
                 </a>
               </li>
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Accommodation
+                  {t('sections.footer.accommodation')}
                 </a>
               </li>
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Kite Lessons
+                  {t('sections.footer.kiteLessons')}
                 </a>
               </li>
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Packages
+                  {t('sections.footer.packages')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:text-left">
-            <h4 className="mb-5 text-base font-bold text-white">Company</h4>
+            <h4 className="mb-5 text-base font-bold text-white">{t('sections.footer.company')}</h4>
             <ul className="space-y-1.5 text-sm text-white">
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  About Us
+                  {t('sections.footer.aboutUs')}
                 </a>
               </li>
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Our Instructors
+                  {t('sections.footer.ourInstructors')}
                 </a>
               </li>
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Contact
+                  {t('sections.footer.contact')}
                 </a>
               </li>
               <li>
                 <a className="inline-flex min-h-10 items-center transition-colors hover:text-white" href="#">
-                  Privacy Policy
+                  {t('sections.footer.privacyPolicy')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="flex w-full max-w-sm flex-col items-center text-center lg:items-start lg:text-left">
-            <h4 className="mb-5 text-base font-bold text-white">Contact</h4>
+            <h4 className="mb-5 text-base font-bold text-white">{t('sections.footer.contact')}</h4>
             <ul className="space-y-3 text-sm leading-7 text-white">
               <li className="flex items-start justify-center gap-3 text-center lg:justify-start lg:text-left">
                 <FaMapMarkerAlt className="mt-1 shrink-0 text-white" />
@@ -158,7 +158,7 @@ function Footer() {
 
         <div className="mt-8 pt-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-white">
-            Official Partners
+            {t('sections.footer.officialPartners')}
           </p>
 
           <div className="mt-6 grid grid-cols-2 items-center justify-items-center gap-x-6 gap-y-6 sm:gap-x-8 lg:grid-cols-4 lg:gap-x-10 xl:gap-x-14">

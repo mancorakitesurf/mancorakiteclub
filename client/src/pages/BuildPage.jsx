@@ -1,5 +1,5 @@
 import SEO from '../components/SEO.jsx'
-import { useI18n } from '../app/providers/i18nContext.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
@@ -412,7 +412,7 @@ function StepHeading({ index, title, subtitle }) {
 function PasoActividad({ actividad, setActividad }) {
   return (
     <div>
-      <StepHeading index={1} title="Choose your activity" subtitle="What do you want to do in Máncora?" />
+      <StepHeading index={1} title={t('build.chooseActivity', { defaultValue: 'Choose your activity' })} subtitle={t('build.chooseActivitySub', { defaultValue: 'What do you want to do in Máncora?' })} />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ACTIVIDADES.map((a) => {
           const selected = actividad === a.id
@@ -539,7 +539,7 @@ function NightCard({ n, i, selected, onClick }) {
 function PasoNoches({ noches, setNoches }) {
   return (
     <div>
-      <StepHeading index={2} title="How many nights?" subtitle="Select the duration of your stay." />
+      <StepHeading index={2} title={t('build.howManyNights', { defaultValue: 'How many nights?' })} subtitle={t('build.howManyNightsSub', { defaultValue: 'Select the duration of your stay.' })} />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -566,7 +566,7 @@ function PasoHoras({ horas, setHoras, actividad }) {
     <div>
       <StepHeading
         index={3}
-        title="Class hours"
+        title={t('build.classHours', { defaultValue: 'Class hours' })}
         subtitle={`$${precioHora} USD/hr · ${actividad}`}
       />
       <AnimatePresence>
@@ -655,7 +655,7 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
 
   return (
     <div>
-      <StepHeading index={4} title="Add extras" subtitle="Optional add-ons to complete your trip." />
+      <StepHeading index={4} title={t('build.addExtras', { defaultValue: 'Add extras' })} subtitle={t('build.addExtrasSub', { defaultValue: 'Optional add-ons to complete your trip.' })} />
 
       <div className="space-y-8">
         {EXTRAS_CATEGORIES.map((cat) => {
@@ -804,7 +804,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
 
   return (
     <div>
-      <StepHeading index={5} title="Trip summary" subtitle="Review and send your request." />
+      <StepHeading index={5} title={t('build.tripSummary', { defaultValue: 'Trip summary' })} subtitle={t('build.tripSummarySub', { defaultValue: 'Review and send your request.' })} />
 
       <div className="grid gap-5 lg:grid-cols-2">
         {/* Left — Summary */}
@@ -1047,13 +1047,13 @@ function BuildPage() {
           </motion.div>
 
           <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-tight text-white drop-shadow-2xl sm:text-7xl lg:text-[6.5rem]">
-            Build Your
+            {t('build.heroTitle1')}
             <br />
-            <span className="text-[#b7e28a]">Trip</span>
+            <span className="text-[#b7e28a]">{t('build.heroTitle2', { defaultValue: 'Trip' })}</span>
           </h1>
 
           <p className="mt-6 max-w-md text-sm font-medium uppercase tracking-[0.22em] text-white/40">
-            Customize every detail · Get your instant estimate
+            {t('build.heroSubtitle', { defaultValue: 'Customize every detail · Get your instant estimate' })}
           </p>
 
           <motion.button
@@ -1063,7 +1063,7 @@ function BuildPage() {
             whileTap={{ scale: 0.97 }}
             className="mt-10 flex items-center gap-2 rounded-full border border-[#b7e28a]/30 bg-[#b7e28a]/10 px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#b7e28a] backdrop-blur transition hover:bg-[#b7e28a]/18 hover:border-[#b7e28a]/50"
           >
-            Start building
+            {t('build.startBuilding')}
             <motion.span
               animate={{ y: [0, 3, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
@@ -1099,14 +1099,14 @@ function BuildPage() {
               <div className="mb-8 flex items-start justify-between">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-white/25">
-                    Trip Builder
+                    {t('build.tripBuilder')}
                   </p>
                   <h2 className="mt-1 text-xl font-black uppercase tracking-tight text-white sm:text-2xl">
                     Mancora Kite Club
                   </h2>
                 </div>
                 <div className="text-right">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/25">5 steps</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/25">{t('build.steps', { defaultValue: '5 steps' })}</p>
                   <p className="mt-1 text-sm font-black text-[#b7e28a]">
                     {paso} / 5
                   </p>
@@ -1164,7 +1164,7 @@ function BuildPage() {
                     whileTap={{ scale: 0.98 }}
                     className="flex min-h-10 items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold text-white/50 transition hover:border-white/20 hover:text-white/80"
                   >
-                    ← Back
+                    {t('build.back', { defaultValue: '← Back' })}
                   </motion.button>
                 ) : (
                   <span />
@@ -1181,7 +1181,7 @@ function BuildPage() {
                         exit={{ opacity: 0 }}
                         className="min-h-10 px-1 text-sm text-white/25 transition hover:text-white/50"
                       >
-                        Reset
+                        {t('build.reset', { defaultValue: 'Reset' })}
                       </motion.button>
                     )}
                   </AnimatePresence>
@@ -1195,7 +1195,7 @@ function BuildPage() {
                       whileTap={canNext ? { scale: 0.97 } : {}}
                       className="group flex min-h-10 items-center gap-2 rounded-xl bg-[#b7e28a] px-6 py-2 text-sm font-black uppercase tracking-[0.15em] text-black transition hover:brightness-95 hover:shadow-[0_0_24px_rgba(183,226,138,0.25)] disabled:cursor-not-allowed disabled:opacity-35"
                     >
-                      Next
+                      {t('build.next', { defaultValue: 'Next' })}
                       <span className="inline-block transition-transform group-hover:translate-x-[2px]" aria-hidden="true">→</span>
                     </motion.button>
                   )}

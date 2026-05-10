@@ -37,18 +37,27 @@ function translate(key, language) {
 }
 
 /**
- * Detectar idioma de la URL actual
- * @param {string} pathname - Ruta actual
+ * Detectar idioma de la URL actual de forma robusta.
+ * @param {string} pathname - Ruta actual (ej: '/', '/esp/classes', '/fr/trips/')
  * @returns {string} - 'en', 'es' o 'fr'
  */
 function getLanguageFromPath(pathname) {
+  if (!pathname) return 'en';
+
   // Normalizar: remover trailing slash si existe
   const normalized =
     pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname || '/'
 
-  if (normalized === '/esp' || normalized.endsWith('/esp')) return 'es'
-  if (normalized === '/fr' || normalized.endsWith('/fr')) return 'fr'
-  return 'en'
+  // Detección ESTRICTA basada en prefijos al inicio de la ruta
+  if (normalized === '/esp' || normalized.startsWith('/esp/')) {
+    return 'es';
+  }
+
+  if (normalized === '/fr' || normalized.startsWith('/fr/')) {
+    return 'fr';
+  }
+
+  return 'en';
 }
 
 export function I18nProvider({ children }) {

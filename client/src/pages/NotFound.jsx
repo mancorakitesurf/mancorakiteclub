@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import SEO from '../components/SEO.jsx'
 import Button from '../components/ui/Button.jsx'
 import Container from '../components/ui/Container.jsx'
-import { useI18n } from '../app/providers/i18nContext.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 
 function NotFound() {
   const { t } = useI18n()

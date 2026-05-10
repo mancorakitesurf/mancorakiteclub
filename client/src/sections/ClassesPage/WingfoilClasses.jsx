@@ -4,6 +4,7 @@ import wingFundamental from "../../assets/imagenes-wingfoil/posicionw2.jpg"
 import wingAdvanced from "../../assets/imagenes-wingfoil/posicionw4.jpg"
 import wingMaster from "../../assets/imagenes-wingfoil/posicionw5.jpg"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
+import { useI18n } from '../../app/providers/i18nContext'
 
 const WINGFOIL_CLASSES = [
   {
@@ -70,6 +71,7 @@ const WINGFOIL_CLASSES = [
 ]
 
 function WingfoilClasses() {
+  const { t } = useI18n()
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -85,10 +87,10 @@ function WingfoilClasses() {
         className="relative z-10 mx-auto mb-16 max-w-4xl text-center sm:mb-20 lg:mb-24"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          WINGFOIL CLASSES
+          {t('sections.classes.wingfoilClassesTitle')}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Private sessions with expert instructors and premium equipment.
+          {t('sections.classes.wingfoilClassesDesc')}
         </p>
       </motion.div>
 
@@ -144,7 +146,7 @@ function WingfoilClasses() {
                 rel="noopener noreferrer"
                 className="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-[#0E201F] hover:text-white"
               >
-                BOOK NOW
+                {t('sections.classes.bookNow')}
               </a>
             </div>
 
@@ -166,7 +168,7 @@ function WingfoilClasses() {
                 }}
                 className="absolute top-4 right-4 rounded-full bg-[#8ac43f] px-4 py-1 text-xs font-bold text-[#071a19]"
               >
-                MOST POPULAR
+                {t('sections.classes.mostPopular')}
               </motion.div>
             )}
           </motion.div>

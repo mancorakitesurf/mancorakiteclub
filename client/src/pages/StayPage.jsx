@@ -11,7 +11,7 @@ import { GiLotus, GiWhaleTail, GiScubaMask, GiTurtle } from "react-icons/gi"
 
 import StandardPage from "./StandardPage.jsx"
 import { buildWhatsAppUrl } from "../lib/whatsapp.js"
-import { useI18n } from "../app/providers/i18nContext.jsx"
+import { useI18n } from "../app/providers/i18nContext"
 
 import heroImg from "../assets/HOSPEDAJE KITE HOUSE/main.webp"
 import img1 from "../assets/HOSPEDAJE KITE HOUSE/cuartonazi.webp"

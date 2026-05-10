@@ -1,12 +1,14 @@
 import { FaCheck } from 'react-icons/fa'
 import { BENEFITS } from './wavesContent.js'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function WavesBenefits() {
+  const { t } = useI18n()
   return (
     <section className="bg-background-dark py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">Benefits</h2>
+          <h2 className="font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">{t('sections.waves.benefitsTitle')}</h2>
         </div>
 
         <ul className="space-y-8">

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useI18n } from '../../app/providers/i18nContext.jsx';
+import { useI18n } from '../../app/providers/i18nContext';
 import clubLogo from '../../assets/LOGOS KITE CLUB/kite-LOGO-COMPLETE.webp'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { useUIStore } from '../../store/useUIStore.js'

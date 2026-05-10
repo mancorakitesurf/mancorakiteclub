@@ -1,7 +1,10 @@
 import MotionReveal from "./MotionReveal.jsx"
 import ComparisonTable from "./ComparisonTable.jsx"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function ArticleSection({ section, index }) {
+  const { t } = useI18n()
+
   return (
     <MotionReveal
       className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_18px_52px_rgba(0,0,0,0.22)] backdrop-blur-xl sm:p-8"
@@ -9,7 +12,7 @@ function ArticleSection({ section, index }) {
     >
       <div className="flex flex-col gap-3">
         <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-          Section {index + 1}
+          {t('blogUI.sectionLabel')} {index + 1}
         </p>
         <h2 className="font-display text-3xl leading-tight text-white">{section.title}</h2>
       </div>

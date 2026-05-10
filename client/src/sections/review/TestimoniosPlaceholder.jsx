@@ -8,14 +8,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import reviewsData from '../../data/reviews.json';
+import { useI18n } from '../../app/providers/i18nContext';
 
 function TestimoniosPlaceholder() {
+  const { t } = useI18n();
+
   return (
     // Se agregó bg-[#0A1113] para el fondo sólido, relative y z-10
     <section className="relative z-10 w-full overflow-hidden bg-[#0A1113] px-6 py-20 sm:px-10 lg:px-16 border-t border-b border-transparent">
       <div className="mx-auto max-w-6xl text-center relative z-20">
         <h2 className="text-3xl md:text-4xl font-serif text-[#F4F2EA] mb-24 tracking-wide uppercase">
-          Nuestros Testimonios
+          {t('sections.review.ourTestimonials')}
         </h2>
         
         {reviewsData && reviewsData.length > 0 ? (
@@ -70,7 +73,7 @@ function TestimoniosPlaceholder() {
           </Swiper>
         ) : (
           <div className="mt-8 rounded-2xl border border-dashed border-[#F4F2EA]/30 bg-[#0A1113] p-8 shadow-sm text-center">
-            <p className="text-[#F4F2EA]">Cargando testimonios de la tribu...</p>
+            <p className="text-[#F4F2EA]">{t('sections.review.loadingTestimonials')}</p>
           </div>
         )}
       </div>

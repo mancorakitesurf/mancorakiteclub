@@ -1,7 +1,10 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function BlogIndexHero({ featuredPost }) {
+  const { t } = useI18n()
+
   return (
     <section className="relative overflow-hidden border-b border-white/10 bg-[#040b13] pt-28">
       <div className="absolute inset-0">
@@ -24,26 +27,26 @@ function BlogIndexHero({ featuredPost }) {
           className="max-w-4xl"
         >
           <div className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200">
-            The Peru Ocean Journal
+            {t('blogUI.heroLabel')}
           </div>
           <h1 className="mt-6 font-display text-5xl leading-tight text-white sm:text-6xl lg:text-7xl">
-            Premium surf and kitesurf stories that all point back to Mancora
+            {t('blogUI.heroTitle')}
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200/[0.85]">
-            Long lefts, wind windows, route design, and honest comparisons across Peru. Every article is built to help the reader end up in the place that is easiest to stay, ride, and book: Mancora Kite Club.
+            {t('blogUI.heroDesc')}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
               to={`/blog/${featuredPost.slug}`}
               className="inline-flex min-h-14 items-center justify-center rounded-full bg-cyan-300 px-7 text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-cyan-200"
             >
-              Read the featured guide
+              {t('blogUI.readFeatured')}
             </Link>
             <Link
               to="/"
               className="inline-flex min-h-14 items-center justify-center rounded-full border border-white/[0.15] bg-white/5 px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-cyan-300/[0.35] hover:text-cyan-200"
             >
-              Explore Mancora
+              {t('blogUI.exploreMancora')}
             </Link>
           </div>
         </motion.div>

@@ -8,7 +8,7 @@ import MancoraVsLobitosPage from "./MancoraVsLobitosPage.jsx"
 import PeruKitesurfPage from "./PeruKitesurfPage.jsx"
 import PacasmayoPage from "./PacasmayoPage.jsx"
 import SEO from "../../components/SEO.jsx"
-import { useI18n } from "../../app/providers/i18nContext.jsx"
+import { useI18n } from "../../app/providers/i18nContext"
 
 const STRUCTURED_PAGE_BY_SLUG = {
   "chicama-peru-surf-trip": ChicamaPage,

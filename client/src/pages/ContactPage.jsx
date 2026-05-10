@@ -1,5 +1,5 @@
 import StandardPage from './StandardPage.jsx'
-import { useI18n } from '../app/providers/i18nContext.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
 
 function ContactPage() {

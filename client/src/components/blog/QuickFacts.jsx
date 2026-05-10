@@ -1,17 +1,20 @@
 import MotionReveal from "./MotionReveal.jsx"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function QuickFacts({ facts }) {
+  const { t } = useI18n()
+
   return (
     <MotionReveal className="rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:p-8">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/70">
-            Fast Planning Notes
+            {t('blogUI.fastPlanning')}
           </p>
-          <h2 className="mt-3 font-display text-3xl text-white">What matters before you book</h2>
+          <h2 className="mt-3 font-display text-3xl text-white">{t('blogUI.whatMatters')}</h2>
         </div>
         <p className="max-w-xl text-sm leading-7 text-slate-300/80">
-          Clear facts remove friction. These are the conditions, travel cues, and level notes that shape the trip before emotion takes over.
+          {t('blogUI.factsDesc')}
         </p>
       </div>
 

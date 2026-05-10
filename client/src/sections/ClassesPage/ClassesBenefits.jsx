@@ -1,7 +1,10 @@
 import { motion } from "framer-motion"
 import { CLASSES_BENEFITS } from "./classesData"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function ClassesBenefits() {
+  const { t } = useI18n()
+
   return (
     <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       
@@ -14,10 +17,10 @@ function ClassesBenefits() {
         className="mx-auto mb-16 max-w-3xl text-center"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] text-white sm:text-3xl md:text-4xl lg:text-5xl">
-          BENEFITS
+          {t('sections.classes.benefitsTitle')}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Everything included to elevate your kitesurfing experience
+          {t('sections.classes.benefitsDesc')}
         </p>
       </motion.div>
 

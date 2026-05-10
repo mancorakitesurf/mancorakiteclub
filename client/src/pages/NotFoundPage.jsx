@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO.jsx'
-import { useI18n } from '../app/providers/i18nContext.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 
 function NotFoundPage() {
   const { t } = useI18n()

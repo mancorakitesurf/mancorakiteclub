@@ -2,7 +2,7 @@ import SEO from "../../components/SEO";
 import HeroChoiceKite from "../../sections/blogPage14/HeroChoiceKite";
 import TechnicalBreakdownKite from "../../sections/blogPage14/TechnicalBreakdownKite";
 import ProgressionAnalysisKite from "../../sections/blogPage14/ProgressionAnalysisKite";
-import { useI18n } from "../../app/providers/i18nContext.jsx";
+import { useI18n } from "../../app/providers/i18nContext";
 
 function BlogPage14() {
     const { t } = useI18n();

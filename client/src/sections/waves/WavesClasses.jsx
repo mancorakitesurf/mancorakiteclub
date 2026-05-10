@@ -1,12 +1,14 @@
 import { CLASSES } from './wavesContent.js'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function WavesClasses({ classes = CLASSES }) {
+  const { t } = useI18n()
   return (
     <section className="bg-[#8FB38A] py-16 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="font-display text-2xl font-bold text-background-dark sm:text-3xl md:text-4xl lg:text-5xl">
-            Classes For All Levels
+            {t('sections.waves.classesTitle')}
           </h2>
         </div>
 

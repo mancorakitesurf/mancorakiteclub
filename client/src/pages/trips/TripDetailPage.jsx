@@ -4,7 +4,7 @@ import { FaChevronDown, FaWhatsapp } from 'react-icons/fa'
 import SEO from '../../components/SEO.jsx'
 import { buildWhatsAppUrl } from '../../lib/whatsapp.js'
 import { trips, getTripBySlug } from '../../content/trips.js'
-import { useI18n } from '../../app/providers/i18nContext.jsx'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function formatUsd(value) {
   return `$${value}`

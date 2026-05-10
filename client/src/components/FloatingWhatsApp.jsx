@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
 import clubLogo from '../assets/Logo/LOGO-kite-new.png'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
+import { useI18n } from '../app/providers/i18nContext'
 
 const SCROLL_THRESHOLD = 140
 const ATTENTION_ANIMATION_INTERVAL = 8000
 const ATTENTION_ANIMATION_DURATION = 3000
 
 function FloatingWhatsApp({ link, message = '' }) {
+  const { t } = useI18n()
   const [isVisible, setIsVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [isAttentionOpen, setIsAttentionOpen] = useState(false)
@@ -65,7 +67,7 @@ function FloatingWhatsApp({ link, message = '' }) {
             : 'max-w-0 px-0 opacity-0 group-hover:max-w-xs group-hover:px-3 group-hover:opacity-100'
         }`}
       >
-        Get ready to fly
+        {t('floatingWhatsApp.tagline')}
       </span>
 
       <span className="relative flex h-14 w-14 items-center justify-center transition-transform duration-300 group-hover:scale-105 active:scale-95">

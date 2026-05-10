@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function JoinTribeCTA() {
+  const { t } = useI18n()
+
   return (
     <section className="relative overflow-hidden bg-[#031015] px-6 py-24 text-white sm:px-10 lg:px-16 lg:py-32">
       
@@ -27,25 +30,24 @@ function JoinTribeCTA() {
             {/* Text */}
             <div className="text-center lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#5af8fb]">
-                Join the Tribe
+                {t('sections.review.joinTribe')}
               </p>
 
               <h2 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl lg:text-7xl">
-                Start Your
+                {t('sections.review.startYour')}
                 <br />
-                Mancora Story
+                {t('sections.review.mancoraStory')}
               </h2>
 
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-                Plan your next session in Máncora with wind, ocean, community,
-                and real progression in one place.
+                {t('sections.review.joinDesc')}
               </p>
             </div>
 
             {/* CTA box */}
             <div className="rounded-[2rem] border border-white/10 bg-black/20 p-6 text-center shadow-inner">
               <p className="text-sm leading-7 text-white/70">
-                Tell us your dates, your level, and the kind of experience you want to build.
+                {t('sections.review.joinCTADesc')}
               </p>
 
               <motion.div
@@ -62,7 +64,7 @@ function JoinTribeCTA() {
                     transition hover:bg-white
                   "
                 >
-                  Build Your Trip
+                  {t('sections.review.buildYourTrip')}
                 </Link>
               </motion.div>
 

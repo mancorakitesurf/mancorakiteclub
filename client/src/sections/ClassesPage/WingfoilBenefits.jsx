@@ -1,14 +1,17 @@
 import { motion } from "framer-motion"
-
-const BENEFITS = [
-  "Guaranteed Quality – Certified instructors with extensive experience.",
-  "Vanguard Team – Latest technologies in wings and boards.",
-  "Priority Security – Small groups and constant support.",
-  "Unforgettable memories – Professional visual material.",
-  "Total Flexibility – Programs adapted to your needs."
-]
+import { useI18n } from '../../app/providers/i18nContext'
 
 function WingfoilBenefits() {
+  const { t } = useI18n()
+
+  const BENEFIT_KEYS = [
+    'sections.classes.wingfoilBenefit1',
+    'sections.classes.wingfoilBenefit2',
+    'sections.classes.wingfoilBenefit3',
+    'sections.classes.wingfoilBenefit4',
+    'sections.classes.wingfoilBenefit5',
+  ]
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -24,16 +27,16 @@ function WingfoilBenefits() {
         className="relative z-10 mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          BENEFITS
+          {t('sections.classes.benefitsTitle')}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Everything included to elevate your kitesurfing experience
+          {t('sections.classes.benefitsDesc')}
         </p>
       </motion.div>
 
       {/* Benefits list */}
       <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-        {BENEFITS.map((benefit, i) => (
+        {BENEFIT_KEYS.map((key, i) => (
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 25 }}
@@ -50,7 +53,7 @@ function WingfoilBenefits() {
 
             {/* Text */}
             <p className="text-sm md:text-base text-white/90 leading-relaxed">
-              {benefit}
+              {t(key)}
             </p>
           </motion.div>
         ))}

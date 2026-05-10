@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FaArrowRight, FaWind } from 'react-icons/fa'
 import SEO from '../components/SEO.jsx'
 import { trips } from '../content/trips.js'
-import { useI18n } from '../app/providers/i18nContext.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 
 import heroImg from '../assets/imagenes-kitesurfing/posicionkt2.jpg'
 import firstFlyImg from '../assets/imagenes-kitesurfing/posicionkt1.jpg'

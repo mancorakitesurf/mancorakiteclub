@@ -1,24 +1,15 @@
-// Este archivo ha sido simplificado. 
-// La lógica de rutas multi-idioma ahora vive directamente en i18nContext.js y router.jsx
-// Se mantienen estas funciones por compatibilidad con código existente.
-
-export function normalizePath(pathname = '/') {
-  if (pathname.length > 1 && pathname.endsWith('/')) {
-    return pathname.slice(0, -1)
-  }
-  return pathname || '/'
+/**
+ * Prepend language prefix to a path.
+ * EN paths have no prefix; ES gets /esp, FR gets /fr.
+ */
+export function localizePath(path, lang) {
+  if (lang === 'en') return path;
+  
+  // Asignamos el prefijo correcto (con la 'p' para español)
+  const prefix = lang === 'es' ? '/esp' : '/fr';
+  
+  // Nos aseguramos de que la ruta siempre empiece con '/'
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  
+  return normalizedPath === '/' ? prefix : `${prefix}${normalizedPath}`;
 }
-
-// Actualizado para soportar el nuevo estándar de prefijos
-export function isSpanishPath(pathname = '/') {
-  const normalized = normalizePath(pathname)
-  return normalized === '/esp' || normalized.startsWith('/esp/')
-}
-
-export function isFrenchPath(pathname = '/') {
-  const normalized = normalizePath(pathname)
-  return normalized === '/fr' || normalized.startsWith('/fr/')
-}
-
-// Ya no necesitamos los mapas de diccionarios, 
-// el contexto hace el cambio dinámico.

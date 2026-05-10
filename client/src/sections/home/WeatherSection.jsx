@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
+import { useI18n } from '../../app/providers/i18nContext'
 
 const WEATHER_URL = 'https://api.open-meteo.com/v1/forecast'
 const MARINE_URL = 'https://marine-api.open-meteo.com/v1/marine'
 const COORDS = { lat: -4.1046, lon: -81.0475 }
 
-const getWindStatus = (kts) => {
-  if (kts < 10) return { label: 'Light', color: 'text-slate-400', bg: 'bg-slate-400/10 border-slate-400/30', bar: 'bg-slate-400' }
-  if (kts <= 22) return { label: 'Ideal', color: 'text-primary', bg: 'bg-primary/10 border-primary/30', bar: 'bg-primary' }
-  if (kts <= 30) return { label: 'Strong', color: 'text-orange-400', bg: 'bg-orange-400/10 border-orange-400/30', bar: 'bg-orange-400' }
-  return { label: 'Extreme', color: 'text-red-500', bg: 'bg-red-500/10 border-red-500/30', bar: 'bg-red-500' }
+const getWindStatus = (kts, t) => {
+  if (kts < 10) return { label: t('sections.home.windLight'), color: 'text-slate-400', bg: 'bg-slate-400/10 border-slate-400/30', bar: 'bg-slate-400' }
+  if (kts <= 22) return { label: t('sections.home.windIdeal'), color: 'text-primary', bg: 'bg-primary/10 border-primary/30', bar: 'bg-primary' }
+  if (kts <= 30) return { label: t('sections.home.windStrong'), color: 'text-orange-400', bg: 'bg-orange-400/10 border-orange-400/30', bar: 'bg-orange-400' }
+  return { label: t('sections.home.windExtreme'), color: 'text-red-500', bg: 'bg-red-500/10 border-red-500/30', bar: 'bg-red-500' }
 }
 
 /* ── Wind streak lines ─────────────────────────────────────── */
@@ -75,6 +76,7 @@ function WaveAnim({ waveHeight }) {
 
 /* ── Section ───────────────────────────────────────────────── */
 function WeatherSection() {
+  const { t } = useI18n()
   const [data, setData] = useState({ temp: '--', wind: 0, wave: '--', loading: true })
 
   // Data fetch
@@ -99,12 +101,12 @@ function WeatherSection() {
   }, [])
 
   const knots     = Number(data.wind * 0.539).toFixed(1)
-  const windStatus = getWindStatus(Number(knots))
+  const windStatus = getWindStatus(Number(knots), t)
 
   if (data.loading) {
     return (
       <div className="animate-pulse bg-background-dark px-4 py-16 text-center text-xs uppercase tracking-[0.3em] text-secondary sm:py-20 lg:py-28">
-        Syncing Satellite Data...
+        {t('sections.home.syncing')}
       </div>
     )
   }
@@ -116,12 +118,12 @@ function WeatherSection() {
         {/* Header */}
         <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Live data · Máncora, Peru</p>
-            <h2 className="mt-2 font-display text-3xl text-white sm:text-4xl md:text-5xl">Spot Report</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t('sections.home.weatherBadge')}</p>
+            <h2 className="mt-2 font-display text-3xl text-white sm:text-4xl md:text-5xl">{t('sections.home.spotReport')}</h2>
           </div>
           <div className="flex items-center gap-2 self-start rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.2em] text-secondary sm:self-auto">
             <span className="h-2 w-2 animate-pulse rounded-full bg-primary shadow-[0_0_6px_#2A9D8F]" />
-            Live telemetry
+            {t('sections.home.liveTelemetry')}
           </div>
         </div>
 
@@ -153,7 +155,7 @@ function WeatherSection() {
             {/* Data zone */}
             <div className="flex flex-col items-center gap-4 p-6 text-center">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Wind velocity</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">{t('sections.home.windVelocity')}</p>
                 <p className="mt-1 font-display text-3xl text-white">
                   {data.wind} <span className="text-base font-normal text-secondary">km/h</span>
                 </p>
@@ -199,12 +201,12 @@ function WeatherSection() {
 
             {/* Data zone */}
             <div className="flex flex-col items-center gap-2 p-6 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Swell height</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">{t('sections.home.swellHeight')}</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-display text-5xl text-white">{data.wave}</span>
                 <span className="text-sm text-secondary">m</span>
               </div>
-              <p className="text-xs text-secondary">Clean wave formation</p>
+              <p className="text-xs text-secondary">{t('sections.home.cleanWave')}</p>
             </div>
           </div>
 
@@ -224,12 +226,12 @@ function WeatherSection() {
 
             {/* Data zone */}
             <div className="flex flex-col items-center gap-2 p-6 text-center">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">Air temperature</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary">{t('sections.home.airTemperature')}</p>
               <div className="flex items-baseline gap-2">
                 <span className="font-display text-5xl text-white">{data.temp}</span>
                 <span className="text-sm text-secondary">°C</span>
               </div>
-              <p className="text-xs text-secondary">Optimal riding climate</p>
+              <p className="text-xs text-secondary">{t('sections.home.optimalClimate')}</p>
             </div>
           </div>
 

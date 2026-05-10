@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
 import { PRIVATE_CLASSES } from "./classesData"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function ClassesPricing() {
+  const { t } = useI18n()
   return (
     <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -15,10 +17,10 @@ function ClassesPricing() {
         className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          KITE CLASSES
+          {t('sections.classes.kiteClassesTitle')}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Enjoy 100% personalized experience with IKO certified instructors and premium equipment.
+          {t('sections.classes.kiteClassesDesc')}
         </p>
       </motion.div>
 
@@ -83,7 +85,7 @@ function ClassesPricing() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#8ac43f] px-6 py-3 font-bold text-[#071a19] transition hover:bg-white"
               >
-                BOOK NOW
+                {t('sections.classes.bookNow')}
               </a>
             </div>
 
@@ -105,7 +107,7 @@ function ClassesPricing() {
                 }}
                 className="absolute top-5 right-5 rounded-full bg-[#8ac43f] px-4 py-1 text-xs font-bold text-[#071a19]"
               >
-                MOST POPULAR
+                {t('sections.classes.mostPopular')}
               </motion.div>
             )}
 

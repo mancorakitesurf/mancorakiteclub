@@ -78,8 +78,9 @@ function VideoTestimonios() {
             </motion.div>
 
             <div className="absolute bottom-8 left-8 right-8">
+              {/* AQUÍ ESTABA EL DETALLE: Aplicamos el t() al heroBadge */}
               <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#5af8fb]">
-                Mancora Kite Club
+                {t('sections.review.heroBadge')}
               </p>
 
               <h3 className="mt-3 max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">

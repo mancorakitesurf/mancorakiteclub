@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
+import { useI18n } from '../../../../../app/providers/i18nContext';
 
 function BlogCard({ slug, category, title, date, author, image }) {
+  const { t } = useI18n()
+
   return (
     <Link to={`/blog/${slug}`} className="block">
       <article className="group overflow-hidden rounded-3xl bg-white shadow-sm transition duration-300 hover:shadow-xl">
@@ -29,7 +32,8 @@ function BlogCard({ slug, category, title, date, author, image }) {
           <div className="mt-4 flex items-center gap-3 text-sm text-slate-500">
             <span>{date}</span>
             <span className="h-1 w-1 rounded-full bg-slate-400"></span>
-            <span>By {author}</span>
+            {/* AQUÍ TRADUCIMOS EL "By" */}
+            <span>{t('blogUI.by')} {author}</span>
           </div>
         </div>
 

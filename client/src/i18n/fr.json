@@ -811,5 +811,154 @@
       "classesTitle": "Cours pour Tous les Niveaux",
       "benefitsTitle": "Avantages"
     }
+  },
+  "blogHero": {
+    "alt": "Kitesurfeur sautant au-dessus des vagues à Máncora",
+    "badge": "Le Journal",
+    "title1": "Kitesurf Pérou",
+    "title2": "Vagues et Histoires d'Océan",
+    "desc": "Nous explorons le vent, les vagues et la culture océanique du nord du Pérou. Histoires vraies, technique et style de vie depuis Máncora."
+  },
+  "blogUI": {
+    "heroLabel": "Le Journal de l'Océan au Pérou",
+    "heroTitle": "Histoires premium de surf et de kitesurf...",
+    "readFeatured": "Lire le guide à la une",
+    "loadMore": "Charger Plus d'Articles",
+    "loading": "Chargement...",
+    "by": "Par"
+  },
+  "blogSidebar": {
+    "planBadge": "Planifiez votre Voyage",
+    "planTitle": "Créez le voyage au Pérou qui correspond à votre vent, niveau et emploi du temps.",
+    "planDesc": "Évitez les recherches génériques et passez directement à un itinéraire qui correspond à vos objectifs de navigation, votre style de séjour et la meilleure période pour voyager.",
+    "planBtn": "Commencer",
+    "trendingBadge": "Les Plus Lus",
+    "trendingTitle": "Articles Populaires",
+    "trendingDesc": "Les histoires que les lecteurs utilisent pour comparer le vent, le déroulement du voyage et les meilleurs itinéraires vers le nord du Pérou.",
+    "trendingLabel": "Lecture Populaire"
+  },
+  "blogData": {
+    "posts": {
+      "top20": { "title": "Les 20 meilleures destinations au monde...", "category": "KITESURF DANS LES VAGUES", "date": "25 mai 2022", "author": "Axel" },
+      "plans7": { "title": "7 plans différents pour un voyage au Pérou", "category": "KITESURF PÉROU", "date": "16 mai 2022", "author": "Sergio Agamez" },
+      "chicama": { "title": "Chicama, Pérou : La plus longue vague du monde", "category": "SURF PÉROU", "date": "10 juin 2024", "author": "Axel" },
+      "mancoraVsLobitos": { "title": "Máncora vs Lobitos vs Cabo Blanco : Le meilleur spot", "category": "KITESURF PÉROU", "date": "20 juin 2024", "author": "Sergio Agamez" },
+      "northVsSouth": { "title": "Kitesurf au Pérou : Nord vs Sud — Guide des spots", "category": "KITESURF PÉROU", "date": "30 juin 2024", "author": "Miguelo" },
+      "pacasmayo": { "title": "Pacasmayo, Pérou : Le guide ultime de surf", "category": "SURF PÉROU", "date": "10 juillet 2024", "author": "Axel" },
+      "whyMancora": { "title": "Pourquoi Máncora est différent : Guide de progression", "category": "KITESURF PÉROU", "date": "20 juillet 2024", "author": "Sergio Agamez" },
+      "nights7": { "title": "7 Nuits à Máncora : Plan de Progression", "category": "PROGRESSION", "date": "10 juin 2023", "author": "Axel" },
+      "techniques": { "title": "Techniques pour les vagues : lire la houle et timing", "category": "TECHNIQUE", "date": "5 juillet 2023", "author": "Sergio Agamez" },
+      "mistakes": { "title": "Erreurs typiques et comment les corriger", "category": "COACHING", "date": "12 août 2023", "author": "Axel" },
+      "safari": { "title": "Kite Safari Nord du Pérou — Expéditions", "category": "EXPÉDITIONS", "date": "3 septembre 2023", "author": "Sergio Agamez" },
+      "whaleSeasonNorth": { "title": "Saison des baleines : naviguez avec les baleines", "category": "STYLE DE VIE", "date": "1 octobre 2023", "author": "Axel" },
+      "whaleSeasonMancora": { "title": "Saison des Baleines à Máncora", "category": "STYLE DE VIE", "date": "20 octobre 2023", "author": "Sergio Agamez" },
+      "wingfoilVsKite": { "title": "Wingfoil vs Kitesurf : Choisissez votre arme", "category": "WINGFOIL", "date": "15 novembre 2023", "author": "Axel" },
+      "safetyProgression": { "title": "Sécurité et Progression : L'avantage technique", "category": "SÉCURITÉ", "date": "5 décembre 2023", "author": "Sergio Agamez" }
+    },
+    "trending": {
+      "top20": { "title": "Les 20 meilleures destinations au monde pour le kitesurf dans les vagues", "alt": "Destination de vagues de kitesurf" },
+      "northVsSouth2": { "title": "Le guide des meilleurs spots de Kitesurf au Pérou", "alt": "Kitesurf au Pérou" },
+      "chicama": { "title": "Chicama, Pérou : La plus longue vague du monde + Comment organiser le Surf Trip", "alt": "Voyage de surf à Chicama" },
+      "mancoraVsLobitos": { "title": "Máncora vs Lobitos vs Cabo Blanco : Le meilleur spot de vagues au Pérou", "alt": "Máncora vs Lobitos vs Cabo Blanco" },
+      "northVsSouth": { "title": "Kitesurf au Pérou : Nord vs Sud — Guide des spots, saisons et vent", "alt": "Kitesurf au Pérou Nord vs Sud" },
+      "pacasmayo": { "title": "Pacasmayo, Pérou : Le guide ultime de surf en Point Break", "alt": "Guide de surf à Pacasmayo" },
+      "whyMancora": { "title": "Pourquoi Máncora est différent : Guide de progression dans les vagues", "alt": "Guide de progression des vagues à Máncora" }
+    }
+  },
+  "build": {
+    "buildEstimate": "Créez votre devis",
+    "estimatedTotal": "Total estimé",
+    "estimated": "Estimé",
+    "stepsLabel": {
+      "activity": "Activité",
+      "nights": "Nuits",
+      "classes": "Cours",
+      "extras": "Extras",
+      "summary": "Résumé"
+    },
+    "chooseActivity": "Choisissez votre activité",
+    "chooseActivitySub": "Que voulez-vous faire à Máncora ?",
+    "selected": "Sélectionné ↗",
+    "activities": {
+      "Kitesurf": { "label": "Kitesurf", "tagline": "Maîtrisez le vent, dominez l'eau" },
+      "Wingfoil": { "label": "Wingfoil", "tagline": "Volez au-dessus de la surface" },
+      "Surf": { "label": "Surf", "tagline": "Lisez la vague, surfez la proprement" },
+      "SUP": { "label": "SUP", "tagline": "Eau calme, pagaie forte" }
+    },
+    "howManyNights": "Combien de nuits ?",
+    "howManyNightsSub": "Sélectionnez la durée de votre séjour.",
+    "nightsCopy": {
+      "3": "Escapade rapide",
+      "5": "Voyage équilibré",
+      "7": "Semaine complète",
+      "10": "Séjour profond",
+      "14": "Réinitialisation totale"
+    },
+    "nights": "nuits",
+    "accommodation": "hébergement",
+    "classHours": "Heures de cours",
+    "noClasses": "Pas de cours — hébergement seul",
+    "hoursCopy": {
+      "0": "Hébergement seul",
+      "3": "Session intro",
+      "6": "Bloc de progression",
+      "10": "Amélioration forte",
+      "15": "Coaching complet"
+    },
+    "hrs": "hrs",
+    "hours": "heures",
+    "classes": "cours",
+    "addExtras": "Ajouter des extras",
+    "addExtrasSub": "Options pour compléter votre voyage.",
+    "extraCategories": {
+      "gear": "Équipement",
+      "experience": "Expériences",
+      "wellness": "Bien-être",
+      "logistics": "Logistique"
+    },
+    "extraOptions": {
+      "kiteGear": "Location complète Kitesurf",
+      "wingGear": "Location Wingfoil",
+      "surfGear": "Location Planche de surf",
+      "supGear": "Location SUP",
+      "dayTrip": "Excursion autres spots",
+      "supervision": "Supervision dans l'eau (autonomes)",
+      "massage": "Massage",
+      "transfer": "Transfert aéroport (paiement au chauffeur)",
+      "media": "Pack photo & vidéo"
+    },
+    "days": "Jours",
+    "extrasSelected": "extras sélectionnés",
+    "tripSummary": "Résumé du voyage",
+    "tripSummarySub": "Vérifiez et envoyez votre demande.",
+    "summary": {
+      "yourTrip": "Votre voyage",
+      "breakdown": "Détail",
+      "activity": "Activité",
+      "nights": "Nuits",
+      "classes": "Cours",
+      "extras": "Extras",
+      "noneSelected": "Aucun",
+      "totalEstimated": "Total estimé",
+      "finalPrice": "Prix final confirmé à la réservation",
+      "yourDetails": "Vos coordonnées",
+      "name": "Nom",
+      "email": "Email",
+      "namePlaceholder": "Votre nom complet",
+      "emailPlaceholder": "votre@email.com",
+      "enterDetails": "Entrez nom et email pour continuer",
+      "sendWhatsapp": "Envoyer via WhatsApp"
+    },
+    "heroTitle1": "Créez Votre",
+    "heroTitle2": "Voyage",
+    "heroSubtitle": "Personnalisez chaque détail · Obtenez votre devis",
+    "startBuilding": "Commencer",
+    "tripBuilder": "Créateur de Voyage",
+    "steps": "5 étapes",
+    "back": "← Retour",
+    "reset": "Réinitialiser",
+    "next": "Suivant",
+    "location": "4°06′N 81°03′W · Máncora, Pérou",
+    "club": "Mancora Kite Club"
   }
 }

@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom"
 import { TRENDING_POSTS } from "../../blogContent.js"
+import { useI18n } from '../../../../../app/providers/i18nContext' // Ajusta los ../ si Vite te pide subir más o menos niveles
 
 function BlogSidebar() {
-  const visibleTrendingPosts = TRENDING_POSTS.slice(0, 4)
+  const { t } = useI18n()
+  
+  // Tomamos los primeros 4 y aplicamos el truco ninja para traducirlos
+  const visibleTrendingPosts = TRENDING_POSTS.slice(0, 4).map(post => ({
+    ...post,
+    title: t(post.title),
+    alt: post.alt ? t(post.alt) : t(post.title)
+  }))
 
   return (
     <div className="flex flex-col gap-6">
@@ -14,22 +22,22 @@ function BlogSidebar() {
 
         <div className="relative">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-cyan-700/70">
-            Plan Your Trip
+            {t('blogSidebar.planBadge')}
           </p>
 
           <h3 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
-            Build the Peru trip that fits your wind, level, and time.
+            {t('blogSidebar.planTitle')}
           </h3>
 
           <p className="mt-4 text-sm leading-6 text-slate-600">
-            Skip the generic research loop and move straight into a route that matches your riding goals, stay style, and best travel window.
+            {t('blogSidebar.planDesc')}
           </p>
 
           <Link
             to="/build"
             className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-slate-950 px-6 text-sm font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-cyan-700"
-          style={{marginLeft:53}}>
-            Start Planning
+            style={{marginLeft:53}}>
+            {t('blogSidebar.planBtn')}
           </Link>
         </div>
       </section>
@@ -38,15 +46,15 @@ function BlogSidebar() {
       <section className="h-fit rounded-[1.75rem] border border-slate-200 bg-white p-6 pb-8 shadow-[0_20px_38px_rgba(15,23,42,0.08)]">
         <div className="border-b border-slate-200 pb-4">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-cyan-700/70">
-            Most Opened
+            {t('blogSidebar.trendingBadge')}
           </p>
 
           <h3 className="mt-2 text-xl font-semibold tracking-tight text-slate-950">
-            Trending Posts
+            {t('blogSidebar.trendingTitle')}
           </h3>
 
           <p className="mt-3 text-sm leading-6 text-slate-600">
-            Stories readers use to compare wind, travel flow, and the strongest routes into northern Peru.
+            {t('blogSidebar.trendingDesc')}
           </p>
         </div>
 
@@ -60,14 +68,14 @@ function BlogSidebar() {
               <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-slate-200">
                 <img
                   src={post.image}
-                  alt={post.alt || post.title}
+                  alt={post.alt}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
 
               <div className="min-w-0 flex-1">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-700/70">
-                  Trending Read
+                  {t('blogSidebar.trendingLabel')}
                 </p>
 
                 <p className="mt-2 text-sm font-semibold leading-5 text-slate-900 transition group-hover:text-cyan-700">

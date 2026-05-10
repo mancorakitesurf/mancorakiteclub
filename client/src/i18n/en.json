@@ -811,5 +811,154 @@
       "classesTitle": "Classes For All Levels",
       "benefitsTitle": "Benefits"
     }
+  },
+  "blogHero": {
+    "alt": "Kite surfer jumping over waves in Mancora",
+    "badge": "The Journal",
+    "title1": "Kitesurfing Peru",
+    "title2": "Wave Riding & Ocean Stories",
+    "desc": "We explore the wind, the waves, and the ocean culture of northern Peru. Real stories, technique, and lifestyle from Mancora."
+  },
+  "blogUI": {
+    "heroLabel": "The Peru Ocean Journal",
+    "heroTitle": "Premium surf and kitesurf stories...",
+    "readFeatured": "Read the featured guide",
+    "loadMore": "Load More Articles",
+    "loading": "Loading...",
+    "by": "By"
+  },
+  "blogSidebar": {
+    "planBadge": "Plan Your Trip",
+    "planTitle": "Build the Peru trip that fits your wind, level, and time.",
+    "planDesc": "Skip the generic research loop and move straight into a route that matches your riding goals, stay style, and best travel window.",
+    "planBtn": "Start Planning",
+    "trendingBadge": "Most Opened",
+    "trendingTitle": "Trending Posts",
+    "trendingDesc": "Stories readers use to compare wind, travel flow, and the strongest routes into northern Peru.",
+    "trendingLabel": "Trending Read"
+  },
+  "blogData": {
+    "posts": {
+      "top20": { "title": "The 20 World's best destinations...", "category": "KITESURF WAVE RIDING", "date": "May 25, 2022", "blogUI.by": "By", "author": "Axel" },
+      "plans7": { "title": "7 Different Plans of a Kitesurf Trip to Perú", "category": "KITESURFING PERU", "date": "May 16, 2022", "blogUI.by": "By", "author": "Sergio Agamez" },
+      "chicama": { "title": "Chicama, Peru: The Longest Wave in the World + How to Build the Ultimate Surf Trip", "category": "SURFING PERU", "date": "June 10, 2024", "blogUI.by": "By", "author": "Axel" },
+      "mancoraVsLobitos": { "title": "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru", "category": "KITESURFING PERU", "date": "June 20, 2024", "blogUI.by": "By", "author": "Sergio Agamez" },
+      "northVsSouth": { "title": "Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide", "category": "KITESURFING PERU", "date": "June 30, 2024", "blogUI.by": "By", "author": "Miguelo" },
+      "pacasmayo": { "title": "Pacasmayo, Peru: The Ultimate Point Break Surf Guide", "category": "SURFING PERU", "date": "July 10, 2024", "blogUI.by": "By", "author": "Axel" },
+      "whyMancora": { "title": "Why Mancora is Different: Kitesurf Wave Progression Guide", "category": "KITESURFING PERU", "date": "July 20, 2024", "blogUI.by": "By", "author": "Sergio Agamez" },
+      "nights7": { "title": "7 Nights in Máncora: Progression Plan", "category": "PROGRESSION", "date": "June 10, 2023", "blogUI.by": "By", "author": "Axel" },
+      "techniques": { "title": "Techniques for kitesurfing in waves: reading the swell, timing and control", "category": "TECHNIQUE", "date": "July 5, 2023", "blogUI.by": "By", "author": "Sergio Agamez" },
+      "mistakes": { "title": "Typical mistakes of the intermediate rider in waves and how to correct them", "category": "COACHING", "date": "August 12, 2023", "blogUI.by": "By", "author": "Axel" },
+      "safari": { "title": "Kite Safari Northern Peru — Expedition Series", "category": "EXPEDITIONS", "date": "September 3, 2023", "blogUI.by": "By", "author": "Sergio Agamez" },
+      "whaleSeasonNorth": { "title": "Whale Season in Northern Peru: sail with whales", "category": "LIFESTYLE", "date": "October 1, 2023", "blogUI.by": "By", "author": "Axel" },
+      "whaleSeasonMancora": { "title": "Mancora Whale Season — The Kinetic Tide", "category": "LIFESTYLE", "date": "October 20, 2023", "blogUI.by": "By", "author": "Sergio Agamez" },
+      "wingfoilVsKite": { "title": "Wingfoil vs Kitesurf: Choosing Your Weapon", "category": "WINGFOIL", "date": "November 15, 2023", "blogUI.by": "By", "author": "Axel" },
+      "safetyProgression": { "title": "Safety & Progression: The Technical Edge", "category": "SAFETY", "date": "December 5, 2023", "blogUI.by": "By", "author": "Sergio Agamez" }
+    },
+    "trending": {
+      "top20": { "title": "The 20 World's best destinations for kitesurfing waves", "alt": "Kitesurfing wave destination" },
+      "northVsSouth2": { "title": "The guide of the best Kitesurfing Spots in Peru", "alt": "Kitesurfing in Peru" },
+      "chicama": { "title": "Chicama, Peru: The Longest Wave in the World + How to Build the Ultimate Surf Trip", "alt": "Chicama surf trip" },
+      "mancoraVsLobitos": { "title": "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru", "alt": "Mancora vs Lobitos vs Cabo Blanco" },
+      "northVsSouth": { "title": "Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide", "alt": "Peru Kitesurf North vs South" },
+      "pacasmayo": { "title": "Pacasmayo, Peru: The Ultimate Point Break Surf Guide", "alt": "Pacasmayo surf guide" },
+      "whyMancora": { "title": "Why Mancora is Different: Kitesurf Wave Progression Guide", "alt": "Mancora wave progression guide" }
+    }
+  },
+  "build": {
+    "buildEstimate": "Build your estimate",
+    "estimatedTotal": "Estimated total",
+    "estimated": "Estimated",
+    "stepsLabel": {
+      "activity": "Activity",
+      "nights": "Nights",
+      "classes": "Classes",
+      "extras": "Extras",
+      "summary": "Summary"
+    },
+    "chooseActivity": "Choose your activity",
+    "chooseActivitySub": "What do you want to do in Máncora?",
+    "selected": "Selected ↗",
+    "activities": {
+      "Kitesurf": { "label": "Kitesurf", "tagline": "Harness the wind, own the water" },
+      "Wingfoil": { "label": "Wingfoil", "tagline": "Fly above the surface" },
+      "Surf": { "label": "Surf", "tagline": "Read the wave, ride it clean" },
+      "SUP": { "label": "SUP", "tagline": "Calm water, strong paddle" }
+    },
+    "howManyNights": "How many nights?",
+    "howManyNightsSub": "Select the duration of your stay.",
+    "nightsCopy": {
+      "3": "Fast escape",
+      "5": "Balanced trip",
+      "7": "Full week",
+      "10": "Deeper stay",
+      "14": "Rider reset"
+    },
+    "nights": "nights",
+    "accommodation": "accommodation",
+    "classHours": "Class hours",
+    "noClasses": "No classes — accommodation only",
+    "hoursCopy": {
+      "0": "Accommodation only",
+      "3": "Intro session",
+      "6": "Progression block",
+      "10": "Strong upgrade",
+      "15": "Full coaching"
+    },
+    "hrs": "hrs",
+    "hours": "hours",
+    "classes": "classes",
+    "addExtras": "Add extras",
+    "addExtrasSub": "Optional add-ons to complete your trip.",
+    "extraCategories": {
+      "gear": "Gear & Equipment",
+      "experience": "Experiences",
+      "wellness": "Wellness",
+      "logistics": "Logistics"
+    },
+    "extraOptions": {
+      "kiteGear": "Kitesurf full gear rental",
+      "wingGear": "Wingfoil rental",
+      "surfGear": "Surfboard rental",
+      "supGear": "SUP / Paddle rental",
+      "dayTrip": "Day trip to other spots",
+      "supervision": "Water supervision (independent riders)",
+      "massage": "Massage",
+      "transfer": "Airport transfer (direct payment to driver)",
+      "media": "Photo & video pack"
+    },
+    "days": "Days",
+    "extrasSelected": "extras selected",
+    "tripSummary": "Trip summary",
+    "tripSummarySub": "Review and send your request.",
+    "summary": {
+      "yourTrip": "Your trip",
+      "breakdown": "Breakdown",
+      "activity": "Activity",
+      "nights": "Nights",
+      "classes": "Classes",
+      "extras": "Extras",
+      "noneSelected": "None selected",
+      "totalEstimated": "Total estimated",
+      "finalPrice": "Final price confirmed on booking",
+      "yourDetails": "Your details",
+      "name": "Name",
+      "email": "Email",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "you@email.com",
+      "enterDetails": "Enter your name and email to continue.",
+      "sendWhatsapp": "Send via WhatsApp"
+    },
+    "heroTitle1": "Build Your",
+    "heroTitle2": "Trip",
+    "heroSubtitle": "Customize every detail · Get your instant estimate",
+    "startBuilding": "Start Building",
+    "tripBuilder": "Trip Builder",
+    "steps": "5 steps",
+    "back": "← Back",
+    "reset": "Reset",
+    "next": "Next",
+    "location": "4°06′N 81°03′W · Máncora, Perú",
+    "club": "Mancora Kite Club"
   }
 }

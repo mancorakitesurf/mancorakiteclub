@@ -8,10 +8,10 @@ function PeruKitesurfPage() {
   return (
     <>
       <SEO
-        title="Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide"
-        description="Kitesurfing guide to northern and southern Peru: seasons, travel style, progression, and why Máncora remains the best base for wind and waves. Book now!"
-        canonicalPath="/blog/peru-kitesurf-north-vs-south"
-        hreflang={{ en: "/", es: "/esp", default: "/" }}
+        titleKey="seo.blogPeruKitesurfTitle"
+        descKey="seo.blogPeruKitesurfDesc"
+        titleFallback="Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide"
+        descFallback="Kitesurfing guide to northern and southern Peru: seasons, travel style, progression, and why Máncora remains the best base for wind and waves. Book now!"
       />
 
       <HeroPeruKitesurf />

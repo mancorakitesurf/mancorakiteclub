@@ -8,10 +8,10 @@ function BlogPage2() {
   return (
     <>
       <SEO
-        title="Blog | 7 Different Plans of a Kitesurf Trip to Perú"
-        description="Seven unique ways to experience the wind, waves, and culture of Perú. From solo adventures to group trips, find your perfect kitesurfing plan in Máncora"
-        canonicalPath="/blog/7-different-plans-of-a-kitesurf-trip-to-peru"
-        hreflang={{ en: '/', es: '/esp', default: '/' }}
+        titleKey="seo.blog7PlansTitle"
+        descKey="seo.blog7PlansDesc"
+        titleFallback="Blog | 7 Different Plans of a Kitesurf Trip to Perú"
+        descFallback="Seven unique ways to experience the wind, waves, and culture of Perú. From solo adventures to group trips, find your perfect kitesurfing plan in Máncora"
       />
 
       <HeroSevenPlans />

@@ -1,6 +1,6 @@
 import { brandImages } from '../../config/images.js'
-import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaWhatsapp, FaYoutube } from 'react-icons/fa'
-import { useI18n } from '../../app/providers/i18nContext.js'
+import { FaEnvelope, FaFacebookF, FaInstagram, FaMapMarkerAlt, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import { useI18n } from '../../app/providers/i18nContext.jsx'
 
 const footerBrandLogo = brandImages.logoComplete
 const { duotone: logoDuotone, ozone: logoOzone, ride: logoRide, slingshot: logoSlingshot } = brandImages.sponsors
@@ -48,24 +48,39 @@ function Footer() {
             <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
               <a
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
-                href="#"
+                href="https://www.instagram.com/kiteclubmancora?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <FaInstagram />
               </a>
               <a
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
-                href="#"
+                href="https://www.facebook.com/MancoraKiteClub"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
               <a
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
-                href="#"
+                href="https://www.youtube.com/@mancorakiteclub4328"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="YouTube"
               >
                 <FaYoutube />
+              </a>
+              <a
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-primary"
+                href="https://www.tiktok.com/@kiteclubmancora?_r=1&_t=ZS-965ufttiqJt"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tiktok"
+              >
+                <FaTiktok />
               </a>
             </div>
           </div>

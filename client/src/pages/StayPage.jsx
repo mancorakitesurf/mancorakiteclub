@@ -1,5 +1,4 @@
 import { componentImages } from '../config/images.js'
-import { Link } from "react-router-dom"
 import {
   FaMapMarkerAlt,
   FaBed,
@@ -13,57 +12,59 @@ import StandardPage from "./StandardPage.jsx"
 import FullscreenHero from "../components/ui/FullscreenHero.jsx"
 import { createPresetHeroSlides } from "../lib/fullscreenHeroSlides.js"
 import { buildWhatsAppUrl } from "../lib/whatsapp.js"
-
+import { useI18n } from "../app/providers/i18nContext.jsx"
 
 const { heroImg, img1, img2, img3, img4, img5 } = componentImages["pages/StayPage.jsx"]
+
 function StayPage() {
-  const stayMessage =
-    "Hi! I'm interested in staying with you. My name is ... Dates: ... Number of guests: ..."
+  const { t, currentLang } = useI18n()
+
+  const stayMessage = t('stay.whatsappMessage')
 
   const amenities = [
     {
       icon: <GiLotus />,
-      title: "Yoga",
-      text: "Start your morning with yoga sessions by the sea.",
+      title: t('stay.yoga'),
+      text: t('stay.yogaDesc'),
     },
     {
       icon: <GiWhaleTail />,
-      title: "Whale Watching",
-      text: "Witness humpback whales in the warm Pacific waters of Máncora.",
+      title: t('stay.whaleWatching'),
+      text: t('stay.whaleWatchingDesc'),
     },
     {
       icon: <GiScubaMask />,
-      title: "Scuba Diving",
-      text: "Explore vibrant reefs and underwater life along the coast.",
+      title: t('stay.scubaDiving'),
+      text: t('stay.scubaDivingDesc'),
     },
     {
       icon: <GiTurtle />,
-      title: "Swim with Turtles",
-      text: "Snorkel alongside sea turtles in their natural habitat.",
+      title: t('stay.swimTurtles'),
+      text: t('stay.swimTurtlesDesc'),
     },
     {
       icon: <FaDumbbell />,
-      title: "Gym",
-      text: "Keep training with our on-site fitness area.",
+      title: t('stay.gym'),
+      text: t('stay.gymDesc'),
     },
     {
       icon: <FaUmbrellaBeach />,
-      title: "Beachfront Bungalows",
-      text: "Fall asleep to the sound of waves in oceanfront bungalows.",
+      title: t('stay.beachfrontBungalows'),
+      text: t('stay.beachfrontBungalowsDesc'),
     },
   ]
 
   const pricing = [
     {
       guests: 1,
-      label: "1 Person",
-      sublabel: "Private room",
+      label: t('stay.onePerson'),
+      sublabel: t('stay.privateRoom'),
       price: 50,
     },
     {
       guests: 2,
-      label: "2 Persons",
-      sublabel: "Same room",
+      label: t('stay.twoPersons'),
+      sublabel: t('stay.sameRoom'),
       price: 80,
     },
   ]
@@ -71,46 +72,45 @@ function StayPage() {
   const gallery = [
     {
       image: img1,
-      title: "Private Room",
-      label: "Comfort",
+      title: t('stay.galleryPrivateRoom'),
+      label: t('stay.galleryComfort'),
     },
     {
       image: img2,
-      title: "Bedroom",
-      label: "Rest",
+      title: t('stay.galleryBedroom'),
+      label: t('stay.galleryRest'),
     },
     {
       image: img3,
-      title: "Night View",
-      label: "Atmosphere",
+      title: t('stay.galleryNightView'),
+      label: t('stay.galleryAtmosphere'),
     },
     {
       image: img4,
-      title: "Swimming Pool",
-      label: "Lifestyle",
+      title: t('stay.galleryPool'),
+      label: t('stay.galleryLifestyle'),
     },
     {
       image: img5,
-      title: "The Lodge",
-      label: "Experience",
+      title: t('stay.galleryLodge'),
+      label: t('stay.galleryExperience'),
     },
   ]
 
   return (
     <StandardPage
-      title="Stay with us"
-      subtitle="A calm, premium base for your time in Máncora."
-      description="Premium accommodation in Máncora for kitesurfers and riders. Clean rooms with A/C, WiFi, hot water, breakfast. Calm base close to the best spots. Book direct!"
-      canonicalPath="/stay"
-      hreflang={{ en: "/stay", es: "/esp", default: "/" }}
+      titleKey="seo.stayTitle"
+      descKey="seo.stayDesc"
+      titleFallback="Stay with Us in Máncora | Máncora Kite Club"
+      descFallback="Premium accommodation in Máncora for kitesurfers and riders. Clean rooms with A/C, WiFi, hot water, breakfast. Calm base close to the best spots. Book direct!"
       fullWidth
     >
       <div className="overflow-hidden bg-white dark:bg-surface-dark">
         <FullscreenHero
           as="section"
-          eyebrow="Kite House"
-          title="Stay in Mancora"
-          subtitle="Clean rooms, calm spaces and easy beach days."
+          eyebrow={t('stay.heroLabel')}
+          title={t('stay.heroTitle')}
+          subtitle={t('stay.heroDesc')}
           density="compact"
           slides={createPresetHeroSlides('stay', {
             desktop: [heroImg, img4, img5],
@@ -119,10 +119,16 @@ function StayPage() {
           })}
           actions={[
             {
+              href: `/build${currentLang === 'en' ? '' : currentLang === 'fr' ? '/fr' : '/esp'}`,
+              label: t('common.buildYourTrip'),
+              className: "bg-primary text-white hover:bg-primary/90",
+            },
+            {
               href: buildWhatsAppUrl(stayMessage),
-              label: 'Book on WhatsApp',
+              label: t('common.bookOnWhatsApp'),
               icon: FaWhatsapp,
               external: true,
+              className: "border-white/50 text-white hover:bg-white hover:text-slate-950",
             },
           ]}
         />
@@ -131,24 +137,17 @@ function StayPage() {
         <section className="grid gap-10 px-6 py-20 sm:px-10 lg:grid-cols-[1fr_1.15fr] lg:px-16 lg:py-24">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-              What it is
+              {t('stay.introLabel')}
             </p>
 
             <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-slate-950 dark:text-white sm:text-5xl">
-              Comfort without overcomplication.
+              {t('stay.introTitle')}
             </h2>
           </div>
 
           <div className="space-y-5 text-base leading-8 text-slate-600 dark:text-slate-300">
-            <p>
-              Stay with us is a focused accommodation option for riders who want
-              comfort, simplicity, and easy planning during their time in Máncora.
-            </p>
-
-            <p>
-              Clean spaces, flexible structure, and a premium atmosphere make it a
-              strong base before and after your kite, surf, or wingfoil sessions.
-            </p>
+            <p>{t('stay.introP1')}</p>
+            <p>{t('stay.introP2')}</p>
           </div>
         </section>
 
@@ -156,11 +155,11 @@ function StayPage() {
         <section className="bg-slate-50 px-6 py-20 dark:bg-background-dark sm:px-10 lg:px-16">
           <div className="mb-12 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-              Amenities
+              {t('stay.amenitiesLabel')}
             </p>
 
             <h2 className="mt-4 font-display text-4xl font-bold text-slate-950 dark:text-white">
-              Everything you need to reset.
+              {t('stay.amenitiesTitle')}
             </h2>
           </div>
 
@@ -190,15 +189,15 @@ function StayPage() {
         <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
           <div className="mb-12 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-              Rates
+              {t('stay.ratesLabel')}
             </p>
 
             <h2 className="mt-4 font-display text-4xl font-bold text-slate-950 dark:text-white">
-              Bali Lodge Accommodation
+              {t('stay.ratesTitle')}
             </h2>
 
             <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-              Base prices per night — breakfast included with every stay.
+              {t('stay.ratesSubtitle')}
             </p>
           </div>
 
@@ -228,13 +227,13 @@ function StayPage() {
                     ${plan.price}
                   </span>
                   <span className="mb-2 text-sm text-slate-500 dark:text-slate-400">
-                    / night
+                    {t('stay.perNight')}
                   </span>
                 </div>
 
                 <p className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
                   <FaBed />
-                  Breakfast included
+                  {t('stay.breakfastIncluded')}
                 </p>
               </article>
             ))}
@@ -246,17 +245,16 @@ function StayPage() {
           <div className="mb-12 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-                Visual Gallery
+                {t('stay.galleryLabel')}
               </p>
 
               <h2 className="mt-4 font-display text-4xl font-bold text-slate-950 dark:text-white sm:text-5xl">
-                Real spaces, real stay.
+                {t('stay.galleryTitle')}
               </h2>
             </div>
 
             <p className="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-              A visual preview of the room, details, pool, and lodge atmosphere
-              designed for a quiet and comfortable stay in Máncora.
+              {t('stay.galleryDesc')}
             </p>
           </div>
 
@@ -343,21 +341,20 @@ function StayPage() {
 
           <div className="flex flex-col justify-center rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-surface-dark">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-              Location
+              {t('stay.locationLabel')}
             </p>
 
             <h2 className="mt-4 font-display text-4xl font-bold text-slate-950 dark:text-white">
-              Máncora, Peru
+              {t('stay.locationTitle')}
             </h2>
 
             <p className="mt-5 flex items-start gap-3 text-sm font-medium text-slate-700 dark:text-slate-200">
               <FaMapMarkerAlt className="mt-1 shrink-0 text-primary" />
-              Hotel The Point, Av. Piura s/n, Máncora 20851
+              {t('stay.locationAddress')}
             </p>
 
             <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
-              Located right on the Panamericana Norte, minutes from the beach and
-              the kite spot. Easy arrival from Piura or Tumbes airports.
+              {t('stay.locationDesc')}
             </p>
           </div>
         </section>
@@ -371,20 +368,19 @@ function StayPage() {
             <FaBed className="mx-auto text-4xl text-primary" />
 
             <h2 className="mt-6 font-display text-4xl font-bold sm:text-5xl">
-              Plan your stay.
+              {t('stay.ctaTitle')}
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
-              Build your package or contact us directly on WhatsApp with your
-              dates, number of guests, and preferred stay style.
+              {t('stay.ctaDesc')}
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                to="/build"
+                to={`/build${currentLang === 'en' ? '' : currentLang === 'fr' ? '/fr' : '/esp'}`}
                 className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-primary/90 sm:w-auto"
               >
-                Build your trip
+                {t('common.buildYourTrip')}
               </Link>
 
               <a
@@ -394,7 +390,7 @@ function StayPage() {
                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/40 px-7 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-slate-950 sm:w-auto"
               >
                 <FaWhatsapp />
-                Book on WhatsApp
+                {t('common.bookOnWhatsApp')}
               </a>
             </div>
           </div>

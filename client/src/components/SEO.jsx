@@ -1,19 +1,12 @@
 import { useEffect } from 'react'
-import { useI18n } from '../app/providers/i18nContext.js'
+import { useLocation } from 'react-router-dom'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 import { seoImages } from '../config/images.js'
 import { setSeoTags } from '../lib/seo.js'
 
 /**
- * Componente SEO mejorado con soporte multi-idioma y Open Graph
- * Usa el sistema i18n (t()) para traducciones dinámicas de meta tags
- *
- * @param {string} titleKey - Clave del JSON para el título (ej: 'seo.homeTitle')
- * @param {string} descKey - Clave del JSON para la descripción (ej: 'seo.homeDesc')
- * @param {string} titleFallback - Fallback si la key no existe
- * @param {string} descFallback - Fallback si la key no existe
- * @param {string} image - URL de imagen para Open Graph (og:image)
- * @param {string} canonicalPath - Ruta canónica relativa (ej: '/', '/trips')
- * @param {object} hreflang - Objeto con rutas por idioma {en: '/', es: '/esp', default: '/'}
+ * Componente SEO con soporte multi-idioma automático.
+ * Calcula automáticamente canonicalPath y hreflang basados en la URL actual.
  */
 function SEO({
   title,
@@ -23,24 +16,34 @@ function SEO({
   descKey = 'seo.homeDesc',
   titleFallback = 'Máncora Kite Club',
   descFallback = 'Escuela de Kitesurf y Wingfoil en Máncora, Perú',
-  canonicalPath = '/',
-  hreflang = { en: '/', es: '/esp', default: '/' },
 }) {
   const { t } = useI18n()
+  const location = useLocation()
 
-  // Obtener título y descripción del i18n o fallback
+  // Prioridad: Prop title/description > Traducción t(key) > Fallback
   const resolvedTitle = title ?? (t(titleKey) !== titleKey ? t(titleKey) : titleFallback)
   const resolvedDescription = description ?? (t(descKey) !== descKey ? t(descKey) : descFallback)
+
+  // Lógica para generar hreflangs automáticos
+  const basePath = location.pathname.replace(/^\/(esp|fr)(\/|$)/, '/');
+  const cleanPath = basePath === '/' ? '' : basePath;
+
+  const dynamicHreflang = {
+    en: cleanPath || '/',
+    es: `/esp${cleanPath}`,
+    fr: `/fr${cleanPath}`,
+    default: cleanPath || '/'
+  };
 
   useEffect(() => {
     setSeoTags({
       title: resolvedTitle,
       description: resolvedDescription,
       image,
-      canonicalPath,
-      hreflang,
+      canonicalPath: location.pathname,
+      hreflang: dynamicHreflang,
     })
-  }, [resolvedTitle, resolvedDescription, image, canonicalPath, hreflang])
+  }, [resolvedTitle, resolvedDescription, image, location.pathname])
 
   return null
 }

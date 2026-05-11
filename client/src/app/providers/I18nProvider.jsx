@@ -1,6 +1,6 @@
 import { useMemo, useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { I18nContext } from './i18nContext.js'
+import { I18nContext } from './i18nContext.jsx';
 import en from '../../i18n/en.json'
 import es from '../../i18n/es.json'
 import fr from '../../i18n/fr.json'

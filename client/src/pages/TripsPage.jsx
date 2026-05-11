@@ -6,7 +6,7 @@ import SEO from '../components/SEO.jsx'
 import FullscreenHero from '../components/ui/FullscreenHero.jsx'
 import { trips } from '../content/trips.js'
 import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
-
+import { useI18n } from '../app/providers/i18nContext.jsx'
 
 const { heroImg, firstFlyImg, olasVientoImg, soloSurfImg, rideCoastImg } = componentImages["pages/TripsPage.jsx"]
 const tripImages = [
@@ -24,6 +24,8 @@ const tripLabels = [
 ]
 
 function TripsPage() {
+  const { t, currentLang } = useI18n()
+
   return (
     <>
       <SEO
@@ -31,16 +33,14 @@ function TripsPage() {
         descKey="seo.tripsDesc"
         titleFallback="Kitesurf Trips in Máncora, Peru | Core Packages"
         descFallback="Discover kitesurfing, wingfoil, and surf trips in northern Peru. Full-day, 3-day, and 7-day packages with accommodation, coaching, and gear. Book your trip now."
-        canonicalPath="/trips"
-        hreflang={{ en: '/trips', es: '/esp/viajes', default: '/' }}
       />
 
       <main className="overflow-hidden bg-[#031015] text-white">
         <FullscreenHero
           as="section"
-          eyebrow="Mancora Kite Club"
-          title="Our Trips"
-          subtitle="Choose your route through wind, waves, coaching, surf, and the north coast of Peru."
+          eyebrow={t('tripsPage.heroLabel')}
+          title={`${t('tripsPage.heroTitle1')}\n${t('tripsPage.heroTitle2')}`}
+          subtitle={t('tripsPage.heroSubtitle')}
           slides={createPresetHeroSlides('kite', {
             desktop: [heroImg, firstFlyImg, olasVientoImg, soloSurfImg, rideCoastImg],
             alt: 'Mancora Kite Club trips',
@@ -49,7 +49,7 @@ function TripsPage() {
           actions={[
             {
               href: '#trip-list',
-              label: 'Explore Trips',
+              label: t('tripsPage.exploreTrips'),
             },
           ]}
         />
@@ -60,11 +60,14 @@ function TripsPage() {
             const image = tripImages[index % tripImages.length]
             const label = tripLabels[index] || trip.title
             const isEven = index % 2 === 0
+            
+            // Localizar ruta
+            const tripPath = `${currentLang === 'en' ? '' : currentLang === 'fr' ? '/fr' : '/esp'}${trip.path}`
 
             return (
               <Link
                 key={trip.slug}
-                to={trip.path}
+                to={tripPath}
                 className="group block"
               >
                 <motion.article
@@ -115,7 +118,7 @@ function TripsPage() {
                         }`}
                       >
                         <FaWind />
-                        {trip.subtitle || 'Trip Experience'}
+                        {trip.subtitle || t('tripsPage.tripExperience')}
                       </p>
 
                       <h2
@@ -144,7 +147,7 @@ function TripsPage() {
                         }`}
                       >
                         <span className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-7 text-sm font-black uppercase tracking-[0.2em] text-black transition group-hover:bg-white">
-                          View Details
+                          {t('tripsPage.viewDetails')}
                           <FaArrowRight className="transition duration-300 group-hover:translate-x-1" />
                         </span>
                       </div>
@@ -171,22 +174,22 @@ function TripsPage() {
             className="relative mx-auto max-w-4xl"
           >
             <p className="text-xs font-black uppercase tracking-[0.4em] text-[#5af8fb]">
-              Custom Trip Builder
+              {t('tripsPage.ctaLabel')}
             </p>
 
             <h2 className="mt-5 font-display text-4xl font-black uppercase leading-tight text-white sm:text-5xl lg:text-6xl">
-              Build the trip that fits your wind, level and time.
+              {t('tripsPage.ctaTitle')}
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              Create your own Máncora route with coaching, accommodation, extra activities and the best rhythm for your stay.
+              {t('tripsPage.ctaDesc')}
             </p>
 
             <Link
-              to="/build"
+              to={`/build${currentLang === 'en' ? '' : currentLang === 'fr' ? '/fr' : '/esp'}`}
               className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-8 text-sm font-black uppercase tracking-[0.22em] text-black transition hover:bg-white sm:w-auto"
             >
-              Build Your Trip
+              {t('tripsPage.ctaBtnText')}
               <FaArrowRight />
             </Link>
           </motion.div>

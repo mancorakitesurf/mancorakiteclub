@@ -3,10 +3,10 @@ import StandardPage from './StandardPage.jsx'
 function HostelPage() {
   return (
     <StandardPage
-      title="Mancora Kite Club | Hostel"
-      description="Budget hostel for kitesurfers in Máncora, Peru. Dorms & private rooms, kite storage, social area, direct beach access. Great vibes. Book now! Affordable rates!"
-      canonicalPath="/hostel"
-      hreflang={{ en: '/hostel', es: '/acommodation/hostal/esp', default: '/' }}
+      titleKey="seo.hostelTitle"
+      descKey="seo.hostelDesc"
+      titleFallback="Mancora Kite Club | Hostel"
+      descFallback="Budget hostel for kitesurfers in Máncora, Peru. Dorms & private rooms, kite storage, social area, direct beach access. Great vibes. Book now! Affordable rates!"
     />
   )
 }

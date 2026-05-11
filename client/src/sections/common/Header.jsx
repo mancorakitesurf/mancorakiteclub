@@ -1,9 +1,9 @@
 import { brandImages } from '../../config/images.js'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useI18n } from '../../app/providers/i18nContext.js'
+import { useI18n } from '../../app/providers/i18nContext.jsx'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { localizePath } from '../../lib/routes.js'
 import { useUIStore } from '../../store/useUIStore.js'
@@ -393,7 +393,7 @@ function Header() {
                   {otherLanguages.map((lang) => (
                     <motion.button
                       key={lang.code}
-                      whileHover={{ scale: 1.1, color: '#2A9D8F' }} // Primary color from tailwind config
+                      whileHover={{ scale: 1.1, color: '#2A9D8F' }}
                       onClick={() => {
                         changeLanguage(lang.code)
                         setIsMobileMenuOpen(false)
@@ -414,4 +414,3 @@ function Header() {
 }
 
 export default Header
-

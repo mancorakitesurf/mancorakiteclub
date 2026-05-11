@@ -17,14 +17,14 @@ import {
   SURF_CLASSES,
 } from '../../sections/waves/wavesContent.js'
 
-function WavesPage({ canonicalPath = '/waves' }) {
+function WavesPage() {
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Waves & Wind Trips"
-        description="Kitesurf, Wingfoil and Surfing trips across Northern Peru. Explore Mancora, Negritos, Los Organos, Cabo Blanco and Lobitos with professional coaching."
-        canonicalPath={canonicalPath}
-        hreflang={{ en: '/waves', es: '/waves/esp', default: '/' }}
+        titleKey="seo.wavesTitle"
+        descKey="seo.wavesDesc"
+        titleFallback="Mancora Kite Club | Waves & Wind Trips"
+        descFallback="Kitesurf, Wingfoil and Surfing trips across Northern Peru. Explore Mancora, Negritos, Los Organos, Cabo Blanco and Lobitos with professional coaching."
       />
 
       {/* ── Kitesurf block ── */}

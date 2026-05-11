@@ -1044,6 +1044,82 @@
       "btn": "Créez votre Voyage à Mancora"
     }
   },
+  "blogWingVsKite": {
+    "ui": {
+      "zone": "Zone",
+      "progression": "Progression"
+    },
+    "intro": {
+      "title": "La Dualité Cinétique du Courant de Humboldt",
+      "p1": "Le littoral péruvien offre une perfection mécanique rarement vue ailleurs. Poussés par le courant froid et implacable de Humboldt, les vents thermiques et les point breaks sans fin constituent un laboratoire unique pour les sports de glisse aérotractés.",
+      "p2": "Nous analysons la 'dualité cinétique' de ces disciplines. Alors que le kitesurf exploite la couche limite atmosphérique pour une puissance verticale, le wingfoil puise dans l'énergie de surface pour surfer de longues houles avec une traînée minimale."
+    },
+    "hero": {
+      "tag": "Analyse Technique",
+      "title": "Wingfoil vs Kitesurf :",
+      "highlight": "Le Choix Péruvien",
+      "description": "Une analyse technique de l'intensité du vent, de la dynamique des vagues et de la progression du rider dans le courant de Humboldt.",
+      "anchors": [
+        { "label": "Temp. Eau", "sub": "Constante" },
+        { "label": "Vecteur Vent", "sub": "Base" }
+      ]
+    },
+    "factors": [
+      {
+        "label": "Intensité du Vent",
+        "title": "Analyse de la Courbe de Puissance",
+        "desc": "Les profils d'efficacité divergent fortement en fonction des nœuds de vent. Le wingfoil trouve son point idéal dans la plage de 12 à 18 nœuds, tandis que le kitesurf atteint ses performances maximales dans le spectre de 18 à 25+ nœuds.",
+        "zones": [
+          { "name": "Zone de Wingfoil" },
+          { "name": "Zone de Kitesurf" }
+        ]
+      },
+      {
+        "label": "Dynamique des Vagues",
+        "title": "Extraction Hydrodynamique",
+        "desc": "Pour les gauches sans fin de Pacasmayo, le wingfoil est inégalé. Il permet au rider de neutraliser la traînée du vent et de surfer librement l'énergie de la houle. Le kitesurf offre des virages verticaux à grande vitesse, reposant sur une tension constante."
+      }
+    ],
+    "progression": {
+      "title": "La Transition Intermédiaire",
+      "desc": "Passer d'une discipline à l'autre nécessite de réinitialiser la mémoire musculaire.",
+      "cards": [
+        { "title": "Vers le Wingfoil", "text": "Nécessite de désapprendre une position rigide. L'attention se porte entièrement sur la pression du pied avant et l'équilibre du foil. L'aile n'est qu'un moteur." },
+        { "title": "Vers le Kitesurf", "text": "Exige une capacité exceptionnelle à faire plusieurs choses à la fois. Le contrôle de la carre doit devenir subconscient tout en dirigeant activement l'aile dans la fenêtre de vol." }
+      ]
+    }
+  },
+  "blogSafetyKite": {
+    "hero": {
+      "tag": "Coaching Technique",
+      "title": "Sécurité et Progression :",
+      "highlight": "L'Avantage Technique",
+      "description": "Pourquoi la précision mathématique et le retour visuel sont les piliers de l'avancement rapide dans le kitesurf de vagues."
+    },
+    "stats": [
+      { "label": "Temp. de l'Eau", "value": "18-20°C" },
+      { "label": "Vitesse du Vent", "value": "15-25 nœuds" },
+      { "label": "Saison Optimale", "value": "Août-Oct" }
+    ],
+    "mechanics": {
+      "title": "La Mécanique du Ratio 2:1",
+      "body": "Comprendre le rapport 2:1 dans la configuration de votre barre est essentiel pour un contrôle nuancé. Pour chaque pouce que vous tirez sur la barre, les lignes arrière s'engagent à un taux double, modifiant considérablement l'angle d'attaque.",
+      "bullets": [
+        "Réduit la fatigue du rider grâce à un effet de levier efficace.",
+        "Permet des micro-ajustements lors des bottom turns."
+      ]
+    },
+    "calibration": {
+      "title": "Dynamique des Rayons de Braquage",
+      "desc": "La relation entre la longueur de la ligne et le rayon de braquage définit votre placement sur la face de la vague. La manipulation de cet arc dicte la projection verticale.",
+      "boxTitle": "Calibration de l'Arc",
+      "boxBody": "Des lignes plus courtes (20m) diminuent le rayon de braquage, créant une rotation pivotante plutôt qu'un arc large. Essentiel pour les vagues rapides et creuses.",
+      "arcs": [
+        { "label": "Arc Standard", "value": "Lignes de 24m" },
+        { "label": "Arc Pivotant", "value": "Lignes de 20m" }
+      ]
+    }
+  },
   "blogWaveProgression": {
     "hero": {
       "badge": "Progression dans les Vagues",

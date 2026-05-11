@@ -1044,6 +1044,51 @@
       "btn": "Build Your Trip to Mancora"
     }
   },
+  "blogWingVsKite": {
+    "ui": {
+      "zone": "Zone",
+      "progression": "Progression"
+    },
+    "intro": {
+      "title": "The Kinetic Duality of the Humboldt Current",
+      "p1": "Peru's coastline offers a mechanical perfection rarely seen elsewhere. Driven by the cold, relentless push of the Humboldt Current, the thermal winds and endless pointbreaks present a unique laboratory for wind-driven water sports.",
+      "p2": "We analyze the 'kinetic duality' of these disciplines. While kitesurfing harnesses the atmospheric boundary layer for vertical power, wingfoiling taps into surface energy to surf long swells with minimal drag."
+    },
+    "hero": {
+      "tag": "Technical Analysis",
+      "title": "Wingfoil vs Kitesurf:",
+      "highlight": "The Peruvian Choice",
+      "description": "A technical analysis of wind intensity, wave dynamics, and rider progression in the Humboldt Current.",
+      "anchors": [
+        { "label": "Water Temp", "sub": "Constant" },
+        { "label": "Wind Vector", "sub": "Baseline" }
+      ]
+    },
+    "factors": [
+      {
+        "label": "Wind Intensity",
+        "title": "The Power Curve Analysis",
+        "desc": "Efficiency profiles diverge sharply based on wind knots. Wingfoiling finds its sweet spot in the 12-18 kts range, while kitesurfing reaches peak performance in the 18-25+ kts spectrum.",
+        "zones": [
+          { "name": "Wingfoil Zone" },
+          { "name": "Kitesurf Zone" }
+        ]
+      },
+      {
+        "label": "Wave Dynamics",
+        "title": "Hydrodynamic Extraction",
+        "desc": "For the endless lefts of Pacasmayo, the wingfoil is unmatched. It allows the rider to neutralize wind drag and surf swell energy freely. Kitesurfing offers high-speed vertical hacking, relying on constant tension."
+      }
+    ],
+    "progression": {
+      "title": "The Intermediate Transition",
+      "desc": "Shifting between disciplines requires resetting muscle memory.",
+      "cards": [
+        { "title": "To Wingfoil", "text": "Requires unlearning rigid stance. Focus shifts entirely to front-foot pressure and foil balance. The wing is merely an engine." },
+        { "title": "To Kitesurf", "text": "Demands exceptional multi-tasking. Edge control must become subconscious while actively steering the kite through the power window." }
+      ]
+    }
+  },
   "blogWaveProgression": {
     "hero": {
       "badge": "Wave Progression",
@@ -1957,6 +2002,7 @@
         "author": "Sergio Agamez"
       }
     },
+
     "trending": {
       "top20": {
         "title": "The 20 World's best destinations for kitesurfing waves",
@@ -1986,6 +2032,37 @@
         "title": "Why Mancora is Different: Kitesurf Wave Progression Guide",
         "alt": "Mancora wave progression guide"
       }
+    }
+  },
+  "blogSafetyKite": {
+    "hero": {
+      "tag": "Technical Coaching",
+      "title": "Safety & Progression:",
+      "highlight": "The Technical Edge",
+      "description": "Why mathematical precision and visual feedback are the pillars of rapid advancement in wave riding."
+    },
+    "stats": [
+      { "label": "Water Temp", "value": "18-20°C" },
+      { "label": "Wind Velocity", "value": "15-25 kts" },
+      { "label": "Optimal Season", "value": "Aug-Oct" }
+    ],
+    "mechanics": {
+      "title": "The 2:1 Ratio Mechanics",
+      "body": "Understanding the 2:1 ratio in your bar setup is critical for nuanced control. For every inch you pull the bar, the rear lines engage at twice the rate, dramatically altering the angle of attack.",
+      "bullets": [
+        "Reduces rider fatigue through efficient leverage.",
+        "Enables micro-adjustments during bottom turns."
+      ]
+    },
+    "calibration": {
+      "title": "Turning Radii Dynamics",
+      "desc": "The relationship between line length and turning radius defines your placement on the wave face. Manipulating this arc dictates vertical projection.",
+      "boxTitle": "Arc Calibration",
+      "boxBody": "Shorter lines (20m) decrease the turning radius, creating a pivotal rotation rather than a wide arc. Essential for fast, hollow waves.",
+      "arcs": [
+        { "label": "Standard Arc", "value": "24m Lines" },
+        { "label": "Pivotal Arc", "value": "20m Lines" }
+      ]
     }
   },
   "tripsPage": {

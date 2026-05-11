@@ -872,6 +872,37 @@
       "btn": "Arma tu Viaje a Máncora"
     }
   },
+  "blogSafetyKite": {
+    "hero": {
+      "tag": "Coaching Técnico",
+      "title": "Seguridad y Progresión:",
+      "highlight": "La Ventaja Técnica",
+      "description": "Por qué la precisión matemática y la retroalimentación visual son los pilares del avance rápido en el kitesurf de olas."
+    },
+    "stats": [
+      { "label": "Temp. del Agua", "value": "18-20°C" },
+      { "label": "Velocidad Viento", "value": "15-25 nudos" },
+      { "label": "Temporada Óptima", "value": "Ago-Oct" }
+    ],
+    "mechanics": {
+      "title": "La Mecánica del Ratio 2:1",
+      "body": "Entender la proporción 2:1 en la configuración de tu barra es fundamental para un control detallado. Por cada pulgada que tiras de la barra, las líneas traseras se activan al doble de velocidad, alterando dramáticamente el ángulo de ataque.",
+      "bullets": [
+        "Reduce la fatiga del rider a través de un apalancamiento eficiente.",
+        "Permite micro-ajustes durante los bottom turns."
+      ]
+    },
+    "calibration": {
+      "title": "Dinámica de Radios de Giro",
+      "desc": "La relación entre la longitud de la línea y el radio de giro define tu ubicación en la cara de la ola. Manipular este arco dicta la proyección vertical.",
+      "boxTitle": "Calibración del Arco",
+      "boxBody": "Las líneas más cortas (20m) disminuyen el radio de giro, creando una rotación pivotante en lugar de un arco amplio. Esencial para olas rápidas y huecas.",
+      "arcs": [
+        { "label": "Arco Estándar", "value": "Líneas de 24m" },
+        { "label": "Arco Pivotante", "value": "Líneas de 20m" }
+      ]
+    }
+  },
   "blogMancoraVsLobitos": {
     "hero": {
       "badge": "Kitesurf en Olas Perú",
@@ -1042,6 +1073,51 @@
       "title": "Deja que Pacasmayo le dé la exigencia al viaje. Deja que Máncora le dé su brillo final.",
       "desc": "Esa combinación es lo que transforma una misión de surf en Perú en un viaje premium: serio aprendizaje en point-break primero, seguido de calidez, confort y flexibilidad cuando llega el momento de quedarse más tiempo.",
       "btn": "Arma tu Viaje a Máncora"
+    }
+  },
+  "blogWingVsKite": {
+    "ui": {
+      "zone": "Zona",
+      "progression": "Progresión"
+    },
+    "intro": {
+      "title": "La Dualidad Cinética de la Corriente de Humboldt",
+      "p1": "La costa de Perú ofrece una perfección mecánica raramente vista en otros lugares. Impulsada por el empuje frío e implacable de la Corriente de Humboldt, los vientos térmicos y los pointbreaks interminables presentan un laboratorio único para los deportes acuáticos impulsados por el viento.",
+      "p2": "Analizamos la 'dualidad cinética' de estas disciplinas. Mientras que el kitesurf aprovecha la capa límite atmosférica para obtener potencia vertical, el wingfoil aprovecha la energía de la superficie para surfear largas marejadas con un arrastre mínimo."
+    },
+    "hero": {
+      "tag": "Análisis Técnico",
+      "title": "Wingfoil vs Kitesurf:",
+      "highlight": "La Elección Peruana",
+      "description": "Un análisis técnico de la intensidad del viento, la dinámica de las olas y la progresión del rider en la Corriente de Humboldt.",
+      "anchors": [
+        { "label": "Temp. Agua", "sub": "Constante" },
+        { "label": "Vector Viento", "sub": "Base" }
+      ]
+    },
+    "factors": [
+      {
+        "label": "Intensidad del Viento",
+        "title": "Análisis de la Curva de Potencia",
+        "desc": "Los perfiles de eficiencia divergen marcadamente según los nudos de viento. El wingfoil encuentra su punto óptimo en el rango de 12-18 nudos, mientras que el kitesurf alcanza su máximo rendimiento en el espectro de 18-25+ nudos.",
+        "zones": [
+          { "name": "Zona de Wingfoil" },
+          { "name": "Zona de Kitesurf" }
+        ]
+      },
+      {
+        "label": "Dinámica de Olas",
+        "title": "Extracción Hidrodinámica",
+        "desc": "Para las izquierdas interminables de Pacasmayo, el wingfoil es inigualable. Permite al rider neutralizar el arrastre del viento y surfear libremente la energía del swell. El kitesurf ofrece cortes verticales de alta velocidad, dependiendo de una tensión constante."
+      }
+    ],
+    "progression": {
+      "title": "La Transición Intermedia",
+      "desc": "Cambiar entre disciplinas requiere reiniciar la memoria muscular.",
+      "cards": [
+        { "title": "Hacia el Wingfoil", "text": "Requiere desaprender posturas rígidas. El enfoque se desplaza completamente a la presión del pie delantero y el equilibrio del foil. El ala es solo un motor." },
+        { "title": "Hacia el Kitesurf", "text": "Exige una capacidad multitarea excepcional. El control del canto debe volverse subconsciente mientras pilotas activamente el kite a través de la ventana de potencia." }
+      ]
     }
   },
   "blogWaveProgression": {

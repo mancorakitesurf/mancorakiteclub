@@ -21,11 +21,11 @@ function BlogPage14() {
             <section className="bg-[#031015] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
                 <div className="max-w-4xl mx-auto space-y-8">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tighter uppercase italic">
-                        {t('blog.wingfoilVsKitesurf.sectionTitle')}
+                        {t('blogWingVsKite.intro.title')}
                     </h2>
                     <div className="space-y-6 text-sm sm:text-base md:text-lg text-[#9eaeb4] font-light leading-relaxed italic">
-                        <p>{t('blog.wingfoilVsKitesurf.p1')}</p>
-                        <p>{t('blog.wingfoilVsKitesurf.p2')}</p>
+                        <p>{t('blogWingVsKite.intro.p1')}</p>
+                        <p>{t('blogWingVsKite.intro.p2')}</p>
                     </div>
                 </div>
             </section>

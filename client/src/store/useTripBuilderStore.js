@@ -11,9 +11,8 @@ const MIN_EXTRA_QTY = 1
 
 const initialState = {
   paso: INITIAL_STEP,
-  actividad: null,
+  actividades: {},
   noches: 0,
-  horas: 0,
   extras: [],
   extrasQty: {},
   datosUsuario: {
@@ -25,11 +24,26 @@ const initialState = {
 export const useTripBuilderStore = create((set, get) => ({
   ...initialState,
 
-  setActividad: (actividad) => set({ actividad }),
+  toggleActividad: (id) =>
+    set((state) => {
+      const acts = { ...state.actividades }
+      if (id in acts) {
+        delete acts[id]
+      } else {
+        acts[id] = 3
+      }
+      return { actividades: acts }
+    }),
+
+  setActividadHoras: (id, horas) =>
+    set((state) => ({
+      actividades: {
+        ...state.actividades,
+        [id]: Math.max(0, Number(horas) || 0),
+      },
+    })),
 
   setNoches: (noches) => set({ noches }),
-
-  setHoras: (horas) => set({ horas }),
 
   toggleExtra: (extra) =>
     set((state) => {
@@ -79,8 +93,17 @@ export const useTripBuilderStore = create((set, get) => ({
 
   reiniciar: () => set(initialState),
 
+  reset: () => set(initialState),
+
+  setPaso: (paso) =>
+    set({ paso: Math.max(MIN_STEP, Math.min(MAX_STEP, paso)) }),
+
   generarLinkWhatsApp: () => {
-    const { actividad, noches, horas, extras, extrasQty, datosUsuario } = get()
+    const { actividades, noches, extras, extrasQty, datosUsuario } = get()
+
+    const actividadesDetalle = Object.entries(actividades)
+      .map(([id, hrs]) => `${id}: ${hrs}h`)
+      .join(', ')
 
     const extrasDetalle = extras
       .map((id) => {
@@ -91,9 +114,8 @@ export const useTripBuilderStore = create((set, get) => ({
 
     const mensaje = `¡Hola Máncora Kite Club! 🏄
 Quiero armar mi paquete:
-🏋️ Actividad: ${actividad || 'No seleccionada'}
+🏋️ Actividades: ${actividadesDetalle || 'No seleccionada'}
 🌙 Noches: ${noches}
-⏱️ Horas de clase: ${horas}
 ✨ Extras: ${extrasDetalle || 'Sin extras'}
 Mi nombre es: ${datosUsuario.nombre || 'No indicado'}
 Email: ${datosUsuario.email || 'No indicado'}`

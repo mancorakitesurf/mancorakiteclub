@@ -170,9 +170,15 @@ const PRECIO_HORA_MAP = {
   SUP: 30,
 }
 
-function calcularPrecio(actividad, noches, horas, extras, extrasQty) {
-  const precioHora = PRECIO_HORA_MAP[actividad] || 60
-  const base = noches * PRECIO_NOCHE + horas * precioHora
+const RENTAL_OPTIONS = EXTRAS_OPTIONS.filter((e) => e.category === 'gear')
+const NON_RENTAL_EXTRAS = EXTRAS_OPTIONS.filter((e) => e.category !== 'gear')
+const NON_RENTAL_CATEGORIES = EXTRAS_CATEGORIES.filter((c) => c.id !== 'gear')
+
+function calcularPrecio(actividades, noches, extras, extrasQty) {
+  const actividadesTotal = Object.entries(actividades).reduce((sum, [id, hrs]) => {
+    return sum + (PRECIO_HORA_MAP[id] || 60) * hrs
+  }, 0)
+  const base = noches * PRECIO_NOCHE + actividadesTotal
   const extrasTotal = extras.reduce((sum, extraId) => {
     const found = EXTRAS_OPTIONS.find((e) => e.id === extraId)
     if (!found) return sum
@@ -288,7 +294,7 @@ function StepIndicator({ pasoActual }) {
   const pasos = [
     { n: 1, label: t('build.stepActivity') },
     { n: 2, label: t('build.stepNights') },
-    { n: 3, label: t('build.stepClasses') },
+    { n: 3, label: 'Rental' },
     { n: 4, label: t('build.stepExtras') },
     { n: 5, label: t('build.stepSummary') },
   ]
@@ -387,77 +393,118 @@ function StepHeading({ index, title, subtitle }) {
   )
 }
 
-function PasoActividad({ actividad, setActividad }) {
+function PasoActividad({ actividades, toggleActividad, setActividadHoras }) {
   const { t } = useI18n()
   return (
     <div>
       <StepHeading index={1} title={t('build.chooseActivity')} subtitle={t('build.chooseActivitySub')} />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ACTIVIDADES.map((a) => {
-          const selected = actividad === a.id
+          const selected = a.id in actividades
           const precioHora = PRECIO_HORA_MAP[a.id] || 60
+          const hrs = actividades[a.id] || 0
           return (
-            <motion.button
-              key={a.id}
-              type="button"
-              onClick={() => setActividad(a.id)}
-              whileHover={{ scale: 1.015, y: -3 }}
-              whileTap={{ scale: 0.985 }}
-              className={`group relative flex h-80 items-end overflow-hidden rounded-2xl text-left transition-all duration-300 ${selected
-                ? 'ring-2 ring-[#b7e28a] ring-offset-2 ring-offset-[#0e1b17]'
-                : 'ring-1 ring-white/8 hover:ring-white/20'
-                }`}
-            >
-              <img
-                src={ACTIVIDAD_IMAGENES[a.id]}
-                alt={a.label}
-                className={`absolute inset-0 h-full w-full object-cover transition-all duration-500 ${selected ? 'scale-[1.03] opacity-80' : 'scale-100 opacity-55 group-hover:scale-[1.02] group-hover:opacity-70'
+            <div key={a.id} className="flex flex-col gap-0">
+              <motion.button
+                type="button"
+                onClick={() => toggleActividad(a.id)}
+                whileHover={{ scale: 1.015, y: -3 }}
+                whileTap={{ scale: 0.985 }}
+                className={`group relative flex h-80 items-end overflow-hidden rounded-2xl text-left transition-all duration-300 ${selected
+                  ? 'ring-2 ring-[#b7e28a] ring-offset-2 ring-offset-[#0e1b17]'
+                  : 'ring-1 ring-white/8 hover:ring-white/20'
                   }`}
-              />
+              >
+                <img
+                  src={ACTIVIDAD_IMAGENES[a.id]}
+                  alt={a.label}
+                  className={`absolute inset-0 h-full w-full object-cover transition-all duration-500 ${selected ? 'scale-[1.03] opacity-80' : 'scale-100 opacity-55 group-hover:scale-[1.02] group-hover:opacity-70'
+                    }`}
+                />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-              <div
-                className="pointer-events-none absolute inset-0 opacity-[0.06]"
-                style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-                  backgroundSize: '200px 200px',
-                }}
-              />
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.06]"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+                    backgroundSize: '200px 200px',
+                  }}
+                />
 
-              <AnimatePresence>
+                <AnimatePresence>
+                  {selected && (
+                    <motion.div
+                      initial={{ scale: 0, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      transition={{ type: 'spring', stiffness: 500, damping: 18 }}
+                      className="absolute right-4 top-4 z-20 flex h-7 w-7 items-center justify-center rounded-full bg-[#b7e28a] text-black"
+                    >
+                      <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+                <div className="relative z-10 w-full p-6">
+                  <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.25em] text-[#b7e28a]/70">{t(a.taglineKey)}</p>
+                  <p className="text-2xl font-black uppercase tracking-tight text-white">{a.label}</p>
+                  <div className="mt-4 flex items-center justify-between">
+                    <div className="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur">
+                      <a.Icon className="h-3.5 w-3.5 text-[#b7e28a]" />
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-white/80">${precioHora}/hr</span>
+                    </div>
+                    {selected && (
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b7e28a]">{t('build.selected')}</span>
+                    )}
+                  </div>
+                </div>
+              </motion.button>
+
+              <AnimatePresence initial={false}>
                 {selected && (
                   <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    transition={{ type: 'spring', stiffness: 500, damping: 18 }}
-                    className="absolute right-4 top-4 z-20 flex h-7 w-7 items-center justify-center rounded-full bg-[#b7e28a] text-black"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="overflow-hidden"
                   >
-                    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
+                    <div className="mt-2 flex items-center justify-between rounded-xl border border-[#b7e28a]/20 bg-[#b7e28a]/5 px-4 py-3">
+                      <span className="text-xs font-bold text-white/60">{t('build.hours')}</span>
+                      <div className="flex items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={(e) => { e.stopPropagation(); setActividadHoras(a.id, hrs - 1) }}
+                          className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-sm text-white/60 transition hover:border-[#b7e28a]/50 hover:text-[#b7e28a]"
+                        >−</button>
+                        <span className="w-6 text-center text-lg font-black text-white">{hrs}</span>
+                        <button
+                          type="button"
+                          onClick={(e) => { e.stopPropagation(); setActividadHoras(a.id, hrs + 1) }}
+                          className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-sm text-white/60 transition hover:border-[#b7e28a]/50 hover:text-[#b7e28a]"
+                        >+</button>
+                      </div>
+                      <span className="text-xs font-bold text-[#b7e28a]">${hrs * precioHora}</span>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-
-              <div className="relative z-10 w-full p-6">
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.25em] text-[#b7e28a]/70">{t(a.taglineKey)}</p>
-                <p className="text-2xl font-black uppercase tracking-tight text-white">{a.label}</p>
-                <div className="mt-4 flex items-center justify-between">
-                  <div className="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur">
-                    <a.Icon className="h-3.5 w-3.5 text-[#b7e28a]" />
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-white/80">${precioHora}/hr</span>
-                  </div>
-                  {selected && (
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b7e28a]">{t('build.selected')}</span>
-                  )}
-                </div>
-              </div>
-            </motion.button>
+            </div>
           )
         })}
       </div>
+      {Object.keys(actividades).length > 0 && (
+        <div className="mt-5 flex items-center justify-end gap-2">
+          <div className="h-px flex-1 bg-white/6" />
+          <p className="text-sm font-bold text-[#b7e28a]">
+            ${Object.entries(actividades).reduce((s, [id, h]) => s + (PRECIO_HORA_MAP[id] || 60) * h, 0)} USD
+          </p>
+          <span className="text-xs text-white/30">{t('build.classes')}</span>
+        </div>
+      )}
     </div>
   )
 }
@@ -535,88 +582,92 @@ function PasoNoches({ noches, setNoches }) {
   )
 }
 
-function PasoHoras({ horas, setHoras, actividad }) {
+function PasoRental({ extras, extrasQty, toggleExtra, setExtraQty }) {
   const { t } = useI18n()
-  const precioHora = PRECIO_HORA_MAP[actividad] || 60
+  const rentalSubtotal = RENTAL_OPTIONS.reduce((sum, e) => {
+    if (!extras.includes(e.id)) return sum
+    const qty = (extrasQty && extrasQty[e.id]) || 1
+    return sum + e.precio * qty
+  }, 0)
 
   return (
     <div>
-      <StepHeading
-        index={3}
-        title={t('build.classHours')}
-        subtitle={`$${precioHora} USD/hr · ${actividad}`}
-      />
-      <AnimatePresence>
-        {horas === 0 && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="mb-5 overflow-hidden"
-          >
-            <div className="inline-flex items-center gap-2 rounded-full border border-yellow-300/20 bg-yellow-300/8 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-yellow-200/70">
-              <span className="h-1.5 w-1.5 rounded-full bg-yellow-300/60" />
-              {t('build.noClassesOnly')}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <StepHeading index={3} title="Equipment Rental" subtitle="Add gear rental to your trip" />
       <motion.div
-        variants={staggerContainer}
         initial="hidden"
         animate="show"
-        className="grid gap-3 sm:grid-cols-3 lg:grid-cols-5"
+        variants={{ hidden: {}, show: { transition: { staggerChildren: 0.05 } } }}
+        className="grid grid-cols-1 gap-3 sm:grid-cols-2"
       >
-        {HORAS_OPTIONS.map((h, i) => (
-          <motion.button
-            key={h}
-            type="button"
-            onClick={() => setHoras(h)}
-            variants={staggerItem}
-            whileHover={{ y: -4, scale: 1.015 }}
-            whileTap={{ scale: 0.98 }}
-            className={`group relative min-h-[180px] overflow-hidden rounded-2xl text-left transition-all duration-300 ${horas === h
-              ? 'ring-2 ring-[#b7e28a] ring-offset-2 ring-offset-[#0e1b17]'
-              : 'ring-1 ring-white/8 hover:ring-white/20'
-              }`}
-          >
-            <img
-              src={HORAS_IMAGENES[i]}
-              alt=""
-              aria-hidden="true"
-              className={`absolute inset-0 h-full w-full object-cover transition-all duration-500 ${horas === h ? 'scale-[1.04] opacity-70' : 'scale-100 opacity-40 group-hover:scale-[1.02] group-hover:opacity-58'
+        {RENTAL_OPTIONS.map((e) => {
+          const selected = extras.includes(e.id)
+          const qty = (extrasQty && extrasQty[e.id]) || 1
+          return (
+            <motion.div
+              key={e.id}
+              variants={staggerItem}
+              className={`relative overflow-hidden rounded-xl border transition-all duration-200 ${selected
+                ? 'border-[#b7e28a]/40 bg-[#b7e28a]/5 shadow-[inset_0_0_0_1px_rgba(183,226,138,0.15)]'
+                : 'border-white/8 bg-[#152720] hover:border-white/16'
                 }`}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/92 via-black/30 to-black/10" />
-            <div
-              className="pointer-events-none absolute inset-0 opacity-[0.05]"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-                backgroundSize: '200px 200px',
-              }}
-            />
-            <div className="relative z-10 flex min-h-[180px] flex-col justify-between p-4">
-              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/60">{t(HORAS_COPY_KEYS[h])}</p>
-              <div className="flex items-end justify-between gap-2">
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-black leading-none text-white">{h}</span>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
-                    {h === 0 ? t('build.hrs') : t('build.hours')}
-                  </span>
+            >
+              <motion.button
+                type="button"
+                onClick={() => toggleExtra(e.id)}
+                whileTap={{ scale: 0.99 }}
+                className="flex w-full items-start gap-3 p-4 text-left"
+              >
+                <motion.div
+                  animate={
+                    selected
+                      ? { backgroundColor: '#b7e28a', color: '#000' }
+                      : { backgroundColor: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.5)' }
+                  }
+                  transition={{ duration: 0.18 }}
+                  className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg"
+                >
+                  <e.Icon className="h-5 w-5" />
+                </motion.div>
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-semibold leading-tight text-white">{t(e.labelKey)}</p>
+                  <p className="mt-1.5 text-[11px] font-black text-[#b7e28a]">${e.precio} USD{e.unit ? ` ${e.unit}` : ''}</p>
                 </div>
-                <span className={`rounded-md px-2 py-1 text-[11px] font-black ${horas === h ? (h === 0 ? 'bg-yellow-300 text-black' : 'bg-[#b7e28a] text-black') : 'bg-white/10 text-white'
-                  }`}>
-                  ${h * precioHora}
-                </span>
-              </div>
-            </div>
-          </motion.button>
-        ))}
+                <div className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-all ${selected ? 'border-[#b7e28a] bg-[#b7e28a]' : 'border-white/20'}`}>
+                  {selected && (
+                    <motion.svg initial={{ scale: 0 }} animate={{ scale: 1 }} className="h-3 w-3 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></motion.svg>
+                  )}
+                </div>
+              </motion.button>
+
+              <AnimatePresence initial={false}>
+                {selected && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex items-center gap-3 border-t border-white/8 px-4 py-3">
+                      <span className="text-[11px] text-white/40">{t('build.days')}</span>
+                      <div className="flex items-center gap-2">
+                        <button type="button" onClick={() => setExtraQty(e.id, qty - 1)} className="flex h-6 w-6 items-center justify-center rounded-full border border-white/15 text-sm text-white/60 transition hover:border-[#b7e28a]/50 hover:text-[#b7e28a]">−</button>
+                        <span className="w-5 text-center text-sm font-bold text-white">{qty}</span>
+                        <button type="button" onClick={() => setExtraQty(e.id, qty + 1)} className="flex h-6 w-6 items-center justify-center rounded-full border border-white/15 text-sm text-white/60 transition hover:border-[#b7e28a]/50 hover:text-[#b7e28a]">+</button>
+                      </div>
+                      <span className="ml-auto text-[11px] font-bold text-[#b7e28a]">${e.precio * qty} USD</span>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          )
+        })}
       </motion.div>
       <div className="mt-5 flex items-center justify-end gap-2">
         <div className="h-px flex-1 bg-white/6" />
-        <p className="text-sm font-bold text-[#b7e28a]">${horas * precioHora} USD</p>
-        <span className="text-xs text-white/30">{t('build.classes')}</span>
+        <p className="text-sm font-bold text-[#b7e28a]">${rentalSubtotal} USD</p>
+        <span className="text-xs text-white/30">Rental</span>
       </div>
     </div>
   )
@@ -625,7 +676,7 @@ function PasoHoras({ horas, setHoras, actividad }) {
 function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
   const { t } = useI18n()
   const extrasSubtotal = extras.reduce((sum, extraId) => {
-    const found = EXTRAS_OPTIONS.find((e) => e.id === extraId)
+    const found = NON_RENTAL_EXTRAS.find((e) => e.id === extraId)
     if (!found) return sum
     const qty = (extrasQty && extrasQty[extraId]) || 1
     return sum + found.precio * qty
@@ -636,8 +687,8 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
       <StepHeading index={4} title={t('build.addExtras')} subtitle={t('build.addExtrasSub')} />
 
       <div className="space-y-8">
-        {EXTRAS_CATEGORIES.map((cat) => {
-          const catExtras = EXTRAS_OPTIONS.filter((e) => e.category === cat.id)
+        {NON_RENTAL_CATEGORIES.map((cat) => {
+          const catExtras = NON_RENTAL_EXTRAS.filter((e) => e.category === cat.id)
           if (!catExtras.length) return null
           return (
             <div key={cat.id}>
@@ -764,12 +815,13 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
   )
 }
 
-function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
+function PasoResumen({ actividades, noches, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
   const { t } = useI18n()
-  const precioTotal = calcularPrecio(actividad, noches, horas, extras, extrasQty)
+  const precioTotal = calcularPrecio(actividades, noches, extras, extrasQty)
   const precioAnimado = useAnimatedNumber(precioTotal)
   const canSend = datosUsuario.nombre.trim() !== '' && datosUsuario.email.trim() !== ''
   const [shakeKey, setShakeKey] = useState(0)
+  const actEntries = Object.entries(actividades)
 
   return (
     <div>
@@ -782,15 +834,19 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
                 <span className="text-white/50">{t('build.activity')}</span>
-                <span className="font-bold text-white">{actividad}</span>
+                <span className="font-bold text-white">
+                  {actEntries.length ? actEntries.map(([id]) => id).join(', ') : '—'}
+                </span>
               </div>
+              {actEntries.map(([id, hrs]) => (
+                <div key={id} className="flex justify-between text-sm pl-4">
+                  <span className="text-white/40">{id}</span>
+                  <span className="font-bold text-white">{hrs} {t('build.hrs')}</span>
+                </div>
+              ))}
               <div className="flex justify-between text-sm">
                 <span className="text-white/50">{t('build.nights')}</span>
                 <span className="font-bold text-white">{noches} {t('build.nights')}</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-white/50">{t('build.classes')}</span>
-                <span className="font-bold text-white">{horas} {t('build.hrs')}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-white/50">{t('build.extrasLabel')}</span>
@@ -879,9 +935,8 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
 function BuildPage() {
   const { t, currentLang } = useI18n()
   const {
-    actividad, setActividad,
+    actividades, toggleActividad, setActividadHoras,
     noches, setNoches,
-    horas, setHoras,
     extras, toggleExtra,
     extrasQty, setExtraQty,
     paso, setPaso,
@@ -899,15 +954,18 @@ function BuildPage() {
   }
 
   const generarLinkWhatsApp = () => {
-    const total = calcularPrecio(actividad, noches, horas, extras, extrasQty)
+    const total = calcularPrecio(actividades, noches, extras, extrasQty)
+    const listActividades = Object.entries(actividades)
+      .map(([id, hrs]) => `- ${id}: ${hrs}h`)
+      .join('\n')
     const listExtras = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
       .map((e) => `- ${e.labelKey} (x${extrasQty[e.id] || 1})`)
       .join('\n')
 
     const mensaje = `¡Hola! He armado mi viaje en la web:
-- Actividad: ${actividad}
+- Actividades:
+${listActividades || '  Ninguna'}
 - Noches: ${noches}
-- Horas de clase: ${horas}
 ${listExtras ? `- Extras:\n${listExtras}` : ''}
 ---
 Total estimado: $${total} USD
@@ -917,7 +975,7 @@ Email: ${datosUsuario.email}`
     return `https://wa.me/51996557689?text=${encodeURIComponent(mensaje)}`
   }
 
-  const precioTotal = calcularPrecio(actividad, noches, horas, extras, extrasQty)
+  const precioTotal = calcularPrecio(actividades, noches, extras, extrasQty)
 
   return (
     <div className="min-h-screen bg-[#0e1b17]">
@@ -977,9 +1035,16 @@ Email: ${datosUsuario.email}`
               exit="exit"
               transition={stepTransition}
             >
-              {paso === 1 && <PasoActividad actividad={actividad} setActividad={setActividad} />}
+              {paso === 1 && <PasoActividad actividades={actividades} toggleActividad={toggleActividad} setActividadHoras={setActividadHoras} />}
               {paso === 2 && <PasoNoches noches={noches} setNoches={setNoches} />}
-              {paso === 3 && <PasoHoras horas={horas} setHoras={setHoras} actividad={actividad} />}
+              {paso === 3 && (
+                <PasoRental
+                  extras={extras}
+                  extrasQty={extrasQty}
+                  toggleExtra={toggleExtra}
+                  setExtraQty={setExtraQty}
+                />
+              )}
               {paso === 4 && (
                 <PasoExtras
                   extras={extras}
@@ -990,9 +1055,8 @@ Email: ${datosUsuario.email}`
               )}
               {paso === 5 && (
                 <PasoResumen
-                  actividad={actividad}
+                  actividades={actividades}
                   noches={noches}
-                  horas={horas}
                   extras={extras}
                   extrasQty={extrasQty}
                   datosUsuario={datosUsuario}

@@ -7,6 +7,7 @@ import {
   FaUmbrellaBeach,
 } from "react-icons/fa"
 import { GiLotus, GiWhaleTail, GiScubaMask, GiTurtle } from "react-icons/gi"
+import { Link } from 'react-router-dom'
 
 import StandardPage from "./StandardPage.jsx"
 import FullscreenHero from "../components/ui/FullscreenHero.jsx"
@@ -111,26 +112,11 @@ function StayPage() {
           eyebrow={t('stay.heroLabel')}
           title={t('stay.heroTitle')}
           subtitle={t('stay.heroDesc')}
-          density="compact"
           slides={createPresetHeroSlides('stay', {
             desktop: [heroImg, img4, img5],
             alt: 'Stay with us in Mancora',
             imageClassName: 'object-[52%_center] md:object-center',
           })}
-          actions={[
-            {
-              href: `/build${currentLang === 'en' ? '' : currentLang === 'fr' ? '/fr' : '/esp'}`,
-              label: t('common.buildYourTrip'),
-              className: "bg-primary text-white hover:bg-primary/90",
-            },
-            {
-              href: buildWhatsAppUrl(stayMessage),
-              label: t('common.bookOnWhatsApp'),
-              icon: FaWhatsapp,
-              external: true,
-              className: "border-white/50 text-white hover:bg-white hover:text-slate-950",
-            },
-          ]}
         />
 
         {/* INTRO */}

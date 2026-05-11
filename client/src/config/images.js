@@ -289,6 +289,7 @@ export const componentImages = Object.freeze({
   }),
   "pages/ContactPage.jsx": Object.freeze({
     logoImg: image("LOGOS KITE CLUB/95b03a84-2865-4eda-89ae-26b332f99bb5.webp"),
+    formDecorImg: image("fotos comunidad/DSC09030.webp"),
   }),
   "pages/StayPage.jsx": Object.freeze({
     heroImg: image("HOSPEDAJE KITE HOUSE/main.webp"),

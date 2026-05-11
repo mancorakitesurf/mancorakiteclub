@@ -4,13 +4,13 @@ import { useLoadingNavigation } from '../lib/loadingNavigation.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 
 function FloatingCart() {
-  const { actividad, paso } = useTripBuilderStore()
+  const { actividades, paso } = useTripBuilderStore()
   const location = useLocation()
   const navigateWithLoader = useLoadingNavigation()
   const [isVisible, setIsVisible] = useState(false)
 
   const isOnBuildPage = location.pathname === '/build'
-  const hasProgress = actividad !== null
+  const hasProgress = Object.keys(actividades).length > 0
 
   useEffect(() => {
     const handleScroll = () => {

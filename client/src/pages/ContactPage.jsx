@@ -4,7 +4,6 @@ import { useState } from 'react'
 import StandardPage from './StandardPage.jsx'
 import FullscreenHero from '../components/ui/FullscreenHero.jsx'
 import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
-import { useI18n } from '../app/providers/i18nContext.jsx'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
 const { formDecorImg } = componentImages["pages/ContactPage.jsx"]
@@ -73,7 +72,6 @@ const contacts = [
 ]
 
 function ContactPage() {
-  const { t } = useI18n()
   const [formName, setFormName] = useState('')
   const [formMessage, setFormMessage] = useState('')
 
@@ -97,8 +95,8 @@ function ContactPage() {
         <FullscreenHero
           as="section"
           eyebrow="Máncora Kite Club"
-          title={t('contactPage.title')}
-          subtitle={t('contactPage.subtitle')}
+          title="Contact | Mancora Kite club"
+          subtitle="Reach us for availibility, pricing and trip guidance"
           slides={createPresetHeroSlides('community', {
             alt: 'Contact Mancora Kite Club',
             imageClassName: 'object-[52%_center] md:object-center',

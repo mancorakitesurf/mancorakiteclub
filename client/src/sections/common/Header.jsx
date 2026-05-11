@@ -135,20 +135,6 @@ function Header() {
     setIsTripsOpen(false)
   }
 
-  const handleTripSelect = (event) => {
-    const path = event.target.value
-
-    if (!path) return
-
-    const localizedPath = localizePath(path, currentLang || 'en')
-
-    setActivePath(localizedPath)
-    setIsMobileMenuOpen(false)
-    setIsTripsOpen(false)
-    navigate(localizedPath)
-    event.target.value = ''
-  }
-
   const handleTripNavigate = (path) => {
     if (!path) return
 
@@ -490,88 +476,25 @@ function Header() {
                       variants={itemVariants}
                       className="w-full text-center"
                     >
-                      {item.label === 'nav.trips' ? (
-                        <div className="group relative mx-auto w-full max-w-[260px]">
-                          <button
-                            type="button"
-                            className="relative flex h-12 w-full items-center justify-between overflow-hidden rounded-none border-b border-[#F4F2EA]/35 bg-transparent px-2 text-[#F4F2EA] transition-all duration-300 hover:border-[#38E0C8] hover:text-[#38E0C8]"
-                          >
-                            <span className="text-sm font-semibold uppercase tracking-[0.28em]">
-                              {t(item.label)}
-                            </span>
-
-                            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[#F4F2EA]/20 bg-[#F4F2EA]/5 transition-all duration-300 group-hover:border-[#38E0C8]/60 group-hover:bg-[#38E0C8]/10">
-                              <FaChevronDown
-                                className="text-xs text-[#38E0C8] transition-transform duration-300 group-hover:rotate-180"
-                                aria-hidden="true"
-                              />
-                            </span>
-                          </button>
-
-                          <div className="invisible absolute left-1/2 top-[calc(100%+14px)] z-50 w-[290px] -translate-x-1/2 translate-y-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                            <div className="overflow-hidden rounded-2xl border border-[#F4F2EA]/15 bg-[#071012]/95 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-                              <div className="mb-2 border-b border-[#F4F2EA]/10 px-4 py-3">
-                                <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#38E0C8]">
-                                  Choose experience
-                                </p>
-                              </div>
-
-                              <button
-                                type="button"
-                                onClick={() =>
-                                  handleTripSelect({
-                                    target: { value: '/trips' },
-                                  })
-                                }
-                                className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-medium text-[#F4F2EA] transition-all duration-300 hover:bg-[#38E0C8]/10 hover:text-[#38E0C8]"
-                              >
-                                <span>All Trips</span>
-                                <span className="text-xs text-[#F4F2EA]/40">
-                                  01
-                                </span>
-                              </button>
-
-                              {TRIP_SELECT_OPTIONS.map((option, index) => (
-                                <button
-                                  key={option.path}
-                                  type="button"
-                                  onClick={() =>
-                                    handleTripSelect({
-                                      target: { value: option.path },
-                                    })
-                                  }
-                                  className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm font-medium text-[#F4F2EA] transition-all duration-300 hover:bg-[#38E0C8]/10 hover:text-[#38E0C8]"
-                                >
-                                  <span>{option.label}</span>
-                                  <span className="text-xs text-[#F4F2EA]/40">
-                                    {String(index + 2).padStart(2, '0')}
-                                  </span>
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      ) : (
-                        <Link
-                          to={item.to}
-                          onClick={() => handleNavClick(item.to)}
-                          className={`group relative inline-block px-4 py-3 text-2xl font-semibold tracking-wide transition-all duration-500 sm:text-3xl ${
-                            isActive
-                              ? 'text-white'
-                              : 'text-white/85 hover:text-primary'
-                          }`}
-                        >
-                          <span className="relative">
-                            {t(item.label)}
-                            <motion.span
-                              className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
-                              initial={{ width: isActive ? '100%' : '0%' }}
-                              whileHover={{ width: '100%' }}
-                              transition={{ duration: 0.3 }}
-                            />
-                          </span>
-                        </Link>
-                      )}
+                      <Link
+                        to={item.to}
+                        onClick={() => handleNavClick(item.to)}
+                        className={`group relative inline-block px-4 py-3 text-2xl font-semibold tracking-wide transition-all duration-500 sm:text-3xl ${
+                          isActive
+                            ? 'text-white'
+                            : 'text-white/85 hover:text-primary'
+                        }`}
+                      >
+                        <span className="relative">
+                          {t(item.label)}
+                          <motion.span
+                            className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
+                            initial={{ width: isActive ? '100%' : '0%' }}
+                            whileHover={{ width: '100%' }}
+                            transition={{ duration: 0.3 }}
+                          />
+                        </span>
+                      </Link>
                     </motion.div>
                   )
                 })}

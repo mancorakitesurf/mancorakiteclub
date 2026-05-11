@@ -80,7 +80,22 @@ function normalizeSlides({ backgroundImage, backgroundAlt, imageClassName, slide
   ]
 }
 
-function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, revealContent }) {
+function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, videoSources, revealContent }) {
+  if (videoSources?.desktopSrc && videoSources?.mobileSrc) {
+    return (
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className={`absolute inset-0 z-0 ${baseImageClassName} ${imageClassName || ''}`}
+      >
+        <source src={videoSources.mobileSrc} media="(max-width: 767px)" type="video/mp4" />
+        <source src={videoSources.desktopSrc} media="(min-width: 768px)" type="video/mp4" />
+      </video>
+    )
+  }
+
   const heroSlides = normalizeSlides({
     backgroundImage,
     backgroundAlt,
@@ -195,6 +210,7 @@ function FullscreenHero({
   backgroundImage,
   backgroundAlt,
   imageClassName,
+  videoSources,
   slides,
   actions = [],
   meta = [],
@@ -223,6 +239,7 @@ function FullscreenHero({
         backgroundImage={backgroundImage}
         backgroundAlt={backgroundAlt}
         imageClassName={imageClassName}
+        videoSources={videoSources}
         slides={slides}
         revealContent={revealContent}
       />

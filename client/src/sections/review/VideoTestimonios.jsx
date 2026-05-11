@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import testimonialVideo from "../../assets/VIDEOS/TikVid.io_7514442159282490680-hd.mp4"
 
 function VideoTestimonios() {
   return (
@@ -50,29 +51,20 @@ function VideoTestimonios() {
           "
         >
           <div className="relative flex aspect-video items-center justify-center overflow-hidden">
-            {/* Replace this block with iframe/video later */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#0f2e2c] to-cyan-950" />
+            <video
+              src={testimonialVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(90,248,251,0.25),_transparent_55%)] opacity-80" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
             <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-black/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-white/70 backdrop-blur-md">
               Featured Story
             </div>
-
-            <motion.div
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.94 }}
-              className="
-                relative z-10 flex h-24 w-24 items-center justify-center
-                rounded-full border border-white/30 bg-white/10
-                text-white shadow-[0_0_50px_rgba(90,248,251,0.28)]
-                backdrop-blur-md transition duration-500
-                group-hover:border-[#5af8fb] group-hover:bg-[#5af8fb]
-                group-hover:text-black
-              "
-            >
-              <span className="ml-1 text-4xl">▶</span>
-            </motion.div>
 
             <div className="absolute bottom-8 left-8 right-8">
               <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#5af8fb]">

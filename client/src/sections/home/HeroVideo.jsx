@@ -2,6 +2,8 @@ import { FaWhatsapp } from 'react-icons/fa'
 import FullscreenHero from '../../components/ui/FullscreenHero.jsx'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { HOME_HERO_SLIDES } from './homeContent.js'
+import heroDesktopVideo from '../../assets/VIDEOS/VideoHomeDesktop.mp4'
+import heroMobileVideo from '../../assets/VIDEOS/TikVid.io_7514443269825137976-hd.mp4'
 
 function HeroVideo() {
   return (
@@ -10,6 +12,10 @@ function HeroVideo() {
       eyebrow="Mancora, Peru"
       title="Mancora Kite Club"
       subtitle="Aprende kitesurf y wingfoil con coaching profesional, seguridad y sesiones frente al mar."
+      videoSources={{
+        mobileSrc: heroMobileVideo,
+        desktopSrc: heroDesktopVideo,
+      }}
       slides={HOME_HERO_SLIDES}
       actions={[
         {

@@ -1,3 +1,36 @@
+const blogImages = Object.freeze({
+  chicamaHero: new URL("../assets/fotos mancora y mas/DSC05860.webp", import.meta.url).href,
+  chicamaLineup: new URL("../assets/fotos mancora y mas/DSC03697.webp", import.meta.url).href,
+  chicamaWalk: new URL("../assets/fotos trip/DSC03770.webp", import.meta.url).href,
+  chicamaPacific: new URL("../assets/fotos mancora y mas/IMG_3893.webp", import.meta.url).href,
+  chicamaInside: new URL("../assets/imagenes-home/posicion12.jpg", import.meta.url).href,
+  pacasmayoHero: new URL("../assets/imagenes-home/posicion13.jpg", import.meta.url).href,
+  pacasmayoCoast: new URL("../assets/imagenes-home/posicion16.jpg", import.meta.url).href,
+  pacasmayoLineup: new URL("../assets/imagenes-home/posicion18.jpg", import.meta.url).href,
+  pacasmayoGear: new URL("../assets/fotos trip/DSC03805.webp", import.meta.url).href,
+  pacasmayoWind: new URL("../assets/fotos mancora y mas/DSC02131.webp", import.meta.url).href,
+  northTripHero: new URL("../assets/fotos trip/_DSC8071.webp", import.meta.url).href,
+  northTripPoint: new URL("../assets/fotos trip/DSC04250.webp", import.meta.url).href,
+  northTripBluff: new URL("../assets/fotos trip/DSC01083.webp", import.meta.url).href,
+  northTripKiteGear: new URL("../assets/fotos trip/IMG_4339.webp", import.meta.url).href,
+  northTripRoad: new URL("../assets/fotos trip/DSC07365.webp", import.meta.url).href,
+  paracasMancoraHero: new URL("../assets/imagenes-kitesurfing/posicionkt8.jpg", import.meta.url).href,
+  paracasMancoraKites: new URL("../assets/imagenes-kitesurfing/posicionkt1.jpg", import.meta.url).href,
+  paracasMancoraWarmCoast: new URL("../assets/fotos home/DSC08775.webp", import.meta.url).href,
+  paracasMancoraWind: new URL("../assets/imagenes-kitesurfing/posicionkt2.jpg", import.meta.url).href,
+  paracasMancoraTravel: new URL("../assets/fotos comunidad/beach.webp", import.meta.url).href,
+  peruKitesurfHero: new URL("../assets/imagenes-kitesurfing/posicionkt9.jpg", import.meta.url).href,
+  peruKitesurfBoards: new URL("../assets/imagenes-kitesurfing/posicionkt3.jpg", import.meta.url).href,
+  peruKitesurfLines: new URL("../assets/imagenes-kitesurfing/posicionkt4.jpg", import.meta.url).href,
+  peruKitesurfTexture: new URL("../assets/imagenes-kitesurfing/posicionkt7.jpg", import.meta.url).href,
+  peruKitesurfCoast: new URL("../assets/fotos clases/DSC07692.webp", import.meta.url).href,
+  mancoraLobitosHero: new URL("../assets/imagenes-kitesurfing/posicionkt10.jpg", import.meta.url).href,
+  mancoraLobitosBeach: new URL("../assets/fotos clases/DSC09570.webp", import.meta.url).href,
+  mancoraLobitosEvening: new URL("../assets/fotos comunidad/DSC08865.webp", import.meta.url).href,
+  mancoraLobitosRaw: new URL("../assets/fotos mancora y mas/DSC09961.webp", import.meta.url).href,
+  mancoraLobitosReef: new URL("../assets/imagenes-home/posicion20.jpg", import.meta.url).href,
+})
+
 export const premiumBlogPosts = [
   {
     id: "chicama",
@@ -14,24 +47,23 @@ export const premiumBlogPosts = [
     author: "Mancora Kite Club Editorial",
     date: "April 29, 2026",
     readTime: "9 min read",
-    heroImage:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80",
+    heroImage: blogImages.chicamaHero,
     heroAlt: "Long peeling left wave at first light",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.chicamaLineup,
         alt: "Cold morning lineup with long clean walls",
       },
       {
-        src: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.chicamaWalk,
         alt: "Surfer walking toward a rocky point break",
       },
       {
-        src: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.chicamaPacific,
         alt: "Textured Pacific surface under moody light",
       },
       {
-        src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+        src: blogImages.chicamaInside,
         alt: "Long line wrapping toward the inside section",
       },
     ],
@@ -130,24 +162,23 @@ export const premiumBlogPosts = [
     author: "Mancora Kite Club Editorial",
     date: "April 29, 2026",
     readTime: "9 min read",
-    heroImage:
-      "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1800&q=80",
+    heroImage: blogImages.pacasmayoHero,
     heroAlt: "Long left point break peeling under afternoon light",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.pacasmayoCoast,
         alt: "Point-break lines meeting a rocky Peruvian coastline",
       },
       {
-        src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.pacasmayoLineup,
         alt: "Surfer waiting on a textured lineup",
       },
       {
-        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.pacasmayoGear,
         alt: "Travel boards and gear near the sea",
       },
       {
-        src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        src: blogImages.pacasmayoWind,
         alt: "Wind texture building over a Pacific lineup",
       },
     ],
@@ -246,24 +277,23 @@ export const premiumBlogPosts = [
     author: "Mancora Kite Club Editorial",
     date: "April 29, 2026",
     readTime: "10 min read",
-    heroImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80",
+    heroImage: blogImages.northTripHero,
     heroAlt: "Northern Peru coastline seen from above",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.northTripPoint,
         alt: "Point-break line wrapping along the coast",
       },
       {
-        src: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.northTripBluff,
         alt: "Surf traveler checking conditions from the bluff",
       },
       {
-        src: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.northTripKiteGear,
         alt: "Kitesurf gear packed for a road trip",
       },
       {
-        src: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80",
+        src: blogImages.northTripRoad,
         alt: "Road-trip mood on a Pacific coast day",
       },
     ],
@@ -361,24 +391,23 @@ export const premiumBlogPosts = [
     author: "Mancora Kite Club Editorial",
     date: "April 29, 2026",
     readTime: "8 min read",
-    heroImage:
-      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80",
+    heroImage: blogImages.paracasMancoraHero,
     heroAlt: "Windy sea texture and kites on the horizon",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.paracasMancoraKites,
         alt: "Kitesurf equipment prepared on the beach",
       },
       {
-        src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.paracasMancoraWarmCoast,
         alt: "Warm beach atmosphere at sunset",
       },
       {
-        src: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.paracasMancoraWind,
         alt: "Windy coastline with long horizon",
       },
       {
-        src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+        src: blogImages.paracasMancoraTravel,
         alt: "Travel couple looking over the coast",
       },
     ],
@@ -470,24 +499,23 @@ export const premiumBlogPosts = [
     author: "Mancora Kite Club Editorial",
     date: "April 29, 2026",
     readTime: "10 min read",
-    heroImage:
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1800&q=80",
+    heroImage: blogImages.peruKitesurfHero,
     heroAlt: "Warm beach with kites visible in the distance",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.peruKitesurfBoards,
         alt: "Kitesurf boards and kites stacked on the sand",
       },
       {
-        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.peruKitesurfLines,
         alt: "Rider preparing lines on a windy day",
       },
       {
-        src: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.peruKitesurfTexture,
         alt: "Ocean texture with moving wind lines",
       },
       {
-        src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+        src: blogImages.peruKitesurfCoast,
         alt: "Open coastline that suggests long-distance travel",
       },
     ],
@@ -579,24 +607,23 @@ export const premiumBlogPosts = [
     author: "Mancora Kite Club Editorial",
     date: "April 29, 2026",
     readTime: "9 min read",
-    heroImage:
-      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1800&q=80",
+    heroImage: blogImages.mancoraLobitosHero,
     heroAlt: "Wave kitesurfer carving under warm coastal light",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.mancoraLobitosBeach,
         alt: "Kites on the beach before a wave session",
       },
       {
-        src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.mancoraLobitosEvening,
         alt: "Warm coast and evening atmosphere in northern Peru",
       },
       {
-        src: "https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=1600&q=80",
+        src: blogImages.mancoraLobitosRaw,
         alt: "Raw coastal wind setup with textured sea",
       },
       {
-        src: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=80",
+        src: blogImages.mancoraLobitosReef,
         alt: "Wave line peeling across the reef",
       },
     ],

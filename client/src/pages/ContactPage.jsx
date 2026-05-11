@@ -1,9 +1,13 @@
-import { brandImages } from '../config/images.js'
+import { componentImages } from '../config/images.js'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import StandardPage from './StandardPage.jsx'
-import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
+import FullscreenHero from '../components/ui/FullscreenHero.jsx'
+import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
+import { useI18n } from '../app/providers/i18nContext.jsx'
+import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 
-const logoImg = brandImages.contactMark
+const { formDecorImg } = componentImages["pages/ContactPage.jsx"]
 const contacts = [
   {
     label: 'WhatsApp',
@@ -69,88 +73,152 @@ const contacts = [
 ]
 
 function ContactPage() {
+  const { t } = useI18n()
+  const [formName, setFormName] = useState('')
+  const [formMessage, setFormMessage] = useState('')
+
+  const handleSendWhatsApp = (e) => {
+    e.preventDefault()
+    if (!formName.trim() || !formMessage.trim()) return
+    const texto = `Hola Kite Club!, te habla ${formName.trim()}, ${formMessage.trim()}`
+    window.open(buildWhatsAppUrl(texto), '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <StandardPage
-      title="Contact | Mancora Kite Club"
-      subtitle="Reach us for availability, pricing, and trip guidance."
-      description="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
-      canonicalPath="/contact"
-      hreflang={{ en: '/contact', es: '/esp', default: '/' }}
-      cta={{
-        label: 'Contact via WhatsApp',
-        href: buildWhatsAppUrl(defaultInquiryMessage({ page: 'contact' })),
-      }}
+      titleKey="seo.contactTitle"
+      descKey="seo.contactDesc"
+      titleFallback="Contact | Mancora Kite Club"
+      descFallback="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
       fullWidth
     >
       <div className="overflow-hidden bg-white dark:bg-surface-dark">
-        <section className="grid items-center gap-0 lg:grid-cols-2">
+        {/* HERO */}
+        <FullscreenHero
+          as="section"
+          eyebrow="Máncora Kite Club"
+          title={t('contactPage.title')}
+          subtitle={t('contactPage.subtitle')}
+          slides={createPresetHeroSlides('community', {
+            alt: 'Contact Mancora Kite Club',
+            imageClassName: 'object-[52%_center] md:object-center',
+          })}
+        />
 
-          {/* LEFT — image */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: 'easeOut' }}
-            className="relative flex min-h-[55vw] items-center justify-center overflow-hidden bg-slate-100 dark:bg-slate-900 lg:min-h-[680px]"
-          >
-            <img
-              src={logoImg}
-              alt="Mancora Kite Club"
-              className="h-full w-full object-contain p-12 lg:p-20"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
-          </motion.div>
+        {/* CONTACT INFO CARD */}
+        <section className="px-6 py-20 sm:px-10 lg:px-16 lg:py-24">
+          <div className="mx-auto max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut' }}
+              className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-surface-dark sm:p-10 lg:p-12"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+                Get in touch
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-slate-950 dark:text-white sm:text-4xl">
+                Kite Club Máncora
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                Reach us through any channel — we reply fast.
+              </p>
 
-          {/* RIGHT — contact info */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.9, ease: 'easeOut', delay: 0.15 }}
-            className="px-6 py-16 sm:px-12 lg:py-24 xl:px-20"
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-              Get in touch
-            </p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-tight text-slate-950 dark:text-white sm:text-5xl">
-              Kite Club
-              <br />
-              Máncora
-            </h2>
-            <p className="mt-5 text-base leading-8 text-slate-600 dark:text-slate-300">
-              Reach us through any channel — we reply fast.
-            </p>
-
-            <ul className="mt-10 space-y-2">
-              {contacts.map(({ label, href, display, icon }) => (
-                <li key={label}>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {contacts.map(({ label, href, display, icon }) => (
                   <a
+                    key={label}
                     href={href}
                     target={href.startsWith('http') ? '_blank' : undefined}
                     rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="group flex items-center gap-4 rounded-2xl px-4 py-3 transition hover:bg-primary/5 dark:hover:bg-primary/10"
+                    className="group flex items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 px-4 py-3.5 transition hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-md dark:border-white/5 dark:bg-white/[0.03] dark:hover:border-primary/30"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-white">
                       {icon}
                     </span>
                     <div className="min-w-0">
-                      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400 dark:text-slate-500">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">
                         {label}
                       </p>
                       <p className="truncate text-sm font-medium text-slate-800 dark:text-slate-100">
                         {display}
                       </p>
                     </div>
-                    <svg
-                      className="ml-auto h-4 w-4 shrink-0 text-slate-300 transition group-hover:translate-x-1 group-hover:text-primary dark:text-slate-600"
-                      fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
                   </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
+        {/* SEND US A MESSAGE */}
+        <section className="px-6 pb-24 sm:px-10 lg:px-16">
+          <div className="mx-auto max-w-4xl">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
+              className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-surface-dark lg:grid-cols-[1fr_0.8fr]"
+            >
+              {/* FORM */}
+              <div className="p-8 sm:p-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
+                  Send us a message
+                </p>
+                <h3 className="mt-3 font-display text-2xl font-bold text-slate-950 dark:text-white">
+                  We'd love to hear from you
+                </h3>
+
+                <form onSubmit={handleSendWhatsApp} className="mt-6 space-y-4">
+                  <div>
+                    <label className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                      Your name
+                    </label>
+                    <input
+                      type="text"
+                      value={formName}
+                      onChange={(e) => setFormName(e.target.value)}
+                      placeholder="John Doe"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/30"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-1.5 block text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+                      Your message
+                    </label>
+                    <textarea
+                      value={formMessage}
+                      onChange={(e) => setFormMessage(e.target.value)}
+                      placeholder="I'd like to know about..."
+                      rows={4}
+                      className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:border-white/10 dark:bg-white/5 dark:text-white dark:placeholder:text-white/30"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={!formName.trim() || !formMessage.trim()}
+                    className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-semibold text-white shadow-md transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.856L.057 23.571a.75.75 0 0 0 .943.905l5.915-1.55A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.75 9.75 0 0 1-4.96-1.356l-.355-.213-3.668.962.978-3.567-.232-.368A9.75 9.75 0 1 1 12 21.75z"/>
+                    </svg>
+                    Send via WhatsApp
+                  </button>
+                </form>
+              </div>
+
+              {/* DECORATIVE IMAGE */}
+              <div className="relative hidden lg:block">
+                <img
+                  src={formDecorImg}
+                  alt="Mancora Kite Club community"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent dark:from-surface-dark/20" />
+              </div>
+            </motion.div>
+          </div>
         </section>
       </div>
     </StandardPage>

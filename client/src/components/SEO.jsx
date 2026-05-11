@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useI18n } from '../app/providers/i18nContext.js'
+import { useI18n } from '../app/providers/i18nContext.jsx'
 import { setSeoTags } from '../lib/seo.js'
 
 /**

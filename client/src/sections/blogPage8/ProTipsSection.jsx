@@ -1,6 +1,9 @@
 import { INTRO_DATA8 } from "./introData8";
+import { useI18n } from "../../app/providers/i18nContext";
 
 function ProTipsSection() {
+    const { t } = useI18n();
+
     return (
         <section className="bg-[#05161b] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
             <div className="max-w-4xl mx-auto">
@@ -9,13 +12,13 @@ function ProTipsSection() {
                         <span className="material-symbols-outlined absolute -bottom-10 -right-10 text-[200px] text-white/5 rotate-[-15deg] pointer-events-none">lightbulb</span>
                         <h3 className="mb-8 flex items-center gap-4 text-2xl font-bold italic tracking-tight text-white sm:text-3xl md:text-4xl sm:mb-10">
                             <span className="material-symbols-outlined text-[#5af8fb] text-4xl">tips_and_updates</span>
-                            INTERMEDIATE PRO-TIPS
+                            {t('blogTechKite.ui.proTipsTitle')}
                         </h3>
                         <div className="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:gap-10">
                             {INTRO_DATA8.proTips.map((tip, i) => (
                                 <div key={i}>
-                                    <h4 className={`${tip.color} font-bold mb-2 uppercase tracking-widest text-xs`}>{tip.title}</h4>
-                                    <p className="text-[#9eaeb4] text-sm leading-relaxed">{tip.text}</p>
+                                    <h4 className={`${tip.color} font-bold mb-2 uppercase tracking-widest text-xs`}>{t(tip.titleKey)}</h4>
+                                    <p className="text-[#9eaeb4] text-sm leading-relaxed">{t(tip.textKey)}</p>
                                 </div>
                             ))}
                         </div>

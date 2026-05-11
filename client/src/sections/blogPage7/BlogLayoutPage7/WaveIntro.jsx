@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
+import { useI18n } from '../../../app/providers/i18nContext'
 
 function WaveIntro() {
+  const { t } = useI18n()
+
   return (
     <section className="relative bg-white py-32">
       <div className="mx-auto max-w-4xl px-6 text-center">
@@ -10,7 +13,7 @@ function WaveIntro() {
           transition={{ duration: 0.7 }}
           className="text-4xl font-bold leading-tight text-black md:text-5xl"
         >
-          Most kitesurfers don&apos;t struggle because of skill.
+          {t('blogWaveProgression.intro.h2')}
         </motion.h2>
 
         <motion.p
@@ -19,7 +22,7 @@ function WaveIntro() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-8 text-lg text-gray-600"
         >
-          They struggle because they&apos;re in the wrong conditions.
+          {t('blogWaveProgression.intro.p1')}
         </motion.p>
 
         <motion.p
@@ -28,8 +31,7 @@ function WaveIntro() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mx-auto mt-6 max-w-2xl text-gray-500"
         >
-          Gusty wind, overcrowded spots, cold water, inconsistent waves...
-          all of it slows progression without you even realizing it.
+          {t('blogWaveProgression.intro.p2')}
         </motion.p>
 
         <motion.div
@@ -39,11 +41,10 @@ function WaveIntro() {
           className="mt-12"
         >
           <p className="text-xl font-semibold text-black">
-            Progression is not random.
+            {t('blogWaveProgression.intro.p3')}
           </p>
-
           <p className="mt-2 font-semibold text-cyan-500">
-            It&apos;s built by the environment.
+            {t('blogWaveProgression.intro.p4')}
           </p>
         </motion.div>
       </div>

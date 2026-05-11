@@ -1,14 +1,21 @@
 import { COACHING_DATA9 } from "./introData9";
+import { useI18n } from '../../app/providers/i18nContext'
 
 function CoachingContent9() {
+    const { t } = useI18n();
+
     return (
         <div className="bg-[#031015] text-white">
             {/* Reading the Swell */}
             <section className="bg-[#05151b] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
                 <div className="mx-auto max-w-7xl">
                     <div className="mb-12 sm:mb-16">
-                        <h2 className="mb-4 text-2xl font-bold uppercase tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">01 / READING THE SWELL</h2>
-                        <p className="max-w-3xl text-base leading-relaxed text-[#9eadb4] sm:text-lg md:text-xl">Anticipation over reaction.</p>
+                        <h2 className="mb-4 text-2xl font-bold uppercase tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                            {t('blogMistakesKite.ui.readingSwellTitle')}
+                        </h2>
+                        <p className="max-w-3xl text-base leading-relaxed text-[#9eadb4] sm:text-lg md:text-xl">
+                            {t('blogMistakesKite.ui.readingSwellDesc')}
+                        </p>
                     </div>
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
                         {COACHING_DATA9.swell.map((item, i) => (
@@ -17,8 +24,8 @@ function CoachingContent9() {
                                     <span className="material-symbols-outlined text-[#00e7fc] text-3xl">{item.icon}</span>
                                     <span className="text-[10px] text-[#9eadb4] tracking-[0.2em]">{item.id}</span>
                                 </div>
-                                <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">{item.title}</h3>
-                                <p className="text-[#9eadb4] text-sm leading-relaxed">{item.desc}</p>
+                                <h3 className="text-xl font-bold mb-4 uppercase tracking-tight">{t(item.titleKey)}</h3>
+                                <p className="text-[#9eadb4] text-sm leading-relaxed">{t(item.descKey)}</p>
                             </div>
                         ))}
                     </div>
@@ -28,15 +35,19 @@ function CoachingContent9() {
             {/* Timing & Control */}
             <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
                 <div className="mb-12 text-left sm:mb-16 lg:text-right">
-                    <h2 className="mb-4 text-2xl font-bold uppercase tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">02 / TIMING & CONTROL</h2>
-                    <p className="text-base leading-relaxed text-[#9eadb4] sm:text-lg md:text-xl">Synchronizing kite drift with board speed.</p>
+                    <h2 className="mb-4 text-2xl font-bold uppercase tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
+                        {t('blogMistakesKite.ui.timingControlTitle')}
+                    </h2>
+                    <p className="text-base leading-relaxed text-[#9eadb4] sm:text-lg md:text-xl">
+                        {t('blogMistakesKite.ui.timingControlDesc')}
+                    </p>
                 </div>
                 <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12">
                     <div className="space-y-8">
-                        {COACHING_DATA9.timing.map((t, i) => (
+                        {COACHING_DATA9.timing.map((tItem, i) => (
                             <div key={i} className="rounded-2xl border-l-4 border-[#52f2f5] bg-[#0f2229] p-4 sm:p-6">
-                                <h4 className="text-lg font-bold text-[#52f2f5] mb-2 uppercase tracking-tight">{t.title}</h4>
-                                <p className="text-[#e4f3fa] text-sm leading-relaxed font-light">{t.desc}</p>
+                                <h4 className="text-lg font-bold text-[#52f2f5] mb-2 uppercase tracking-tight">{t(tItem.titleKey)}</h4>
+                                <p className="text-[#e4f3fa] text-sm leading-relaxed font-light">{t(tItem.descKey)}</p>
                             </div>
                         ))}
                     </div>

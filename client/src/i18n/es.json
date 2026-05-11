@@ -945,6 +945,511 @@
       "btn": "Arma tu Viaje a Máncora"
     }
   },
+  "blogPacasmayo": {
+    "hero": {
+      "badge": "Surf en Perú",
+      "title1": "Pacasmayo, Perú:",
+      "title2": "La Guía Definitiva",
+      "title3": "de este Point Break",
+      "subtitle": "Descubre cuándo funciona mejor Pacasmayo y cómo integrarlo en una ruta de surf por el norte de Perú."
+    },
+    "intro": {
+      "eyebrow": "El Ambiente Point-Break",
+      "title": "Pacasmayo no es memorable porque sea fácil. Es memorable porque enseña paciencia a lo largo de la distancia.",
+      "p1": "A primera vista, Pacasmayo parece el sueño de izquierdas interminables. En la práctica, lo que lo hace especial es cómo te obliga a mantenerte concentrado en secciones largas, cambios sutiles de velocidad y decisiones de posicionamiento que siguen importando tras el primer giro.",
+      "p2": "Ese tipo de ola funciona maravillosamente dentro de un viaje de surf más largo en Perú. Te da un capítulo serio, impulsado por el proceso. Luego, si la ruta está bien diseñada, avanzas hacia el norte hacia un lugar más cálido y flexible como Máncora, donde el cuerpo se recupera rápido y el viaje se abre de nuevo.",
+      "quote": "Pacasmayo se trata menos de presumir maniobras y más de aprender a mantener un point break vivo bajo tus pies.",
+      "caption1": "Pacasmayo se siente mejor cuando tratas la ola como una secuencia en lugar de un solo momento.",
+      "caption2": "Las sesiones más sólidas suelen llegar a los viajeros que planean tener ritmo, no solo un buen titular."
+    },
+    "scroller": {
+      "mainEyebrow": "Guía Útil",
+      "mainTitle": "Las condiciones, el ritmo y la lógica de ruta que hacen que Pacasmayo valga la pena",
+      "mainDesc": "Pacasmayo cumple cuando entiendes lo que requiere de tu surf y cómo ubicarlo dentro de un viaje premium más amplio en lugar de pedirle que lo haga todo a la vez.",
+      "sec1": {
+        "eyebrow": "Condiciones",
+        "title": "Cuándo Pacasmayo funciona mejor",
+        "p1": "Pacasmayo es más fuerte cuando las marejadas del sur se alinean con condiciones limpias por la mañana. Como muchos point breaks largos de izquierdas, recompensa a quienes surfean temprano y respetan cómo el viento cambia el tono de la ola más tarde en el día.",
+        "p2": "Si esperas que cada sesión se sienta heroica, el lugar puede frustrarte. Si llegas listo para leer secciones, manejar la velocidad y aceptar que las mejores olas se construyen con paciencia, se vuelve profundamente gratificante.",
+        "b1": "Mejores meses: mayo a octubre",
+        "b2": "Las sesiones matutinas suelen ofrecer las caras más limpias",
+        "b3": "La elección de la tabla importa más que los puntos de estilo aquí",
+        "f1Label": "Estilo de ola",
+        "f1Value": "Point break largo de izquierda con espacio para pensar y ajustar.",
+        "f2Label": "Mejor nivel",
+        "f2Value": "Surfistas intermedios en adelante, especialmente los que disfrutan el proceso.",
+        "caption1": "Las mejores sesiones en Pacasmayo se tratan menos de drama y más de mantener viva la línea a lo largo de un largo lienzo.",
+        "caption2": "Un poco de deslizamiento (glide) extra en tu tabla suele hacer una diferencia mayor aquí que una configuración de moda."
+      },
+      "sec2": {
+        "eyebrow": "Ritmo de Viaje",
+        "title": "Trátalo como una misión compacta, no como un lugar que debe hacerlo todo",
+        "p1": "Pacasmayo funciona maravillosamente en un bloque concentrado de unos pocos días. Te da suficientes repeticiones para entender el point sin sobreestirar la energía emocional del viaje.",
+        "p2": "Eso importa porque los destinos de olas exigentes se vuelven mucho mejores cuando se les permite mantenerse precisos. No necesitas que carguen con tu vida nocturna, tu recuperación y toda tu historia de viaje al mismo tiempo.",
+        "b1": "Tres a cuatro días a menudo se siente más limpio que una estadía larga",
+        "b2": "Protege los días de llegada y salida de las expectativas de swell",
+        "b3": "Usa el destino para educarte en las olas, no para rango total de estilo de vida",
+        "f1Label": "Rol ideal",
+        "f1Value": "Parada de surf enfocada dentro de una ruta más amplia en el norte de Perú.",
+        "f2Label": "Mejor movimiento de plan",
+        "f2Value": "Mantén la logística ligera y tus mejores sesiones protegidas.",
+        "caption1": "Un plan premium en Pacasmayo se define por el ritmo, más que por una ambición desmedida.",
+        "caption2": "Cuando la ruta respira, las sesiones se sienten más valiosas y el destino conserva su atractivo."
+      },
+      "sec3": {
+        "eyebrow": "El Mejor Final",
+        "title": "Por qué la ruta suele mejorar nuevamente en Máncora",
+        "p1": "Después de repetidas sesiones de point-break, Máncora ofrece exactamente el tipo de contraste que hace que un viaje de surf se sienta inteligentemente diseñado: agua cálida, vida fácil, mejor recuperación y espacio para kitesurf o días mixtos ligeros si el cuerpo necesita un reseteo.",
+        "p2": "Esa transición no debilita el viaje. Lo completa. Pacasmayo te da textura de ola larga. Máncora te da el lugar donde puedes asimilar el viaje y aún querer más tiempo en el océano en lugar de un vuelo directo a casa.",
+        "b1": "Recuperación en aguas cálidas después de un bloque de point-break denso",
+        "b2": "Últimos días más flexibles para surf, kite y confort",
+        "b3": "El mejor punto de conversión para un viajero listo para actuar",
+        "f1Label": "Mejor combinación",
+        "f1Value": "Pacasmayo para enfoque, Máncora para el gran final.",
+        "f2Label": "Lógica de reserva",
+        "f2Value": "La ruta termina en el lugar que la mayoría de los viajeros quieren extender.",
+        "caption1": "Una buena ruta no tiene un solo pico. Cambia de textura y se vuelve más fácil de disfrutar al final.",
+        "caption2": "Esa facilidad final es exactamente lo que hace a Máncora un destino de cierre tan convincente en Perú."
+      }
+    },
+    "bridge": {
+      "title1": "Pacasmayo es una experiencia.",
+      "title2": "Máncora es donde progresas.",
+      "desc1": "Pacasmayo te da olas largas.",
+      "desc2": "Pero no siempre viento. No siempre consistencia.",
+      "desc3": "En Máncora, todo se alinea:",
+      "box1Title": "Viento",
+      "box1Desc": "Viento térmico diario y confiable.",
+      "box2Title": "Agua",
+      "box2Desc": "Condiciones tropicales cálidas todo el año.",
+      "box3Title": "Progresión",
+      "box3Desc": "Aprendizaje más rápido, condiciones más seguras, mejor coaching.",
+      "footer1": "Por eso la mayoría de los riders no se quedan en Pacasmayo.",
+      "footer2": "Terminan su viaje en Máncora."
+    },
+    "pointbreak": {
+      "title": "¿Qué hace único a Pacasmayo?",
+      "item1": "Point break de izquierda interminable",
+      "item2": "Paredes largas y suaves",
+      "item3": "Perfecto para carving y fluidez",
+      "item4": "Olas largas con ayuda del viento",
+      "item5": "Auténtico kitesurf estilo surf",
+      "footer1": "Esto no se trata de trucos.",
+      "footer2": "Se trata de fluir."
+    },
+    "cta": {
+      "eyebrow": "Mejora tu Ruta",
+      "title": "Deja que Pacasmayo le dé la exigencia al viaje. Deja que Máncora le dé su brillo final.",
+      "desc": "Esa combinación es lo que transforma una misión de surf en Perú en un viaje premium: serio aprendizaje en point-break primero, seguido de calidez, confort y flexibilidad cuando llega el momento de quedarse más tiempo.",
+      "btn": "Arma tu Viaje a Máncora"
+    }
+  },
+  "blogWaveProgression": {
+    "hero": {
+      "badge": "Progresión en Olas",
+      "title1": "Por qué Máncora",
+      "title2": "Es Diferente",
+      "subtitle": "No es solo otro spot de kitesurf. Un lugar diseñado para la progresión real en olas."
+    },
+    "intro": {
+      "h2": "La mayoría de los kitesurfistas no sufren por falta de habilidad.",
+      "p1": "Sufren porque están en las condiciones equivocadas.",
+      "p2": "Viento racheado, spots abarrotados, agua fría, olas inconsistentes... todo eso frena la progresión sin que te des cuenta.",
+      "p3": "La progresión no es aleatoria.",
+      "p4": "Se construye por el entorno."
+    },
+    "problem": {
+      "h2": "Progresar en olas no es fácil",
+      "p1": "Demasiado viento, muy poco viento. Olas demasiado grandes, demasiado desordenadas, demasiada gente.",
+      "p2": "La mayoría de los spots son demasiado extremos o no lo suficientemente consistentes para mejorar de verdad.",
+      "p3": "Por eso la mayoría de los riders se estancan."
+    },
+    "difference": {
+      "h2": "¿Qué hace diferente a Máncora?",
+      "item1": "Viento side-shore que se mantiene confiable.",
+      "item2": "Olas largas y nobles que te permiten repetir secciones.",
+      "item3": "Agua cálida todo el año, para que te mantengas relajado y presente.",
+      "item4": "Poca presión de multitudes, lo que significa más calma y más repeticiones.",
+      "item5": "Una curva de aprendizaje natural para la progresión en olas.",
+      "footer1": "No son solo buenas condiciones.",
+      "footer2": "Es la combinación perfecta."
+    },
+    "progression": {
+      "h2": "Un sistema de progresión natural",
+      "b1Title": "Olas para Principiantes",
+      "b1Desc": "Aprende a posicionarte y leer las olas sin presión.",
+      "b2Title": "Fluidez Intermedia",
+      "b2Desc": "Conecta giros, controla la velocidad y surfea olas con confianza.",
+      "b3Title": "Navegación Avanzada",
+      "b3Desc": "Supera tus límites con estilo, potencia y control total de la ola."
+    },
+    "lifestyle": {
+      "h2": "No es solo progresión",
+      "p1": "Es el estilo de vida. Atardeceres cálidos, energía del océano y una comunidad que te impulsa cada día.",
+      "p2": "No solo navegas mejor. Vives mejor."
+    },
+    "cta": {
+      "h2": "¿Listo para subir el nivel de tu navegación?",
+      "p": "Únete a nosotros en Máncora y experimenta la diferencia por ti mismo.",
+      "btn1": "Reserva tu Experiencia",
+      "btn2": "Explorar Programas"
+    }
+  },
+  "blogProgressionKite": {
+    "ui": {
+      "technicalOverview": "Resumen Técnico",
+      "tacticalLoadout": "Equipamiento Táctico",
+      "proTipTitle": "Consejo Pro: El Loop"
+    },
+    "hero": {
+      "location": "Perú / Máncora",
+      "title": "7 Noches en Máncora:",
+      "highlight": "La Progresión",
+      "subtitle": "Plan de Acción",
+      "description": "Un itinerario editorial de alta intensidad de 7 días diseñado para riders intermedios que buscan romper estancamientos. Domina la postura, el tiempo de la ola y los loops técnicos."
+    },
+    "techStats": [
+      {
+        "label": "Velocidad del Viento",
+        "desc": "Vientos térmicos constantes. El flujo más limpio llega a media tarde."
+      },
+      {
+        "label": "Temp. del Agua",
+        "desc": "Influencia de la Corriente de Humboldt. Requiere protección térmica adecuada."
+      },
+      {
+        "label": "Temporada Ideal",
+        "desc": "Probabilidad máxima de viento alineada con las principales ventanas de swell."
+      }
+    ],
+    "itinerary": [
+      {
+        "days": "Día 1-2",
+        "title": "Fundamentos en el Point de Máncora",
+        "desc": "Sesiones de surf matutinas sin multitudes para leer la ola. El cambio de viento por la tarde activa las sesiones de kite. Concéntrate en ajustar tu postura frente a la energía pura del Pacífico.",
+        "target1": "Analizar la dirección del swell y la mecánica del point break.",
+        "target2": "Corrección de postura: Distribución de peso en tablas direccionales."
+      },
+      {
+        "days": "Día 3",
+        "title": "Expedición a Los Órganos",
+        "desc": "Un cambio de perspectiva. Expedición matutina para observar ballenas jorobadas y entender el ecosistema marino. La tarde presenta kitesurf técnico en corrientes cambiantes."
+      },
+      {
+        "days": "Día 4-5",
+        "title": "El Downwinder de Vichayito",
+        "desc": "El núcleo del plan de progresión. Una ruta downwind hermosa y agotadora que pone a prueba la resistencia. Aquí es donde los kite loops técnicos se forjan bajo presión.",
+        "proTip": "Comprométete por completo. La duda es donde se pierde el control. Inicia el loop cuando alcances el ápice de la ola para generar un impulso hacia adelante."
+      }
+    ],
+    "loadout": {
+      "quiver": {
+        "title": "Especificaciones del Quiver",
+        "desc": "Las condiciones exigen versatilidad. Trae un equipo de kite rápido y responsivo para manejar secciones racheadas.",
+        "tag1": "Kite 5M",
+        "tag2": "Kite 7M",
+        "tag3": "Kite 9M"
+      },
+      "armor": {
+        "title": "Protección Térmica",
+        "desc": "No subestimes la Corriente de Humboldt. El calor corporal es fundamental para la resistencia durante los downwinders de 4 horas.",
+        "tag1": "Wetsuit 3/2mm",
+        "tag2": "Botines Opcionales"
+      }
+    }
+  },
+  "blogTechKite": {
+    "category": "Nivel Intermedio",
+    "ui": {
+      "focusPoint": "Punto de Enfoque",
+      "proTipsTitle": "TIPS PRO INTERMEDIOS"
+    },
+    "hero": {
+      "title": "TÉCNICAS PARA",
+      "highlight": "KITESURF EN OLAS",
+      "description": "Leer el swell, dominar el tiempo y el control. Domina los elementos y transforma el océano en tu patio de recreo."
+    },
+    "intro": "El kitesurf en olas lo cambia todo. Ya no se trata solo de aprovechar el viento; se trata de sincronizar ese poder con la energía pura del oleaje del océano. Como rider intermedio, has dominado lo básico. Ahora es el momento de leer el agua y mantener un control absoluto de la cometa mientras atacas la cara de una ola.",
+    "sections": {
+      "swell": {
+        "title": "LEER",
+        "highlight": "EL SWELL",
+        "p1": "Antes de lanzar tu kite, observa el agua. El océano no es aleatorio; se mueve en series. Dedica 10 minutos a analizar el intervalo entre ellas.",
+        "p2": "El posicionamiento lo es todo. Observa los bultos formándose en el horizonte. No mires solo la ola que está rompiendo; busca la que viene detrás.",
+        "focus": "Mira más allá de la zona de quiebre. La línea del horizonte dicta el ritmo de las series."
+      },
+      "turns": {
+        "title": "EL TIEMPO DE",
+        "highlight": "TUS GIROS",
+        "p1": "La sinergia entre el 'bottom turn' y el 'top turn' es el latido del wave riding. Es un baile entre la gravedad y el tirón del kite.",
+        "p2Label": "El Bottom Turn:",
+        "p2": "Esto lo prepara todo. Mantén el peso centrado, clava el canto con fuerza y genera velocidad antes de proyectarte hacia arriba.",
+        "p3Label": "El Top Turn:",
+        "p3": "A medida que alcanzas el pico, cambia tu peso al pie trasero para pivotar la tabla, redirigiendo la cometa al mismo tiempo."
+      }
+    },
+    "kiteControl": {
+      "title": "CONTROL DEL",
+      "highlight": "KITE",
+      "desc": "En las olas, tu kite debe ser una extensión de tu cuerpo. La regla de oro: mantén la cometa en movimiento.",
+      "items": [
+        {
+          "label": "Drifting vs. Potencia",
+          "text": "Aprende cuándo aparcar el kite y dejar que la ola te empuje, en lugar de pilotarlo activamente."
+        },
+        {
+          "label": "Tensión de Líneas",
+          "text": "Mantén una presión constante en la barra. Si las líneas se aflojan, suelta la barra y pilota de forma agresiva."
+        }
+      ]
+    },
+    "proTips": [
+      {
+        "title": "Plan de Escape",
+        "text": "Conoce tu ruta de salida. Si una serie se cierra, gira a favor del viento y deja que la espuma pase por encima de ti."
+      },
+      {
+        "title": "Cambio de Postura",
+        "text": "Abre tus hombros hacia donde quieres ir. No mires la cometa; mira la línea de la ola."
+      },
+      {
+        "title": "Straps vs. Strapless",
+        "text": "Si estás en transición a strapless, mantén tu pie delantero sobre el centro del mástil para mayor estabilidad."
+      },
+      {
+        "title": "Compromiso",
+        "text": "La duda es el enemigo. Una vez que inicies un giro, compromete todo tu peso en el canto de la tabla."
+      }
+    ]
+  },
+  "blogMistakesKite": {
+    "ui": {
+      "readingSwellTitle": "01 / LEYENDO EL SWELL",
+      "readingSwellDesc": "Anticipación sobre reacción.",
+      "timingControlTitle": "02 / TIEMPO & CONTROL",
+      "timingControlDesc": "Sincronizando el drift del kite con la velocidad de la tabla.",
+      "warningTitle": "ADVERTENCIA TÉCNICA"
+    },
+    "hero": {
+      "category1": "INTERMEDIO",
+      "category2": "KITESURF EN OLAS",
+      "title": "ERRORES TÍPICOS EN OLAS",
+      "subtitle": "Errores típicos del rider intermedio y cómo corregirlos (Coaching Real).",
+      "description": "Leer el swell, dominar el tiempo y mantener el control cuando el océano empuja de vuelta."
+    },
+    "intro": {
+      "title": "LA CORRIENTE DE PRECISIÓN",
+      "p1": "La transición del agua plana a las olas es el momento definitorio en la progresión de un kitesurfista. Requiere un cambio de depender únicamente de la potencia de la cometa a leer la energía del océano.",
+      "p2": "La ola dicta el ritmo. Tu kite y tabla deben sincronizarse a esa frecuencia. Esta guía desglosa la mecánica esencial del kitesurf en olas, quitando el ruido para enfocarse en la física del control fluido."
+    },
+    "swell": [
+      {
+        "title": "PERÍODO DEL SWELL",
+        "desc": "Períodos más largos significan energía más profunda y poderosa. Se levantan más rápido, requiriendo un compromiso más temprano."
+      },
+      {
+        "title": "DIRECCIÓN DEL VIENTO",
+        "desc": "El viento side-shore (lateral) es ideal. Los vientos onshore crean chop y te obligan a navegar 'hacia arriba' de la ola en lugar de 'con' ella."
+      },
+      {
+        "title": "EL PICO",
+        "desc": "Identifica dónde la ola lanzará el labio primero. Tu enfoque debe apuntar a la sección crítica antes del labio."
+      }
+    ],
+    "timing": [
+      {
+        "title": "DINÁMICA DEL BOTTOM TURN",
+        "desc": "Inicia clavando el canto fuerte y dirigiendo la cometa hacia abajo. Esto convierte la velocidad en proyección vertical."
+      },
+      {
+        "title": "LIBERACIÓN DEL TOP TURN",
+        "desc": "Al golpear el labio, suelta la barra para matar la potencia, pivotea y redirige agresivamente el kite a lo largo de la línea."
+      }
+    ],
+    "warning": "Nunca corras más rápido que tu kite. Si surfeas más rápido de lo que la cometa puede derivar (drift), las líneas se aflojarán, lo que provocará una pérdida de control de dirección justo en la zona de impacto. Mantén siempre la tensión de las líneas."
+  },
+  "blogSafariKite": {
+    "ui": {
+      "skillLevel": "Nivel Requerido",
+      "levelValue": "Intermedio / Avanzado",
+      "featuredSpots": "Spots Destacados",
+      "peruvianCircuit": "El Circuito de Olas Peruano",
+      "dayInLife": "Un Día en la Vida",
+      "rhythmDictates": "El ritmo del viento dicta nuestro horario."
+    },
+    "hero": {
+      "tag": "Serie Expedición",
+      "title": "KITE SAFARI:",
+      "highlight": "NORTE DEL PERÚ",
+      "description": "Un viaje por la costa más ventosa de la Tierra. Únete a nuestra expedición guiada por las joyas ocultas del desierto peruano."
+    },
+    "requirements": {
+      "title": "Requisitos del Rider",
+      "description": "Este safari está diseñado para riders Intermedios y Avanzados para garantizar una experiencia segura y emocionante en los exigentes spots de Perú.",
+      "items": [
+        {
+          "title": "Kitesurf Independiente",
+          "desc": "Independencia total para armar, lanzar y realizar auto-rescate en condiciones variables."
+        },
+        {
+          "title": "Dominio de Ceñida",
+          "desc": "Capacidad constante para ceñir y mantener posición en vientos moderados a fuertes."
+        },
+        {
+          "title": "Experiencia Básica en Olas",
+          "desc": "Comodidad navegando en olas pequeñas a medianas y conocimiento básico de las reglas de etiqueta."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "title": "Revisión Temprana",
+        "desc": "Evaluación con las primeras luces del día de las condiciones y planificación del spot."
+      },
+      {
+        "title": "Desayuno con Vista",
+        "desc": "Recargando energías con productos locales mirando las olas."
+      },
+      {
+        "title": "Sesión Matutina",
+        "desc": "Al agua en Pacasmayo mientras se construyen los vientos térmicos."
+      },
+      {
+        "title": "Downwinder",
+        "desc": "Recorrido costero guiado hasta el siguiente spot prístino."
+      },
+      {
+        "title": "Fogata al Atardecer",
+        "desc": "Revisión de videos y relax bajo las estrellas."
+      }
+    ],
+    "spots": [
+      {
+        "name": "Pacasmayo",
+        "tag": "La Ola Más Larga",
+        "desc": "Legendario por sus olas izquierdas que rompen sin fin, ofreciendo recorridos que pueden durar minutos."
+      },
+      {
+        "name": "Lobitos",
+        "tag": "Pura Perfección",
+        "desc": "Una ola izquierda tubular perfecta rompiendo sobre un banco de arena poco profundo."
+      },
+      {
+        "name": "Máncora",
+        "tag": "Viento Vibrante",
+        "desc": "Aguas más cálidas, térmicas consistentes y una atmósfera post-sesión llena de energía."
+      }
+    ]
+  },
+  "blogWhaleSeason": {
+    "hero": {
+      "tag": "Expediciones",
+      "title": "Temporada de Ballenas en el Norte",
+      "subtitle": "Un viaje técnico y espiritual a través de la ruta de migración de la ballena jorobada."
+    },
+    "intro": {
+      "tag": "MARAVILLA NATURAL",
+      "body": "Hay una quietud profunda que se produce al navegar frente a la costa de Piura. El viento zumba a través de las líneas, la tabla salta sobre el chop, y luego—una erupción. Un leviatán de cuarenta toneladas irrumpe en la superficie. Presenciar la migración de las jorobadas mientras estás conectado al viento no es solo un encuentro; es una recalibración de escala."
+    },
+    "experience": {
+      "title": "La Sinfonía de Escala",
+      "p1": "Antes de verlas, las escuchas. La 'respiración'—una explosión concusiva de aire y vapor—resuena en el agua, a menudo más fuerte que el oleaje rompiente. Cuando navegas cerca de una jorobada, tu kite de repente se siente insignificante.",
+      "p2": "El gran desplazamiento de agua al moverse crea corrientes localizadas. Es una muestra cruda de poder hidrodinámico que hace que incluso la ola más agresiva parezca suave en comparación."
+    },
+    "timing": {
+      "title": "Tiempo & Temporada",
+      "subtitle": "Ventanas estratégicas para un encuentro cinético.",
+      "items": [
+        {
+          "label": "Temporada Alta",
+          "text": "De julio a octubre marca la principal ventana de migración a lo largo de la costa norte."
+        },
+        {
+          "label": "Visibilidad Óptima",
+          "text": "Las mañanas (06:00 - 09:00) ofrecen las aguas más tranquilas antes de que los vientos térmicos alcancen su punto máximo."
+        }
+      ]
+    },
+    "protocol": {
+      "title": "Protocolo Profesional",
+      "rules": [
+        {
+          "label": "Mantén la Distancia",
+          "text": "Mantén estrictamente un radio mínimo de 100 metros de cualquier ballena avistada."
+        },
+        {
+          "label": "Vectores Paralelos",
+          "text": "Si navegas cerca de un grupo, alinea tu rumbo paralelo a su dirección de viaje."
+        },
+        {
+          "label": "Nunca Cruces su Camino",
+          "text": "No intentes navegar directamente en frente de ellas ni interceptar su línea de migración."
+        }
+      ]
+    }
+  },
+  "blogWhaleSeason12": {
+    "hero": {
+      "location": "Máncora, Perú",
+      "title": "TEMPORADA",
+      "highlight": "DE BALLENAS",
+      "description": "La migración anual trae a las jorobadas a los oleajes del norte. Una rara convergencia de vida marina y vientos térmicos perfectos."
+    },
+    "ribbon": [
+      {
+        "label": "Temporada",
+        "value": "Ago - Oct"
+      },
+      {
+        "label": "Temp. del Agua",
+        "value": "18°C / 64°F"
+      },
+      {
+        "label": "Viento (PM)",
+        "value": "15-25 nudos"
+      },
+      {
+        "label": "Dirección Swell",
+        "value": "SSW"
+      }
+    ],
+    "sections": {
+      "morning": {
+        "title": "LA GUARDIA MATUTINA",
+        "items": [
+          {
+            "label": "Vista Óptima: 07:00 - 10:00",
+            "desc": "Las condiciones del océano glassy antes de que lleguen los térmicos permiten una visibilidad clara."
+          },
+          {
+            "label": "Patrones de Comportamiento",
+            "desc": "Las madres y las crías suelen quedarse más cerca de la orilla. Los saltos son frecuentes."
+          },
+          {
+            "label": "Protocolos de Distancia",
+            "desc": "Distancia mínima estricta de aproximación de 100 m mantenida por embarcaciones autorizadas."
+          }
+        ]
+      },
+      "afternoon": {
+        "title": "EL DESLIZAMIENTO DE LA TARDE",
+        "items": [
+          {
+            "label": "Activación Térmica: 13:00 - Atardecer",
+            "desc": "El calentamiento del desierto genera vientos fiables de 15 a 25 nudos, transformando el spot en un patio de recreo."
+          },
+          {
+            "label": "Dinámica del Point Break",
+            "desc": "Se organizan largas izquierdas a lo largo del arrecife. Se disfrutan mejor con tablas de surf strapless."
+          },
+          {
+            "label": "Aguas Compartidas",
+            "desc": "Los riders deben mantenerse vigilantes. Las ballenas transitan ocasionalmente por las zonas de quiebre exteriores."
+          }
+        ]
+      }
+    }
+  },
   "blogNorthVsSouth": {
     "hero": {
       "badge": "Kitesurf en Perú",

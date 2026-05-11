@@ -945,6 +945,511 @@
       "btn": "Build Your Trip to Mancora"
     }
   },
+  "blogPacasmayo": {
+    "hero": {
+      "badge": "Surfing Peru",
+      "title1": "Pacasmayo, Peru:",
+      "title2": "The Ultimate",
+      "title3": "Point Break Guide",
+      "subtitle": "Learn when Pacasmayo works best and how to place it inside a bigger north Peru surf route."
+    },
+    "intro": {
+      "eyebrow": "Point-Break Mood",
+      "title": "Pacasmayo is not memorable because it is easy. It is memorable because it teaches patience over distance.",
+      "p1": "At first glance, Pacasmayo looks like a dream of endless lefts. In practice, what makes it special is the way it forces you to stay engaged through long sections, subtle speed changes, and positioning decisions that keep mattering after the first turn.",
+      "p2": "That kind of wave works beautifully inside a longer Peru surf trip. It gives you a serious, process-driven chapter. Then, if the route is well designed, you move north to somewhere warmer and more flexible like Mancora, where the body recovers faster and the trip opens up again.",
+      "quote": "Pacasmayo is less about showing off and more about learning how to keep a point break alive under your feet.",
+      "caption1": "Pacasmayo feels at its best when you treat the wave as a sequence rather than a single moment.",
+      "caption2": "The strongest sessions usually come to travelers who plan for rhythm, not just for a headline."
+    },
+    "scroller": {
+      "mainEyebrow": "Useful Guide",
+      "mainTitle": "The conditions, pacing, and route logic that make Pacasmayo feel worth the effort",
+      "mainDesc": "Pacasmayo delivers when you understand what it wants from your surfing and how to place it inside a broader premium trip instead of asking it to do every job at once.",
+      "sec1": {
+        "eyebrow": "Conditions",
+        "title": "When Pacasmayo works best",
+        "p1": "Pacasmayo is strongest when south swells line up with cleaner morning conditions. Like many long left point breaks, it rewards those who surf early and respect how the wind can change the tone of the wave later in the day.",
+        "p2": "If you are expecting every session to feel heroic, the spot may frustrate you. If you show up ready to read sections, manage speed, and accept that the best waves are built on patience, it becomes deeply rewarding.",
+        "b1": "Best months: May to October",
+        "b2": "Morning sessions usually offer the cleanest faces",
+        "b3": "Board choice matters more than style points here",
+        "f1Label": "Wave style",
+        "f1Value": "Long left point break with space to think and adjust.",
+        "f2Label": "Best level",
+        "f2Value": "Intermediate surfers upward, especially those who enjoy process.",
+        "caption1": "The best Pacasmayo sessions are less about drama and more about keeping the line alive across a long canvas.",
+        "caption2": "A little extra glide in your equipment often makes a bigger difference here than a trendier setup."
+      },
+      "sec2": {
+        "eyebrow": "Trip Rhythm",
+        "title": "Treat it as a compact mission, not a place that must do everything",
+        "p1": "Pacasmayo works beautifully in a focused block of a few days. It gives you enough repetition to understand the point without overstretching the emotional energy of the trip.",
+        "p2": "That matters because demanding wave destinations become much better when they are allowed to stay precise. You do not need them to carry your nightlife, your recovery, and your entire travel story at the same time.",
+        "b1": "Three to four days often feels cleaner than a long stay",
+        "b2": "Protect arrival and departure days from swell expectations",
+        "b3": "Use the destination for wave education, not total lifestyle range",
+        "f1Label": "Ideal role",
+        "f1Value": "Focused surf stop inside a broader northern Peru route.",
+        "f2Label": "Best planning move",
+        "f2Value": "Keep logistics light and your best sessions protected.",
+        "caption1": "A premium Pacasmayo plan is defined by pacing more than by overstuffed ambition.",
+        "caption2": "When the route breathes, the sessions feel more valuable and the destination retains its edge."
+      },
+      "sec3": {
+        "eyebrow": "Best Finish",
+        "title": "Why the route often gets better again in Mancora",
+        "p1": "After repeated point-break sessions, Mancora offers exactly the kind of contrast that makes a surf trip feel intelligently designed: warm water, easier living, better recovery, and room for kitesurf or lighter mixed days if the body needs a reset.",
+        "p2": "That transition does not weaken the trip. It completes it. Pacasmayo gives you long-wave texture. Mancora gives you the place where you can absorb the trip and still want more ocean time instead of a direct flight home.",
+        "b1": "Warm-water recovery after a denser point-break block",
+        "b2": "More flexible final days for surf, kite, and comfort",
+        "b3": "Stronger conversion point for a travel reader who is ready to act",
+        "f1Label": "Best pairing",
+        "f1Value": "Pacasmayo for focus, Mancora for finish.",
+        "f2Label": "Booking logic",
+        "f2Value": "The route ends in the place most travelers want to extend.",
+        "caption1": "A good route does not peak once. It changes texture and becomes easier to enjoy at the end.",
+        "caption2": "That final ease is exactly what makes Mancora such a compelling closing destination in Peru."
+      }
+    },
+    "bridge": {
+      "title1": "Pacasmayo is an experience.",
+      "title2": "Mancora is where you progress.",
+      "desc1": "Pacasmayo gives you long rides.",
+      "desc2": "But not always wind. Not always consistency.",
+      "desc3": "In Mancora, everything aligns:",
+      "box1Title": "Wind",
+      "box1Desc": "Reliable, daily thermal wind.",
+      "box2Title": "Water",
+      "box2Desc": "Warm, tropical conditions year-round.",
+      "box3Title": "Progression",
+      "box3Desc": "Faster learning, safer conditions, better coaching.",
+      "footer1": "That’s why most riders don’t stay in Pacasmayo.",
+      "footer2": "They finish their trip in Mancora."
+    },
+    "pointbreak": {
+      "title": "What makes Pacasmayo unique?",
+      "item1": "Endless left-hand point break",
+      "item2": "Smooth and long walls",
+      "item3": "Perfect for carving and flow",
+      "item4": "Wind-assisted long rides",
+      "item5": "True surf-style kitesurfing",
+      "footer1": "This is not about tricks.",
+      "footer2": "It’s about flow."
+    },
+    "cta": {
+      "eyebrow": "Route Upgrade",
+      "title": "Let Pacasmayo give the trip its line choice. Let Mancora give it its final glow.",
+      "desc": "That combination is what transforms a strong Peru surf mission into a cleaner premium journey: serious point-break learning first, then warmth, comfort, and flexibility when it is time to stay longer.",
+      "btn": "Build Your Trip to Mancora"
+    }
+  },
+  "blogWaveProgression": {
+    "hero": {
+      "badge": "Wave Progression",
+      "title1": "Why Mancora",
+      "title2": "Is Different",
+      "subtitle": "Not just another kitesurf spot. A place designed for real wave progression."
+    },
+    "intro": {
+      "h2": "Most kitesurfers don't struggle because of skill.",
+      "p1": "They struggle because they're in the wrong conditions.",
+      "p2": "Gusty wind, overcrowded spots, cold water, inconsistent waves... all of it slows progression without you even realizing it.",
+      "p3": "Progression is not random.",
+      "p4": "It's built by the environment."
+    },
+    "problem": {
+      "h2": "Progressing in waves is not easy",
+      "p1": "Too much wind, too little wind. Waves too big, too messy, too crowded.",
+      "p2": "Most spots are either too extreme or not consistent enough to truly improve.",
+      "p3": "That's why most riders get stuck."
+    },
+    "difference": {
+      "h2": "What makes Mancora different?",
+      "item1": "Side-shore wind that stays reliable.",
+      "item2": "Long, forgiving waves that let you repeat sections.",
+      "item3": "Warm water year-round, so you stay relaxed and present.",
+      "item4": "Low crowd pressure, which means more calm and more reps.",
+      "item5": "A natural learning curve for wave riding progression.",
+      "footer1": "It's not just good conditions.",
+      "footer2": "It's the perfect combination."
+    },
+    "progression": {
+      "h2": "A natural progression system",
+      "b1Title": "Beginner Waves",
+      "b1Desc": "Learn how to position yourself and read waves without pressure.",
+      "b2Title": "Intermediate Flow",
+      "b2Desc": "Connect turns, control speed and ride waves with confidence.",
+      "b3Title": "Advanced Riding",
+      "b3Desc": "Push your limits with style, power and full wave control."
+    },
+    "lifestyle": {
+      "h2": "It's not just progression",
+      "p1": "It's the lifestyle. Warm sunsets, ocean energy and a community that pushes you forward every day.",
+      "p2": "You don't just ride better. You live better."
+    },
+    "cta": {
+      "h2": "Ready to level up your riding?",
+      "p": "Join us in Mancora and experience the difference yourself.",
+      "btn1": "Book Your Experience",
+      "btn2": "Explore Programs"
+    }
+  },
+  "blogProgressionKite": {
+    "ui": {
+      "technicalOverview": "Technical Overview",
+      "tacticalLoadout": "Tactical Loadout",
+      "proTipTitle": "Pro Tip: The Loop"
+    },
+    "hero": {
+      "location": "Peru / Mancora",
+      "title": "7 Nights in Máncora:",
+      "highlight": "The Progression",
+      "subtitle": "Blueprint",
+      "description": "A high-intensity, 7-day editorial itinerary designed for intermediate riders to shatter plateaus. Master stance, wave timing, and technical loops."
+    },
+    "techStats": [
+      {
+        "label": "Wind Velocity",
+        "desc": "Consistent thermal winds. Cleanest flow arriving mid-afternoon."
+      },
+      {
+        "label": "Water Temp",
+        "desc": "Humboldt Current influence. Requires adequate thermal protection."
+      },
+      {
+        "label": "Prime Season",
+        "desc": "Peak wind probability aligning with primary swell windows."
+      }
+    ],
+    "itinerary": [
+      {
+        "days": "Day 1-2",
+        "title": "Foundation at Máncora Point",
+        "desc": "Morning uncrowded surf sessions to read the break. Afternoon wind shift activates the kite sessions. Focus on dialing in your stance against the Pacific's raw energy.",
+        "target1": "Analyze swell direction and point break mechanics.",
+        "target2": "Stance correction: Weight distribution on directional boards."
+      },
+      {
+        "days": "Day 3",
+        "title": "Los Organos Expedition",
+        "desc": "A shift in perspective. Morning expedition for humpback whale observation to understand the marine ecosystem. Afternoon features technical kiting in shifting currents."
+      },
+      {
+        "days": "Day 4-5",
+        "title": "The Vichayito Downwinder",
+        "desc": "The core of the progression plan. A grueling, beautiful downwind run pushing endurance. This is where technical kite loops are forged under pressure.",
+        "proTip": "Commit entirely. The hesitation is where control is lost. Initiate the loop as you reach the wave's apex to generate forward drive."
+      }
+    ],
+    "loadout": {
+      "quiver": {
+        "title": "Quiver Specs",
+        "desc": "The conditions demand versatility. Bring a fast, responsive kite setup to handle gusty sections.",
+        "tag1": "5M Kite",
+        "tag2": "7M Kite",
+        "tag3": "9M Kite"
+      },
+      "armor": {
+        "title": "Thermal Armor",
+        "desc": "Do not underestimate the Humboldt Current. Core warmth is critical for endurance during the 4-hour downwinders.",
+        "tag1": "3/2mm Wetsuit",
+        "tag2": "Booties Optional"
+      }
+    }
+  },
+  "blogTechKite": {
+    "category": "Intermediate Level",
+    "ui": {
+      "focusPoint": "Focus Point",
+      "proTipsTitle": "INTERMEDIATE PRO-TIPS"
+    },
+    "hero": {
+      "title": "TECHNIQUES FOR",
+      "highlight": "KITESURFING IN WAVES",
+      "description": "Reading the swell, timing and control. Master the elements and transform the ocean into your playground."
+    },
+    "intro": "Wave riding with a kite changes everything. It’s no longer just about harnessing the wind; it’s about syncing that power with the raw energy of the ocean swell. As an intermediate rider, you’ve mastered the basics. Now, it’s time to read the water and maintain absolute kite control while slashing the face of a wave.",
+    "sections": {
+      "swell": {
+        "title": "READING",
+        "highlight": "THE SWELL",
+        "p1": "Before you even launch your kite, observe the water. The ocean isn't random; it moves in sets. Spend 10 minutes analyzing the interval between sets.",
+        "p2": "Positioning is everything. Spot the lumps forming on the horizon. Don't just look for the wave that's breaking; look for the one behind it.",
+        "focus": "Look outside the break zone. The horizon line dictates the rhythm of the sets."
+      },
+      "turns": {
+        "title": "TIMING",
+        "highlight": "YOUR TURNS",
+        "p1": "The synergy between the 'bottom turn' and the 'top turn' is the heartbeat of wave riding. It’s a dance between gravity and kite pull.",
+        "p2Label": "The Bottom Turn:",
+        "p2": "This sets up everything. Keep your weight centered, edge hard, and generate speed before projecting back up.",
+        "p3Label": "The Top Turn:",
+        "p3": "As you reach the peak, shift your weight to your back foot to pivot the board, simultaneously redirecting the kite."
+      }
+    },
+    "kiteControl": {
+      "title": "KITE",
+      "highlight": "CONTROL",
+      "desc": "In the surf, your kite needs to be an extension of your body. The golden rule: keep the kite moving.",
+      "items": [
+        {
+          "label": "Drifting vs. Powered",
+          "text": "Learn when to 'park and ride' letting the wave push you, versus actively steering."
+        },
+        {
+          "label": "Line Tension",
+          "text": "Maintain consistent bar pressure. If lines go slack, sheet out and steer aggressively."
+        }
+      ]
+    },
+    "proTips": [
+      {
+        "title": "Bail Out Plan",
+        "text": "Know your exit route. If a set closes out, turn downwind and let the whitewater roll over you."
+      },
+      {
+        "title": "Stance Shift",
+        "text": "Open your shoulders towards where you want to go. Don't look at the kite; look down the line."
+      },
+      {
+        "title": "Strap vs. Strapless",
+        "text": "If transitioning to strapless, keep your front foot over the center mast for stability."
+      },
+      {
+        "title": "Commit",
+        "text": "Hesitation is the enemy. Once you initiate a turn, commit your weight fully to the rail."
+      }
+    ]
+  },
+  "blogMistakesKite": {
+    "ui": {
+      "readingSwellTitle": "01 / READING THE SWELL",
+      "readingSwellDesc": "Anticipation over reaction.",
+      "timingControlTitle": "02 / TIMING & CONTROL",
+      "timingControlDesc": "Synchronizing kite drift with board speed.",
+      "warningTitle": "TECHNICAL WARNING"
+    },
+    "hero": {
+      "category1": "INTERMEDIATE",
+      "category2": "WAVE RIDING",
+      "title": "TYPICAL MISTAKES IN WAVES",
+      "subtitle": "Typical mistakes of the intermediate rider and how to correct them (Real Coaching).",
+      "description": "Reading the swell, mastering timing, and maintaining control when the ocean pushes back."
+    },
+    "intro": {
+      "title": "THE PRECISION CURRENT",
+      "p1": "Transitioning from flat water to waves is the defining moment in a kitesurfer's progression. It requires a shift from relying solely on the kite's power to reading the ocean's energy.",
+      "p2": "The wave dictates the rhythm. Your kite and board must sync to that frequency. This guide breaks down the essential mechanics of wave riding, stripping away the hype to focus on the physics of fluid control."
+    },
+    "swell": [
+      {
+        "title": "SWELL PERIOD",
+        "desc": "Longer periods mean deeper, more powerful energy. They stand up faster, requiring earlier commitment."
+      },
+      {
+        "title": "WIND DIRECTION",
+        "desc": "Side-shore is ideal. Onshore winds create chop and force you to ride 'up' the wave rather than 'with' it."
+      },
+      {
+        "title": "THE PEAK",
+        "desc": "Identify where the wave will pitch first. Your approach should target the critical section ahead of the lip."
+      }
+    ],
+    "timing": [
+      {
+        "title": "BOTTOM TURN DYNAMICS",
+        "desc": "Initiate by edging hard and steering the kite deep. This converts speed into vertical projection."
+      },
+      {
+        "title": "TOP TURN RELEASE",
+        "desc": "As you hit the lip, sheet out to kill power, pivot, and aggressively redirect the kite down the line."
+      }
+    ],
+    "warning": "Never outrun your kite. If you surf faster than the kite can drift, the lines will slack, leading to a loss of steering control right in the impact zone. Always maintain line tension."
+  },
+  "blogSafariKite": {
+    "ui": {
+      "skillLevel": "Skill Level",
+      "levelValue": "Intermediate / Advanced",
+      "featuredSpots": "Featured Spots",
+      "peruvianCircuit": "The Peruvian Wave Circuit",
+      "dayInLife": "A Day in the Life",
+      "rhythmDictates": "The rhythm of the wind dictates our schedule."
+    },
+    "hero": {
+      "tag": "Expedition Series",
+      "title": "KITE SAFARI:",
+      "highlight": "NORTHERN PERU",
+      "description": "A journey through the windiest coastline on Earth. Join our guided expedition through the hidden gems of the Peruvian desert."
+    },
+    "requirements": {
+      "title": "Rider Requirements",
+      "description": "This safari is designed for Intermediate to Advanced riders to ensure a safe and thrilling experience across Peru's demanding spots.",
+      "items": [
+        {
+          "title": "Independent Kiting",
+          "desc": "Full independence in setting up, launching, and self-rescue in varying conditions."
+        },
+        {
+          "title": "Upwind Proficiency",
+          "desc": "Consistent ability to ride upwind and hold ground in moderate to strong winds."
+        },
+        {
+          "title": "Basic Wave Experience",
+          "desc": "Comfortable navigating small to medium waves and basic understanding of etiquette."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "title": "Early Swell Check",
+        "desc": "First light assessment of conditions and spot planning."
+      },
+      {
+        "title": "Breakfast View",
+        "desc": "Fueling up with local produce overlooking the break."
+      },
+      {
+        "title": "Morning Session",
+        "desc": "Hitting the water in Pacasmayo as the thermal winds build."
+      },
+      {
+        "title": "Downwinder",
+        "desc": "Guided coastal run to the next pristine spot."
+      },
+      {
+        "title": "Sunset Bonfire",
+        "desc": "Reviewing footage and unwinding under the stars."
+      }
+    ],
+    "spots": [
+      {
+        "name": "Pacasmayo",
+        "tag": "The Longest Wave",
+        "desc": "Legendary for its endlessly peeling left-handers, offering rides that can last for minutes."
+      },
+      {
+        "name": "Lobitos",
+        "tag": "Pure Perfection",
+        "desc": "A perfect hollow left hand wave breaking over a shallow sandbar."
+      },
+      {
+        "name": "Mancora",
+        "tag": "Vibrant Wind",
+        "desc": "Warmer waters, consistent thermals, and an energetic post-session atmosphere."
+      }
+    ]
+  },
+  "blogWhaleSeason": {
+    "hero": {
+      "tag": "Expeditions",
+      "title": "Whale Season in Northern Peru",
+      "subtitle": "A technical and spiritual journey through the humpback whale migration path."
+    },
+    "intro": {
+      "tag": "NATURAL WONDER",
+      "body": "There is a profound stillness that occurs when sailing off the coast of Piura. The wind hums through the lines, the board skips across the chop, and then—an eruption. A forty-ton leviathan breaches the surface. Witnessing the humpback migration while harnessed to the wind is not just an encounter; it is a recalibration of scale."
+    },
+    "experience": {
+      "title": "The Symphony of Scale",
+      "p1": "Before you see them, you hear them. The 'breath'—a concussive blast of air and vapor—echoes across the water, often louder than the crashing surf. When you ride near a humpback, your kite suddenly feels insignificant.",
+      "p2": "The sheer displacement of water as they move creates localized currents. It is a raw display of hydrodynamic power that makes even the most aggressive wave ride seem gentle by comparison."
+    },
+    "timing": {
+      "title": "Timing & Season",
+      "subtitle": "Strategic windows for the kinetic encounter.",
+      "items": [
+        {
+          "label": "Peak Season",
+          "text": "July to October marks the primary migration window along the northern coast."
+        },
+        {
+          "label": "Optimal Visibility",
+          "text": "Early mornings (06:00 - 09:00) offer the calmest waters before thermal winds peak."
+        }
+      ]
+    },
+    "protocol": {
+      "title": "Pro Protocol",
+      "rules": [
+        {
+          "label": "Maintain Distance",
+          "text": "Strictly maintain a minimum of 100 meters radius from any sighted whale."
+        },
+        {
+          "label": "Parallel Vectors",
+          "text": "If sailing near a pod, align your tack parallel to their direction of travel."
+        },
+        {
+          "label": "Never Cross The Path",
+          "text": "Do not attempt to sail directly in front of or intersect their migration line."
+        }
+      ]
+    }
+  },
+  "blogWhaleSeason12": {
+    "hero": {
+      "location": "Mancora, Peru",
+      "title": "WHALE",
+      "highlight": "SEASON",
+      "description": "The annual migration brings humpbacks to the northern swells. A rare convergence of marine life and perfect thermal winds."
+    },
+    "ribbon": [
+      {
+        "label": "Season",
+        "value": "Aug - Oct"
+      },
+      {
+        "label": "Water Temp",
+        "value": "18°C / 64°F"
+      },
+      {
+        "label": "Wind (PM)",
+        "value": "15-25 kts"
+      },
+      {
+        "label": "Swell Direction",
+        "value": "SSW"
+      }
+    ],
+    "sections": {
+      "morning": {
+        "title": "THE MORNING WATCH",
+        "items": [
+          {
+            "label": "Optimal Viewing: 07:00 - 10:00",
+            "desc": "Glassy ocean conditions before the thermals kick in allow for clear visibility."
+          },
+          {
+            "label": "Behavioral Patterns",
+            "desc": "Mothers and calves typically stay closer to shore. Breaching activity is frequent."
+          },
+          {
+            "label": "Distance Protocols",
+            "desc": "Strict 100m minimum approach distance maintained by licensed vessels."
+          }
+        ]
+      },
+      "afternoon": {
+        "title": "THE AFTERNOON DRIFT",
+        "items": [
+          {
+            "label": "Thermal Activation: 13:00 - Sunset",
+            "desc": "Desert heating pulls reliable 15-25 knot winds, transforming the spot into a playground."
+          },
+          {
+            "label": "Point Break Dynamics",
+            "desc": "Long left-handers organize along the reef. Best ridden with strapless surfboards."
+          },
+          {
+            "label": "Shared Waters",
+            "desc": "Riders must remain vigilant. Whales occasionally transit through outer break zones."
+          }
+        ]
+      }
+    }
+  },
   "blogNorthVsSouth": {
     "hero": {
       "badge": "Kitesurfing Peru",

@@ -945,6 +945,584 @@
       "btn": "Créez votre Voyage à Mancora"
     }
   },
+  "blogPacasmayo": {
+    "hero": {
+      "badge": "Surf au Pérou",
+      "title1": "Pacasmayo, Pérou :",
+      "title2": "Le Guide Ultime",
+      "title3": "du Point Break",
+      "subtitle": "Apprenez quand Pacasmayo fonctionne le mieux et comment l'intégrer dans un itinéraire de surf au nord du Pérou."
+    },
+    "intro": {
+      "eyebrow": "Ambiance Point-Break",
+      "title": "Pacasmayo n'est pas mémorable parce qu'il est facile. Il est mémorable parce qu'il enseigne la patience sur la distance.",
+      "p1": "À première vue, Pacasmayo ressemble à un rêve de gauches interminables. En pratique, ce qui le rend spécial, c'est la façon dont il vous oblige à rester engagé dans de longues sections, à gérer les changements de vitesse et les décisions de positionnement.",
+      "p2": "Ce type de vague fonctionne à merveille dans un long voyage de surf au Pérou. Cela vous donne un chapitre sérieux, axé sur le processus. Ensuite, si l'itinéraire est bien conçu, vous vous déplacez vers le nord vers un endroit plus chaud et plus flexible comme Mancora.",
+      "quote": "Pacasmayo, ce n'est pas faire le show, c'est apprendre à garder un point break vivant sous ses pieds.",
+      "caption1": "Pacasmayo est à son meilleur quand vous traitez la vague comme une séquence plutôt que comme un seul moment.",
+      "caption2": "Les meilleures sessions viennent généralement aux voyageurs qui planifient le rythme, pas seulement pour une belle photo."
+    },
+    "scroller": {
+      "mainEyebrow": "Guide Utile",
+      "mainTitle": "Les conditions, le rythme et la logique de l'itinéraire qui font que Pacasmayo vaut l'effort",
+      "mainDesc": "Pacasmayo livre la marchandise lorsque vous comprenez ce qu'il attend de votre surf et comment le placer dans un voyage plus large au lieu de lui demander de tout faire à la fois.",
+      "sec1": {
+        "eyebrow": "Conditions",
+        "title": "Quand Pacasmayo fonctionne le mieux",
+        "p1": "Pacasmayo est plus fort lorsque les houles du sud s'alignent avec des conditions matinales propres. Comme beaucoup de longs point breaks à gauche, il récompense ceux qui surfent tôt et respectent la façon dont le vent change.",
+        "p2": "Si vous vous attendez à ce que chaque session soit héroïque, le spot peut vous frustrer. Si vous arrivez prêt à lire des sections, gérer la vitesse et accepter que les meilleures vagues se construisent sur la patience, cela devient profondément gratifiant.",
+        "b1": "Meilleurs mois : de mai à octobre",
+        "b2": "Les sessions matinales offrent généralement les faces les plus propres",
+        "b3": "Le choix de la planche compte plus que le style ici",
+        "f1Label": "Style de vague",
+        "f1Value": "Long point break gauche avec de l'espace pour penser et ajuster.",
+        "f2Label": "Meilleur niveau",
+        "f2Value": "Surfeurs intermédiaires et plus, surtout ceux qui aiment le processus.",
+        "caption1": "Les meilleures sessions à Pacasmayo sont moins une question de drame qu'une séquence de décisions intelligentes.",
+        "caption2": "Un peu de glisse (glide) supplémentaire dans votre équipement fait souvent une plus grande différence ici."
+      },
+      "sec2": {
+        "eyebrow": "Rythme de Voyage",
+        "title": "Traitez-le comme une mission compacte, pas comme un endroit qui doit tout faire",
+        "p1": "Pacasmayo fonctionne à merveille dans un bloc concentré de quelques jours. Cela vous donne suffisamment de répétitions pour comprendre le spot sans trop solliciter l'énergie émotionnelle du voyage.",
+        "p2": "Cela compte car les destinations de vagues exigeantes deviennent bien meilleures lorsqu'elles restent précises. Vous n'avez pas besoin d'elles pour porter votre vie nocturne, votre récupération et toute l'histoire du voyage.",
+        "b1": "Trois à quatre jours sont souvent plus efficaces qu'un long séjour",
+        "b2": "Protégez les jours d'arrivée et de départ des attentes de houle",
+        "b3": "Utilisez la destination pour l'éducation aux vagues",
+        "f1Label": "Rôle idéal",
+        "f1Value": "Arrêt de surf concentré dans une route plus large du nord du Pérou.",
+        "f2Label": "Meilleure planification",
+        "f2Value": "Gardez la logistique légère et vos meilleures sessions protégées.",
+        "caption1": "Un plan premium à Pacasmayo se définit par le rythme plus que par une ambition démesurée.",
+        "caption2": "Lorsque l'itinéraire respire, les sessions semblent plus précieuses et la destination conserve son charme."
+      },
+      "sec3": {
+        "eyebrow": "La Meilleure Fin",
+        "title": "Pourquoi la route s'améliore souvent à nouveau à Mancora",
+        "p1": "Après des sessions répétées sur des point-breaks, Mancora offre exactement le type de contraste qui donne à un surf trip une sensation intelligemment conçue : eau chaude, vie plus facile, meilleure récupération.",
+        "p2": "Cette transition n'affaiblit pas le voyage. Elle le complète. Pacasmayo vous donne une texture de vague longue. Mancora vous donne l'endroit où vous pouvez absorber le voyage et vouloir encore plus de temps dans l'océan.",
+        "b1": "Récupération en eau chaude après un bloc de point-break dense",
+        "b2": "Derniers jours plus flexibles pour le surf, le kite et le confort",
+        "b3": "Un point de conversion fort pour le voyageur prêt à réserver",
+        "f1Label": "Meilleur duo",
+        "f1Value": "Pacasmayo pour la concentration, Mancora pour la fin.",
+        "f2Label": "Logique de réservation",
+        "f2Value": "L'itinéraire se termine à l'endroit où la plupart des voyageurs veulent prolonger.",
+        "caption1": "Un bon itinéraire n'a pas qu'un seul sommet. Il change de texture et devient plus facile à apprécier à la fin.",
+        "caption2": "Cette facilité finale est exactement ce qui fait de Mancora une destination de clôture si convaincante au Pérou."
+      }
+    },
+    "bridge": {
+      "title1": "Pacasmayo est une expérience.",
+      "title2": "Mancora est l'endroit où vous progressez.",
+      "desc1": "Pacasmayo vous offre de longs trajets.",
+      "desc2": "Mais pas toujours du vent. Pas toujours de constance.",
+      "desc3": "À Mancora, tout s'aligne :",
+      "box1Title": "Vent",
+      "box1Desc": "Vent thermique quotidien fiable.",
+      "box2Title": "Eau",
+      "box2Desc": "Conditions tropicales chaudes toute l'année.",
+      "box3Title": "Progression",
+      "box3Desc": "Apprentissage plus rapide, conditions plus sûres, meilleur coaching.",
+      "footer1": "C'est pourquoi la plupart des riders ne restent pas à Pacasmayo.",
+      "footer2": "Ils terminent leur voyage à Mancora."
+    },
+    "pointbreak": {
+      "title": "Qu'est-ce qui rend Pacasmayo unique ?",
+      "item1": "Point break gauche sans fin",
+      "item2": "Murs lisses et longs",
+      "item3": "Parfait pour le carving et le flux",
+      "item4": "Longues vagues avec l'aide du vent",
+      "item5": "Kitesurf de style pur surf",
+      "footer1": "Il ne s'agit pas de figures.",
+      "footer2": "Il s'agit de fluidité."
+    },
+    "cta": {
+      "eyebrow": "Améliorez votre Itinéraire",
+      "title": "Laissez Pacasmayo donner l'exigence au voyage. Laissez Mancora lui donner son éclat final.",
+      "desc": "Cette combinaison est ce qui transforme une mission de surf au Pérou en un voyage premium : un apprentissage sérieux sur point-break d'abord, puis de la chaleur, du confort et de la flexibilité.",
+      "btn": "Créez votre Voyage à Mancora"
+    }
+  },
+  "blogWaveProgression": {
+    "hero": {
+      "badge": "Progression dans les Vagues",
+      "title1": "Pourquoi Mancora",
+      "title2": "Est Différent",
+      "subtitle": "Pas juste un autre spot de kitesurf. Un endroit conçu pour une vraie progression dans les vagues."
+    },
+    "intro": {
+      "h2": "La plupart des kitesurfeurs ne luttent pas par manque de compétence.",
+      "p1": "Ils luttent parce qu'ils sont dans de mauvaises conditions.",
+      "p2": "Vent en rafales, spots bondés, eau froide, vagues inconstantes... tout cela ralentit la progression sans même que vous vous en rendiez compte.",
+      "p3": "La progression n'est pas aléatoire.",
+      "p4": "Elle est construite par l'environnement."
+    },
+    "problem": {
+      "h2": "Progresser dans les vagues n'est pas facile",
+      "p1": "Trop de vent, trop peu de vent. Vagues trop grosses, trop désordonnées, trop de monde.",
+      "p2": "La plupart des spots sont soit trop extrêmes, soit pas assez constants pour vraiment s'améliorer.",
+      "p3": "C'est pourquoi la plupart des riders stagnent."
+    },
+    "difference": {
+      "h2": "Qu'est-ce qui rend Mancora différent ?",
+      "item1": "Vent side-shore qui reste fiable.",
+      "item2": "Vagues longues et indulgentes qui permettent de répéter les sections.",
+      "item3": "Eau chaude toute l'année, pour rester détendu et présent.",
+      "item4": "Faible pression de la foule, ce qui signifie plus de calme et de répétitions.",
+      "item5": "Une courbe d'apprentissage naturelle pour la progression dans les vagues.",
+      "footer1": "Ce n'est pas juste de bonnes conditions.",
+      "footer2": "C'est la combinaison parfaite."
+    },
+    "progression": {
+      "h2": "Un système de progression naturel",
+      "b1Title": "Vagues pour Débutants",
+      "b1Desc": "Apprenez à vous positionner et à lire les vagues sans pression.",
+      "b2Title": "Fluidité Intermédiaire",
+      "b2Desc": "Enchaînez les virages, contrôlez la vitesse et surfez avec confiance.",
+      "b3Title": "Navigation Avancée",
+      "b3Desc": "Repoussez vos limites avec style, puissance et contrôle total de la vague."
+    },
+    "lifestyle": {
+      "h2": "Ce n'est pas seulement la progression",
+      "p1": "C'est le style de vie. Des couchers de soleil chauds, l'énergie de l'océan et une communauté qui vous pousse chaque jour.",
+      "p2": "Vous ne naviguez pas seulement mieux. Vous vivez mieux."
+    },
+    "cta": {
+      "h2": "Prêt à passer au niveau supérieur ?",
+      "p": "Rejoignez-nous à Mancora et vivez la différence par vous-même.",
+      "btn1": "Réserver votre Expérience",
+      "btn2": "Explorer les Programmes"
+    }
+  },
+  "blogProgressionKite": {
+    "ui": {
+      "technicalOverview": "Aperçu Technique",
+      "tacticalLoadout": "Équipement Tactique",
+      "proTipTitle": "Conseil Pro : Le Loop"
+    },
+    "hero": {
+      "location": "Pérou / Mancora",
+      "title": "7 Nuits à Mancora :",
+      "highlight": "La Progression",
+      "subtitle": "Plan d'Action",
+      "description": "Un itinéraire éditorial de haute intensité de 7 jours conçu pour que les riders intermédiaires brisent les plateaux. Maîtrisez la posture, le timing des vagues et les loops techniques."
+    },
+    "techStats": [
+      {
+        "label": "Vitesse du Vent",
+        "desc": "Vents thermiques constants. Le flux le plus propre arrive en milieu d'après-midi."
+      },
+      {
+        "label": "Temp. de l'Eau",
+        "desc": "Influence du courant de Humboldt. Nécessite une protection thermique adéquate."
+      },
+      {
+        "label": "Saison Idéale",
+        "desc": "Probabilité maximale de vent alignée avec les principales fenêtres de houle."
+      }
+    ],
+    "itinerary": [
+      {
+        "days": "Jour 1-2",
+        "title": "Fondations au Point de Mancora",
+        "desc": "Sessions de surf matinales sans foule pour lire la vague. Le changement de vent de l'après-midi active les sessions de kite. Concentrez-vous sur l'ajustement de votre posture face à l'énergie brute du Pacifique.",
+        "target1": "Analyser la direction de la houle et la mécanique du point break.",
+        "target2": "Correction de posture : Répartition du poids sur les planches directionnelles."
+      },
+      {
+        "days": "Jour 3",
+        "title": "Expédition à Los Organos",
+        "desc": "Un changement de perspective. Expédition matinale pour l'observation des baleines à bosse afin de comprendre l'écosystème marin. L'après-midi propose du kitesurf technique dans des courants changeants."
+      },
+      {
+        "days": "Jour 4-5",
+        "title": "Le Downwind de Vichayito",
+        "desc": "Le cœur du plan de progression. Un parcours downwind magnifique et épuisant qui repousse l'endurance. C'est ici que les kite loops techniques sont forgés sous pression.",
+        "proTip": "Engagez-vous pleinement. L'hésitation est l'endroit où le contrôle se perd. Initiez le loop lorsque vous atteignez le sommet de la vague pour générer une poussée vers l'avant."
+      }
+    ],
+    "loadout": {
+      "quiver": {
+        "title": "Spécifications du Quiver",
+        "desc": "Les conditions exigent de la polyvalence. Apportez un équipement de kite rapide et réactif pour gérer les sections en rafales.",
+        "tag1": "Kite 5M",
+        "tag2": "Kite 7M",
+        "tag3": "Kite 9M"
+      },
+      "armor": {
+        "title": "Protection Thermique",
+        "desc": "Ne sous-estimez pas le courant de Humboldt. La chaleur corporelle est essentielle pour l'endurance pendant les downwinds de 4 heures.",
+        "tag1": "Combinaison 3/2mm",
+        "tag2": "Chaussons Optionnels"
+      }
+    }
+  },
+  "blogTechKite": {
+    "category": "Niveau Intermédiaire",
+    "ui": {
+      "focusPoint": "Point de Focus",
+      "proTipsTitle": "CONSEILS PRO INTERMÉDIAIRES"
+    },
+    "hero": {
+      "title": "TECHNIQUES POUR",
+      "highlight": "LE KITESURF DANS LES VAGUES",
+      "description": "Lecture de la houle, timing et contrôle. Maîtrisez les éléments et transformez l'océan en votre terrain de jeu."
+    },
+    "intro": "Naviguer dans les vagues avec un kite change tout. Il ne s'agit plus seulement d'exploiter le vent ; il s'agit de synchroniser cette puissance avec l'énergie brute de la houle. En tant que rider intermédiaire, vous avez maîtrisé les bases. Maintenant, il est temps de lire l'eau et de maintenir un contrôle absolu du kite tout en taillant la face d'une vague.",
+    "sections": {
+      "swell": {
+        "title": "LIRE",
+        "highlight": "LA HOULE",
+        "p1": "Avant même de lancer votre kite, observez l'eau. L'océan n'est pas aléatoire ; il se déplace par séries. Passez 10 minutes à analyser l'intervalle entre elles.",
+        "p2": "Le positionnement est tout. Repérez les bosses qui se forment à l'horizon. Ne regardez pas seulement la vague qui se brise ; cherchez celle qui est derrière.",
+        "focus": "Regardez au-delà de la zone de rupture. La ligne d'horizon dicte le rythme des séries."
+      },
+      "turns": {
+        "title": "LE TIMING DE",
+        "highlight": "VOS VIRAGES",
+        "p1": "La synergie entre le 'bottom turn' et le 'top turn' est le cœur du wave riding. C'est une danse entre la gravité et la traction du kite.",
+        "p2Label": "Le Bottom Turn :",
+        "p2": "Cela prépare tout. Gardez votre poids centré, crantez fort et générez de la vitesse avant de vous projeter vers le haut.",
+        "p3Label": "Le Top Turn :",
+        "p3": "Lorsque vous atteignez le sommet, déplacez votre poids sur votre pied arrière pour faire pivoter la planche, en redirigeant simultanément le kite."
+      }
+    },
+    "kiteControl": {
+      "title": "CONTRÔLE",
+      "highlight": "DU KITE",
+      "desc": "Dans les vagues, votre kite doit être une extension de votre corps. La règle d'or : gardez le kite en mouvement.",
+      "items": [
+        {
+          "label": "Drifting vs. Puissance",
+          "text": "Apprenez quand stationner le kite et laisser la vague vous pousser, par opposition à un pilotage actif."
+        },
+        {
+          "label": "Tension des Lignes",
+          "text": "Maintenez une pression constante sur la barre. Si les lignes se relâchent, bordez et dirigez agressivement."
+        }
+      ]
+    },
+    "proTips": [
+      {
+        "title": "Plan de Secours",
+        "text": "Connaissez votre voie de sortie. Si une série ferme, tournez sous le vent et laissez l'écume passer sur vous."
+      },
+      {
+        "title": "Changement de Posture",
+        "text": "Ouvrez vos épaules vers l'endroit où vous voulez aller. Ne regardez pas le kite ; regardez la ligne de la vague."
+      },
+      {
+        "title": "Straps vs. Strapless",
+        "text": "Si vous passez au strapless, gardez votre pied avant au-dessus du centre pour plus de stabilité."
+      },
+      {
+        "title": "Engagement",
+        "text": "L'hésitation est l'ennemi. Une fois que vous commencez un virage, engagez tout votre poids sur le rail."
+      }
+    ]
+  },
+  "blogMistakesKite": {
+    "ui": {
+      "readingSwellTitle": "01 / LECTURE DE LA HOULE",
+      "readingSwellDesc": "L'anticipation plutôt que la réaction.",
+      "timingControlTitle": "02 / TIMING & CONTRÔLE",
+      "timingControlDesc": "Synchroniser la dérive (drift) du kite avec la vitesse de la planche.",
+      "warningTitle": "AVERTISSEMENT TECHNIQUE"
+    },
+    "hero": {
+      "category1": "INTERMÉDIAIRE",
+      "category2": "NAVIGATION EN VAGUES",
+      "title": "ERREURS TYPIQUES DANS LES VAGUES",
+      "subtitle": "Erreurs typiques du rider intermédiaire et comment les corriger (Vrai Coaching).",
+      "description": "Lecture de la houle, maîtrise du timing et maintien du contrôle lorsque l'océan repousse."
+    },
+    "intro": {
+      "title": "LE COURANT DE PRÉCISION",
+      "p1": "La transition de l'eau plate aux vagues est le moment décisif dans la progression d'un kitesurfeur. Cela nécessite de passer de la seule dépendance à la puissance du kite à la lecture de l'énergie de l'océan.",
+      "p2": "La vague dicte le rythme. Votre kite et votre planche doivent se synchroniser à cette fréquence. Ce guide décompose la mécanique essentielle de la navigation dans les vagues, en éliminant le superflu pour se concentrer sur la physique du contrôle fluide."
+    },
+    "swell": [
+      {
+        "title": "PÉRIODE DE LA HOULE",
+        "desc": "Des périodes plus longues signifient une énergie plus profonde et plus puissante. Elles se lèvent plus vite, nécessitant un engagement plus précoce."
+      },
+      {
+        "title": "DIRECTION DU VENT",
+        "desc": "Le vent side-shore est idéal. Les vents onshore créent du clapot et vous obligent à naviguer 'vers le haut' de la vague plutôt qu''avec' elle."
+      },
+      {
+        "title": "LE PIC",
+        "desc": "Identifiez où la vague va jeter en premier. Votre approche doit cibler la section critique avant la lèvre."
+      }
+    ],
+    "timing": [
+      {
+        "title": "DYNAMIQUE DU BOTTOM TURN",
+        "desc": "Initiez en crantant fort et en dirigeant le kite profondément. Cela convertit la vitesse en projection verticale."
+      },
+      {
+        "title": "LIBÉRATION DU TOP TURN",
+        "desc": "Lorsque vous frappez la lèvre, choquez la barre pour tuer la puissance, pivotez et redirigez agressivement le kite le long de la ligne."
+      }
+    ],
+    "warning": "Ne dépassez jamais votre kite. Si vous surfez plus vite que le kite ne peut dériver (drift), les lignes se relâcheront, entraînant une perte de contrôle de la direction en plein dans la zone d'impact. Maintenez toujours la tension des lignes."
+  },
+  "blogSafariKite": {
+    "ui": {
+      "skillLevel": "Skill Level",
+      "levelValue": "Intermediate / Advanced",
+      "featuredSpots": "Featured Spots",
+      "peruvianCircuit": "The Peruvian Wave Circuit",
+      "dayInLife": "A Day in the Life",
+      "rhythmDictates": "The rhythm of the wind dictates our schedule."
+    },
+    "hero": {
+      "tag": "Expedition Series",
+      "title": "KITE SAFARI:",
+      "highlight": "NORTHERN PERU",
+      "description": "A journey through the windiest coastline on Earth. Join our guided expedition through the hidden gems of the Peruvian desert."
+    },
+    "requirements": {
+      "title": "Rider Requirements",
+      "description": "This safari is designed for Intermediate to Advanced riders to ensure a safe and thrilling experience across Peru's demanding spots.",
+      "items": [
+        {
+          "title": "Independent Kiting",
+          "desc": "Full independence in setting up, launching, and self-rescue in varying conditions."
+        },
+        {
+          "title": "Upwind Proficiency",
+          "desc": "Consistent ability to ride upwind and hold ground in moderate to strong winds."
+        },
+        {
+          "title": "Basic Wave Experience",
+          "desc": "Comfortable navigating small to medium waves and basic understanding of etiquette."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "title": "Early Swell Check",
+        "desc": "First light assessment of conditions and spot planning."
+      },
+      {
+        "title": "Breakfast View",
+        "desc": "Fueling up with local produce overlooking the break."
+      },
+      {
+        "title": "Morning Session",
+        "desc": "Hitting the water in Pacasmayo as the thermal winds build."
+      },
+      {
+        "title": "Downwinder",
+        "desc": "Guided coastal run to the next pristine spot."
+      },
+      {
+        "title": "Sunset Bonfire",
+        "desc": "Reviewing footage and unwinding under the stars."
+      }
+    ],
+    "spots": [
+      {
+        "name": "Pacasmayo",
+        "tag": "The Longest Wave",
+        "desc": "Legendary for its endlessly peeling left-handers, offering rides that can last for minutes."
+      },
+      {
+        "name": "Lobitos",
+        "tag": "Pure Perfection",
+        "desc": "A perfect hollow left hand wave breaking over a shallow sandbar."
+      },
+      {
+        "name": "Mancora",
+        "tag": "Vibrant Wind",
+        "desc": "Warmer waters, consistent thermals, and an energetic post-session atmosphere."
+      }
+    ]
+  },
+  "blogSafariKite": {
+    "ui": {
+      "skillLevel": "Niveau Requis",
+      "levelValue": "Intermédiaire / Avancé",
+      "featuredSpots": "Spots Incontournables",
+      "peruvianCircuit": "Le Circuit Péruvien des Vagues",
+      "dayInLife": "Une Journée Type",
+      "rhythmDictates": "Le rythme du vent dicte notre emploi du temps."
+    },
+    "hero": {
+      "tag": "Série Expédition",
+      "title": "KITE SAFARI:",
+      "highlight": "NORD DU PÉROU",
+      "description": "Un voyage sur le littoral le plus venté de la planète. Rejoignez notre expédition guidée à travers les joyaux cachés du désert péruvien."
+    },
+    "requirements": {
+      "title": "Prérequis pour le Rider",
+      "description": "Ce safari est conçu pour les riders Intermédiaires à Avancés afin d'assurer une expérience sûre et palpitante sur les spots exigeants du Pérou.",
+      "items": [
+        {
+          "title": "Kitesurf Indépendant",
+          "desc": "Indépendance totale pour le montage, le lancement et l'auto-sauvetage dans des conditions variables."
+        },
+        {
+          "title": "Maîtrise de la Remontée au Vent",
+          "desc": "Capacité constante à remonter au vent et à maintenir sa position dans des vents modérés à forts."
+        },
+        {
+          "title": "Expérience Basique des Vagues",
+          "desc": "À l'aise pour naviguer dans des vagues petites à moyennes et compréhension de base de l'étiquette."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "title": "Vérification Matinale",
+        "desc": "Évaluation aux premières lueurs du jour des conditions et planification du spot."
+      },
+      {
+        "title": "Petit-déjeuner avec Vue",
+        "desc": "Faire le plein d'énergie avec des produits locaux face aux vagues."
+      },
+      {
+        "title": "Session du Matin",
+        "desc": "Mise à l'eau à Pacasmayo au moment où les vents thermiques se renforcent."
+      },
+      {
+        "title": "Downwinder",
+        "desc": "Parcours côtier guidé jusqu'au prochain spot préservé."
+      },
+      {
+        "title": "Feu de Camp au Coucher du Soleil",
+        "desc": "Visionnage des vidéos et détente sous les étoiles."
+      }
+    ],
+    "spots": [
+      {
+        "name": "Pacasmayo",
+        "tag": "La Plus Longue Vague",
+        "desc": "Légendaire pour ses vagues gauches qui déroulent sans fin, offrant des rides pouvant durer des minutes."
+      },
+      {
+        "name": "Lobitos",
+        "tag": "Perfection Pure",
+        "desc": "Une vague gauche tubulaire parfaite déferlant sur un banc de sable peu profond."
+      },
+      {
+        "name": "Mancora",
+        "tag": "Vent Vibrant",
+        "desc": "Eaux plus chaudes, thermiques constants et une ambiance post-session énergique."
+      }
+    ]
+  },
+  "blogWhaleSeason": {
+    "hero": {
+      "tag": "Expéditions",
+      "title": "Saison des Baleines au Nord du Pérou",
+      "subtitle": "Un voyage technique et spirituel sur la route migratoire des baleines à bosse."
+    },
+    "intro": {
+      "tag": "MERVEILLE NATURELLE",
+      "body": "Il y a un calme profond qui s'installe lors de la navigation au large des côtes de Piura. Le vent bourdonne dans les lignes, la planche ricoche sur le clapot, et soudain—une éruption. Un léviathan de quarante tonnes perce la surface. Être témoin de la migration des baleines à bosse attaché au vent n'est pas juste une rencontre ; c'est un recalibrage de l'échelle."
+    },
+    "experience": {
+      "title": "La Symphonie de l'Échelle",
+      "p1": "Avant de les voir, vous les entendez. Le 'souffle'—une explosion percutante d'air et de vapeur—résonne sur l'eau, souvent plus fort que le ressac. Lorsque vous naviguez près d'une baleine à bosse, votre kite semble soudain insignifiant.",
+      "p2": "L'énorme déplacement d'eau lors de leur mouvement crée des courants localisés. C'est une démonstration brute de puissance hydrodynamique qui fait paraître la session de vagues la plus agressive presque douce en comparaison."
+    },
+    "timing": {
+      "title": "Timing & Saison",
+      "subtitle": "Fenêtres stratégiques pour cette rencontre cinétique.",
+      "items": [
+        {
+          "label": "Haute Saison",
+          "text": "Juillet à octobre marque la principale fenêtre de migration le long de la côte nord."
+        },
+        {
+          "label": "Visibilité Optimale",
+          "text": "Tôt le matin (06h00 - 09h00) offre les eaux les plus calmes avant que les vents thermiques ne se lèvent."
+        }
+      ]
+    },
+    "protocol": {
+      "title": "Protocole Pro",
+      "rules": [
+        {
+          "label": "Maintenez la Distance",
+          "text": "Maintenez strictement un rayon minimum de 100 mètres de toute baleine aperçue."
+        },
+        {
+          "label": "Vecteurs Parallèles",
+          "text": "Si vous naviguez près d'un groupe, alignez votre bord parallèlement à leur direction de déplacement."
+        },
+        {
+          "label": "Ne Coupez Jamais la Route",
+          "text": "N'essayez pas de naviguer directement devant elles ou de couper leur ligne de migration."
+        }
+      ]
+    }
+  },
+  "blogWhaleSeason12": {
+    "hero": {
+      "location": "Mancora, Pérou",
+      "title": "SAISON DES",
+      "highlight": "BALEINES",
+      "description": "La migration annuelle amène les baleines à bosse dans les houles du nord. Une rare convergence entre vie marine et vents thermiques parfaits."
+    },
+    "ribbon": [
+      {
+        "label": "Saison",
+        "value": "Août - Oct"
+      },
+      {
+        "label": "Temp. de l'Eau",
+        "value": "18°C / 64°F"
+      },
+      {
+        "label": "Vent (PM)",
+        "value": "15-25 nœuds"
+      },
+      {
+        "label": "Direction Houle",
+        "value": "SSW"
+      }
+    ],
+    "sections": {
+      "morning": {
+        "title": "LA GARDE MATINALE",
+        "items": [
+          {
+            "label": "Vue Optimale : 07:00 - 10:00",
+            "desc": "Les conditions océaniques lisses avant l'arrivée des thermiques permettent une visibilité claire."
+          },
+          {
+            "label": "Modèles de Comportement",
+            "desc": "Les mères et les baleineaux restent généralement plus près du rivage. Les sauts sont fréquents."
+          },
+          {
+            "label": "Protocoles de Distance",
+            "desc": "Distance d'approche minimale stricte de 100 m maintenue par les navires autorisés."
+          }
+        ]
+      },
+      "afternoon": {
+        "title": "LA DÉRIVE DE L'APRÈS-MIDI",
+        "items": [
+          {
+            "label": "Activation Thermique : 13:00 - Coucher du Soleil",
+            "desc": "Le réchauffement du désert attire des vents fiables de 15 à 25 nœuds, transformant le spot en terrain de jeu."
+          },
+          {
+            "label": "Dynamique du Point Break",
+            "desc": "De longues gauches s'organisent le long du récif. Idéal avec des planches de surf strapless."
+          },
+          {
+            "label": "Eaux Partagées",
+            "desc": "Les riders doivent rester vigilants. Les baleines transitent occasionnellement par les zones de bris extérieures."
+          }
+        ]
+      }
+    }
+  },
   "blogNorthVsSouth": {
     "hero": {
       "badge": "Kitesurf au Pérou",

@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
 import { SEVEN_PLANS_DATA7 } from "./introData13"
 import heroImg from "../../assets/imagenes-kitesurfing/posicionkt2.jpg"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function HeroProgressionKite() {
+  const { t } = useI18n()
   const { hero } = SEVEN_PLANS_DATA7
 
   return (
@@ -16,7 +18,6 @@ function HeroProgressionKite() {
           transition={{ duration: 2.2, ease: "easeOut" }}
           className="w-full h-full object-cover opacity-60"
         />
-
         <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
       </div>
 
@@ -27,19 +28,19 @@ function HeroProgressionKite() {
         className="relative z-10 max-w-5xl px-4 text-center text-white sm:px-6 lg:px-8"
       >
         <p className="mb-6 text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
-          {hero.location}
+          {t(hero.locationKey)}
         </p>
 
         <h1 className="mb-6 text-4xl font-black uppercase leading-[0.95] tracking-tighter text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          {hero.title}
+          {t(hero.titleKey)}
           <br />
-          {hero.highlight}
+          {t(hero.highlightKey)}
           <br />
-          {hero.subtitle}
+          {t(hero.subtitleKey)}
         </h1>
 
         <p className="mx-auto mt-8 max-w-2xl text-base font-light leading-relaxed text-white/80 sm:text-lg md:text-xl">
-          {hero.description}
+          {t(hero.descriptionKey)}
         </p>
       </motion.div>
     </section>

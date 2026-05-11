@@ -1,6 +1,8 @@
 import { INTRO_DATA8 } from "./introData8";
+import { useI18n } from "../../app/providers/i18nContext";
 
 function TechniquesContent8() {
+    const { t } = useI18n();
     const [swell, turns] = INTRO_DATA8.sections;
 
     return (
@@ -13,17 +15,17 @@ function TechniquesContent8() {
                     <div className="absolute -bottom-8 -right-8 z-20 hidden w-64 rounded-2xl border border-white/10 bg-[#132930]/80 p-6 shadow-2xl backdrop-blur-md lg:block">
                         <div className="flex items-center gap-3 mb-2">
                             <span className="material-symbols-outlined text-[#5af8fb] text-sm">visibility</span>
-                            <h4 className="font-bold text-xs tracking-widest uppercase">Focus Point</h4>
+                            <h4 className="font-bold text-xs tracking-widest uppercase">{t('blogTechKite.ui.focusPoint')}</h4>
                         </div>
-                        <p className="text-xs text-[#9eaeb4]">{swell.focus}</p>
+                        <p className="text-xs text-[#9eaeb4]">{t(swell.focusKey)}</p>
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2">
                     <h2 className="mb-6 text-2xl font-bold italic tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
-                        {swell.title}<br/><span className="text-[#ff9069]">{swell.highlight}</span>
+                        {t(swell.titleKey)}<br /><span className="text-[#ff9069]">{t(swell.highlightKey)}</span>
                     </h2>
-                    <p className="mb-6 text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">{swell.p1}</p>
-                    <p className="text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">{swell.p2}</p>
+                    <p className="mb-6 text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">{t(swell.p1Key)}</p>
+                    <p className="text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">{t(swell.p2Key)}</p>
                 </div>
             </section>
 
@@ -35,12 +37,12 @@ function TechniquesContent8() {
                     </div>
                     <div className="w-full lg:w-1/2">
                         <h2 className="mb-6 text-2xl font-bold italic tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl">
-                            {turns.title}<br/><span className="text-[#5af8fb]">{turns.highlight}</span>
+                            {t(turns.titleKey)}<br /><span className="text-[#5af8fb]">{t(turns.highlightKey)}</span>
                         </h2>
                         <div className="space-y-6 text-sm leading-relaxed text-[#9eaeb4] sm:text-base md:text-lg">
-                            <p>{turns.p1}</p>
-                            <p><strong className="text-white uppercase text-sm block mb-1">The Bottom Turn:</strong> {turns.p2}</p>
-                            <p><strong className="text-white uppercase text-sm block mb-1">The Top Turn:</strong> {turns.p3}</p>
+                            <p>{t(turns.p1Key)}</p>
+                            <p><strong className="text-white uppercase text-sm block mb-1">{t(turns.p2LabelKey)}</strong> {t(turns.p2Key)}</p>
+                            <p><strong className="text-white uppercase text-sm block mb-1">{t(turns.p3LabelKey)}</strong> {t(turns.p3Key)}</p>
                         </div>
                     </div>
                 </div>

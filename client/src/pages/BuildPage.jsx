@@ -1,6 +1,6 @@
 import { componentImages } from '../config/images.js'
 import SEO from '../components/SEO.jsx'
-import { useI18n } from '../app/providers/i18nContext.jsx'
+import { useI18n } from '../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'

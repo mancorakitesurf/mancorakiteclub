@@ -13,7 +13,7 @@ import StandardPage from "./StandardPage.jsx"
 import FullscreenHero from "../components/ui/FullscreenHero.jsx"
 import { createPresetHeroSlides } from "../lib/fullscreenHeroSlides.js"
 import { buildWhatsAppUrl } from "../lib/whatsapp.js"
-import { useI18n } from "../app/providers/i18nContext.jsx"
+import { useI18n } from "../app/providers/i18nContext.js"
 
 const { heroImg, img1, img2, img3, img4, img5 } = componentImages["pages/StayPage.jsx"]
 

@@ -14,7 +14,7 @@ function ImageCarousel({ title = "Visual Journal", images = [] }) {
     const timer = window.setInterval(() => {
       setDirection(1)
       setActiveIndex((current) => (current + 1) % images.length)
-    }, 6000)
+    }, 1000)
 
     return () => window.clearInterval(timer)
   }, [images.length])

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { A11y, Autoplay, EffectFade } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useRevealHeroOnScroll } from '../../hooks/useRevealHeroOnScroll.js'
 
 import 'swiper/css'
 import 'swiper/css/effect-fade'
@@ -79,7 +80,7 @@ function normalizeSlides({ backgroundImage, backgroundAlt, imageClassName, slide
   ]
 }
 
-function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides }) {
+function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, revealContent }) {
   const heroSlides = normalizeSlides({
     backgroundImage,
     backgroundAlt,
@@ -111,41 +112,58 @@ function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides }) {
 
   return (
     <div className="absolute inset-0 z-0 h-full w-full">
-      <Swiper
-        modules={[Autoplay, EffectFade, A11y]}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        speed={1200}
-        loop
-        autoplay={{
-          delay: 5200,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
+      <div
+        className="h-full w-full cursor-pointer"
+        role="button"
+        tabIndex={0}
+        aria-label="Show next hero image"
+        onClick={() => swiperRef.current?.slideNext()}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            swiperRef.current?.slideNext()
+          }
         }}
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper
-        }}
-        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        className="h-full w-full [&_.swiper-slide]:h-full [&_.swiper-wrapper]:h-full"
-        aria-label="Hero visual highlights"
       >
-        {heroSlides.map((slide, index) => (
-          <SwiperSlide key={`${slide.alt}-${index}`} className="!h-full">
-            <picture className="block h-full w-full">
-              <source media="(min-width: 768px)" srcSet={slide.desktopSrc} />
-              <img
-                src={slide.mobileSrc || slide.desktopSrc}
-                alt={slide.alt}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                fetchPriority={index === 0 ? 'high' : 'auto'}
-                className={`${baseImageClassName} ${slide.imageClassName}`}
-              />
-            </picture>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Swiper
+          modules={[Autoplay, EffectFade, A11y]}
+          effect="fade"
+          fadeEffect={{ crossFade: true }}
+          speed={1200}
+          loop
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper
+          }}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          className="h-full w-full [&_.swiper-slide]:h-full [&_.swiper-wrapper]:h-full"
+          aria-label="Hero visual highlights"
+        >
+          {heroSlides.map((slide, index) => (
+            <SwiperSlide key={`${slide.alt}-${index}`} className="!h-full">
+              <picture className="block h-full w-full">
+                <source media="(min-width: 768px)" srcSet={slide.desktopSrc} />
+                <img
+                  src={slide.mobileSrc || slide.desktopSrc}
+                  alt={slide.alt}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  fetchPriority={index === 0 ? 'high' : 'auto'}
+                  className={`${baseImageClassName} ${slide.imageClassName}`}
+                />
+              </picture>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-      <div className="absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 md:bottom-9 md:left-auto md:right-10 md:translate-x-0">
+      <div
+        className={`absolute bottom-7 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 transition-all duration-700 md:bottom-9 md:left-auto md:right-10 md:translate-x-0 ${
+          revealContent ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none translate-y-3 opacity-0'
+        }`}
+      >
         {heroSlides.map((slide, index) => {
           const isActive = activeIndex === index
 
@@ -197,6 +215,7 @@ function FullscreenHero({
       ? compactContentClassNames[align] || compactContentClassNames['bottom-left']
       : alignment.content
   const hasOverlay = overlay !== 'none' && overlay !== false
+  const revealContent = useRevealHeroOnScroll(40)
 
   return (
     <Tag className={`relative ${heightClassName} w-full overflow-hidden bg-background-dark ${className}`}>
@@ -205,22 +224,31 @@ function FullscreenHero({
         backgroundAlt={backgroundAlt}
         imageClassName={imageClassName}
         slides={slides}
+        revealContent={revealContent}
       />
 
       {hasOverlay ? (
         <>
-          <div className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-[1] w-full bg-gradient-to-r from-black/45 via-black/15 to-transparent md:w-2/3" />
+          <div
+            className={`pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-black/35 via-black/5 to-transparent transition-opacity duration-700 ${
+              revealContent ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+          <div
+            className={`pointer-events-none absolute inset-y-0 left-0 z-[1] w-full bg-gradient-to-r from-black/45 via-black/15 to-transparent transition-opacity duration-700 md:w-2/3 ${
+              revealContent ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
         </>
       ) : null}
 
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        initial={false}
+        animate={revealContent ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+        transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
         className={`pointer-events-none relative z-10 flex h-full w-full px-5 pb-[max(2rem,env(safe-area-inset-bottom))] pt-28 sm:px-8 md:px-12 lg:px-16 ${alignment.wrapper}`}
       >
-        <div className={`pointer-events-auto ${contentLayoutClassName} ${contentClassName}`}>
+        <div className={`${revealContent ? 'pointer-events-auto' : 'pointer-events-none'} ${contentLayoutClassName} ${contentClassName}`}>
           {eyebrow ? (
             <p className={densityClasses.eyebrow}>
               {eyebrow}

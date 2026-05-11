@@ -31,13 +31,11 @@ function HomePage() {
       <WeatherSection />
       <OurStory />
       <WindWidget />
-
+      <InstructorsSection />  
       <Trips />
-      <Instruction />
       <Stay />
       <BuilderPreview />
       <Testimonials />
-      <InstructorsSection />
     </>
   )
 }

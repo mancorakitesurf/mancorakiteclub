@@ -2,11 +2,7 @@ import { Suspense } from 'react'
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import { I18nProvider } from '../providers/I18nProvider.jsx'
 import ActionHub from "../../components/ActionHub.jsx"
-import FloatingCart from "../../components/FloatingCart.jsx"
-import {
-  shouldRoutePassThroughLoading,
-  useLoadingNavigationInterceptor,
-} from '../../lib/loadingNavigation.js'
+import { hasRouteLoadedThroughLoading, shouldRoutePassThroughLoading, useLoadingNavigationInterceptor} from '../../lib/loadingNavigation.js'
 import ScrollToTop from '../../components/ScrollToTop.jsx'
 import Footer from '../../sections/common/Footer.jsx'
 import Header from '../../sections/common/Header.jsx'
@@ -24,7 +20,7 @@ function MainLayout() {
   const location = useLocation()
   const handleNavigationCapture = useLoadingNavigationInterceptor()
   const currentPath = `${location.pathname}${location.search}${location.hash}`
-  const hasLoadedThroughLoadingPage = Boolean(location.state?.fromLoading)
+  const hasLoadedThroughLoadingPage = Boolean(location.state?.fromLoading) && hasRouteLoadedThroughLoading(currentPath)
 
   if (shouldRoutePassThroughLoading(location.pathname) && !hasLoadedThroughLoadingPage) {
     return (
@@ -50,7 +46,6 @@ function MainLayout() {
           </Suspense>
         </main>
         <Footer />
-        <FloatingCart />
         <ActionHub />
       </div>
     </I18nProvider>

@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 export const LOADING_ROUTE_PATH = '/loading'
 
 const LOCALE_PREFIX_PATTERN = /^\/(esp|fr)(?=\/|$)/
+const routesLoadedThroughLoading = new Set()
 
 function getCurrentFullPath(location) {
   return `${location.pathname}${location.search}${location.hash}`
@@ -38,6 +39,20 @@ export function resolveNavigationTarget(to) {
   } catch {
     return null
   }
+}
+
+export function markRouteLoadedThroughLoading(to) {
+  const target = resolveNavigationTarget(to)
+
+  if (target) {
+    routesLoadedThroughLoading.add(target)
+  }
+}
+
+export function hasRouteLoadedThroughLoading(to) {
+  const target = resolveNavigationTarget(to)
+
+  return Boolean(target && routesLoadedThroughLoading.has(target))
 }
 
 export function normalizeLoadingPath(pathname = '/') {

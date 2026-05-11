@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { brandImages } from '../config/images.js'
-import { LOADING_ROUTE_PATH, resolveNavigationTarget } from '../lib/loadingNavigation.js'
+import { LOADING_ROUTE_PATH, markRouteLoadedThroughLoading, resolveNavigationTarget } from '../lib/loadingNavigation.js'
 
 const INTRO_DURATION = 2500
 const EXIT_START = 1850
@@ -118,6 +118,7 @@ function LoadingPage() {
       }
 
       hasNavigatedRef.current = true
+      markRouteLoadedThroughLoading(redirectTo)
       navigate(redirectTo, {
         replace: true,
         state: getRedirectState(forwardedState),

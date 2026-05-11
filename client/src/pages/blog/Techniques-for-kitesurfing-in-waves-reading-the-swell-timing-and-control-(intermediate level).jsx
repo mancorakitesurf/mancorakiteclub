@@ -9,10 +9,10 @@ function BlogPage8() {
     return (
         <div className="bg-[#031015] min-h-screen">
             <SEO
-                title="Blog | Techniques for kitesurfing in waves: reading the swell, timing and control (intermediate level)"
-                description="Intermediate kitesurfing techniques: reading waves, timing, and kite control. Improve your technique on the waves of Máncora, Peru. Training tips for progress."
-                canonicalPath="/blog/Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level)"
-                hreflang={{ en: '/', es: '/esp', default: '/' }}
+                titleKey="seo.blogTechniquesTitle"
+                descKey="seo.blogTechniquesDesc"
+                titleFallback="Blog | Techniques for kitesurfing in waves: reading the swell, timing and control (intermediate level)"
+                descFallback="Intermediate kitesurfing techniques: reading waves, timing, and kite control. Improve your technique on the waves of Máncora, Peru. Training tips for progress."
             />
 
             <HeroTechniquesKite />

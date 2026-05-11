@@ -1,42 +1,44 @@
 export const INTRO_DATA8 = {
-    category: "Intermediate Level",
+    categoryKey: "blogTechKite.category",
     hero: {
-        title: "TECHNIQUES FOR",
-        highlight: "KITESURFING IN WAVES",
-        description: "Reading the swell, timing and control. Master the elements and transform the ocean into your playground."
+        titleKey: "blogTechKite.hero.title",
+        highlightKey: "blogTechKite.hero.highlight",
+        descriptionKey: "blogTechKite.hero.description"
     },
-    intro: "Wave riding with a kite changes everything. It’s no longer just about harnessing the wind; it’s about syncing that power with the raw energy of the ocean swell. As an intermediate rider, you’ve mastered the basics. Now, it’s time to read the water and maintain absolute kite control while slashing the face of a wave.",
+    introKey: "blogTechKite.intro",
     sections: [
         {
             id: "swell",
-            title: "READING",
-            highlight: "THE SWELL",
-            p1: "Before you even launch your kite, observe the water. The ocean isn't random; it moves in sets. Spend 10 minutes analyzing the interval between sets.",
-            p2: "Positioning is everything. Spot the lumps forming on the horizon. Don't just look for the wave that's breaking; look for the one behind it.",
-            focus: "Look outside the break zone. The horizon line dictates the rhythm of the sets."
+            titleKey: "blogTechKite.sections.swell.title",
+            highlightKey: "blogTechKite.sections.swell.highlight",
+            p1Key: "blogTechKite.sections.swell.p1",
+            p2Key: "blogTechKite.sections.swell.p2",
+            focusKey: "blogTechKite.sections.swell.focus"
         },
         {
             id: "turns",
-            title: "TIMING",
-            highlight: "YOUR TURNS",
-            p1: "The synergy between the 'bottom turn' and the 'top turn' is the heartbeat of wave riding. It’s a dance between gravity and kite pull.",
-            p2: "The Bottom Turn: This sets up everything. Keep your weight centered, edge hard, and generate speed before projecting back up.",
-            p3: "The Top Turn: As you reach the peak, shift your weight to your back foot to pivot the board, simultaneously redirecting the kite."
+            titleKey: "blogTechKite.sections.turns.title",
+            highlightKey: "blogTechKite.sections.turns.highlight",
+            p1Key: "blogTechKite.sections.turns.p1",
+            p2LabelKey: "blogTechKite.sections.turns.p2Label",
+            p2Key: "blogTechKite.sections.turns.p2",
+            p3LabelKey: "blogTechKite.sections.turns.p3Label",
+            p3Key: "blogTechKite.sections.turns.p3"
         }
     ],
     kiteControl: {
-        title: "KITE",
-        highlight: "CONTROL",
-        desc: "In the surf, your kite needs to be an extension of your body. The golden rule: keep the kite moving.",
+        titleKey: "blogTechKite.kiteControl.title",
+        highlightKey: "blogTechKite.kiteControl.highlight",
+        descKey: "blogTechKite.kiteControl.desc",
         items: [
-            { icon: "swap_horiz", label: "Drifting vs. Powered", text: "Learn when to 'park and ride' letting the wave push you, versus actively steering." },
-            { icon: "compress", label: "Line Tension", text: "Maintain consistent bar pressure. If lines go slack, sheet out and steer aggressively." }
+            { icon: "swap_horiz", labelKey: "blogTechKite.kiteControl.items.0.label", textKey: "blogTechKite.kiteControl.items.0.text" },
+            { icon: "compress", labelKey: "blogTechKite.kiteControl.items.1.label", textKey: "blogTechKite.kiteControl.items.1.text" }
         ]
     },
     proTips: [
-        { title: "Bail Out Plan", text: "Know your exit route. If a set closes out, turn downwind and let the whitewater roll over you.", color: "text-[#ff9069]" },
-        { title: "Stance Shift", text: "Open your shoulders towards where you want to go. Don't look at the kite; look down the line.", color: "text-[#5af8fb]" },
-        { title: "Strap vs. Strapless", text: "If transitioning to strapless, keep your front foot over the center mast for stability.", color: "text-[#ff9069]" },
-        { title: "Commit", text: "Hesitation is the enemy. Once you initiate a turn, commit your weight fully to the rail.", color: "text-[#5af8fb]" }
+        { titleKey: "blogTechKite.proTips.0.title", textKey: "blogTechKite.proTips.0.text", color: "text-[#ff9069]" },
+        { titleKey: "blogTechKite.proTips.1.title", textKey: "blogTechKite.proTips.1.text", color: "text-[#5af8fb]" },
+        { titleKey: "blogTechKite.proTips.2.title", textKey: "blogTechKite.proTips.2.text", color: "text-[#ff9069]" },
+        { titleKey: "blogTechKite.proTips.3.title", textKey: "blogTechKite.proTips.3.text", color: "text-[#5af8fb]" }
     ]
 };

@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 import { FaRobot } from 'react-icons/fa'
 import ChatbotWindow from './ChatbotWindow'
+import { useI18n } from '../app/providers/i18nContext'
 
 /**
  * FloatingChatbot Component
  * Floating chatbot trigger with elegant animations and guided conversation
  */
 function FloatingChatbot() {
+  const { t } = useI18n()
   const [isOpen, setIsOpen] = useState(false)
   const [showPulse, setShowPulse] = useState(true)
   const [isVisible, setIsVisible] = useState(true)
@@ -57,7 +59,7 @@ function FloatingChatbot() {
 
         {/* Tooltip on hover */}
         <span className="absolute right-full mr-3 whitespace-nowrap rounded-full border border-white/20 bg-slate-900/90 px-3 py-2 text-xs font-medium text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
-          Asistente IA
+          {t('chatbot.title')}
         </span>
       </button>
 

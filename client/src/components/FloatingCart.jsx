@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
+import { useI18n } from '../app/providers/i18nContext'
 
 function FloatingCart() {
+  const { t } = useI18n()
   const { actividad, paso } = useTripBuilderStore()
   const location = useLocation()
   const navigate = useNavigate()
@@ -33,7 +35,7 @@ function FloatingCart() {
       }`}
     >
       <span className="mr-3 max-w-0 overflow-hidden whitespace-nowrap rounded-full border border-white/20 bg-slate-900/90 py-2 text-xs font-medium tracking-wide text-white opacity-0 transition-all duration-500 group-hover:max-w-xs group-hover:px-3 group-hover:opacity-100">
-        Step {paso}/5 — Continue
+        {t('floatingCart.step')} {paso}/5 — {t('floatingCart.continue')}
       </span>
 
       <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg transition-transform hover:scale-110">

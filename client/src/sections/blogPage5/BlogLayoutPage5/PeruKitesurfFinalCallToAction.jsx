@@ -1,15 +1,17 @@
 import ArticleFinalCallToActionBase from "../../blogShared/ArticleFinalCallToActionBase.jsx"
 import ctaImage from "../../../assets/imagenes-home/posicion23.jpg"
+import { useI18n } from '../../../app/providers/i18nContext'
 
 function PeruKitesurfFinalCallToAction() {
+  const { t } = useI18n()
+
   return (
     <ArticleFinalCallToActionBase
-      eyebrow="Where It Leads"
-      title="Use the map to compare Peru. Use Mancora when it is time to commit."
-      description="North vs south is the right question for planning. Mancora is often the right answer for staying, progressing, and turning a strong research journey into a premium trip."
+      eyebrow={t('blogNorthVsSouth.cta.eyebrow')}
+      title={t('blogNorthVsSouth.cta.title')}
+      description={t('blogNorthVsSouth.cta.desc')}
       image={ctaImage}
-      imageAlt="Ocean-facing premium travel scene in Mancora"
-      buttonLabel="Ir a Máncora Kite Club"
+      buttonLabel={t('blogNorthVsSouth.cta.btn')}
     />
   )
 }

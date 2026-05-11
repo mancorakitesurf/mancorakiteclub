@@ -1,43 +1,43 @@
 export const SAFARI_DATA10 = {
     hero: {
-        tag: "Expedition Series",
-        title: "KITE SAFARI:",
-        highlight: "NORTHERN PERU",
-        description: "A journey through the windiest coastline on Earth. Join our guided expedition through the hidden gems of the Peruvian desert."
+        tagKey: "blogSafariKite.hero.tag",
+        titleKey: "blogSafariKite.hero.title",
+        highlightKey: "blogSafariKite.hero.highlight",
+        descriptionKey: "blogSafariKite.hero.description"
     },
     requirements: {
-        title: "Rider Requirements",
-        description: "This safari is designed for Intermediate to Advanced riders to ensure a safe and thrilling experience across Peru's demanding spots.",
+        titleKey: "blogSafariKite.requirements.title",
+        descriptionKey: "blogSafariKite.requirements.description",
         items: [
-            { icon: "verified", title: "Independent Kiting", desc: "Full independence in setting up, launching, and self-rescue in varying conditions." },
-            { icon: "arrow_upward", title: "Upwind Proficiency", desc: "Consistent ability to ride upwind and hold ground in moderate to strong winds." },
-            { icon: "water", title: "Basic Wave Experience", desc: "Comfortable navigating small to medium waves and basic understanding of etiquette." }
+            { icon: "verified", titleKey: "blogSafariKite.requirements.items.0.title", descKey: "blogSafariKite.requirements.items.0.desc" },
+            { icon: "arrow_upward", titleKey: "blogSafariKite.requirements.items.1.title", descKey: "blogSafariKite.requirements.items.1.desc" },
+            { icon: "water", titleKey: "blogSafariKite.requirements.items.2.title", descKey: "blogSafariKite.requirements.items.2.desc" }
         ]
     },
     timeline: [
-        { id: "01", title: "Early Swell Check", desc: "First light assessment of conditions and spot planning.", icon: "explore" },
-        { id: "02", title: "Breakfast View", desc: "Fueling up with local produce overlooking the break.", icon: "restaurant" },
-        { id: "03", title: "Morning Session", desc: "Hitting the water in Pacasmayo as the thermal winds build.", icon: "kitesurfing", active: true },
-        { id: "04", title: "Downwinder", desc: "Guided coastal run to the next pristine spot.", icon: "route" },
-        { id: "05", title: "Sunset Bonfire", desc: "Reviewing footage and unwinding under the stars.", icon: "local_fire_department" }
+        { id: "01", titleKey: "blogSafariKite.timeline.0.title", descKey: "blogSafariKite.timeline.0.desc", icon: "explore" },
+        { id: "02", titleKey: "blogSafariKite.timeline.1.title", descKey: "blogSafariKite.timeline.1.desc", icon: "restaurant" },
+        { id: "03", titleKey: "blogSafariKite.timeline.2.title", descKey: "blogSafariKite.timeline.2.desc", icon: "kitesurfing", active: true },
+        { id: "04", titleKey: "blogSafariKite.timeline.3.title", descKey: "blogSafariKite.timeline.3.desc", icon: "route" },
+        { id: "05", titleKey: "blogSafariKite.timeline.4.title", descKey: "blogSafariKite.timeline.4.desc", icon: "local_fire_department" }
     ],
     spots: [
-        { 
-            name: "Pacasmayo", 
-            tag: "The Longest Wave", 
-            desc: "Legendary for its endlessly peeling left-handers, offering rides that can last for minutes.",
+        {
+            nameKey: "blogSafariKite.spots.0.name",
+            tagKey: "blogSafariKite.spots.0.tag",
+            descKey: "blogSafariKite.spots.0.desc",
             colSpan: "md:col-span-8 md:row-span-2"
         },
-        { 
-            name: "Lobitos", 
-            tag: "Pure Perfection", 
-            desc: "A perfect hollow left hand wave breaking over a shallow sandbar.",
+        {
+            nameKey: "blogSafariKite.spots.1.name",
+            tagKey: "blogSafariKite.spots.1.tag",
+            descKey: "blogSafariKite.spots.1.desc",
             colSpan: "md:col-span-4 md:row-span-1"
         },
-        { 
-            name: "Mancora", 
-            tag: "Vibrant Wind", 
-            desc: "Warmer waters, consistent thermals, and an energetic post-session atmosphere.",
+        {
+            nameKey: "blogSafariKite.spots.2.name",
+            tagKey: "blogSafariKite.spots.2.tag",
+            descKey: "blogSafariKite.spots.2.desc",
             colSpan: "md:col-span-4 md:row-span-1"
         }
     ]

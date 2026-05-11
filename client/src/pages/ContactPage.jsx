@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import StandardPage from './StandardPage.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../lib/whatsapp.js'
 import logoImg from '../assets/LOGOS KITE CLUB/95b03a84-2865-4eda-89ae-26b332f99bb5.webp'
 
@@ -68,15 +69,18 @@ const contacts = [
 ]
 
 function ContactPage() {
+  const { t } = useI18n()
+
   return (
     <StandardPage
-      title="Contact | Mancora Kite Club"
-      subtitle="Reach us for availability, pricing, and trip guidance."
-      description="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
-      canonicalPath="/contact"
-      hreflang={{ en: '/contact', es: '/esp', default: '/' }}
+      titleKey="seo.contactTitle"
+      descKey="seo.contactDesc"
+      titleFallback="Contact | Mancora Kite Club"
+      descFallback="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
+      title={t('contactPage.title')}
+      subtitle={t('contactPage.subtitle')}
       cta={{
-        label: 'Contact via WhatsApp',
+        label: t('contactPage.ctaLabel'),
         href: buildWhatsAppUrl(defaultInquiryMessage({ page: 'contact' })),
       }}
       fullWidth

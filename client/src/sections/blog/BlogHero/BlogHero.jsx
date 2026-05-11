@@ -1,13 +1,16 @@
 import { motion } from "framer-motion"
 import { BLOGHERO_IMAGE } from "../BlogLayout/blogContent.js"
+import { useI18n } from "../../../app/providers/i18nContext";
 
 function BlogHero() {
+  const { t } = useI18n()
+
   return (
     <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-screen">
       <div className="absolute inset-0">
         <motion.img
           src={BLOGHERO_IMAGE}
-          alt="Kite surfer jumping over waves in Mancora"
+          alt={t('blogHero.alt')}
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
           transition={{ duration: 2.2, ease: "easeOut" }}
@@ -26,23 +29,22 @@ function BlogHero() {
         <div className="mb-6 flex items-center justify-center gap-3">
           <span className="h-[2px] w-10 bg-primary" />
           <span className="text-xs font-semibold uppercase tracking-[0.4em] text-white/80">
-            The Journal
+            {t('blogHero.badge')}
           </span>
           <span className="h-[2px] w-10 bg-primary" />
         </div>
 
         <h1 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-          Kitesurfing Peru <br />
+          {t('blogHero.title1')} <br />
           <span className="text-primary">
-            Wave Riding & Ocean Stories
+            {t('blogHero.title2')}
           </span>
         </h1>
 
         <div className="mx-auto mt-8 h-[3px] w-24 rounded-full bg-primary/80" />
 
         <p className="mx-auto mt-8 max-w-3xl text-base font-light leading-relaxed text-white/80 sm:text-lg md:text-xl">
-          We explore the wind, the waves, and the ocean culture of northern Peru.
-          Real stories, technique, and lifestyle from Mancora.
+          {t('blogHero.desc')}
         </p>
       </motion.div>
     </section>

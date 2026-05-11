@@ -1,34 +1,34 @@
 export const WHALE_SEASON_DATA12 = {
     hero: {
-        location: "Mancora, Peru",
-        title: "WHALE",
-        highlight: "SEASON",
-        description: "The annual migration brings humpbacks to the northern swells. A rare convergence of marine life and perfect thermal winds."
+        locationKey: "blogWhaleSeason12.hero.location",
+        titleKey: "blogWhaleSeason12.hero.title",
+        highlightKey: "blogWhaleSeason12.hero.highlight",
+        descriptionKey: "blogWhaleSeason12.hero.description"
     },
     ribbon: [
-        { label: "Season", value: "Aug - Oct", color: "text-white" },
-        { label: "Water Temp", value: "18°C / 64°F", color: "text-[#5af8fb]" },
-        { label: "Wind (PM)", value: "15-25 kts", color: "text-[#ff9069]" },
-        { label: "Swell Direction", value: "SSW", color: "text-white" }
+        { labelKey: "blogWhaleSeason12.ribbon.0.label", valueKey: "blogWhaleSeason12.ribbon.0.value", color: "text-white" },
+        { labelKey: "blogWhaleSeason12.ribbon.1.label", valueKey: "blogWhaleSeason12.ribbon.1.value", color: "text-[#5af8fb]" },
+        { labelKey: "blogWhaleSeason12.ribbon.2.label", valueKey: "blogWhaleSeason12.ribbon.2.value", color: "text-[#ff9069]" },
+        { labelKey: "blogWhaleSeason12.ribbon.3.label", valueKey: "blogWhaleSeason12.ribbon.3.value", color: "text-white" }
     ],
     sections: [
         {
             id: "01",
-            title: "THE MORNING WATCH",
+            titleKey: "blogWhaleSeason12.sections.morning.title",
             items: [
-                { icon: "schedule", label: "Optimal Viewing: 07:00 - 10:00", desc: "Glassy ocean conditions before the thermals kick in allow for clear visibility." },
-                { icon: "phishing", label: "Behavioral Patterns", desc: "Mothers and calves typically stay closer to shore. Breaching activity is frequent." },
-                { icon: "distance", label: "Distance Protocols", desc: "Strict 100m minimum approach distance maintained by licensed vessels." }
+                { icon: "schedule", labelKey: "blogWhaleSeason12.sections.morning.items.0.label", descKey: "blogWhaleSeason12.sections.morning.items.0.desc" },
+                { icon: "phishing", labelKey: "blogWhaleSeason12.sections.morning.items.1.label", descKey: "blogWhaleSeason12.sections.morning.items.1.desc" },
+                { icon: "distance", labelKey: "blogWhaleSeason12.sections.morning.items.2.label", descKey: "blogWhaleSeason12.sections.morning.items.2.desc" }
             ],
-            image: "whale-tail-diving.jpg" 
+            image: "whale-tail-diving.jpg"
         },
         {
             id: "02",
-            title: "THE AFTERNOON DRIFT",
+            titleKey: "blogWhaleSeason12.sections.afternoon.title",
             items: [
-                { icon: "air", label: "Thermal Activation: 13:00 - Sunset", desc: "Desert heating pulls reliable 15-25 knot winds, transforming the spot into a playground." },
-                { icon: "water", label: "Point Break Dynamics", desc: "Long left-handers organize along the reef. Best ridden with strapless surfboards." },
-                { icon: "security", label: "Shared Waters", desc: "Riders must remain vigilant. Whales occasionally transit through outer break zones." }
+                { icon: "air", labelKey: "blogWhaleSeason12.sections.afternoon.items.0.label", descKey: "blogWhaleSeason12.sections.afternoon.items.0.desc" },
+                { icon: "water", labelKey: "blogWhaleSeason12.sections.afternoon.items.1.label", descKey: "blogWhaleSeason12.sections.afternoon.items.1.desc" },
+                { icon: "security", labelKey: "blogWhaleSeason12.sections.afternoon.items.2.label", descKey: "blogWhaleSeason12.sections.afternoon.items.2.desc" }
             ],
             image: "kitesurfer-boost.jpg"
         }

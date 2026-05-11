@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
-import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { SURF_HERO_IMAGE } from './wavesContent.js'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function SurfHero() {
+  const { t } = useI18n()
+  
   return (
     <section className="relative flex min-h-[70vh] items-end overflow-hidden md:min-h-screen md:items-center">
       <div className="absolute inset-0 z-0">
@@ -24,7 +26,7 @@ function SurfHero() {
         className="relative z-10 mx-auto w-full max-w-7xl px-4 pb-12 text-center sm:px-6 md:pb-0 md:text-left lg:px-8"
       >
         <h2 className="mb-6 font-display text-4xl font-bold tracking-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl">
-          Surfing <br /> Experience
+          {t('sections.waves.surfHeroTitle1')} <br /> {t('sections.waves.surfHeroTitle2')}
         </h2>
         <a
           href={buildWhatsAppUrl(defaultInquiryMessage('Surfing Experience'))}
@@ -32,7 +34,7 @@ function SurfHero() {
           rel="noopener noreferrer"
           className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-base font-semibold text-background-dark shadow-xl transition-all hover:shadow-2xl sm:w-auto"
         >
-          Book Now
+          {t('sections.waves.bookNow')}
         </a>
       </motion.div>
     </section>

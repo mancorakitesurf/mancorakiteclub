@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FaArrowRight, FaWind } from 'react-icons/fa'
 import SEO from '../components/SEO.jsx'
 import { trips } from '../content/trips.js'
+import { useI18n } from '../app/providers/i18nContext'
 
 import heroImg from '../assets/imagenes-kitesurfing/posicionkt2.jpg'
 import firstFlyImg from '../assets/imagenes-kitesurfing/posicionkt1.jpg'
@@ -17,14 +18,17 @@ const tripImages = [
   rideCoastImg,
 ]
 
-const tripLabels = [
-  'First Fly',
-  'Olas y Viento',
-  'Solo Surf',
-  'Ride the Coast',
-]
-
 function TripsPage() {
+  const { t } = useI18n()
+
+  // Truco ninja: Traducimos los títulos y sumarios al vuelo
+  const translatedTrips = trips.map(trip => ({
+    ...trip,
+    title: t(trip.title),
+    subtitle: t(trip.subtitle),
+    summary: t(trip.summary)
+  }))
+
   return (
     <>
       <SEO
@@ -32,8 +36,6 @@ function TripsPage() {
         descKey="seo.tripsDesc"
         titleFallback="Kitesurf Trips in Máncora, Peru | Core Packages"
         descFallback="Discover kitesurfing, wingfoil, and surf trips in northern Peru. Full-day, 3-day, and 7-day packages with accommodation, coaching, and gear. Book your trip now."
-        canonicalPath="/trips"
-        hreflang={{ en: '/trips', es: '/esp/viajes', default: '/' }}
       />
 
       <main className="overflow-hidden bg-[#031015] text-white">
@@ -64,29 +66,28 @@ function TripsPage() {
             </p>
 
             <h1 className="font-display text-5xl font-black uppercase leading-[0.9] tracking-tighter sm:text-7xl lg:text-8xl">
-              Our
+              {t('tripsPage.heroTitle1')}
               <br />
-              Trips
+              {t('tripsPage.heroTitle2')}
             </h1>
 
             <p className="mx-auto mt-8 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
-              Choose your route through wind, waves, coaching, surf, and the north coast of Peru.
+              {t('tripsPage.heroSubtitle')}
             </p>
 
             <a
               href="#trip-list"
               className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full border border-[#5af8fb]/60 px-8 text-sm font-black uppercase tracking-[0.22em] text-[#5af8fb] transition hover:bg-[#5af8fb] hover:text-black"
             >
-              Explore Trips
+              {t('tripsPage.exploreTrips')}
             </a>
           </motion.div>
         </section>
 
         {/* TRIP LIST */}
         <section id="trip-list" className="relative">
-          {trips.map((trip, index) => {
+          {translatedTrips.map((trip, index) => {
             const image = tripImages[index % tripImages.length]
-            const label = tripLabels[index] || trip.title
             const isEven = index % 2 === 0
 
             return (
@@ -143,7 +144,7 @@ function TripsPage() {
                         }`}
                       >
                         <FaWind />
-                        {trip.subtitle || 'Trip Experience'}
+                        {trip.subtitle || t('tripsPage.tripExperience')}
                       </p>
 
                       <h2
@@ -155,7 +156,7 @@ function TripsPage() {
                           sm:text-7xl md:text-8xl lg:text-[8.5rem]
                         "
                       >
-                        {label}
+                        {trip.title}
                       </h2>
 
                       <p
@@ -172,7 +173,7 @@ function TripsPage() {
                         }`}
                       >
                         <span className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-7 text-sm font-black uppercase tracking-[0.2em] text-black transition group-hover:bg-white">
-                          View Details
+                          {t('tripsPage.viewDetails')}
                           <FaArrowRight className="transition duration-300 group-hover:translate-x-1" />
                         </span>
                       </div>
@@ -199,22 +200,22 @@ function TripsPage() {
             className="relative mx-auto max-w-4xl"
           >
             <p className="text-xs font-black uppercase tracking-[0.4em] text-[#5af8fb]">
-              Custom Trip Builder
+              {t('tripsPage.ctaLabel')}
             </p>
 
             <h2 className="mt-5 font-display text-4xl font-black uppercase leading-tight text-white sm:text-5xl lg:text-6xl">
-              Build the trip that fits your wind, level and time.
+              {t('tripsPage.ctaTitle')}
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              Create your own Máncora route with coaching, accommodation, extra activities and the best rhythm for your stay.
+              {t('tripsPage.ctaDesc')}
             </p>
 
             <Link
               to="/build"
               className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-8 text-sm font-black uppercase tracking-[0.22em] text-black transition hover:bg-white sm:w-auto"
             >
-              Build Your Trip
+              {t('tripsPage.ctaBtnText')}
               <FaArrowRight />
             </Link>
           </motion.div>

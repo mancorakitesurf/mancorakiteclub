@@ -1,17 +1,17 @@
 import ArticleFinalCallToActionBase from "../../blogShared/ArticleFinalCallToActionBase.jsx"
 import ctaImage from "../../../assets/imagenes-home/posicion20.jpg"
+import { useI18n } from '../../../app/providers/i18nContext'
 
 function PacasmayoFinalCallToAction() {
+  const { t } = useI18n()
   return (
     <ArticleFinalCallToActionBase
-      eyebrow="Route Upgrade"
-      title="Let Pacasmayo give the trip its line choice. Let Mancora give it its final glow."
-      description="That combination is what transforms a strong Peru surf mission into a cleaner premium journey: serious point-break learning first, then warmth, comfort, and flexibility when it is time to stay longer."
+      eyebrow={t('blogPacasmayo.cta.eyebrow')}
+      title={t('blogPacasmayo.cta.title')}
+      description={t('blogPacasmayo.cta.desc')}
       image={ctaImage}
-      imageAlt="Warm premium beach atmosphere to close a Peru surf route"
-      buttonLabel="Ir a Máncora Kite Club"
+      buttonLabel={t('blogPacasmayo.cta.btn')}
     />
   )
 }
-
 export default PacasmayoFinalCallToAction

@@ -27,8 +27,8 @@ import gallery12 from '../../assets/imagenes-home/posicion13.jpg'
   HERO SECTION
 =========================== */
 export const CLASSES_HERO = {
-  title: "KITESURF AND WINGFOIL IN THE CLUB",
-  subtitle: "Private and small-group sessions without accommodation.",
+  title: "classesPage.hero.title",
+  subtitle: "classesPage.hero.subtitle",
   image: heroKite
 }
 
@@ -36,87 +36,87 @@ export const CLASSES_HERO = {
   INTRO SECTION
 =========================== */
 export const CLASSES_INTRO = {
-  title: "Learn Kitesurf in The Club",
-  text: "The first time someone was seen practicing wingfoil was in 2019, when Robby Naish appeared in Hawaii on a board with a foil and handling a wing. Those images caused so much emotion that in a few months we began to see videos and photos on all social networks of different types of wings and people practicing this strange sport. Well, it hasn't been long before we can see the rise of this sport and see countless sails all over the beaches and lakes. Without a doubt a sport that will leave many fans.",
+  title: "classesPage.intro.title",
+  text: "classesPage.intro.text",
   image: introKite
 }
 
 /* ===========================
-   PRIVATE CLASSES (PRICING)
+  PRIVATE CLASSES (PRICING)
 =========================== */
 export const PRIVATE_CLASSES = [
   {
     id: "intro",
-    title: "Introductory Class",
-    duration: "1 day | 2 hours/day",
-    price: "$120 / person",
+    title: "classesPage.pricing.intro.title",
+    duration: "classesPage.pricing.intro.duration",
+    price: "classesPage.pricing.intro.price",
     image: introClassImg,
     hoverImage: introClassImgHover,
     features: [
-      "Ideal for first experience",
-      "Personalized instruction",
-      "All premium equipment included",
-      "Support via walkie-talkie"
+      "classesPage.pricing.intro.features.0",
+      "classesPage.pricing.intro.features.1",
+      "classesPage.pricing.intro.features.2",
+      "classesPage.pricing.intro.features.3"
     ]
   },
   {
     id: "fundamental",
-    title: "Fundamental Class",
-    duration: "3 days | 2 hours/day",
-    price: "$350 / person",
+    title: "classesPage.pricing.fundamental.title",
+    duration: "classesPage.pricing.fundamental.duration",
+    price: "classesPage.pricing.fundamental.price",
     image: fundamentalClassImg,
     hoverImage: introClassImgHover,
     features: [
-      "Designed by old instructors",
-      "Personalized progression",
-      "Premium equipment included",
-      "Professional photo during class"
+      "classesPage.pricing.fundamental.features.0",
+      "classesPage.pricing.fundamental.features.1",
+      "classesPage.pricing.fundamental.features.2",
+      "classesPage.pricing.fundamental.features.3"
     ]
   },
   {
     id: "advance",
-    title: "Advance Class",
-    duration: "3 days | 3 hours/day",
-    price: "$500 / person",
+    title: "classesPage.pricing.advance.title",
+    duration: "classesPage.pricing.advance.duration",
+    price: "classesPage.pricing.advance.price",
     image: advanceClassImg,
     hoverImage: introClassImgHover,
     features: [
-      "Focused on advanced technique",
-      "More practice time",
-      "Video recording & analysis",
-      "Optional drone shots"
+      "classesPage.pricing.advance.features.0",
+      "classesPage.pricing.advance.features.1",
+      "classesPage.pricing.advance.features.2",
+      "classesPage.pricing.advance.features.3"
     ]
   },
   {
     id: "master",
-    title: "Comprehensive Masterclass",
-    duration: "5 days | Flexible schedule",
-    price: "$600 / person",
+    title: "classesPage.pricing.master.title",
+    duration: "classesPage.pricing.master.duration",
+    price: "classesPage.pricing.master.price",
     image: masterClassImg,
     hoverImage: introClassImgHover,
     featured: true,
     features: [
-      "Complete program",
-      "Detailed technique analysis",
-      "Performance tracking",
-      "Final evaluation session"
+      "classesPage.pricing.master.features.0",
+      "classesPage.pricing.master.features.1",
+      "classesPage.pricing.master.features.2",
+      "classesPage.pricing.master.features.3"
     ]
   }
 ]
 
 /* ===========================
-   Benefits Section
+  Benefits Section
 =========================== */
 export const CLASSES_BENEFITS = [
-  "Guaranteed Quality – Certified instructors with extensive experience.",
-  "Vanguard Team – Latest technologies in wings and boards.",
-  "Priority Security – Small groups and constant support.",
-  "Unforgettable memories – Professional visual material.",
-  "Total Flexibility – Programs adapted to your needs."
+  "classesPage.benefits.item1",
+  "classesPage.benefits.item2",
+  "classesPage.benefits.item3",
+  "classesPage.benefits.item4",
+  "classesPage.benefits.item5"
 ]
 
 /* ===========================
-   FINAL GALLERY SECTION
+  FINAL GALLERY SECTION
 =========================== */
 export const CLASSES_GALLERY = [
   gallery1,

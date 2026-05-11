@@ -1,25 +1,30 @@
 import { CLASSES_GALLERY } from "./classesData"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+import { useI18n } from '../../app/providers/i18nContext'
 
 const MotionLink = motion.create(Link)
 
 function ClassesGallery() {
+  const { t } = useI18n()
+
+  const galleryLabelKeys = [
+    'sections.classes.galleryLabel1',
+    'sections.classes.galleryLabel2',
+    'sections.classes.galleryLabel3',
+    'sections.classes.galleryLabel4',
+    'sections.classes.galleryLabel5',
+    'sections.classes.galleryLabel6',
+    'sections.classes.galleryLabel7',
+    'sections.classes.galleryLabel8',
+    'sections.classes.galleryLabel9',
+    'sections.classes.galleryLabel10',
+    'sections.classes.galleryLabel11',
+  ]
+
   const galleryItems = CLASSES_GALLERY.map((image, index) => ({
     image,
-    label: [
-      "Ocean Energy",
-      "Wingfoil Flow",
-      "Kite Sessions",
-      "Club Lifestyle",
-      "Progression",
-      "Training Days",
-      "Wind Culture",
-      "Raw Adventure",
-      "Mancora Mood",
-      "The Club",
-      "Ride Together",
-    ][index] || "Mancora Kite Club",
+    label: t(galleryLabelKeys[index] || 'sections.classes.galleryLabel1'),
   }))
 
   return (
@@ -38,7 +43,7 @@ function ClassesGallery() {
           viewport={{ once: true }}
           className="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-[#5af8fb]"
         >
-          Visual Manifesto
+          {t('sections.classes.galleryBadge')}
         </motion.p>
 
         <motion.h2
@@ -50,7 +55,7 @@ function ClassesGallery() {
         >
           Mancora Kite Club
           <br />
-          <span className="text-cyan-400">Raw Adventure Manifesto</span>
+          <span className="text-cyan-400">{t('sections.classes.galleryTitle')}</span>
         </motion.h2>
 
         <motion.p
@@ -60,7 +65,7 @@ function ClassesGallery() {
           viewport={{ once: true }}
           className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base md:text-lg"
         >
-          Real stories, real adrenaline, and the tribe that rides with the wind.
+          {t('sections.classes.galleryDesc')}
         </motion.p>
 
         <MotionLink
@@ -73,7 +78,7 @@ function ClassesGallery() {
           viewport={{ once: true }}
           className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cyan-400 px-8 py-3 text-sm font-bold uppercase tracking-[0.24em] text-cyan-400 transition hover:bg-cyan-400 hover:text-black sm:w-auto"
         >
-          Join the Tribe
+          {t('sections.classes.joinTheTribe')}
         </MotionLink>
       </div>
 

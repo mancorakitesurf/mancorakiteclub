@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
+import { useI18n } from '../../app/providers/i18nContext'
 
 const REVEAL_TRANSITION = {
   duration: 0.45,
@@ -13,13 +14,16 @@ function LoadMorePosts({
   renderPost,
   initialCount = 4,
   increment = 3,
-  buttonLabel = "Load More Articles",
+  buttonLabel,
   className = "grid grid-cols-1 gap-8",
   getKey,
 }) {
+  const { t } = useI18n()
   const [visibleCount, setVisibleCount] = useState(() => Math.min(initialCount, posts.length))
   const [loading, setLoading] = useState(false)
   const timeoutRef = useRef(null)
+
+  const resolvedButtonLabel = buttonLabel || t('blogUI.loadMore')
 
   useEffect(() => {
     return () => {
@@ -77,7 +81,7 @@ function LoadMorePosts({
             whileTap={loading ? undefined : { scale: 0.98 }}
           >
             <span className="absolute inset-0 bg-primary/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            <span className="relative">{loading ? "Loading..." : buttonLabel}</span>
+            <span className="relative">{loading ? t('blogUI.loading') : resolvedButtonLabel}</span>
           </motion.button>
         </motion.div>
       ) : null}

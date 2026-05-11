@@ -1,24 +1,24 @@
 export const COACHING_DATA9 = {
     hero: {
-        category1: "INTERMEDIATE",
-        category2: "WAVE RIDING",
-        title: "TYPICAL MISTAKES IN WAVES",
-        subtitle: "Typical mistakes of the intermediate rider and how to correct them (Real Coaching).",
-        description: "Reading the swell, mastering timing, and maintaining control when the ocean pushes back."
+        category1Key: "blogMistakesKite.hero.category1",
+        category2Key: "blogMistakesKite.hero.category2",
+        titleKey: "blogMistakesKite.hero.title",
+        subtitleKey: "blogMistakesKite.hero.subtitle",
+        descriptionKey: "blogMistakesKite.hero.description"
     },
     intro: {
-        title: "THE PRECISION CURRENT",
-        p1: "Transitioning from flat water to waves is the defining moment in a kitesurfer's progression. It requires a shift from relying solely on the kite's power to reading the ocean's energy.",
-        p2: "The wave dictates the rhythm. Your kite and board must sync to that frequency. This guide breaks down the essential mechanics of wave riding, stripping away the hype to focus on the physics of fluid control."
+        titleKey: "blogMistakesKite.intro.title",
+        p1Key: "blogMistakesKite.intro.p1",
+        p2Key: "blogMistakesKite.intro.p2"
     },
     swell: [
-        { id: "DATA.01", icon: "waves", title: "SWELL PERIOD", desc: "Longer periods mean deeper, more powerful energy. They stand up faster, requiring earlier commitment." },
-        { id: "DATA.02", icon: "explore", title: "WIND DIRECTION", desc: "Side-shore is ideal. Onshore winds create chop and force you to ride 'up' the wave rather than 'with' it." },
-        { id: "DATA.03", icon: "visibility", title: "THE PEAK", desc: "Identify where the wave will pitch first. Your approach should target the critical section ahead of the lip." }
+        { id: "DATA.01", icon: "waves", titleKey: "blogMistakesKite.swell.0.title", descKey: "blogMistakesKite.swell.0.desc" },
+        { id: "DATA.02", icon: "explore", titleKey: "blogMistakesKite.swell.1.title", descKey: "blogMistakesKite.swell.1.desc" },
+        { id: "DATA.03", icon: "visibility", titleKey: "blogMistakesKite.swell.2.title", descKey: "blogMistakesKite.swell.2.desc" }
     ],
     timing: [
-        { title: "BOTTOM TURN DYNAMICS", desc: "Initiate by edging hard and steering the kite deep. This converts speed into vertical projection." },
-        { title: "TOP TURN RELEASE", desc: "As you hit the lip, sheet out to kill power, pivot, and aggressively redirect the kite down the line." }
+        { titleKey: "blogMistakesKite.timing.0.title", descKey: "blogMistakesKite.timing.0.desc" },
+        { titleKey: "blogMistakesKite.timing.1.title", descKey: "blogMistakesKite.timing.1.desc" }
     ],
-    warning: "Never outrun your kite. If you surf faster than the kite can drift, the lines will slack, leading to a loss of steering control right in the impact zone. Always maintain line tension."
+    warningKey: "blogMistakesKite.warning"
 };

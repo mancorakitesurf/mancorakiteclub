@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { TRIPS } from './homeContent.js'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function Trips() {
+  const { t } = useI18n()
   const teaserTrips = TRIPS.slice(0, 3)
 
   return (
@@ -9,11 +11,11 @@ function Trips() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center sm:mb-16">
           <h2 className="mb-4 font-display text-2xl font-bold dark:text-white sm:text-3xl md:text-4xl lg:text-5xl">
-            Curated Trips
+            {t('sections.home.tripsTitle')}
           </h2>
           <div className="mx-auto h-1 w-20 rounded-full bg-primary" />
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 dark:text-gray-400 sm:text-base">
-            A quick preview of trip styles. Explore the full trip page for complete options.
+            {t('sections.home.tripsDesc')}
           </p>
         </div>
 
@@ -26,17 +28,20 @@ function Trips() {
               <div className="relative h-52 overflow-hidden">
                 <img
                   src={trip.image}
-                  alt={trip.alt}
+                  // Envolvemos el alt en la función t()
+                  alt={t(trip.alt)}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary backdrop-blur dark:bg-black/80">
-                  {trip.level}
+                  {/* Envolvemos el nivel en la función t() */}
+                  {t(trip.level)}
                 </div>
               </div>
               <div className="p-4 sm:p-6">
                 <h3 className="font-display text-xl font-bold leading-snug transition-colors group-hover:text-primary dark:text-white sm:text-2xl">
-                  {trip.title}
+                  {/* Envolvemos el título en la función t() */}
+                  {t(trip.title)}
                 </h3>
               </div>
             </div>
@@ -48,7 +53,7 @@ function Trips() {
             to="/trips"
             className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white sm:w-auto"
           >
-            View Trips
+            {t('sections.home.viewTrips')}
           </Link>
         </div>
       </div>

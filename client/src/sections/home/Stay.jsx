@@ -1,38 +1,40 @@
 import { FaSpa, FaUtensils, FaWater } from 'react-icons/fa'
 import { STAY_IMAGES } from './homeContent.js'
-
-const STAY_BENEFITS = [
-  {
-    icon: FaWater,
-    title: 'Ocean View Suites',
-    description: 'Wake up to the sound of waves and check the wind from your balcony.',
-  },
-  {
-    icon: FaUtensils,
-    title: 'Private Chef & Dining',
-    description: 'Fresh local seafood and healthy meals prepared daily for our guests.',
-  },
-  {
-    icon: FaSpa,
-    title: 'Wellness & Massage',
-    description: 'Recover after a long session with our dedicated wellness center.',
-  },
-]
+import { useI18n } from '../../app/providers/i18nContext'
 
 function Stay() {
+  const { t } = useI18n()
+
+  const STAY_BENEFITS = [
+    {
+      icon: FaWater,
+      titleKey: 'sections.home.stayOceanView',
+      descKey: 'sections.home.stayOceanViewDesc',
+    },
+    {
+      icon: FaUtensils,
+      titleKey: 'sections.home.stayDining',
+      descKey: 'sections.home.stayDiningDesc',
+    },
+    {
+      icon: FaSpa,
+      titleKey: 'sections.home.stayWellness',
+      descKey: 'sections.home.stayWellnessDesc',
+    },
+  ]
+
   return (
     <section id="stay" className="bg-background-light py-16 sm:py-20 lg:py-28 dark:bg-background-dark">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 text-center sm:mb-16">
           <span className="text-sm font-bold uppercase tracking-widest text-primary">
-            Accommodation
+            {t('sections.home.stayBadge')}
           </span>
           <h2 className="mb-6 mt-2 font-display text-2xl font-bold dark:text-white sm:text-3xl md:text-4xl lg:text-5xl">
-            Stay With Us
+            {t('sections.home.stayTitle')}
           </h2>
           <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-600 dark:text-gray-400 sm:text-base">
-            Relax in our luxurious beachfront villa. Ocean views, private chefs, and pure
-            tranquility.
+            {t('sections.home.stayDesc')}
           </p>
         </div>
 
@@ -46,8 +48,8 @@ function Stay() {
             />
             <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-4 sm:p-6 lg:p-8">
               <div>
-                <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">The Main Villa</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-200 sm:text-base">Where modern luxury meets tropical paradise.</p>
+                <h3 className="font-display text-2xl font-bold text-white sm:text-3xl">{t('sections.home.stayMainVilla')}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-200 sm:text-base">{t('sections.home.stayMainVillaDesc')}</p>
               </div>
             </div>
           </div>
@@ -79,14 +81,14 @@ function Stay() {
             const Icon = benefit.icon
             return (
               <div
-                key={benefit.title}
+                key={benefit.titleKey}
                 className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm transition-transform hover:-translate-y-0.5 dark:border-white/5 dark:bg-surface-dark sm:p-6"
               >
                 <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-secondary/20 text-secondary">
                   <Icon className="text-xl" />
                 </div>
-                <h4 className="mb-2 font-display text-xl font-bold dark:text-white">{benefit.title}</h4>
-                <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400 sm:text-base">{benefit.description}</p>
+                <h4 className="mb-2 font-display text-xl font-bold dark:text-white">{t(benefit.titleKey)}</h4>
+                <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400 sm:text-base">{t(benefit.descKey)}</p>
               </div>
             )
           })}

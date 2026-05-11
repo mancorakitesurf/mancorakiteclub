@@ -2,8 +2,11 @@ import { motion } from "framer-motion"
 import { FaChevronDown, FaWhatsapp } from 'react-icons/fa'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
 import { HERO_IMAGE } from './homeContent.js'
+import { useI18n } from "../../app/providers/i18nContext";
 
 function Hero() {
+  const { t } = useI18n()
+
   return (
     <header className="relative flex min-h-[70vh] items-center justify-center overflow-hidden pt-20 md:min-h-screen">
       <div className="absolute inset-0 z-0">
@@ -29,7 +32,7 @@ function Hero() {
           <span className="text-primary">Kite Club</span>
         </h1>
         <p className="mx-auto mb-8 max-w-3xl text-base font-light leading-relaxed tracking-wide text-gray-100 drop-shadow-md sm:text-lg md:text-xl">
-          Kitesurf / Wingfoil in Mancora + beginner/pro + safety + coaching + video analysis
+          {t('hero.subtitle')}
         </p>
 
         <div className="flex justify-center">
@@ -39,7 +42,7 @@ function Hero() {
             rel="noopener noreferrer"
             className="cta-pulse flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-primary px-6 py-3 text-base font-semibold text-white shadow-xl transition-all hover:bg-teal-600 hover:shadow-teal-500/40 sm:w-auto"
           >
-            <FaWhatsapp className="text-lg sm:text-xl" /> Book on WhatsApp
+            <FaWhatsapp className="text-lg sm:text-xl" /> {t('hero.cta')}
           </a>
         </div>
       </motion.div>

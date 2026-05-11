@@ -4,27 +4,17 @@ import logoOzone from "../../assets/LOGOS KITE CLUB/Logo_ozone.webp"
 import logoDuotone from "../../assets/LOGOS KITE CLUB/Logo-duotone.webp"
 import logoSlingshot from "../../assets/LOGOS KITE CLUB/Logo-slingshot.webp"
 import logoRide from "../../assets/LOGOS KITE CLUB/Logo-Ride.webp"
+import { useI18n } from '../../app/providers/i18nContext'
 
 const sponsors = [
-  {
-    name: "Ozone",
-    logo: logoOzone,
-  },
-  {
-    name: "Ride Engine",
-    logo: logoRide,
-  },
-  {
-    name: "Duotone",
-    logo: logoDuotone,
-  },
-  {
-    name: "Slingshot",
-    logo: logoSlingshot,
-  },
+  { name: "Ozone", logo: logoOzone },
+  { name: "Ride Engine", logo: logoRide },
+  { name: "Duotone", logo: logoDuotone },
+  { name: "Slingshot", logo: logoSlingshot },
 ]
 
 function Movements() {
+  const { t } = useI18n()
   const sponsorList = [...sponsors, ...sponsors, ...sponsors]
 
   return (
@@ -37,7 +27,7 @@ function Movements() {
       <div className="relative z-10">
         <div className="mb-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.45em] text-primary">
-            Official Partners
+            {t('sections.home.officialPartners')}
           </p>
         </div>
 

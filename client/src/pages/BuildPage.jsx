@@ -1,4 +1,5 @@
 import SEO from '../components/SEO.jsx'
+import { useI18n } from '../app/providers/i18nContext'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion'
@@ -16,7 +17,6 @@ import hora3 from '../assets/fotos clases/DSC05456.webp'
 import hora6 from '../assets/fotos clases/DSC05783.webp'
 import hora10 from '../assets/fotos clases/DSC05905.webp'
 import hora15 from '../assets/fotos clases/DSC05924.webp'
-
 
 function IconKite({ className = 'h-7 w-7' }) {
   return (
@@ -110,30 +110,10 @@ function IconCamera({ className = 'h-6 w-6' }) {
 }
 
 const ACTIVIDADES = [
-  {
-    id: 'Kitesurf',
-    label: 'Kitesurf',
-    tagline: 'Harness the wind, own the water',
-    Icon: IconKite,
-  },
-  {
-    id: 'Wingfoil',
-    label: 'Wingfoil',
-    tagline: 'Fly above the surface',
-    Icon: IconWing,
-  },
-  {
-    id: 'Surf',
-    label: 'Surf',
-    tagline: 'Read the wave, ride it clean',
-    Icon: IconSurf,
-  },
-  {
-    id: 'SUP',
-    label: 'SUP',
-    tagline: 'Calm water, strong paddle',
-    Icon: IconSUP,
-  },
+  { id: 'Kitesurf', label: 'Kitesurf', Icon: IconKite },
+  { id: 'Wingfoil', label: 'Wingfoil', Icon: IconWing },
+  { id: 'Surf', label: 'Surf', Icon: IconSurf },
+  { id: 'SUP', label: 'SUP', Icon: IconSUP },
 ]
 
 const ACTIVIDAD_IMAGENES = {
@@ -145,41 +125,26 @@ const ACTIVIDAD_IMAGENES = {
 
 const NOCHES_OPTIONS = [3, 5, 7, 10, 14]
 const NOCHES_IMAGENES = [nightcaption, DSC05231, DSC05128Panoramica, DSC05120HDR, DSC05085HDR]
-const HORAS_IMAGENES = [hora0, hora3, hora6, hora10, hora15]
-const NOCHES_COPY = {
-  3: 'Fast escape',
-  5: 'Balanced trip',
-  7: 'Full week',
-  10: 'Deeper stay',
-  14: 'Rider reset',
-}
-
 const HORAS_OPTIONS = [0, 3, 6, 10, 15]
-const HORAS_COPY = {
-  0: 'Accommodation only',
-  3: 'Intro session',
-  6: 'Progression block',
-  10: 'Strong upgrade',
-  15: 'Full coaching',
-}
+const HORAS_IMAGENES = [hora0, hora3, hora6, hora10, hora15]
 
 const EXTRAS_OPTIONS = [
-  { id: 'Kitesurf full gear rental', label: 'Kitesurf full gear rental', Icon: IconEquipment, precio: 60, unit: '/day', category: 'gear' },
-  { id: 'Wingfoil rental', label: 'Wingfoil rental', Icon: IconEquipment, precio: 60, unit: '/day', category: 'gear' },
-  { id: 'Surfboard rental', label: 'Surfboard rental', Icon: IconSurf, precio: 15, unit: '/day', category: 'gear' },
-  { id: 'SUP / Paddle rental', label: 'SUP / Paddle rental', Icon: IconSUP, precio: 30, unit: '/day', category: 'gear' },
-  { id: 'Day trip to other spots', label: 'Day trip to other spots', Icon: IconTransfer, precio: 55, unit: '/day', category: 'experience' },
-  { id: 'Water supervision', label: 'Water supervision (independent riders)', Icon: IconYoga, precio: 15, unit: '/hr', category: 'experience' },
-  { id: 'Massage', label: 'Massage', Icon: IconMassage, precio: 21, unit: '', category: 'wellness' },
-  { id: 'Airport transfer', label: 'Airport transfer (direct payment to driver)', Icon: IconTransfer, precio: 42, unit: '', category: 'logistics' },
-  { id: 'Photo & video pack', label: 'Photo & video pack', Icon: IconCamera, precio: 40, unit: '', category: 'experience' },
+  { id: 'Kitesurf full gear rental', tKey: 'kiteGear', Icon: IconEquipment, precio: 60, unit: '/day', category: 'gear' },
+  { id: 'Wingfoil rental', tKey: 'wingGear', Icon: IconEquipment, precio: 60, unit: '/day', category: 'gear' },
+  { id: 'Surfboard rental', tKey: 'surfGear', Icon: IconSurf, precio: 15, unit: '/day', category: 'gear' },
+  { id: 'SUP / Paddle rental', tKey: 'supGear', Icon: IconSUP, precio: 30, unit: '/day', category: 'gear' },
+  { id: 'Day trip to other spots', tKey: 'dayTrip', Icon: IconTransfer, precio: 55, unit: '/day', category: 'experience' },
+  { id: 'Water supervision', tKey: 'supervision', Icon: IconYoga, precio: 15, unit: '/hr', category: 'experience' },
+  { id: 'Massage', tKey: 'massage', Icon: IconMassage, precio: 21, unit: '', category: 'wellness' },
+  { id: 'Airport transfer', tKey: 'transfer', Icon: IconTransfer, precio: 42, unit: '', category: 'logistics' },
+  { id: 'Photo & video pack', tKey: 'media', Icon: IconCamera, precio: 40, unit: '', category: 'experience' },
 ]
 
 const EXTRAS_CATEGORIES = [
-  { id: 'gear', label: 'Gear & Equipment' },
-  { id: 'experience', label: 'Experiences' },
-  { id: 'wellness', label: 'Wellness' },
-  { id: 'logistics', label: 'Logistics' },
+  { id: 'gear' },
+  { id: 'experience' },
+  { id: 'wellness' },
+  { id: 'logistics' },
 ]
 
 const PRECIO_NOCHE = 50
@@ -238,8 +203,9 @@ function useAnimatedNumber(value) {
 
 /* ─── PRICE UI ────────────────────────────────────────────────────────────── */
 function PriceAmount({ precioTotal }) {
+  const { t } = useI18n()
   if (precioTotal <= 0) {
-    return <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/40">Build your estimate</span>
+    return <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/40">{t('build.buildEstimate')}</span>
   }
   return (
     <div className="flex items-baseline gap-1">
@@ -262,6 +228,7 @@ function PriceAmount({ precioTotal }) {
 }
 
 function FloatingPrice({ paso, precioTotal }) {
+  const { t } = useI18n()
   return (
     <AnimatePresence>
       {paso >= 2 && paso < 5 && (
@@ -272,7 +239,7 @@ function FloatingPrice({ paso, precioTotal }) {
           transition={{ duration: 0.25 }}
           className="fixed bottom-4 left-4 z-40 rounded-full border border-[#b7e28a]/20 bg-[#0e1b17]/95 px-4 py-2 shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
         >
-          <p className="text-[10px] uppercase tracking-[0.5em] text-white/50">Estimated total</p>
+          <p className="text-[10px] uppercase tracking-[0.5em] text-white/50">{t('build.estimatedTotal')}</p>
           <PriceAmount precioTotal={precioTotal} />
         </motion.div>
       )}
@@ -281,6 +248,7 @@ function FloatingPrice({ paso, precioTotal }) {
 }
 
 function MobilePriceBar({ paso, precioTotal }) {
+  const { t } = useI18n()
   return (
     <AnimatePresence>
       {paso >= 2 && paso < 5 && (
@@ -291,7 +259,7 @@ function MobilePriceBar({ paso, precioTotal }) {
           transition={{ duration: 0.22 }}
           className="sticky bottom-[74px] z-30 mt-6 flex items-center justify-between rounded-xl border border-[#b7e28a]/15 bg-[#0e1b17]/95 px-4 py-3 backdrop-blur lg:hidden"
         >
-          <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-white/35">Estimated</p>
+          <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-white/35">{t('build.estimated')}</p>
           <PriceAmount precioTotal={precioTotal} />
         </motion.div>
       )}
@@ -299,14 +267,15 @@ function MobilePriceBar({ paso, precioTotal }) {
   )
 }
 
-/* ─── STEP INDICATOR — editorial style ───────────────────────────────────── */
+/* ─── STEP INDICATOR ───────────────────────────────────── */
 function StepIndicator({ pasoActual }) {
+  const { t } = useI18n()
   const pasos = [
-    { n: 1, label: 'Activity' },
-    { n: 2, label: 'Nights' },
-    { n: 3, label: 'Classes' },
-    { n: 4, label: 'Extras' },
-    { n: 5, label: 'Summary' },
+    { n: 1, label: t('build.stepsLabel.activity') },
+    { n: 2, label: t('build.stepsLabel.nights') },
+    { n: 3, label: t('build.stepsLabel.classes') },
+    { n: 4, label: t('build.stepsLabel.extras') },
+    { n: 5, label: t('build.stepsLabel.summary') },
   ]
 
   return (
@@ -317,7 +286,6 @@ function StepIndicator({ pasoActual }) {
 
         return (
           <div key={p.n} className="flex items-center">
-            {/* Step pill */}
             <div className="flex flex-col items-center px-2 sm:px-3">
               <div className="flex items-center gap-1.5">
                 <motion.span
@@ -359,7 +327,6 @@ function StepIndicator({ pasoActual }) {
                 {p.label}
               </span>
 
-              {/* Active underline */}
               <motion.div
                 initial={false}
                 animate={{ scaleX: actual ? 1 : 0, opacity: actual ? 1 : 0 }}
@@ -368,7 +335,6 @@ function StepIndicator({ pasoActual }) {
               />
             </div>
 
-            {/* Connector */}
             {i < pasos.length - 1 && (
               <div className="relative mx-0 h-px w-6 overflow-hidden bg-white/8 sm:w-10">
                 <motion.div
@@ -407,9 +373,10 @@ function StepHeading({ index, title, subtitle }) {
 }
 
 function PasoActividad({ actividad, setActividad }) {
+  const { t } = useI18n();
   return (
     <div>
-      <StepHeading index={1} title="Choose your activity" subtitle="What do you want to do in Máncora?" />
+      <StepHeading index={1} title={t('build.chooseActivity')} subtitle={t('build.chooseActivitySub')} />
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {ACTIVIDADES.map((a) => {
           const selected = actividad === a.id
@@ -426,18 +393,13 @@ function PasoActividad({ actividad, setActividad }) {
                 : 'ring-1 ring-white/8 hover:ring-white/20'
                 }`}
             >
-              {/* Image */}
               <img
                 src={ACTIVIDAD_IMAGENES[a.id]}
                 alt={a.label}
                 className={`absolute inset-0 h-full w-full object-cover transition-all duration-500 ${selected ? 'scale-[1.03] opacity-80' : 'scale-100 opacity-55 group-hover:scale-[1.02] group-hover:opacity-70'
                   }`}
               />
-
-              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-
-              {/* Subtle grain overlay */}
               <div
                 className="pointer-events-none absolute inset-0 opacity-[0.06]"
                 style={{
@@ -446,7 +408,6 @@ function PasoActividad({ actividad, setActividad }) {
                 }}
               />
 
-              {/* Selected badge */}
               <AnimatePresence>
                 {selected && (
                   <motion.div
@@ -463,9 +424,8 @@ function PasoActividad({ actividad, setActividad }) {
                 )}
               </AnimatePresence>
 
-              {/* Content */}
               <div className="relative z-10 w-full p-6">
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.25em] text-[#b7e28a]/70">{a.tagline}</p>
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.25em] text-[#b7e28a]/70">{t(`build.activities.${a.id}.tagline`)}</p>
                 <p className="text-2xl font-black uppercase tracking-tight text-white">{a.label}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <div className="flex items-center gap-2 rounded-full border border-white/15 bg-black/40 px-3 py-1.5 backdrop-blur">
@@ -473,7 +433,7 @@ function PasoActividad({ actividad, setActividad }) {
                     <span className="text-[11px] font-bold uppercase tracking-widest text-white/80">${precioHora}/hr</span>
                   </div>
                   {selected && (
-                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b7e28a]">Selected ↗</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#b7e28a]">{t('build.selected')}</span>
                   )}
                 </div>
               </div>
@@ -486,6 +446,7 @@ function PasoActividad({ actividad, setActividad }) {
 }
 
 function NightCard({ n, i, selected, onClick }) {
+  const { t } = useI18n();
   return (
     <motion.button
       type="button"
@@ -515,13 +476,13 @@ function NightCard({ n, i, selected, onClick }) {
       />
       <div className="relative z-10 flex min-h-[180px] flex-col justify-between p-4">
         <div>
-          <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/60">{NOCHES_COPY[n]}</p>
+          <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/60">{t(`build.nightsCopy.${n}`)}</p>
         </div>
         <div>
           <div className="flex items-end justify-between gap-2">
             <div className="flex items-baseline gap-1">
               <span className="text-4xl font-black leading-none text-white">{n}</span>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">nights</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">{t('build.nights')}</span>
             </div>
             <span className={`rounded-md px-2 py-1 text-[11px] font-black ${selected ? 'bg-[#b7e28a] text-black' : 'bg-white/10 text-white'}`}>
               ${n * PRECIO_NOCHE}
@@ -534,9 +495,10 @@ function NightCard({ n, i, selected, onClick }) {
 }
 
 function PasoNoches({ noches, setNoches }) {
+  const { t } = useI18n();
   return (
     <div>
-      <StepHeading index={2} title="How many nights?" subtitle="Select the duration of your stay." />
+      <StepHeading index={2} title={t('build.howManyNights')} subtitle={t('build.howManyNightsSub')} />
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -550,20 +512,21 @@ function PasoNoches({ noches, setNoches }) {
       <div className="mt-5 flex items-center justify-end gap-2">
         <div className="h-px flex-1 bg-white/6" />
         <p className="text-sm font-bold text-[#b7e28a]">${noches * PRECIO_NOCHE} USD</p>
-        <span className="text-xs text-white/30">accommodation</span>
+        <span className="text-xs text-white/30">{t('build.accommodation')}</span>
       </div>
     </div>
   )
 }
 
 function PasoHoras({ horas, setHoras, actividad }) {
+  const { t } = useI18n();
   const precioHora = PRECIO_HORA_MAP[actividad] || 60
 
   return (
     <div>
       <StepHeading
         index={3}
-        title="Class hours"
+        title={t('build.classHours')}
         subtitle={`$${precioHora} USD/hr · ${actividad}`}
       />
       <AnimatePresence>
@@ -576,7 +539,7 @@ function PasoHoras({ horas, setHoras, actividad }) {
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-yellow-300/20 bg-yellow-300/8 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-yellow-200/70">
               <span className="h-1.5 w-1.5 rounded-full bg-yellow-300/60" />
-              No classes — accommodation only
+              {t('build.noClasses')}
             </div>
           </motion.div>
         )}
@@ -616,12 +579,12 @@ function PasoHoras({ horas, setHoras, actividad }) {
               }}
             />
             <div className="relative z-10 flex min-h-[180px] flex-col justify-between p-4">
-              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/60">{HORAS_COPY[h]}</p>
+              <p className="text-[9px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/60">{t(`build.hoursCopy.${h}`)}</p>
               <div className="flex items-end justify-between gap-2">
                 <div className="flex items-baseline gap-1">
                   <span className="text-4xl font-black leading-none text-white">{h}</span>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
-                    {h === 0 ? 'hrs' : 'hours'}
+                    {h === 0 ? t('build.hrs') : t('build.hours')}
                   </span>
                 </div>
                 <span className={`rounded-md px-2 py-1 text-[11px] font-black ${horas === h ? (h === 0 ? 'bg-yellow-300 text-black' : 'bg-[#b7e28a] text-black') : 'bg-white/10 text-white'
@@ -636,13 +599,14 @@ function PasoHoras({ horas, setHoras, actividad }) {
       <div className="mt-5 flex items-center justify-end gap-2">
         <div className="h-px flex-1 bg-white/6" />
         <p className="text-sm font-bold text-[#b7e28a]">${horas * precioHora} USD</p>
-        <span className="text-xs text-white/30">classes</span>
+        <span className="text-xs text-white/30">{t('build.classes')}</span>
       </div>
     </div>
   )
 }
 
 function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
+  const { t } = useI18n();
   const extrasSubtotal = extras.reduce((sum, extraId) => {
     const found = EXTRAS_OPTIONS.find((e) => e.id === extraId)
     if (!found) return sum
@@ -652,7 +616,7 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
 
   return (
     <div>
-      <StepHeading index={4} title="Add extras" subtitle="Optional add-ons to complete your trip." />
+      <StepHeading index={4} title={t('build.addExtras')} subtitle={t('build.addExtrasSub')} />
 
       <div className="space-y-8">
         {EXTRAS_CATEGORIES.map((cat) => {
@@ -660,9 +624,8 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
           if (!catExtras.length) return null
           return (
             <div key={cat.id}>
-              {/* Category header */}
               <div className="mb-4 flex items-center gap-3">
-                <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/35">{cat.label}</span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/35">{t(`build.extraCategories.${cat.id}`)}</span>
                 <div className="h-px flex-1 bg-white/6" />
               </div>
 
@@ -704,7 +667,7 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
                         </motion.div>
 
                         <div className="min-w-0 flex-1">
-                          <p className="text-sm font-semibold leading-tight text-white">{e.label}</p>
+                          <p className="text-sm font-semibold leading-tight text-white">{t(`build.extraOptions.${e.tKey}`)}</p>
                           <p className="mt-1.5 text-[11px] font-black text-[#b7e28a]">
                             ${e.precio} USD{e.unit ? ` ${e.unit}` : ''}
                           </p>
@@ -730,7 +693,6 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
                         </div>
                       </motion.button>
 
-                      {/* Qty controls */}
                       <AnimatePresence initial={false}>
                         {selected && hasQty && (
                           <motion.div
@@ -742,7 +704,7 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
                           >
                             <div className="flex items-center gap-3 border-t border-white/8 px-4 py-3">
                               <span className="text-[11px] text-white/40">
-                                {e.unit === '/day' ? 'Days' : 'Hours'}
+                                {e.unit === '/day' ? t('build.days') : t('build.hours')}
                               </span>
                               <div className="flex items-center gap-2">
                                 <button
@@ -775,10 +737,9 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
         })}
       </div>
 
-      {/* Floating subtotal */}
-      <div className="sticky bottom-[140px] z-20 mt-8 flex items-center justnify-between rounded-xl border border-white/8 bg-[#0e1b17]/95 px-4 py-3 backdrop-blur lg:bottom-4">
+      <div className="sticky bottom-[140px] z-20 mt-8 flex items-center justify-between rounded-xl border border-white/8 bg-[#0e1b17]/95 px-4 py-3 backdrop-blur lg:bottom-4">
         <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/35">
-          {extras.length} extras selected
+          {extras.length} {t('build.extrasSelected')}
         </span>
         <span className="text-sm font-black text-[#b7e28a]">${extrasSubtotal} USD</span>
       </div>
@@ -787,6 +748,7 @@ function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
 }
 
 function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
+  const { t } = useI18n();
   const precioTotal = calcularPrecio(actividad, noches, horas, extras, extrasQty)
   const precioAnimado = useAnimatedNumber(precioTotal)
   const canSend = datosUsuario.nombre.trim() !== '' && datosUsuario.email.trim() !== ''
@@ -794,17 +756,16 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
   const [shakeKey, setShakeKey] = useState(0)
 
   const lineItems = [
-    { label: 'Activity', value: actividad || '—' },
-    { label: 'Nights', value: `${noches} nights × $${PRECIO_NOCHE} = $${noches * PRECIO_NOCHE}` },
-    { label: 'Classes', value: `${horas}h ${actividad} × $${PRECIO_HORA_MAP[actividad] || 60} = $${horas * (PRECIO_HORA_MAP[actividad] || 60)}` },
+    { label: t('build.summary.activity'), value: actividad || '—' },
+    { label: t('build.summary.nights'), value: `${noches} ${t('build.nights')} × $${PRECIO_NOCHE} = $${noches * PRECIO_NOCHE}` },
+    { label: t('build.summary.classes'), value: `${horas} ${t('build.hrs')} ${actividad} × $${PRECIO_HORA_MAP[actividad] || 60} = $${horas * (PRECIO_HORA_MAP[actividad] || 60)}` },
   ]
 
   return (
     <div>
-      <StepHeading index={5} title="Trip summary" subtitle="Review and send your request." />
+      <StepHeading index={5} title={t('build.tripSummary')} subtitle={t('build.tripSummarySub')} />
 
       <div className="grid gap-5 lg:grid-cols-2">
-        {/* Left — Summary */}
         <motion.div
           initial={{ x: -30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -812,8 +773,8 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
           className="rounded-2xl border border-white/8 bg-[#152720] p-6"
         >
           <div className="flex items-center justify-between mb-5">
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/35">Your trip</span>
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/50">Breakdown</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/35">{t('build.summary.yourTrip')}</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#b7e28a]/50">{t('build.summary.breakdown')}</span>
           </div>
 
           <div className="space-y-4">
@@ -824,9 +785,8 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
               </div>
             ))}
 
-            {/* Extras */}
             <div className="border-b border-white/6 pb-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/30">Extras</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/30">{t('build.summary.extras')}</p>
               {extrasSeleccionados.length > 0 ? (
                 <ul className="mt-2 space-y-2">
                   {extrasSeleccionados.map((e) => {
@@ -836,7 +796,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
                       <li key={e.id} className="flex items-center justify-between text-sm text-white/70">
                         <span className="flex items-center gap-2">
                           <e.Icon className="h-3.5 w-3.5 shrink-0 text-[#b7e28a]/70" />
-                          {e.label}{hasQty ? ` ×${qty}` : ''}
+                          {t(`build.extraOptions.${e.tKey}`)}{hasQty ? ` ×${qty}` : ''}
                         </span>
                         <span className="shrink-0 font-semibold text-white">${e.precio * qty}</span>
                       </li>
@@ -844,16 +804,15 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
                   })}
                 </ul>
               ) : (
-                <p className="mt-1.5 text-sm text-white/25">None selected</p>
+                <p className="mt-1.5 text-sm text-white/25">{t('build.summary.noneSelected')}</p>
               )}
             </div>
           </div>
 
-          {/* Total */}
           <div className="mt-5 flex items-end justify-between">
             <div>
-              <p className="text-[10px] uppercase tracking-[0.22em] text-white/30">Total estimated</p>
-              <p className="mt-0.5 text-[10px] text-white/20">Final price confirmed on booking</p>
+              <p className="text-[10px] uppercase tracking-[0.22em] text-white/30">{t('build.summary.totalEstimated')}</p>
+              <p className="mt-0.5 text-[10px] text-white/20">{t('build.summary.finalPrice')}</p>
             </div>
             <div className="text-right">
               <p className="text-3xl font-black text-white">${precioAnimado}</p>
@@ -862,7 +821,6 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
           </div>
         </motion.div>
 
-        {/* Right — Contact form */}
         <motion.div
           initial={{ x: 30, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -870,31 +828,31 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
           className="flex flex-col gap-5 rounded-2xl border border-white/8 bg-[#0e1b17] p-6"
         >
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/35 mb-4">Your details</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/35 mb-4">{t('build.summary.yourDetails')}</p>
             <div className="space-y-4">
               <div>
                 <label htmlFor="build-name" className="block text-[11px] font-bold uppercase tracking-[0.22em] text-white/40 mb-1.5">
-                  Name
+                  {t('build.summary.name')}
                 </label>
                 <input
                   id="build-name"
                   type="text"
                   value={datosUsuario.nombre}
                   onChange={(e) => setDatosUsuario({ nombre: e.target.value })}
-                  placeholder="Your full name"
+                  placeholder={t('build.summary.namePlaceholder')}
                   className="w-full rounded-lg border border-white/12 bg-[#152720] px-4 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-[#b7e28a]/50 focus:ring-1 focus:ring-[#b7e28a]/20"
                 />
               </div>
               <div>
                 <label htmlFor="build-email" className="block text-[11px] font-bold uppercase tracking-[0.22em] text-white/40 mb-1.5">
-                  Email
+                  {t('build.summary.email')}
                 </label>
                 <input
                   id="build-email"
                   type="email"
                   value={datosUsuario.email}
                   onChange={(e) => setDatosUsuario({ email: e.target.value })}
-                  placeholder="you@email.com"
+                  placeholder={t('build.summary.emailPlaceholder')}
                   className="w-full rounded-lg border border-white/12 bg-[#152720] px-4 py-2.5 text-sm text-white placeholder-white/20 outline-none transition focus:border-[#b7e28a]/50 focus:ring-1 focus:ring-[#b7e28a]/20"
                 />
               </div>
@@ -903,7 +861,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
 
           {!canSend && (
             <p className="text-center text-[11px] text-red-400/70">
-              Enter your name and email to continue.
+              {t('build.summary.enterDetails')}
             </p>
           )}
 
@@ -920,7 +878,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                Send via WhatsApp
+                {t('build.summary.sendWhatsapp')}
               </motion.a>
             ) : (
               <motion.span
@@ -933,7 +891,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
-                Send via WhatsApp
+                {t('build.summary.sendWhatsapp')}
               </motion.span>
             )}
           </div>
@@ -945,6 +903,7 @@ function PasoResumen({ actividad, noches, horas, extras, extrasQty, datosUsuario
 
 /* ─── MAIN PAGE ───────────────────────────────────────────────────────────── */
 function BuildPage() {
+  const { t } = useI18n();
   const heroRef = useRef(null)
   const wizardRef = useRef(null)
   const directionRef = useRef(1)
@@ -979,18 +938,16 @@ function BuildPage() {
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Build Your Trip"
-        description="Customize your trip with classes, stay, and add-ons."
-        canonicalPath="/build"
-        hreflang={{ en: '/build', es: '/esp', default: '/' }}
+        titleKey="seo.buildTitle"
+        descKey="seo.buildDesc"
+        titleFallback="Mancora Kite Club | Build Your Trip"
+        descFallback="Customize your trip with classes, stay, and add-ons."
       />
 
-      {/* ── HERO ── */}
       <section
         ref={heroRef}
         className="relative flex min-h-[72vh] items-center justify-center overflow-hidden bg-[#080f0d] px-4 py-24 text-center md:min-h-screen"
       >
-        {/* Background image */}
         <div className="absolute inset-0 z-0">
           <motion.img
             src={actividadKitesurf}
@@ -1002,9 +959,7 @@ function BuildPage() {
             style={{ y: heroImageY }}
             className="h-[115%] w-full object-cover opacity-50"
           />
-          {/* Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#080f0d] via-black/25 to-transparent" />
-          {/* Grain */}
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.07]"
             style={{
@@ -1014,22 +969,19 @@ function BuildPage() {
           />
         </div>
 
-        {/* Rotated side label */}
         <div className="absolute left-5 top-1/2 z-10 hidden -translate-y-1/2 -rotate-90 items-center gap-3 lg:flex">
           <div className="h-px w-12 bg-[#b7e28a]/30" />
           <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-white/30">
-            4°06′N 81°03′W · Máncora, Perú
+            {t('build.location')}
           </span>
         </div>
 
-        {/* Main content */}
         <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
           className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-4"
         >
-          {/* Eyebrow */}
           <motion.div
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -1038,19 +990,19 @@ function BuildPage() {
           >
             <div className="h-px w-8 bg-[#b7e28a]/40" />
             <span className="text-[10px] font-bold uppercase tracking-[0.38em] text-[#b7e28a]/70">
-              Mancora Kite Club
+              {t('build.club')}
             </span>
             <div className="h-px w-8 bg-[#b7e28a]/40" />
           </motion.div>
 
           <h1 className="text-5xl font-black uppercase leading-[0.9] tracking-tight text-white drop-shadow-2xl sm:text-7xl lg:text-[6.5rem]">
-            Build Your
+            {t('build.heroTitle1')}
             <br />
-            <span className="text-[#b7e28a]">Trip</span>
+            <span className="text-[#b7e28a]">{t('build.heroTitle2')}</span>
           </h1>
 
           <p className="mt-6 max-w-md text-sm font-medium uppercase tracking-[0.22em] text-white/40">
-            Customize every detail · Get your instant estimate
+            {t('build.heroSubtitle')}
           </p>
 
           <motion.button
@@ -1060,7 +1012,7 @@ function BuildPage() {
             whileTap={{ scale: 0.97 }}
             className="mt-10 flex items-center gap-2 rounded-full border border-[#b7e28a]/30 bg-[#b7e28a]/10 px-7 py-3 text-sm font-bold uppercase tracking-[0.2em] text-[#b7e28a] backdrop-blur transition hover:bg-[#b7e28a]/18 hover:border-[#b7e28a]/50"
           >
-            Start building
+            {t('build.startBuilding')}
             <motion.span
               animate={{ y: [0, 3, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
@@ -1070,19 +1022,15 @@ function BuildPage() {
           </motion.button>
         </motion.div>
 
-        {/* Bottom fade into next section */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#080f0d] to-transparent" />
       </section>
 
-      {/* ── WIZARD ── */}
       <section
         ref={wizardRef}
         className="bg-[#080f0d] px-3 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       >
         <div className="mx-auto max-w-5xl">
-          {/* Outer card */}
           <div className="overflow-hidden rounded-[2rem] border border-white/6 bg-[#0e1b17] shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
-            {/* Grain on wizard card */}
             <div
               className="pointer-events-none absolute inset-0 rounded-[2rem] opacity-[0.025]"
               style={{
@@ -1092,18 +1040,17 @@ function BuildPage() {
             />
 
             <div className="relative p-5 sm:p-8 lg:p-10">
-              {/* Header */}
               <div className="mb-8 flex items-start justify-between">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.35em] text-white/25">
-                    Trip Builder
+                    {t('build.tripBuilder')}
                   </p>
                   <h2 className="mt-1 text-xl font-black uppercase tracking-tight text-white sm:text-2xl">
-                    Mancora Kite Club
+                    {t('build.club')}
                   </h2>
                 </div>
                 <div className="text-right">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/25">5 steps</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/25">{t('build.steps')}</p>
                   <p className="mt-1 text-sm font-black text-[#b7e28a]">
                     {paso} / 5
                   </p>
@@ -1112,7 +1059,6 @@ function BuildPage() {
 
               <StepIndicator pasoActual={paso} />
 
-              {/* Step content */}
               <AnimatePresence mode="wait" custom={directionRef.current}>
                 <motion.div
                   key={paso}
@@ -1151,7 +1097,6 @@ function BuildPage() {
 
               <MobilePriceBar paso={paso} precioTotal={precioTotal} />
 
-              {/* Navigation */}
               <div className="sticky bottom-0 z-40 -mx-5 mt-8 flex items-center justify-between gap-3 border-t border-white/6 bg-[#0e1b17]/95 px-5 py-4 backdrop-blur sm:-mx-8 sm:px-8 lg:static lg:mx-0 lg:border-none lg:bg-transparent lg:p-0 lg:pt-8 lg:backdrop-blur-0">
                 {paso > 1 ? (
                   <motion.button
@@ -1161,7 +1106,7 @@ function BuildPage() {
                     whileTap={{ scale: 0.98 }}
                     className="flex min-h-10 items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm font-semibold text-white/50 transition hover:border-white/20 hover:text-white/80"
                   >
-                    ← Back
+                    {t('build.back')}
                   </motion.button>
                 ) : (
                   <span />
@@ -1178,7 +1123,7 @@ function BuildPage() {
                         exit={{ opacity: 0 }}
                         className="min-h-10 px-1 text-sm text-white/25 transition hover:text-white/50"
                       >
-                        Reset
+                        {t('build.reset')}
                       </motion.button>
                     )}
                   </AnimatePresence>
@@ -1192,7 +1137,7 @@ function BuildPage() {
                       whileTap={canNext ? { scale: 0.97 } : {}}
                       className="group flex min-h-10 items-center gap-2 rounded-xl bg-[#b7e28a] px-6 py-2 text-sm font-black uppercase tracking-[0.15em] text-black transition hover:brightness-95 hover:shadow-[0_0_24px_rgba(183,226,138,0.25)] disabled:cursor-not-allowed disabled:opacity-35"
                     >
-                      Next
+                      {t('build.next')}
                       <span className="inline-block transition-transform group-hover:translate-x-[2px]" aria-hidden="true">→</span>
                     </motion.button>
                   )}

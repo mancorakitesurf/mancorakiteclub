@@ -1,7 +1,10 @@
 import { motion } from "framer-motion"
 import reviewHeroImg from "../../assets/fotos comunidad/IMG_2917.webp"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function HeroReview() {
+  const { t } = useI18n()
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#031015]">
 
@@ -31,20 +34,20 @@ function HeroReview() {
         </p>
 
         <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.95] tracking-tighter uppercase mb-6">
-          What Our
+          {t('sections.review.heroTitle1')}
           <br />
-          Riders Say
+          {t('sections.review.heroTitle2')}
         </h1>
 
         <p className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-white/80 font-light leading-relaxed">
-          Real stories from the riders who lived the wind, the ocean, and the tribe experience.
+          {t('sections.review.heroDesc')}
         </p>
 
         <a
           href="#videos"
           className="mt-10 inline-flex min-h-12 items-center justify-center rounded-full border border-[#5af8fb] px-8 py-3 text-sm font-bold uppercase tracking-[0.22em] text-[#5af8fb] transition hover:bg-[#5af8fb] hover:text-black"
         >
-          Watch Videos
+          {t('sections.review.watchVideos')}
         </a>
       </motion.div>
     </section>

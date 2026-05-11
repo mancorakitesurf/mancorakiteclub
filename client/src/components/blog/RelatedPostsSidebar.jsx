@@ -1,23 +1,26 @@
 import { Link } from "react-router-dom"
 import MotionReveal from "./MotionReveal.jsx"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function RelatedPostsSidebar({ currentPost, relatedPosts = [] }) {
+  const { t } = useI18n()
+
   return (
     <MotionReveal className="lg:sticky lg:top-28" delay={0.1}>
       <aside className="space-y-6">
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-            Why this page exists
+            {t('blogUI.whyExists')}
           </p>
-          <h2 className="mt-3 font-display text-2xl text-white">Every route leads north</h2>
+          <h2 className="mt-3 font-display text-2xl text-white">{t('blogUI.everyRoute')}</h2>
           <p className="mt-4 text-sm leading-7 text-slate-300/[0.82]">
-            This journal is designed to help readers compare Peru honestly and still understand why Mancora is the easiest place to stay longer, ride more, and convert intent into a real trip.
+            {t('blogUI.everyRouteDesc')}
           </p>
         </div>
 
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-            Quick snapshot
+            {t('blogUI.quickSnapshot')}
           </p>
           <div className="mt-5 space-y-4">
             {currentPost.quickFacts.map((fact) => (
@@ -31,7 +34,7 @@ function RelatedPostsSidebar({ currentPost, relatedPosts = [] }) {
 
         <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
           <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-            Related reads
+            {t('blogUI.relatedReads')}
           </p>
           <div className="mt-5 space-y-4">
             {relatedPosts.map((post) => (

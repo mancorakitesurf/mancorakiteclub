@@ -1,4 +1,5 @@
 import SEO from '../../components/SEO.jsx'
+import { useI18n } from '../../app/providers/i18nContext'
 import WavesHero from '../../sections/waves/WavesHero.jsx'
 import WavesIntro from '../../sections/waves/WavesIntro.jsx'
 import WavesQuote from '../../sections/waves/WavesQuote.jsx'
@@ -17,35 +18,37 @@ import {
   SURF_CLASSES,
 } from '../../sections/waves/wavesContent.js'
 
-function WavesPage({ canonicalPath = '/waves' }) {
+function WavesPage() {
+  const { t } = useI18n()
+
   return (
     <>
       <SEO
-        title="Mancora Kite Club | Waves & Wind Trips"
-        description="Kitesurf, Wingfoil and Surfing trips across Northern Peru. Explore Mancora, Negritos, Los Organos, Cabo Blanco and Lobitos with professional coaching."
-        canonicalPath={canonicalPath}
-        hreflang={{ en: '/waves', es: '/waves/esp', default: '/' }}
+        titleKey="seo.wavesTitle"
+        descKey="seo.wavesDesc"
+        titleFallback="Mancora Kite Club | Waves & Wind Trips"
+        descFallback="Kitesurf, Wingfoil and Surfing trips across Northern Peru. Explore Mancora, Negritos, Los Organos, Cabo Blanco and Lobitos with professional coaching."
       />
 
       {/* ── Kitesurf block ── */}
       <WavesHero />
       <WavesIntro />
       <WavesQuote />
-      <WavesTrips title="Kite Surf Trips" trips={KITE_TRIPS} />
+      <WavesTrips title={t('pages.waves.kiteSurfTrips', { defaultValue: 'Kite Surf Trips' })} trips={KITE_TRIPS} />
       <WavesClasses />
       <WavesBenefits />
       <WavesBeaches />
 
       {/* ── Wingfoil block ── */}
       <WavesQuote />
-      <WavesTrips title="Wingfoil Surf Trips" trips={WINGFOIL_TRIPS} />
+      <WavesTrips title={t('pages.waves.wingfoilSurfTrips', { defaultValue: 'Wingfoil Surf Trips' })} trips={WINGFOIL_TRIPS} />
       <WavesClasses />
 
       {/* ── Surfing block ── */}
       <SurfHero />
       <SurfIntro />
       <WavesQuote text={SURF_QUOTE} />
-      <WavesTrips title="Surf Trips" trips={SURF_TRIPS} />
+      <WavesTrips title={t('pages.waves.surfTrips', { defaultValue: 'Surf Trips' })} trips={SURF_TRIPS} />
       <WavesClasses classes={SURF_CLASSES} />
       <WavesClimate />
       <WavesBeaches />

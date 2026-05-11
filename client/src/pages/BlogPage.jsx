@@ -6,10 +6,10 @@ function BlogPage() {
   return (
     <>
       <SEO
-        title="Blog | Mancora Kite Club"
-        description="Kitesurfing, wingfoil, and surf blog from Máncora, Peru. Read guides, spot breakdowns, trip reports, and coaching. Stay updated with the best wind and waves."
-        canonicalPath="/blog"
-        hreflang={{ en: '/', es: '/esp', default: '/' }}
+        titleKey="seo.blogTitle"
+        descKey="seo.blogDesc"
+        titleFallback="Blog | Mancora Kite Club"
+        descFallback="Kitesurfing, wingfoil, and surf blog from Máncora, Peru. Read guides, spot breakdowns, trip reports, and coaching. Stay updated with the best wind and waves."
       />
 
       <BlogHero />

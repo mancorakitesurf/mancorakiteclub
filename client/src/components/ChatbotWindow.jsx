@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { IoClose } from 'react-icons/io5'
-import { useI18n } from '../app/providers/i18nContext'
+import { useI18n } from '../app/providers/i18nContext.jsx';
 import ChatbotMessage from './ChatbotMessage'
 import { buildWhatsAppUrl } from '../lib/whatsapp'
 import { chatbotFlows, buildWhatsAppMessage } from '../lib/chatbotFlows'

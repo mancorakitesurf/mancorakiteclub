@@ -1,11 +1,23 @@
 import BlogCard from './BlogSidebar/BlogCard.jsx'
 import LoadMorePosts from '../../../../components/blog/LoadMorePosts.jsx'
 import { POSTS } from '../blogContent.js'
+import { useI18n } from '../../../../app/providers/i18nContext'
 
 function BlogPosts() {
+  const { t } = useI18n()
+
+  // Truco ninja ampliado: Traducimos TODO antes de renderizar
+  const translatedPosts = POSTS.map((post) => ({
+    ...post,
+    title: t(post.title),
+    category: t(post.category),
+    date: t(post.date),
+    author: t(post.author)
+  }))
+
   return (
     <LoadMorePosts
-      posts={POSTS}
+      posts={translatedPosts}
       getKey={(post) => post.slug}
       renderPost={(post) => (
         <BlogCard

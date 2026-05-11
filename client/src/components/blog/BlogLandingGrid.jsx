@@ -3,8 +3,10 @@ import { premiumBlogCategories } from "../../data/posts.js"
 import MotionReveal from "./MotionReveal.jsx"
 import BlogPostCard from "./BlogPostCard.jsx"
 import CTASection from "./CTASection.jsx"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function BlogLandingGrid({ posts }) {
+  const { t } = useI18n()
   const [featuredPost, ...remainingPosts] = posts
 
   return (
@@ -22,17 +24,17 @@ function BlogLandingGrid({ posts }) {
             <aside className="space-y-6">
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-                  Editorial Filter
+                  {t('blogUI.editorialFilter')}
                 </p>
-                <h2 className="mt-3 font-display text-3xl text-white">The order is intentional</h2>
+                <h2 className="mt-3 font-display text-3xl text-white">{t('blogUI.orderIntentional')}</h2>
                 <p className="mt-4 text-sm leading-7 text-slate-300/[0.82]">
-                  The sequence starts with iconic waves and broad Peru comparisons, then narrows the reader toward the destination that is easiest to imagine booking.
+                  {t('blogUI.orderDesc')}
                 </p>
               </div>
 
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-                  Core categories
+                  {t('blogUI.coreCategories')}
                 </p>
                 <div className="mt-5 flex flex-wrap gap-3">
                   {premiumBlogCategories.map((category) => (
@@ -48,16 +50,16 @@ function BlogLandingGrid({ posts }) {
 
               <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-cyan-200/[0.65]">
-                  Strategic destination
+                  {t('blogUI.strategicDestination')}
                 </p>
                 <p className="mt-4 text-sm leading-7 text-slate-300/[0.82]">
-                  Readers can compare Peru honestly here, but the strongest commercial landing point remains the same: a warm, credible, progression-friendly base in Mancora.
+                  {t('blogUI.strategicDesc')}
                 </p>
                 <Link
                   to="/"
                   className="mt-6 inline-flex rounded-full bg-white px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-slate-950 transition hover:bg-cyan-200"
                 >
-                  Go to Home
+                  {t('blogUI.goToHome')}
                 </Link>
               </div>
             </aside>
@@ -66,8 +68,8 @@ function BlogLandingGrid({ posts }) {
 
         <div className="mt-10" >
           <CTASection 
-            title="The articles compare Peru. The conversion point is still Mancora."
-            body="When a reader is ready to stop researching and start planning, the strongest final step is the main Mancora Kite Club experience."
+            title={t('blogUI.ctaTitle')}
+            body={t('blogUI.ctaBody')}
           />
         </div>
       </div>

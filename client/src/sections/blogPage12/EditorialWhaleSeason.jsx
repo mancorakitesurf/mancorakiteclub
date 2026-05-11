@@ -1,26 +1,28 @@
 import { WHALE_SEASON_DATA12 } from "./introData12";
+import { useI18n } from '../../app/providers/i18nContext'
 
 function EditorialWhaleSeason() {
+    const { t } = useI18n();
     const [morning, afternoon] = WHALE_SEASON_DATA12.sections;
 
     return (
         <section className="py-24 px-8 lg:px-16 bg-[#031015]">
             <div className="max-w-7xl mx-auto space-y-32">
-                
+
                 {/* 01. Morning Watch */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="order-2 lg:order-1 relative">
                         <div className="absolute -top-12 -left-12 w-64 h-64 bg-[#5af8fb]/5 rounded-full blur-3xl" />
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase italic">
-                            {morning.id}. {morning.title}
+                            {morning.id}. {t(morning.titleKey)}
                         </h2>
                         <ul className="space-y-8">
                             {morning.items.map((item, i) => (
                                 <li key={i} className="flex items-start gap-4 group">
                                     <span className="material-symbols-outlined text-[#5af8fb] mt-1 group-hover:scale-110 transition-transform">{item.icon}</span>
                                     <div>
-                                        <h3 className="font-bold text-white text-lg tracking-tight uppercase">{item.label}</h3>
-                                        <p className="text-[#9eaeb4] mt-1 text-sm font-light leading-relaxed">{item.desc}</p>
+                                        <h3 className="font-bold text-white text-lg tracking-tight uppercase">{t(item.labelKey)}</h3>
+                                        <p className="text-[#9eaeb4] mt-1 text-sm font-light leading-relaxed">{t(item.descKey)}</p>
                                     </div>
                                 </li>
                             ))}
@@ -41,15 +43,15 @@ function EditorialWhaleSeason() {
                     <div className="relative">
                         <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-[#ff9069]/5 rounded-full blur-3xl" />
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 tracking-tighter uppercase italic">
-                            {afternoon.id}. {afternoon.title}
+                            {afternoon.id}. {t(afternoon.titleKey)}
                         </h2>
                         <ul className="space-y-8">
                             {afternoon.items.map((item, i) => (
                                 <li key={i} className="flex items-start gap-4 group">
                                     <span className="material-symbols-outlined text-[#ff9069] mt-1 group-hover:scale-110 transition-transform">{item.icon}</span>
                                     <div>
-                                        <h3 className="font-bold text-white text-lg tracking-tight uppercase">{item.label}</h3>
-                                        <p className="text-[#9eaeb4] mt-1 text-sm font-light leading-relaxed">{item.desc}</p>
+                                        <h3 className="font-bold text-white text-lg tracking-tight uppercase">{t(item.labelKey)}</h3>
+                                        <p className="text-[#9eaeb4] mt-1 text-sm font-light leading-relaxed">{t(item.descKey)}</p>
                                     </div>
                                 </li>
                             ))}

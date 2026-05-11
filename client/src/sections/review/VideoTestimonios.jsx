@@ -1,6 +1,9 @@
 import { motion } from "framer-motion"
+import { useI18n } from '../../app/providers/i18nContext'
 
 function VideoTestimonios() {
+  const { t } = useI18n()
+
   return (
     <section
       id="videos"
@@ -21,17 +24,17 @@ function VideoTestimonios() {
           className="mx-auto max-w-3xl text-center"
         >
           <p className="text-xs font-bold uppercase tracking-[0.4em] text-[#5af8fb]">
-            Rider Story
+            {t('sections.review.riderStory')}
           </p>
 
           <h2 className="mt-5 text-4xl font-black uppercase tracking-tight sm:text-5xl lg:text-7xl">
-            One Real
+            {t('sections.review.oneReal')}
             <br />
-            Experience
+            {t('sections.review.experience')}
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-            A real rider story about wind, ocean, progression, and the Mancora Kite Club tribe.
+            {t('sections.review.videoDesc')}
           </p>
         </motion.div>
 
@@ -56,7 +59,7 @@ function VideoTestimonios() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
             <div className="absolute left-6 top-6 rounded-full border border-white/20 bg-black/20 px-4 py-1 text-xs font-bold uppercase tracking-[0.25em] text-white/70 backdrop-blur-md">
-              Featured Story
+              {t('sections.review.featuredStory')}
             </div>
 
             <motion.div
@@ -75,24 +78,24 @@ function VideoTestimonios() {
             </motion.div>
 
             <div className="absolute bottom-8 left-8 right-8">
+              {/* AQUÍ ESTABA EL DETALLE: Aplicamos el t() al heroBadge */}
               <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#5af8fb]">
-                Mancora Kite Club
+                {t('sections.review.heroBadge')}
               </p>
 
               <h3 className="mt-3 max-w-2xl text-3xl font-black tracking-tight text-white sm:text-4xl">
-                Real progression. Real ocean. Real tribe.
+                {t('sections.review.videoTagline')}
               </h3>
             </div>
           </div>
 
           <div className="grid gap-6 p-7 sm:grid-cols-[1fr_auto] sm:items-center">
             <p className="text-sm leading-7 text-white/65">
-              Watch one full testimonial from a rider who experienced the coaching,
-              the wind conditions, and the community atmosphere in Máncora.
+              {t('sections.review.videoFooter')}
             </p>
 
             <span className="inline-flex rounded-full border border-white/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.25em] text-white/50">
-              Video testimonial
+              {t('sections.review.videoTestimonial')}
             </span>
           </div>
         </motion.article>

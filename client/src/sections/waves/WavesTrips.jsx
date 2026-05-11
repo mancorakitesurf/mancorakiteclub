@@ -1,6 +1,8 @@
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
+import { useI18n } from '../../app/providers/i18nContext'
 
 function TripCard({ trip }) {
+  const { t } = useI18n()
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/5 bg-surface-dark">
       {/* Image */}
@@ -22,7 +24,7 @@ function TripCard({ trip }) {
 
         {/* Includes */}
         <div className="mt-4">
-          <p className="mb-2 text-sm font-semibold text-white">Includes:</p>
+          <p className="mb-2 text-sm font-semibold text-white">{t('sections.waves.includes')}</p>
           <ul className="space-y-1">
             {trip.includes.map((item, i) => (
               <li key={i} className="flex items-start gap-2 text-sm text-gray-300">
@@ -56,7 +58,7 @@ function TripCard({ trip }) {
             rel="noopener noreferrer"
             className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-white px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-background-dark sm:w-auto"
           >
-            Book Now
+            {t('sections.waves.bookNow')}
           </a>
         </div>
       </div>

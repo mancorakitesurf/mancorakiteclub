@@ -1,53 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
+import { useI18n } from '../app/providers/i18nContext'
 
-const mockInstructors = [
-  {
-    id: 1,
-    name: 'Camila Torres',
-    specialty: 'Beginner SUP Coaching',
-    image:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80',
-    experience: '5 years of coaching experience',
-    level: 'Beginner to Intermediate',
-    description:
-      'Camila specializes in helping first-time riders build confidence, balance, and safety awareness from the very first session.',
-  },
-  {
-    id: 2,
-    name: 'Diego Ramirez',
-    specialty: 'Wave Riding Technique',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80',
-    experience: '8 years of wave coaching',
-    level: 'Intermediate to Advanced',
-    description:
-      'Diego focuses on wave reading, timing, board control, and progression for riders who want to improve their performance in real ocean conditions.',
-  },
-  {
-    id: 3,
-    name: 'Sofia Vega',
-    specialty: 'Private Progression Sessions',
-    image:
-      'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=800&q=80',
-    experience: '6 years of private instruction',
-    level: 'All levels',
-    description:
-      'Sofia creates personalized lesson plans based on each rider’s goals, pace, and confidence level.',
-  },
-  {
-    id: 4,
-    name: 'Mateo Cruz',
-    specialty: 'Advanced Balance and Touring',
-    image:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80',
-    experience: '7 years of advanced coaching',
-    level: 'Intermediate to Advanced',
-    description:
-      'Mateo helps riders refine balance, endurance, turning technique, and longer-distance touring skills.',
-  },
+const instructorKeys = [
+  { id: 1, name: 'Camila Torres', key: 'instructor1', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80' },
+  { id: 2, name: 'Diego Ramirez', key: 'instructor2', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80' },
+  { id: 3, name: 'Sofia Vega', key: 'instructor3', image: 'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=800&q=80' },
+  { id: 4, name: 'Mateo Cruz', key: 'instructor4', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80' },
 ]
 
-function InstructorCard({ instructor, isVisible, index, onClick }) {
+function InstructorCard({ instructor, isVisible, index, onClick, t }) {
   return (
     <button
       type="button"
@@ -74,17 +35,17 @@ function InstructorCard({ instructor, isVisible, index, onClick }) {
       </h3>
 
       <p className="mt-2 text-sm font-medium uppercase tracking-[0.18em] text-sky-600">
-        {instructor.specialty}
+        {t(`instructors.${instructor.key}.specialty`)}
       </p>
 
       <p className="mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-slate-400 transition group-hover:text-sky-600">
-        View Profile
+        {t('instructors.viewProfile')}
       </p>
     </button>
   )
 }
 
-function InstructorModal({ instructor, onClose }) {
+function InstructorModal({ instructor, onClose, t }) {
   if (!instructor) return null
 
   return (
@@ -108,13 +69,13 @@ function InstructorModal({ instructor, onClose }) {
 
           <div className="absolute bottom-6 left-6 right-6 text-white">
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-200">
-              Instructor Profile
+              {t('instructors.instructorProfile')}
             </p>
             <h3 className="mt-2 text-3xl font-bold">
               {instructor.name}
             </h3>
             <p className="mt-1 text-sm text-white/80">
-              {instructor.specialty}
+              {t(`instructors.${instructor.key}.specialty`)}
             </p>
           </div>
         </div>
@@ -123,25 +84,25 @@ function InstructorModal({ instructor, onClose }) {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="rounded-2xl bg-slate-50 p-4">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sky-600">
-                Experience
+                {t('instructors.experience')}
               </p>
               <p className="mt-2 text-sm font-medium text-slate-800">
-                {instructor.experience}
+                {t(`instructors.${instructor.key}.experience`)}
               </p>
             </div>
 
             <div className="rounded-2xl bg-slate-50 p-4">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-sky-600">
-                Level
+                {t('instructors.level')}
               </p>
               <p className="mt-2 text-sm font-medium text-slate-800">
-                {instructor.level}
+                {t(`instructors.${instructor.key}.level`)}
               </p>
             </div>
           </div>
 
           <p className="mt-6 text-sm leading-7 text-slate-600">
-            {instructor.description}
+            {t(`instructors.${instructor.key}.description`)}
           </p>
 
           <button
@@ -149,7 +110,7 @@ function InstructorModal({ instructor, onClose }) {
             onClick={onClose}
             className="mt-7 w-full rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-sky-700"
           >
-            Close Profile
+            {t('instructors.closeProfile')}
           </button>
         </div>
       </div>
@@ -158,6 +119,7 @@ function InstructorModal({ instructor, onClose }) {
 }
 
 function InstructorsSection() {
+  const { t } = useI18n()
   const sectionRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
   const [selectedInstructor, setSelectedInstructor] = useState(null)
@@ -194,27 +156,27 @@ function InstructorsSection() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <span className="inline-flex rounded-full bg-sky-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-700">
-              Meet the Team
+              {t('instructors.badge')}
             </span>
 
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Learn with experienced instructors
+              {t('instructors.title')}
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              Click any instructor to see basic information about their experience,
-              teaching style, and recommended level.
+              {t('instructors.description')}
             </p>
           </div>
 
           <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {mockInstructors.map((instructor, index) => (
+            {instructorKeys.map((instructor, index) => (
               <InstructorCard
                 key={instructor.id}
                 instructor={instructor}
                 isVisible={isVisible}
                 index={index}
                 onClick={setSelectedInstructor}
+                t={t}
               />
             ))}
           </div>
@@ -224,6 +186,7 @@ function InstructorsSection() {
       <InstructorModal
         instructor={selectedInstructor}
         onClose={() => setSelectedInstructor(null)}
+        t={t}
       />
     </>
   )

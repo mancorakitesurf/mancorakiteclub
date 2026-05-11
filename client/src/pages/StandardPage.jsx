@@ -4,8 +4,10 @@ import Container from '../components/ui/Container.jsx'
 function StandardPage({
   title,
   description,
-  canonicalPath,
-  hreflang,
+  titleKey,
+  descKey,
+  titleFallback,
+  descFallback,
   subtitle,
   cta,
   children,
@@ -15,10 +17,10 @@ function StandardPage({
   return (
     <>
       <SEO
-        title={title}
-        description={description}
-        canonicalPath={canonicalPath}
-        hreflang={hreflang}
+        titleKey={titleKey}
+        descKey={descKey}
+        titleFallback={titleFallback || title}
+        descFallback={descFallback || description}
       />
 
       <main className="bg-background-light text-slate-900 dark:bg-background-dark dark:text-white">

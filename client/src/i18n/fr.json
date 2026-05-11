@@ -10,6 +10,96 @@
     "reviews": "Avis",
     "bookNow": "Réserver maintenant"
   },
+  "blog7Plans": {
+    "hero": {
+      "badge": "Sept Façons de Naviguer au Pérou",
+      "title1": "7 Façons Différentes",
+      "title2": "De Découvrir",
+      "title3": "Le Vent du Pérou",
+      "subtitle": "Tous les riders ne suivent pas le même chemin. Choisissez le vôtre."
+    },
+    "intro": {
+      "preTitle": "7 Plans Différents pour un Voyage Kitesurf au Pérou",
+      "title": "Tous les voyages de vent ne doivent pas se ressembler.",
+      "highlight": "Choisissez votre rythme. Choisissez votre histoire.",
+      "paragraph1": "Le Pérou n'est pas une destination unique : c'est un littoral de possibilités. Des escapades de luxe en bord de mer au nord aux downwinds sauvages dans le désert, chaque étendue de vent raconte une histoire différente.",
+      "paragraph2": "Certains riders voyagent pour le confort. D'autres chassent les longues vagues gauches. Certains veulent de la culture entre les sessions. D'autres recherchent l'isolement, le silence et la pure performance.",
+      "paragraph3": "Ces sept plans ne sont pas des forfaits. Ce sont des expériences soigneusement conçues autour de la fiabilité du vent, de la qualité des vagues et du type de voyage que vous souhaitez vivre.",
+      "closingLine": "Il ne s'agit pas d'où vous allez. Il s'agit de comment vous naviguez."
+    },
+    "ui": {
+      "plan": "Plan",
+      "duration": "Durée",
+      "level": "Niveau",
+      "spots": "Spots",
+      "vibe": "Ambiance"
+    },
+    "cta": {
+      "badge": "Sept Façons. Une Côte.",
+      "title1": "Choisissez le vent",
+      "title2": "qui vous correspond",
+      "desc": "Ce ne sont pas des forfaits. Ce sont des voyages façonnés par les conditions, le rythme et l'intention.",
+      "btn": "Commencez Votre Voyage"
+    },
+    "plans": {
+      "A": {
+        "title": "La Route du Vent de Luxe au Nord",
+        "duration": "10–14 jours",
+        "level": "Tous niveaux",
+        "spots": "Máncora • Lobitos • Órganos",
+        "vibe": "Premium • Confort • Vent constant",
+        "description": "Conçu pour les riders qui veulent un vent parfait sans sacrifier le confort. Cet itinéraire allie séjours haut de gamme en bord de mer, vents thermiques constants et eaux chaudes du Pacifique. Les matins commencent avec des conditions glassy et les après-midis offrent des sessions puissantes. Idéal pour les couples, les nomades numériques ou les riders qui veulent la performance le jour et des cocktails au coucher du soleil."
+      },
+      "B": {
+        "title": "L'Expédition Classique du Chasseur de Vagues",
+        "duration": "12–16 jours",
+        "level": "Intermédiaire à Avancé",
+        "spots": "Lobitos • Pacasmayo • Chicama",
+        "vibe": "Performance • Vagues • Énergie pure",
+        "description": "Pour les riders qui chassent les longues vagues gauches et la navigation technique. C'est un itinéraire axé sur la performance, les prévisions de houle et les fenêtres de vent. Attendez-vous à des reef breaks, de longs downwinds et des sessions inoubliables. L'hébergement est fonctionnel, le mouvement est constant et chaque jour tourne autour des prévisions."
+      },
+      "C": {
+        "title": "L'Immersion Culturelle et Vent",
+        "duration": "14 jours",
+        "level": "Tous niveaux",
+        "spots": "Lima • Paracas • Côte Nord",
+        "vibe": "Équilibré • Culturel • Pittoresque",
+        "description": "Le vent rencontre le patrimoine. Ce plan mélange des sessions de kitesurf de classe mondiale avec la profondeur culturelle du Pérou. Naviguez à Paracas, explorez la Lima coloniale, goûtez la cuisine du nord et connectez-vous avec les communautés de surf locales. Parfait pour les voyageurs qui veulent plus que du vent : ils veulent un sens derrière le voyage."
+      },
+      "D": {
+        "title": "Le Circuit du Rider Économique",
+        "duration": "9–12 jours",
+        "level": "Débutant à Intermédiaire",
+        "spots": "Máncora • Vichayito • Paracas",
+        "vibe": "Social • Flexible • Accessible",
+        "description": "Maximum de sessions avec des dépenses optimisées. Des séjours partagés, un transport flexible et la fiabilité du vent sont l'objectif ici. Idéal pour les jeunes voyageurs ou les riders en solo qui veulent l'énergie de la communauté, des sessions de progression et des couchers de soleil inoubliables sans étirer le budget."
+      },
+      "E": {
+        "title": "L'Évasion Vent Lointain",
+        "duration": "10–15 jours",
+        "level": "Avancé",
+        "spots": "Cabo Blanco • Désert • Points Cachés",
+        "vibe": "Minimaliste • Sauvage • Intact",
+        "description": "Pas de foule. Pas d'horaires. Juste du vent et une côte à l'état brut. Ce plan est pour les riders expérimentés à l'aise dans les terrains éloignés. Attendez-vous à de longues plages vides, des paysages désertiques dramatiques et des sessions complètement privées. La logistique est plus légère, mais la récompense est la liberté pure."
+      },
+      "F": {
+        "title": "L'Odyssée du Downwinder",
+        "duration": "7–10 jours",
+        "level": "Intermédiaire+",
+        "spots": "Étendue de la Côte Nord",
+        "vibe": "Aventure • Distance • Fluidité",
+        "description": "Conçu autour du mouvement. Ce plan relie plusieurs points côtiers grâce à des downwinds organisés qui peuvent s'étendre sur des kilomètres. Des véhicules d'assistance, des transferts de matériel et des fenêtres de vent stratégiques créent un voyage fluide de plusieurs jours. Chaque coucher de soleil marque une nouvelle côte conquise."
+      },
+      "G": {
+        "title": "La Tournée Performance Élite",
+        "duration": "Sur mesure (Niveau Pro)",
+        "level": "Avancé / Compétitif",
+        "spots": "Les meilleurs spots selon les prévisions",
+        "vibe": "Haute performance • Basé sur les prévisions • Exclusif",
+        "description": "Conçu pour les athlètes sérieux et les créateurs de contenu. Ce plan suit les meilleures prévisions à travers le Pérou en temps réel. Un routage flexible, des options de coaching, des tournages par drone et des analyses de performance peuvent être intégrés. Chaque jour est optimisé selon les conditions. Ce ne sont pas des vacances, c'est une mission."
+      }
+    }
+  },
   "hero": {
     "title": "Máncora Kite Club",
     "subtitle": "Apprenez à voler au club avec des instructeurs professionnels",
@@ -20,6 +110,182 @@
     "english": "English",
     "spanish": "Español",
     "french": "Français"
+  },
+  "classesPage": {
+    "hero": {
+      "title": "KITESURF ET WINGFOIL AU CLUB",
+      "subtitle": "Sessions privées et en petits groupes sans hébergement."
+    },
+    "intro": {
+      "title": "Apprenez le Kitesurf au Club",
+      "text": "La première fois que quelqu'un a été vu en train de pratiquer le wingfoil, c'était en 2019, lorsque Robby Naish est apparu à Hawaï sur une planche avec un foil et manipulant une aile. Ces images ont suscité tellement d'émotion qu'en quelques mois, nous avons commencé à voir des vidéos et des photos sur tous les réseaux sociaux de différents types d'ailes et de personnes pratiquant cet étrange sport. Eh bien, il n'a pas fallu longtemps pour voir l'essor de ce sport et apercevoir d'innombrables voiles sur toutes les plages et les lacs. Sans aucun doute un sport qui fera de nombreux adeptes.",
+      "hoverAlt": "Action de cours de kitesurf"
+    },
+    "pricing": {
+      "intro": {
+        "title": "Classe d'Introduction",
+        "duration": "1 jour | 2 heures/jour",
+        "price": "$120 / personne",
+        "features": [
+          "Idéal pour une première expérience",
+          "Instruction personnalisée",
+          "Tout l'équipement premium inclus",
+          "Assistance par talkie-walkie"
+        ]
+      },
+      "fundamental": {
+        "title": "Classe Fondamentale",
+        "duration": "3 jours | 2 heures/jour",
+        "price": "$350 / personne",
+        "features": [
+          "Conçu par des instructeurs experts",
+          "Progression personnalisée",
+          "Équipement premium inclus",
+          "Photo professionnelle pendant le cours"
+        ]
+      },
+      "advance": {
+        "title": "Classe Avancée",
+        "duration": "3 jours | 3 heures/jour",
+        "price": "$500 / personne",
+        "features": [
+          "Axé sur la technique avancée",
+          "Plus de temps de pratique",
+          "Enregistrement et analyse vidéo",
+          "Prises de vue par drone en option"
+        ]
+      },
+      "master": {
+        "title": "Masterclass Complète",
+        "duration": "5 jours | Horaire flexible",
+        "price": "$600 / personne",
+        "features": [
+          "Programme complet",
+          "Analyse détaillée de la technique",
+          "Suivi des performances",
+          "Session d'évaluation finale"
+        ]
+      }
+    },
+    "wingfoilPricing": {
+      "intro": {
+        "title": "Cours d'Introduction",
+        "duration": "1 jour | 2 heures/jour",
+        "price": "$120 / personne",
+        "features": [
+          "Découvrez les bases du Wingfoil",
+          "Théorie + exercices d'équilibre à terre",
+          "Session dans l'eau pour les manœuvres de base",
+          "Équipement complet fourni",
+          "Expérience personnalisée"
+        ]
+      },
+      "fundamental": {
+        "title": "Classe Fondamentale",
+        "duration": "3 jours | 2 heures/jour",
+        "price": "$350 / personne",
+        "features": [
+          "Bases solides et techniques de sécurité",
+          "Exercices de maîtrise de l'aile",
+          "Entraînement à l'équilibre sur foil",
+          "Manœuvres spécifiques sur l'eau",
+          "Équipement complet fourni"
+        ]
+      },
+      "advanced": {
+        "title": "Cours Avancé",
+        "duration": "3 jours | 3 heures/jour",
+        "price": "$500 / personne",
+        "features": [
+          "Perfectionnement des manœuvres avancées",
+          "Sessions techniques + théoriques",
+          "Contrôle dans des conditions variées",
+          "Analyse vidéo en option",
+          "Équipement premium"
+        ]
+      },
+      "master": {
+        "title": "Masterclass Complète",
+        "duration": "5 jours | Horaire flexible",
+        "price": "$600 / personne",
+        "features": [
+          "Des fondamentaux au niveau avancé",
+          "Coaching technique approfondi",
+          "Exercices avancés de Wingfoil",
+          "Sessions d'analyse vidéo",
+          "Certificat de réussite"
+        ]
+      }
+    },
+    "benefits": {
+      "item1": "Qualité Garantie – Instructeurs certifiés avec une grande expérience.",
+      "item2": "Équipement d'Avant-garde – Dernières technologies en ailes et planches.",
+      "item3": "Sécurité Prioritaire – Petits groupes et soutien constant.",
+      "item4": "Souvenirs Inoubliables – Matériel visuel professionnel.",
+      "item5": "Flexibilité Totale – Programmes adaptés à vos besoins."
+    },
+    "equipment": {
+      "kitesurfTitle": "Équipement de Kitesurf",
+      "wingfoilTitle": "Équipement de Wingfoil",
+      "kite": {
+        "kites": {
+          "title": "Ailes de Dernière Génération",
+          "description": "Modèles récents vérifiés quotidiennement pour assurer votre sécurité et des performances maximales.",
+          "label": "Aile",
+          "subtitle": "Différentes tailles (5m - 14m)"
+        },
+        "boards": {
+          "title": "Planches TwinTip Premium",
+          "description": "Planches haute performance conçues pour le freeride et le freestyle avancé.",
+          "label": "Planches TwinTip",
+          "subtitle": "Pour le freeride et le freestyle"
+        },
+        "bars": {
+          "title": "Barres et Systèmes de Contrôle",
+          "description": "Systèmes de contrôle avec lignes résistantes et systèmes de sécurité à largage rapide certifiés.",
+          "label": "Barre et Systèmes de Contrôle",
+          "subtitle": "Systèmes de sécurité modernes"
+        },
+        "safety": {
+          "title": "Harnais et Équipement de Sécurité",
+          "description": "Confort et protection essentiels avec des harnais ergonomiques, des gilets d'impact et des casques réglables.",
+          "label": "Harnais et Équipement de Sécurité",
+          "subtitle": "Gilets d'impact et casques"
+        }
+      },
+      "wing": {
+        "wings": {
+          "title": "Ailes Légères et Puissantes",
+          "description": "Équipement conçu pour tirer parti des vents légers et forts...",
+          "label": "Aile",
+          "subtitle": "Duotone Units et Slicks"
+        },
+        "boards": {
+          "title": "Planches de Foil Spécialisées",
+          "description": "Planches stables et légères avec des volumes idéaux pour débutants et experts...",
+          "label": "Planches de Foil Spécialisées",
+          "subtitle": "Volumes de 80L à 120L"
+        },
+        "foils": {
+          "title": "Hydrofoils en Carbone",
+          "description": "Mâts et ailes en carbone haut module pour une glisse fluide et une vitesse maximale.",
+          "label": "Hydrofoils en Carbone",
+          "subtitle": "Mâts et ailes en carbone"
+        },
+        "pump": {
+          "title": "Kit de Gonflage et d'Entretien",
+          "description": "Tout ce dont vous avez besoin pour préparer votre équipement : pompes haute pression et kits de réparation.",
+          "label": "Pompe et Accessoires",
+          "subtitle": "Gonflage rapide et réparation"
+        },
+        "leash": {
+          "title": "Leash de Sécurité Certifié",
+          "description": "Gardez votre équipement connecté à vous à tout moment.",
+          "label": "Leash de Sécurité",
+          "subtitle": "Leash en spirale pour poignet et taille"
+        }
+      }
+    }
   },
   "footer": {
     "tagline": "École de Kitesurf à Máncora, Pérou",
@@ -32,7 +298,15 @@
     "bookNow": "Réserver maintenant",
     "contactUs": "Nous contacter",
     "loading": "Chargement...",
-    "error": "Quelque chose s'est mal passé"
+    "error": "Quelque chose s'est mal passé",
+    "backToHome": "Retour à l'accueil",
+    "exploreTrips": "Explorer les voyages",
+    "backToBlog": "Retour au blog",
+    "goHome": "Aller à l'accueil",
+    "buildYourTrip": "Construisez votre voyage",
+    "bookOnWhatsApp": "Réserver sur WhatsApp",
+    "viewDetails": "Voir les détails",
+    "contactViaWhatsApp": "Contacter via WhatsApp"
   },
   "trips": {
     "title": "Voyages de Kitesurf",
@@ -48,6 +322,19 @@
     "threeDaysDesc": "Idéal pour ceux qui souhaitent progresser rapidement et découvrir de nouvelles plages",
     "sevenDays": "Expérience de Kitesurf 7 Jours",
     "sevenDaysDesc": "Le forfait complet pour vivre une semaine épique de kitesurf, améliorer votre niveau et ramener des souvenirs uniques."
+  },
+  "tripsPage": {
+    "heroLabel": "Mancora Kite Club",
+    "heroTitle1": "Nos",
+    "heroTitle2": "Voyages",
+    "heroSubtitle": "Choisissez votre route entre vent, vagues, coaching, surf et la côte nord du Pérou.",
+    "exploreTrips": "Explorer les voyages",
+    "tripExperience": "Expérience de voyage",
+    "viewDetails": "Voir les détails",
+    "ctaLabel": "Constructeur de voyages",
+    "ctaTitle": "Créez le voyage qui correspond à votre vent, niveau et temps.",
+    "ctaDesc": "Créez votre propre itinéraire à Máncora avec coaching, hébergement, activités supplémentaires et le meilleur rythme pour votre séjour.",
+    "ctaBtnText": "Construisez votre voyage"
   },
   "classes": {
     "title": "Vos Cours Idéaux",
@@ -71,13 +358,1319 @@
     "whatsapp": "Contactez-nous sur WhatsApp",
     "phone": "+51 996 557 689"
   },
-   "seo": {
+  "contactPage": {
+    "title": "Contact | Mancora Kite Club",
+    "subtitle": "Contactez-nous pour la disponibilité, les tarifs et les conseils de voyage.",
+    "ctaLabel": "Contacter via WhatsApp"
+  },
+  "seo": {
     "homeTitle": "Mancora Kite Club",
     "homeDesc": "Apprenez le kitesurf et le wingfoil à Máncora, Pérou. Coaching professionnel, location d'équipement et forfaits d'hébergement.",
     "tripsTitle": "Voyages de Kitesurf au Pérou | Máncora Kite Club",
     "tripsDesc": "Découvrez les voyages de kitesurf dans les meilleurs spots du nord du Pérou. Forfaits journée complète, 3 jours et 7 jours.",
     "classesTitle": "Cours de Kitesurf & Wingfoil à Máncora | Máncora Kite Club",
-    "classesDesc": "Cours professionnels de kitesurf et de wingfoil pour tous les niveaux à Máncora, Pérou."
+    "classesDesc": "Cours professionnels de kitesurf et de wingfoil pour tous les niveaux à Máncora, Pérou.",
+    "stayTitle": "Hébergement à Máncora | Máncora Kite Club",
+    "stayDesc": "Hébergement premium à Máncora pour kitesurfeurs et riders. Chambres propres avec A/C, WiFi, eau chaude, petit-déjeuner. Base calme près des meilleurs spots.",
+    "buildTitle": "Construisez votre voyage | Máncora Kite Club",
+    "buildDesc": "Personnalisez votre voyage avec des cours, un hébergement et des extras.",
+    "blogTitle": "Blog | Mancora Kite Club",
+    "blogDesc": "Blog de kitesurf, wingfoil et surf depuis Máncora, Pérou. Lisez des guides, analyses de spots, rapports de voyages et coaching.",
+    "faqTitle": "FAQ | Mancora Kite Club",
+    "faqDesc": "FAQ sur le kitesurf, wingfoil, cours de surf, location d'équipement, hébergement et voyages à Máncora, Pérou.",
+    "contactTitle": "Contact | Mancora Kite Club",
+    "contactDesc": "Contactez Máncora Kite Club pour des voyages de kitesurf, wingfoil et surf, cours, hébergement et location. Réponses rapides via WhatsApp.",
+    "reviewsTitle": "Avis | Máncora Kite Club",
+    "reviewsDesc": "Lisez les avis de riders qui ont appris le kitesurf et le wingfoil à Máncora. Témoignages réels de nos clients.",
+    "wavesTitle": "Voyages Vagues & Vent | Mancora Kite Club",
+    "wavesDesc": "Voyages de kitesurf, wingfoil et surf dans le nord du Pérou. Explorez Máncora, Negritos, Los Órganos, Cabo Blanco et Lobitos avec coaching professionnel.",
+    "notFoundTitle": "404 | Máncora Kite Club",
+    "notFoundDesc": "Page non trouvée. Le spot, voyage ou page que vous cherchez n'existe pas. Retournez à l'accueil et continuez à rider avec Máncora Kite Club.",
+    "kitesurfingTitle": "Kitesurf à Máncora | Máncora Kite Club",
+    "kitesurfingDesc": "Découvrez le kitesurf à Máncora, Pérou : meilleurs spots, conditions de vent d'avril à novembre, lagons et vagues. Parfait pour tous les niveaux.",
+    "wingfoilTitle": "Wingfoil à Máncora | Máncora Kite Club",
+    "wingfoilDesc": "Wingfoil à Máncora, Pérou : apprenez avec des instructeurs certifiés. Eau plate, équipement inclus. Cours pour débutants à avancés.",
+    "supTitle": "SUP à Máncora | Máncora Kite Club",
+    "supDesc": "Stand up paddle à Máncora, Pérou. Louez des planches de SUP, prenez des cours sur eau plate ou petites vagues. Activité familiale. Réservez en ligne.",
+    "soloSurfTitle": "Solo Surf | Máncora Kite Club",
+    "soloSurfDesc": "Voyage de surf avec coaching à Máncora, Pérou. 3 ou 7 nuits avec cours, excursions, analyse vidéo, yoga et hébergement.",
+    "learnKitesurfTitle": "Apprendre le Kitesurf | Máncora Kite Club",
+    "learnKitesurfDesc": "Apprenez le kitesurf à Máncora avec des instructeurs certifiés IKO. Cours sûrs et progressifs. Tout l'équipement inclus. Commencez aujourd'hui !",
+    "learnWingfoilTitle": "Apprendre le Wingfoil | Máncora Kite Club",
+    "learnWingfoilDesc": "Cours de wingfoil à Máncora, Pérou. Pour débutants, équipement inclus. Apprenez avec des instructeurs certifiés sur eau plate.",
+    "equipmentRentalTitle": "Location d'Équipement | Máncora Kite Club",
+    "equipmentRentalDesc": "Louez du matériel de kitesurf, wingfoil et surf de qualité supérieure à Máncora, Pérou. Ailes, planches, harnais, combinaisons. Location journalière et hebdomadaire.",
+    "fourStarsHotelTitle": "Hôtel 4 Étoiles | Máncora Kite Club",
+    "fourStarsHotelDesc": "Profitez d'un hôtel 4 étoiles en bord de mer à Máncora, Pérou. Piscine, restaurant, rangement de kite. Idéal pour les kitesurfeurs.",
+    "kiteClubHotelTitle": "Hôtel Kite Club | Máncora Kite Club",
+    "kiteClubHotelDesc": "Séjournez à l'hôtel officiel du Kite Club à Máncora. Chambres en bord de mer, piscine, école de kite, location d'équipement et restaurant.",
+    "hostelTitle": "Auberge | Máncora Kite Club",
+    "hostelDesc": "Auberge économique pour kitesurfeurs à Máncora, Pérou. Dortoirs et chambres privées, rangement de kite, espace social, accès direct à la plage.",
+    "blogChicamaTitle": "Chicama, Pérou : La vague la plus longue du monde + Comment construire le voyage de surf ultime",
+    "blogChicamaDesc": "Découvrez quand surfer Chicama, la vague la plus longue, comment construire l'itinéraire, et pourquoi la meilleure destination finale est Máncora pour le kitesurf.",
+    "blogMancoraVsLobitosTitle": "Máncora vs Lobitos vs Cabo Blanco : Meilleur spot de kitesurf de vagues au Pérou",
+    "blogMancoraVsLobitosDesc": "Comparez Máncora, Lobitos et Cabo Blanco pour le kitesurf de vagues au Pérou. Analyse détaillée du confort, de la progression et pourquoi Máncora est la meilleure base.",
+    "blogPeruKitesurfTitle": "Kitesurf au Pérou : Nord vs Sud — Guide des spots, saisons et vent",
+    "blogPeruKitesurfDesc": "Guide de kitesurf du nord et sud du Pérou : saisons, style de voyage, progression et pourquoi Máncora reste la meilleure base.",
+    "blogPacasmayoTitle": "Pacasmayo, Pérou : Le guide ultime du point break de surf",
+    "blogPacasmayoDesc": "Guide premium de surf à Pacasmayo : timing de saison, attentes de vagues, rythme de voyage et pourquoi de nombreux surfeurs terminent leur voyage à Máncora.",
+    "blogTop20Title": "Blog | Les 20 meilleures destinations au monde...",
+    "blogTop20Desc": "Découvrez les 20 meilleures destinations de kitesurf au monde. De Máncora au Brésil, trouvez les meilleurs spots pour le vent, les vagues et l'aventure.",
+    "blog7PlansTitle": "Blog | 7 Plans différents d'un voyage de kitesurf au Pérou",
+    "blog7PlansDesc": "Sept façons uniques de vivre le vent, les vagues et la culture du Pérou. Des aventures solo aux voyages en groupe.",
+    "blogWaveProgressionTitle": "Pourquoi Máncora est différent : Le guide ultime de progression en vagues de kitesurf",
+    "blogWaveProgressionDesc": "Pourquoi Máncora est l'un des meilleurs endroits pour progresser en kitesurf de vagues. Apprenez sur le vent, les vagues, le coaching et le style de vie.",
+    "blogTechniquesTitle": "Blog | Techniques de kitesurf dans les vagues : lecture du swell, timing et contrôle (niveau intermédiaire)",
+    "blogTechniquesDesc": "Techniques intermédiaires de kitesurf : lecture des vagues, timing et contrôle de l'aile. Améliorez votre technique dans les vagues de Máncora, Pérou.",
+    "blogMistakesTitle": "Blog | Erreurs typiques du rider intermédiaire dans les vagues et comment les corriger (coaching réel)",
+    "blogMistakesDesc": "Coaching réel pour kitesurfeurs intermédiaires : évitez les erreurs courantes dans les vagues, maîtrisez le timing et le contrôle de l'aile.",
+    "blogKiteSafariTitle": "Blog | Kite Safari Nord du Pérou - Série Expédition",
+    "blogKiteSafariDesc": "Vivez le kite safari ultime dans le nord du Pérou. Découvrez les spots les plus ventés et les vagues les plus longues. Voyages guidés à Máncora, Lobitos et Cabo Blanco.",
+    "blogWhaleSeasonPremiumTitle": "Blog | Saison des baleines dans le nord du Pérou - THE KINETIC TIDE",
+    "blogWhaleSeasonPremiumDesc": "Saison des baleines dans le nord du Pérou : voyage technique et spirituel à travers la migration des baleines à bosse. Kitesurf aux côtés des baleines à Máncora.",
+    "blogWhaleSeasonTitle": "Blog | Saison des baleines à Máncora - The Kinetic Tide",
+    "blogWhaleSeasonDesc": "La migration annuelle amène les baleines à bosse dans les vagues du nord. Une rare convergence de vie marine et de vents thermiques parfaits.",
+    "blog7NightsTitle": "7 Nuits à Máncora : Plan de Progression | The Kinetic Tide",
+    "blog7NightsDesc": "Un itinéraire intensif de 7 jours pour riders intermédiaires à Máncora. Brisez les plateaux et maîtrisez les vagues du nord du Pérou avec coaching quotidien.",
+    "blogWingfoilVsKitesurfTitle": "Blog | Wingfoil vs Kitesurf au Pérou : Choisissez votre arme",
+    "blogWingfoilVsKitesurfDesc": "Wingfoil vs kitesurf au Pérou : analyse technique de l'intensité du vent, dynamique des vagues et progression du rider sous le courant de Humboldt.",
+    "blogDataStripSafetyTitle": "Blog | Sécurité & Progression : L'avantage technique | KINETIC TIDE",
+    "blogDataStripSafetyDesc": "Progression rapide dans le surf de vagues par précision mathématique, mécanique de barre et analyse vidéo. Améliorez votre technique avec le coaching à Máncora.",
+    "blogPostNotFoundTitle": "Article non trouvé | Blog Kite",
+    "blogPostNotFoundDesc": "L'article que vous cherchez n'existe pas ou a peut-être été déplacé. Consultez nos derniers articles."
+  },
+  "stay": {
+    "heroLabel": "Hébergement à Máncora",
+    "heroTitle": "Une base calme\npour le vent, les vagues\net le repos.",
+    "heroDesc": "Hébergement premium pour riders et voyageurs qui recherchent des espaces propres, une planification facile et une ambiance détendue près de l'océan.",
+    "introLabel": "Ce que c'est",
+    "introTitle": "Confort sans complication.",
+    "introP1": "Un hébergement ciblé pour les riders qui veulent confort, simplicité et planification facile pendant leur séjour à Máncora.",
+    "introP2": "Des espaces propres, une structure flexible et une ambiance premium comme base idéale avant et après vos sessions de kite, surf ou wingfoil.",
+    "amenitiesLabel": "Équipements",
+    "amenitiesTitle": "Tout ce dont vous avez besoin pour vous ressourcer.",
+    "yoga": "Yoga",
+    "yogaDesc": "Commencez votre matinée avec des sessions de yoga au bord de la mer.",
+    "whaleWatching": "Observation des baleines",
+    "whaleWatchingDesc": "Observez les baleines à bosse dans les eaux chaudes du Pacifique de Máncora.",
+    "scubaDiving": "Plongée sous-marine",
+    "scubaDivingDesc": "Explorez des récifs vibrants et la vie sous-marine le long de la côte.",
+    "swimTurtles": "Nager avec les tortues",
+    "swimTurtlesDesc": "Faites du snorkel aux côtés des tortues marines dans leur habitat naturel.",
+    "gym": "Salle de sport",
+    "gymDesc": "Continuez votre entraînement dans notre espace fitness.",
+    "beachfrontBungalows": "Bungalows en bord de mer",
+    "beachfrontBungalowsDesc": "Endormez-vous au son des vagues dans des bungalows face à l'océan.",
+    "ratesLabel": "Tarifs",
+    "ratesTitle": "Hébergement Bali Lodge",
+    "ratesSubtitle": "Prix de base par nuit — petit-déjeuner inclus avec chaque séjour.",
+    "onePerson": "1 Personne",
+    "privateRoom": "Chambre privée",
+    "twoPersons": "2 Personnes",
+    "sameRoom": "Même chambre",
+    "perNight": "/ nuit",
+    "breakfastIncluded": "Petit-déjeuner inclus",
+    "galleryLabel": "Galerie visuelle",
+    "galleryTitle": "Espaces réels, séjour réel.",
+    "galleryDesc": "Un aperçu visuel de la chambre, des détails, de la piscine et de l'atmosphère du lodge conçue pour un séjour calme et confortable à Máncora.",
+    "galleryPrivateRoom": "Chambre privée",
+    "galleryComfort": "Confort",
+    "galleryBedroom": "Chambre",
+    "galleryRest": "Repos",
+    "galleryNightView": "Vue nocturne",
+    "galleryAtmosphere": "Atmosphère",
+    "galleryPool": "Piscine",
+    "galleryLifestyle": "Style de vie",
+    "galleryLodge": "Le Lodge",
+    "galleryExperience": "Expérience",
+    "locationLabel": "Emplacement",
+    "locationTitle": "Máncora, Pérou",
+    "locationAddress": "Panamericana Norte, Av. Piura s/n — Hotel Samana Chakra, Máncora, Pérou",
+    "locationDesc": "Situé sur la Panamericana Norte, à quelques minutes de la plage et du spot de kite. Accès facile depuis les aéroports de Piura ou Tumbes.",
+    "ctaTitle": "Planifiez votre séjour.",
+    "ctaDesc": "Construisez votre forfait ou contactez-nous directement sur WhatsApp avec vos dates, nombre de personnes et style de séjour préféré.",
+    "whatsappMessage": "Bonjour ! Je suis intéressé par un séjour chez vous. Mon nom est ... Dates : ... Nombre de personnes : ..."
+  },
+  "notFound": {
+    "label": "Perdu dans le vent",
+    "title": "404 — Vous avez quitté la route",
+    "subtitle": "Cette page n'existe pas ou le vent vous a emmené ailleurs.",
+    "desc": "Ramenons-vous là où commence la vraie aventure.",
+    "simpleTitle": "Page non trouvée",
+    "simpleDesc": "La page que vous cherchez n'existe pas ou a été déplacée.",
+    "goHome": "Aller à l'accueil"
+  },
+  "blogPost": {
+    "notFoundLabel": "Article non trouvé",
+    "notFoundTitle": "Cet article n'est pas disponible.",
+    "notFoundDesc": "L'article a peut-être été déplacé ou le slug n'est plus actif.",
+    "backToBlog": "Retour au blog",
+    "goHome": "Aller à l'accueil"
+  },
+  "blog": {
+    "wingfoilVsKitesurf": {
+      "sectionTitle": "La dualité cinétique du courant de Humboldt",
+      "p1": "Le littoral péruvien offre une perfection mécanique rarement vue ailleurs. Poussé par la poussée froide et implacable du courant de Humboldt, les vents thermiques et les pointbreaks interminables présentent un laboratoire unique pour les sports nautiques propulsés par le vent.",
+      "p2": "Nous analysons la 'dualité cinétique' de ces disciplines. Alors que le kitesurf exploite la puissance verticale, le wingfoil exploite l'énergie de surface pour surfer les houles roulantes avec un minimum de résistance."
+    }
+  },
+  "tripDetail": {
+    "forYouIfTitle": "Ce voyage est pour vous si...",
+    "whatsIncluded": "Ce qui est inclus",
+    "pricing": "Tarifs",
+    "durationHeader": "Durée",
+    "onePersonHeader": "1 personne",
+    "twoPeopleHeader": "2 personnes",
+    "threeNights": "3 nuits",
+    "sevenNights": "7 nuits",
+    "addOns": "Suppléments",
+    "faq": "FAQ",
+    "readyToBook": "Prêt à réserver ?",
+    "tripNotFound": "Voyage non trouvé"
+  },
+  "build": {
+    "heroLabel": "Mancora Kite Club",
+    "heroTitle1": "Construisez votre",
+    "heroTitle2": "Voyage",
+    "heroSubtitle": "Personnalisez chaque détail · Obtenez votre devis instantané",
+    "startBuilding": "Commencer à construire",
+    "tripBuilder": "Constructeur de voyages",
+    "steps": "5 étapes",
+    "stepActivity": "Activité",
+    "stepNights": "Nuits",
+    "stepClasses": "Cours",
+    "stepExtras": "Extras",
+    "stepSummary": "Résumé",
+    "chooseActivity": "Choisissez votre activité",
+    "chooseActivitySub": "Que voulez-vous faire à Máncora ?",
+    "howManyNights": "Combien de nuits ?",
+    "howManyNightsSub": "Sélectionnez la durée de votre séjour.",
+    "classHours": "Heures de cours",
+    "noClassesOnly": "Pas de cours — hébergement uniquement",
+    "addExtras": "Ajouter des extras",
+    "addExtrasSub": "Compléments optionnels pour compléter votre voyage.",
+    "tripSummary": "Résumé du voyage",
+    "tripSummarySub": "Vérifiez et envoyez votre demande.",
+    "estimated": "Estimé",
+    "estimatedTotal": "Total estimé",
+    "buildEstimate": "Construisez votre devis",
+    "accommodation": "hébergement",
+    "classes": "cours",
+    "nights": "nuits",
+    "hours": "heures",
+    "hrs": "hrs",
+    "fastEscape": "Escapade rapide",
+    "balancedTrip": "Voyage équilibré",
+    "fullWeek": "Semaine complète",
+    "deeperStay": "Séjour prolongé",
+    "riderReset": "Reset du rider",
+    "accomOnly": "Hébergement uniquement",
+    "introSession": "Session d'introduction",
+    "progressionBlock": "Bloc de progression",
+    "strongUpgrade": "Amélioration forte",
+    "fullCoaching": "Coaching complet",
+    "selected": "Sélectionné ↗",
+    "gearEquipment": "Matériel & Équipement",
+    "experiences": "Expériences",
+    "wellness": "Bien-être",
+    "logistics": "Logistique",
+    "extrasSelected": "extras sélectionnés",
+    "yourTrip": "Votre voyage",
+    "breakdown": "Détails",
+    "activity": "Activité",
+    "extrasLabel": "Extras",
+    "noneSelected": "Aucun sélectionné",
+    "totalEstimated": "Total estimé",
+    "finalPriceNote": "Prix final confirmé à la réservation",
+    "yourDetails": "Vos coordonnées",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom complet",
+    "email": "E-mail",
+    "enterDetails": "Entrez votre nom et e-mail pour continuer.",
+    "sendViaWhatsApp": "Envoyer via WhatsApp",
+    "back": "← Retour",
+    "next": "Suivant",
+    "reset": "Réinitialiser",
+    "kitesurfTagline": "Maîtrisez le vent, dominez l'eau",
+    "wingfoilTagline": "Volez au-dessus de la surface",
+    "surfTagline": "Lisez la vague, surfez-la proprement",
+    "supTagline": "Eau calme, pagaie forte",
+    "kitesurfGearRental": "Location complète d'équipement de kitesurf",
+    "wingfoilRental": "Location de wingfoil",
+    "surfboardRental": "Location de planche de surf",
+    "supPaddleRental": "Location de SUP / Paddle",
+    "dayTrip": "Excursion vers d'autres spots",
+    "waterSupervision": "Supervision aquatique (riders indépendants)",
+    "massage": "Massage",
+    "airportTransfer": "Transfert aéroport (paiement direct au chauffeur)",
+    "photoVideoPack": "Pack photo & vidéo",
+    "days": "Jours",
+    "hoursLabel": "Heures"
+  },
+  "blogTop20": {
+    "hero": {
+      "badge": "Édition Wave Riding",
+      "title1": "Les 20 Meilleures",
+      "title2": "Destinations au Monde",
+      "title3": "Pour le Kitesurf",
+      "subtitle": "Classés par qualité de vague, constance du vent et expérience globale."
+    },
+    "intro": {
+      "gazette": "La Gazette de Wave Riding de Wild Kite Peru présente :",
+      "title1": "LA LISTE DÉFINITIVE",
+      "title2": "DES SPOTS DE KITESURF",
+      "title3": "EN VAGUES",
+      "note1Title": "Note 1",
+      "note1Desc": "Ceci est une liste faite par des kitesurfeurs moyens pour des kitesurfeurs moyens. Les détails sont des recommandations ou des guides d'amis. Par conséquent, certaines informations peuvent être un peu inexactes.",
+      "note2Title": "Note 2",
+      "note2Desc": "Veuillez considérer qu'il ne s'agit pas d'un classement de chaque point break. Chaque lieu peut être un point, une zone, une île ou même un pays. Comme il s'agit d'un résumé général, il est impossible de donner une vue complète de chaque destination."
+    },
+    "closing": {
+      "line1": "Un jour parfait existe, mais aucune destination n'est parfaite.",
+      "line2": "Ce qui rend beau la navigation sur vagues, c'est la recherche.",
+      "line3": "Il n'y a pas d'ordre de classement ici.",
+      "collab": "Contribuez : Veuillez envoyer de nouveaux commentaires pour mettre à jour la liste et l'améliorer."
+    },
+    "sectionTitle": "Les 20 Meilleures Destinations Mondiales pour le Kitesurf en Vagues",
+    "sectionDesc": "Une sélection organisée de spots de vagues de classe mondiale classés par fiabilité du vent, qualité de la vague et expérience générale.",
+    "ui": {
+      "waveQuality": "Qualité de la vague",
+      "wind": "Vent",
+      "hazards": "Dangers",
+      "level": "Niveau",
+      "season": "Saison",
+      "crowds": "Foules",
+      "levels": {
+        "Low": "Faible",
+        "Moderate": "Modéré",
+        "High": "Élevé",
+        "Very High": "Très élevé",
+        "Extreme": "Extrême"
+      }
+    },
+    "destinations": {
+      "mancora": {
+        "name": "Mancora Kite Club – Pérou",
+        "short": "Vents constants, eaux chaudes et coaching premium au nord du Pérou.",
+        "desc": "Situé au nord du Pérou, le Mancora Kite Club offre l'un des systèmes de vent les plus constants d'Amérique du Sud. Une eau chaude toute l'année, de puissantes vagues gauches et un coaching professionnel en font la destination ultime.",
+        "level": "Pour tous niveaux",
+        "season": "Mai – Novembre"
+      },
+      "waikiki": {
+        "name": "Waikiki Shoreline - Hawaï",
+        "short": "Zones de baignade bondées, fenêtres de vent faibles et shorebreak désordonné.",
+        "desc": "Waikiki fonctionne pour le tourisme balnéaire, pas pour le kitesurf sérieux. Le vent est inconstant, le lineup est rempli de nageurs, et la zone de lancement ne laisse presque aucune place pour une préparation ou une récupération sécurisée.",
+        "level": "Avancés uniquement",
+        "season": "Peu fiable toute l'année"
+      },
+      "southBeach": {
+        "name": "South Beach - Miami",
+        "short": "Vagues douces, faible consistance et fort trafic sur la plage.",
+        "desc": "South Beach est emblématique pour la vie nocturne et le tourisme, mais c'est une mauvaise base de kitesurf. La qualité du vent est inégale, les vagues sont faibles la plupart du temps, et la plage est suffisamment bondée pour rendre le lancement stressant.",
+        "level": "Intermédiaire à Expert",
+        "season": "Courtes fenêtres de tempête uniquement"
+      },
+      "copacabana": {
+        "name": "Copacabana City Beach - Brésil",
+        "short": "Eau agitée, vent en rafales et pression constante de la foule.",
+        "desc": "Copacabana est construite pour l'énergie de la ville, pas pour le kitesurf dans les vagues. L'eau devient souvent désorganisée, le vent s'engouffre de manière inégale à travers la côte urbaine, et le nombre d'utilisateurs de la plage crée un environnement à haut risque.",
+        "level": "Avancés uniquement",
+        "season": "Instable la plupart des mois"
+      },
+      "barceloneta": {
+        "name": "Barceloneta - Espagne",
+        "short": "Plage urbaine bondée avec de faibles vagues et un vent peu fiable.",
+        "desc": "La Barceloneta est populaire et accessible, mais c'est exactement ce qui la rend mauvaise pour le kitesurf. De petites vagues cassées, un vent onshore changeant et un espace sécurisé limité rendent l'expérience globale frustrante et de faible qualité.",
+        "level": "Intermédiaire à Expert",
+        "season": "Principalement inconstant"
+      },
+      "venice": {
+        "name": "Venice Beach - Californie",
+        "short": "Vent de faible qualité, obstacles sur la plage et eau près du rivage bondée.",
+        "desc": "Venice Beach est une destination touristique, pas un spot de kitesurf fiable. La zone de lancement est compromise par les utilisateurs et les infrastructures, le vent manque de constance, et la qualité globale de la session est généralement bien inférieure.",
+        "level": "Avancés uniquement",
+        "season": "Fin du printemps à l'été uniquement"
+      },
+      "patong": {
+        "name": "Patong Beach - Phuket",
+        "short": "Vent léger, rivage désordonné et trafic touristique chaotique.",
+        "desc": "Patong est excellente pour le tourisme et mauvaise pour le kitesurf. Un vent faible domine la plupart des jours, la zone côtière est occupée par des nageurs et des bateaux, et l'environnement de la plage ne laisse presque aucune marge pour une session fluide.",
+        "level": "Experts uniquement",
+        "season": "Courte fenêtre dépendante de la mousson"
+      },
+      "kuta": {
+        "name": "Kuta Beach - Bali",
+        "short": "Vagues désordonnées, faible qualité de vent et eaux pour débutants bondées.",
+        "desc": "Kuta peut être animée et pittoresque, mais en tant que destination de kitesurf, elle est insuffisante. Le vent n'est pas fiable, l'eau se désorganise rapidement, et la densité du trafic sur la plage rend chaque préparation plus risquée qu'enrichissante.",
+        "level": "Intermédiaire à Expert",
+        "season": "Inconstant selon la mousson"
+      },
+      "cancun": {
+        "name": "Cancun Hotel Zone - Mexique",
+        "short": "Zones de lancement étroites, vent side-on en rafales et forme de vague faible.",
+        "desc": "La zone hôtelière est optimisée pour les complexes touristiques, pas pour le kitesurf technique. Le vent est souvent en rafales autour des bâtiments, les vagues manquent de qualité pour la progression, et l'espace restreint rend la manipulation du kite maladroite.",
+        "level": "Avancés uniquement",
+        "season": "Fenêtres saisonnières inégales"
+      },
+      "amalfi": {
+        "name": "Amalfi Main Beach - Italie",
+        "short": "Vent faible, bords rocheux et presque pas d'espace de lancement fonctionnel.",
+        "desc": "Amalfi est visuellement magnifique mais fonctionnellement terrible pour le kitesurf. Le littoral est étroit, le vent est inconstant, l'accès au rivage est médiocre, et la combinaison de roches, de bateaux et de touristes crée une configuration très stressante.",
+        "level": "Experts uniquement",
+        "season": "Rares jours utilisables"
+      },
+      "nice": {
+        "name": "Promenade de Nice - France",
+        "short": "Rivage de galets, brise instable et mauvaise qualité de vagues.",
+        "desc": "Nice offre un littoral célèbre, mais pas une session de kite qui vaille la peine. La plage de galets complique les lancements, la brise est rarement propre pour une navigation soutenue, et l'état de la mer a tendance à offrir du clapot plutôt que des lignes utiles.",
+        "level": "Avancés uniquement",
+        "season": "Principalement peu fiable"
+      },
+      "dubrovnik": {
+        "name": "Dubrovnik Old Harbor - Croatie",
+        "short": "Trafic de bateaux, faible fiabilité du vent et accès dangereux près du rivage.",
+        "desc": "Dubrovnik est une excellente destination de voyage et un mauvais environnement de kitesurf. Le front de mer est restreint, l'eau est pleine de trafic maritime, et le vent disponible est trop inconstant pour justifier le risque et l'effort.",
+        "level": "Experts uniquement",
+        "season": "Rafales d'été dispersées"
+      },
+      "ibiza": {
+        "name": "Ibiza Town Beach - Espagne",
+        "short": "Plage de loisirs bondée avec une houle faible et une brise erratique.",
+        "desc": "La ville d'Ibiza est faite pour les voyages sociaux, pas pour le kitesurf dans les vagues. Le vent manque de stabilité, les vagues sont généralement sous-puissantes, et l'activité constante sur la plage rend la session limitée avant même qu'elle ne commence.",
+        "level": "Intermédiaire à Expert",
+        "season": "Principalement de courtes impulsions estivales"
+      },
+      "mykonos": {
+        "name": "Mykonos Old Port - Grèce",
+        "short": "Interférence du port, rafales brutales et logistique de lancement dangereuse.",
+        "desc": "Même lorsque la brise se lève autour de Mykonos, la zone du Vieux Port est un mauvais endroit pour l'utiliser. Les rafales rebondissent de manière imprévisible, il y a trop d'activité portuaire et l'absence d'une configuration propre sur la plage rend l'expérience dangereuse.",
+        "level": "Experts uniquement",
+        "season": "Venteux mais mal organisé"
+      },
+      "acapulco": {
+        "name": "Acapulco Bay - Mexique",
+        "short": "Vent utilisable faible, clapot désordonné et forte interférence touristique.",
+        "desc": "Acapulco est spectaculaire depuis le rivage, mais cela se traduit rarement par du kitesurf de qualité. Les fenêtres de vent sont instables, l'eau devient rapidement confuse, et la baie fortement utilisée laisse trop peu d'espace propre.",
+        "level": "Intermédiaire à Expert",
+        "season": "Court et inconstant"
+      },
+      "monaco": {
+        "name": "Monaco Harbor Front - Monaco",
+        "short": "Espace de navigation minimal, obstacles constants et presque pas de sécurité.",
+        "desc": "Le front du port de Monaco est l'un des endroits les moins sensés pour planifier une journée de kitesurf. Le vent est bloqué et déformé, l'eau est contrainte par le trafic maritime, et l'environnement est trop technique et dangereux.",
+        "level": "Experts uniquement",
+        "season": "Rarement pratique"
+      },
+      "myrtle": {
+        "name": "Myrtle Beach Central - États-Unis",
+        "short": "Vent onshore, brise moyenne et zones de plage publique surchargées.",
+        "desc": "Myrtle Beach peut produire un temps de plage, mais pas de kitesurf de haute qualité. Le vent arrive souvent dans une mauvaise direction, les vagues manquent de forme, et la plage centrale bondée rend chaque lancement plus difficile qu'il ne devrait l'être.",
+        "level": "Intermédiaire à Expert",
+        "season": "Saisons intermédiaires uniquement"
+      },
+      "santorini": {
+        "name": "Santorini Caldera Coast - Grèce",
+        "short": "Accès avec falaises, mauvaises options de lancement et vent inconstant.",
+        "desc": "Santorin est mémorable pour les vues, pas pour le kitesurf. L'accès est difficile, le littoral offre peu d'espace pour préparer le matériel en toute sécurité, et la configuration semble exposée et bien en dessous des normes.",
+        "level": "Experts uniquement",
+        "season": "Rares périodes exploitables"
+      },
+      "maldives": {
+        "name": "Maldives Resort Lagoon - Maldives",
+        "short": "Eau magnifique mais vagues faibles, fenêtres de vent étroites et coraux peu profonds.",
+        "desc": "Le lagon d'un complexe peut sembler parfait sur les photos tout en étant mauvais pour le kitesurf. Le vent est souvent plus doux que prévu, la qualité des vagues est minimale et les sections de corail peu profondes transforment de petites erreurs en problèmes coûteux.",
+        "level": "Intermédiaire à Expert",
+        "season": "Utilisation saisonnière sélective"
+      },
+      "bondi": {
+        "name": "Bondi Beach - Australie",
+        "short": "Zone de surf bondée, zones de kite restreintes et direction du vent inconstante.",
+        "desc": "Bondi est mondialement connue pour le surf et le tourisme, mais fortement restreinte pour le kitesurf. Les zones désignées sont limitées, la direction du vent est souvent onshore ou instable, et la foule dense rend la navigation sûre difficile et frustrante.",
+        "level": "Avancés uniquement",
+        "season": "Limité et réglementé"
+      },
+      "santaMonica": {
+        "name": "Santa Monica Beach - Californie",
+        "short": "Vent léger, rivage bondé et mauvaise consistance des vagues.",
+        "desc": "Santa Monica est emblématique mais pas pratique pour le kitesurf. Le vent est souvent trop léger ou inconstant, la plage est très peuplée et la qualité des vagues est rarement assez bonne pour justifier l'effort ou le risque.",
+        "level": "Intermédiaire à Expert",
+        "season": "Courte fenêtre estivale"
+      }
+    }
+  },
+  "blogChicama": {
+    "hero": {
+      "badge": "Expérience Surf & Vent",
+      "title1": "Chicama, Pérou:",
+      "title2": "La Plus Longue Vague",
+      "title3": "Au Monde",
+      "subtitle": "Transformez Chicama en l'expérience ultime de surf et de vent en l'associant à Mancora."
+    },
+    "intro": {
+      "eyebrow": "L'Accroche Narrative",
+      "title": "Vous ne venez pas à Chicama pour une excitation rapide. Vous venez pour la répétition, la distance et la perspective.",
+      "p1": "La première surprise à Chicama n'est pas la beauté de la vague vue de la colline. C'est la durée pendant laquelle la vague continue de vous interroger après le décollage. Vous ajustez, récupérez de la vitesse et réalisez que cette vague concerne moins un virage explosif que la compréhension de la fluidité.",
+      "p2": "C'est pourquoi Chicama fonctionne mieux dans un itinéraire péruvien plus vaste. Quelques jours ici aiguisent votre surf et votre patience. Ensuite, le choix le plus intelligent est de continuer vers le nord vers des eaux chaudes et une destination comme Mancora où surf et kitesurf cohabitent.",
+      "quote": "La plus longue vague du monde devient encore plus mémorable lorsque le reste du voyage repose sur des contrastes.",
+      "caption1": "Les sessions matinales comptent ici. Chicama est généralement à son meilleur quand le jour est encore calme et le mur propre.",
+      "caption2": "L'itinéraire fait partie de l'histoire. Chicama doit être perçu comme le chapitre d'ouverture sérieux avant une fin plus chaleureuse."
+    },
+    "scroller": {
+      "mainEyebrow": "Analyse Utile",
+      "mainTitle": "De la vague elle-même à l'itinéraire qui la rend complète",
+      "mainDesc": "Ces blocs traduisent le mythe de Chicama en décisions pratiques : quand y aller, combien de temps y rester et pourquoi la meilleure fin pointe toujours vers Mancora.",
+      "sec1": {
+        "eyebrow": "Réalité de la Vague",
+        "title": "Ce que Chicama récompense vraiment",
+        "p1": "Chicama récompense les surfeurs qui restent calmes et efficaces. C'est un endroit pour le choix de trajectoire et la vitesse, pas seulement pour les manœuvres. Plus le trajet est long, plus votre positionnement compte.",
+        "p2": "Les surfeurs intermédiaires et avancés en tirent le meilleur parti lorsqu'ils arrivent préparés pour de longues rames, des eaux plus froides et des sessions répétées.",
+        "b1": "Meilleurs mois : d'avril à octobre",
+        "b2": "Meilleures sessions : tôt, avant que le vent ne texturise la vague",
+        "b3": "Choix de planche : gardez suffisamment de glisse pour les sections plates",
+        "f1Label": "Eau",
+        "f1Value": "Assez fraîche pour nécessiter une combinaison appropriée.",
+        "f2Label": "Vent",
+        "f2Value": "Généralement plus léger le matin et plus texturé plus tard.",
+        "caption1": "Les meilleures vagues à Chicama ressemblent moins à un seul mouvement qu'à une séquence de décisions intelligentes.",
+        "caption2": "Vérifier le point break depuis la terre avant de ramer vous aide à comprendre où la vague se plie et se reconnecte."
+      },
+      "sec2": {
+        "eyebrow": "Conception du Voyage",
+        "title": "Construisez Chicama comme un chapitre ciblé, pas tout le roman",
+        "p1": "Trois à cinq jours est généralement l'idéal. Cela donne le temps d'obtenir au moins une session mémorable, de s'adapter au rythme du point-break et de partir en en voulant plus.",
+        "p2": "La démarche premium consiste à éviter de surcharger l'itinéraire. Protégez les meilleurs jours de houle, gardez des transferts fluides et laissez Chicama faire son travail : affiner votre surf.",
+        "b1": "Arrivez avec de l'énergie au lieu d'après de multiples trajets",
+        "b2": "Laissez de l'espace pour récupérer entre les longues sessions",
+        "b3": "Ne forcez pas trop de destinations avant ou après",
+        "f1Label": "Séjour idéal",
+        "f1Value": "3 à 5 jours pour une répétition forte sans fatigue excessive.",
+        "f2Label": "Rôle dans le voyage",
+        "f2Value": "Utilisez-le comme bloc d'ouverture très concentré d'un itinéraire plus large.",
+        "caption1": "Un voyage intelligent à Chicama s'articule autour du timing, de l'équipement et de la volonté de simplifier l'itinéraire.",
+        "caption2": "Même les jours moyens à Chicama vous en apprennent beaucoup si vous traitez la destination comme un atelier."
+      },
+      "sec3": {
+        "eyebrow": "La Fin",
+        "title": "Pourquoi Mancora rend tout le voyage de surf premium",
+        "p1": "Après le rythme plus froid et sérieux de Chicama, Mancora agit comme une soupape de décompression. L'eau est plus chaude, la ville est plus facile à apprécier et le voyage s'ouvre soudainement au kitesurf.",
+        "p2": "Ce contraste est exactement ce qui élève le voyage. Chicama vous donne l'histoire emblématique. Mancora vous donne l'endroit où vous pouvez rester plus longtemps et continuer à progresser.",
+        "b1": "Réinitialisation en eau chaude après un bloc exigeant de point-break",
+        "b2": "Transition facile vers des journées kitesurf ou mix surf-et-séjour",
+        "b3": "Une meilleure fin émotionnelle pour le voyage",
+        "f1Label": "Meilleur combo",
+        "f1Value": "Chicama en premier, Mancora en second pour l'équilibre.",
+        "f2Label": "Logique du voyage",
+        "f2Value": "Le voyage commence par la légende et se termine par la destination de détente.",
+        "caption1": "Mancora fonctionne comme la fin émotionnelle car il maintient l'énergie de l'océan élevée tout en supprimant la friction.",
+        "caption2": "Pour la plupart des voyageurs, l'endroit qu'ils veulent prolonger n'est pas le plus difficile, c'est celui qui fait du bien."
+      }
+    },
+    "cta": {
+      "eyebrow": "Prochaine Étape",
+      "title": "Surfez la longue gauche, puis terminez le voyage là où l'océan est encore facile à apprécier",
+      "desc": "Si Chicama est la pierre à aiguiser, Mancora est la destination qui transforme tout l'itinéraire en un séjour que vous souhaitez réellement prolonger.",
+      "btn": "Créer votre Voyage"
+    }
+  },
+  "blogMancoraVsLobitos": {
+    "hero": {
+      "badge": "Kitesurf de Vagues au Pérou",
+      "title1": "Mancora vs Lobitos",
+      "title2": "vs Cabo Blanco",
+      "subtitle": "Choisissez le meilleur spot de kitesurf de vagues au Pérou en fonction de la progression, de l'état brut et de la logique d'un voyage au nord."
+    },
+    "intro": {
+      "eyebrow": "La Vraie Comparaison",
+      "title": "Ce n'est pas un classement pour se vanter sur internet. C'est une question de quel genre de voyage vous voulez vivre.",
+      "p1": "Lobitos semble brut, engagé et un peu plus dur sur les bords. Cabo Blanco a un poids symbolique et une aura de spécialiste. Mancora est plus large, plus chaud et plus facile à imaginer comme un endroit où l'on voudrait vraiment rester pour progresser.",
+      "p2": "Cette différence compte car la plupart des riders ne choisissent pas seulement une session. Ils choisissent une base. Ils veulent du vent, des vagues, de la récupération, du confort et une destination toujours désirable après plusieurs jours.",
+      "quote": "Le meilleur spot sur le papier n'est pas toujours celui qu'un voyageur souhaite vraiment pour une semaine.",
+      "caption1": "Mancora gagne son avantage en combinant une vraie crédibilité de ride avec un séjour qui semble facile, chaleureux et prolongeable.",
+      "caption2": "Le nord du Pérou semble unifié sur la carte, mais chaque zone modifie l'énergie du voyage de manière très réelle."
+    },
+    "scroller": {
+      "mainEyebrow": "Spot par Spot",
+      "mainTitle": "Comment ces noms du nord du Pérou se comportent réellement dans un voyage",
+      "mainDesc": "La comparaison ne devient utile que lorsqu'elle dépasse la mythologie et commence à répondre à des questions pratiques sur la progression, le confort et l'endroit où un voyageur souhaite vraiment séjourner.",
+      "sec1": {
+        "eyebrow": "Lobitos",
+        "title": "Caractère brut et énergie de spécialiste",
+        "p1": "Lobitos attire les riders qui aiment se sentir en mission. Le littoral a de la personnalité, la configuration semble plus élémentaire, et les sessions donnent souvent l'impression que vous méritez chacune d'elles.",
+        "p2": "Cela fait partie de son attrait. Mais cela signifie aussi que la destination demande plus au voyageur en termes de flexibilité, de tolérance à l'inconfort et de simplicité au quotidien.",
+        "b1": "Idéal pour les riders qui aiment une ambiance plus brute, axée sur le surf",
+        "b2": "Mieux adapté aux personnes déjà à l'aise dans les vagues",
+        "b3": "Moins naturel comme base de style de vie pour de plus longs séjours",
+        "f1Label": "Ambiance",
+        "f1Value": "Spartiate, brute, engagée.",
+        "f2Label": "Idéal pour",
+        "f2Value": "Les riders concentrés qui n'ont pas besoin de grand-chose d'autre.",
+        "caption1": "Lobitos peut être magnétique précisément parce qu'il refuse d'être poli.",
+        "caption2": "La destination donne beaucoup, mais elle attend de l'expérience et un certain appétit pour la friction."
+      },
+      "sec2": {
+        "eyebrow": "Cabo Blanco",
+        "title": "Pouvoir symbolique, mais pas la base la plus facile",
+        "p1": "Cabo Blanco fait partie de la conversation pour ce qu'il représente au Pérou. Il a du poids, une mythologie et un attrait de spécialiste. Mais cela n'en fait pas automatiquement la réponse la plus pratique pour un voyage plus long.",
+        "p2": "C'est mieux compris comme un point de référence, pas comme la destination par défaut pour tous les riders voulant un séjour modulable avec de la place pour la progression et le confort.",
+        "b1": "Forte identité et prestige",
+        "b2": "Mieux comme un arrêt ciblé que comme une base large",
+        "b3": "Utile dans la comparaison car il clarifie ce dont les voyageurs ont besoin",
+        "f1Label": "Rôle",
+        "f1Value": "Arrêt de spécialité, pas la base la plus facile.",
+        "f2Label": "À retenir",
+        "f2Value": "Le mythe compte, mais la conception du voyage compte plus.",
+        "caption1": "Cabo Blanco affine la conversation, mais ne supprime pas le besoin d'une base plus habitable.",
+        "caption2": "Pour beaucoup, la meilleure destination n'est pas la plus légendaire. C'est celle qu'ils peuvent réserver et apprécier en vrai."
+      },
+      "sec3": {
+        "eyebrow": "Mancora",
+        "title": "La réponse la plus complète pour la progression et le confort",
+        "p1": "Mancora gagne plus de décisions dans le monde réel parce qu'il supprime les hésitations. Le climat est plus clément, le séjour plus facile et la ville soutient l'expérience de l'océan au lieu de simplement l'entourer.",
+        "p2": "Pour les riders intermédiaires, les couples ou ceux qui pourraient prolonger leur séjour, Mancora maintient tout le voyage fonctionnel. Il offre de la chaleur, de l'accessibilité et assez de portée pour être une destination premium complète.",
+        "b1": "Avantage d'eau chaude pour des sessions répétées",
+        "b2": "Idéal pour les groupes mixtes et les séjours de progression",
+        "b3": "Le meilleur point de conversion pour réserver",
+        "f1Label": "Avantage",
+        "f1Value": "Polyvalence, confort et attrait pour les longs séjours.",
+        "f2Label": "Meilleur rôle",
+        "f2Value": "Base finale pour un voyage premium au nord du Pérou.",
+        "caption1": "Mancora ressemble à l'endroit où surfer et séjourner s'alignent enfin au lieu d'être en compétition.",
+        "caption2": "C'est cet alignement qui en fait la destination la plus facile à imaginer, à recommander et, finalement, à réserver."
+      }
+    },
+    "cta": {
+      "eyebrow": "La Meilleure Base",
+      "title": "Quand la comparaison se termine, la réponse la plus évidente pointe toujours vers Mancora",
+      "desc": "Lobitos et Cabo Blanco donnent à l'article sa tension, mais Mancora est la destination qui conclut la décision avec de la chaleur, de la polyvalence et une sensation de long séjour beaucoup plus forte.",
+      "btn": "Créez votre Voyage à Mancora"
+    }
+  },
+  "blogPacasmayo": {
+    "hero": {
+      "badge": "Surf au Pérou",
+      "title1": "Pacasmayo, Pérou :",
+      "title2": "Le Guide Ultime",
+      "title3": "du Point Break",
+      "subtitle": "Apprenez quand Pacasmayo fonctionne le mieux et comment l'intégrer dans un itinéraire de surf au nord du Pérou."
+    },
+    "intro": {
+      "eyebrow": "Ambiance Point-Break",
+      "title": "Pacasmayo n'est pas mémorable parce qu'il est facile. Il est mémorable parce qu'il enseigne la patience sur la distance.",
+      "p1": "À première vue, Pacasmayo ressemble à un rêve de gauches interminables. En pratique, ce qui le rend spécial, c'est la façon dont il vous oblige à rester engagé dans de longues sections, à gérer les changements de vitesse et les décisions de positionnement.",
+      "p2": "Ce type de vague fonctionne à merveille dans un long voyage de surf au Pérou. Cela vous donne un chapitre sérieux, axé sur le processus. Ensuite, si l'itinéraire est bien conçu, vous vous déplacez vers le nord vers un endroit plus chaud et plus flexible comme Mancora.",
+      "quote": "Pacasmayo, ce n'est pas faire le show, c'est apprendre à garder un point break vivant sous ses pieds.",
+      "caption1": "Pacasmayo est à son meilleur quand vous traitez la vague comme une séquence plutôt que comme un seul moment.",
+      "caption2": "Les meilleures sessions viennent généralement aux voyageurs qui planifient le rythme, pas seulement pour une belle photo."
+    },
+    "scroller": {
+      "mainEyebrow": "Guide Utile",
+      "mainTitle": "Les conditions, le rythme et la logique de l'itinéraire qui font que Pacasmayo vaut l'effort",
+      "mainDesc": "Pacasmayo livre la marchandise lorsque vous comprenez ce qu'il attend de votre surf et comment le placer dans un voyage plus large au lieu de lui demander de tout faire à la fois.",
+      "sec1": {
+        "eyebrow": "Conditions",
+        "title": "Quand Pacasmayo fonctionne le mieux",
+        "p1": "Pacasmayo est plus fort lorsque les houles du sud s'alignent avec des conditions matinales propres. Comme beaucoup de longs point breaks à gauche, il récompense ceux qui surfent tôt et respectent la façon dont le vent change.",
+        "p2": "Si vous vous attendez à ce que chaque session soit héroïque, le spot peut vous frustrer. Si vous arrivez prêt à lire des sections, gérer la vitesse et accepter que les meilleures vagues se construisent sur la patience, cela devient profondément gratifiant.",
+        "b1": "Meilleurs mois : de mai à octobre",
+        "b2": "Les sessions matinales offrent généralement les faces les plus propres",
+        "b3": "Le choix de la planche compte plus que le style ici",
+        "f1Label": "Style de vague",
+        "f1Value": "Long point break gauche avec de l'espace pour penser et ajuster.",
+        "f2Label": "Meilleur niveau",
+        "f2Value": "Surfeurs intermédiaires et plus, surtout ceux qui aiment le processus.",
+        "caption1": "Les meilleures sessions à Pacasmayo sont moins une question de drame qu'une séquence de décisions intelligentes.",
+        "caption2": "Un peu de glisse (glide) supplémentaire dans votre équipement fait souvent une plus grande différence ici."
+      },
+      "sec2": {
+        "eyebrow": "Rythme de Voyage",
+        "title": "Traitez-le comme une mission compacte, pas comme un endroit qui doit tout faire",
+        "p1": "Pacasmayo fonctionne à merveille dans un bloc concentré de quelques jours. Cela vous donne suffisamment de répétitions pour comprendre le spot sans trop solliciter l'énergie émotionnelle du voyage.",
+        "p2": "Cela compte car les destinations de vagues exigeantes deviennent bien meilleures lorsqu'elles restent précises. Vous n'avez pas besoin d'elles pour porter votre vie nocturne, votre récupération et toute l'histoire du voyage.",
+        "b1": "Trois à quatre jours sont souvent plus efficaces qu'un long séjour",
+        "b2": "Protégez les jours d'arrivée et de départ des attentes de houle",
+        "b3": "Utilisez la destination pour l'éducation aux vagues",
+        "f1Label": "Rôle idéal",
+        "f1Value": "Arrêt de surf concentré dans une route plus large du nord du Pérou.",
+        "f2Label": "Meilleure planification",
+        "f2Value": "Gardez la logistique légère et vos meilleures sessions protégées.",
+        "caption1": "Un plan premium à Pacasmayo se définit par le rythme plus que par une ambition démesurée.",
+        "caption2": "Lorsque l'itinéraire respire, les sessions semblent plus précieuses et la destination conserve son charme."
+      },
+      "sec3": {
+        "eyebrow": "La Meilleure Fin",
+        "title": "Pourquoi la route s'améliore souvent à nouveau à Mancora",
+        "p1": "Après des sessions répétées sur des point-breaks, Mancora offre exactement le type de contraste qui donne à un surf trip une sensation intelligemment conçue : eau chaude, vie plus facile, meilleure récupération.",
+        "p2": "Cette transition n'affaiblit pas le voyage. Elle le complète. Pacasmayo vous donne une texture de vague longue. Mancora vous donne l'endroit où vous pouvez absorber le voyage et vouloir encore plus de temps dans l'océan.",
+        "b1": "Récupération en eau chaude après un bloc de point-break dense",
+        "b2": "Derniers jours plus flexibles pour le surf, le kite et le confort",
+        "b3": "Un point de conversion fort pour le voyageur prêt à réserver",
+        "f1Label": "Meilleur duo",
+        "f1Value": "Pacasmayo pour la concentration, Mancora pour la fin.",
+        "f2Label": "Logique de réservation",
+        "f2Value": "L'itinéraire se termine à l'endroit où la plupart des voyageurs veulent prolonger.",
+        "caption1": "Un bon itinéraire n'a pas qu'un seul sommet. Il change de texture et devient plus facile à apprécier à la fin.",
+        "caption2": "Cette facilité finale est exactement ce qui fait de Mancora une destination de clôture si convaincante au Pérou."
+      }
+    },
+    "bridge": {
+      "title1": "Pacasmayo est une expérience.",
+      "title2": "Mancora est l'endroit où vous progressez.",
+      "desc1": "Pacasmayo vous offre de longs trajets.",
+      "desc2": "Mais pas toujours du vent. Pas toujours de constance.",
+      "desc3": "À Mancora, tout s'aligne :",
+      "box1Title": "Vent",
+      "box1Desc": "Vent thermique quotidien fiable.",
+      "box2Title": "Eau",
+      "box2Desc": "Conditions tropicales chaudes toute l'année.",
+      "box3Title": "Progression",
+      "box3Desc": "Apprentissage plus rapide, conditions plus sûres, meilleur coaching.",
+      "footer1": "C'est pourquoi la plupart des riders ne restent pas à Pacasmayo.",
+      "footer2": "Ils terminent leur voyage à Mancora."
+    },
+    "pointbreak": {
+      "title": "Qu'est-ce qui rend Pacasmayo unique ?",
+      "item1": "Point break gauche sans fin",
+      "item2": "Murs lisses et longs",
+      "item3": "Parfait pour le carving et le flux",
+      "item4": "Longues vagues avec l'aide du vent",
+      "item5": "Kitesurf de style pur surf",
+      "footer1": "Il ne s'agit pas de figures.",
+      "footer2": "Il s'agit de fluidité."
+    },
+    "cta": {
+      "eyebrow": "Améliorez votre Itinéraire",
+      "title": "Laissez Pacasmayo donner l'exigence au voyage. Laissez Mancora lui donner son éclat final.",
+      "desc": "Cette combinaison est ce qui transforme une mission de surf au Pérou en un voyage premium : un apprentissage sérieux sur point-break d'abord, puis de la chaleur, du confort et de la flexibilité.",
+      "btn": "Créez votre Voyage à Mancora"
+    }
+  },
+  "blogWingVsKite": {
+    "ui": {
+      "zone": "Zone",
+      "progression": "Progression"
+    },
+    "intro": {
+      "title": "La Dualité Cinétique du Courant de Humboldt",
+      "p1": "Le littoral péruvien offre une perfection mécanique rarement vue ailleurs. Poussés par le courant froid et implacable de Humboldt, les vents thermiques et les point breaks sans fin constituent un laboratoire unique pour les sports de glisse aérotractés.",
+      "p2": "Nous analysons la 'dualité cinétique' de ces disciplines. Alors que le kitesurf exploite la couche limite atmosphérique pour une puissance verticale, le wingfoil puise dans l'énergie de surface pour surfer de longues houles avec une traînée minimale."
+    },
+    "hero": {
+      "tag": "Analyse Technique",
+      "title": "Wingfoil vs Kitesurf :",
+      "highlight": "Le Choix Péruvien",
+      "description": "Une analyse technique de l'intensité du vent, de la dynamique des vagues et de la progression du rider dans le courant de Humboldt.",
+      "anchors": [
+        { "label": "Temp. Eau", "sub": "Constante" },
+        { "label": "Vecteur Vent", "sub": "Base" }
+      ]
+    },
+    "factors": [
+      {
+        "label": "Intensité du Vent",
+        "title": "Analyse de la Courbe de Puissance",
+        "desc": "Les profils d'efficacité divergent fortement en fonction des nœuds de vent. Le wingfoil trouve son point idéal dans la plage de 12 à 18 nœuds, tandis que le kitesurf atteint ses performances maximales dans le spectre de 18 à 25+ nœuds.",
+        "zones": [
+          { "name": "Zone de Wingfoil" },
+          { "name": "Zone de Kitesurf" }
+        ]
+      },
+      {
+        "label": "Dynamique des Vagues",
+        "title": "Extraction Hydrodynamique",
+        "desc": "Pour les gauches sans fin de Pacasmayo, le wingfoil est inégalé. Il permet au rider de neutraliser la traînée du vent et de surfer librement l'énergie de la houle. Le kitesurf offre des virages verticaux à grande vitesse, reposant sur une tension constante."
+      }
+    ],
+    "progression": {
+      "title": "La Transition Intermédiaire",
+      "desc": "Passer d'une discipline à l'autre nécessite de réinitialiser la mémoire musculaire.",
+      "cards": [
+        { "title": "Vers le Wingfoil", "text": "Nécessite de désapprendre une position rigide. L'attention se porte entièrement sur la pression du pied avant et l'équilibre du foil. L'aile n'est qu'un moteur." },
+        { "title": "Vers le Kitesurf", "text": "Exige une capacité exceptionnelle à faire plusieurs choses à la fois. Le contrôle de la carre doit devenir subconscient tout en dirigeant activement l'aile dans la fenêtre de vol." }
+      ]
+    }
+  },
+  "blogSafetyKite": {
+    "hero": {
+      "tag": "Coaching Technique",
+      "title": "Sécurité et Progression :",
+      "highlight": "L'Avantage Technique",
+      "description": "Pourquoi la précision mathématique et le retour visuel sont les piliers de l'avancement rapide dans le kitesurf de vagues."
+    },
+    "stats": [
+      { "label": "Temp. de l'Eau", "value": "18-20°C" },
+      { "label": "Vitesse du Vent", "value": "15-25 nœuds" },
+      { "label": "Saison Optimale", "value": "Août-Oct" }
+    ],
+    "mechanics": {
+      "title": "La Mécanique du Ratio 2:1",
+      "body": "Comprendre le rapport 2:1 dans la configuration de votre barre est essentiel pour un contrôle nuancé. Pour chaque pouce que vous tirez sur la barre, les lignes arrière s'engagent à un taux double, modifiant considérablement l'angle d'attaque.",
+      "bullets": [
+        "Réduit la fatigue du rider grâce à un effet de levier efficace.",
+        "Permet des micro-ajustements lors des bottom turns."
+      ]
+    },
+    "calibration": {
+      "title": "Dynamique des Rayons de Braquage",
+      "desc": "La relation entre la longueur de la ligne et le rayon de braquage définit votre placement sur la face de la vague. La manipulation de cet arc dicte la projection verticale.",
+      "boxTitle": "Calibration de l'Arc",
+      "boxBody": "Des lignes plus courtes (20m) diminuent le rayon de braquage, créant une rotation pivotante plutôt qu'un arc large. Essentiel pour les vagues rapides et creuses.",
+      "arcs": [
+        { "label": "Arc Standard", "value": "Lignes de 24m" },
+        { "label": "Arc Pivotant", "value": "Lignes de 20m" }
+      ]
+    }
+  },
+  "blogWaveProgression": {
+    "hero": {
+      "badge": "Progression dans les Vagues",
+      "title1": "Pourquoi Mancora",
+      "title2": "Est Différent",
+      "subtitle": "Pas juste un autre spot de kitesurf. Un endroit conçu pour une vraie progression dans les vagues."
+    },
+    "intro": {
+      "h2": "La plupart des kitesurfeurs ne luttent pas par manque de compétence.",
+      "p1": "Ils luttent parce qu'ils sont dans de mauvaises conditions.",
+      "p2": "Vent en rafales, spots bondés, eau froide, vagues inconstantes... tout cela ralentit la progression sans même que vous vous en rendiez compte.",
+      "p3": "La progression n'est pas aléatoire.",
+      "p4": "Elle est construite par l'environnement."
+    },
+    "problem": {
+      "h2": "Progresser dans les vagues n'est pas facile",
+      "p1": "Trop de vent, trop peu de vent. Vagues trop grosses, trop désordonnées, trop de monde.",
+      "p2": "La plupart des spots sont soit trop extrêmes, soit pas assez constants pour vraiment s'améliorer.",
+      "p3": "C'est pourquoi la plupart des riders stagnent."
+    },
+    "difference": {
+      "h2": "Qu'est-ce qui rend Mancora différent ?",
+      "item1": "Vent side-shore qui reste fiable.",
+      "item2": "Vagues longues et indulgentes qui permettent de répéter les sections.",
+      "item3": "Eau chaude toute l'année, pour rester détendu et présent.",
+      "item4": "Faible pression de la foule, ce qui signifie plus de calme et de répétitions.",
+      "item5": "Une courbe d'apprentissage naturelle pour la progression dans les vagues.",
+      "footer1": "Ce n'est pas juste de bonnes conditions.",
+      "footer2": "C'est la combinaison parfaite."
+    },
+    "progression": {
+      "h2": "Un système de progression naturel",
+      "b1Title": "Vagues pour Débutants",
+      "b1Desc": "Apprenez à vous positionner et à lire les vagues sans pression.",
+      "b2Title": "Fluidité Intermédiaire",
+      "b2Desc": "Enchaînez les virages, contrôlez la vitesse et surfez avec confiance.",
+      "b3Title": "Navigation Avancée",
+      "b3Desc": "Repoussez vos limites avec style, puissance et contrôle total de la vague."
+    },
+    "lifestyle": {
+      "h2": "Ce n'est pas seulement la progression",
+      "p1": "C'est le style de vie. Des couchers de soleil chauds, l'énergie de l'océan et une communauté qui vous pousse chaque jour.",
+      "p2": "Vous ne naviguez pas seulement mieux. Vous vivez mieux."
+    },
+    "cta": {
+      "h2": "Prêt à passer au niveau supérieur ?",
+      "p": "Rejoignez-nous à Mancora et vivez la différence par vous-même.",
+      "btn1": "Réserver votre Expérience",
+      "btn2": "Explorer les Programmes"
+    }
+  },
+  "blogProgressionKite": {
+    "ui": {
+      "technicalOverview": "Aperçu Technique",
+      "tacticalLoadout": "Équipement Tactique",
+      "proTipTitle": "Conseil Pro : Le Loop"
+    },
+    "hero": {
+      "location": "Pérou / Mancora",
+      "title": "7 Nuits à Mancora :",
+      "highlight": "La Progression",
+      "subtitle": "Plan d'Action",
+      "description": "Un itinéraire éditorial de haute intensité de 7 jours conçu pour que les riders intermédiaires brisent les plateaux. Maîtrisez la posture, le timing des vagues et les loops techniques."
+    },
+    "techStats": [
+      {
+        "label": "Vitesse du Vent",
+        "desc": "Vents thermiques constants. Le flux le plus propre arrive en milieu d'après-midi."
+      },
+      {
+        "label": "Temp. de l'Eau",
+        "desc": "Influence du courant de Humboldt. Nécessite une protection thermique adéquate."
+      },
+      {
+        "label": "Saison Idéale",
+        "desc": "Probabilité maximale de vent alignée avec les principales fenêtres de houle."
+      }
+    ],
+    "itinerary": [
+      {
+        "days": "Jour 1-2",
+        "title": "Fondations au Point de Mancora",
+        "desc": "Sessions de surf matinales sans foule pour lire la vague. Le changement de vent de l'après-midi active les sessions de kite. Concentrez-vous sur l'ajustement de votre posture face à l'énergie brute du Pacifique.",
+        "target1": "Analyser la direction de la houle et la mécanique du point break.",
+        "target2": "Correction de posture : Répartition du poids sur les planches directionnelles."
+      },
+      {
+        "days": "Jour 3",
+        "title": "Expédition à Los Organos",
+        "desc": "Un changement de perspective. Expédition matinale pour l'observation des baleines à bosse afin de comprendre l'écosystème marin. L'après-midi propose du kitesurf technique dans des courants changeants."
+      },
+      {
+        "days": "Jour 4-5",
+        "title": "Le Downwind de Vichayito",
+        "desc": "Le cœur du plan de progression. Un parcours downwind magnifique et épuisant qui repousse l'endurance. C'est ici que les kite loops techniques sont forgés sous pression.",
+        "proTip": "Engagez-vous pleinement. L'hésitation est l'endroit où le contrôle se perd. Initiez le loop lorsque vous atteignez le sommet de la vague pour générer une poussée vers l'avant."
+      }
+    ],
+    "loadout": {
+      "quiver": {
+        "title": "Spécifications du Quiver",
+        "desc": "Les conditions exigent de la polyvalence. Apportez un équipement de kite rapide et réactif pour gérer les sections en rafales.",
+        "tag1": "Kite 5M",
+        "tag2": "Kite 7M",
+        "tag3": "Kite 9M"
+      },
+      "armor": {
+        "title": "Protection Thermique",
+        "desc": "Ne sous-estimez pas le courant de Humboldt. La chaleur corporelle est essentielle pour l'endurance pendant les downwinds de 4 heures.",
+        "tag1": "Combinaison 3/2mm",
+        "tag2": "Chaussons Optionnels"
+      }
+    }
+  },
+  "blogTechKite": {
+    "category": "Niveau Intermédiaire",
+    "ui": {
+      "focusPoint": "Point de Focus",
+      "proTipsTitle": "CONSEILS PRO INTERMÉDIAIRES"
+    },
+    "hero": {
+      "title": "TECHNIQUES POUR",
+      "highlight": "LE KITESURF DANS LES VAGUES",
+      "description": "Lecture de la houle, timing et contrôle. Maîtrisez les éléments et transformez l'océan en votre terrain de jeu."
+    },
+    "intro": "Naviguer dans les vagues avec un kite change tout. Il ne s'agit plus seulement d'exploiter le vent ; il s'agit de synchroniser cette puissance avec l'énergie brute de la houle. En tant que rider intermédiaire, vous avez maîtrisé les bases. Maintenant, il est temps de lire l'eau et de maintenir un contrôle absolu du kite tout en taillant la face d'une vague.",
+    "sections": {
+      "swell": {
+        "title": "LIRE",
+        "highlight": "LA HOULE",
+        "p1": "Avant même de lancer votre kite, observez l'eau. L'océan n'est pas aléatoire ; il se déplace par séries. Passez 10 minutes à analyser l'intervalle entre elles.",
+        "p2": "Le positionnement est tout. Repérez les bosses qui se forment à l'horizon. Ne regardez pas seulement la vague qui se brise ; cherchez celle qui est derrière.",
+        "focus": "Regardez au-delà de la zone de rupture. La ligne d'horizon dicte le rythme des séries."
+      },
+      "turns": {
+        "title": "LE TIMING DE",
+        "highlight": "VOS VIRAGES",
+        "p1": "La synergie entre le 'bottom turn' et le 'top turn' est le cœur du wave riding. C'est une danse entre la gravité et la traction du kite.",
+        "p2Label": "Le Bottom Turn :",
+        "p2": "Cela prépare tout. Gardez votre poids centré, crantez fort et générez de la vitesse avant de vous projeter vers le haut.",
+        "p3Label": "Le Top Turn :",
+        "p3": "Lorsque vous atteignez le sommet, déplacez votre poids sur votre pied arrière pour faire pivoter la planche, en redirigeant simultanément le kite."
+      }
+    },
+    "kiteControl": {
+      "title": "CONTRÔLE",
+      "highlight": "DU KITE",
+      "desc": "Dans les vagues, votre kite doit être une extension de votre corps. La règle d'or : gardez le kite en mouvement.",
+      "items": [
+        {
+          "label": "Drifting vs. Puissance",
+          "text": "Apprenez quand stationner le kite et laisser la vague vous pousser, par opposition à un pilotage actif."
+        },
+        {
+          "label": "Tension des Lignes",
+          "text": "Maintenez une pression constante sur la barre. Si les lignes se relâchent, bordez et dirigez agressivement."
+        }
+      ]
+    },
+    "proTips": [
+      {
+        "title": "Plan de Secours",
+        "text": "Connaissez votre voie de sortie. Si une série ferme, tournez sous le vent et laissez l'écume passer sur vous."
+      },
+      {
+        "title": "Changement de Posture",
+        "text": "Ouvrez vos épaules vers l'endroit où vous voulez aller. Ne regardez pas le kite ; regardez la ligne de la vague."
+      },
+      {
+        "title": "Straps vs. Strapless",
+        "text": "Si vous passez au strapless, gardez votre pied avant au-dessus du centre pour plus de stabilité."
+      },
+      {
+        "title": "Engagement",
+        "text": "L'hésitation est l'ennemi. Une fois que vous commencez un virage, engagez tout votre poids sur le rail."
+      }
+    ]
+  },
+  "blogMistakesKite": {
+    "ui": {
+      "readingSwellTitle": "01 / LECTURE DE LA HOULE",
+      "readingSwellDesc": "L'anticipation plutôt que la réaction.",
+      "timingControlTitle": "02 / TIMING & CONTRÔLE",
+      "timingControlDesc": "Synchroniser la dérive (drift) du kite avec la vitesse de la planche.",
+      "warningTitle": "AVERTISSEMENT TECHNIQUE"
+    },
+    "hero": {
+      "category1": "INTERMÉDIAIRE",
+      "category2": "NAVIGATION EN VAGUES",
+      "title": "ERREURS TYPIQUES DANS LES VAGUES",
+      "subtitle": "Erreurs typiques du rider intermédiaire et comment les corriger (Vrai Coaching).",
+      "description": "Lecture de la houle, maîtrise du timing et maintien du contrôle lorsque l'océan repousse."
+    },
+    "intro": {
+      "title": "LE COURANT DE PRÉCISION",
+      "p1": "La transition de l'eau plate aux vagues est le moment décisif dans la progression d'un kitesurfeur. Cela nécessite de passer de la seule dépendance à la puissance du kite à la lecture de l'énergie de l'océan.",
+      "p2": "La vague dicte le rythme. Votre kite et votre planche doivent se synchroniser à cette fréquence. Ce guide décompose la mécanique essentielle de la navigation dans les vagues, en éliminant le superflu pour se concentrer sur la physique du contrôle fluide."
+    },
+    "swell": [
+      {
+        "title": "PÉRIODE DE LA HOULE",
+        "desc": "Des périodes plus longues signifient une énergie plus profonde et plus puissante. Elles se lèvent plus vite, nécessitant un engagement plus précoce."
+      },
+      {
+        "title": "DIRECTION DU VENT",
+        "desc": "Le vent side-shore est idéal. Les vents onshore créent du clapot et vous obligent à naviguer 'vers le haut' de la vague plutôt qu''avec' elle."
+      },
+      {
+        "title": "LE PIC",
+        "desc": "Identifiez où la vague va jeter en premier. Votre approche doit cibler la section critique avant la lèvre."
+      }
+    ],
+    "timing": [
+      {
+        "title": "DYNAMIQUE DU BOTTOM TURN",
+        "desc": "Initiez en crantant fort et en dirigeant le kite profondément. Cela convertit la vitesse en projection verticale."
+      },
+      {
+        "title": "LIBÉRATION DU TOP TURN",
+        "desc": "Lorsque vous frappez la lèvre, choquez la barre pour tuer la puissance, pivotez et redirigez agressivement le kite le long de la ligne."
+      }
+    ],
+    "warning": "Ne dépassez jamais votre kite. Si vous surfez plus vite que le kite ne peut dériver (drift), les lignes se relâcheront, entraînant une perte de contrôle de la direction en plein dans la zone d'impact. Maintenez toujours la tension des lignes."
+  },
+  "blogSafariKite": {
+    "ui": {
+      "skillLevel": "Skill Level",
+      "levelValue": "Intermediate / Advanced",
+      "featuredSpots": "Featured Spots",
+      "peruvianCircuit": "The Peruvian Wave Circuit",
+      "dayInLife": "A Day in the Life",
+      "rhythmDictates": "The rhythm of the wind dictates our schedule."
+    },
+    "hero": {
+      "tag": "Expedition Series",
+      "title": "KITE SAFARI:",
+      "highlight": "NORTHERN PERU",
+      "description": "A journey through the windiest coastline on Earth. Join our guided expedition through the hidden gems of the Peruvian desert."
+    },
+    "requirements": {
+      "title": "Rider Requirements",
+      "description": "This safari is designed for Intermediate to Advanced riders to ensure a safe and thrilling experience across Peru's demanding spots.",
+      "items": [
+        {
+          "title": "Independent Kiting",
+          "desc": "Full independence in setting up, launching, and self-rescue in varying conditions."
+        },
+        {
+          "title": "Upwind Proficiency",
+          "desc": "Consistent ability to ride upwind and hold ground in moderate to strong winds."
+        },
+        {
+          "title": "Basic Wave Experience",
+          "desc": "Comfortable navigating small to medium waves and basic understanding of etiquette."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "title": "Early Swell Check",
+        "desc": "First light assessment of conditions and spot planning."
+      },
+      {
+        "title": "Breakfast View",
+        "desc": "Fueling up with local produce overlooking the break."
+      },
+      {
+        "title": "Morning Session",
+        "desc": "Hitting the water in Pacasmayo as the thermal winds build."
+      },
+      {
+        "title": "Downwinder",
+        "desc": "Guided coastal run to the next pristine spot."
+      },
+      {
+        "title": "Sunset Bonfire",
+        "desc": "Reviewing footage and unwinding under the stars."
+      }
+    ],
+    "spots": [
+      {
+        "name": "Pacasmayo",
+        "tag": "The Longest Wave",
+        "desc": "Legendary for its endlessly peeling left-handers, offering rides that can last for minutes."
+      },
+      {
+        "name": "Lobitos",
+        "tag": "Pure Perfection",
+        "desc": "A perfect hollow left hand wave breaking over a shallow sandbar."
+      },
+      {
+        "name": "Mancora",
+        "tag": "Vibrant Wind",
+        "desc": "Warmer waters, consistent thermals, and an energetic post-session atmosphere."
+      }
+    ]
+  },
+  "blogSafariKite": {
+    "ui": {
+      "skillLevel": "Niveau Requis",
+      "levelValue": "Intermédiaire / Avancé",
+      "featuredSpots": "Spots Incontournables",
+      "peruvianCircuit": "Le Circuit Péruvien des Vagues",
+      "dayInLife": "Une Journée Type",
+      "rhythmDictates": "Le rythme du vent dicte notre emploi du temps."
+    },
+    "hero": {
+      "tag": "Série Expédition",
+      "title": "KITE SAFARI:",
+      "highlight": "NORD DU PÉROU",
+      "description": "Un voyage sur le littoral le plus venté de la planète. Rejoignez notre expédition guidée à travers les joyaux cachés du désert péruvien."
+    },
+    "requirements": {
+      "title": "Prérequis pour le Rider",
+      "description": "Ce safari est conçu pour les riders Intermédiaires à Avancés afin d'assurer une expérience sûre et palpitante sur les spots exigeants du Pérou.",
+      "items": [
+        {
+          "title": "Kitesurf Indépendant",
+          "desc": "Indépendance totale pour le montage, le lancement et l'auto-sauvetage dans des conditions variables."
+        },
+        {
+          "title": "Maîtrise de la Remontée au Vent",
+          "desc": "Capacité constante à remonter au vent et à maintenir sa position dans des vents modérés à forts."
+        },
+        {
+          "title": "Expérience Basique des Vagues",
+          "desc": "À l'aise pour naviguer dans des vagues petites à moyennes et compréhension de base de l'étiquette."
+        }
+      ]
+    },
+    "timeline": [
+      {
+        "title": "Vérification Matinale",
+        "desc": "Évaluation aux premières lueurs du jour des conditions et planification du spot."
+      },
+      {
+        "title": "Petit-déjeuner avec Vue",
+        "desc": "Faire le plein d'énergie avec des produits locaux face aux vagues."
+      },
+      {
+        "title": "Session du Matin",
+        "desc": "Mise à l'eau à Pacasmayo au moment où les vents thermiques se renforcent."
+      },
+      {
+        "title": "Downwinder",
+        "desc": "Parcours côtier guidé jusqu'au prochain spot préservé."
+      },
+      {
+        "title": "Feu de Camp au Coucher du Soleil",
+        "desc": "Visionnage des vidéos et détente sous les étoiles."
+      }
+    ],
+    "spots": [
+      {
+        "name": "Pacasmayo",
+        "tag": "La Plus Longue Vague",
+        "desc": "Légendaire pour ses vagues gauches qui déroulent sans fin, offrant des rides pouvant durer des minutes."
+      },
+      {
+        "name": "Lobitos",
+        "tag": "Perfection Pure",
+        "desc": "Une vague gauche tubulaire parfaite déferlant sur un banc de sable peu profond."
+      },
+      {
+        "name": "Mancora",
+        "tag": "Vent Vibrant",
+        "desc": "Eaux plus chaudes, thermiques constants et une ambiance post-session énergique."
+      }
+    ]
+  },
+  "blogWhaleSeason": {
+    "hero": {
+      "tag": "Expéditions",
+      "title": "Saison des Baleines au Nord du Pérou",
+      "subtitle": "Un voyage technique et spirituel sur la route migratoire des baleines à bosse."
+    },
+    "intro": {
+      "tag": "MERVEILLE NATURELLE",
+      "body": "Il y a un calme profond qui s'installe lors de la navigation au large des côtes de Piura. Le vent bourdonne dans les lignes, la planche ricoche sur le clapot, et soudain—une éruption. Un léviathan de quarante tonnes perce la surface. Être témoin de la migration des baleines à bosse attaché au vent n'est pas juste une rencontre ; c'est un recalibrage de l'échelle."
+    },
+    "experience": {
+      "title": "La Symphonie de l'Échelle",
+      "p1": "Avant de les voir, vous les entendez. Le 'souffle'—une explosion percutante d'air et de vapeur—résonne sur l'eau, souvent plus fort que le ressac. Lorsque vous naviguez près d'une baleine à bosse, votre kite semble soudain insignifiant.",
+      "p2": "L'énorme déplacement d'eau lors de leur mouvement crée des courants localisés. C'est une démonstration brute de puissance hydrodynamique qui fait paraître la session de vagues la plus agressive presque douce en comparaison."
+    },
+    "timing": {
+      "title": "Timing & Saison",
+      "subtitle": "Fenêtres stratégiques pour cette rencontre cinétique.",
+      "items": [
+        {
+          "label": "Haute Saison",
+          "text": "Juillet à octobre marque la principale fenêtre de migration le long de la côte nord."
+        },
+        {
+          "label": "Visibilité Optimale",
+          "text": "Tôt le matin (06h00 - 09h00) offre les eaux les plus calmes avant que les vents thermiques ne se lèvent."
+        }
+      ]
+    },
+    "protocol": {
+      "title": "Protocole Pro",
+      "rules": [
+        {
+          "label": "Maintenez la Distance",
+          "text": "Maintenez strictement un rayon minimum de 100 mètres de toute baleine aperçue."
+        },
+        {
+          "label": "Vecteurs Parallèles",
+          "text": "Si vous naviguez près d'un groupe, alignez votre bord parallèlement à leur direction de déplacement."
+        },
+        {
+          "label": "Ne Coupez Jamais la Route",
+          "text": "N'essayez pas de naviguer directement devant elles ou de couper leur ligne de migration."
+        }
+      ]
+    }
+  },
+  "blogWhaleSeason12": {
+    "hero": {
+      "location": "Mancora, Pérou",
+      "title": "SAISON DES",
+      "highlight": "BALEINES",
+      "description": "La migration annuelle amène les baleines à bosse dans les houles du nord. Une rare convergence entre vie marine et vents thermiques parfaits."
+    },
+    "ribbon": [
+      {
+        "label": "Saison",
+        "value": "Août - Oct"
+      },
+      {
+        "label": "Temp. de l'Eau",
+        "value": "18°C / 64°F"
+      },
+      {
+        "label": "Vent (PM)",
+        "value": "15-25 nœuds"
+      },
+      {
+        "label": "Direction Houle",
+        "value": "SSW"
+      }
+    ],
+    "sections": {
+      "morning": {
+        "title": "LA GARDE MATINALE",
+        "items": [
+          {
+            "label": "Vue Optimale : 07:00 - 10:00",
+            "desc": "Les conditions océaniques lisses avant l'arrivée des thermiques permettent une visibilité claire."
+          },
+          {
+            "label": "Modèles de Comportement",
+            "desc": "Les mères et les baleineaux restent généralement plus près du rivage. Les sauts sont fréquents."
+          },
+          {
+            "label": "Protocoles de Distance",
+            "desc": "Distance d'approche minimale stricte de 100 m maintenue par les navires autorisés."
+          }
+        ]
+      },
+      "afternoon": {
+        "title": "LA DÉRIVE DE L'APRÈS-MIDI",
+        "items": [
+          {
+            "label": "Activation Thermique : 13:00 - Coucher du Soleil",
+            "desc": "Le réchauffement du désert attire des vents fiables de 15 à 25 nœuds, transformant le spot en terrain de jeu."
+          },
+          {
+            "label": "Dynamique du Point Break",
+            "desc": "De longues gauches s'organisent le long du récif. Idéal avec des planches de surf strapless."
+          },
+          {
+            "label": "Eaux Partagées",
+            "desc": "Les riders doivent rester vigilants. Les baleines transitent occasionnellement par les zones de bris extérieures."
+          }
+        ]
+      }
+    }
+  },
+  "blogNorthVsSouth": {
+    "hero": {
+      "badge": "Kitesurf au Pérou",
+      "title1": "Kitesurf au Pérou",
+      "title2": "Nord vs Sud",
+      "subtitle": "Un guide complet des spots, saisons, logiques de vent et comment choisir le bon itinéraire de kitesurf au Pérou."
+    },
+    "intro": {
+      "eyebrow": "Nord vs Sud",
+      "title": "Le Pérou prend tout son sens quand on arrête de demander seulement où le vent souffle pour se demander quel type de semaine on veut.",
+      "p1": "Le sud du Pérou est efficace, plus froid et souvent plus axé sur la mission. Le nord est plus chaud, plus flexible et plus facile à apprécier comme une expérience de voyage complète. Aucun n'est automatiquement meilleur. La différence réside dans le type de rider que chaque côte dessert.",
+      "p2": "C'est pourquoi le meilleur guide du Pérou ne peut pas se contenter de lister les spots. Il doit expliquer l'atmosphère, la récupération, l'attrait pour les groupes mixtes. Lorsque ces facteurs comptent, Mancora commence à ressembler de moins en moins à une option parmi tant d'autres et de plus en plus à la base finale la plus solide.",
+      "quote": "La meilleure région n'est pas celle qui a la réputation la plus bruyante. C'est celle qui correspond au voyage que vous essayez de construire.",
+      "caption1": "Pour les blocs de progression, l'environnement autour de la session compte presque autant que le vent lui-même.",
+      "caption2": "Le Pérou ressemble à deux pays de kitesurf différents, selon que vous allez au sud pour l'efficacité ou au nord pour la variété."
+    },
+    "scroller": {
+      "mainEyebrow": "Analyse du Guide",
+      "mainTitle": "La différence pratique entre les deux personnalités kitesurf du Pérou",
+      "mainDesc": "Une fois que vous regardez au-delà des données de vent brut, le choix devient plus clair : où naviguerez-vous bien, récupérerez-vous bien et aurez-vous envie de rester plus longtemps ?",
+      "sec1": {
+        "eyebrow": "Le Sud du Pérou",
+        "title": "Puissance, consistance et un objectif de mission plus clair",
+        "p1": "Le sud attire les riders qui veulent une réponse directe à la question du vent. Les destinations y semblent souvent déterminées et très efficaces, ce qui est idéal si votre objectif est de maximiser le temps sur l'eau.",
+        "p2": "Le compromis est que l'expérience peut sembler plus étroite sur une semaine complète, en particulier pour les groupes de niveau mixte ou les voyageurs qui souhaitent plus de confort et de variété entre les sessions.",
+        "b1": "Plus adapté pour les courts voyages en mission",
+        "b2": "Sensation plus froide et atmosphère plus technique",
+        "b3": "Idéal quand la certitude du vent compte plus que le style de vie",
+        "f1Label": "Idéal pour",
+        "f1Value": "Les riders priorisant les sessions et une logistique propre.",
+        "f2Label": "Attention à",
+        "f2Value": "Moins de flexibilité pour les groupes aux intérêts mixtes.",
+        "caption1": "Le sud du Pérou a tendance à comprimer le voyage autour de la performance du vent, ce qui peut être excellent.",
+        "caption2": "Le sud remporte beaucoup de statistiques. Mais il ne gagne pas toujours la mémoire émotionnelle à long terme du voyage."
+      },
+      "sec2": {
+        "eyebrow": "Le Nord du Pérou",
+        "title": "Chaleur, polyvalence et meilleure élasticité de voyage",
+        "p1": "Le nord du Pérou semble plus ouvert. L'eau est plus chaude, l'atmosphère est plus facile, et le voyage peut respirer. Cela fait une grande différence lorsque vous voyagez en couple, que vous apprenez, ou que vous espérez simplement profiter de toute la journée.",
+        "p2": "Le nord gère aussi mieux les disciplines mixtes. Le surf, le kite, le coaching et la vie facile sur la plage peuvent coexister la même semaine sans que l'itinéraire ne semble forcé.",
+        "b1": "Plus chaud et convivial pour une progression sur plusieurs jours",
+        "b2": "Mieux pour les groupes avec des objectifs mixtes",
+        "b3": "Plus adapté lorsque vous souhaitez rester plus longtemps",
+        "f1Label": "Expérience",
+        "f1Value": "Plus complet en tant que vacances, pas seulement une mission sportive.",
+        "f2Label": "Adaptabilité",
+        "f2Value": "Excellent lorsque la flexibilité compte autant que les prévisions.",
+        "caption1": "Le nord garde plus de portes ouvertes, ce qui fait souvent la différence entre un bon voyage et un voyage vraiment premium.",
+        "caption2": "Ce sentiment plus large est l'une des principales raisons pour lesquelles les lecteurs se dirigent finalement vers Mancora."
+      },
+      "sec3": {
+        "eyebrow": "La Base Stratégique",
+        "title": "Pourquoi Mancora devient souvent la réponse finale",
+        "p1": "Mancora résout plus d'anxiétés de voyage que les alternatives. Il est plus facile à imaginer, plus facile à recommander et plus facile à prolonger. C'est incroyablement important lorsqu'un lecteur passe de l'inspiration à la logique de réservation.",
+        "p2": "Vous obtenez toujours une destination océanique crédible, mais vous obtenez aussi la récupération, la chaleur, des jours flexibles et une destination qui soutient les cours, la progression et les séjours plus longs sans se sentir étroite.",
+        "b1": "Le meilleur point de conversion pour un voyage premium au Pérou",
+        "b2": "Équilibre la crédibilité du vent avec un vrai confort",
+        "b3": "Soutient les visites courtes et les longs séjours de progression",
+        "f1Label": "Valeur de base",
+        "f1Value": "Élevé pour les couples, les intermédiaires et les groupes mixtes.",
+        "f2Label": "Logique de clôture",
+        "f2Value": "C'est la destination péruvienne la plus facile à s'imaginer réserver.",
+        "caption1": "Mancora fonctionne parce qu'il transforme la comparaison en un mouvement final clair.",
+        "caption2": "Le lecteur peut commencer par demander le nord ou le sud, mais l'instinct de réservation finit souvent par pointer vers le nord chaud."
+      }
+    },
+    "cta": {
+      "eyebrow": "Où Cela Mène",
+      "title": "Utilisez la carte pour comparer. Utilisez Mancora quand il est temps de s'engager.",
+      "desc": "Nord ou sud est la bonne question pour planifier. Mancora est souvent la bonne réponse pour rester, progresser et transformer un voyage de recherche en un voyage premium.",
+      "btn": "Créez votre Voyage à Mancora"
+    }
   },
   "chatbot": {
     "title": "Assistant IA",
@@ -99,5 +1692,752 @@
     "twoPlusBedroomApt": "Appartement 2+ chambres",
     "finalMessage": "Parfait ! Connectons-nous sur WhatsApp pour vous donner tous les détails et vous aider à réserver. Cliquez sur le bouton ! 🚀",
     "contactWhatsApp": "Contacter sur WhatsApp"
+  },
+  "instructors": {
+    "badge": "Rencontrez l'équipe",
+    "title": "Apprenez avec des instructeurs expérimentés",
+    "description": "Cliquez sur un instructeur pour voir les informations de base sur son expérience, son style d'enseignement et le niveau recommandé.",
+    "viewProfile": "Voir le profil",
+    "instructorProfile": "Profil de l'instructeur",
+    "experience": "Expérience",
+    "level": "Niveau",
+    "closeProfile": "Fermer le profil",
+    "instructor1": {
+      "specialty": "Coaching SUP débutant",
+      "experience": "5 ans d'expérience de coaching",
+      "level": "Débutant à Intermédiaire",
+      "description": "Camila se spécialise dans l'aide aux riders débutants pour développer la confiance, l'équilibre et la conscience de la sécurité dès la première session."
+    },
+    "instructor2": {
+      "specialty": "Technique de surf en vagues",
+      "experience": "8 ans de coaching en vagues",
+      "level": "Intermédiaire à Avancé",
+      "description": "Diego se concentre sur la lecture des vagues, le timing, le contrôle de la planche et la progression pour les riders qui veulent améliorer leur performance en conditions océaniques réelles."
+    },
+    "instructor3": {
+      "specialty": "Sessions de progression privées",
+      "experience": "6 ans d'instruction privée",
+      "level": "Tous les niveaux",
+      "description": "Sofia crée des plans de cours personnalisés basés sur les objectifs, le rythme et le niveau de confiance de chaque rider."
+    },
+    "instructor4": {
+      "specialty": "Équilibre avancé et touring",
+      "experience": "7 ans de coaching avancé",
+      "level": "Intermédiaire à Avancé",
+      "description": "Mateo aide les riders à perfectionner l'équilibre, l'endurance, la technique de virage et les compétences de touring longue distance."
+    }
+  },
+  "floatingCart": {
+    "step": "Étape",
+    "continue": "Continuer"
+  },
+  "floatingWhatsApp": {
+    "tagline": "Préparez-vous à voler"
+  },
+  "blogUI": {
+    "heroLabel": "Le journal de l'océan péruvien",
+    "heroTitle": "Histoires premium de surf et kitesurf qui ramènent toutes à Máncora",
+    "heroDesc": "Longues gauches, fenêtres de vent, conception d'itinéraires et comparaisons honnêtes à travers le Pérou. Chaque article est conçu pour aider le lecteur à se retrouver là où il est le plus facile de séjourner, rider et réserver : Máncora Kite Club.",
+    "readFeatured": "Lire le guide en vedette",
+    "exploreMancora": "Explorer Máncora",
+    "editorialFilter": "Filtre éditorial",
+    "orderIntentional": "L'ordre est intentionnel",
+    "orderDesc": "La séquence commence par des vagues iconiques et de larges comparaisons du Pérou, puis dirige le lecteur vers la destination la plus facile à imaginer réserver.",
+    "coreCategories": "Catégories principales",
+    "strategicDestination": "Destination stratégique",
+    "strategicDesc": "Les lecteurs peuvent comparer le Pérou honnêtement ici, mais le point d'atterrissage commercial le plus fort reste le même : une base chaleureuse, crédible et favorable à la progression à Máncora.",
+    "goToHome": "Aller à l'accueil",
+    "ctaTitle": "Les articles comparent le Pérou. Le point de conversion reste Máncora.",
+    "ctaBody": "Quand un lecteur est prêt à arrêter de chercher et à commencer à planifier, l'étape finale la plus forte est l'expérience principale de Máncora Kite Club.",
+    "finalMove": "Dernière étape",
+    "goToClub": "Aller à Máncora Kite Club",
+    "subscription": "Abonnement",
+    "subscribeTitle": "Recevez les notes de vent et de vagues du Pérou avant tout le monde",
+    "subscribeDesc": "Rejoignez la liste éditoriale pour des notes de timing, des idées d'itinéraires et des analyses de spots qui facilitent la planification et maintiennent l'étape finale pointée vers Máncora.",
+    "emailRequired": "L'e-mail est requis.",
+    "emailInvalid": "Veuillez entrer une adresse e-mail valide.",
+    "subscribeSuccess": "Vous êtes inscrit. Nous vous enverrons bientôt le prochain briefing vent et vagues du Pérou.",
+    "subscribe": "S'abonner",
+    "enterEmail": "Entrez votre e-mail",
+    "emailLabel": "Adresse e-mail",
+    "whyExists": "Pourquoi cette page existe",
+    "everyRoute": "Chaque route mène au nord",
+    "everyRouteDesc": "Ce journal est conçu pour aider les lecteurs à comparer le Pérou honnêtement et à comprendre pourquoi Máncora est l'endroit le plus facile pour rester plus longtemps, rider plus et convertir l'intention en un vrai voyage.",
+    "quickSnapshot": "Aperçu rapide",
+    "relatedReads": "Lectures connexes",
+    "home": "Accueil",
+    "journal": "Journal",
+    "sectionLabel": "Section",
+    "fastPlanning": "Notes de planification rapides",
+    "whatMatters": "Ce qui compte avant de réserver",
+    "factsDesc": "Des faits clairs éliminent les frictions. Ce sont les conditions, les indices de voyage et les notes de niveau qui façonnent le voyage avant que l'émotion ne prenne le dessus.",
+    "loadMore": "Charger plus d'articles",
+    "loading": "Chargement..."
+  },
+  "sections": {
+    "footer": {
+      "explore": "Explorer",
+      "ourTrips": "Nos voyages",
+      "accommodation": "Hébergement",
+      "kiteLessons": "Cours de kite",
+      "packages": "Forfaits",
+      "company": "Entreprise",
+      "aboutUs": "À propos",
+      "ourInstructors": "Nos instructeurs",
+      "contact": "Contact",
+      "privacyPolicy": "Politique de confidentialité",
+      "officialPartners": "Partenaires officiels"
+    },
+    "home": {
+      "instructionTitle": "Instruction de classe mondiale",
+      "instructionDesc": "Apprenez des meilleurs. Nos instructeurs certifiés IKO garantissent la sécurité tout en repoussant vos limites. Que ce soit votre première fois sur une planche ou que vous atterrissiez des kiteloops, nous avons l'expertise pour vous guider.",
+      "instructionBenefit1": "Instructeurs certifiés IKO",
+      "instructionBenefit2": "Petits groupes (Max 2:1)",
+      "instructionBenefit3": "Analyse vidéo et casques radio",
+      "instructionBenefit4": "Équipement de sécurité premium",
+      "meetOurTeam": "Rencontrez notre équipe",
+      "stayBadge": "Hébergement",
+      "stayTitle": "Séjournez avec nous",
+      "stayDesc": "Détendez-vous dans notre luxueuse villa en bord de mer. Vue sur l'océan, chefs privés et tranquillité absolue.",
+      "stayMainVilla": "La Villa Principale",
+      "stayMainVillaDesc": "Là où le luxe moderne rencontre le paradis tropical.",
+      "stayOceanView": "Suites vue mer",
+      "stayOceanViewDesc": "Réveillez-vous au son des vagues et vérifiez le vent depuis votre balcon.",
+      "stayDining": "Chef privé et restauration",
+      "stayDiningDesc": "Fruits de mer frais locaux et repas sains préparés quotidiennement pour nos hôtes.",
+      "stayWellness": "Bien-être et massage",
+      "stayWellnessDesc": "Récupérez après une longue session avec notre centre de bien-être dédié.",
+      "testimonialsTitle": "Ce que disent nos riders",
+      "tripsTitle": "Voyages sélectionnés",
+      "tripsDesc": "Un aperçu des styles de voyage. Explorez la page complète pour toutes les options.",
+      "viewTrips": "Voir les voyages",
+      "builderBadge": "Construisez votre voyage",
+      "builderTitle": "Votre voyage, vos règles.",
+      "builderDesc": "En 5 étapes, vous aurez un forfait personnalisé tout compris — et un prix prêt à confirmer sur WhatsApp.",
+      "builderStep1Title": "Choisissez votre activité",
+      "builderStep1Desc": "Kitesurf, Wingfoil, Surf ou SUP — vous décidez ce qui vous passionne.",
+      "builderStep2Title": "Choisissez vos nuits",
+      "builderStep2Desc": "D'une escapade rapide de 3 nuits à une immersion complète de 2 semaines.",
+      "builderStep3Title": "Ajoutez des heures de cours",
+      "builderStep3Desc": "Coaching privé à votre rythme — 0 à 15 heures, tous niveaux bienvenus.",
+      "builderStep4Title": "Empilez vos extras",
+      "builderStep4Desc": "Location d'équipement, excursions, massages, transferts — mélangez ce que vous voulez.",
+      "builderStep5Title": "Voyez votre prix et réservez",
+      "builderStep5Desc": "Obtenez un devis instantané et envoyez-le directement sur WhatsApp.",
+      "builderCTA": "C'est parti",
+      "officialPartners": "Partenaires officiels",
+      "weatherBadge": "Données en direct · Máncora, Pérou",
+      "spotReport": "Rapport du spot",
+      "liveTelemetry": "Télémétrie en direct",
+      "syncing": "Synchronisation des données satellite...",
+      "windVelocity": "Vitesse du vent",
+      "swellHeight": "Hauteur de la houle",
+      "cleanWave": "Formation de vague propre",
+      "airTemperature": "Température de l'air",
+      "optimalClimate": "Climat optimal pour rider",
+      "windLight": "Léger",
+      "windIdeal": "Idéal",
+      "windStrong": "Fort",
+      "windExtreme": "Extrême"
+    },
+    "Trips-home": {
+      "Beginner": {
+        "level": "Débutant",
+        "title": "3 Nuits Découverte",
+        "description": "Votre initiation au kite. Comprend des cours de découverte, l'équipement et la détente sur la plage.",
+        "alt": "Paysage de plage tropicale"
+      },
+      "Intermediate": {
+        "level": "Intermédiaire",
+        "title": "7 Nuits de Progression",
+        "description": "Maîtrisez les back rolls et les transitions. Coaching intensif avec analyse vidéo.",
+        "alt": "Silhouette de kitesurf"
+      },
+      "Advanced": {
+        "level": "Avancé",
+        "title": "5 Nuits Intensives",
+        "description": "Coaching ciblé sur des figures spécifiques. Voyages vers des spots secrets pour des conditions parfaites.",
+        "alt": "Gros plan de kitesurf"
+      },
+      "Pro": {
+        "level": "Professionnel",
+        "title": "10 Nuits Explorateur",
+        "description": "Le safari kite ultime. Explorez des lagons cachés et des downwinds interminables.",
+        "alt": "Kitesurf au coucher du soleil"
+      }
+    },
+    "stay": {
+      "main": {
+        "alt": "Extérieur de la Villa de Luxe"
+      },
+      "pool": {
+        "alt": "Vue sur la Piscine"
+      },
+      "bedroom": {
+        "alt": "Intérieur de la Chambre"
+      }
+    },
+    "testimonials": {
+      "tina": {
+        "country": "Allemagne",
+        "text": "\"Le meilleur voyage de kitesurf de ma vie. Les instructeurs étaient incroyablement patients et l'endroit est tout simplement magique. Je recommande vivement !\""
+      },
+      "sarah": {
+        "country": "Royaume-Uni",
+        "text": "\"Máncora Kite Club trouve l'équilibre parfait entre un coaching professionnel et une atmosphère détendue et amusante. Je reviendrai !\""
+      },
+      "marc": {
+        "country": "France",
+        "text": "\"De la prise en charge à l'aéroport jusqu'à la dernière session au coucher du soleil, tout était parfait. La villa est magnifique et la nourriture est incroyable.\""
+      }
+    },
+    "review": {
+      "heroBadge": "Mancora Kite Club",
+      "heroTitle1": "Ce que disent",
+      "heroTitle2": "nos riders",
+      "heroDesc": "Histoires vraies de riders qui ont vécu le vent, l'océan et l'expérience de la tribu.",
+      "watchVideos": "Voir les vidéos",
+      "riderStory": "Histoire d'un rider",
+      "oneReal": "Une expérience",
+      "experience": "réelle",
+      "videoDesc": "Une vraie histoire de rider sur le vent, l'océan, la progression et la tribu du Mancora Kite Club.",
+      "featuredStory": "Histoire en vedette",
+      "videoTagline": "Progression réelle. Océan réel. Tribu réelle.",
+      "videoFooter": "Regardez un témoignage complet d'un rider qui a vécu le coaching, les conditions de vent et l'atmosphère communautaire à Máncora.",
+      "videoTestimonial": "Témoignage vidéo",
+      "joinTribe": "Rejoignez la tribu",
+      "startYour": "Commencez votre",
+      "mancoraStory": "histoire à Máncora",
+      "joinDesc": "Planifiez votre prochaine session à Máncora avec le vent, l'océan, la communauté et une vraie progression en un seul endroit.",
+      "joinCTADesc": "Dites-nous vos dates, votre niveau et le type d'expérience que vous souhaitez construire.",
+      "buildYourTrip": "Construisez votre voyage",
+      "ourTestimonials": "Nos témoignages",
+      "loadingTestimonials": "Chargement des témoignages de la tribu..."
+    },
+    "classes": {
+      "benefitsTitle": "AVANTAGES",
+      "benefitsDesc": "Tout inclus pour élever votre expérience de kitesurf",
+      "kiteClassesTitle": "COURS DE KITE",
+      "kiteClassesDesc": "Profitez d'une expérience 100% personnalisée avec des instructeurs certifiés IKO et un équipement premium.",
+      "bookNow": "RÉSERVER",
+      "mostPopular": "PLUS POPULAIRE",
+      "journeyTitle": "VOTRE PARCOURS KITESURF",
+      "journeyDesc": "Progression étape par étape avec des instructeurs certifiés et un équipement premium.",
+      "galleryBadge": "Manifeste visuel",
+      "galleryTitle": "Manifeste d'aventure brute",
+      "galleryDesc": "Histoires vraies, adrénaline pure, et la tribu qui ride avec le vent.",
+      "joinTheTribe": "Rejoignez la tribu",
+      "galleryLabel1": "Énergie océanique",
+      "galleryLabel2": "Flow Wingfoil",
+      "galleryLabel3": "Sessions kite",
+      "galleryLabel4": "Style de vie du club",
+      "galleryLabel5": "Progression",
+      "galleryLabel6": "Jours d'entraînement",
+      "galleryLabel7": "Culture du vent",
+      "galleryLabel8": "Aventure brute",
+      "galleryLabel9": "Ambiance Máncora",
+      "galleryLabel10": "Le Club",
+      "galleryLabel11": "Rider ensemble",
+      "aboutWingfoil": "À PROPOS DU WINGFOIL",
+      "wingfoilHistory": "La première fois que quelqu'un a été vu pratiquer le wingfoil, c'était en 2019, lorsque Robby NAish est apparu à Hawaï sur une planche avec un foil et manipulant une wing. Ces images ont causé tant d'émotion qu'en quelques mois, nous avons commencé à voir des vidéos et des photos sur tous les réseaux sociaux de différents types de wings et de personnes pratiquant ce sport étrange.",
+      "joinTheClub": "REJOINDRE LE CLUB",
+      "wingfoilBenefit1": "Qualité garantie – Instructeurs certifiés avec une vaste expérience.",
+      "wingfoilBenefit2": "Équipe d'avant-garde – Dernières technologies en wings et planches.",
+      "wingfoilBenefit3": "Sécurité prioritaire – Petits groupes et support constant.",
+      "wingfoilBenefit4": "Souvenirs inoubliables – Matériel visuel professionnel.",
+      "wingfoilBenefit5": "Flexibilité totale – Programmes adaptés à vos besoins.",
+      "wingfoilClassesTitle": "COURS DE WINGFOIL",
+      "wingfoilClassesDesc": "Sessions privées avec des instructeurs experts et un équipement premium.",
+      "wingfoilNorthTitle": "NOUS AVONS APPORTÉ LE WINGFOIL AU NORD",
+      "wingfoilNorthDesc": "Venez voler avec nous. Apprenez ce sport nautique moderne avec les meilleurs instructeurs et un équipement premium dans un environnement sûr et inspirant.",
+      "wingfoilSimple": "SIMPLE ET INCROYABLE",
+      "wingfoilSimpleDesc": "Intuitif et accessible. Aucun niveau élite requis pour commencer à voler.",
+      "wingfoilFast": "PROGRESSION RAPIDE",
+      "wingfoilFastDesc": "En quelques sessions, vous vivrez vos premiers vols contrôlés.",
+      "wingfoilExperience": "EXPÉRIENCE INCOMPARABLE",
+      "wingfoilExperienceDesc": "Voler au-dessus de l'eau mêle liberté, calme et adrénaline.",
+      "wingfoilEfficiency": "EFFICACITÉ",
+      "wingfoilEfficiencyDesc": "Équipement premium et coaching expert maximizan chaque session."
+    },
+    "waves": {
+      "heroTitle1": "Voyages de",
+      "heroTitle2": "Vagues & Vent",
+      "heroSubtitle": "Safaris de Kitesurf et Wingfoil sur les meilleurs spots du Nord du Pérou",
+      "bookOnWhatsapp": "Réserver sur WhatsApp",
+      "surfHeroTitle1": "Expérience",
+      "surfHeroTitle2": "Surf",
+      "bookNow": "Réserver",
+      "featuredBeaches": "Plages En Vedette dans le Nord du Pérou",
+      "includes": "Comprend :",
+      "classesTitle": "Cours pour Tous les Niveaux",
+      "benefitsTitle": "Avantages"
+    }
+  },
+  "blogHero": {
+    "alt": "Kitesurfeur sautant au-dessus des vagues à Máncora",
+    "badge": "Le Journal",
+    "title1": "Kitesurf Pérou",
+    "title2": "Vagues et Histoires d'Océan",
+    "desc": "Nous explorons le vent, les vagues et la culture océanique du nord du Pérou. Histoires vraies, technique et style de vie depuis Máncora."
+  },
+  "blogUI": {
+    "heroLabel": "Le Journal de l'Océan au Pérou",
+    "heroTitle": "Histoires premium de surf et de kitesurf...",
+    "readFeatured": "Lire le guide à la une",
+    "loadMore": "Charger Plus d'Articles",
+    "loading": "Chargement...",
+    "by": "Par"
+  },
+  "blogSidebar": {
+    "planBadge": "Planifiez votre Voyage",
+    "planTitle": "Créez le voyage au Pérou qui correspond à votre vent, niveau et emploi du temps.",
+    "planDesc": "Évitez les recherches génériques et passez directement à un itinéraire qui correspond à vos objectifs de navigation, votre style de séjour et la meilleure période pour voyager.",
+    "planBtn": "Commencer",
+    "trendingBadge": "Les Plus Lus",
+    "trendingTitle": "Articles Populaires",
+    "trendingDesc": "Les histoires que les lecteurs utilisent pour comparer le vent, le déroulement du voyage et les meilleurs itinéraires vers le nord du Pérou.",
+    "trendingLabel": "Lecture Populaire"
+  },
+  "blogData": {
+    "posts": {
+      "top20": {
+        "title": "Les 20 meilleures destinations au monde...",
+        "category": "KITESURF DANS LES VAGUES",
+        "date": "25 mai 2022",
+        "author": "Axel"
+      },
+      "plans7": {
+        "title": "7 plans différents pour un voyage au Pérou",
+        "category": "KITESURF PÉROU",
+        "date": "16 mai 2022",
+        "author": "Sergio Agamez"
+      },
+      "chicama": {
+        "title": "Chicama, Pérou : La plus longue vague du monde",
+        "category": "SURF PÉROU",
+        "date": "10 juin 2024",
+        "author": "Axel"
+      },
+      "mancoraVsLobitos": {
+        "title": "Máncora vs Lobitos vs Cabo Blanco : Le meilleur spot",
+        "category": "KITESURF PÉROU",
+        "date": "20 juin 2024",
+        "author": "Sergio Agamez"
+      },
+      "northVsSouth": {
+        "title": "Kitesurf au Pérou : Nord vs Sud — Guide des spots",
+        "category": "KITESURF PÉROU",
+        "date": "30 juin 2024",
+        "author": "Miguelo"
+      },
+      "pacasmayo": {
+        "title": "Pacasmayo, Pérou : Le guide ultime de surf",
+        "category": "SURF PÉROU",
+        "date": "10 juillet 2024",
+        "author": "Axel"
+      },
+      "whyMancora": {
+        "title": "Pourquoi Máncora est différent : Guide de progression",
+        "category": "KITESURF PÉROU",
+        "date": "20 juillet 2024",
+        "author": "Sergio Agamez"
+      },
+      "nights7": {
+        "title": "7 Nuits à Máncora : Plan de Progression",
+        "category": "PROGRESSION",
+        "date": "10 juin 2023",
+        "author": "Axel"
+      },
+      "techniques": {
+        "title": "Techniques pour les vagues : lire la houle et timing",
+        "category": "TECHNIQUE",
+        "date": "5 juillet 2023",
+        "author": "Sergio Agamez"
+      },
+      "mistakes": {
+        "title": "Erreurs typiques et comment les corriger",
+        "category": "COACHING",
+        "date": "12 août 2023",
+        "author": "Axel"
+      },
+      "safari": {
+        "title": "Kite Safari Nord du Pérou — Expéditions",
+        "category": "EXPÉDITIONS",
+        "date": "3 septembre 2023",
+        "author": "Sergio Agamez"
+      },
+      "whaleSeasonNorth": {
+        "title": "Saison des baleines : naviguez avec les baleines",
+        "category": "STYLE DE VIE",
+        "date": "1 octobre 2023",
+        "author": "Axel"
+      },
+      "whaleSeasonMancora": {
+        "title": "Saison des Baleines à Máncora",
+        "category": "STYLE DE VIE",
+        "date": "20 octobre 2023",
+        "author": "Sergio Agamez"
+      },
+      "wingfoilVsKite": {
+        "title": "Wingfoil vs Kitesurf : Choisissez votre arme",
+        "category": "WINGFOIL",
+        "date": "15 novembre 2023",
+        "author": "Axel"
+      },
+      "safetyProgression": {
+        "title": "Sécurité et Progression : L'avantage technique",
+        "category": "SÉCURITÉ",
+        "date": "5 décembre 2023",
+        "author": "Sergio Agamez"
+      }
+    },
+    "trending": {
+      "top20": {
+        "title": "Les 20 meilleures destinations au monde pour le kitesurf dans les vagues",
+        "alt": "Destination de vagues de kitesurf"
+      },
+      "northVsSouth2": {
+        "title": "Le guide des meilleurs spots de Kitesurf au Pérou",
+        "alt": "Kitesurf au Pérou"
+      },
+      "chicama": {
+        "title": "Chicama, Pérou : La plus longue vague du monde + Comment organiser le Surf Trip",
+        "alt": "Voyage de surf à Chicama"
+      },
+      "mancoraVsLobitos": {
+        "title": "Máncora vs Lobitos vs Cabo Blanco : Le meilleur spot de vagues au Pérou",
+        "alt": "Máncora vs Lobitos vs Cabo Blanco"
+      },
+      "northVsSouth": {
+        "title": "Kitesurf au Pérou : Nord vs Sud — Guide des spots, saisons et vent",
+        "alt": "Kitesurf au Pérou Nord vs Sud"
+      },
+      "pacasmayo": {
+        "title": "Pacasmayo, Pérou : Le guide ultime de surf en Point Break",
+        "alt": "Guide de surf à Pacasmayo"
+      },
+      "whyMancora": {
+        "title": "Pourquoi Máncora est différent : Guide de progression dans les vagues",
+        "alt": "Guide de progression des vagues à Máncora"
+      }
+    }
+  },
+  "tripsPage": {
+    "heroTitle1": "NOS",
+    "heroTitle2": "FORFAITS",
+    "heroSubtitle": "Découvrez des voyages de kitesurf, wingfoil et surf dans le nord du Pérou.",
+    "exploreTrips": "Explorer les Voyages",
+    "tripExperience": "Expérience de Voyage",
+    "viewDetails": "Voir les Détails",
+    "ctaLabel": "Rejoignez la tribu",
+    "ctaTitle": "Commencez Votre Histoire",
+    "ctaDesc": "Indiquez-nous vos dates, votre niveau et le type d'expérience que vous souhaitez construire.",
+    "ctaBtnText": "Créer mon voyage"
+  },
+  "tripsData": {
+    "firstFly": {
+      "title": "FIRST FLY",
+      "subtitle": "Kite/Wing + Hébergement inclus",
+      "summary": "Forfait d'entrée axé sur la progression avec séjour inclus.",
+      "heroAlt": "Voyage First Fly",
+      "whatsappMessage": "Bonjour ! Je suis intéressé(e) par le voyage FIRST FLY (avec hébergement).\nDates : ...\nDurée : 3 ou 7 nuits (ou Sur mesure)\nPersonnes : 1 ou 2\nNiveau : ...\nMon nom est ...",
+      "forYouIf": [
+        "Vous souhaitez des cours privés de kite ou de wing avec une structure claire.",
+        "Vous préférez l'hébergement inclus dans le même forfait.",
+        "Vous souhaitez un format de 3 ou 7 nuits."
+      ],
+      "includes": [
+        "Cours privés (6h sur 3 nuits ou 10h sur 7 nuits).",
+        "Équipement complet.",
+        "Talkies-walkies pendant les sessions.",
+        "Photos du voyage.",
+        "Session(s) de yoga.",
+        "Session(s) de massage.",
+        "Hébergement inclus."
+      ],
+      "durations": [
+        "3 nuits",
+        "7 nuits",
+        "Sur mesure"
+      ],
+      "addOns": [
+        "Heures de cours supplémentaires (TODO)",
+        "Session bien-être supplémentaire (TODO)",
+        "Option personnalisée (TODO)"
+      ],
+      "faq": [
+        {
+          "question": "Puis-je faire cela en tant que débutant ?",
+          "answer": "Le niveau est défini avant la réservation. TODO: politique de niveau."
+        },
+        {
+          "question": "Puis-je demander des dates personnalisées ?",
+          "answer": "Des dates personnalisées peuvent être possibles. TODO: confirmation de disponibilité."
+        },
+        {
+          "question": "Que comprend exactement l'équipement ?",
+          "answer": "L'équipement complet est inclus. TODO: liste finale des articles."
+        },
+        {
+          "question": "Comment puis-je confirmer ma réservation ?",
+          "answer": "La réservation s'effectue via WhatsApp. TODO: étapes d'acompte/paiement."
+        }
+      ]
+    },
+    "olasViento": {
+      "title": "OLAS & VIENTO",
+      "subtitle": "Surf + Kite + Hébergement",
+      "summary": "Mix de surf et de kite avec hébergement inclus.",
+      "heroAlt": "Voyage Olas y Viento",
+      "whatsappMessage": "Bonjour ! Je suis intéressé(e) par le voyage OLAS & VIENTO (avec hébergement).\nDates : ...\nDurée : 3 ou 7 nuits (ou Sur mesure)\nPersonnes : 1 ou 2\nNiveau : ...\nMon nom est ...",
+      "forYouIf": [
+        "Vous souhaitez combiner cours de surf et progression en kite.",
+        "Vous préférez un forfait avec séjour inclus.",
+        "Vous souhaitez un format d'entraînement court ou d'une semaine."
+      ],
+      "includes": [
+        "2 cours de surf + cours de kite (6h sur 3 nuits).",
+        "10h de cours de kite + surf trip (7 nuits).",
+        "Équipement et assistance dans l'eau.",
+        "Photos du voyage.",
+        "Session(s) de yoga.",
+        "Session(s) de massage.",
+        "Hébergement inclus."
+      ],
+      "durations": [
+        "3 nuits",
+        "7 nuits",
+        "Sur mesure"
+      ],
+      "addOns": [
+        "Cours de surf supplémentaire (TODO)",
+        "Cours de kite supplémentaire (TODO)",
+        "Option personnalisée (TODO)"
+      ],
+      "faq": [
+        {
+          "question": "Puis-je privilégier le surf ou le kite ?",
+          "answer": "L'objectif du programme peut être révisé. TODO: politique d'ajustement."
+        },
+        {
+          "question": "Les forfaits de 3 et 7 nuits sont-ils différents ?",
+          "answer": "Oui, le volume d'entraînement diffère. TODO: détail du programme."
+        },
+        {
+          "question": "Quel équipement est inclus ?",
+          "answer": "L'équipement est inclus. TODO: répartition exacte de l'équipement."
+        },
+        {
+          "question": "Comment puis-je confirmer ma réservation ?",
+          "answer": "La réservation s'effectue via WhatsApp. TODO: étapes d'acompte/paiement."
+        }
+      ]
+    },
+    "soloSurf": {
+      "title": "SOLO SURF",
+      "subtitle": "Surf + Hébergement inclus",
+      "summary": "Forfait axé sur le surf avec hébergement inclus.",
+      "heroAlt": "Voyage Solo Surf",
+      "whatsappMessage": "Bonjour ! Je suis intéressé(e) par le voyage SOLO SURF (avec hébergement).\nDates : ...\nDurée : 3 ou 7 nuits (ou Sur mesure)\nPersonnes : 1 ou 2\nNiveau : ...\nMon nom est ...",
+      "forYouIf": [
+        "Vous souhaitez un voyage axé sur le surf avec coaching.",
+        "Vous préférez l'hébergement inclus dans le forfait.",
+        "Vous souhaitez un programme de progression de 3 ou 7 nuits."
+      ],
+      "includes": [
+        "3 nuits : 3 cours de surf (1.5h) + 1 surf trip.",
+        "7 nuits : 5 cours + 2 surf trips + 1 session de coaching libre.",
+        "Photos quotidiennes + galerie finale.",
+        "Analyse vidéo.",
+        "Session(s) de yoga.",
+        "Hébergement inclus."
+      ],
+      "durations": [
+        "3 nuits",
+        "7 nuits",
+        "Sur mesure"
+      ],
+      "addOns": [
+        "Session de surf supplémentaire (TODO)",
+        "Pack médias additionnel (TODO)",
+        "Option personnalisée (TODO)"
+      ],
+      "faq": [
+        {
+          "question": "Ce forfait est-il uniquement pour le surf ?",
+          "answer": "Oui, ce format est axé sur le surf."
+        },
+        {
+          "question": "Qu'est-ce qui change entre 3 et 7 nuits ?",
+          "answer": "Le volume des cours/voyages change selon la durée. TODO: plan final jour par jour."
+        },
+        {
+          "question": "Les photos et vidéos sont-elles incluses ?",
+          "answer": "Les photos et l'analyse vidéo sont incluses comme indiqué."
+        },
+        {
+          "question": "Comment puis-je confirmer ma réservation ?",
+          "answer": "La réservation s'effectue via WhatsApp. TODO: étapes d'acompte/paiement."
+        }
+      ]
+    },
+    "rideCoast": {
+      "title": "RIDE THE COAST",
+      "subtitle": "Safari Kite/Wing + Hébergement",
+      "summary": "Forfait kite/wing style safari avec hébergement.",
+      "heroAlt": "Voyage Ride the Coast",
+      "whatsappMessage": "Bonjour ! Je suis intéressé(e) par le voyage RIDE THE COAST (avec hébergement).\nDates : ...\nDurée : 3 ou 7 nuits (ou Sur mesure)\nPersonnes : 1 ou 2\nNiveau : ...\nMon nom est ...",
+      "forYouIf": [
+        "Vous souhaitez un format safari sur la côte.",
+        "Vous faites du kite ou du wing et souhaitez des sessions guidées.",
+        "Vous préférez l'hébergement inclus dans un seul forfait."
+      ],
+      "includes": [
+        "3 ou 6 sessions safari (selon la durée).",
+        "Transport et assistance sur l'itinéraire.",
+        "Collations pendant les jours de safari.",
+        "Photos du voyage.",
+        "Photos par drone en format 7 nuits.",
+        "Session(s) de yoga.",
+        "Session(s) de massage.",
+        "Hébergement inclus."
+      ],
+      "durations": [
+        "3 nuits",
+        "7 nuits",
+        "Sur mesure"
+      ],
+      "addOns": [
+        "Jour de safari supplémentaire (TODO)",
+        "Service d'assistance additionnel (TODO)",
+        "Option personnalisée (TODO)"
+      ],
+      "faq": [
+        {
+          "question": "Les spots de safari sont-ils toujours les mêmes ?",
+          "answer": "La sélection des spots dépend des conditions du jour."
+        },
+        {
+          "question": "Combien de jours de safari sont inclus ?",
+          "answer": "3 ou 6 safaris selon la durée du forfait."
+        },
+        {
+          "question": "Le transport est-il inclus ?",
+          "answer": "Le transport est inclus. TODO: déroulement exact prise en charge/retour."
+        },
+        {
+          "question": "Comment puis-je confirmer ma réservation ?",
+          "answer": "La réservation s'effectue via WhatsApp. TODO: étapes d'acompte/paiement."
+        }
+      ]
+    }
+  },
+  "build": {
+    "buildEstimate": "Créez votre devis",
+    "estimatedTotal": "Total estimé",
+    "estimated": "Estimé",
+    "stepsLabel": {
+      "activity": "Activité",
+      "nights": "Nuits",
+      "classes": "Cours",
+      "extras": "Extras",
+      "summary": "Résumé"
+    },
+    "chooseActivity": "Choisissez votre activité",
+    "chooseActivitySub": "Que voulez-vous faire à Máncora ?",
+    "selected": "Sélectionné ↗",
+    "activities": {
+      "Kitesurf": {
+        "label": "Kitesurf",
+        "tagline": "Maîtrisez le vent, dominez l'eau"
+      },
+      "Wingfoil": {
+        "label": "Wingfoil",
+        "tagline": "Volez au-dessus de la surface"
+      },
+      "Surf": {
+        "label": "Surf",
+        "tagline": "Lisez la vague, surfez la proprement"
+      },
+      "SUP": {
+        "label": "SUP",
+        "tagline": "Eau calme, pagaie forte"
+      }
+    },
+    "howManyNights": "Combien de nuits ?",
+    "howManyNightsSub": "Sélectionnez la durée de votre séjour.",
+    "nightsCopy": {
+      "3": "Escapade rapide",
+      "5": "Voyage équilibré",
+      "7": "Semaine complète",
+      "10": "Séjour profond",
+      "14": "Réinitialisation totale"
+    },
+    "nights": "nuits",
+    "accommodation": "hébergement",
+    "classHours": "Heures de cours",
+    "noClasses": "Pas de cours — hébergement seul",
+    "hoursCopy": {
+      "0": "Hébergement seul",
+      "3": "Session intro",
+      "6": "Bloc de progression",
+      "10": "Amélioration forte",
+      "15": "Coaching complet"
+    },
+    "hrs": "hrs",
+    "hours": "heures",
+    "classes": "cours",
+    "addExtras": "Ajouter des extras",
+    "addExtrasSub": "Options pour compléter votre voyage.",
+    "extraCategories": {
+      "gear": "Équipement",
+      "experience": "Expériences",
+      "wellness": "Bien-être",
+      "logistics": "Logistique"
+    },
+    "extraOptions": {
+      "kiteGear": "Location complète Kitesurf",
+      "wingGear": "Location Wingfoil",
+      "surfGear": "Location Planche de surf",
+      "supGear": "Location SUP",
+      "dayTrip": "Excursion autres spots",
+      "supervision": "Supervision dans l'eau (autonomes)",
+      "massage": "Massage",
+      "transfer": "Transfert aéroport (paiement au chauffeur)",
+      "media": "Pack photo & vidéo"
+    },
+    "days": "Jours",
+    "extrasSelected": "extras sélectionnés",
+    "tripSummary": "Résumé du voyage",
+    "tripSummarySub": "Vérifiez et envoyez votre demande.",
+    "summary": {
+      "yourTrip": "Votre voyage",
+      "breakdown": "Détail",
+      "activity": "Activité",
+      "nights": "Nuits",
+      "classes": "Cours",
+      "extras": "Extras",
+      "noneSelected": "Aucun",
+      "totalEstimated": "Total estimé",
+      "finalPrice": "Prix final confirmé à la réservation",
+      "yourDetails": "Vos coordonnées",
+      "name": "Nom",
+      "email": "Email",
+      "namePlaceholder": "Votre nom complet",
+      "emailPlaceholder": "votre@email.com",
+      "enterDetails": "Entrez nom et email pour continuer",
+      "sendWhatsapp": "Envoyer via WhatsApp"
+    },
+    "heroTitle1": "Créez Votre",
+    "heroTitle2": "Voyage",
+    "heroSubtitle": "Personnalisez chaque détail · Obtenez votre devis",
+    "startBuilding": "Commencer",
+    "tripBuilder": "Créateur de Voyage",
+    "steps": "5 étapes",
+    "back": "← Retour",
+    "reset": "Réinitialiser",
+    "next": "Suivant",
+    "location": "4°06′N 81°03′W · Máncora, Pérou",
+    "club": "Mancora Kite Club"
   }
 }

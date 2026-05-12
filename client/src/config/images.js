@@ -118,6 +118,10 @@ const imageRegistry = Object.freeze({
   "HOSPEDAJE KITE HOUSE/DSC05016-Pano-HDR.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC05016-Pano-HDR.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/DSC09659.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC09659.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/DSC09821.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC09821.webp", import.meta.url).href,
+  "fotos comunidad/DSC05391.webp": new URL("../assets/fotos comunidad/DSC05391.webp", import.meta.url).href,
+  "fotos wingfoil/DSC00360.webp": new URL("../assets/fotos wingfoil/DSC00360.webp", import.meta.url).href,
+  "fotos clases/DSC00104.webp": new URL("../assets/fotos clases/DSC00104.webp", import.meta.url).href,
+  "fotos clases/DSC00146.webp": new URL("../assets/fotos clases/DSC00146.webp", import.meta.url).href,
 })
 
 export function resolveImage(assetPath) {
@@ -304,6 +308,22 @@ export const componentImages = Object.freeze({
     hora6: image("fotos clases/DSC05783.webp"),
     hora10: image("fotos clases/DSC05905.webp"),
     hora15: image("fotos clases/DSC05924.webp"),
+    kiteCarousel: [
+      image("fotos comunidad/DSC05391.webp"),
+      image("imagenes-kitesurfing/posicionkt7.jpg"),
+      image("imagenes-kitesurfing/posicionkt1.jpg"),
+      image("imagenes-kitsurfing-lessons/posicionk3.jpg"),
+    ],
+    wingCarousel: [
+      image("fotos wingfoil/DSC00360.webp"),
+    ],
+    surfCarousel: [
+      image("fotos clases/DSC00104.webp"),
+      image("fotos clases/DSC00146.webp"),
+    ],
+    supCarousel: [
+      image("imagenes-home/posicion3.jpg"),
+    ],
   }),
   "pages/ContactPage.jsx": Object.freeze({
     logoImg: image("LOGOS KITE CLUB/95b03a84-2865-4eda-89ae-26b332f99bb5.webp"),

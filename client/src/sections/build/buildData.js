@@ -14,7 +14,7 @@ import {
 const {
   nightcaption,
   DSC05231,
-  DSC05128Panoramica,
+  buildHeroBg,
   DSC05120HDR,
   DSC05085HDR,
   hora0,
@@ -43,7 +43,7 @@ export const ACTIVIDAD_CAROUSELS = {
 }
 
 export const NOCHES_OPTIONS = [3, 5, 7, 10, 14]
-export const NOCHES_IMAGENES = [nightcaption, DSC05231, DSC05128Panoramica, DSC05120HDR, DSC05085HDR]
+export const NOCHES_IMAGENES = [nightcaption, DSC05231, buildHeroBg.desktop, DSC05120HDR, DSC05085HDR]
 export const NOCHES_COPY_KEYS = {
   3: 'build.fastEscape',
   5: 'build.balancedTrip',

@@ -14,7 +14,7 @@ import PasoRental from '../sections/build/PasoRental.jsx'
 import PasoExtras from '../sections/build/PasoExtras.jsx'
 import PasoResumen from '../sections/build/PasoResumen.jsx'
 
-const { DSC05128Panoramica } = componentImages["pages/BuildPage.jsx"]
+const { buildHeroBg } = componentImages["pages/BuildPage.jsx"]
 
 function BuildPage() {
   const { t, currentLang } = useI18n()
@@ -69,10 +69,20 @@ Email: ${datosUsuario.email}`
         titleFallback="Build Your Trip | Máncora Kite Club"
       />
 
-      <div className="relative overflow-hidden bg-background-dark py-24 sm:py-32">
+      <div className="relative overflow-hidden bg-background-dark py-32 sm:py-48 lg:py-56">
         <div className="absolute inset-0 z-0">
-          <img src={DSC05128Panoramica} alt="" className="h-full w-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0e1b17]/80 to-[#0e1b17]" />
+          <picture>
+            <source media="(max-width: 640px)" srcSet={buildHeroBg.mobile} />
+            <motion.img
+              initial={{ scale: 1.1 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              src={buildHeroBg.desktop}
+              alt=""
+              className="h-full w-full object-cover opacity-40"
+            />
+          </picture>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0e1b17] via-[#0e1b17]/40 to-transparent" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">

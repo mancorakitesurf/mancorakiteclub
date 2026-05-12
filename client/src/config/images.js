@@ -126,6 +126,8 @@ const imageRegistry = Object.freeze({
   "fotos comunidad/IMG_4993.webp": new URL("../assets/fotos comunidad/IMG_4993.webp", import.meta.url).href,
   "fotos comunidad/DSC06099.webp": new URL("../assets/fotos comunidad/DSC06099.webp", import.meta.url).href,
   "fotos comunidad/DSC09008.webp": new URL("../assets/fotos comunidad/DSC09008.webp", import.meta.url).href,
+  "fotos mancora y mas/DSC02032.webp": new URL("../assets/fotos mancora y mas/DSC02032.webp", import.meta.url).href,
+  "fotos trip/DSC09404.webp": new URL("../assets/fotos trip/DSC09404.webp", import.meta.url).href,
 })
 
 export function resolveImage(assetPath) {
@@ -304,7 +306,10 @@ export const componentImages = Object.freeze({
     actividadSup: image("imagenes-home/posicion3.jpg"),
     nightcaption: image("HOSPEDAJE KITE HOUSE/nightcaption.webp"),
     DSC05231: image("HOSPEDAJE KITE HOUSE/DSC05231.webp"),
-    DSC05128Panoramica: image("HOSPEDAJE KITE HOUSE/DSC05128-Panorámica.webp"),
+    buildHeroBg: {
+      desktop: image("fotos trip/DSC09404.webp"),
+      mobile: image("fotos mancora y mas/DSC02032.webp"),
+    },
     DSC05120HDR: image("HOSPEDAJE KITE HOUSE/DSC05120-HDR.webp"),
     DSC05085HDR: image("HOSPEDAJE KITE HOUSE/DSC05085-HDR.webp"),
     hora0: image("fotos clases/DSC04672.webp"),

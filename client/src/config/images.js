@@ -122,6 +122,10 @@ const imageRegistry = Object.freeze({
   "fotos wingfoil/DSC00360.webp": new URL("../assets/fotos wingfoil/DSC00360.webp", import.meta.url).href,
   "fotos clases/DSC00104.webp": new URL("../assets/fotos clases/DSC00104.webp", import.meta.url).href,
   "fotos clases/DSC00146.webp": new URL("../assets/fotos clases/DSC00146.webp", import.meta.url).href,
+  "fotos comunidad/DSC02939.webp": new URL("../assets/fotos comunidad/DSC02939.webp", import.meta.url).href,
+  "fotos comunidad/IMG_4993.webp": new URL("../assets/fotos comunidad/IMG_4993.webp", import.meta.url).href,
+  "fotos comunidad/DSC06099.webp": new URL("../assets/fotos comunidad/DSC06099.webp", import.meta.url).href,
+  "fotos comunidad/DSC09008.webp": new URL("../assets/fotos comunidad/DSC09008.webp", import.meta.url).href,
 })
 
 export function resolveImage(assetPath) {
@@ -619,6 +623,12 @@ export const componentImages = Object.freeze({
     waveHeroMobile: image("fotos home/DSC07230.webp"),
     lifestyleHero: image("fotos home/DSC09510.webp"),
     beachHero: image("fotos home/DSC05908.webp"),
+  }),
+  "sections/home/Team.jsx": Object.freeze({
+    founderImg: image("fotos comunidad/DSC02939.webp"),
+    coach1: image("fotos comunidad/IMG_4993.webp"),
+    coach2: image("fotos comunidad/DSC06099.webp"),
+    coach3: image("fotos comunidad/DSC09008.webp"),
   }),
   "sections/review/HeroReview.jsx": Object.freeze({
     reviewHeroImg: image("fotos comunidad/IMG_2917.webp"),

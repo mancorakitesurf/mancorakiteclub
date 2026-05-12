@@ -4,11 +4,10 @@ import { localizePath } from '../lib/routes.js'
 import SEO from '../components/SEO.jsx'
 import BuilderPreview from '../sections/home/BuilderPreview.jsx'
 import Hero from '../sections/home/Hero.jsx'
-import Instruction from '../sections/home/Instruction.jsx'
+import OurStory from '../sections/home/OurStory.jsx'
 import Stay from '../sections/home/Stay.jsx'
 import Testimonials from '../sections/home/Testimonials.jsx'
-import InstructorsSection from '../components/InstructorsSection.jsx'
-import OurStory from '../sections/home/OurStory.jsx'
+import Team from '../sections/home/Team.jsx'
 import Trips from '../sections/home/Trips.jsx'
 import WeatherSection from '../sections/home/WeatherSection.jsx'
 import WindWidget from '../components/WindWidget.jsx'
@@ -29,9 +28,9 @@ function HomePage() {
       />
       <Hero />
       <WeatherSection />
-      <OurStory />
       <WindWidget />
-      <InstructorsSection />  
+      <OurStory />
+      <Team />
       <Trips />
       <Stay />
       <BuilderPreview />

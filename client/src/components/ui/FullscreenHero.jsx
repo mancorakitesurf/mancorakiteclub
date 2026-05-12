@@ -81,27 +81,23 @@ function normalizeSlides({ backgroundImage, backgroundAlt, imageClassName, slide
 }
 
 function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, videoSources, revealContent }) {
-  if (videoSources?.desktopSrc && videoSources?.mobileSrc) {
-    return (
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className={`absolute inset-0 z-0 ${baseImageClassName} ${imageClassName || ''}`}
-      >
-        <source src={videoSources.mobileSrc} media="(max-width: 767px)" type="video/mp4" />
-        <source src={videoSources.desktopSrc} media="(min-width: 768px)" type="video/mp4" />
-      </video>
-    )
-  }
-
   const heroSlides = normalizeSlides({
     backgroundImage,
     backgroundAlt,
     imageClassName,
     slides,
   })
+
+  // Append video as the last slide if videoSources is provided
+  if (videoSources?.desktopSrc || videoSources?.mobileSrc) {
+    heroSlides.push({
+      type: 'video',
+      desktopSrc: videoSources.desktopSrc,
+      mobileSrc: videoSources.mobileSrc || videoSources.desktopSrc,
+      alt: 'Hero video background',
+    })
+  }
+
   const swiperRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -109,8 +105,34 @@ function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, vid
     return null
   }
 
-  if (heroSlides.length === 1) {
-    const [slide] = heroSlides
+  // Helper to render media (image or video)
+  const renderSlideMedia = (slide, index) => {
+    if (slide.type === 'video') {
+      return (
+        <div className="absolute inset-0 h-full w-full">
+          {/* Desktop Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`hidden md:block absolute inset-0 h-full w-full object-cover ${slide.imageClassName || ''}`}
+          >
+            <source src={slide.desktopSrc} type="video/mp4" />
+          </video>
+          {/* Mobile Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className={`block md:hidden absolute inset-0 h-full w-full object-cover ${slide.imageClassName || ''}`}
+          >
+            <source src={slide.mobileSrc} type="video/mp4" />
+          </video>
+        </div>
+      )
+    }
 
     return (
       <picture className="absolute inset-0 z-0 block h-full w-full">
@@ -118,11 +140,16 @@ function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, vid
         <img
           src={slide.mobileSrc || slide.desktopSrc}
           alt={slide.alt}
-          fetchPriority="high"
+          loading={index === 0 ? 'eager' : 'lazy'}
+          fetchPriority={index === 0 ? 'high' : 'auto'}
           className={`${baseImageClassName} ${slide.imageClassName}`}
         />
       </picture>
     )
+  }
+
+  if (heroSlides.length === 1) {
+    return renderSlideMedia(heroSlides[0], 0)
   }
 
   return (
@@ -147,7 +174,7 @@ function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, vid
           speed={1200}
           loop
           autoplay={{
-            delay: 2000,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           onSwiper={(swiper) => {
@@ -159,16 +186,7 @@ function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, vid
         >
           {heroSlides.map((slide, index) => (
             <SwiperSlide key={`${slide.alt}-${index}`} className="!h-full">
-              <picture className="block h-full w-full">
-                <source media="(min-width: 768px)" srcSet={slide.desktopSrc} />
-                <img
-                  src={slide.mobileSrc || slide.desktopSrc}
-                  alt={slide.alt}
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  fetchPriority={index === 0 ? 'high' : 'auto'}
-                  className={`${baseImageClassName} ${slide.imageClassName}`}
-                />
-              </picture>
+              {renderSlideMedia(slide, index)}
             </SwiperSlide>
           ))}
         </Swiper>

@@ -46,12 +46,6 @@ function TripsPage() {
             alt: 'Mancora Kite Club trips',
             imageClassName: 'object-[52%_center] md:object-center',
           })}
-          actions={[
-            {
-              href: '#trip-list',
-              label: 'Explore Trips',
-            },
-          ]}
         />
 
         {/* TRIP LIST */}

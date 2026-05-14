@@ -1,4 +1,10 @@
 import { CHOICE_DATA14 } from "./introData14";
+import { resolveImage } from "../../config/images.js";
+
+const TECHNICAL_BREAKDOWN_IMAGES = [
+    resolveImage("fotos trip/DSC01083.webp"),
+    resolveImage("fotos wingfoil/DSC00021.webp"),
+];
 
 function TechnicalBreakdownKite() {
     return (
@@ -8,7 +14,7 @@ function TechnicalBreakdownKite() {
                     <div key={i} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${factor.isReversed ? 'lg:flex-row-reverse' : ''}`}>
                         <div className="w-full lg:w-1/2 relative">
                             <div className={`absolute -inset-4 ${i === 0 ? 'bg-[#ff9069]/5' : 'bg-[#5af8fb]/5'} blur-3xl rounded-full`} />
-                            <img src={`https://picsum.photos/800/1000?random=${i}`} loading="lazy" className="relative z-10 aspect-[4/5] w-full rounded-2xl border border-white/10 object-cover grayscale transition-all duration-700 hover:grayscale-0" alt={factor.label} />
+                            <img src={TECHNICAL_BREAKDOWN_IMAGES[i]} loading="lazy" className="relative z-10 aspect-[4/5] w-full rounded-2xl border border-white/10 object-cover grayscale transition-all duration-700 hover:grayscale-0" alt={factor.label} />
                         </div>
                         
                         <div className="w-full lg:w-1/2 space-y-6">

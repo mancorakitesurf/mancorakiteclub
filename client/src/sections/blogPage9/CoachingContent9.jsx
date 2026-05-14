@@ -1,4 +1,7 @@
 import { COACHING_DATA9 } from "./introData9";
+import { resolveImage } from "../../config/images.js";
+
+const TIMING_IMAGE = resolveImage("fotos clases/DSC05719.webp");
 
 function CoachingContent9() {
     return (
@@ -41,7 +44,7 @@ function CoachingContent9() {
                         ))}
                     </div>
                     <div className="relative">
-                        <img src="https://picsum.photos/800/600" loading="lazy" className="w-full rounded-3xl border border-white/10 shadow-2xl" alt="Timing" />
+                        <img src={TIMING_IMAGE} loading="lazy" className="w-full rounded-3xl border border-white/10 shadow-2xl" alt="Timing" />
                         <div className="absolute inset-0 border border-[#52f2f5]/20 m-4 rounded pointer-events-none" />
                     </div>
                 </div>

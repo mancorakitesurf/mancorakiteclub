@@ -1,4 +1,11 @@
 import { SEVEN_PLANS_DATA7 } from "./introData13";
+import { resolveImage } from "../../config/images.js";
+
+const ITINERARY_IMAGES = [
+    resolveImage("fotos trip/DSC03906.webp"),
+    resolveImage("fotos trip/DSC04250.webp"),
+    resolveImage("fotos trip/DSC07365.webp"),
+];
 
 function ItineraryDriftKite() {
     return (
@@ -42,7 +49,7 @@ function ItineraryDriftKite() {
 
                         <div className="relative w-full lg:w-1/2">
                             <div className="absolute -inset-4 bg-[#132930]/50 blur-2xl rounded-xl z-0" />
-                            <img src="https://picsum.photos/800/600" loading="lazy" className="relative z-10 h-[320px] w-full rounded-3xl border border-white/5 object-cover shadow-2xl grayscale transition-all duration-700 hover:grayscale-0 sm:h-[420px] lg:h-[500px]" alt={item.title} />
+                            <img src={ITINERARY_IMAGES[i]} loading="lazy" className="relative z-10 h-[320px] w-full rounded-3xl border border-white/5 object-cover shadow-2xl grayscale transition-all duration-700 hover:grayscale-0 sm:h-[420px] lg:h-[500px]" alt={item.title} />
                         </div>
                     </div>
                 ))}

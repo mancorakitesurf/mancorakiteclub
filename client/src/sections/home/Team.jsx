@@ -109,8 +109,7 @@ export default function Team() {
                   <img
                     src={member.img}
                     alt={member.fallbackRole}
-                    className={`w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ${member.id === 'coach2' ? 'rotate-90' : ''
-                      }`}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
 

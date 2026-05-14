@@ -1,4 +1,7 @@
 import { WHALE_DATA11 } from "./introData11";
+import { resolveImage } from "../../config/images.js";
+
+const WHALE_EXPERIENCE_IMAGE = resolveImage("fotos trip/DSC04250.webp");
 
 function ExperienceWhaleKite() {
     const { experience: exp } = WHALE_DATA11;
@@ -7,7 +10,7 @@ function ExperienceWhaleKite() {
             <div className="relative mx-auto max-w-7xl">
                 {/* Imagen desplazada a la derecha */}
                 <div className="relative ml-auto aspect-[16/9] w-full overflow-hidden rounded-3xl border border-white/5 lg:w-3/4">
-                    <img src="https://picsum.photos/1200/800" loading="lazy" className="h-full w-full object-cover grayscale transition-all duration-1000 hover:grayscale-0" alt="Experience" />
+                    <img src={WHALE_EXPERIENCE_IMAGE} loading="lazy" className="h-full w-full object-cover grayscale transition-all duration-1000 hover:grayscale-0" alt="Experience" />
                     <div className="absolute inset-0 bg-[#031015]/20 mix-blend-multiply" />
                 </div>
                 

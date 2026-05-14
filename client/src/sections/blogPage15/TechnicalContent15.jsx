@@ -1,4 +1,7 @@
 import { SAFETY_DATA15 } from "./introData15";
+import { resolveImage } from "../../config/images.js";
+
+const BAR_SETUP_IMAGE = resolveImage("fotos clases/DSC07665.webp");
 
 function TechnicalContent15() {
     const { mechanics, calibration } = SAFETY_DATA15;
@@ -21,7 +24,7 @@ function TechnicalContent15() {
                     </ul>
                 </div>
                 <div className="md:col-span-7 relative h-80 rounded-xl overflow-hidden border border-white/10 shadow-2xl">
-                    <img src="https://picsum.photos/800/500?random=5" className="w-full h-full object-cover opacity-70 grayscale" alt="Bar Setup" />
+                    <img src={BAR_SETUP_IMAGE} className="w-full h-full object-cover opacity-70 grayscale" alt="Bar Setup" />
                     <div className="absolute inset-0 bg-gradient-to-r from-[#031015]/80 to-transparent" />
                 </div>
             </div>

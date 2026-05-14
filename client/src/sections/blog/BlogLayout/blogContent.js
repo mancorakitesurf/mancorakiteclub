@@ -15,7 +15,7 @@ import BlogPage13 from '../../../pages/blog/Mancora-Whale-Season.jsx'
 import BlogPage14 from '../../../pages/blog/Wingfoil-vs-Kitesurf-Choosing-Your-Weapon.jsx'
 import BlogPage15 from '../../../pages/blog/Data-Strip-Safety.jsx'
 
-const { blogheroImage, posicionK1, posicionK2, posicionK3, posicionK4, posicionK6, trending1, trending2, posicionW1, posicionW2, posicionW5, posicionW6, posicionW7 } = componentImages["sections/blog/BlogLayout/blogContent.js"]
+const { blogheroImage, posicionK1, posicionK2, posicionK3, posicionK4, posicionK6, trending1, trending2, posicionW1, posicionW2, posicionW5, posicionW6, posicionW7, surfPost1, surfPost2 } = componentImages["sections/blog/BlogLayout/blogContent.js"]
 export const BLOGHERO_IMAGE = blogheroImage
 export const POST_1_IMAGE = posicionK2
 export const POST_2_IMAGE = posicionK3
@@ -68,7 +68,7 @@ export const POSTS = [
     category: "KITESURFING PERU",
     date: "June 20, 2024",
     author: "Sergio Agamez",
-    image: BLOGHERO_IMAGE,
+    image: posicionW5,
     component: BlogPage4,
     metaTitle: "Mancora vs Lobitos vs Cabo Blanco: Best Kitesurf Spot",
     metaDescription: "Compare Mancora, Lobitos and Cabo Blanco for wave kitesurfing in Peru. Wind, waves, season and vibe – which spot wins?",
@@ -81,7 +81,7 @@ export const POSTS = [
     category: "KITESURFING PERU",
     date: "June 30, 2024",
     author: "Miguelo",
-    image: BLOGHERO_IMAGE,
+    image: posicionK1,
     component: BlogPage5,
     metaTitle: "Peru Kitesurf: North vs South – Complete Wind & Spot Guide",
     metaDescription: "North vs South Peru for kitesurfing: compare wind conditions, best spots, seasons, and what suits your level. Expert guide.",
@@ -94,7 +94,7 @@ export const POSTS = [
     category: "SURFING PERU",
     date: "July 10, 2024",
     author: "Axel",
-    image: BLOGHERO_IMAGE,
+    image: surfPost1,
     component: BlogPage6,
     metaTitle: "Pacasmayo Peru: Ultimate Point Break Surf Guide",
     metaDescription: "Everything about Pacasmayo, Peru's legendary point break. Best swell directions, winds, tides, and local tips for surfers.",
@@ -107,7 +107,7 @@ export const POSTS = [
     category: "KITESURFING PERU",
     date: "July 20, 2024",
     author: "Sergio Agamez",
-    image: BLOGHERO_IMAGE,
+    image: posicionK4,
     component: BlogPage7,
     metaTitle: "Why Mancora is Different: Kitesurf Wave Progression",
     metaDescription: "Learn why Mancora is ideal for kitesurf wave progression. Step-by-step guide to improve your wave riding skills in perfect conditions.",
@@ -236,31 +236,31 @@ export const TRENDING_POSTS = [
   {
     slug: "chicama-peru-surf-trip",
     title: "Chicama, Peru: The Longest Wave in the World + How to Build the Ultimate Surf Trip",
-    image: BLOGHERO_IMAGE,
+    image: surfPost2,
     alt: 'Chicama surf trip',
   },
   {
     slug: "mancora-vs-lobitos-vs-cabo-blanco",
     title: "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru",
-    image: BLOGHERO_IMAGE,
+    image: posicionW5,
     alt: 'Mancora vs Lobitos vs Cabo Blanco',
   },
   {
     title: "Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide",
     slug: "peru-kitesurf-north-vs-south",
-    image: BLOGHERO_IMAGE,
+    image: posicionK1,
     alt: 'Peru Kitesurf North vs South',  
   },
   {
     slug: "pacasmayo-peru-the-ultimate-point-break-surf-guide",
     title: "Pacasmayo, Peru: The Ultimate Point Break Surf Guide",
-    image: BLOGHERO_IMAGE,
+    image: surfPost1,
     alt: 'Pacasmayo surf guide',  
   },
   {
     slug: "why-mancora-is-different-kitesurf-wave-progression-guide",
     title: "Why Mancora is Different: Kitesurf Wave Progression Guide",
-    image: BLOGHERO_IMAGE,
+    image: posicionK4,
     alt: 'Mancora wave progression guide',  
   },  
 ]

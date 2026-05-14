@@ -48,7 +48,7 @@ export const PRIVATE_CLASSES = [
     duration: "3 days | 2 hours/day",
     price: "$350 / person",
     image: fundamentalClassImg,
-    hoverImage: introClassImgHover,
+    hoverImage: advanceClassImg,
     features: [
       "Designed by old instructors",
       "Personalized progression",
@@ -62,7 +62,7 @@ export const PRIVATE_CLASSES = [
     duration: "3 days | 3 hours/day",
     price: "$500 / person",
     image: advanceClassImg,
-    hoverImage: introClassImgHover,
+    hoverImage: masterClassImg,
     features: [
       "Focused on advanced technique",
       "More practice time",
@@ -76,7 +76,7 @@ export const PRIVATE_CLASSES = [
     duration: "5 days | Flexible schedule",
     price: "$600 / person",
     image: masterClassImg,
-    hoverImage: introClassImgHover,
+    hoverImage: introClassImg,
     featured: true,
     features: [
       "Complete program",

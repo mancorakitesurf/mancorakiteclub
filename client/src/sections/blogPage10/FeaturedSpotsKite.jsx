@@ -1,4 +1,11 @@
 import { SAFARI_DATA10 } from "./introData10";
+import { resolveImage } from "../../config/images.js";
+
+const FEATURED_SPOT_IMAGES = [
+    resolveImage("fotos mancora y mas/DSC07164.webp"),
+    resolveImage("imagenes-home/posicion18.jpg"),
+    resolveImage("fotos trip/DSC03906.webp"),
+];
 
 function FeaturedSpotsKite() {
     return (
@@ -11,7 +18,7 @@ function FeaturedSpotsKite() {
                 <div className="grid grid-cols-1 gap-6 auto-rows-[240px] sm:auto-rows-[280px] lg:grid-cols-12 lg:auto-rows-[300px]">
                     {SAFARI_DATA10.spots.map((spot, i) => (
                         <div key={i} className={`${spot.colSpan} rounded-2xl overflow-hidden relative group border border-white/5`}>
-                            <img src={`https://picsum.photos/800/600?random=${i}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" alt={spot.name} />
+                            <img src={FEATURED_SPOT_IMAGES[i]} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" alt={spot.name} />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-transparent to-transparent" />
                             <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8">
                                 <span className="text-[10px] font-bold text-[#5af8fb] uppercase tracking-[0.2em] mb-2 block">{spot.tag}</span>

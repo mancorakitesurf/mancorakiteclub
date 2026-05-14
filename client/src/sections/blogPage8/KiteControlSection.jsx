@@ -1,4 +1,7 @@
 import { INTRO_DATA8 } from "./introData8";
+import { resolveImage } from "../../config/images.js";
+
+const CONTROL_IMAGE = resolveImage("fotos trip/DSC01083.webp");
 
 function KiteControlSection() {
     const { kiteControl: data } = INTRO_DATA8;
@@ -6,7 +9,7 @@ function KiteControlSection() {
         <section className="bg-[#031015] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
             <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-16">
                 <div className="w-full lg:w-1/2">
-                    <img src="https://picsum.photos/800/450" loading="lazy" className="w-full rounded-3xl border border-white/5 shadow-2xl" alt="Control" />
+                    <img src={CONTROL_IMAGE} loading="lazy" className="w-full rounded-3xl border border-white/5 shadow-2xl" alt="Control" />
                 </div>
                 <div className="w-full lg:w-1/2">
                     <h2 className="mb-6 text-2xl font-bold italic tracking-tighter text-white sm:text-3xl md:text-4xl lg:text-5xl">

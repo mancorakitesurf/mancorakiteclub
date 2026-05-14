@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
 import { FaHome, FaSpa, FaUtensils, FaWater } from 'react-icons/fa'
 
-import bedroomImage from '../../assets/HOSPEDAJE KITE HOUSE/habitacion.webp'
-import loungeImage from '../../assets/HOSPEDAJE KITE HOUSE/image.webp'
-import mainVillaImage from '../../assets/HOSPEDAJE KITE HOUSE/main.webp'
-import nightImage from '../../assets/HOSPEDAJE KITE HOUSE/nightcaption.webp'
+import bedroomImage from '../../assets/HOSPEDAJE KITE HOUSE/DSC05162.webp'
+import loungeImage from '../../assets/HOSPEDAJE KITE HOUSE/DSC04847.webp'
+import mainVillaImage from '../../assets/HOSPEDAJE KITE HOUSE/DSC04812.webp'
+import nightImage from '../../assets/HOSPEDAJE KITE HOUSE/DSC04839.webp'
 import poolImage from '../../assets/HOSPEDAJE KITE HOUSE/piscinabuenarda.webp'
 
 const STAY_GALLERY = {

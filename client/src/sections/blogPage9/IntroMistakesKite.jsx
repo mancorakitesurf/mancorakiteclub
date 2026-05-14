@@ -1,4 +1,7 @@
 import { COACHING_DATA9 } from "./introData9";
+import { resolveImage } from "../../config/images.js";
+
+const TECHNICAL_IMAGE = resolveImage("fotos clases/DSC07673.webp");
 
 function IntroMistakesKite() {
     const { intro } = COACHING_DATA9;
@@ -6,7 +9,7 @@ function IntroMistakesKite() {
         <section className="bg-[#031015] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
             <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="relative h-[320px] sm:h-[420px] lg:col-span-5 lg:h-[400px]">
-                <img src="https://picsum.photos/600/800" loading="lazy" className="h-full w-full rounded-3xl object-cover shadow-2xl" alt="Technical" />
+                <img src={TECHNICAL_IMAGE} loading="lazy" className="h-full w-full rounded-3xl object-cover shadow-2xl" alt="Technical" />
                 <div className="absolute inset-0 bg-[#3de4e7]/10 rounded" />
             </div>
             <div className="space-y-8 lg:col-span-7">

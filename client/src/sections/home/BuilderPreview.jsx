@@ -2,9 +2,11 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, BedDouble, Clock3, MessageCircle, Sparkles, Waves } from 'lucide-react'
 
 import { trips } from '../../content/trips.js'
+import { resolveImage } from '../../config/images.js'
 
 const FEATURED_TRIP = trips[0]
 const SUPPORT_TRIPS = trips.slice(1, 3)
+const BUILDER_PREVIEW_HERO_IMAGE = resolveImage("fotos trip/DSC03882.webp")
 
 const PACKAGE_STATS = [
   { value: '5 steps', label: 'Custom flow' },
@@ -57,7 +59,7 @@ function BuilderPreview() {
             <div className="grid gap-4 lg:h-full lg:min-h-[680px] lg:grid-rows-[minmax(0,1fr)_140px]">
               <figure className="group relative h-[420px] overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_100px_rgba(0,0,0,0.34)] sm:h-[540px] lg:h-auto lg:min-h-0">
                 <img
-                  src={FEATURED_TRIP.heroImage}
+                  src={BUILDER_PREVIEW_HERO_IMAGE}
                   alt={FEATURED_TRIP.heroAlt || FEATURED_TRIP.title}
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"

@@ -1,4 +1,7 @@
 import { SAFARI_DATA10 } from "./introData10";
+import { resolveImage } from "../../config/images.js";
+
+const REQUIREMENTS_IMAGE = resolveImage("fotos clases/DSC07692.webp");
 
 function RequirementsKite() {
     const { requirements: req } = SAFARI_DATA10;
@@ -24,7 +27,7 @@ function RequirementsKite() {
                     </div>
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-3xl border border-white/10 md:aspect-[4/3]">
-                    <img src="https://picsum.photos/800/600" loading="lazy" className="h-full w-full object-cover" alt="Requirement" />
+                    <img src={REQUIREMENTS_IMAGE} loading="lazy" className="h-full w-full object-cover" alt="Requirement" />
                     <div className="absolute bottom-4 left-4 rounded-xl border border-[#5af8fb]/30 bg-[#031015]/80 px-4 py-2 backdrop-blur-md sm:bottom-6 sm:left-6">
                         <span className="text-[10px] uppercase text-[#5af8fb] font-bold tracking-widest">Skill Level</span>
                         <p className="text-base font-bold uppercase text-white sm:text-lg">Intermediate / Advanced</p>

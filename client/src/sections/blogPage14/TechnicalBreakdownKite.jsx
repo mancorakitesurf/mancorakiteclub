@@ -2,7 +2,7 @@ import { CHOICE_DATA14 } from "./introData14";
 import { resolveImage } from "../../config/images.js";
 
 const TECHNICAL_BREAKDOWN_IMAGES = [
-    resolveImage("fotos trip/DSC01083.webp"),
+    resolveImage("fotos clases/DSC07693.webp"),
     resolveImage("fotos wingfoil/DSC00021.webp"),
 ];
 

@@ -2,7 +2,7 @@ import { WHALE_SEASON_DATA12 } from "./introData12";
 import { resolveImage } from "../../config/images.js";
 
 const MORNING_IMAGE = resolveImage("imagenes-home/posicion21.jpg");
-const AFTERNOON_IMAGE = resolveImage("fotos trip/DSC04250.webp");
+const AFTERNOON_IMAGE = resolveImage("fotos home/DSC04249 2.webp");
 
 function EditorialWhaleSeason() {
     const [morning, afternoon] = WHALE_SEASON_DATA12.sections;

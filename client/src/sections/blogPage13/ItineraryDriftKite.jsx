@@ -2,9 +2,9 @@ import { SEVEN_PLANS_DATA7 } from "./introData13";
 import { resolveImage } from "../../config/images.js";
 
 const ITINERARY_IMAGES = [
-    resolveImage("fotos trip/DSC03906.webp"),
-    resolveImage("fotos trip/DSC04250.webp"),
-    resolveImage("fotos trip/DSC07365.webp"),
+    resolveImage("fotos clases/DSC09589.webp"),
+    resolveImage("fotos clases/DSC07694.webp"),
+    resolveImage("fotos home/DSC00406.webp"),
 ];
 
 function ItineraryDriftKite() {

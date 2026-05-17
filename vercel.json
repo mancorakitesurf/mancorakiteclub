@@ -1,5 +1,11 @@
 {
   "buildCommand": "npm run install:all && npm run build",
   "installCommand": "npm run install:all",
-  "outputDirectory": "client/dist"
+  "outputDirectory": "client/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

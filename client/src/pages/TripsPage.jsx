@@ -1,27 +1,13 @@
 import { componentImages } from '../config/images.js'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaArrowRight, FaWind } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import SEO from '../components/SEO.jsx'
 import FullscreenHero from '../components/ui/FullscreenHero.jsx'
-import { trips } from '../content/trips.js'
 import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
 
 
 const { heroImg, firstFlyImg, olasVientoImg, soloSurfImg, rideCoastImg } = componentImages["pages/TripsPage.jsx"]
-const tripImages = [
-  firstFlyImg,
-  olasVientoImg,
-  soloSurfImg,
-  rideCoastImg,
-]
-
-const tripLabels = [
-  'First Fly',
-  'Olas y Viento',
-  'Solo Surf',
-  'Ride the Coast',
-]
 
 function TripsPage() {
   return (
@@ -29,8 +15,8 @@ function TripsPage() {
       <SEO
         titleKey="seo.tripsTitle"
         descKey="seo.tripsDesc"
-        titleFallback="Kitesurf Trips in Máncora, Peru | Core Packages"
-        descFallback="Discover kitesurfing, wingfoil, and surf trips in northern Peru. Full-day, 3-day, and 7-day packages with accommodation, coaching, and gear. Book your trip now."
+        titleFallback="Build Your Trip in Máncora, Peru | Máncora Kite Club"
+        descFallback="Create your custom kitesurfing, wingfoil, or surf trip in Máncora, Peru. Choose your classes, accommodation, and extras. Build your perfect trip now."
         canonicalPath="/trips"
         hreflang={{ en: '/trips', es: '/esp/viajes', default: '/' }}
       />
@@ -39,8 +25,8 @@ function TripsPage() {
         <FullscreenHero
           as="section"
           eyebrow="Mancora Kite Club"
-          title="Our Trips"
-          subtitle="Choose your route through wind, waves, coaching, surf, and the north coast of Peru."
+          title="Build Your Trip"
+          subtitle="Create your own custom experience — choose your classes, accommodation, extras, and rhythm."
           slides={createPresetHeroSlides('kite', {
             desktop: [heroImg, firstFlyImg, olasVientoImg, soloSurfImg, rideCoastImg],
             alt: 'Mancora Kite Club trips',
@@ -48,112 +34,7 @@ function TripsPage() {
           })}
         />
 
-        {/* TRIP LIST */}
-        <section id="trip-list" className="relative">
-          {trips.map((trip, index) => {
-            const image = tripImages[index % tripImages.length]
-            const label = tripLabels[index] || trip.title
-            const isEven = index % 2 === 0
-
-            return (
-              <Link
-                key={trip.slug}
-                to={trip.path}
-                className="group block"
-              >
-                <motion.article
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, ease: 'easeOut' }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  className="relative flex min-h-[68vh] items-center overflow-hidden border-t border-white/10 px-5 py-20 sm:min-h-[76vh] sm:px-8 lg:min-h-screen lg:px-16"
-                >
-                  {/* Background image */}
-                  <div className="absolute inset-0 z-0">
-                    <img
-                      src={image}
-                      alt={trip.title}
-                      loading="lazy"
-                      className="h-full w-full object-cover transition duration-1000 group-hover:scale-110"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#031015] via-[#031015]/25 to-transparent" />
-                    <div
-                      className={`absolute inset-0 ${
-                        isEven
-                          ? 'bg-gradient-to-r from-[#031015]/75 via-[#031015]/20 to-transparent'
-                          : 'bg-gradient-to-l from-[#031015]/75 via-[#031015]/20 to-transparent'
-                      }`}
-                    />
-                  </div>
-
-                  {/* Number */}
-                  <div
-                    className={`absolute top-8 z-10 text-6xl font-black leading-none text-white/15 transition duration-500 group-hover:text-[#5af8fb]/25 sm:text-8xl lg:text-9xl ${
-                      isEven ? 'right-6 lg:right-16' : 'left-6 lg:left-16'
-                    }`}
-                  >
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
-
-                  {/* Content */}
-                  <div
-                    className={`relative z-10 mx-auto flex w-full max-w-7xl ${
-                      isEven ? 'justify-start text-left' : 'justify-end text-right'
-                    }`}
-                  >
-                    <div className="max-w-4xl">
-                      <p
-                        className={`mb-5 flex items-center gap-3 text-xs font-black uppercase tracking-[0.35em] text-[#5af8fb] ${
-                          isEven ? 'justify-start' : 'justify-end'
-                        }`}
-                      >
-                        <FaWind />
-                        {trip.subtitle || 'Trip Experience'}
-                      </p>
-
-                      <h2
-                        className="
-                          font-display text-5xl font-black uppercase leading-[0.82] tracking-tighter
-                          text-transparent transition duration-500
-                          [-webkit-text-stroke:1.5px_rgba(255,255,255,0.78)]
-                          group-hover:text-white group-hover:[-webkit-text-stroke:1.5px_rgba(90,248,251,0.35)]
-                          sm:text-7xl md:text-8xl lg:text-[8.5rem]
-                        "
-                      >
-                        {label}
-                      </h2>
-
-                      <p
-                        className={`mt-7 max-w-xl text-sm leading-7 text-white/75 sm:text-base ${
-                          isEven ? 'mr-auto' : 'ml-auto'
-                        }`}
-                      >
-                        {trip.summary}
-                      </p>
-
-                      <div
-                        className={`mt-8 flex ${
-                          isEven ? 'justify-start' : 'justify-end'
-                        }`}
-                      >
-                        <span className="inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#5af8fb] px-7 text-sm font-black uppercase tracking-[0.2em] text-black transition group-hover:bg-white">
-                          View Details
-                          <FaArrowRight className="transition duration-300 group-hover:translate-x-1" />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Bottom strip */}
-                  <div className="absolute bottom-0 left-0 right-0 z-10 h-px bg-gradient-to-r from-transparent via-[#5af8fb]/50 to-transparent" />
-                </motion.article>
-              </Link>
-            )
-          })}
-        </section>
-
-        {/* FINAL CTA */}
+        {/* CTA to Build Your Trip */}
         <section className="relative overflow-hidden px-6 py-24 text-center sm:px-10 lg:px-16">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(90,248,251,0.18),_transparent_60%)]" />
 
@@ -173,7 +54,7 @@ function TripsPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 sm:text-base">
-              Create your own Máncora route with coaching, accommodation, extra activities and the best rhythm for your stay.
+              No more fixed packages. Create your own Máncora route with coaching, accommodation, extra activities and the best rhythm for your stay.
             </p>
 
             <Link

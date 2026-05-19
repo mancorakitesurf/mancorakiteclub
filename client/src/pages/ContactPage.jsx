@@ -1,10 +1,10 @@
 import { componentImages } from '../config/images.js'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import StandardPage from './StandardPage.jsx'
 import FullscreenHero from '../components/ui/FullscreenHero.jsx'
 import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
+import SEO from '../components/SEO.jsx'
 
 const { formDecorImg } = componentImages["pages/ContactPage.jsx"]
 const contacts = [
@@ -83,13 +83,16 @@ function ContactPage() {
   }
 
   return (
-    <StandardPage
-      titleKey="seo.contactTitle"
-      descKey="seo.contactDesc"
-      titleFallback="Contact | Mancora Kite Club"
-      descFallback="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
-      fullWidth
-    >
+    <>
+      <SEO
+        titleKey="seo.contactTitle"
+        descKey="seo.contactDesc"
+        titleFallback="Contact | Mancora Kite Club"
+        descFallback="Contact Máncora Kite Club for kitesurfing, wingfoil, and surf trips, classes, accommodation, and rentals. Get quick answers via WhatsApp. Reach out now."
+        canonicalPath="/contact"
+        hreflang={{ en: '/contact', es: '/esp/contacto', default: '/' }}
+      />
+
       <div className="overflow-hidden bg-white dark:bg-surface-dark">
         {/* HERO */}
         <FullscreenHero
@@ -219,7 +222,7 @@ function ContactPage() {
           </div>
         </section>
       </div>
-    </StandardPage>
+    </>
   )
 }
 

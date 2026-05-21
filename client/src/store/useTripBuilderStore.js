@@ -9,10 +9,19 @@ const INITIAL_STEP = 1
 // Minimum quantity for extras
 const MIN_EXTRA_QTY = 1
 
+const getTodayString = () => {
+  const d = new Date()
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
 const initialState = {
   paso: INITIAL_STEP,
   actividades: {},
-  noches: 0,
+  noches: 3,
+  fechaInicio: getTodayString(),
   personas: 1,
   extras: [],
   extrasQty: {},
@@ -45,6 +54,8 @@ export const useTripBuilderStore = create((set, get) => ({
     })),
 
   setNoches: (noches) => set({ noches }),
+
+  setFechaInicio: (fechaInicio) => set({ fechaInicio }),
 
   setPersonas: (personas) => set({ personas: Math.max(1, Number(personas) || 1) }),
 

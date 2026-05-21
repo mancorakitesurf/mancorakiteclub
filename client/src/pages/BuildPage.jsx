@@ -52,85 +52,85 @@ function BuildPage() {
     const checkOutFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkOutDate)
 
     const listActividades = Object.entries(actividades)
-      .map(([id, hrs]) => `• ${id}: ${hrs}h`)
+      .map(([id, hrs]) => `* ${id}: ${hrs}h`)
       .join('\n')
     
     const listExtras = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
-      .map((e) => `• ${t(e.labelKey)} (x${extrasQty[e.id] || 1})`)
+      .map((e) => `* ${t(e.labelKey)} (x${extrasQty[e.id] || 1})`)
       .join('\n')
 
     let mensaje = ''
 
     if (currentLang === 'fr') {
-      mensaje = `*MÁNCORA KITE CLUB* 🏄‍♂️
-*Détails du Package*
+      mensaje = `*MANCORA KITE CLUB*
+*Details du Package*
 -------------------------------------
-👤 *Client:* ${datosUsuario.nombre || '-'}
-📧 *Email:* ${datosUsuario.email || '-'}
-👥 *Personnes:* ${personas}
+* Client: ${datosUsuario.nombre || '-'}
+* Email: ${datosUsuario.email || '-'}
+* Personnes: ${personas}
 
-📅 *Séjour:*
-- Arrivée (Check-in): ${checkInFormatted}
-- Départ (Check-out): ${checkOutFormatted}
-- Durée: ${noches} nuits
+* Sejour:
+- Arrivee (Check-in): ${checkInFormatted}
+- Depart (Check-out): ${checkOutFormatted}
+- Duree: ${noches} nuits
 
-🏋️ *Activités:*
+* Activites:
 ${listActividades || '  Aucune'}
 
-✨ *Extras:*
+* Extras:
 ${listExtras || '  Aucun'}
 
 =====================================
-💰 *TOTAL ESTIMÉ:* $${total} USD
+* TOTAL ESTIME: $${total} USD
 =====================================
-_Bonjour! J'ai préparé mon package personnalisé sur le site web et j'aimerais confirmer la disponibilité._`
+_Bonjour! J'ai prepare mon package personnalise sur le site web et j'aimerais confirmer la disponibilite._`
     } else if (currentLang === 'en') {
-      mensaje = `*MÁNCORA KITE CLUB* 🏄‍♂️
+      mensaje = `*MANCORA KITE CLUB*
 *Package Details*
 -------------------------------------
-👤 *Client:* ${datosUsuario.nombre || '-'}
-📧 *Email:* ${datosUsuario.email || '-'}
-👥 *Guests:* ${personas}
+* Client: ${datosUsuario.nombre || '-'}
+* Email: ${datosUsuario.email || '-'}
+* Guests: ${personas}
 
-📅 *Stay:*
+* Stay:
 - Check-in: ${checkInFormatted}
 - Check-out: ${checkOutFormatted}
 - Duration: ${noches} nights
 
-🏋️ *Activities:*
+* Activities:
 ${listActividades || '  None'}
 
-✨ *Extras:*
+* Extras:
 ${listExtras || '  None'}
 
 =====================================
-💰 *ESTIMATED TOTAL:* $${total} USD
+* ESTIMATED TOTAL: $${total} USD
 =====================================
 _Hello! I have built my custom package on the website and would like to confirm availability._`
     } else {
       // Default to Spanish (es)
-      mensaje = `*MÁNCORA KITE CLUB* 🏄‍♂️
+      mensaje = `*MANCORA KITE CLUB*
 *Detalle de Paquete*
 -------------------------------------
-👤 *Cliente:* ${datosUsuario.nombre || '-'}
-📧 *Email:* ${datosUsuario.email || '-'}
-👥 *Personas:* ${personas}
+* Cliente: ${datosUsuario.nombre || '-'}
+* Correo: ${datosUsuario.email || '-'}
+* Personas: ${personas}
 
-📅 *Estadía:*
+* Estadia:
 - Llegada (Check-in): ${checkInFormatted}
 - Salida (Check-out): ${checkOutFormatted}
-- Duración: ${noches} noches
+- Duracion: ${noches} noches
 
-🏋️ *Actividades:*
+* Actividades:
 ${listActividades || '  Ninguna'}
 
-✨ *Extras:*
+* Extras:
 ${listExtras || '  Ninguno'}
 
 =====================================
-💰 *TOTAL ESTIMADO:* $${total} USD
+* TOTAL ESTIMADO: $${total} USD
 =====================================
-_¡Hola! He armado mi paquete personalizado en la web y me gustaría confirmar disponibilidad._`
+_Hola! He armado mi paquete personalizado en la web y me gustaria confirmar disponibilidad._`
     }
 
     return `https://wa.me/51996557689?text=${encodeURIComponent(mensaje)}`

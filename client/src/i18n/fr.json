@@ -232,7 +232,13 @@
     "namePlaceholder": "Votre nom",
     "email": "Email",
     "enterDetails": "Veuillez entrer votre nom et email pour continuer",
-    "sendViaWhatsApp": "Envoyer par WhatsApp"
+    "sendViaWhatsApp": "Envoyer par WhatsApp",
+    "selectCheckIn": "Sélectionnez votre date d'arrivée",
+    "selectCheckInSub": "Choisissez quand commence votre aventure à Máncora",
+    "staySummary": "Résumé du Séjour",
+    "checkIn": "Arrivée",
+    "checkOut": "Départ",
+    "duration": "Durée"
   },
   "stay": {
     "heroLabel": "Hébergement",

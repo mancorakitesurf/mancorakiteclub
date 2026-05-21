@@ -22,11 +22,11 @@ function WaveRiding() {
 
       <div className="relative z-10 mx-auto max-w-2xl">
         <motion.div
-           initial={{ opacity: 0, y: 25 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.6 }}
-           className="flex flex-col overflow-hidden rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md p-6 sm:p-8 text-center"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col overflow-hidden rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md p-6 sm:p-8 text-center"
         >
           <h3 className="text-2xl font-semibold mb-4 text-[#DEFF9A]">Advanced Wave Riding Coaching</h3>
           <p className="text-white/80 mb-6 flex-1 text-lg">

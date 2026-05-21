@@ -1,5 +1,5 @@
 import { componentImages } from '../../config/images.js'
-const { heroKite, introKite, introClassImg, fundamentalClassImg, introClassImgHover, advanceClassImg, masterClassImg, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12 } = componentImages["sections/ClassesPage/classesData.js"]
+const { heroKite, introKite, introClassImg, fundamentalClassImg, introClassImgHover, advanceClassImg, masterClassImg, introClassImgSemi, fundamentalClassImgSemi, introClassImgHoverSemi, advanceClassImgSemi, masterClassImgSemi, gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11, gallery12 } = componentImages["sections/ClassesPage/classesData.js"]
 // HERO
 // INTRO
 // PRICING IMAGES
@@ -96,8 +96,8 @@ export const SEMI_PRIVATE_CLASSES = [
     title: "Discovery",
     duration: "1 day | 2 hours/day",
     price: "$90 USD / person",
-    image: introClassImg,
-    hoverImage: introClassImgHover,
+    image: introClassImgSemi,
+    hoverImage: introClassImgHoverSemi,
     features: [
       "Ideal for first experience",
       "1 instructor shared between 2 students",
@@ -110,8 +110,8 @@ export const SEMI_PRIVATE_CLASSES = [
     title: "Beginner",
     duration: "3 days | 2 hours/day",
     price: "$250 USD / person",
-    image: fundamentalClassImg,
-    hoverImage: advanceClassImg,
+    image: fundamentalClassImgSemi,
+    hoverImage: advanceClassImgSemi,
     features: [
       "Designed by old instructors",
       "1 instructor shared between 2 students",
@@ -124,8 +124,8 @@ export const SEMI_PRIVATE_CLASSES = [
     title: "Intensive",
     duration: "3 days | 3 hours/day",
     price: "$350 USD / person",
-    image: advanceClassImg,
-    hoverImage: masterClassImg,
+    image: advanceClassImgSemi,
+    hoverImage: masterClassImgSemi,
     features: [
       "Focused on advanced technique",
       "1 instructor shared between 2 students",
@@ -138,8 +138,8 @@ export const SEMI_PRIVATE_CLASSES = [
     title: "Full Progression",
     duration: "5 days | Flexible schedule",
     price: "$450 USD / person",
-    image: masterClassImg,
-    hoverImage: introClassImg,
+    image: masterClassImgSemi,
+    hoverImage: introClassImgSemi,
     featured: true,
     features: [
       "Complete program",

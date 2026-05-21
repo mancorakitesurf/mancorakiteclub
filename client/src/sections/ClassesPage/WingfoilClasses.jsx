@@ -2,7 +2,7 @@ import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 
-const { wingIntro, wingFundamental, wingAdvanced, wingMaster } = componentImages["sections/ClassesPage/WingfoilClasses.jsx"]
+const { wingIntro, wingFundamental, wingAdvanced, wingMaster, wingIntroSemi, wingFundamentalSemi, wingAdvancedSemi, wingMasterSemi } = componentImages["sections/ClassesPage/WingfoilClasses.jsx"]
 const WINGFOIL_PRIVATE_CLASSES = [
   {
     id: "discovery",
@@ -73,8 +73,8 @@ const WINGFOIL_SEMI_PRIVATE_CLASSES = [
     title: "Discovery",
     duration: "1 day | 2 hours/day",
     price: "$90 USD / person",
-    image: wingIntro,
-    hoverImage: wingFundamental,
+    image: wingIntroSemi,
+    hoverImage: wingFundamentalSemi,
     features: [
       "Discover the basics of Wingfoil",
       "1 instructor shared between 2 students",
@@ -87,8 +87,8 @@ const WINGFOIL_SEMI_PRIVATE_CLASSES = [
     title: "Beginner",
     duration: "3 days | 2 hours/day",
     price: "$250 USD / person",
-    image: wingFundamental,
-    hoverImage: wingAdvanced,
+    image: wingFundamentalSemi,
+    hoverImage: wingAdvancedSemi,
     features: [
       "Solid foundation & safety techniques",
       "1 instructor shared between 2 students",
@@ -101,8 +101,8 @@ const WINGFOIL_SEMI_PRIVATE_CLASSES = [
     title: "Intensive",
     duration: "3 days | 3 hours/day",
     price: "$350 USD / person",
-    image: wingAdvanced,
-    hoverImage: wingMaster,
+    image: wingAdvancedSemi,
+    hoverImage: wingMasterSemi,
     features: [
       "Perfect advanced maneuvers",
       "1 instructor shared between 2 students",
@@ -115,8 +115,8 @@ const WINGFOIL_SEMI_PRIVATE_CLASSES = [
     title: "Full Progression",
     duration: "5 days | Flexible schedule",
     price: "$450 USD / person",
-    image: wingMaster,
-    hoverImage: wingIntro,
+    image: wingMasterSemi,
+    hoverImage: wingIntroSemi,
     featured: true,
     features: [
       "From fundamentals to advanced",

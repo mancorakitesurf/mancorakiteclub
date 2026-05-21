@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { seoImages } from '../config/images.js'
+import { getSeoMetaByPath } from '../config/seoMeta.js'
 import { setSeoTags } from '../lib/seo.js'
 
 /**
@@ -18,29 +19,34 @@ import { setSeoTags } from '../lib/seo.js'
 function SEO({
   title,
   description,
-  image = seoImages.defaultOpenGraph,
+  image,
   titleKey = 'seo.homeTitle',
   descKey = 'seo.homeDesc',
   titleFallback = 'Máncora Kite Club',
   descFallback = 'Escuela de Kitesurf y Wingfoil en Máncora, Perú',
-  canonicalPath = '/',
-  hreflang = { en: '/', es: '/esp', default: '/' },
+  canonicalPath,
+  hreflang,
 }) {
   const { t } = useI18n()
+  const pathMeta = getSeoMetaByPath(canonicalPath)
 
   // Obtener título y descripción del i18n o fallback
-  const resolvedTitle = title ?? (t(titleKey) !== titleKey ? t(titleKey) : titleFallback)
-  const resolvedDescription = description ?? (t(descKey) !== descKey ? t(descKey) : descFallback)
+  const resolvedTitle = title ?? (t(titleKey) !== titleKey ? t(titleKey) : pathMeta.title || titleFallback)
+  const resolvedDescription =
+    description ?? (t(descKey) !== descKey ? t(descKey) : pathMeta.description || descFallback)
+  const resolvedImage = image || pathMeta.image || seoImages.defaultOpenGraph
+  const resolvedCanonicalPath = canonicalPath || pathMeta.canonicalPath
+  const resolvedHreflang = hreflang || pathMeta.hreflang
 
   useEffect(() => {
     setSeoTags({
       title: resolvedTitle,
       description: resolvedDescription,
-      image,
-      canonicalPath,
-      hreflang,
+      image: resolvedImage,
+      canonicalPath: resolvedCanonicalPath,
+      hreflang: resolvedHreflang,
     })
-  }, [resolvedTitle, resolvedDescription, image, canonicalPath, hreflang])
+  }, [resolvedTitle, resolvedDescription, resolvedImage, resolvedCanonicalPath, resolvedHreflang])
 
   return null
 }

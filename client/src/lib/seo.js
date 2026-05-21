@@ -25,6 +25,7 @@ function ensureLinkTag(selector, rel) {
 }
 
 function toAbsoluteUrl(path) {
+  if (/^https?:\/\//i.test(path)) return path
   const origin = window.location.origin
   return new URL(path, origin).toString()
 }
@@ -46,7 +47,7 @@ export function setSeoTags({ title, description, image, canonicalPath, hreflang 
   ogDescription.setAttribute('content', description || 'Escuela de Kitesurf y Wingfoil en Máncora, Perú')
 
   const ogImage = ensureMetaTag('meta[property="og:image"]', 'property', 'og:image')
-  ogImage.setAttribute('content', image || seoImages.defaultOpenGraph)
+  ogImage.setAttribute('content', toAbsoluteUrl(image || seoImages.defaultOpenGraph))
 
   const ogUrl = ensureMetaTag('meta[property="og:url"]', 'property', 'og:url')
   ogUrl.setAttribute('content', canonicalPath ? toAbsoluteUrl(canonicalPath) : window.location.href)
@@ -68,7 +69,7 @@ export function setSeoTags({ title, description, image, canonicalPath, hreflang 
   twitterDescription.setAttribute('content', description || 'Escuela de Kitesurf y Wingfoil en Máncora, Perú')
 
   const twitterImage = ensureMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image')
-  twitterImage.setAttribute('content', image || seoImages.defaultOpenGraph)
+  twitterImage.setAttribute('content', toAbsoluteUrl(image || seoImages.defaultOpenGraph))
 
   if (canonicalPath) {
     const canonicalTag = ensureLinkTag('link[rel="canonical"]', 'canonical')

@@ -1,4 +1,6 @@
 import SEO from '../../components/SEO.jsx'
+import { useI18n } from '../../app/providers/i18nContext.js'
+import { localizePath } from '../../lib/routes.js'
 import WavesHero from '../../sections/waves/WavesHero.jsx'
 import WavesIntro from '../../sections/waves/WavesIntro.jsx'
 import WavesQuote from '../../sections/waves/WavesQuote.jsx'
@@ -17,14 +19,17 @@ import {
   SURF_CLASSES,
 } from '../../sections/waves/wavesContent.js'
 
-function WavesPage({ canonicalPath = '/waves' }) {
+function WavesPage() {
+  const { currentLang } = useI18n()
+  const resolvedCanonicalPath = localizePath('/waves', currentLang)
+
   return (
     <>
       <SEO
         title="Mancora Kite Club | Waves & Wind Trips"
         description="Kitesurf, Wingfoil and Surfing trips across Northern Peru. Explore Mancora, Negritos, Los Organos, Cabo Blanco and Lobitos with professional coaching."
-        canonicalPath={canonicalPath}
-        hreflang={{ en: '/waves', es: '/waves/esp', default: '/' }}
+        canonicalPath={resolvedCanonicalPath}
+        hreflang={{ en: '/waves', es: '/esp/waves', fr: '/fr/waves', default: '/waves' }}
       />
 
       {/* ── Kitesurf block ── */}

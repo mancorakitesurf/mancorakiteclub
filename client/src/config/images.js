@@ -363,7 +363,17 @@ export const remoteImages = Object.freeze({
 })
 
 export const seoImages = Object.freeze({
-  defaultOpenGraph: 'https://www.mancorakiteclub.com/assets/main-CpaNiQFq.webp',
+  defaultOpenGraph: '/og/home.webp',
+  home: '/og/home.webp',
+  trips: '/og/trips.webp',
+  classes: '/og/classes.webp',
+  stay: '/og/stay.webp',
+  build: '/og/build.webp',
+  blog: '/og/blog.webp',
+  faq: '/og/faq.webp',
+  contact: '/og/contact.webp',
+  reviews: '/og/reviews.webp',
+  waves: '/og/waves.webp',
 })
 
 export const componentImages = Object.freeze({

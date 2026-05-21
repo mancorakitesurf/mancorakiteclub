@@ -1,4 +1,6 @@
 import SEO from '../components/SEO.jsx'
+import { useI18n } from '../app/providers/i18nContext.js'
+import { localizePath } from '../lib/routes.js'
 import StayHeroCarousel from '../sections/stay/StayHeroCarousel.jsx'
 import StayAbout from '../sections/stay/StayAbout.jsx'
 import StayAmenities from '../sections/stay/StayAmenities.jsx'
@@ -7,6 +9,8 @@ import StayLocation from '../sections/stay/StayLocation.jsx'
 import StayCTA from '../sections/stay/StayCTA.jsx'
 
 function StayPage() {
+  const { currentLang } = useI18n()
+
   return (
     <div className="min-h-screen bg-white dark:bg-background-dark">
       <SEO
@@ -14,6 +18,8 @@ function StayPage() {
         descKey="seo.stayDesc"
         titleFallback="Stay with Us in Máncora | Máncora Kite Club"
         descFallback="Premium accommodation in Máncora for kitesurfers and riders. Clean rooms with A/C, WiFi, hot water, breakfast. Calm base close to the best spots. Book direct!"
+        canonicalPath={localizePath('/stay', currentLang)}
+        hreflang={{ en: '/stay', es: '/esp/stay', fr: '/fr/stay', default: '/stay' }}
       />
 
       <StayHeroCarousel />
@@ -27,4 +33,3 @@ function StayPage() {
 }
 
 export default StayPage
-

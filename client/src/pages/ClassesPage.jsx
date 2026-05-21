@@ -1,4 +1,6 @@
 import SEO from "../components/SEO"
+import { useI18n } from "../app/providers/i18nContext.js"
+import { localizePath } from "../lib/routes.js"
 import ClassesHero from "../sections/ClassesPage/ClassesHero.jsx"
 import ClassesIntro from "../sections/ClassesPage/ClassesIntro.jsx"
 import ClassesPricing from "../sections/ClassesPage/ClassesPricing.jsx"
@@ -17,6 +19,8 @@ import RentGear from "../sections/ClassesPage/RentGear.jsx"
 import SurfSup from "../sections/ClassesPage/SurfSup.jsx"
 
 function ClassesPage() {
+  const { currentLang } = useI18n()
+
   return (
     <>
       <SEO
@@ -24,8 +28,8 @@ function ClassesPage() {
         descKey="seo.classesDesc"
         titleFallback="Kitesurfing & Wingfoiling Lessons in Máncora | Máncora Kite Club"
         descFallback="Professional kitesurfing and wingfoil classes in Máncora, Peru. All levels, private or group. IKO certified instructors, gear included. Book your lesson now."
-        canonicalPath="/classes"
-        hreflang={{ en: "/classes", es: "/esp/clases", default: "/" }}
+        canonicalPath={localizePath("/classes", currentLang)}
+        hreflang={{ en: "/classes", es: "/esp/classes", fr: "/fr/classes", default: "/classes" }}
       />
 
       {/* 1. Kitesurf Lessons (Servicio Principal) */}

@@ -26,6 +26,7 @@ function BuildPage() {
     extrasQty, setExtraQty,
     paso, setPaso,
     datosUsuario, setDatosUsuario,
+    fechaInicio,
     reset,
   } = useTripBuilderStore()
 
@@ -40,23 +41,97 @@ function BuildPage() {
 
   const generarLinkWhatsApp = () => {
     const total = calcularPrecio(actividades, noches, extras, extrasQty, personas)
+    
+    // Format check-in and check-out dates
+    const checkInDate = fechaInicio ? new Date(fechaInicio + 'T12:00:00') : new Date()
+    const checkOutDate = new Date(checkInDate)
+    checkOutDate.setDate(checkInDate.getDate() + noches)
+
+    const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }
+    const checkInFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkInDate)
+    const checkOutFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkOutDate)
+
     const listActividades = Object.entries(actividades)
-      .map(([id, hrs]) => `- ${id}: ${hrs}h`)
+      .map(([id, hrs]) => `• ${id}: ${hrs}h`)
       .join('\n')
+    
     const listExtras = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
-      .map((e) => `- ${e.labelKey} (x${extrasQty[e.id] || 1})`)
+      .map((e) => `• ${t(e.labelKey)} (x${extrasQty[e.id] || 1})`)
       .join('\n')
 
-    const mensaje = `¡Hola! He armado mi viaje en la web:
-- Actividades:
+    let mensaje = ''
+
+    if (currentLang === 'fr') {
+      mensaje = `*MÁNCORA KITE CLUB* 🏄‍♂️
+*Détails du Package*
+-------------------------------------
+👤 *Client:* ${datosUsuario.nombre || '-'}
+📧 *Email:* ${datosUsuario.email || '-'}
+👥 *Personnes:* ${personas}
+
+📅 *Séjour:*
+- Arrivée (Check-in): ${checkInFormatted}
+- Départ (Check-out): ${checkOutFormatted}
+- Durée: ${noches} nuits
+
+🏋️ *Activités:*
+${listActividades || '  Aucune'}
+
+✨ *Extras:*
+${listExtras || '  Aucun'}
+
+=====================================
+💰 *TOTAL ESTIMÉ:* $${total} USD
+=====================================
+_Bonjour! J'ai préparé mon package personnalisé sur le site web et j'aimerais confirmer la disponibilité._`
+    } else if (currentLang === 'en') {
+      mensaje = `*MÁNCORA KITE CLUB* 🏄‍♂️
+*Package Details*
+-------------------------------------
+👤 *Client:* ${datosUsuario.nombre || '-'}
+📧 *Email:* ${datosUsuario.email || '-'}
+👥 *Guests:* ${personas}
+
+📅 *Stay:*
+- Check-in: ${checkInFormatted}
+- Check-out: ${checkOutFormatted}
+- Duration: ${noches} nights
+
+🏋️ *Activities:*
+${listActividades || '  None'}
+
+✨ *Extras:*
+${listExtras || '  None'}
+
+=====================================
+💰 *ESTIMATED TOTAL:* $${total} USD
+=====================================
+_Hello! I have built my custom package on the website and would like to confirm availability._`
+    } else {
+      // Default to Spanish (es)
+      mensaje = `*MÁNCORA KITE CLUB* 🏄‍♂️
+*Detalle de Paquete*
+-------------------------------------
+👤 *Cliente:* ${datosUsuario.nombre || '-'}
+📧 *Email:* ${datosUsuario.email || '-'}
+👥 *Personas:* ${personas}
+
+📅 *Estadía:*
+- Llegada (Check-in): ${checkInFormatted}
+- Salida (Check-out): ${checkOutFormatted}
+- Duración: ${noches} noches
+
+🏋️ *Actividades:*
 ${listActividades || '  Ninguna'}
-- Noches: ${noches}
-- Personas: ${personas}
-${listExtras ? `- Extras:\n${listExtras}` : ''}
----
-Total estimado: $${total} USD
-Nombre: ${datosUsuario.nombre}
-Email: ${datosUsuario.email}`
+
+✨ *Extras:*
+${listExtras || '  Ninguno'}
+
+=====================================
+💰 *TOTAL ESTIMADO:* $${total} USD
+=====================================
+_¡Hola! He armado mi paquete personalizado en la web y me gustaría confirmar disponibilidad._`
+    }
 
     return `https://wa.me/51996557689?text=${encodeURIComponent(mensaje)}`
   }
@@ -69,6 +144,8 @@ Email: ${datosUsuario.email}`
         titleKey="build.heroTitle1"
         descKey="build.heroSubtitle"
         titleFallback="Build Your Trip | Máncora Kite Club"
+        canonicalPath={currentLang === 'en' ? '/build' : `/${currentLang === 'fr' ? 'fr' : 'esp'}/build`}
+        hreflang={{ en: '/build', es: '/esp/build', fr: '/fr/build', default: '/build' }}
       />
 
       <div className="relative overflow-hidden bg-background-dark py-32 sm:py-48 lg:py-56">

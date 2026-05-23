@@ -1,15 +1,18 @@
 import { componentImages } from '../../config/images.js'
 import FullscreenHero from "../../components/ui/FullscreenHero.jsx"
 import { createPresetHeroSlides } from "../../lib/fullscreenHeroSlides.js"
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 const { reviewHeroImg } = componentImages["sections/review/HeroReview.jsx"]
 function HeroReview() {
+  const { t } = useI18n()
+
   return (
     <FullscreenHero
       as="section"
-      eyebrow="Mancora Kite Club"
-      title="What Our Riders Say"
-      subtitle="Real stories from the riders who lived the wind, the ocean, and the tribe experience."
+      eyebrow={t('reviews.hero.eyebrow')}
+      title={t('reviews.hero.title')}
+      subtitle={t('reviews.hero.subtitle')}
       slides={createPresetHeroSlides('community', {
         desktop: [reviewHeroImg],
         alt: 'Mancora Kite Club rider testimonials',
@@ -18,7 +21,7 @@ function HeroReview() {
       actions={[
         {
           href: '#videos',
-          label: 'Watch Videos',
+          label: t('reviews.hero.watchVideos'),
         },
       ]}
     />

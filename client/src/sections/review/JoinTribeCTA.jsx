@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import { useI18n } from "../../app/providers/i18nContext.js"
+import { localizePath } from "../../lib/routes.js"
 
 function JoinTribeCTA() {
+  const { t, currentLang } = useI18n()
+
   return (
     <section className="relative overflow-hidden bg-[#031015] px-6 py-24 text-white sm:px-10 lg:px-16 lg:py-32">
       
@@ -27,25 +31,24 @@ function JoinTribeCTA() {
             {/* Text */}
             <div className="text-center lg:text-left">
               <p className="text-xs font-bold uppercase tracking-[0.42em] text-[#5af8fb]">
-                Join the Tribe
+                {t('reviews.cta.eyebrow')}
               </p>
 
               <h2 className="mt-5 text-4xl font-black uppercase leading-[0.95] tracking-tight sm:text-5xl lg:text-7xl">
-                Start Your
+                {t('reviews.cta.title1')}
                 <br />
-                Mancora Story
+                {t('reviews.cta.title2')}
               </h2>
 
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg">
-                Plan your next session in Máncora with wind, ocean, community,
-                and real progression in one place.
+                {t('reviews.cta.description')}
               </p>
             </div>
 
             {/* CTA box */}
             <div className="rounded-[2rem] border border-white/10 bg-black/20 p-6 text-center shadow-inner">
               <p className="text-sm leading-7 text-white/70">
-                Tell us your dates, your level, and the kind of experience you want to build.
+                {t('reviews.cta.ctaText')}
               </p>
 
               <motion.div
@@ -53,7 +56,7 @@ function JoinTribeCTA() {
                 whileTap={{ scale: 0.96 }}
               >
                 <Link
-                  to="/build"
+                  to={localizePath('/build', currentLang)}
                   className="
                     mt-7 inline-flex min-h-14 w-full items-center justify-center
                     rounded-full bg-[#5af8fb] px-7 text-sm font-black
@@ -62,7 +65,7 @@ function JoinTribeCTA() {
                     transition hover:bg-white
                   "
                 >
-                  Build Your Trip
+                  {t('reviews.cta.ctaButton')}
                 </Link>
               </motion.div>
 

@@ -329,5 +329,173 @@
     "ctaTitle": "Prêt à Séjourner?",
     "ctaDesc": "Réservez votre séjour plage parfait. Cliquez ci-dessous pour nous envoyer un message!",
     "whatsappMessage": "Salut! Je suis intéressé par la réservation d'hébergement au Bali Lodge. Pouvez-vous me donner plus d'info?"
+  },
+  "reviews": {
+    "hero": {
+      "eyebrow": "Mancora Kite Club",
+      "title": "Ce Que Disent Nos Riders",
+      "subtitle": "Histoires réelles de riders qui ont vécu le vent, l'océan et l'expérience de la tribu.",
+      "watchVideos": "Voir les Vidéos"
+    },
+    "trust": {
+      "title": "Garantie & Expérience",
+      "subtitle": "École de Kitesurf Certifiée avec des Instructeurs Officiels IKO",
+      "ikoTitle": "École Certifiée IKO",
+      "ikoDescPart1": "Apprenez en toute sécurité avec des ",
+      "ikoDescBold": "Instructeurs Certifiés",
+      "ikoDescPart2": ". Nous délivrons des certifications internationales officielles.",
+      "googleDesc": "Avis de notre tribu",
+      "tripAdvisorDesc": "La meilleure expérience de Kite au Pérou",
+      "loading": "Chargement des témoignages de la tribu..."
+    },
+    "videos": {
+      "eyebrow": "Histoire de Rider",
+      "title1": "Une Véritable",
+      "title2": "Expérience",
+      "description": "Une histoire de rider réelle sur le vent, l'océan, la progression et la tribu Mancora Kite Club.",
+      "featuredStory": "Histoire à la Une",
+      "videoTitle": "Vraie progression. Vrai océan. Vraie tribu.",
+      "videoDesc": "Regardez un témoignage complet d'un rider qui a fait l'expérience du coaching, des conditions de vent et de l'ambiance de la communauté à Máncora.",
+      "videoTag": "Vidéo témoignage"
+    },
+    "cta": {
+      "eyebrow": "Rejoignez la Tribu",
+      "title1": "Commencez Votre",
+      "title2": "Histoire à Máncora",
+      "description": "Planifiez votre prochaine session à Máncora avec vent, océan, communauté et vraie progression en un seul endroit.",
+      "ctaText": "Dites-nous vos dates, votre niveau et le type d'expérience que vous souhaitez construire.",
+      "ctaButton": "Construisez Votre Voyage"
+    },
+    "items": {
+      "3": {
+        "text": "J'ai adoré apprendre le kite ici dans la meilleure école du nord",
+        "relative_time_description": "Il y a 2 mois"
+      },
+      "1": {
+        "text": "très bonne école, super ambiance et Mancora est un endroit merveilleux, dans lequel j'ai eu la chance de naviguer à côté des baleines et des dauphins... que demander de plus😅😅 ??",
+        "relative_time_description": "Il y a 5 mois"
+      },
+      "6": {
+        "text": "Très bonne expérience à Mancora Kitesurf, Kike vous met à l'aise, vous motive, a beaucoup d'expérience et une maîtrise totale de ce sport. Totalement recommandé !",
+        "relative_time_description": "Il y a 6 mois"
+      },
+      "2": {
+        "text": "Excellents instructeurs et des personnes encore meilleures ! J'y suis allé avec ma partenaire et elle a pris des cours, elle a adoré. Nous reviendrons sans aucun doute pour partager et, bien sûr, faire du KITE !",
+        "relative_time_description": "Il y a 9 mois"
+      },
+      "7": {
+        "text": "Merci Kike de m'avoir offert la meilleure expérience à l'école ! Beaucoup de patience et de dévouement. Service parfait",
+        "relative_time_description": "Il y a 11 mois"
+      },
+      "8": {
+        "text": "J'ai passé une semaine à pratiquer le kitesurf et j'ai pu le faire sans problème grâce à l'équipe de l'école. Nous avons connu le spot principal de Máncora, mais les jours de vent faible nous sommes partis à sa recherche, donc nous avons pu naviguer !\n\nL'équipe de l'école est gentille et amicale.",
+        "relative_time_description": "Il y a 11 mois"
+      },
+      "4": {
+        "text": "« Nous avons voyagé en famille et mes adolescents ont pris des cours de kitesurf au Máncora Kite Club. Nous avons été fascinés ! L'accueil a été super amical, toute l'équipe a été patiente et motivante avec les enfants. Le climat est idéal et l'ambiance du club est sûre et chaleureuse. De plus, nous avons rejoint un kite trip en famille qui a été la partie la plus amusante du voyage. Nous repartons avec des souvenirs inoubliables. Mille mercis à l'équipe pour leur dévouement et leur bonne énergie. »",
+        "relative_time_description": "Il y a un an"
+      },
+      "5": {
+        "text": "Une école de kite très professionnelle dans le nord du Pérou. Ils savent vous emmener sur les meilleurs spots de kite et de kitesurf. Demandez Kike🙌🏼🤙🏼🤙🏼",
+        "relative_time_description": "Il y a 2 ans"
+      }
+    }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Le Journal",
+      "title": "Kitesurf au Pérou",
+      "subtitle": "Histoires de vagues, d'océan, de vent et de culture sur la côte nord du Pérou."
+    },
+    "sidebar": {
+      "planEyebrow": "Planifiez Votre Voyage",
+      "planTitle": "Construisez le voyage au Pérou adapté à votre vent, niveau et temps.",
+      "planDesc": "Évitez les recherches sans fin et passez directement à un itinéraire qui correspond à vos objectifs de navigation, votre style d'hébergement et la meilleure saison.",
+      "planButton": "Commencer à Planifier",
+      "openedEyebrow": "Le Plus Ouvert",
+      "openedTitle": "Articles Tendances",
+      "openedDesc": "Les histoires que les lecteurs utilisent pour comparer les vents, les flux de voyage et les itinéraires les plus solides dans le nord du Pérou.",
+      "trendingRead": "Lecture Tendance"
+    },
+    "common": {
+      "loadMore": "Charger Plus d'Articles"
+    },
+    "posts": {
+      "top-20-kitesurf-destinations-part-1": {
+        "title": "Les 20 meilleures destinations au monde pour le kitesurf de vagues - Partie 1",
+        "category": "KITESURF DANS LES VAGUES",
+        "date": "25 mai 2022"
+      },
+      "7-different-plans-of-a-kitesurf-trip-to-peru": {
+        "title": "7 plans différents pour un voyage de kitesurf au Pérou",
+        "category": "KITESURF AU PÉROU",
+        "date": "16 mai 2022"
+      },
+      "chicama-peru-surf-trip": {
+        "title": "Chicama, Pérou : la plus longue vague du monde + comment construire le voyage de surf ultime",
+        "category": "SURF AU PÉROU",
+        "date": "10 juin 2024"
+      },
+      "mancora-vs-lobitos-vs-cabo-blanco": {
+        "title": "Mancora vs Lobitos vs Cabo Blanco : meilleur spot de kitesurf de vagues au Pérou",
+        "category": "KITESURF AU PÉROU",
+        "date": "20 juin 2024"
+      },
+      "peru-kitesurf-north-vs-south": {
+        "title": "Kitesurf au Pérou : Nord vs Sud — guide des spots, des saisons et du vent",
+        "category": "KITESURF AU PÉROU",
+        "date": "30 juin 2024"
+      },
+      "pacasmayo-peru-the-ultimate-point-break-surf-guide": {
+        "title": "Pacasmayo, Pérou : le guide de surf ultime sur point break",
+        "category": "SURF AU PÉROU",
+        "date": "10 juillet 2024"
+      },
+      "why-mancora-is-different-kitesurf-wave-progression-guide": {
+        "title": "Pourquoi Mancora est différent : guide de progression en kitesurf de vagues",
+        "category": "KITESURF AU PÉROU",
+        "date": "20 juillet 2024"
+      },
+      "7-Nights-in-Mancora-Progression-Plan": {
+        "title": "7 nuits à Mancora : plan de progression",
+        "category": "PROGRESSION",
+        "date": "10 juin 2023"
+      },
+      "Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level)": {
+        "title": "Techniques pour le kitesurf de vagues : lecture de la houle, timing et contrôle",
+        "category": "TECHNIQUE",
+        "date": "5 juillet 2023"
+      },
+      "Typical-mistakes-of-the-intermediate-rider-in-waves-and-how-to-correct-them-(real-coaching)": {
+        "title": "Erreurs typiques du rider intermédiaire dans les vagues et comment les corriger",
+        "category": "COACHING",
+        "date": "12 août 2023"
+      },
+      "Kite-Safari-Northern-Peru": {
+        "title": "Kite Safari dans le Nord du Pérou — série d'expéditions",
+        "category": "EXPÉDITIONS",
+        "date": "3 septembre 2023"
+      },
+      "Whale-Season-in-Northern-Peru": {
+        "title": "Saison des baleines dans le nord du Pérou : naviguez avec les baleines",
+        "category": "STYLE DE VIE",
+        "date": "1er octobre 2023"
+      },
+      "Mancora-Whale-Season": {
+        "title": "Saison des baleines à Mancora — La marée cinétique",
+        "category": "STYLE DE VIE",
+        "date": "20 octobre 2023"
+      },
+      "Wingfoil-vs-Kitesurf-Choosing-Your-Weapon": {
+        "title": "Wingfoil vs Kitesurf : choisir son arme",
+        "category": "WINGFOIL",
+        "date": "15 novembre 2023"
+      },
+      "Safety-and-Progression-The-Technical-Edge": {
+        "title": "Sécurité et progression : l'avantage technique",
+        "category": "SÉCURITÉ",
+        "date": "5 décembre 2023"
+      }
+    }
   }
 }

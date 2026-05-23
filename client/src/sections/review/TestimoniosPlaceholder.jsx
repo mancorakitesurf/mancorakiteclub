@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import reviewsData from '../../data/reviews.json';
+import { useI18n } from '../../app/providers/i18nContext.js';
 
 const GoogleLogo = () => (
   <svg className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
@@ -25,6 +26,8 @@ const TripAdvisorLogo = () => (
 );
 
 function TestimoniosPlaceholder() {
+  const { t } = useI18n();
+
   return (
     <section className="relative z-10 w-full overflow-hidden bg-[#0A1113] px-6 py-24 sm:px-10 lg:px-16 border-t border-b border-transparent">
       
@@ -32,11 +35,11 @@ function TestimoniosPlaceholder() {
         
         {/* CABECERA PRINCIPAL */}
         <h2 className="text-3xl md:text-5xl font-serif text-[#F4F2EA] mb-3 tracking-widest uppercase">
-          Garantía y Experiencia
+          {t('reviews.trust.title')}
         </h2>
         
         <p className="text-[#F4F2EA]/40 text-xs md:text-sm font-semibold tracking-wider uppercase mb-16 max-w-xl mx-auto">
-          Certified Kitesurf School with Official IKO Instructors
+          {t('reviews.trust.subtitle')}
         </p>
 
         {/* CONTENEDOR DE BLOQUES SUELTOS CON LÍNEAS DIVISIONALES */}
@@ -54,10 +57,10 @@ function TestimoniosPlaceholder() {
             </div>
             <div>
               <h3 className="text-[#38E0C8] font-bold text-xs tracking-widest uppercase flex items-center gap-1.5">
-                IKO Certified School <ExternalLink size={11} className="opacity-0 group-hover:opacity-60 transition-opacity" />
+                {t('reviews.trust.ikoTitle')} <ExternalLink size={11} className="opacity-0 group-hover:opacity-60 transition-opacity" />
               </h3>
               <p className="text-[#F4F2EA]/70 text-xs mt-1.5 font-medium leading-relaxed">
-                Aprende de forma segura con <span className="text-[#F4F2EA] font-semibold">Certified Instructors</span>. Emitimos certificaciones internacionales oficiales.
+                {t('reviews.trust.ikoDescPart1')}<span className="text-[#F4F2EA] font-semibold">{t('reviews.trust.ikoDescBold')}</span>{t('reviews.trust.ikoDescPart2')}
               </p>
             </div>
           </a>
@@ -82,7 +85,7 @@ function TestimoniosPlaceholder() {
               <p className="text-[#F4F2EA] text-sm font-bold mt-1.5 group-hover:text-[#38E0C8] transition-colors flex items-center gap-1.5 duration-300">
                 5.0 Google Reviews <ExternalLink size={12} className="opacity-40 group-hover:opacity-100 group-hover:text-[#38E0C8] transition-all" />
               </p>
-              <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">Opiniones de nuestra tribu</p>
+              <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">{t('reviews.trust.googleDesc')}</p>
             </div>
           </a>
 
@@ -106,7 +109,7 @@ function TestimoniosPlaceholder() {
               <p className="text-[#F4F2EA] text-sm font-bold mt-1.5 group-hover:text-[#38E0C8] transition-colors flex items-center gap-1.5 duration-300">
                 5.0 TripAdvisor <ExternalLink size={12} className="opacity-40 group-hover:opacity-100 group-hover:text-[#38E0C8] transition-all" />
               </p>
-              <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">Top Kite Experience in Peru</p>
+              <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">{t('reviews.trust.tripAdvisorDesc')}</p>
             </div>
           </a>
 
@@ -161,7 +164,7 @@ function TestimoniosPlaceholder() {
 
                   <div className="flex-grow flex items-center">
                     <p className="text-sm md:text-base font-medium italic text-[#0A1113] line-clamp-5 leading-relaxed">
-                      "{review.text}"
+                      "{t(`reviews.items.${review.id}.text`)}"
                     </p>
                   </div>
 
@@ -170,7 +173,7 @@ function TestimoniosPlaceholder() {
                       {review.author_name}
                     </h4>
                     <p className="text-sm text-gray-500 font-medium capitalize mt-1">
-                      {review.relative_time_description}
+                      {t(`reviews.items.${review.id}.relative_time_description`)}
                     </p>
                   </div>
                 </div>
@@ -179,7 +182,7 @@ function TestimoniosPlaceholder() {
           </Swiper>
         ) : (
           <div className="mt-8 rounded-2xl border border-dashed border-[#F4F2EA]/30 bg-[#0A1113] p-8 shadow-sm text-center">
-            <p className="text-[#F4F2EA]">Cargando testimonios de la tribu...</p>
+            <p className="text-[#F4F2EA]">{t('reviews.trust.loading')}</p>
           </div>
         )}
       </div>

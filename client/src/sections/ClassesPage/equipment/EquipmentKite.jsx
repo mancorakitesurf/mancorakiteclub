@@ -2,8 +2,11 @@ import { motion } from "framer-motion"
 import Container from "../../../components/ui/Container"
 import EquipmentSelector from "./EquipmentSelector"
 import { KITESURF_DATA } from "./classesContent"
+import { useI18n } from "../../../app/providers/i18nContext"
 
 function EquipmentKite() {
+  const { t } = useI18n()
+
   return (
     <section className="bg-[#1E3130] py-16 text-white sm:py-20 lg:py-28">
       <Container className="space-y-16 sm:space-y-20 lg:space-y-24">
@@ -17,7 +20,7 @@ function EquipmentKite() {
             transition={{ duration: 0.5 }}
             className="mb-8 text-2xl font-bold uppercase text-white sm:text-3xl md:text-4xl"
           >
-            Kitesurf Equipment
+            {t("classes.equipment.kitesurf.title")}
           </motion.h3>
           <EquipmentSelector data={KITESURF_DATA} />
         </div>

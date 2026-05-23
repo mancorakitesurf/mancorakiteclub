@@ -1,31 +1,34 @@
 import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
+import { useI18n } from "../../app/providers/i18nContext"
 
 const { gallery1, gallery2, gallery3, gallery4 } = componentImages["sections/ClassesPage/WingfoilWithUs.jsx"]
 const BENEFITS = [
   {
-    title: "SIMPLE AND AMAZING",
-    text: "Intuitive and accessible. No elite level required to start flying.",
+    titleKey: "classes.wingfoil.withUs.benefits.simple.title",
+    textKey: "classes.wingfoil.withUs.benefits.simple.text",
     image: gallery1
   },
   {
-    title: "FAST PROGRESSION",
-    text: "In just a few sessions you’ll experience your first controlled flights.",
+    titleKey: "classes.wingfoil.withUs.benefits.progression.title",
+    textKey: "classes.wingfoil.withUs.benefits.progression.text",
     image: gallery2
   },
   {
-    title: "UNPARALLELED EXPERIENCE",
-    text: "Flying over water blends freedom, calm, and adrenaline.",
+    titleKey: "classes.wingfoil.withUs.benefits.experience.title",
+    textKey: "classes.wingfoil.withUs.benefits.experience.text",
     image: gallery3
   },
   {
-    title: "EFFICIENCY",
-    text: "Premium equipment and expert coaching maximize every session.",
+    titleKey: "classes.wingfoil.withUs.benefits.efficiency.title",
+    textKey: "classes.wingfoil.withUs.benefits.efficiency.text",
     image: gallery4
   }
 ]
 
 function WingfoilWithUs() {
+  const { t } = useI18n()
+
   return (
     <section className="relative overflow-hidden bg-[#0E201F] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       
@@ -38,7 +41,7 @@ function WingfoilWithUs() {
           transition={{ duration: 0.9 }}
           className="text-2xl font-extrabold tracking-tight sm:text-3xl md:text-4xl lg:text-6xl"
         >
-          WE BROUGHT THE WINGFOIL NORTH
+          {t("classes.wingfoil.withUs.title")}
         </motion.h2>
 
         <motion.p
@@ -48,8 +51,7 @@ function WingfoilWithUs() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mt-6 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base md:text-lg"
         >
-          Come fly with us. Learn this modern water sport with top instructors
-          and premium gear in a safe, inspiring environment.
+          {t("classes.wingfoil.withUs.text")}
         </motion.p>
       </div>
 
@@ -67,7 +69,7 @@ function WingfoilWithUs() {
             {/* Image */}
             <img
               src={benefit.image}
-              alt={benefit.title}
+              alt={t(benefit.titleKey)}
               loading="lazy"
               className="h-[280px] w-full transform object-cover transition-transform duration-700 group-hover:scale-110 sm:h-[320px] lg:h-[360px]"
             />
@@ -78,10 +80,10 @@ function WingfoilWithUs() {
             {/* Content */}
             <div className="absolute bottom-0 p-4 sm:p-6 lg:p-8">
               <h3 className="mb-3 text-xl font-bold tracking-wide sm:text-2xl">
-                {benefit.title}
+                {t(benefit.titleKey)}
               </h3>
               <p className="max-w-sm text-sm leading-relaxed text-white/85">
-                {benefit.text}
+                {t(benefit.textKey)}
               </p>
             </div>
           </motion.article>

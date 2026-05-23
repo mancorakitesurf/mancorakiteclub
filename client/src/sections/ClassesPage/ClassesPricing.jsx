@@ -1,8 +1,11 @@
 import { motion } from "framer-motion"
-import { PRIVATE_CLASSES, SEMI_PRIVATE_CLASSES } from "./classesData"
+import { PRIVATE_CLASSES, SEMI_PRIVATE_CLASSES, translateClassItem } from "./classesData"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
+import { useI18n } from "../../app/providers/i18nContext"
 
 function ClassCard({ item, index }) {
+  const { t } = useI18n()
+
   return (
     <motion.div
       key={item.id}
@@ -21,7 +24,7 @@ function ClassCard({ item, index }) {
         {item.hoverImage && (
           <img
             src={item.hoverImage}
-            alt={`${item.title} hover`}
+            alt={item.title}
             className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100"
           />
         )}
@@ -44,7 +47,7 @@ function ClassCard({ item, index }) {
           rel="noopener noreferrer"
           className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#8ac43f] px-6 py-3 font-bold text-[#071a19] transition hover:bg-white"
         >
-          BOOK NOW
+          {t("classes.common.bookNow")}
         </a>
       </div>
       {item.featured && (
@@ -60,7 +63,7 @@ function ClassCard({ item, index }) {
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-5 right-5 rounded-full bg-[#8ac43f] px-4 py-1 text-xs font-bold text-[#071a19]"
         >
-          MOST POPULAR
+          {t("classes.common.mostPopular")}
         </motion.div>
       )}
     </motion.div>
@@ -68,6 +71,10 @@ function ClassCard({ item, index }) {
 }
 
 function ClassesPricing() {
+  const { t } = useI18n()
+  const privateClasses = PRIVATE_CLASSES.map((item) => translateClassItem(item, t))
+  const semiPrivateClasses = SEMI_PRIVATE_CLASSES.map((item) => translateClassItem(item, t))
+
   return (
     <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -80,15 +87,15 @@ function ClassesPricing() {
         className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          PRIVATE KITE CLASSES
+          {t("classes.kitesurf.pricing.privateTitle")}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Enjoy 100% personalized experience with IKO certified instructors and premium equipment.
+          {t("classes.kitesurf.pricing.privateDescription")}
         </p>
       </motion.div>
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-        {PRIVATE_CLASSES.map((item, index) => (
+        {privateClasses.map((item, index) => (
           <ClassCard key={item.id} item={item} index={index} />
         ))}
       </div>
@@ -102,15 +109,15 @@ function ClassesPricing() {
         className="mx-auto mt-24 mb-16 max-w-3xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          SEMI-PRIVATE KITE CLASSES
+          {t("classes.kitesurf.pricing.semiPrivateTitle")}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Share the experience — 1 instructor shared between 2 students. Prices per person.
+          {t("classes.kitesurf.pricing.semiPrivateDescription")}
         </p>
       </motion.div>
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-        {SEMI_PRIVATE_CLASSES.map((item, index) => (
+        {semiPrivateClasses.map((item, index) => (
           <ClassCard key={item.id} item={item} index={index} />
         ))}
       </div>

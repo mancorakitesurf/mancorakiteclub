@@ -1,9 +1,12 @@
 import { useState } from "react"
 import { motion } from "framer-motion" 
+import { useI18n } from "../../../app/providers/i18nContext"
 
 function EquipmentSelector({ data, reverse = false }) {
+  const { t } = useI18n()
   const [activeIndex, setActiveIndex] = useState(0)
   const activeItem = data[activeIndex]
+  const activeTitle = t(activeItem.titleKey)
 
   return (
     <motion.div 
@@ -18,15 +21,15 @@ function EquipmentSelector({ data, reverse = false }) {
       <div className="w-full lg:w-2/3 relative h-64 lg:h-[500px]">
         <img
           src={activeItem.image}
-          alt={activeItem.title}
+          alt={activeTitle}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
           <h4 className="text-white text-2xl font-bold">
-            {activeItem.title}
+            {activeTitle}
           </h4>
           <p className="text-gray-300 mt-2">
-            {activeItem.description}
+            {t(activeItem.descriptionKey)}
           </p>
         </div>
       </div>
@@ -57,9 +60,9 @@ function EquipmentSelector({ data, reverse = false }) {
               <h5 className={`font-bold truncate transition-colors ${
                 activeIndex === index ? "text-black" : "text-gray-700 group-hover:text-primary"
               }`}>
-                {item.label}
+                {t(item.labelKey)}
               </h5>
-              <p className="text-xs text-gray-500 truncate">{item.subtitle}</p>
+              <p className="text-xs text-gray-500 truncate">{t(item.subtitleKey)}</p>
             </div>
 
             {/* CHEVRON */}

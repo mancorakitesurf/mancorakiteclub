@@ -299,7 +299,338 @@
     "advanced": "Advanced with ProRider",
     "advancedDesc": "If you already have experience in Kitesurfing and want to take your skills to the next level",
     "private": "Private Lessons",
-    "group": "Group Lessons"
+    "group": "Group Lessons",
+    "common": {
+      "bookNow": "Book Now",
+      "learnMore": "Learn More",
+      "mostPopular": "Most Popular"
+    },
+    "kitesurf": {
+      "hero": {
+        "eyebrow": "Mancora, Peru",
+        "title": "Kitesurf and Wingfoil in The Club",
+        "subtitle": "Private and small-group sessions without accommodation."
+      },
+      "intro": {
+        "title": "Learn Kitesurf in The Club",
+        "text": "The first time someone was seen practicing wingfoil was in 2019, when Robby Naish appeared in Hawaii on a board with a foil and handling a wing. Those images caused so much emotion that in a few months we began to see videos and photos on all social networks of different types of wings and people practicing this strange sport. It did not take long before this sport began to rise, with countless sails appearing across beaches and lakes. Without a doubt, it is a sport that will leave many fans.",
+        "hoverAlt": "Kitesurf class action"
+      },
+      "pricing": {
+        "privateTitle": "Private Kite Classes",
+        "privateDescription": "Enjoy a 100% personalized experience with IKO certified instructors and premium equipment.",
+        "semiPrivateTitle": "Semi-Private Kite Classes",
+        "semiPrivateDescription": "Share the experience: 1 instructor shared between 2 students. Prices per person."
+      },
+      "private": {
+        "discovery": {
+          "title": "Discovery",
+          "duration": "1 day | 2 hours/day",
+          "price": "$120 USD / person",
+          "features": ["Ideal for first experience", "Personalized instruction", "All premium equipment included", "Support via walkie-talkie"]
+        },
+        "beginner": {
+          "title": "Beginner",
+          "duration": "3 days | 2 hours/day",
+          "price": "$350 USD / person",
+          "features": ["Designed by experienced instructors", "Personalized progression", "Premium equipment included", "Professional photo during class"]
+        },
+        "intensive": {
+          "title": "Intensive",
+          "duration": "3 days | 3 hours/day",
+          "price": "$500 USD / person",
+          "features": ["Focused on advanced technique", "More practice time", "Video recording & analysis", "Optional drone shots"]
+        },
+        "fullProgression": {
+          "title": "Full Progression",
+          "duration": "5 days | Flexible schedule",
+          "price": "$600 USD / person",
+          "features": ["Complete program", "Detailed technique analysis", "Performance tracking", "Final evaluation session"]
+        }
+      },
+      "semiPrivate": {
+        "discovery": {
+          "title": "Discovery",
+          "duration": "1 day | 2 hours/day",
+          "price": "$90 USD / person",
+          "features": ["Ideal for first experience", "1 instructor shared between 2 students", "All premium equipment included", "Support via walkie-talkie"]
+        },
+        "beginner": {
+          "title": "Beginner",
+          "duration": "3 days | 2 hours/day",
+          "price": "$250 USD / person",
+          "features": ["Designed by experienced instructors", "1 instructor shared between 2 students", "Premium equipment included", "Professional photo during class"]
+        },
+        "intensive": {
+          "title": "Intensive",
+          "duration": "3 days | 3 hours/day",
+          "price": "$350 USD / person",
+          "features": ["Focused on advanced technique", "1 instructor shared between 2 students", "Video recording & analysis", "Optional drone shots"]
+        },
+        "fullProgression": {
+          "title": "Full Progression",
+          "duration": "5 days | Flexible schedule",
+          "price": "$450 USD / person",
+          "features": ["Complete program", "1 instructor shared between 2 students", "Performance tracking", "Final evaluation session"]
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "subtitle": "Everything included to elevate your kitesurfing experience",
+        "items": {
+          "quality": "Guaranteed Quality: certified instructors with extensive experience.",
+          "equipment": "Vanguard Team: latest technologies in wings and boards.",
+          "safety": "Priority Safety: small groups and constant support.",
+          "memories": "Unforgettable memories: professional visual material.",
+          "flexibility": "Total Flexibility: programs adapted to your needs."
+        }
+      },
+      "steps": {
+        "title": "Your Kitesurf Journey",
+        "subtitle": "Step by step progression with certified instructors and premium gear."
+      }
+    },
+    "gallery": {
+      "label": "Visual Manifesto",
+      "headline": "Mancora Kite Club",
+      "headlineHighlight": "Raw Adventure Manifesto",
+      "description": "Real stories, real adrenaline, and the tribe that rides with the wind.",
+      "cta": "Join the Tribe",
+      "items": {
+        "oceanEnergy": "Ocean Energy",
+        "wingfoilFlow": "Wingfoil Flow",
+        "kiteSessions": "Kite Sessions",
+        "clubLifestyle": "Club Lifestyle",
+        "progression": "Progression",
+        "trainingDays": "Training Days",
+        "windCulture": "Wind Culture",
+        "rawAdventure": "Raw Adventure",
+        "mancoraMood": "Mancora Mood",
+        "theClub": "The Club",
+        "rideTogether": "Ride Together",
+        "fallback": "Mancora Kite Club"
+      }
+    },
+    "wingfoil": {
+      "intro": {
+        "title": "About Wingfoil",
+        "text": "The first time someone was seen practicing wingfoil was in 2019, when Robby Naish appeared in Hawaii on a board with a foil and handling a wing. Those images caused so much emotion that in a few months we began to see videos and photos on all social networks of different types of wings and people practicing this strange sport.",
+        "cta": "Join The Club",
+        "imageAlt": "Wingfoil hero"
+      },
+      "withUs": {
+        "title": "We Brought the Wingfoil North",
+        "text": "Come fly with us. Learn this modern water sport with top instructors and premium gear in a safe, inspiring environment.",
+        "benefits": {
+          "simple": {
+            "title": "Simple and Amazing",
+            "text": "Intuitive and accessible. No elite level required to start flying."
+          },
+          "progression": {
+            "title": "Fast Progression",
+            "text": "In just a few sessions you'll experience your first controlled flights."
+          },
+          "experience": {
+            "title": "Unparalleled Experience",
+            "text": "Flying over water blends freedom, calm, and adrenaline."
+          },
+          "efficiency": {
+            "title": "Efficiency",
+            "text": "Premium equipment and expert coaching maximize every session."
+          }
+        }
+      },
+      "pricing": {
+        "privateTitle": "Private Wingfoil Classes",
+        "privateDescription": "Private sessions with expert instructors and premium equipment.",
+        "semiPrivateTitle": "Semi-Private Wingfoil Classes",
+        "semiPrivateDescription": "Share the experience: 1 instructor shared between 2 students. Prices per person."
+      },
+      "private": {
+        "discovery": {
+          "title": "Discovery",
+          "duration": "1 day | 2 hours/day",
+          "price": "$120 USD / person",
+          "features": ["Discover the basics of Wingfoil", "Theory + land balance exercises", "Water session for basic maneuvers", "Complete equipment provided", "Personalized experience"]
+        },
+        "beginner": {
+          "title": "Beginner",
+          "duration": "3 days | 2 hours/day",
+          "price": "$350 USD / person",
+          "features": ["Solid foundation & safety techniques", "Wing control exercises", "Foil balance training", "Specific water maneuvers", "Complete equipment provided"]
+        },
+        "intensive": {
+          "title": "Intensive",
+          "duration": "3 days | 3 hours/day",
+          "price": "$500 USD / person",
+          "features": ["Perfect advanced maneuvers", "Technical + theoretical sessions", "Control in varied conditions", "Optional video analysis", "Premium equipment"]
+        },
+        "fullProgression": {
+          "title": "Full Progression",
+          "duration": "5 days | Flexible schedule",
+          "price": "$600 USD / person",
+          "features": ["From fundamentals to advanced", "In-depth technical coaching", "Advanced Wingfoil drills", "Video analysis sessions", "Certificate of completion"]
+        }
+      },
+      "semiPrivate": {
+        "discovery": {
+          "title": "Discovery",
+          "duration": "1 day | 2 hours/day",
+          "price": "$90 USD / person",
+          "features": ["Discover the basics of Wingfoil", "1 instructor shared between 2 students", "Water session for basic maneuvers", "Complete equipment provided"]
+        },
+        "beginner": {
+          "title": "Beginner",
+          "duration": "3 days | 2 hours/day",
+          "price": "$250 USD / person",
+          "features": ["Solid foundation & safety techniques", "1 instructor shared between 2 students", "Foil balance training", "Complete equipment provided"]
+        },
+        "intensive": {
+          "title": "Intensive",
+          "duration": "3 days | 3 hours/day",
+          "price": "$350 USD / person",
+          "features": ["Perfect advanced maneuvers", "1 instructor shared between 2 students", "Control in varied conditions", "Premium equipment"]
+        },
+        "fullProgression": {
+          "title": "Full Progression",
+          "duration": "5 days | Flexible schedule",
+          "price": "$450 USD / person",
+          "features": ["From fundamentals to advanced", "1 instructor shared between 2 students", "Advanced Wingfoil drills", "Video analysis sessions"]
+        }
+      },
+      "benefits": {
+        "title": "Benefits",
+        "subtitle": "Everything included to elevate your Wingfoil experience",
+        "items": {
+          "quality": "Guaranteed Quality: certified instructors with extensive experience.",
+          "equipment": "Vanguard Team: latest technologies in wings and boards.",
+          "safety": "Priority Safety: small groups and constant support.",
+          "memories": "Unforgettable memories: professional visual material.",
+          "flexibility": "Total Flexibility: programs adapted to your needs."
+        }
+      }
+    },
+    "equipment": {
+      "kitesurf": {
+        "title": "Kitesurf Equipment",
+        "items": {
+          "kites": {
+            "title": "Latest Generation Kites",
+            "description": "Recent models checked daily to ensure your safety and maximum performance.",
+            "label": "Kite",
+            "subtitle": "Various sizes (5m - 14m)"
+          },
+          "boards": {
+            "title": "Premium TwinTip Boards",
+            "description": "High-performance boards designed for freeride and advanced freestyle.",
+            "label": "TwinTip Boards",
+            "subtitle": "For freeride and freestyle"
+          },
+          "bars": {
+            "title": "Bars and Control Systems",
+            "description": "Control systems with resistant lines and certified quick-release safety systems.",
+            "label": "Bar and Control Systems",
+            "subtitle": "Modern safety systems"
+          },
+          "safety": {
+            "title": "Harnesses and Safety Gear",
+            "description": "Essential comfort and protection with ergonomic harnesses, impact vests, and adjustable helmets.",
+            "label": "Harnesses and Safety Gear",
+            "subtitle": "Impact vests and helmets"
+          }
+        }
+      },
+      "wingfoil": {
+        "title": "Wingfoil Equipment",
+        "items": {
+          "wings": {
+            "title": "Light and Powerful Wings",
+            "description": "Equipment designed to take advantage of the light and strong winds.",
+            "label": "Wing",
+            "subtitle": "Duotone Units and Slicks"
+          },
+          "boards": {
+            "title": "Specialized Foil Boards",
+            "description": "Stable and light boards with ideal volumes for beginners and experts.",
+            "label": "Specialized Foil Boards",
+            "subtitle": "Volumes from 80L to 120L"
+          },
+          "foils": {
+            "title": "Carbon Hydrofoils",
+            "description": "High-modulus carbon masts and wings for smooth gliding and maximum speed.",
+            "label": "Carbon Hydrofoils",
+            "subtitle": "Carbon masts and wings"
+          },
+          "maintenance": {
+            "title": "Inflation and Maintenance Kit",
+            "description": "Everything you need to get your gear ready: high-pressure pumps and repair kits.",
+            "label": "Pump and Accessories",
+            "subtitle": "Fast inflation and repair"
+          },
+          "leash": {
+            "title": "Certified Safety Leash",
+            "description": "Keep your equipment connected to you at all times.",
+            "label": "Safety Leash",
+            "subtitle": "Coil leash for wrist and waist"
+          }
+        }
+      }
+    },
+    "waveRiding": {
+      "title": "Wave Riding Coaching",
+      "subtitle": "Advanced coaching and video analysis to master the waves.",
+      "cardTitle": "Advanced Wave Riding Coaching",
+      "cardDescription": "Advanced wave coaching. Includes transport to the best spots in northern Peru.",
+      "priceSuffix": " / session",
+      "cta": "Book Coaching"
+    },
+    "tripsDownwinds": {
+      "title": "Trips & Downwinds",
+      "subtitle": "Explore the epic Peruvian coastline with our guided downwind trips and 4x4 safaris to secret spots.",
+      "items": {
+        "dayTrips": {
+          "title": "Day Trips / Spot Trips",
+          "description": "Explore the best wave spots and enjoy surf safaris along northern Peru.",
+          "price": "$50 - $60 USD / day"
+        },
+        "downwinds": {
+          "title": "Guided Downwinds",
+          "description": "Exciting downwind routes with complete logistical support.",
+          "price": "$50 - $60 USD / day"
+        }
+      }
+    },
+    "rentGear": {
+      "title": "Rent Gear",
+      "subtitle": "Premium and updated equipment for Kitesurf, Wingfoil, and Surfing.",
+      "table": {
+        "equipment": "Equipment",
+        "oneHour": "1 Hour",
+        "oneDay": "1 Day",
+        "threeDays": "3 Days",
+        "sevenDays": "7 Days"
+      },
+      "items": {
+        "kitesurf": "Kitesurf Gear",
+        "wingfoil": "Wingfoil Setup",
+        "surfboard": "Surfboard",
+        "sup": "SUP Board"
+      }
+    },
+    "surfSup": {
+      "title": "Surf & SUP",
+      "subtitle": "No wind? No problem. Enjoy the pristine waves of Máncora with our Surfing and Stand Up Paddleboard sessions.",
+      "surf": {
+        "title": "Surf Lessons",
+        "description": "Perfect for beginners and intermediates. Learn the basics of paddling, popping up, and riding the clean waves of northern Peru.",
+        "priceSuffix": " / 2 hours"
+      },
+      "sup": {
+        "title": "SUP Tours",
+        "description": "Explore the coastline from a different perspective. Morning sessions with calm waters, marine life, and a relaxing workout.",
+        "priceSuffix": " / 1.5 hours"
+      }
+    }
   },
   "contact": {
     "title": "Contact Us",

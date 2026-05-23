@@ -1,8 +1,12 @@
 import { motion } from "framer-motion"
-import { PRIVATE_CLASSES, SEMI_PRIVATE_CLASSES } from "./classesData"
+import { PRIVATE_CLASSES, translateClassItem } from "./classesData"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
+import { useI18n } from "../../app/providers/i18nContext"
 
 function ClassesSteps() {
+  const { t } = useI18n()
+  const privateClasses = PRIVATE_CLASSES.map((item) => translateClassItem(item, t))
+
   return (
     <section className="relative bg-[#0f1416] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -15,10 +19,10 @@ function ClassesSteps() {
         className="mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
-          YOUR KITESURF JOURNEY
+          {t("classes.kitesurf.steps.title")}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-gray-400 sm:text-base md:text-lg">
-          Step by step progression with certified instructors and premium gear.
+          {t("classes.kitesurf.steps.subtitle")}
         </p>
       </motion.div>
 
@@ -27,7 +31,7 @@ function ClassesSteps() {
         <div className="absolute left-1/2 top-0 hidden h-full w-1 -translate-x-1/2 bg-gradient-to-b from-cyan-400 to-transparent md:block" />
 
         <div className="space-y-16 sm:space-y-20 lg:space-y-24">
-          {PRIVATE_CLASSES.map((item, index) => (
+          {privateClasses.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 40 }}
@@ -48,7 +52,7 @@ function ClassesSteps() {
                 {item.hoverImage && (
                   <img
                     src={item.hoverImage}
-                    alt={`${item.title} hover`}
+                    alt={item.title}
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   />
                 )}
@@ -80,7 +84,7 @@ function ClassesSteps() {
                   rel="noopener noreferrer"
                   className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-cyan-400 px-6 py-3 font-bold text-[#0f1416] transition hover:bg-white sm:w-auto"
                 >
-                  BOOK NOW
+                  {t("classes.common.bookNow")}
                 </a>
               </div>
             </motion.div>

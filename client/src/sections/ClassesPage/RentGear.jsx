@@ -1,11 +1,13 @@
 import { motion } from "framer-motion"
+import { useI18n } from "../../app/providers/i18nContext"
 
 function RentGear() {
+  const { t } = useI18n()
   const GEAR = [
-    { type: "Kitesurf Gear", hour: "$30 USD", day: "$60 USD", days3: "$160 USD", days7: "$350 USD" },
-    { type: "Wingfoil Setup", hour: "-", day: "$60 USD", days3: "$160 USD", days7: "$350 USD" },
-    { type: "Surfboard", hour: "-", day: "$15 USD", days3: "$40 USD", days7: "$80 USD" },
-    { type: "SUP Board", hour: "-", day: "$30 USD", days3: "$75 USD", days7: "$150 USD" }
+    { typeKey: "classes.rentGear.items.kitesurf", hour: "$30 USD", day: "$60 USD", days3: "$160 USD", days7: "$350 USD" },
+    { typeKey: "classes.rentGear.items.wingfoil", hour: "-", day: "$60 USD", days3: "$160 USD", days7: "$350 USD" },
+    { typeKey: "classes.rentGear.items.surfboard", hour: "-", day: "$15 USD", days3: "$40 USD", days7: "$80 USD" },
+    { typeKey: "classes.rentGear.items.sup", hour: "-", day: "$30 USD", days3: "$75 USD", days7: "$150 USD" }
   ]
 
   return (
@@ -18,10 +20,10 @@ function RentGear() {
         className="mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          RENT GEAR
+          {t("classes.rentGear.title")}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Premium and updated equipment for Kitesurf, Wingfoil, and Surfing.
+          {t("classes.rentGear.subtitle")}
         </p>
       </motion.div>
 
@@ -30,11 +32,11 @@ function RentGear() {
           <table className="w-full text-left text-sm sm:text-base whitespace-nowrap">
             <thead className="bg-[#DEFF9A]/10 text-[#DEFF9A]">
               <tr>
-                <th className="px-6 py-5 font-semibold">Equipment</th>
-                <th className="px-6 py-5 font-semibold">1 Hour</th>
-                <th className="px-6 py-5 font-semibold">1 Day</th>
-                <th className="px-6 py-5 font-semibold">3 Days</th>
-                <th className="px-6 py-5 font-semibold">7 Days</th>
+                <th className="px-6 py-5 font-semibold">{t("classes.rentGear.table.equipment")}</th>
+                <th className="px-6 py-5 font-semibold">{t("classes.rentGear.table.oneHour")}</th>
+                <th className="px-6 py-5 font-semibold">{t("classes.rentGear.table.oneDay")}</th>
+                <th className="px-6 py-5 font-semibold">{t("classes.rentGear.table.threeDays")}</th>
+                <th className="px-6 py-5 font-semibold">{t("classes.rentGear.table.sevenDays")}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-white/10">
@@ -47,7 +49,7 @@ function RentGear() {
                   transition={{ duration: 0.4, delay: i * 0.1 }}
                   className="hover:bg-white/5 transition"
                 >
-                  <td className="px-6 py-5 font-medium">{item.type}</td>
+                  <td className="px-6 py-5 font-medium">{t(item.typeKey)}</td>
                   <td className="px-6 py-5 text-white/80">{item.hour}</td>
                   <td className="px-6 py-5 text-white/80">{item.day}</td>
                   <td className="px-6 py-5 text-white/80">{item.days3}</td>

@@ -1,133 +1,104 @@
 import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
+import { useI18n } from "../../app/providers/i18nContext"
 
 const { wingIntro, wingIntroHover, wingFundamental, wingFundamentalHover, wingAdvanced, wingAdvancedHover, wingMaster, wingMasterHover, wingIntroSemi, wingIntroSemiHover, wingFundamentalSemi, wingFundamentalSemiHover, wingAdvancedSemi, wingAdvancedSemiHover, wingMasterSemi, wingMasterSemiHover } = componentImages["sections/ClassesPage/WingfoilClasses.jsx"]
 const WINGFOIL_PRIVATE_CLASSES = [
   {
     id: "discovery",
-    title: "Discovery",
-    duration: "1 day | 2 hours/day",
-    price: "$120 USD / person",
+    titleKey: "classes.wingfoil.private.discovery.title",
+    durationKey: "classes.wingfoil.private.discovery.duration",
+    priceKey: "classes.wingfoil.private.discovery.price",
     image: wingIntro,
     hoverImage: wingIntroHover,
-    features: [
-      "Discover the basics of Wingfoil",
-      "Theory + land balance exercises",
-      "Water session for basic maneuvers",
-      "Complete equipment provided",
-      "Personalized experience"
-    ]
+    featuresKey: "classes.wingfoil.private.discovery.features"
   },
   {
     id: "beginner",
-    title: "Beginner",
-    duration: "3 days | 2 hours/day",
-    price: "$350 USD / person",
+    titleKey: "classes.wingfoil.private.beginner.title",
+    durationKey: "classes.wingfoil.private.beginner.duration",
+    priceKey: "classes.wingfoil.private.beginner.price",
     image: wingFundamental,
     hoverImage: wingFundamentalHover,
-    features: [
-      "Solid foundation & safety techniques",
-      "Wing dominance exercises",
-      "Foil balance training",
-      "Specific water maneuvers",
-      "Complete equipment provided"
-    ]
+    featuresKey: "classes.wingfoil.private.beginner.features"
   },
   {
     id: "intensive",
-    title: "Intensive",
-    duration: "3 days | 3 hours/day",
-    price: "$500 USD / person",
+    titleKey: "classes.wingfoil.private.intensive.title",
+    durationKey: "classes.wingfoil.private.intensive.duration",
+    priceKey: "classes.wingfoil.private.intensive.price",
     image: wingAdvanced,
     hoverImage: wingAdvancedHover,
-    features: [
-      "Perfect advanced maneuvers",
-      "Technical + theoretical sessions",
-      "Control in varied conditions",
-      "Optional video analysis",
-      "Premium equipment"
-    ]
+    featuresKey: "classes.wingfoil.private.intensive.features"
   },
   {
     id: "full-progression",
-    title: "Full Progression",
-    duration: "5 days | Flexible schedule",
-    price: "$600 USD / person",
+    titleKey: "classes.wingfoil.private.fullProgression.title",
+    durationKey: "classes.wingfoil.private.fullProgression.duration",
+    priceKey: "classes.wingfoil.private.fullProgression.price",
     image: wingMaster,
     hoverImage: wingMasterHover,
     featured: true,
-    features: [
-      "From fundamentals to advanced",
-      "In-depth technical coaching",
-      "Advanced Wingfoil drills",
-      "Video analysis sessions",
-      "Certificate of completion"
-    ]
+    featuresKey: "classes.wingfoil.private.fullProgression.features"
   }
 ]
 
 const WINGFOIL_SEMI_PRIVATE_CLASSES = [
   {
     id: "discovery-semi",
-    title: "Discovery",
-    duration: "1 day | 2 hours/day",
-    price: "$90 USD / person",
+    titleKey: "classes.wingfoil.semiPrivate.discovery.title",
+    durationKey: "classes.wingfoil.semiPrivate.discovery.duration",
+    priceKey: "classes.wingfoil.semiPrivate.discovery.price",
     image: wingIntroSemi,
     hoverImage: wingIntroSemiHover,
-    features: [
-      "Discover the basics of Wingfoil",
-      "1 instructor shared between 2 students",
-      "Water session for basic maneuvers",
-      "Complete equipment provided"
-    ]
+    featuresKey: "classes.wingfoil.semiPrivate.discovery.features"
   },
   {
     id: "beginner-semi",
-    title: "Beginner",
-    duration: "3 days | 2 hours/day",
-    price: "$250 USD / person",
+    titleKey: "classes.wingfoil.semiPrivate.beginner.title",
+    durationKey: "classes.wingfoil.semiPrivate.beginner.duration",
+    priceKey: "classes.wingfoil.semiPrivate.beginner.price",
     image: wingFundamentalSemi,
     hoverImage: wingFundamentalSemiHover,
-    features: [
-      "Solid foundation & safety techniques",
-      "1 instructor shared between 2 students",
-      "Foil balance training",
-      "Complete equipment provided"
-    ]
+    featuresKey: "classes.wingfoil.semiPrivate.beginner.features"
   },
   {
     id: "intensive-semi",
-    title: "Intensive",
-    duration: "3 days | 3 hours/day",
-    price: "$350 USD / person",
+    titleKey: "classes.wingfoil.semiPrivate.intensive.title",
+    durationKey: "classes.wingfoil.semiPrivate.intensive.duration",
+    priceKey: "classes.wingfoil.semiPrivate.intensive.price",
     image: wingAdvancedSemi,
     hoverImage: wingAdvancedSemiHover,
-    features: [
-      "Perfect advanced maneuvers",
-      "1 instructor shared between 2 students",
-      "Control in varied conditions",
-      "Premium equipment"
-    ]
+    featuresKey: "classes.wingfoil.semiPrivate.intensive.features"
   },
   {
     id: "full-progression-semi",
-    title: "Full Progression",
-    duration: "5 days | Flexible schedule",
-    price: "$450 USD / person",
+    titleKey: "classes.wingfoil.semiPrivate.fullProgression.title",
+    durationKey: "classes.wingfoil.semiPrivate.fullProgression.duration",
+    priceKey: "classes.wingfoil.semiPrivate.fullProgression.price",
     image: wingMasterSemi,
     hoverImage: wingMasterSemiHover,
     featured: true,
-    features: [
-      "From fundamentals to advanced",
-      "1 instructor shared between 2 students",
-      "Advanced Wingfoil drills",
-      "Video analysis sessions"
-    ]
+    featuresKey: "classes.wingfoil.semiPrivate.fullProgression.features"
   }
 ]
 
+function translateWingfoilClassItem(item, t) {
+  const features = t(item.featuresKey)
+
+  return {
+    ...item,
+    title: t(item.titleKey),
+    duration: t(item.durationKey),
+    price: t(item.priceKey),
+    features: Array.isArray(features) ? features : [],
+  }
+}
+
 function WingfoilClassCard({ item, index }) {
+  const { t } = useI18n()
+
   return (
     <motion.div
       key={item.id}
@@ -170,7 +141,7 @@ function WingfoilClassCard({ item, index }) {
           rel="noopener noreferrer"
           className="mt-auto inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[#829988] px-6 py-3 font-bold text-[#0E201F] transition hover:bg-[#0E201F] hover:text-white"
         >
-          BOOK NOW
+          {t("classes.common.bookNow")}
         </a>
       </div>
       {item.featured && (
@@ -186,7 +157,7 @@ function WingfoilClassCard({ item, index }) {
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-4 right-4 rounded-full bg-[#8ac43f] px-4 py-1 text-xs font-bold text-[#071a19]"
         >
-          MOST POPULAR
+          {t("classes.common.mostPopular")}
         </motion.div>
       )}
     </motion.div>
@@ -194,6 +165,10 @@ function WingfoilClassCard({ item, index }) {
 }
 
 function WingfoilClasses() {
+  const { t } = useI18n()
+  const privateClasses = WINGFOIL_PRIVATE_CLASSES.map((item) => translateWingfoilClassItem(item, t))
+  const semiPrivateClasses = WINGFOIL_SEMI_PRIVATE_CLASSES.map((item) => translateWingfoilClassItem(item, t))
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
 
@@ -209,16 +184,16 @@ function WingfoilClasses() {
         className="relative z-10 mx-auto mb-16 max-w-4xl text-center sm:mb-20 lg:mb-24"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          PRIVATE WINGFOIL CLASSES
+          {t("classes.wingfoil.pricing.privateTitle")}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Private sessions with expert instructors and premium equipment.
+          {t("classes.wingfoil.pricing.privateDescription")}
         </p>
       </motion.div>
 
       {/* Private Grid */}
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-        {WINGFOIL_PRIVATE_CLASSES.map((item, index) => (
+        {privateClasses.map((item, index) => (
           <WingfoilClassCard key={item.id} item={item} index={index} />
         ))}
       </div>
@@ -232,16 +207,16 @@ function WingfoilClasses() {
         className="relative z-10 mx-auto mt-24 mb-16 max-w-4xl text-center sm:mb-20 lg:mb-24"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          SEMI-PRIVATE WINGFOIL CLASSES
+          {t("classes.wingfoil.pricing.semiPrivateTitle")}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          Share the experience — 1 instructor shared between 2 students. Prices per person.
+          {t("classes.wingfoil.pricing.semiPrivateDescription")}
         </p>
       </motion.div>
 
       {/* Semi-Private Grid */}
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-        {WINGFOIL_SEMI_PRIVATE_CLASSES.map((item, index) => (
+        {semiPrivateClasses.map((item, index) => (
           <WingfoilClassCard key={item.id} item={item} index={index} />
         ))}
       </div>

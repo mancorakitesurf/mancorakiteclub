@@ -10,8 +10,8 @@ const { heroKite, introKite, introClassImg, fundamentalClassImg, introClassImgHo
   HERO SECTION
 =========================== */
 export const CLASSES_HERO = {
-  title: "KITESURF AND WINGFOIL IN THE CLUB",
-  subtitle: "Private and small-group sessions without accommodation.",
+  titleKey: "classes.kitesurf.hero.title",
+  subtitleKey: "classes.kitesurf.hero.subtitle",
   image: heroKite
 }
 
@@ -19,8 +19,8 @@ export const CLASSES_HERO = {
   INTRO SECTION
 =========================== */
 export const CLASSES_INTRO = {
-  title: "Learn Kitesurf in The Club",
-  text: "The first time someone was seen practicing wingfoil was in 2019, when Robby Naish appeared in Hawaii on a board with a foil and handling a wing. Those images caused so much emotion that in a few months we began to see videos and photos on all social networks of different types of wings and people practicing this strange sport. Well, it hasn't been long before we can see the rise of this sport and see countless sails all over the beaches and lakes. Without a doubt a sport that will leave many fans.",
+  titleKey: "classes.kitesurf.intro.title",
+  textKey: "classes.kitesurf.intro.text",
   image: introKite
 }
 
@@ -30,60 +30,40 @@ export const CLASSES_INTRO = {
 export const PRIVATE_CLASSES = [
   {
     id: "discovery",
-    title: "Discovery",
-    duration: "1 day | 2 hours/day",
-    price: "$120 USD / person",
+    titleKey: "classes.kitesurf.private.discovery.title",
+    durationKey: "classes.kitesurf.private.discovery.duration",
+    priceKey: "classes.kitesurf.private.discovery.price",
     image: introClassImg,
     hoverImage: introClassImgHover,
-    features: [
-      "Ideal for first experience",
-      "Personalized instruction",
-      "All premium equipment included",
-      "Support via walkie-talkie"
-    ]
+    featuresKey: "classes.kitesurf.private.discovery.features"
   },
   {
     id: "beginner",
-    title: "Beginner",
-    duration: "3 days | 2 hours/day",
-    price: "$350 USD / person",
+    titleKey: "classes.kitesurf.private.beginner.title",
+    durationKey: "classes.kitesurf.private.beginner.duration",
+    priceKey: "classes.kitesurf.private.beginner.price",
     image: fundamentalClassImg,
     hoverImage: beginnerClassHover,
-    features: [
-      "Designed by old instructors",
-      "Personalized progression",
-      "Premium equipment included",
-      "Professional photo during class"
-    ]
+    featuresKey: "classes.kitesurf.private.beginner.features"
   },
   {
     id: "intensive",
-    title: "Intensive",
-    duration: "3 days | 3 hours/day",
-    price: "$500 USD / person",
+    titleKey: "classes.kitesurf.private.intensive.title",
+    durationKey: "classes.kitesurf.private.intensive.duration",
+    priceKey: "classes.kitesurf.private.intensive.price",
     image: advanceClassImg,
     hoverImage: intensiveClassHover,
-    features: [
-      "Focused on advanced technique",
-      "More practice time",
-      "Video recording & analysis",
-      "Optional drone shots"
-    ]
+    featuresKey: "classes.kitesurf.private.intensive.features"
   },
   {
     id: "full-progression",
-    title: "Full Progression",
-    duration: "5 days | Flexible schedule",
-    price: "$600 USD / person",
+    titleKey: "classes.kitesurf.private.fullProgression.title",
+    durationKey: "classes.kitesurf.private.fullProgression.duration",
+    priceKey: "classes.kitesurf.private.fullProgression.price",
     image: masterClassImg,
     hoverImage: fullProgressionClassHover,
     featured: true,
-    features: [
-      "Complete program",
-      "Detailed technique analysis",
-      "Performance tracking",
-      "Final evaluation session"
-    ]
+    featuresKey: "classes.kitesurf.private.fullProgression.features"
   }
 ]
 
@@ -93,72 +73,52 @@ export const PRIVATE_CLASSES = [
 export const SEMI_PRIVATE_CLASSES = [
   {
     id: "discovery-semi",
-    title: "Discovery",
-    duration: "1 day | 2 hours/day",
-    price: "$90 USD / person",
+    titleKey: "classes.kitesurf.semiPrivate.discovery.title",
+    durationKey: "classes.kitesurf.semiPrivate.discovery.duration",
+    priceKey: "classes.kitesurf.semiPrivate.discovery.price",
     image: introClassImgSemi,
     hoverImage: introClassImgHoverSemi,
-    features: [
-      "Ideal for first experience",
-      "1 instructor shared between 2 students",
-      "All premium equipment included",
-      "Support via walkie-talkie"
-    ]
+    featuresKey: "classes.kitesurf.semiPrivate.discovery.features"
   },
   {
     id: "beginner-semi",
-    title: "Beginner",
-    duration: "3 days | 2 hours/day",
-    price: "$250 USD / person",
+    titleKey: "classes.kitesurf.semiPrivate.beginner.title",
+    durationKey: "classes.kitesurf.semiPrivate.beginner.duration",
+    priceKey: "classes.kitesurf.semiPrivate.beginner.price",
     image: fundamentalClassImgSemi,
     hoverImage: beginnerClassHoverSemi,
-    features: [
-      "Designed by old instructors",
-      "1 instructor shared between 2 students",
-      "Premium equipment included",
-      "Professional photo during class"
-    ]
+    featuresKey: "classes.kitesurf.semiPrivate.beginner.features"
   },
   {
     id: "intensive-semi",
-    title: "Intensive",
-    duration: "3 days | 3 hours/day",
-    price: "$350 USD / person",
+    titleKey: "classes.kitesurf.semiPrivate.intensive.title",
+    durationKey: "classes.kitesurf.semiPrivate.intensive.duration",
+    priceKey: "classes.kitesurf.semiPrivate.intensive.price",
     image: advanceClassImgSemi,
     hoverImage: intensiveClassHoverSemi,
-    features: [
-      "Focused on advanced technique",
-      "1 instructor shared between 2 students",
-      "Video recording & analysis",
-      "Optional drone shots"
-    ]
+    featuresKey: "classes.kitesurf.semiPrivate.intensive.features"
   },
   {
     id: "full-progression-semi",
-    title: "Full Progression",
-    duration: "5 days | Flexible schedule",
-    price: "$450 USD / person",
+    titleKey: "classes.kitesurf.semiPrivate.fullProgression.title",
+    durationKey: "classes.kitesurf.semiPrivate.fullProgression.duration",
+    priceKey: "classes.kitesurf.semiPrivate.fullProgression.price",
     image: masterClassImgSemi,
     hoverImage: fullProgressionClassHoverSemi,
     featured: true,
-    features: [
-      "Complete program",
-      "1 instructor shared between 2 students",
-      "Performance tracking",
-      "Final evaluation session"
-    ]
+    featuresKey: "classes.kitesurf.semiPrivate.fullProgression.features"
   }
 ]
 
 /* ===========================
    Benefits Section
 =========================== */
-export const CLASSES_BENEFITS = [
-  "Guaranteed Quality – Certified instructors with extensive experience.",
-  "Vanguard Team – Latest technologies in wings and boards.",
-  "Priority Security – Small groups and constant support.",
-  "Unforgettable memories – Professional visual material.",
-  "Total Flexibility – Programs adapted to your needs."
+export const CLASSES_BENEFIT_KEYS = [
+  "classes.kitesurf.benefits.items.quality",
+  "classes.kitesurf.benefits.items.equipment",
+  "classes.kitesurf.benefits.items.safety",
+  "classes.kitesurf.benefits.items.memories",
+  "classes.kitesurf.benefits.items.flexibility"
 ]
 
 /* ===========================
@@ -178,3 +138,15 @@ export const CLASSES_GALLERY = [
   gallery11,
   gallery12
 ]
+
+export function translateClassItem(item, t) {
+  const features = t(item.featuresKey)
+
+  return {
+    ...item,
+    title: t(item.titleKey),
+    duration: t(item.durationKey),
+    price: t(item.priceKey),
+    features: Array.isArray(features) ? features : [],
+  }
+}

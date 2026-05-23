@@ -299,7 +299,338 @@
     "advanced": "Avancé avec ProRider",
     "advancedDesc": "Si vous avez déjà de l'expérience en kitesurf et souhaitez amener vos compétences au niveau suivant",
     "private": "Cours Privés",
-    "group": "Cours en Groupe"
+    "group": "Cours en Groupe",
+    "common": {
+      "bookNow": "Réserver maintenant",
+      "learnMore": "En savoir plus",
+      "mostPopular": "Le plus populaire"
+    },
+    "kitesurf": {
+      "hero": {
+        "eyebrow": "Mancora, Pérou",
+        "title": "Kitesurf et Wingfoil au Club",
+        "subtitle": "Sessions privées et en petits groupes, sans hébergement."
+      },
+      "intro": {
+        "title": "Apprenez le Kitesurf au Club",
+        "text": "La première fois que l'on a vu quelqu'un pratiquer le wingfoil, c'était en 2019, lorsque Robby Naish est apparu à Hawaï sur une planche avec un foil, en tenant une wing. Ces images ont suscité tellement d'enthousiasme qu'en quelques mois, des vidéos et photos de différents types de wings et de pratiquants ont commencé à circuler sur tous les réseaux sociaux. Il n'a pas fallu longtemps pour que ce sport prenne son envol, avec d'innombrables voiles apparaissant sur les plages et les lacs. Sans aucun doute, c'est un sport qui séduira de nombreux passionnés.",
+        "hoverAlt": "Action pendant un cours de Kitesurf"
+      },
+      "pricing": {
+        "privateTitle": "Cours privés de Kitesurf",
+        "privateDescription": "Profitez d'une expérience 100% personnalisée avec des instructeurs certifiés IKO et du matériel premium.",
+        "semiPrivateTitle": "Cours semi-privés de Kitesurf",
+        "semiPrivateDescription": "Partagez l'expérience : 1 instructeur pour 2 élèves. Prix par personne."
+      },
+      "private": {
+        "discovery": {
+          "title": "Découverte",
+          "duration": "1 jour | 2 heures/jour",
+          "price": "$120 USD / personne",
+          "features": ["Idéal pour une première expérience", "Instruction personnalisée", "Tout le matériel premium inclus", "Assistance par talkie-walkie"]
+        },
+        "beginner": {
+          "title": "Débutant",
+          "duration": "3 jours | 2 heures/jour",
+          "price": "$350 USD / personne",
+          "features": ["Conçu par des instructeurs expérimentés", "Progression personnalisée", "Matériel premium inclus", "Photo professionnelle pendant le cours"]
+        },
+        "intensive": {
+          "title": "Intensif",
+          "duration": "3 jours | 3 heures/jour",
+          "price": "$500 USD / personne",
+          "features": ["Axé sur la technique avancée", "Plus de temps de pratique", "Enregistrement vidéo et analyse", "Prises de vue drone en option"]
+        },
+        "fullProgression": {
+          "title": "Progression complète",
+          "duration": "5 jours | Horaires flexibles",
+          "price": "$600 USD / personne",
+          "features": ["Programme complet", "Analyse technique détaillée", "Suivi de performance", "Session finale d'évaluation"]
+        }
+      },
+      "semiPrivate": {
+        "discovery": {
+          "title": "Découverte",
+          "duration": "1 jour | 2 heures/jour",
+          "price": "$90 USD / personne",
+          "features": ["Idéal pour une première expérience", "1 instructeur partagé entre 2 élèves", "Tout le matériel premium inclus", "Assistance par talkie-walkie"]
+        },
+        "beginner": {
+          "title": "Débutant",
+          "duration": "3 jours | 2 heures/jour",
+          "price": "$250 USD / personne",
+          "features": ["Conçu par des instructeurs expérimentés", "1 instructeur partagé entre 2 élèves", "Matériel premium inclus", "Photo professionnelle pendant le cours"]
+        },
+        "intensive": {
+          "title": "Intensif",
+          "duration": "3 jours | 3 heures/jour",
+          "price": "$350 USD / personne",
+          "features": ["Axé sur la technique avancée", "1 instructeur partagé entre 2 élèves", "Enregistrement vidéo et analyse", "Prises de vue drone en option"]
+        },
+        "fullProgression": {
+          "title": "Progression complète",
+          "duration": "5 jours | Horaires flexibles",
+          "price": "$450 USD / personne",
+          "features": ["Programme complet", "1 instructeur partagé entre 2 élèves", "Suivi de performance", "Session finale d'évaluation"]
+        }
+      },
+      "benefits": {
+        "title": "Bénéfices",
+        "subtitle": "Tout est inclus pour élever votre expérience de Kitesurf",
+        "items": {
+          "quality": "Qualité garantie : instructeurs certifiés avec une grande expérience.",
+          "equipment": "Équipement de pointe : dernières technologies en wings et planches.",
+          "safety": "Sécurité prioritaire : petits groupes et assistance constante.",
+          "memories": "Souvenirs inoubliables : contenu visuel professionnel.",
+          "flexibility": "Flexibilité totale : programmes adaptés à vos besoins."
+        }
+      },
+      "steps": {
+        "title": "Votre parcours Kitesurf",
+        "subtitle": "Une progression étape par étape avec des instructeurs certifiés et du matériel premium."
+      }
+    },
+    "gallery": {
+      "label": "Manifeste visuel",
+      "headline": "Mancora Kite Club",
+      "headlineHighlight": "Manifeste d'aventure brute",
+      "description": "Des histoires réelles, une vraie adrénaline et la tribu qui ride avec le vent.",
+      "cta": "Rejoignez la tribu",
+      "items": {
+        "oceanEnergy": "Énergie de l'océan",
+        "wingfoilFlow": "Flow Wingfoil",
+        "kiteSessions": "Sessions Kite",
+        "clubLifestyle": "Lifestyle du Club",
+        "progression": "Progression",
+        "trainingDays": "Journées d'entraînement",
+        "windCulture": "Culture du vent",
+        "rawAdventure": "Aventure brute",
+        "mancoraMood": "Esprit Mancora",
+        "theClub": "The Club",
+        "rideTogether": "Rider ensemble",
+        "fallback": "Mancora Kite Club"
+      }
+    },
+    "wingfoil": {
+      "intro": {
+        "title": "À propos du Wingfoil",
+        "text": "La première fois que l'on a vu quelqu'un pratiquer le wingfoil, c'était en 2019, lorsque Robby Naish est apparu à Hawaï sur une planche avec un foil, en tenant une wing. Ces images ont suscité tellement d'enthousiasme qu'en quelques mois, des vidéos et photos de différents types de wings et de pratiquants ont commencé à circuler sur tous les réseaux sociaux.",
+        "cta": "Rejoindre The Club",
+        "imageAlt": "Hero Wingfoil"
+      },
+      "withUs": {
+        "title": "Nous avons amené le Wingfoil dans le nord",
+        "text": "Venez voler avec nous. Apprenez ce sport nautique moderne avec des instructeurs de haut niveau et du matériel premium dans un environnement sûr et inspirant.",
+        "benefits": {
+          "simple": {
+            "title": "Simple et incroyable",
+            "text": "Intuitif et accessible. Pas besoin d'un niveau expert pour commencer à voler."
+          },
+          "progression": {
+            "title": "Progression rapide",
+            "text": "En quelques sessions seulement, vous ressentirez vos premiers vols contrôlés."
+          },
+          "experience": {
+            "title": "Expérience incomparable",
+            "text": "Voler au-dessus de l'eau combine liberté, calme et adrénaline."
+          },
+          "efficiency": {
+            "title": "Efficacité",
+            "text": "Matériel premium et coaching expert pour maximiser chaque session."
+          }
+        }
+      },
+      "pricing": {
+        "privateTitle": "Cours privés de Wingfoil",
+        "privateDescription": "Sessions privées avec instructeurs experts et matériel premium.",
+        "semiPrivateTitle": "Cours semi-privés de Wingfoil",
+        "semiPrivateDescription": "Partagez l'expérience : 1 instructeur pour 2 élèves. Prix par personne."
+      },
+      "private": {
+        "discovery": {
+          "title": "Découverte",
+          "duration": "1 jour | 2 heures/jour",
+          "price": "$120 USD / personne",
+          "features": ["Découvrir les bases du Wingfoil", "Théorie + exercices d'équilibre à terre", "Session dans l'eau pour les manoeuvres de base", "Matériel complet fourni", "Expérience personnalisée"]
+        },
+        "beginner": {
+          "title": "Débutant",
+          "duration": "3 jours | 2 heures/jour",
+          "price": "$350 USD / personne",
+          "features": ["Bases solides et techniques de sécurité", "Exercices de contrôle de la wing", "Entraînement à l'équilibre sur foil", "Manoeuvres spécifiques dans l'eau", "Matériel complet fourni"]
+        },
+        "intensive": {
+          "title": "Intensif",
+          "duration": "3 jours | 3 heures/jour",
+          "price": "$500 USD / personne",
+          "features": ["Perfectionnement des manoeuvres avancées", "Sessions techniques et théoriques", "Contrôle dans des conditions variées", "Analyse vidéo en option", "Matériel premium"]
+        },
+        "fullProgression": {
+          "title": "Progression complète",
+          "duration": "5 jours | Horaires flexibles",
+          "price": "$600 USD / personne",
+          "features": ["Des fondamentaux au niveau avancé", "Coaching technique approfondi", "Exercices avancés de Wingfoil", "Sessions d'analyse vidéo", "Certificat de fin de programme"]
+        }
+      },
+      "semiPrivate": {
+        "discovery": {
+          "title": "Découverte",
+          "duration": "1 jour | 2 heures/jour",
+          "price": "$90 USD / personne",
+          "features": ["Découvrir les bases du Wingfoil", "1 instructeur partagé entre 2 élèves", "Session dans l'eau pour les manoeuvres de base", "Matériel complet fourni"]
+        },
+        "beginner": {
+          "title": "Débutant",
+          "duration": "3 jours | 2 heures/jour",
+          "price": "$250 USD / personne",
+          "features": ["Bases solides et techniques de sécurité", "1 instructeur partagé entre 2 élèves", "Entraînement à l'équilibre sur foil", "Matériel complet fourni"]
+        },
+        "intensive": {
+          "title": "Intensif",
+          "duration": "3 jours | 3 heures/jour",
+          "price": "$350 USD / personne",
+          "features": ["Perfectionnement des manoeuvres avancées", "1 instructeur partagé entre 2 élèves", "Contrôle dans des conditions variées", "Matériel premium"]
+        },
+        "fullProgression": {
+          "title": "Progression complète",
+          "duration": "5 jours | Horaires flexibles",
+          "price": "$450 USD / personne",
+          "features": ["Des fondamentaux au niveau avancé", "1 instructeur partagé entre 2 élèves", "Exercices avancés de Wingfoil", "Sessions d'analyse vidéo"]
+        }
+      },
+      "benefits": {
+        "title": "Bénéfices",
+        "subtitle": "Tout est inclus pour élever votre expérience Wingfoil",
+        "items": {
+          "quality": "Qualité garantie : instructeurs certifiés avec une grande expérience.",
+          "equipment": "Équipement de pointe : dernières technologies en wings et planches.",
+          "safety": "Sécurité prioritaire : petits groupes et assistance constante.",
+          "memories": "Souvenirs inoubliables : contenu visuel professionnel.",
+          "flexibility": "Flexibilité totale : programmes adaptés à vos besoins."
+        }
+      }
+    },
+    "equipment": {
+      "kitesurf": {
+        "title": "Matériel de Kitesurf",
+        "items": {
+          "kites": {
+            "title": "Kites dernière génération",
+            "description": "Modèles récents vérifiés chaque jour pour garantir votre sécurité et des performances maximales.",
+            "label": "Kite",
+            "subtitle": "Plusieurs tailles (5m - 14m)"
+          },
+          "boards": {
+            "title": "Planches TwinTip premium",
+            "description": "Planches haute performance conçues pour le freeride et le freestyle avancé.",
+            "label": "Planches TwinTip",
+            "subtitle": "Pour freeride et freestyle"
+          },
+          "bars": {
+            "title": "Barres et systèmes de contrôle",
+            "description": "Systèmes de contrôle avec lignes résistantes et dispositifs de sécurité quick-release certifiés.",
+            "label": "Barres et systèmes de contrôle",
+            "subtitle": "Systèmes de sécurité modernes"
+          },
+          "safety": {
+            "title": "Harnais et équipement de sécurité",
+            "description": "Confort et protection essentiels avec harnais ergonomiques, impact vests et casques ajustables.",
+            "label": "Harnais et sécurité",
+            "subtitle": "Impact vests et casques"
+          }
+        }
+      },
+      "wingfoil": {
+        "title": "Matériel de Wingfoil",
+        "items": {
+          "wings": {
+            "title": "Wings légères et puissantes",
+            "description": "Matériel conçu pour tirer parti des vents légers comme soutenus.",
+            "label": "Wing",
+            "subtitle": "Duotone Units et Slicks"
+          },
+          "boards": {
+            "title": "Planches de foil spécialisées",
+            "description": "Planches stables et légères, avec des volumes idéaux pour débutants et riders confirmés.",
+            "label": "Planches de foil spécialisées",
+            "subtitle": "Volumes de 80L à 120L"
+          },
+          "foils": {
+            "title": "Hydrofoils carbone",
+            "description": "Mâts et ailes en carbone haut module pour une glisse fluide et une vitesse maximale.",
+            "label": "Hydrofoils carbone",
+            "subtitle": "Mâts et ailes carbone"
+          },
+          "maintenance": {
+            "title": "Kit de gonflage et maintenance",
+            "description": "Tout le nécessaire pour préparer votre matériel : pompes haute pression et kits de réparation.",
+            "label": "Pompe et accessoires",
+            "subtitle": "Gonflage rapide et réparation"
+          },
+          "leash": {
+            "title": "Leash de sécurité certifié",
+            "description": "Gardez votre matériel connecté à vous à tout moment.",
+            "label": "Leash de sécurité",
+            "subtitle": "Leash coil pour poignet et taille"
+          }
+        }
+      }
+    },
+    "waveRiding": {
+      "title": "Coaching de Wave Riding",
+      "subtitle": "Coaching avancé et analyse vidéo pour maîtriser les vagues.",
+      "cardTitle": "Coaching avancé de Wave Riding",
+      "cardDescription": "Coaching avancé en vagues. Inclut le transport vers les meilleurs spots du nord du Pérou.",
+      "priceSuffix": " / session",
+      "cta": "Réserver le coaching"
+    },
+    "tripsDownwinds": {
+      "title": "Trips & Downwinds",
+      "subtitle": "Explorez la côte péruvienne avec nos downwinds guidés et safaris 4x4 vers des spots secrets.",
+      "items": {
+        "dayTrips": {
+          "title": "Day trips / Spot trips",
+          "description": "Explorez les meilleurs spots de vagues et profitez de surf safaris le long du nord du Pérou.",
+          "price": "$50 - $60 USD / jour"
+        },
+        "downwinds": {
+          "title": "Downwinds guidés",
+          "description": "Routes downwind excitantes avec support logistique complet.",
+          "price": "$50 - $60 USD / jour"
+        }
+      }
+    },
+    "rentGear": {
+      "title": "Location de matériel",
+      "subtitle": "Matériel premium et récent pour Kitesurf, Wingfoil et Surf.",
+      "table": {
+        "equipment": "Matériel",
+        "oneHour": "1 heure",
+        "oneDay": "1 jour",
+        "threeDays": "3 jours",
+        "sevenDays": "7 jours"
+      },
+      "items": {
+        "kitesurf": "Matériel Kitesurf",
+        "wingfoil": "Setup Wingfoil",
+        "surfboard": "Planche de surf",
+        "sup": "Planche SUP"
+      }
+    },
+    "surfSup": {
+      "title": "Surf & SUP",
+      "subtitle": "Pas de vent ? Aucun problème. Profitez des vagues préservées de Máncora avec nos sessions de Surf et Stand Up Paddle.",
+      "surf": {
+        "title": "Cours de surf",
+        "description": "Parfait pour débutants et intermédiaires. Apprenez les bases de la rame, du take-off et du surf sur les belles vagues du nord du Pérou.",
+        "priceSuffix": " / 2 heures"
+      },
+      "sup": {
+        "title": "Tours SUP",
+        "description": "Explorez la côte sous un autre angle. Sessions matinales en eau calme, vie marine et entraînement relaxant.",
+        "priceSuffix": " / 1,5 heure"
+      }
+    }
   },
   "contact": {
     "title": "Nous Contacter",

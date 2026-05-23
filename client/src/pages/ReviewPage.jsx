@@ -7,13 +7,13 @@ import { useI18n } from '../app/providers/i18nContext.js'
 import { localizePath } from '../lib/routes.js'
 
 function ReviewPage() {
-  const { currentLang } = useI18n()
+  const { currentLang, t } = useI18n()
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <SEO
-        title="Mancora Kite Club Reviews"
-        description="See rider stories, testimonials, and community moments from guests who learned, traveled, and stayed with Mancora Kite Club."
+        title={t('seo.reviewsTitle')}
+        description={t('seo.reviewsDesc')}
         canonicalPath={localizePath('/reviews', currentLang)}
         hreflang={{ en: '/reviews', es: '/esp/reviews', fr: '/fr/reviews', default: '/reviews' }}
       />

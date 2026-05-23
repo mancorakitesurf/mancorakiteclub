@@ -857,49 +857,52 @@
     "hero": {
       "eyebrow": "Mancora Kite Club",
       "title": "Lo que dicen nuestros riders",
-      "subtitle": "Historias reales de los riders que vivieron el viento, el océano y la experiencia de la tribu.",
-      "watchVideos": "Ver Videos"
+      "subtitle": "Historias reales de riders que vivieron el viento, el mar y la experiencia de la tribu.",
+      "imageAlt": "Testimonios de riders de Mancora Kite Club",
+      "watchVideos": "Ver videos"
     },
     "trust": {
-      "title": "Garantía y Experiencia",
-      "subtitle": "Escuela de Kitesurf Certificada con Instructores Oficiales IKO",
-      "ikoTitle": "Escuela Certificada IKO",
+      "title": "Garantía y experiencia",
+      "subtitle": "Escuela de Kitesurf certificada con instructores oficiales IKO",
+      "ikoTitle": "Escuela certificada IKO",
       "ikoDescPart1": "Aprende de forma segura con ",
-      "ikoDescBold": "Certified Instructors",
+      "ikoDescBold": "instructores certificados",
       "ikoDescPart2": ". Emitimos certificaciones internacionales oficiales.",
+      "googleTitle": "5.0 reseñas en Google",
       "googleDesc": "Opiniones de nuestra tribu",
-      "tripAdvisorDesc": "La mejor experiencia de Kite en Perú",
+      "tripAdvisorDesc": "Experiencia de Kitesurf destacada en Perú",
+      "photoAlt": "Foto de",
       "loading": "Cargando testimonios de la tribu..."
     },
     "videos": {
-      "eyebrow": "Historia de Rider",
-      "title1": "Una Experiencia",
-      "title2": "Real",
-      "description": "Una historia real de un rider sobre viento, océano, progresión y la tribu Mancora Kite Club.",
-      "featuredStory": "Historia Destacada",
-      "videoTitle": "Progresión real. Océano real. Tribu real.",
-      "videoDesc": "Mira un testimonio completo de un rider que experimentó el coaching, las condiciones del viento y la atmósfera de la comunidad en Máncora.",
-      "videoTag": "Video testimonio"
+      "eyebrow": "Historia de rider",
+      "title1": "Una experiencia",
+      "title2": "real",
+      "description": "Una historia real de viento, mar, progresión y la tribu de Mancora Kite Club.",
+      "featuredStory": "Historia destacada",
+      "videoTitle": "Progresión real. Mar real. Tribu real.",
+      "videoDesc": "Mira el testimonio completo de un rider que vivió el coaching, las condiciones de viento y el ambiente de comunidad en Máncora.",
+      "videoTag": "Testimonio en video"
     },
     "cta": {
-      "eyebrow": "Únete a la Tribu",
-      "title1": "Comienza Tu",
-      "title2": "Historia en Máncora",
-      "description": "Planifica tu próxima sesión en Máncora con viento, océano, comunidad y progresión real en un solo lugar.",
-      "ctaText": "Cuéntanos tus fechas, tu nivel y el tipo de experiencia que deseas construir.",
-      "ctaButton": "Arma Tu Viaje"
+      "eyebrow": "Únete a la tribu",
+      "title1": "Empieza tu",
+      "title2": "historia en Máncora",
+      "description": "Planea tu próxima sesión en Máncora con viento, mar, comunidad y progresión real en un solo lugar.",
+      "ctaText": "Cuéntanos tus fechas, tu nivel y el tipo de experiencia que quieres construir.",
+      "ctaButton": "Crea tu viaje"
     },
     "items": {
       "3": {
-        "text": "Me encantó aprender kite aquí en la mejor escuela del norte",
+        "text": "Me encantó aprender kite aquí en la mejor escuela del norte.",
         "relative_time_description": "Hace 2 meses"
       },
       "1": {
-        "text": "muy buena escuela , super ambiente y Mancora es un lugar maravilloso, en el cual tuve la suerte de navegar al lado de las ballenas y de los dolfines....que mas quieres😅😅??",
+        "text": "Muy buena escuela, súper ambiente y Máncora es un lugar maravilloso. Tuve la suerte de navegar al lado de ballenas y delfines... ¿qué más quieres? 😅😅",
         "relative_time_description": "Hace 5 meses"
       },
       "6": {
-        "text": "Muy buena experiencia en mancora kitebsurf, kike te hace sentir cómodo, motivado, cuenta con mucha experiencia y dominio total de este deporte. Totalmente recomendado!",
+        "text": "Muy buena experiencia en Mancora Kite Club. Kike te hace sentir cómodo y motivado; cuenta con mucha experiencia y dominio total de este deporte. ¡Totalmente recomendado!",
         "relative_time_description": "Hace 6 meses"
       },
       "2": {
@@ -907,19 +910,19 @@
         "relative_time_description": "Hace 9 meses"
       },
       "7": {
-        "text": "Gracias Kike por darme la mejor experiencia en la Escuela ! Mucha paciencia y dedicación. Perfecta atención",
+        "text": "Gracias Kike por darme la mejor experiencia en la escuela! Mucha paciencia y dedicación. Perfecta atención.",
         "relative_time_description": "Hace 11 meses"
       },
       "8": {
-        "text": "Estuve una semana para practicar kitesurf y pude hacerlo sin problemas gracias al equipo que trabaja con la escuela, conocimos el spot principal de Máncora pero en días de poco viento salimos en búsqueda de él así que pudimos navegar!\n\nEl equipo de la escuela es amable y amigable.",
+        "text": "Estuve una semana para practicar Kitesurf y pude hacerlo sin problemas gracias al equipo de la escuela. Conocimos el spot principal de Máncora, pero en días de poco viento salimos en búsqueda de viento, así que pudimos navegar. El equipo de la escuela es amable y amigable.",
         "relative_time_description": "Hace 11 meses"
       },
       "4": {
-        "text": "“Viajamos en familia y mis hijos adolescentes tomaron clases de kitesurf en Máncora Kite Club. ¡Quedamos fascinados! El trato fue súper amable, todo el equipo fue paciente y motivador con los chicos. El clima es ideal, y el ambiente del club es seguro y acogedor. Además, nos unimos a un kite trip familiar que fue lo más divertido del viaje. Nos llevamos recuerdos inolvidables. Mil gracias al equipo por su dedicación y buena energía.”",
+        "text": "Viajamos en familia y mis hijos adolescentes tomaron clases de Kitesurf en Mancora Kite Club. ¡Quedamos fascinados! El trato fue súper amable, todo el equipo fue paciente y motivador con los chicos. El clima es ideal y el ambiente del club es seguro y acogedor. Además, nos unimos a un kite trip familiar que fue lo más divertido del viaje. Nos llevamos recuerdos inolvidables. Mil gracias al equipo por su dedicación y buena energía.",
         "relative_time_description": "Hace un año"
       },
       "5": {
-        "text": "Una escuela de Kite muy profesional en el norte del Perú. Saben llevarte a los mejores spots de Kite y Kite surf. Ask for Kike🙌🏼🤙🏼🤙🏼",
+        "text": "Una escuela de Kite muy profesional en el norte del Perú. Saben llevarte a los mejores spots de Kite y Kitesurf. Pregunta por Kike 🙌🏼🤙🏼🤙🏼",
         "relative_time_description": "Hace 2 años"
       }
     }

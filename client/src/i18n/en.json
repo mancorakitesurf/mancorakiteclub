@@ -858,6 +858,7 @@
       "eyebrow": "Mancora Kite Club",
       "title": "What Our Riders Say",
       "subtitle": "Real stories from the riders who lived the wind, the ocean, and the tribe experience.",
+      "imageAlt": "Mancora Kite Club rider testimonials",
       "watchVideos": "Watch Videos"
     },
     "trust": {
@@ -867,9 +868,11 @@
       "ikoDescPart1": "Learn safely with ",
       "ikoDescBold": "Certified Instructors",
       "ikoDescPart2": ". We issue official international certifications.",
+      "googleTitle": "5.0 Google Reviews",
       "googleDesc": "Reviews from our tribe",
       "tripAdvisorDesc": "Top Kite Experience in Peru",
-      "loading": "Loading testimonials from the tribe..."
+      "photoAlt": "Photo of",
+      "loading": "Loading tribe testimonials..."
     },
     "videos": {
       "eyebrow": "Rider Story",
@@ -891,35 +894,35 @@
     },
     "items": {
       "3": {
-        "text": "I loved learning kite here in the best school of the north",
+        "text": "I loved learning kite here at the best school in the north.",
         "relative_time_description": "2 months ago"
       },
       "1": {
-        "text": "very good school, great vibe and Mancora is a wonderful place, where I was lucky enough to sail next to whales and dolphins... what more do you want😅😅??",
+        "text": "Very good school, great atmosphere, and Mancora is a wonderful place where I was lucky enough to ride alongside whales and dolphins... what more could you want? 😅😅",
         "relative_time_description": "5 months ago"
       },
       "6": {
-        "text": "Very good experience at Mancora Kitesurf, Kike makes you feel comfortable, motivated, has a lot of experience and total mastery of this sport. Totally recommended!",
+        "text": "Very good experience at Mancora Kite Club. Kike makes you feel comfortable and motivated; he has a lot of experience and total command of the sport. Totally recommended!",
         "relative_time_description": "6 months ago"
       },
       "2": {
-        "text": "Great instructors and even better people! I went with my partner and she took lessons, she was thrilled. We will definitely come back to share and, of course, to KITE!",
+        "text": "Great instructors and even better people! I went with my partner and she took classes; she loved it. We will definitely come back to share and, of course, ride!",
         "relative_time_description": "9 months ago"
       },
       "7": {
-        "text": "Thank you Kike for giving me the best experience in the School! A lot of patience and dedication. Perfect attention",
+        "text": "Thank you Kike for giving me the best experience at the school! So much patience and dedication. Perfect attention.",
         "relative_time_description": "11 months ago"
       },
       "8": {
-        "text": "I spent a week practicing kitesurfing and I was able to do it without problems thanks to the team working with the school. We visited the main spot in Máncora, but on low wind days we went searching for wind, so we were able to ride!\n\nThe school team is kind and friendly.",
+        "text": "I spent a week practicing Kitesurf and had no trouble thanks to the school team. We visited Máncora's main spot, and on low-wind days we went looking for wind, so we still got to ride. The school team is kind and friendly.",
         "relative_time_description": "11 months ago"
       },
       "4": {
-        "text": "“We traveled as a family and my teenage kids took kitesurfing lessons at Máncora Kite Club. We were fascinated! The treatment was super friendly, and the whole team was patient and motivating with the kids. The weather is ideal, and the club atmosphere is safe and welcoming. Plus, we joined a family kite trip which was the most fun part of the trip. We took home unforgettable memories. Many thanks to the team for their dedication and good energy.”",
+        "text": "We traveled as a family and my teenage kids took kitesurf lessons at Mancora Kite Club. We were fascinated! The team was super kind, patient, and motivating with the kids. The weather is ideal, and the club atmosphere is safe and welcoming. We also joined a family kite trip that was the most fun part of the journey. We left with unforgettable memories. Many thanks to the team for their dedication and good energy.",
         "relative_time_description": "1 year ago"
       },
       "5": {
-        "text": "A very professional Kite school in the north of Peru. They know how to take you to the best Kite and Kitesurf spots. Ask for Kike🙌🏼🤙🏼🤙🏼",
+        "text": "A very professional Kite school in northern Peru. They know how to take you to the best Kite and Kitesurf spots. Ask for Kike 🙌🏼🤙🏼🤙🏼",
         "relative_time_description": "2 years ago"
       }
     }

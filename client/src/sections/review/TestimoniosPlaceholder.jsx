@@ -83,7 +83,7 @@ function TestimoniosPlaceholder() {
                 {[...Array(5)].map((_, i) => <Star key={i} size={13} fill="currentColor" stroke="none" />)}
               </div>
               <p className="text-[#F4F2EA] text-sm font-bold mt-1.5 group-hover:text-[#38E0C8] transition-colors flex items-center gap-1.5 duration-300">
-                5.0 Google Reviews <ExternalLink size={12} className="opacity-40 group-hover:opacity-100 group-hover:text-[#38E0C8] transition-all" />
+                {t('reviews.trust.googleTitle')} <ExternalLink size={12} className="opacity-40 group-hover:opacity-100 group-hover:text-[#38E0C8] transition-all" />
               </p>
               <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">{t('reviews.trust.googleDesc')}</p>
             </div>
@@ -150,7 +150,7 @@ function TestimoniosPlaceholder() {
                   <div className="absolute -top-12 w-[100px] h-[100px] rounded-full border-4 border-[#F4F2EA] overflow-hidden bg-[#0A1113] flex items-center justify-center shadow-md">
                     <img
                       src={review.profile_photo_url}
-                      alt={`Foto de ${review.author_name}`}
+                      alt={`${t('reviews.trust.photoAlt')} ${review.author_name}`}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
                     />

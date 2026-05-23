@@ -15,7 +15,7 @@ function HeroReview() {
       subtitle={t('reviews.hero.subtitle')}
       slides={createPresetHeroSlides('community', {
         desktop: [reviewHeroImg],
-        alt: 'Mancora Kite Club rider testimonials',
+        alt: t('reviews.hero.imageAlt'),
         imageClassName: 'object-[52%_center] md:object-center',
       })}
       actions={[

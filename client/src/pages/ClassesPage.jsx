@@ -29,8 +29,8 @@ function ClassesPage() {
         descKey="seo.classesDesc"
         titleFallback="Kitesurfing & Wingfoiling Lessons in Máncora | Máncora Kite Club"
         descFallback="Professional kitesurfing and wingfoil classes in Máncora, Peru. All levels, private or group. IKO certified instructors, gear included. Book your lesson now."
-        canonicalPath={localizePath("/classes", currentLang)}
-        hreflang={{ en: "/classes", es: "/esp/classes", fr: "/fr/classes", default: "/classes" }}
+        canonicalPath={localizePath("/services", currentLang)}
+        hreflang={{ en: "/services", es: "/esp/services", fr: "/fr/services", default: "/services" }}
       />
 
       <SchemaOrg type="Course" serviceKey="kitesurfLessons" />

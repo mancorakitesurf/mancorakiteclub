@@ -1,7 +1,7 @@
 import { brandImages } from '../../config/images.js'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaTimes, FaWhatsapp } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
@@ -11,13 +11,13 @@ import { useUIStore } from '../../store/useUIStore.js'
 const clubLogo = brandImages.logoComplete
 
 const BASE_NAV_ITEMS = [
-  { to: '/home', label: 'nav.home' },
-  { to: '/classes', label: 'nav.classes' },
-  { to: '/stay', label: 'nav.stay' },
-  { to: '/build', label: 'nav.build' },
-  { to: '/reviews', label: 'nav.reviews' },
-  { to: '/contact', label: 'nav.contact' },
-  { to: '/blog', label: 'nav.blog' },
+  { to: '/home', label: 'Home' },
+  { to: '/services', label: 'Services' },
+  { to: '/stay', label: 'Stay With Us' },
+  { to: '/build', label: 'Build Your Trip' },
+  { to: '/reviews', label: 'Reviews' },
+  { to: '/contact', label: 'Contact' },
+  { to: '/blog', label: 'Blog' },
 ]
 
 const MotionLink = motion.create(Link)
@@ -186,7 +186,7 @@ function Header() {
                 whileHover={{ y: -2 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 10 }}
               >
-                <span className="relative z-10">{t(item.label)}</span>
+                <span className="relative z-10">{item.label}</span>
                 <motion.span
                   className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary"
                   whileHover={{ width: '100%' }}
@@ -376,7 +376,7 @@ function Header() {
                         }`}
                       >
                         <span className="relative">
-                          {t(item.label)}
+                          {item.label}
                           <motion.span
                             className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
                             initial={{ width: isActive ? '100%' : '0%' }}

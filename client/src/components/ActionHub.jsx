@@ -14,7 +14,7 @@ const logoKite = brandImages.logoMark
  * Floating action hub with KiteBot video trigger and vertical action stack.
  */
 const SECTION_MAP = [
-  { pattern: /^\/classes(\/|$)|\/learn\/|^\/aprende\//, message: 'Hola, Kite Club! Quiero mas información sobre las clases que brindan' },
+  { pattern: /^\/(?:(?:esp|fr)\/)?(?:services|classes)(\/|$)|\/learn\/|^\/aprende\//, message: 'Hola, Kite Club! Quiero mas información sobre los servicios que brindan' },
   { pattern: /^\/trips(\/|$)/, message: 'Hola, Kite Club! Quiero mas información sobre los trips que ofrecen' },
   { pattern: /^\/stay(\/|$)|\/hostel|kite-club-hotel|4-stars-hotel|\/acommodation\//, message: 'Hola, Kite Club! Quiero mas información sobre el hospedaje' },
 ]

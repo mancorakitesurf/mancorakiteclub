@@ -43,7 +43,7 @@ function getLangFromPath(routePath) {
 function getBreadcrumbLabel(key, lang) {
   const labels = {
     home: { en: 'Home', es: 'Inicio', fr: 'Accueil' },
-    classes: { en: 'Classes', es: 'Clases', fr: 'Cours' },
+    services: { en: 'Services', es: 'Services', fr: 'Services' },
     trips: { en: 'Trips', es: 'Viajes', fr: 'Voyages' },
     stay: { en: 'Stay', es: 'Hospedaje', fr: 'Hébergement' },
     build: { en: 'Build Trip', es: 'Armar Viaje', fr: 'Créer Voyage' },
@@ -127,8 +127,8 @@ function injectMetaAndSchemas(html, routePath, meta, metaKey = '', post = null) 
     const breadcrumbs = [{ name: getBreadcrumbLabel('home', lang), path: routePath }]
     addSchema(getBreadcrumbListSchema(lang, breadcrumbs), 'BreadcrumbList')
   }
-  // 2. Classes (all courses)
-  else if (metaKey === 'classes') {
+  // 2. Services landing (all courses)
+  else if (metaKey === 'services') {
     addSchema(getCourseSchema(lang, 'kitesurfLessons'), 'Course', 'kitesurfLessons')
     addSchema(getCourseSchema(lang, 'wingfoilLessons'), 'Course', 'wingfoilLessons')
     addSchema(getCourseSchema(lang, 'waveRiding'), 'Course', 'waveRiding')
@@ -137,8 +137,8 @@ function injectMetaAndSchemas(html, routePath, meta, metaKey = '', post = null) 
     addSchema(getCourseSchema(lang, 'tripsDownwinds'), 'Course', 'tripsDownwinds')
     
     const breadcrumbs = [
-      { name: getBreadcrumbLabel('home', lang), path: lang === 'en' ? '/home' : `/${lang}/home` },
-      { name: getBreadcrumbLabel('classes', lang), path: routePath }
+      { name: getBreadcrumbLabel('home', lang), path: lang === 'en' ? '/home' : lang === 'es' ? '/esp/home' : '/fr/home' },
+      { name: getBreadcrumbLabel('services', lang), path: routePath }
     ]
     addSchema(getBreadcrumbListSchema(lang, breadcrumbs), 'BreadcrumbList')
   }
@@ -146,8 +146,8 @@ function injectMetaAndSchemas(html, routePath, meta, metaKey = '', post = null) 
   else if (['kitesurfLessons', 'wingfoilLessons', 'waveRiding', 'tripsDownwinds', 'rentGear', 'surfSup'].includes(metaKey)) {
     addSchema(getCourseSchema(lang, metaKey), 'Course', metaKey)
     const breadcrumbs = [
-      { name: getBreadcrumbLabel('home', lang), path: lang === 'en' ? '/home' : `/${lang}/home` },
-      { name: getBreadcrumbLabel('classes', lang), path: lang === 'en' ? '/classes' : `/${lang}/classes` },
+      { name: getBreadcrumbLabel('home', lang), path: lang === 'en' ? '/home' : lang === 'es' ? '/esp/home' : '/fr/home' },
+      { name: getBreadcrumbLabel('services', lang), path: lang === 'en' ? '/services' : lang === 'es' ? '/esp/services' : '/fr/services' },
       { name: getBreadcrumbLabel(metaKey, lang), path: routePath }
     ]
     addSchema(getBreadcrumbListSchema(lang, breadcrumbs), 'BreadcrumbList')

@@ -3,11 +3,12 @@ import { FaArrowRight } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { resolveImage } from '../../config/images.js'
 import { useI18n } from '../../app/providers/i18nContext.js'
+import { localizePath } from '../../lib/routes.js'
 
 const TRIP_PREVIEW_IMAGE = resolveImage("fotos trip/DSC08247.webp")
 
 function Trips() {
-  const { t } = useI18n()
+  const { t, currentLang } = useI18n()
 
   return (
     <section id="trips" className="relative bg-background-light py-16 sm:py-20 lg:py-28 dark:bg-background-dark">
@@ -47,7 +48,7 @@ function Trips() {
 
             <div className="mt-10 flex justify-center sm:mt-12 lg:justify-start">
               <Link
-                to="/classes"
+                to={localizePath('/services', currentLang)}
                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-7 text-sm font-semibold text-white transition duration-300 hover:bg-primary dark:bg-white dark:text-slate-950 dark:hover:bg-primary dark:hover:text-white sm:w-auto"
               >
                 {t('home.servicesPreview.cta')}

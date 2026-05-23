@@ -60,8 +60,8 @@ export const PAGE_SEO = Object.freeze({
     canonicalPath: '/trips',
     hreflang: { en: '/trips', es: '/esp/trips', fr: '/fr/trips', default: '/trips' },
   }),
-  classes: Object.freeze({
-    paths: ['/classes', '/esp/classes', '/fr/classes'],
+  services: Object.freeze({
+    paths: ['/services', '/esp/services', '/fr/services'],
     title: 'Kitesurfing & Wingfoiling Lessons in Mancora | Mancora Kite Club',
     description:
       'Book kitesurfing and wingfoil classes in Mancora, Peru with IKO certified instructors, quality gear, and coaching for every level.',
@@ -73,8 +73,8 @@ export const PAGE_SEO = Object.freeze({
       'clases de kitesurf mancora',
     ],
     image: OG_IMAGES.classes,
-    canonicalPath: '/classes',
-    hreflang: { en: '/classes', es: '/esp/classes', fr: '/fr/classes', default: '/classes' },
+    canonicalPath: '/services',
+    hreflang: { en: '/services', es: '/esp/services', fr: '/fr/services', default: '/services' },
   }),
   stay: Object.freeze({
     paths: ['/stay', '/esp/stay', '/fr/stay'],

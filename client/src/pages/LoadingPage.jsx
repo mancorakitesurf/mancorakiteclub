@@ -32,7 +32,7 @@ function preloadDestinationPage(target) {
   if (normalizedPathname === '/home') return import('./HomePage.jsx')
   if (normalizedPathname === '/trips') return import('./TripsPage.jsx')
   if (normalizedPathname.startsWith('/trips/')) return import('./trips/TripDetailPage.jsx')
-  if (normalizedPathname === '/classes') return import('./ClassesPage.jsx')
+  if (normalizedPathname === '/services') return import('./ClassesPage.jsx')
   if (normalizedPathname === '/stay') return import('./StayPage.jsx')
   if (normalizedPathname === '/build') return import('./BuildPage.jsx')
   if (normalizedPathname === '/faq') return import('./FaqPage.jsx')

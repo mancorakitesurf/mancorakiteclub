@@ -94,7 +94,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="inline-flex min-h-10 items-center transition-colors hover:text-white" to={localizePath('/classes', currentLang)}>
+                <Link className="inline-flex min-h-10 items-center transition-colors hover:text-white" to={localizePath('/services', currentLang)}>
                   {t('footer.kiteLessons')}
                 </Link>
               </li>

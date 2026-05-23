@@ -592,5 +592,102 @@
         "relative_time_description": "Hace 2 años"
       }
     }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "El Diario",
+      "title": "Kitesurfing en Perú",
+      "subtitle": "Historias de olas, mar, viento y cultura en la costa norte del Perú."
+    },
+    "sidebar": {
+      "planEyebrow": "Planifica Tu Viaje",
+      "planTitle": "Arma el viaje a Perú que se adapta a tu viento, nivel y tiempo.",
+      "planDesc": "Olvídate de buscar sin rumbo y avanza directo a una ruta que coincida con tus objetivos de navegación, tu estilo de hospedaje y la mejor temporada.",
+      "planButton": "Empezar a Planificar",
+      "openedEyebrow": "Lo Más Abierto",
+      "openedTitle": "Entradas Destacadas",
+      "openedDesc": "Las historias que los lectores usan para comparar vientos, flujos de viaje y las rutas más sólidas en el norte de Perú.",
+      "trendingRead": "Lectura Popular"
+    },
+    "common": {
+      "loadMore": "Cargar Más Artículos"
+    },
+    "posts": {
+      "top-20-kitesurf-destinations-part-1": {
+        "title": "Los 20 mejores destinos del mundo para olas de kitesurf - Parte 1",
+        "category": "NAVEGACIÓN EN OLAS DE KITESURF",
+        "date": "25 de mayo de 2022"
+      },
+      "7-different-plans-of-a-kitesurf-trip-to-peru": {
+        "title": "7 planes diferentes para un viaje de kitesurf a Perú",
+        "category": "KITESURF EN PERÚ",
+        "date": "16 de mayo de 2022"
+      },
+      "chicama-peru-surf-trip": {
+        "title": "Chicama, Perú: la ola más larga del mundo + cómo organizar el viaje de surf definitivo",
+        "category": "SURF EN PERÚ",
+        "date": "10 de junio de 2024"
+      },
+      "mancora-vs-lobitos-vs-cabo-blanco": {
+        "title": "Máncora vs Lobitos vs Cabo Blanco: el mejor spot de kitesurf en olas de Perú",
+        "category": "KITESURF EN PERÚ",
+        "date": "20 de junio de 2024"
+      },
+      "peru-kitesurf-north-vs-south": {
+        "title": "Kitesurf en Perú: Norte vs Sur — guía de spots, temporadas y viento",
+        "category": "KITESURF EN PERÚ",
+        "date": "30 de junio de 2024"
+      },
+      "pacasmayo-peru-the-ultimate-point-break-surf-guide": {
+        "title": "Pacasmayo, Perú: la guía definitiva de surf en point break",
+        "category": "SURF EN PERÚ",
+        "date": "10 de julio de 2024"
+      },
+      "why-mancora-is-different-kitesurf-wave-progression-guide": {
+        "title": "Por qué Máncora es diferente: guía de progresión en olas de kitesurf",
+        "category": "KITESURF EN PERÚ",
+        "date": "20 de julio de 2024"
+      },
+      "7-Nights-in-Mancora-Progression-Plan": {
+        "title": "7 noches en Máncora: plan de progresión",
+        "category": "PROGRESIÓN",
+        "date": "10 de junio de 2023"
+      },
+      "Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level)": {
+        "title": "Técnicas para hacer kitesurf en olas: lectura del swell, timing y control",
+        "category": "TÉCNICA",
+        "date": "5 de julio de 2023"
+      },
+      "Typical-mistakes-of-the-intermediate-rider-in-waves-and-how-to-correct-them-(real-coaching)": {
+        "title": "Errores típicos del rider intermedio en olas y cómo corregirlos",
+        "category": "COACHING",
+        "date": "12 de agosto de 2023"
+      },
+      "Kite-Safari-Northern-Peru": {
+        "title": "Kite Safari en el norte de Perú — serie de expediciones",
+        "category": "EXPEDICIONES",
+        "date": "3 de septiembre de 2023"
+      },
+      "Whale-Season-in-Northern-Peru": {
+        "title": "Temporada de ballenas en el norte de Perú: navega con ballenas",
+        "category": "ESTILO DE VIDA",
+        "date": "1 de octubre de 2023"
+      },
+      "Mancora-Whale-Season": {
+        "title": "Temporada de ballenas en Máncora — La marea cinética",
+        "category": "ESTILO DE VIDA",
+        "date": "20 de octubre de 2023"
+      },
+      "Wingfoil-vs-Kitesurf-Choosing-Your-Weapon": {
+        "title": "Wingfoil vs Kitesurf: elige tu arma",
+        "category": "WINGFOIL",
+        "date": "15 de noviembre de 2023"
+      },
+      "Safety-and-Progression-The-Technical-Edge": {
+        "title": "Seguridad y progresión: la ventaja técnica",
+        "category": "SEGURIDAD",
+        "date": "5 de diciembre de 2023"
+      }
+    }
   }
 }

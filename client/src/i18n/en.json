@@ -592,5 +592,102 @@
         "relative_time_description": "2 years ago"
       }
     }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "The Journal",
+      "title": "Kitesurfing Peru",
+      "subtitle": "Wave riding and ocean stories from the wind, waves, and culture of northern Peru."
+    },
+    "sidebar": {
+      "planEyebrow": "Plan Your Trip",
+      "planTitle": "Build the Peru trip that fits your wind, level, and time.",
+      "planDesc": "Skip the generic research loop and move straight into a route that matches your riding goals, stay style, and best travel window.",
+      "planButton": "Start Planning",
+      "openedEyebrow": "Most Opened",
+      "openedTitle": "Trending Posts",
+      "openedDesc": "Stories readers use to compare wind, travel flow, and the strongest routes into northern Peru.",
+      "trendingRead": "Trending Read"
+    },
+    "common": {
+      "loadMore": "Load More Articles"
+    },
+    "posts": {
+      "top-20-kitesurf-destinations-part-1": {
+        "title": "The 20 World's best destinations for kitesurfing waves - Part 1",
+        "category": "KITESURF WAVE RIDING",
+        "date": "May 25, 2022"
+      },
+      "7-different-plans-of-a-kitesurf-trip-to-peru": {
+        "title": "7 Different Plans of a Kitesurf Trip to Perú",
+        "category": "KITESURFING PERU",
+        "date": "May 16, 2022"
+      },
+      "chicama-peru-surf-trip": {
+        "title": "Chicama, Peru: The Longest Wave in the World + How to Build the Ultimate Surf Trip",
+        "category": "SURFING PERU",
+        "date": "June 10, 2024"
+      },
+      "mancora-vs-lobitos-vs-cabo-blanco": {
+        "title": "Mancora vs Lobitos vs Cabo Blanco: Best Wave Kitesurf Spot in Peru",
+        "category": "KITESURFING PERU",
+        "date": "June 20, 2024"
+      },
+      "peru-kitesurf-north-vs-south": {
+        "title": "Peru Kitesurf: North vs South — Spots, Seasons & Wind Guide",
+        "category": "KITESURFING PERU",
+        "date": "June 30, 2024"
+      },
+      "pacasmayo-peru-the-ultimate-point-break-surf-guide": {
+        "title": "Pacasmayo, Peru: The Ultimate Point Break Surf Guide",
+        "category": "SURFING PERU",
+        "date": "July 10, 2024"
+      },
+      "why-mancora-is-different-kitesurf-wave-progression-guide": {
+        "title": "Why Mancora is Different: Kitesurf Wave Progression Guide",
+        "category": "KITESURFING PERU",
+        "date": "July 20, 2024"
+      },
+      "7-Nights-in-Mancora-Progression-Plan": {
+        "title": "7 Nights in Máncora: Progression Plan",
+        "category": "PROGRESSION",
+        "date": "June 10, 2023"
+      },
+      "Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level)": {
+        "title": "Techniques for kitesurfing in waves: reading the swell, timing and control",
+        "category": "TECHNIQUE",
+        "date": "July 5, 2023"
+      },
+      "Typical-mistakes-of-the-intermediate-rider-in-waves-and-how-to-correct-them-(real-coaching)": {
+        "title": "Typical mistakes of the intermediate rider in waves and how to correct them",
+        "category": "COACHING",
+        "date": "August 12, 2023"
+      },
+      "Kite-Safari-Northern-Peru": {
+        "title": "Kite Safari Northern Peru — Expedition Series",
+        "category": "EXPEDITIONS",
+        "date": "September 3, 2023"
+      },
+      "Whale-Season-in-Northern-Peru": {
+        "title": "Whale Season in Northern Peru: sail with whales",
+        "category": "LIFESTYLE",
+        "date": "October 1, 2023"
+      },
+      "Mancora-Whale-Season": {
+        "title": "Mancora Whale Season — The Kinetic Tide",
+        "category": "LIFESTYLE",
+        "date": "October 20, 2023"
+      },
+      "Wingfoil-vs-Kitesurf-Choosing-Your-Weapon": {
+        "title": "Wingfoil vs Kitesurf: Choosing Your Weapon",
+        "category": "WINGFOIL",
+        "date": "November 15, 2023"
+      },
+      "Safety-and-Progression-The-Technical-Edge": {
+        "title": "Safety & Progression: The Technical Edge",
+        "category": "SAFETY",
+        "date": "December 5, 2023"
+      }
+    }
   }
 }

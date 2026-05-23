@@ -41,7 +41,7 @@ function TestimoniosPlaceholder() {
         <p className="text-[#F4F2EA]/40 text-xs md:text-sm font-semibold tracking-wider uppercase mb-16 max-w-xl mx-auto">
           {t('reviews.trust.subtitle')}
         </p>
- 
+
         {/* CONTENEDOR DE BLOQUES SUELTOS CON LÍNEAS DIVISIONALES */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-4 md:gap-0 mb-24 max-w-5xl mx-auto">
           
@@ -64,10 +64,10 @@ function TestimoniosPlaceholder() {
               </p>
             </div>
           </a>
- 
+
           {/* DIVISOR 1: Línea idéntica a la inferior pero en vertical */}
           <div className="h-px w-full bg-[#F4F2EA]/10 md:h-16 md:w-px mx-auto" />
- 
+
           {/* BLOQUE: GOOGLE REVIEWS */}
           <a 
             href="https://www.google.com/maps/place/Mancora+Kite+Club+-+Escuela+kitesurf+y+wingfoil/@-4.1020847,-81.0556632,17z/data=!4m8!3m7!1s0x903691315a6adf53:0x11242dabd794a228!8m2!3d-4.1020847!4d-81.0530883!9m1!1b1!16s%2Fg%2F11ckxxbb0n?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D" 
@@ -88,10 +88,10 @@ function TestimoniosPlaceholder() {
               <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">{t('reviews.trust.googleDesc')}</p>
             </div>
           </a>
- 
+
           {/* DIVISOR 2: Línea idéntica a la inferior pero en vertical */}
           <div className="h-px w-full bg-[#F4F2EA]/10 md:h-16 md:w-px mx-auto" />
- 
+
           {/* BLOQUE: TRIPADVISOR */}
           <a 
             href="https://www.tripadvisor.com.pe/Attraction_Review-g635976-d6664378-Reviews-Mancora_Kite_Club-Mancora_Piura_Region.html" 
@@ -112,12 +112,12 @@ function TestimoniosPlaceholder() {
               <p className="text-[#F4F2EA]/40 text-xs mt-0.5 font-medium">{t('reviews.trust.tripAdvisorDesc')}</p>
             </div>
           </a>
- 
+
         </div>
- 
+
         {/* LÍNEA DE DIVISIÓN DE LA SECCIÓN (IGUAL A LOS DIVISORES VERTICALES) */}
         <div className="w-full h-px bg-[#F4F2EA]/10 mb-20" />
- 
+
         {/* CARRUSEL DE TESTIMONIOS */}
         {reviewsData && reviewsData.length > 0 ? (
           <Swiper

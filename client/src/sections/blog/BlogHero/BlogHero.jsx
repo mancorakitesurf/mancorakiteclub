@@ -1,6 +1,7 @@
 import FullscreenHero from "../../../components/ui/FullscreenHero.jsx"
 import { createHeroSlides, HERO_SLIDE_PRESETS } from "../../../lib/fullscreenHeroSlides.js"
 import { BLOGHERO_IMAGE, BLOGHERO_MOBILE_IMAGE } from "../BlogLayout/blogContent.js"
+import { useI18n } from "../../../app/providers/i18nContext.js"
 
 const blogHeroSlides = createHeroSlides({
   desktop: [BLOGHERO_IMAGE, ...HERO_SLIDE_PRESETS.blog.desktop],
@@ -10,12 +11,14 @@ const blogHeroSlides = createHeroSlides({
 })
 
 function BlogHero() {
+  const { t } = useI18n()
+
   return (
     <FullscreenHero
       as="section"
-      eyebrow="The Journal"
-      title="Kitesurfing Peru"
-      subtitle="Wave riding and ocean stories from the wind, waves, and culture of northern Peru."
+      eyebrow={t('blog.hero.eyebrow')}
+      title={t('blog.hero.title')}
+      subtitle={t('blog.hero.subtitle')}
       slides={blogHeroSlides}
     />
   )

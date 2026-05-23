@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom"
 import { TRENDING_POSTS } from "../../blogContent.js"
+import { useI18n } from "../../../../../app/providers/i18nContext.js"
+import { localizePath } from "../../../../../lib/routes.js"
 
 function BlogSidebar() {
+  const { t, currentLang } = useI18n()
   const visibleTrendingPosts = TRENDING_POSTS.slice(0, 4)
 
   return (
@@ -14,22 +17,22 @@ function BlogSidebar() {
 
         <div className="relative">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-cyan-700/70">
-            Plan Your Trip
+            {t('blog.sidebar.planEyebrow')}
           </p>
 
-          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
-            Build the Peru trip that fits your wind, level, and time.
+          <h3 className="mt-4 text-2xl font-semibold tracking-tight text-slate-955">
+            {t('blog.sidebar.planTitle')}
           </h3>
 
           <p className="mt-4 text-sm leading-6 text-slate-600">
-            Skip the generic research loop and move straight into a route that matches your riding goals, stay style, and best travel window.
+            {t('blog.sidebar.planDesc')}
           </p>
 
           <Link
-            to="/build"
+            to={localizePath('/build', currentLang)}
             className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-slate-950 px-6 text-sm font-semibold uppercase tracking-[0.18em] text-white transition duration-300 hover:bg-cyan-700"
           style={{marginLeft:53}}>
-            Start Planning
+            {t('blog.sidebar.planButton')}
           </Link>
         </div>
       </section>
@@ -38,15 +41,15 @@ function BlogSidebar() {
       <section className="h-fit rounded-[1.75rem] border border-slate-200 bg-white p-6 pb-8 shadow-[0_20px_38px_rgba(15,23,42,0.08)]">
         <div className="border-b border-slate-200 pb-4">
           <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-cyan-700/70">
-            Most Opened
+            {t('blog.sidebar.openedEyebrow')}
           </p>
 
           <h3 className="mt-2 text-xl font-semibold tracking-tight text-slate-950">
-            Trending Posts
+            {t('blog.sidebar.openedTitle')}
           </h3>
 
           <p className="mt-3 text-sm leading-6 text-slate-600">
-            Stories readers use to compare wind, travel flow, and the strongest routes into northern Peru.
+            {t('blog.sidebar.openedDesc')}
           </p>
         </div>
 
@@ -55,10 +58,13 @@ function BlogSidebar() {
             const desktopSrc = post.desktopImage || post.image
             const mobileSrc = post.mobileImage || desktopSrc
 
+            const translatedTitle = t(`blog.posts.${post.slug}.title`)
+            const displayTitle = translatedTitle !== `blog.posts.${post.slug}.title` ? translatedTitle : post.title
+
             return (
               <Link
                 key={post.slug}
-                to={`/blog/${post.slug}`}
+                to={localizePath(`/blog/${post.slug}`, currentLang)}
                 className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/80 p-3 transition duration-300 hover:-translate-y-0.5 hover:border-cyan-300 hover:bg-white hover:shadow-[0_16px_34px_rgba(15,23,42,0.08)]"
               >
                 <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-slate-200">
@@ -66,7 +72,7 @@ function BlogSidebar() {
                     <source media="(min-width: 768px)" srcSet={desktopSrc} />
                     <img
                       src={mobileSrc}
-                      alt={post.alt || post.title}
+                      alt={post.alt || displayTitle}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
                   </picture>
@@ -74,11 +80,11 @@ function BlogSidebar() {
 
                 <div className="min-w-0 flex-1">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-cyan-700/70">
-                    Trending Read
+                    {t('blog.sidebar.trendingRead')}
                   </p>
 
                   <p className="mt-2 text-sm font-semibold leading-5 text-slate-900 transition group-hover:text-cyan-700">
-                    {post.title}
+                    {displayTitle}
                   </p>
                 </div>
               </Link>

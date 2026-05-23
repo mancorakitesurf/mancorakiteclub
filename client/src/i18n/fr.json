@@ -400,5 +400,102 @@
         "relative_time_description": "Il y a 2 ans"
       }
     }
+  },
+  "blog": {
+    "hero": {
+      "eyebrow": "Le Journal",
+      "title": "Kitesurf au Pérou",
+      "subtitle": "Histoires de vagues, d'océan, de vent et de culture sur la côte nord du Pérou."
+    },
+    "sidebar": {
+      "planEyebrow": "Planifiez Votre Voyage",
+      "planTitle": "Construisez le voyage au Pérou adapté à votre vent, niveau et temps.",
+      "planDesc": "Évitez les recherches sans fin et passez directement à un itinéraire qui correspond à vos objectifs de navigation, votre style d'hébergement et la meilleure saison.",
+      "planButton": "Commencer à Planifier",
+      "openedEyebrow": "Le Plus Ouvert",
+      "openedTitle": "Articles Tendances",
+      "openedDesc": "Les histoires que les lecteurs utilisent pour comparer les vents, les flux de voyage et les itinéraires les plus solides dans le nord du Pérou.",
+      "trendingRead": "Lecture Tendance"
+    },
+    "common": {
+      "loadMore": "Charger Plus d'Articles"
+    },
+    "posts": {
+      "top-20-kitesurf-destinations-part-1": {
+        "title": "Les 20 meilleures destinations au monde pour le kitesurf de vagues - Partie 1",
+        "category": "KITESURF DANS LES VAGUES",
+        "date": "25 mai 2022"
+      },
+      "7-different-plans-of-a-kitesurf-trip-to-peru": {
+        "title": "7 plans différents pour un voyage de kitesurf au Pérou",
+        "category": "KITESURF AU PÉROU",
+        "date": "16 mai 2022"
+      },
+      "chicama-peru-surf-trip": {
+        "title": "Chicama, Pérou : la plus longue vague du monde + comment construire le voyage de surf ultime",
+        "category": "SURF AU PÉROU",
+        "date": "10 juin 2024"
+      },
+      "mancora-vs-lobitos-vs-cabo-blanco": {
+        "title": "Mancora vs Lobitos vs Cabo Blanco : meilleur spot de kitesurf de vagues au Pérou",
+        "category": "KITESURF AU PÉROU",
+        "date": "20 juin 2024"
+      },
+      "peru-kitesurf-north-vs-south": {
+        "title": "Kitesurf au Pérou : Nord vs Sud — guide des spots, des saisons et du vent",
+        "category": "KITESURF AU PÉROU",
+        "date": "30 juin 2024"
+      },
+      "pacasmayo-peru-the-ultimate-point-break-surf-guide": {
+        "title": "Pacasmayo, Pérou : le guide de surf ultime sur point break",
+        "category": "SURF AU PÉROU",
+        "date": "10 juillet 2024"
+      },
+      "why-mancora-is-different-kitesurf-wave-progression-guide": {
+        "title": "Pourquoi Mancora est différent : guide de progression en kitesurf de vagues",
+        "category": "KITESURF AU PÉROU",
+        "date": "20 juillet 2024"
+      },
+      "7-Nights-in-Mancora-Progression-Plan": {
+        "title": "7 nuits à Mancora : plan de progression",
+        "category": "PROGRESSION",
+        "date": "10 juin 2023"
+      },
+      "Techniques-for-kitesurfing-in-waves-reading-the-swell-timing-and-control-(intermediate level)": {
+        "title": "Techniques pour le kitesurf de vagues : lecture de la houle, timing et contrôle",
+        "category": "TECHNIQUE",
+        "date": "5 juillet 2023"
+      },
+      "Typical-mistakes-of-the-intermediate-rider-in-waves-and-how-to-correct-them-(real-coaching)": {
+        "title": "Erreurs typiques du rider intermédiaire dans les vagues et comment les corriger",
+        "category": "COACHING",
+        "date": "12 août 2023"
+      },
+      "Kite-Safari-Northern-Peru": {
+        "title": "Kite Safari dans le Nord du Pérou — série d'expéditions",
+        "category": "EXPÉDITIONS",
+        "date": "3 septembre 2023"
+      },
+      "Whale-Season-in-Northern-Peru": {
+        "title": "Saison des baleines dans le nord du Pérou : naviguez avec les baleines",
+        "category": "STYLE DE VIE",
+        "date": "1er octobre 2023"
+      },
+      "Mancora-Whale-Season": {
+        "title": "Saison des baleines à Mancora — La marée cinétique",
+        "category": "STYLE DE VIE",
+        "date": "20 octobre 2023"
+      },
+      "Wingfoil-vs-Kitesurf-Choosing-Your-Weapon": {
+        "title": "Wingfoil vs Kitesurf : choisir son arme",
+        "category": "WINGFOIL",
+        "date": "15 novembre 2023"
+      },
+      "Safety-and-Progression-The-Technical-Edge": {
+        "title": "Sécurité et progression : l'avantage technique",
+        "category": "SÉCURITÉ",
+        "date": "5 décembre 2023"
+      }
+    }
   }
 }

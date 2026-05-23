@@ -521,5 +521,76 @@
     "ctaTitle": "Ready to Stay?",
     "ctaDesc": "Book your perfect beach getaway. Click below to send us a message!",
     "whatsappMessage": "Hi! I'm interested in booking accommodation at Bali Lodge. Can you give me more info?"
+  },
+  "reviews": {
+    "hero": {
+      "eyebrow": "Mancora Kite Club",
+      "title": "What Our Riders Say",
+      "subtitle": "Real stories from the riders who lived the wind, the ocean, and the tribe experience.",
+      "watchVideos": "Watch Videos"
+    },
+    "trust": {
+      "title": "Guarantee & Experience",
+      "subtitle": "Certified Kitesurf School with Official IKO Instructors",
+      "ikoTitle": "IKO Certified School",
+      "ikoDescPart1": "Learn safely with ",
+      "ikoDescBold": "Certified Instructors",
+      "ikoDescPart2": ". We issue official international certifications.",
+      "googleDesc": "Reviews from our tribe",
+      "tripAdvisorDesc": "Top Kite Experience in Peru",
+      "loading": "Loading testimonials from the tribe..."
+    },
+    "videos": {
+      "eyebrow": "Rider Story",
+      "title1": "One Real",
+      "title2": "Experience",
+      "description": "A real rider story about wind, ocean, progression, and the Mancora Kite Club tribe.",
+      "featuredStory": "Featured Story",
+      "videoTitle": "Real progression. Real ocean. Real tribe.",
+      "videoDesc": "Watch one full testimonial from a rider who experienced the coaching, the wind conditions, and the community atmosphere in Máncora.",
+      "videoTag": "Video testimonial"
+    },
+    "cta": {
+      "eyebrow": "Join the Tribe",
+      "title1": "Start Your",
+      "title2": "Mancora Story",
+      "description": "Plan your next session in Máncora with wind, ocean, community, and real progression in one place.",
+      "ctaText": "Tell us your dates, your level, and the kind of experience you want to build.",
+      "ctaButton": "Build Your Trip"
+    },
+    "items": {
+      "3": {
+        "text": "I loved learning kite here in the best school of the north",
+        "relative_time_description": "2 months ago"
+      },
+      "1": {
+        "text": "very good school, great vibe and Mancora is a wonderful place, where I was lucky enough to sail next to whales and dolphins... what more do you want😅😅??",
+        "relative_time_description": "5 months ago"
+      },
+      "6": {
+        "text": "Very good experience at Mancora Kitesurf, Kike makes you feel comfortable, motivated, has a lot of experience and total mastery of this sport. Totally recommended!",
+        "relative_time_description": "6 months ago"
+      },
+      "2": {
+        "text": "Great instructors and even better people! I went with my partner and she took lessons, she was thrilled. We will definitely come back to share and, of course, to KITE!",
+        "relative_time_description": "9 months ago"
+      },
+      "7": {
+        "text": "Thank you Kike for giving me the best experience in the School! A lot of patience and dedication. Perfect attention",
+        "relative_time_description": "11 months ago"
+      },
+      "8": {
+        "text": "I spent a week practicing kitesurfing and I was able to do it without problems thanks to the team working with the school. We visited the main spot in Máncora, but on low wind days we went searching for wind, so we were able to ride!\n\nThe school team is kind and friendly.",
+        "relative_time_description": "11 months ago"
+      },
+      "4": {
+        "text": "“We traveled as a family and my teenage kids took kitesurfing lessons at Máncora Kite Club. We were fascinated! The treatment was super friendly, and the whole team was patient and motivating with the kids. The weather is ideal, and the club atmosphere is safe and welcoming. Plus, we joined a family kite trip which was the most fun part of the trip. We took home unforgettable memories. Many thanks to the team for their dedication and good energy.”",
+        "relative_time_description": "1 year ago"
+      },
+      "5": {
+        "text": "A very professional Kite school in the north of Peru. They know how to take you to the best Kite and Kitesurf spots. Ask for Kike🙌🏼🤙🏼🤙🏼",
+        "relative_time_description": "2 years ago"
+      }
+    }
   }
 }

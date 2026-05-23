@@ -38,22 +38,21 @@ function CommunityGallery() {
               variants={fadeUp}
               className="inline-block text-[10px] font-semibold uppercase tracking-[0.25em] text-primary"
             >
-              {t('community.label') || 'The Vibe'}
+              {t('community.label')}
             </motion.span>
 
             <motion.h2
               variants={fadeUp}
               className="text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl"
             >
-              {t('community.heading') || 'More Than a Kite School'}
+              {t('community.heading')}
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
               className="text-base leading-relaxed text-secondary md:text-lg"
             >
-              {t('community.description') ||
-                'Máncora Kite Club is a crew. Every session, every downwinder, every sunset — we share the stoke with riders from all over the world. Whether you are just starting or chasing your first wave, you will find a home here.'}
+              {t('community.description')}
             </motion.p>
 
             {/* stats */}
@@ -62,9 +61,9 @@ function CommunityGallery() {
               className="flex flex-wrap gap-x-10 gap-y-4 pt-4"
             >
               {[
-                { number: '10+', label: t('community.years') || 'Years' },
-                { number: '500+', label: t('community.students') || 'Students' },
-                { number: 'IKO', label: t('community.certified') || 'Certified' },
+                { number: '10+', label: t('community.years') },
+                { number: '500+', label: t('community.students') },
+                { number: 'IKO', label: t('community.certified') },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-2xl font-bold tracking-tight text-white">

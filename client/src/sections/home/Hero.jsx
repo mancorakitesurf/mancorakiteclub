@@ -9,7 +9,7 @@ function Hero() {
 
   return (
     <FullscreenHero
-      eyebrow="Mancora, Peru"
+      eyebrow={t('hero.eyebrow')}
       title={t('hero.title')}
       subtitle={t('hero.subtitle')}
       slides={HOME_HERO_SLIDES}

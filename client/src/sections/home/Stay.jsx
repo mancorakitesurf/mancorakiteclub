@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaHome, FaSpa, FaUtensils, FaWater } from 'react-icons/fa'
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 import bedroomImage from '../../assets/HOSPEDAJE KITE HOUSE/DSC05162.webp'
 import loungeImage from '../../assets/HOSPEDAJE KITE HOUSE/DSC04847.webp'
@@ -33,29 +34,35 @@ const STAY_GALLERY = {
 const STAY_BENEFITS = [
   {
     icon: FaHome,
-    title: 'Beachfront Villa',
-    description: 'A calm home base designed for riders, friends, and slow coastal mornings.',
+    titleKey: 'home.stayPreview.benefits.villa.title',
+    descriptionKey: 'home.stayPreview.benefits.villa.description',
   },
   {
     icon: FaWater,
-    title: 'Ocean Views',
-    description: 'Wake up close to the Pacific and keep the sea in sight throughout the day.',
+    titleKey: 'home.stayPreview.benefits.views.title',
+    descriptionKey: 'home.stayPreview.benefits.views.description',
   },
   {
     icon: FaUtensils,
-    title: 'Private Chef',
-    description: 'Fresh meals, easy hosting, and recovery-friendly dining after the water.',
+    titleKey: 'home.stayPreview.benefits.chef.title',
+    descriptionKey: 'home.stayPreview.benefits.chef.description',
   },
   {
     icon: FaSpa,
-    title: 'Pure Tranquility',
-    description: 'Quiet corners, soft shade, and space to reset between kite sessions.',
+    titleKey: 'home.stayPreview.benefits.tranquility.title',
+    descriptionKey: 'home.stayPreview.benefits.tranquility.description',
   },
 ]
 
-const STAY_TAGS = ['Boutique Kite House', 'Beachfront Base', 'Slow Luxury']
+const STAY_TAG_KEYS = [
+  'home.stayPreview.tags.boutique',
+  'home.stayPreview.tags.beachfront',
+  'home.stayPreview.tags.slowLuxury',
+]
 
 function Stay() {
+  const { t } = useI18n()
+
   return (
     <section id="stay" className="relative overflow-hidden bg-[#0e1b17] px-5 py-20 text-[#F4F2EA] sm:px-8 sm:py-24 lg:px-12 lg:py-32">
       <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
@@ -67,22 +74,22 @@ function Stay() {
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-14">
           <div className="max-w-xl">
             <span className="text-sm font-bold uppercase tracking-normal text-[#BFA36A]">
-              Accommodation
+              {t('home.stayPreview.label')}
             </span>
             <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-normal text-[#F4F2EA] sm:text-5xl lg:text-6xl">
-              Stay With Us
+              {t('home.stayPreview.headline')}
             </h2>
             <p className="mt-6 max-w-lg text-base leading-7 text-[#F4F2EA]/72 sm:text-lg sm:leading-8">
-              Relax in our luxurious beachfront villa. Ocean views, private chefs, and pure tranquility.
+              {t('home.stayPreview.description')}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-2.5">
-              {STAY_TAGS.map((tag) => (
+              {STAY_TAG_KEYS.map((tagKey) => (
                 <span
-                  key={tag}
+                  key={tagKey}
                   className="rounded-full border border-[#F4F2EA]/14 bg-white/[0.04] px-4 py-2 text-xs font-semibold uppercase tracking-normal text-[#F4F2EA]/78"
                 >
-                  {tag}
+                  {t(tagKey)}
                 </span>
               ))}
             </div>
@@ -90,11 +97,15 @@ function Stay() {
             <div className="mt-10 grid grid-cols-2 gap-3 sm:max-w-lg">
               <div className="border-l border-[#BFA36A]/45 pl-4">
                 <p className="font-display text-3xl font-semibold text-[#F4F2EA]">4</p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-normal text-[#F4F2EA]/56">Guest rhythms</p>
+                <p className="mt-1 text-xs font-medium uppercase tracking-normal text-[#F4F2EA]/56">
+                  {t('home.stayPreview.stats.rhythms')}
+                </p>
               </div>
               <div className="border-l border-[#5AF8FB]/35 pl-4">
                 <p className="font-display text-3xl font-semibold text-[#F4F2EA]">24/7</p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-normal text-[#F4F2EA]/56">Coastal calm</p>
+                <p className="mt-1 text-xs font-medium uppercase tracking-normal text-[#F4F2EA]/56">
+                  {t('home.stayPreview.stats.calm')}
+                </p>
               </div>
             </div>
 
@@ -102,7 +113,7 @@ function Stay() {
               to="/stay"
               className="mt-10 inline-flex h-12 items-center justify-center rounded-full border border-[#F4F2EA]/18 bg-[#F4F2EA] px-6 text-sm font-bold text-[#0A1113] shadow-[0_18px_48px_rgba(0,0,0,0.24)] transition duration-300 hover:border-[#5AF8FB]/50 hover:bg-[#5AF8FB] focus:outline-none focus:ring-2 focus:ring-[#5AF8FB]/70 focus:ring-offset-2 focus:ring-offset-[#0A1113]"
             >
-              Explore Accommodation
+              {t('home.stayPreview.cta')}
             </Link>
           </div>
 
@@ -118,7 +129,7 @@ function Stay() {
               <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
                 <p className="text-xs font-semibold uppercase tracking-normal text-[#5AF8FB]">Kite House</p>
                 <p className="mt-2 max-w-sm font-display text-2xl font-semibold leading-tight text-white sm:text-3xl">
-                  A polished base between wind, water and rest.
+                  {t('home.stayPreview.mainCaption')}
                 </p>
               </div>
             </figure>
@@ -133,7 +144,7 @@ function Stay() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-black/8 to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 right-4 text-sm font-semibold text-white">
-                  Poolside recovery
+                  {t('home.stayPreview.captions.pool')}
                 </figcaption>
               </figure>
 
@@ -146,7 +157,7 @@ function Stay() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/58 via-black/8 to-transparent" />
                 <figcaption className="absolute bottom-4 left-4 right-4 text-sm font-semibold text-white">
-                  Quiet private rooms
+                  {t('home.stayPreview.captions.bedroom')}
                 </figcaption>
               </figure>
             </div>
@@ -160,7 +171,7 @@ function Stay() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4 text-sm font-semibold text-white">
-                Shared spaces with boutique ease
+                {t('home.stayPreview.captions.lounge')}
               </figcaption>
             </figure>
 
@@ -173,7 +184,7 @@ function Stay() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/64 via-black/12 to-transparent" />
               <figcaption className="absolute bottom-4 left-4 right-4 text-sm font-semibold text-white">
-                Warm evenings after the session
+                {t('home.stayPreview.captions.night')}
               </figcaption>
             </figure>
           </div>
@@ -185,17 +196,17 @@ function Stay() {
 
             return (
               <article
-                key={benefit.title}
+                key={benefit.titleKey}
                 className="rounded-lg border border-white/10 bg-white/[0.045] p-5 shadow-[0_18px_56px_rgba(0,0,0,0.22)] backdrop-blur"
               >
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#BFA36A]/25 bg-[#BFA36A]/10 text-[#E7D19B]">
                   <Icon className="text-lg" aria-hidden="true" />
                 </div>
                 <h3 className="font-display text-xl font-semibold tracking-normal text-[#F4F2EA]">
-                  {benefit.title}
+                  {t(benefit.titleKey)}
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#F4F2EA]/62">
-                  {benefit.description}
+                  {t(benefit.descriptionKey)}
                 </p>
               </article>
             )

@@ -52,21 +52,18 @@ export const STAY_IMAGES = {
 
 export const TESTIMONIALS = [
   {
+    id: 'tina',
     name: 'Tina Moller',
-    country: 'Germany',
-    text: '"The best kitesurfing trip of my life. The instructors were incredibly patient and the location is just magical. Highly recommend!"',
     image: remoteImages.homeTestimonials.tina,
   },
   {
+    id: 'sarah',
     name: 'Sarah Jenkins',
-    country: 'UK',
-    text: `"Mancora Kite Club strikes the perfect balance between professional coaching and a relaxed, fun atmosphere. I'll be back!"`,
     image: remoteImages.homeTestimonials.sarah,
   },
   {
+    id: 'marc',
     name: 'Marc Dubois',
-    country: 'France',
-    text: '"From the airport pickup to the final sunset session, everything was seamless. The villa is stunning and the food is amazing."',
     image: remoteImages.homeTestimonials.marc,
   },
 ]

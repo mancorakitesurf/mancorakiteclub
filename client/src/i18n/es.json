@@ -3,26 +3,218 @@
     "home": "Inicio",
     "trips": "Viajes",
     "stay": "Hospedaje",
-    "build": "Arma tu viaje",
-    "classes": "Clases",
-    "blog": "Blog",
+    "build": "Crea tu viaje",
+    "classes": "Servicios",
+    "blog": "Blogs",
     "contact": "Contacto",
     "reviews": "Reseñas",
     "faq": "FAQ",
     "bookNow": "Reservar ahora"
   },
   "hero": {
-    "title": "Máncora Kite Club",
-    "subtitle": "Aprende a volar en el club con entrenadores profesionales",
-    "cta": "Reservar"
+    "title": "Mancora Kite Club",
+    "eyebrow": "Máncora, Perú",
+    "subtitle": "Kitesurf / Wingfoil en Máncora, para principiantes y riders avanzados, con seguridad, coaching y análisis de video.",
+    "cta": "Reserva por WhatsApp"
   },
   "community": {
     "label": "La Vibra",
-    "heading": "Más Que Una Escuela de Kitesurf",
-    "description": "Máncora Kite Club es una familia. Cada sesión, cada downwinder, cada atardecer — compartimos la pasión con riders de todo el mundo. Tanto si estás empezando como si persigues tu primera ola, aquí encontrarás tu hogar.",
+    "heading": "Más que una escuela de Kitesurf",
+    "description": "Mancora Kite Club es una familia. Cada sesión, cada downwinder, cada atardecer: compartimos la pasión con riders de todo el mundo. Tanto si estás empezando como si persigues tu primera ola, aquí encontrarás tu lugar.",
     "years": "Años",
     "students": "Alumnos",
-    "certified": "Certificado"
+    "certified": "Certificación"
+  },
+  "home": {
+    "story": {
+      "founderRole": "Fundador e instructor principal",
+      "label": "Nuestra historia",
+      "headline": "15 años leyendo el mar de Máncora.",
+      "paragraph1": "Soy Enrique, fundador de Mancora Kite Club. Llevo más de 15 años viviendo, navegando y leyendo esta costa: viento, oleaje, corriente y esos pequeños detalles que hacen especial al norte del Perú.",
+      "paragraph2": "Nuestro trabajo es simple: coaching seguro, progresión real y una experiencia en el mar que se siente personal. Más que una escuela, es una forma de entender el océano y querer volver a él.",
+      "values": {
+        "spotKnowledge": {
+          "title": "Conocimiento del spot",
+          "text": "15+ años leyendo viento, oleaje y corriente en el norte del Perú."
+        },
+        "realProgression": {
+          "title": "Progresión real",
+          "text": "Coaching para que cada rider se mueva con confianza en el mar."
+        },
+        "safeSessions": {
+          "title": "Sesiones seguras",
+          "text": "Soporte por radio, equipo premium y guía cercana en el agua."
+        },
+        "oceanCulture": {
+          "title": "Cultura de mar",
+          "text": "Deporte, comunidad y una conexión más tranquila con Máncora."
+        }
+      }
+    },
+    "servicesPreview": {
+      "label": "Servicios",
+      "headline": "Elige tu experiencia en el mar.",
+      "description": "Combina clases, hospedaje, equipo y extras. Encuentra la mezcla de servicios que encaja con tu viento, nivel y tiempo.",
+      "cta": "Explora nuestros servicios"
+    },
+    "builderPreview": {
+      "featuredPackage": "Paquete destacado",
+      "label": "Crea tu viaje",
+      "headline": "Tu viaje, tus reglas.",
+      "description": "En 5 pasos tendrás un paquete personalizado con todo incluido y un precio listo para confirmar por WhatsApp.",
+      "footerText": "Empieza por lo esencial, ajusta el ritmo y envía el plan exacto cuando lo tengas claro.",
+      "cta": "Empecemos",
+      "stats": {
+        "steps": {
+          "value": "5 pasos",
+          "label": "Flujo a medida"
+        },
+        "nights": {
+          "value": "3-14 noches",
+          "label": "Hospedaje flexible"
+        },
+        "coaching": {
+          "value": "0-15 h",
+          "label": "Coaching"
+        }
+      },
+      "steps": {
+        "activity": {
+          "title": "Elige tu actividad",
+          "desc": "Kitesurf, Wingfoil, Surf o SUP: tú decides qué te mueve."
+        },
+        "nights": {
+          "title": "Elige tus noches",
+          "desc": "Desde una escapada rápida de 3 noches hasta una inmersión completa de 2 semanas."
+        },
+        "hours": {
+          "title": "Agrega horas de clase",
+          "desc": "Coaching privado a tu ritmo: de 0 a 15 horas, para todos los niveles."
+        },
+        "extras": {
+          "title": "Suma tus extras",
+          "desc": "Alquiler de equipo, day trips, masajes, traslados: combina lo que quieres."
+        },
+        "book": {
+          "title": "Revisa tu precio y reserva",
+          "desc": "Obtén una estimación al instante y envíanosla directo por WhatsApp."
+        }
+      },
+      "trips": {
+        "first-fly": {
+          "title": "PRIMER VUELO",
+          "subtitle": "Kitesurf/Wingfoil + hospedaje",
+          "summary": "Paquete inicial enfocado en progresar con hospedaje incluido."
+        },
+        "olas-y-viento": {
+          "title": "OLAS & VIENTO",
+          "subtitle": "Surf + Kitesurf + hospedaje"
+        },
+        "solo-surf": {
+          "title": "SOLO SURF",
+          "subtitle": "Surf + hospedaje"
+        }
+      }
+    },
+    "testimonials": {
+      "headline": "Lo que dicen nuestros riders",
+      "items": {
+        "tina": {
+          "country": "Alemania",
+          "text": "\"El mejor viaje de kitesurf de mi vida. Los instructores fueron increíblemente pacientes y el lugar es mágico. ¡Lo recomiendo muchísimo!\""
+        },
+        "sarah": {
+          "country": "Reino Unido",
+          "text": "\"Mancora Kite Club logra el equilibrio perfecto entre coaching profesional y un ambiente relajado y divertido. ¡Volveré!\""
+        },
+        "marc": {
+          "country": "Francia",
+          "text": "\"Desde el recojo en el aeropuerto hasta la última sesión al atardecer, todo fue impecable. La villa es espectacular y la comida, increíble.\""
+        }
+      }
+    },
+    "stayPreview": {
+      "label": "Hospedaje",
+      "headline": "Hospédate con nosotros",
+      "description": "Relájate en nuestra villa frente al mar. Vistas al océano, chef privado y pura tranquilidad.",
+      "tags": {
+        "boutique": "Kite House boutique",
+        "beachfront": "Base frente al mar",
+        "slowLuxury": "Lujo sin prisa"
+      },
+      "stats": {
+        "rhythms": "Ritmos de viaje",
+        "calm": "Calma costera"
+      },
+      "cta": "Explorar hospedaje",
+      "mainCaption": "Una base cuidada entre viento, agua y descanso.",
+      "captions": {
+        "pool": "Recuperación junto a la piscina",
+        "bedroom": "Habitaciones privadas y tranquilas",
+        "lounge": "Espacios compartidos con estilo boutique",
+        "night": "Noches cálidas después de la sesión"
+      },
+      "benefits": {
+        "villa": {
+          "title": "Villa frente al mar",
+          "description": "Una base tranquila diseñada para riders, amigos y mañanas costeras sin prisa."
+        },
+        "views": {
+          "title": "Vistas al océano",
+          "description": "Despierta cerca del Pacífico y mantén el mar a la vista durante el día."
+        },
+        "chef": {
+          "title": "Chef privado",
+          "description": "Comidas frescas, atención sencilla y una propuesta ideal para recuperarte después del agua."
+        },
+        "tranquility": {
+          "title": "Tranquilidad pura",
+          "description": "Rincones silenciosos, sombra suave y espacio para resetear entre sesiones de kite."
+        }
+      }
+    },
+    "contactPreview": {
+      "label": "CONTÁCTANOS",
+      "headline": "¿Listo para planear tu próxima experiencia en el mar?",
+      "description": "Escríbenos para consultar disponibilidad, precios, clases, hospedaje y orientación para tu viaje. Nuestro equipo te ayudará a elegir la mejor experiencia para tus fechas y nivel.",
+      "cta": "Contáctanos",
+      "ctaNote": "Cuéntanos tus fechas, nivel e idea de viaje. Te ayudamos a crear la mejor experiencia en el mar.",
+      "imageLabel": "Asesoría de viaje",
+      "imageText": "Clases, hospedaje y planificación completa.",
+      "bottomNote": "Planea tu estadía, clases o viaje completo de kite con nosotros. Un solo mensaje basta para recibir la recomendación adecuada.",
+      "highlights": {
+        "availability": {
+          "title": "Respuesta rápida",
+          "text": "Fechas, ventana de viento y próximos pasos."
+        },
+        "planning": {
+          "title": "Clases, hospedaje y viajes",
+          "text": "Armamos un solo plan alrededor de tu visita."
+        },
+        "guidance": {
+          "title": "Guía local",
+          "text": "Consejos claros del equipo de Máncora."
+        }
+      }
+    }
+  },
+  "team": {
+    "instructors": {
+      "label": "El equipo",
+      "headline": "Conoce a los instructores",
+      "subtitle": "Un equipo especializado, enfocado en tu seguridad, progreso y experiencia en el mar."
+    },
+    "instructor": {
+      "certified": "Instructor certificado IKO",
+      "watersports": "Coach de deportes acuáticos",
+      "coach": "Coach de Kite & Surf"
+    },
+    "specialty": {
+      "safety": "Enfoque en seguridad y progresión",
+      "wing": "Wingfoil & Kitesurf",
+      "waves": "Especialista en wave riding",
+      "basics": "Confianza en el agua"
+    }
   },
   "header": {
     "language": "Idioma",
@@ -57,12 +249,12 @@
     "surfSup": "Surf & SUP"
   },
   "common": {
-    "learnMore": "Saber más",
+    "learnMore": "Conoce más",
     "bookNow": "Reservar ahora",
     "contactUs": "Contáctanos",
     "loading": "Cargando...",
     "error": "Algo salió mal",
-    "buildYourTrip": "Arma tu viaje",
+    "buildYourTrip": "Crea tu viaje",
     "bookOnWhatsApp": "Reservar por WhatsApp"
   },
   "trips": {

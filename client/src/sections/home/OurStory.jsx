@@ -1,28 +1,29 @@
 import { homeImages } from '../../config/images.js'
 import { motion } from 'framer-motion'
 import { FaShieldAlt, FaStar, FaUsers, FaWater } from 'react-icons/fa'
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 const founderImg = homeImages.storyFounder
 const VALUES = [
   {
     icon: FaWater,
-    title: 'Spot knowledge',
-    text: '15+ years reading wind, swell and current in northern Peru.',
+    titleKey: 'home.story.values.spotKnowledge.title',
+    textKey: 'home.story.values.spotKnowledge.text',
   },
   {
     icon: FaStar,
-    title: 'Real progression',
-    text: 'Coaching that helps riders move with confidence in the ocean.',
+    titleKey: 'home.story.values.realProgression.title',
+    textKey: 'home.story.values.realProgression.text',
   },
   {
     icon: FaShieldAlt,
-    title: 'Safe sessions',
-    text: 'Radio support, premium gear and close guidance on the water.',
+    titleKey: 'home.story.values.safeSessions.title',
+    textKey: 'home.story.values.safeSessions.text',
   },
   {
     icon: FaUsers,
-    title: 'Ocean culture',
-    text: 'Sport, community and a slower connection with Mancora.',
+    titleKey: 'home.story.values.oceanCulture.title',
+    textKey: 'home.story.values.oceanCulture.text',
   },
 ]
 
@@ -70,6 +71,8 @@ const textItem = {
 }
 
 function OurStory() {
+  const { t } = useI18n()
+
   return (
     <section
       id="our-story"
@@ -94,7 +97,7 @@ function OurStory() {
             <figcaption className="absolute bottom-4 left-4 rounded-lg border border-white/25 bg-white/85 px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.16)] backdrop-blur-md dark:border-white/10 dark:bg-slate-950/75">
               <p className="text-sm font-semibold text-slate-950 dark:text-white">Enrique</p>
               <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-primary">
-                Founder & Head Instructor
+                {t('home.story.founderRole')}
               </p>
             </figcaption>
           </motion.figure>
@@ -108,13 +111,13 @@ function OurStory() {
           >
             <div className="max-w-prose">
               <motion.p variants={textItem} className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">
-                Our Story
+                {t('home.story.label')}
               </motion.p>
               <motion.h2
                 variants={textItem}
                 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl"
               >
-                15 years reading Mancora's water.
+                {t('home.story.headline')}
               </motion.h2>
 
               <motion.div
@@ -122,14 +125,10 @@ function OurStory() {
                 className="mt-6 max-w-prose space-y-4 text-justify text-sm leading-7 text-slate-600 [text-align-last:left] dark:text-slate-300 sm:text-base sm:leading-8"
               >
                 <p>
-                  I am Enrique, founder of Mancora Kite Club. I have spent more than 15 years living,
-                  riding and reading this coastline: wind, swell, current and the small details that
-                  make northern Peru special.
+                  {t('home.story.paragraph1')}
                 </p>
                 <p>
-                  Our work is simple: safe coaching, real progression and an ocean experience that
-                  feels personal. More than a school, it is a way to understand the sea and want to
-                  come back to it.
+                  {t('home.story.paragraph2')}
                 </p>
               </motion.div>
 
@@ -139,7 +138,7 @@ function OurStory() {
 
                   return (
                     <motion.li
-                      key={value.title}
+                      key={value.titleKey}
                       variants={textItem}
                       className="border-t border-slate-200 pt-4 dark:border-white/10"
                     >
@@ -147,10 +146,10 @@ function OurStory() {
                         <Icon className="text-sm" aria-hidden="true" />
                       </span>
                       <p className="mt-3 text-sm font-semibold text-slate-950 dark:text-white">
-                        {value.title}
+                        {t(value.titleKey)}
                       </p>
                       <p className="mt-1 text-sm leading-6 text-slate-600 dark:text-slate-300">
-                        {value.text}
+                        {t(value.textKey)}
                       </p>
                     </motion.li>
                   )

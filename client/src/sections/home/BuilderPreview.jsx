@@ -3,51 +3,60 @@ import { ArrowRight, BedDouble, Clock3, MessageCircle, Sparkles, Waves } from 'l
 
 import { trips } from '../../content/trips.js'
 import { resolveImage } from '../../config/images.js'
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 const FEATURED_TRIP = trips[0]
 const SUPPORT_TRIPS = trips.slice(1, 3)
 const BUILDER_PREVIEW_HERO_IMAGE = resolveImage("fotos trip/DSC03882.webp")
 
 const PACKAGE_STATS = [
-  { value: '5 steps', label: 'Custom flow' },
-  { value: '3-14 nights', label: 'Flexible stay' },
-  { value: '0-15 hrs', label: 'Coaching' },
+  { valueKey: 'home.builderPreview.stats.steps.value', labelKey: 'home.builderPreview.stats.steps.label' },
+  { valueKey: 'home.builderPreview.stats.nights.value', labelKey: 'home.builderPreview.stats.nights.label' },
+  { valueKey: 'home.builderPreview.stats.coaching.value', labelKey: 'home.builderPreview.stats.coaching.label' },
 ]
 
 const STEPS = [
   {
     n: 1,
-    title: 'Pick your activity',
-    desc: 'Kitesurf, Wingfoil, Surf or SUP — you decide what gets you stoked.',
+    titleKey: 'home.builderPreview.steps.activity.title',
+    descKey: 'home.builderPreview.steps.activity.desc',
     Icon: Waves,
   },
   {
     n: 2,
-    title: 'Choose your nights',
-    desc: 'From a quick 3-night escape to a full 2-week immersion.',
+    titleKey: 'home.builderPreview.steps.nights.title',
+    descKey: 'home.builderPreview.steps.nights.desc',
     Icon: BedDouble,
   },
   {
     n: 3,
-    title: 'Add class hours',
-    desc: 'Private coaching at your pace — 0 to 15 hours, all levels welcome.',
+    titleKey: 'home.builderPreview.steps.hours.title',
+    descKey: 'home.builderPreview.steps.hours.desc',
     Icon: Clock3,
   },
   {
     n: 4,
-    title: 'Stack your extras',
-    desc: 'Gear rental, day trips, massage, transfers — mix and match what you want.',
+    titleKey: 'home.builderPreview.steps.extras.title',
+    descKey: 'home.builderPreview.steps.extras.desc',
     Icon: Sparkles,
   },
   {
     n: 5,
-    title: 'See your price & book',
-    desc: 'Get an instant estimate and send it straight to us on WhatsApp.',
+    titleKey: 'home.builderPreview.steps.book.title',
+    descKey: 'home.builderPreview.steps.book.desc',
     Icon: MessageCircle,
   },
 ]
 
 function BuilderPreview() {
+  const { t } = useI18n()
+
+  const tripText = (trip, field) => {
+    const key = `home.builderPreview.trips.${trip.slug}.${field}`
+    const translation = t(key)
+    return translation === key ? trip[field] : translation
+  }
+
   return (
     <section id="packages" className="relative overflow-hidden bg-surface-dark py-16 text-white sm:py-20 lg:py-28">
       <div className="absolute right-0 top-0 h-96 w-96 translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
@@ -66,15 +75,17 @@ function BuilderPreview() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071214]/82 via-[#071214]/18 to-transparent" />
                 <div className="absolute left-5 top-5 rounded-full border border-white/20 bg-black/20 px-4 py-2 text-xs font-bold uppercase tracking-normal text-white backdrop-blur-md">
-                  {FEATURED_TRIP.subtitle}
+                  {tripText(FEATURED_TRIP, 'subtitle')}
                 </div>
                 <div className="absolute bottom-5 left-5 right-5">
-                  <p className="text-xs font-semibold uppercase tracking-normal text-primary">Featured package</p>
+                  <p className="text-xs font-semibold uppercase tracking-normal text-primary">
+                    {t('home.builderPreview.featuredPackage')}
+                  </p>
                   <h3 className="mt-2 font-display text-4xl font-bold leading-none text-white sm:text-5xl">
-                    {FEATURED_TRIP.title}
+                    {tripText(FEATURED_TRIP, 'title')}
                   </h3>
                   <p className="mt-3 max-w-md text-sm leading-6 text-white/82 sm:text-base">
-                    {FEATURED_TRIP.summary}
+                    {tripText(FEATURED_TRIP, 'summary')}
                   </p>
                 </div>
               </figure>
@@ -94,8 +105,12 @@ function BuilderPreview() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#071214]/82 via-[#071214]/12 to-transparent" />
                     <div className="absolute inset-x-3 bottom-3">
-                      <p className="text-[0.65rem] font-semibold uppercase tracking-normal text-primary">{trip.subtitle}</p>
-                      <p className="mt-1 text-sm font-bold leading-tight text-white">{trip.title}</p>
+                      <p className="text-[0.65rem] font-semibold uppercase tracking-normal text-primary">
+                        {tripText(trip, 'subtitle')}
+                      </p>
+                      <p className="mt-1 text-sm font-bold leading-tight text-white">
+                        {tripText(trip, 'title')}
+                      </p>
                     </div>
                   </Link>
                 ))}
@@ -106,23 +121,27 @@ function BuilderPreview() {
           <div>
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-normal text-primary backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_18px_rgba(42,157,143,0.8)]" />
-              Build your trip
+              {t('home.builderPreview.label')}
             </div>
             <h2 className="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-              Your trip, your rules.
+              {t('home.builderPreview.headline')}
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-              In 5 steps you'll have a custom package with everything included — and a price ready to confirm on WhatsApp.
+              {t('home.builderPreview.description')}
             </p>
 
             <div className="mt-7 grid gap-3 sm:grid-cols-3">
               {PACKAGE_STATS.map((item) => (
                 <div
-                  key={item.label}
+                  key={item.labelKey}
                   className="rounded-2xl border border-white/10 bg-white/[0.075] p-4 text-left shadow-[0_18px_50px_rgba(0,0,0,0.16)] backdrop-blur-md"
                 >
-                  <span className="font-display text-2xl font-semibold leading-none text-white">{item.value}</span>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-normal text-slate-300">{item.label}</p>
+                  <span className="font-display text-2xl font-semibold leading-none text-white">
+                    {t(item.valueKey)}
+                  </span>
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-normal text-slate-300">
+                    {t(item.labelKey)}
+                  </p>
                 </div>
               ))}
             </div>
@@ -147,9 +166,13 @@ function BuilderPreview() {
                           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[#F4F2EA]/10 text-primary transition duration-300 group-hover:bg-primary group-hover:text-white">
                             <Icon className="h-5 w-5" strokeWidth={1.8} />
                           </span>
-                          <h3 className="text-base font-bold leading-tight text-white">{step.title}</h3>
+                          <h3 className="text-base font-bold leading-tight text-white">
+                            {t(step.titleKey)}
+                          </h3>
                         </div>
-                        <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-300">{step.desc}</p>
+                        <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-300">
+                          {t(step.descKey)}
+                        </p>
                       </div>
                     </div>
                   </article>
@@ -160,13 +183,13 @@ function BuilderPreview() {
             <div className="mt-7 rounded-3xl border border-white/10 bg-[#F4F2EA]/10 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.2)] backdrop-blur-md sm:p-6">
               <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
                 <p className="max-w-xl text-sm leading-6 text-slate-200">
-                  Start with the essentials, adjust the pace, and send the exact trip plan when it feels right.
+                  {t('home.builderPreview.footerText')}
                 </p>
                 <Link
                   to="/build"
                   className="inline-flex h-12 w-full items-center justify-center gap-3 rounded-full border border-primary/30 bg-primary px-7 text-sm font-bold text-white shadow-lg shadow-primary/30 transition-all hover:scale-[1.02] hover:bg-primary/90 hover:shadow-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/70 focus:ring-offset-2 focus:ring-offset-surface-dark sm:w-auto"
                 >
-                  Let's do it
+                  {t('home.builderPreview.cta')}
                   <ArrowRight className="h-5 w-5" strokeWidth={2} />
                 </Link>
               </div>

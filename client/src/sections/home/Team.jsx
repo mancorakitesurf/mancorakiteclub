@@ -11,8 +11,6 @@ const TEAM_MEMBERS = [
     specialtyKey: 'team.specialty.safety',
     languages: 'EN / ES',
     img: founderImg, // using DSC02939 as coach1 in this generic grid
-    fallbackRole: 'IKO Certified Instructor',
-    fallbackSpecialty: 'Focus on safety and progression',
   },
   {
     id: 'coach2',
@@ -20,8 +18,6 @@ const TEAM_MEMBERS = [
     specialtyKey: 'team.specialty.wing',
     languages: 'EN / ES / FR',
     img: coach1, // IMG_4993
-    fallbackRole: 'Water Sports Coach',
-    fallbackSpecialty: 'Wingfoil & Kitesurf',
   },
   {
     id: 'coach3',
@@ -29,8 +25,6 @@ const TEAM_MEMBERS = [
     specialtyKey: 'team.specialty.waves',
     languages: 'EN / ES',
     img: coach2, // DSC06099
-    fallbackRole: 'IKO Certified Instructor',
-    fallbackSpecialty: 'Specialized in wave riding',
   },
   {
     id: 'coach4',
@@ -38,8 +32,6 @@ const TEAM_MEMBERS = [
     specialtyKey: 'team.specialty.basics',
     languages: 'EN / ES / PT',
     img: coach3, // DSC09008
-    fallbackRole: 'Kite & Surf Coach',
-    fallbackSpecialty: 'Confidence in the water',
   },
 ]
 
@@ -65,11 +57,6 @@ const itemVariants = {
 export default function Team() {
   const { t } = useI18n()
 
-  const safeT = (key, fallback) => {
-    const translation = t(key)
-    return translation === key ? fallback : translation
-  }
-
   return (
     <section id="our-team" className="bg-[#0e1b17] py-24 sm:py-32 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -87,13 +74,13 @@ export default function Team() {
         >
           <motion.div variants={itemVariants} className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-[#b7e28a] text-[11px] font-black uppercase tracking-[0.3em] mb-4">
-              {safeT('team.instructors.label', 'The Crew')}
+              {t('team.instructors.label')}
             </h2>
             <h3 className="text-3xl sm:text-4xl font-black uppercase tracking-tighter text-white">
-              {safeT('team.instructors.headline', 'Meet the Instructors')}
+              {t('team.instructors.headline')}
             </h3>
             <p className="mt-4 text-white/60 text-lg">
-              {safeT('team.instructors.subtitle', 'A specialized team dedicated to your safety, progression, and ocean experience.')}
+              {t('team.instructors.subtitle')}
             </p>
           </motion.div>
 
@@ -108,17 +95,17 @@ export default function Team() {
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
                   <img
                     src={member.img}
-                    alt={member.fallbackRole}
+                    alt={t(member.roleKey)}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700"
                   />
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col justify-center text-center">
                   <h4 className="text-[#b7e28a] text-[10px] font-black uppercase tracking-[0.2em] mb-2">
-                    {safeT(member.roleKey, member.fallbackRole)}
+                    {t(member.roleKey)}
                   </h4>
                   <p className="text-white text-lg font-bold tracking-tight">
-                    {safeT(member.specialtyKey, member.fallbackSpecialty)}
+                    {t(member.specialtyKey)}
                   </p>
                 </div>
               </motion.div>

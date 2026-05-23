@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { resolveImage } from '../../config/images.js'
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 const TRIP_PREVIEW_IMAGE = resolveImage("fotos trip/DSC08247.webp")
 
 function Trips() {
+  const { t } = useI18n()
+
   return (
     <section id="trips" className="relative bg-background-light py-16 sm:py-20 lg:py-28 dark:bg-background-dark">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -30,15 +33,15 @@ function Trips() {
             <div className="mb-10 flex flex-col gap-5 sm:mb-14 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary">
-                  Services
+                  {t('home.servicesPreview.label')}
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-slate-950 dark:text-white sm:text-4xl lg:text-5xl">
-                  Choose your ocean experience.
+                  {t('home.servicesPreview.headline')}
                 </h2>
               </div>
 
               <p className="max-w-md text-sm leading-7 text-slate-600 dark:text-slate-300 sm:text-base">
-                Choose your lessons, accommodation, equipment, and extras. Find the service mix that fits your wind, level and time.
+                {t('home.servicesPreview.description')}
               </p>
             </div>
 
@@ -47,7 +50,7 @@ function Trips() {
                 to="/classes"
                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-7 text-sm font-semibold text-white transition duration-300 hover:bg-primary dark:bg-white dark:text-slate-950 dark:hover:bg-primary dark:hover:text-white sm:w-auto"
               >
-                Explore Our Services
+                {t('home.servicesPreview.cta')}
                 <FaArrowRight className="text-xs" aria-hidden="true" />
               </Link>
             </div>

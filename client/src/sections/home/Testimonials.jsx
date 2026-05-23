@@ -1,8 +1,11 @@
 import { FaQuoteLeft } from 'react-icons/fa'
 import { Star } from 'lucide-react'
 import { TESTIMONIALS } from './homeContent.js'
+import { useI18n } from '../../app/providers/i18nContext.js'
 
 function Testimonials() {
+  const { t } = useI18n()
+
   return (
     <section id="testimonials" className="relative overflow-hidden bg-[#0A1113] py-20 text-[#F4F2EA] sm:py-24 lg:py-28">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#F4F2EA]/15 to-transparent" />
@@ -10,7 +13,7 @@ function Testimonials() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-20 text-center font-display text-3xl font-bold tracking-normal text-[#F4F2EA] sm:text-4xl md:text-5xl">
-          What Our Riders Say
+          {t('home.testimonials.headline')}
         </h2>
 
         <div className="grid grid-cols-1 items-stretch gap-9 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
@@ -39,13 +42,15 @@ function Testimonials() {
 
                 <div className="flex min-h-[150px] flex-1 items-center">
                   <p className="line-clamp-5 text-sm font-medium italic leading-7 text-[#0A1113]/80 sm:text-base">
-                    {item.text}
+                    {t(`home.testimonials.items.${item.id}.text`)}
                   </p>
                 </div>
 
                 <div className="mt-auto w-full border-t border-[#0A1113]/10 pt-5">
                   <h5 className="text-lg font-bold text-[#0A1113]">{item.name}</h5>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-normal text-[#0A1113]/50">{item.country}</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-normal text-[#0A1113]/50">
+                    {t(`home.testimonials.items.${item.id}.country`)}
+                  </p>
                 </div>
               </article>
             </div>

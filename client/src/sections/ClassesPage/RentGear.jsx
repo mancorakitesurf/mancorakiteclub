@@ -11,7 +11,7 @@ function RentGear() {
   ]
 
   return (
-    <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#0A0F14] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+    <section id="rent-gear" className="relative scroll-mt-24 bg-gradient-to-b from-[#0f2e2c] to-[#0A0F14] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

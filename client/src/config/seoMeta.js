@@ -268,7 +268,7 @@ export const PAGE_SEO = Object.freeze({
     },
   }),
   rentGear: Object.freeze({
-    paths: ['/services/rent-gear', '/esp/services/rent-gear', '/fr/services/rent-gear'],
+    paths: [],
     title: 'Kitesurf & Wingfoil Gear Rental in Máncora | Mancora Kite Club',
     description:
       'Rent premium kitesurfing and wingfoiling equipment in Máncora, Peru. Top international brands, well-maintained kites, boards, foils, and safety gear.',
@@ -280,12 +280,12 @@ export const PAGE_SEO = Object.freeze({
       'gear rental mancora',
     ],
     image: OG_IMAGES.classes,
-    canonicalPath: '/services/rent-gear',
+    canonicalPath: '/services',
     hreflang: {
-      en: '/services/rent-gear',
-      es: '/esp/services/rent-gear',
-      fr: '/fr/services/rent-gear',
-      default: '/services/rent-gear',
+      en: '/services',
+      es: '/esp/services',
+      fr: '/fr/services',
+      default: '/services',
     },
   }),
   surfSup: Object.freeze({

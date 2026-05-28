@@ -3,6 +3,7 @@ import { lazy } from 'react'
 import MainLayout from './layouts/MainLayout.jsx'
 import LoadingPage from '../pages/LoadingPage.jsx'
 import NotFoundPage from '../pages/NotFoundPage.jsx'
+import LegacyServicesRedirect from './components/LegacyServicesRedirect.jsx'
 
 const HomePage = lazy(() => import('../pages/HomePage.jsx'))
 const TripsPage = lazy(() => import('../pages/TripsPage.jsx'))
@@ -21,7 +22,6 @@ const KitesurfLessonsPage = lazy(() => import('../pages/services/KitesurfLessons
 const WingfoilLessonsPage = lazy(() => import('../pages/services/WingfoilLessonsPage.jsx'))
 const WaveRidingCoachingPage = lazy(() => import('../pages/services/WaveRidingCoachingPage.jsx'))
 const TripsDownwindsPage = lazy(() => import('../pages/services/TripsDownwindsPage.jsx'))
-const RentGearPage = lazy(() => import('../pages/services/RentGearPage.jsx'))
 const SurfSupPage = lazy(() => import('../pages/services/SurfSupPage.jsx'))
 
 const SITE_ROUTES = [
@@ -33,9 +33,9 @@ const SITE_ROUTES = [
   {
     path: 'equipment',
     children: [
-      { index: true, element: <Navigate to="/services/rent-gear" replace /> },
-      { path: 'esp', element: <Navigate to="/esp/services/rent-gear" replace /> },
-      { path: 'fr', element: <Navigate to="/fr/services/rent-gear" replace /> },
+      { index: true, element: <LegacyServicesRedirect /> },
+      { path: 'esp', element: <LegacyServicesRedirect /> },
+      { path: 'fr', element: <LegacyServicesRedirect /> },
     ],
   },
   { path: 'stay', element: <StayPage /> },
@@ -50,7 +50,7 @@ const SITE_ROUTES = [
   { path: 'services/wingfoil-lessons', element: <WingfoilLessonsPage /> },
   { path: 'services/wave-riding-coaching', element: <WaveRidingCoachingPage /> },
   { path: 'services/trips-downwinds', element: <TripsDownwindsPage /> },
-  { path: 'services/rent-gear', element: <RentGearPage /> },
+  { path: 'services/rent-gear', element: <LegacyServicesRedirect /> },
   { path: 'services/surf-sup', element: <SurfSupPage /> },
 
   { path: 'learn/kitesurf', element: <Navigate to="/services/kitesurf-lessons" replace /> },
@@ -58,7 +58,7 @@ const SITE_ROUTES = [
   { path: 'kitesurfing', element: <Navigate to="/services/kitesurf-lessons" replace /> },
   { path: 'wingfoil', element: <Navigate to="/services/wingfoil-lessons" replace /> },
   { path: 'sup', element: <Navigate to="/services/surf-sup" replace /> },
-  { path: 'equipment-rental', element: <Navigate to="/services/rent-gear" replace /> },
+  { path: 'equipment-rental', element: <LegacyServicesRedirect /> },
   { path: 'solo-surf', element: <Navigate to="/trips/solo-surf" replace /> },
   { path: 'hostel', element: <Navigate to="/stay" replace /> },
   { path: 'kite-club-hotel', element: <Navigate to="/stay" replace /> },

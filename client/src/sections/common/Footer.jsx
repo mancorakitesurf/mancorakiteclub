@@ -130,7 +130,7 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="inline-flex min-h-10 items-center transition-colors hover:text-white" to={localizePath('/services/rent-gear', currentLang)}>
+                <Link className="inline-flex min-h-10 items-center transition-colors hover:text-white" to={localizePath('/services', currentLang)}>
                   {t('footer.rentGear')}
                 </Link>
               </li>

@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import SEO from "../components/SEO"
 import SchemaOrg from "../components/SchemaOrg.jsx"
 import { useI18n } from "../app/providers/i18nContext.js"
@@ -21,6 +22,18 @@ import SurfSup from "../sections/ClassesPage/SurfSup.jsx"
 
 function ClassesPage() {
   const { currentLang } = useI18n()
+
+  useEffect(() => {
+    const rentGearSection = document.getElementById('rent-gear')
+
+    if (!rentGearSection) {
+      return
+    }
+
+    requestAnimationFrame(() => {
+      rentGearSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+  }, [])
 
   return (
     <>

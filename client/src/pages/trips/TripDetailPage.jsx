@@ -4,6 +4,8 @@ import SEO from '../../components/SEO.jsx'
 import FullscreenHero from '../../components/ui/FullscreenHero.jsx'
 import { createPresetHeroSlides } from '../../lib/fullscreenHeroSlides.js'
 import { buildWhatsAppUrl } from '../../lib/whatsapp.js'
+import { useI18n } from '../../app/providers/i18nContext.js'
+import { localizePath } from '../../lib/routes.js'
 import { trips, getTripBySlug } from '../../content/trips.js'
 
 function formatUsd(value) {
@@ -12,6 +14,7 @@ function formatUsd(value) {
 
 function TripDetailPage() {
   const { slug } = useParams()
+  const { currentLang } = useI18n()
   const trip = getTripBySlug(slug)
 
   if (!trip) {
@@ -33,8 +36,13 @@ function TripDetailPage() {
       <SEO
         title={`${trip.title} | Mancora Kite Club`}
         description={trip.summary}
-        canonicalPath={trip.path}
-        hreflang={{ en: trip.path, es: '/esp', default: '/' }}
+        canonicalPath={localizePath(trip.path, currentLang)}
+        hreflang={{
+          en: trip.path,
+          es: localizePath(trip.path, 'es'),
+          fr: localizePath(trip.path, 'fr'),
+          default: trip.path,
+        }}
       />
 
       <FullscreenHero

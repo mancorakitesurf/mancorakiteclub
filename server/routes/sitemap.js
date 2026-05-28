@@ -23,7 +23,7 @@ const ROUTE_PATHS = [
   '/kitesurfing/esp',
   '/wingfoil/esp',
   '/sup/esp',
-  '/equipment/esp',
+  '/esp/services/rent-gear',
   '/solo-surf/esp',
   '/acommodation/hostal/esp',
   '/acommodation/hotel-kite/esp',

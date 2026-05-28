@@ -15,6 +15,7 @@ const ReviewsPage = lazy(() => import('../pages/ReviewPage.jsx'))
 const WavesPage = lazy(() => import('../pages/waves/Waves.jsx'))
 const BlogPage = lazy(() => import('../pages/BlogPage.jsx'))
 const BlogPostPage = lazy(() => import('../pages/blog/BlogPostPage.jsx'))
+const TripDetailPage = lazy(() => import('../pages/trips/TripDetailPage.jsx'))
 
 const KitesurfLessonsPage = lazy(() => import('../pages/services/KitesurfLessonsPage.jsx'))
 const WingfoilLessonsPage = lazy(() => import('../pages/services/WingfoilLessonsPage.jsx'))
@@ -26,9 +27,17 @@ const SurfSupPage = lazy(() => import('../pages/services/SurfSupPage.jsx'))
 const SITE_ROUTES = [
   { path: 'home', element: <HomePage /> },
   { path: 'trips', element: <TripsPage /> },
-  { path: 'trips/:slug', element: <Navigate to="/build" replace /> },
+  { path: 'trips/:slug', element: <TripDetailPage /> },
   { path: 'services', element: <ClassesPage /> },
   { path: 'classes', element: <Navigate to="../services" replace relative="path" /> },
+  {
+    path: 'equipment',
+    children: [
+      { index: true, element: <Navigate to="/services/rent-gear" replace /> },
+      { path: 'esp', element: <Navigate to="/esp/services/rent-gear" replace /> },
+      { path: 'fr', element: <Navigate to="/fr/services/rent-gear" replace /> },
+    ],
+  },
   { path: 'stay', element: <StayPage /> },
   { path: 'build', element: <BuildPage /> },
   { path: 'blog', element: <BlogPage /> },
@@ -43,6 +52,28 @@ const SITE_ROUTES = [
   { path: 'services/trips-downwinds', element: <TripsDownwindsPage /> },
   { path: 'services/rent-gear', element: <RentGearPage /> },
   { path: 'services/surf-sup', element: <SurfSupPage /> },
+
+  { path: 'learn/kitesurf', element: <Navigate to="/services/kitesurf-lessons" replace /> },
+  { path: 'learn/wingfoil', element: <Navigate to="/services/wingfoil-lessons" replace /> },
+  { path: 'kitesurfing', element: <Navigate to="/services/kitesurf-lessons" replace /> },
+  { path: 'wingfoil', element: <Navigate to="/services/wingfoil-lessons" replace /> },
+  { path: 'sup', element: <Navigate to="/services/surf-sup" replace /> },
+  { path: 'equipment-rental', element: <Navigate to="/services/rent-gear" replace /> },
+  { path: 'solo-surf', element: <Navigate to="/trips/solo-surf" replace /> },
+  { path: 'hostel', element: <Navigate to="/stay" replace /> },
+  { path: 'kite-club-hotel', element: <Navigate to="/stay" replace /> },
+  { path: '4-stars-hotel', element: <Navigate to="/stay" replace /> },
+  { path: 'aprende/kitesurf/esp', element: <Navigate to="/esp/services/kitesurf-lessons" replace /> },
+  { path: 'aprende/wingfoil/esp', element: <Navigate to="/esp/services/wingfoil-lessons" replace /> },
+  { path: 'kitesurfing/esp', element: <Navigate to="/esp/services/kitesurf-lessons" replace /> },
+  { path: 'wingfoil/esp', element: <Navigate to="/esp/services/wingfoil-lessons" replace /> },
+  { path: 'sup/esp', element: <Navigate to="/esp/services/surf-sup" replace /> },
+  { path: 'solo-surf/esp', element: <Navigate to="/esp/trips/solo-surf" replace /> },
+  { path: 'acommodation/hostal/esp', element: <Navigate to="/esp/stay" replace /> },
+  { path: 'acommodation/hotel-kite/esp', element: <Navigate to="/esp/stay" replace /> },
+  { path: 'acommodation/4-estrellas/esp', element: <Navigate to="/esp/stay" replace /> },
+  { path: 'faq/esp', element: <Navigate to="/esp/faq" replace /> },
+  { path: 'blog/esp', element: <Navigate to="/esp/blog" replace /> },
 ]
 
 export const router = createBrowserRouter([

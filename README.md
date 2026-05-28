@@ -41,3 +41,10 @@ npm run start
 ```bash
 npm run lint
 ```
+
+## Deployments
+
+- `main` is the production branch.
+- Feature branches must stay as Vercel preview deployments only.
+- Do not merge incomplete work into `main`; use PRs to promote changes.
+- If you need internal testing with a stable URL, use a separate `staging` branch or preview deployment, not the production domain.

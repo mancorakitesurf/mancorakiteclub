@@ -118,13 +118,22 @@ client/
 - Patrón principal:
   - `pages/*` orquesta bloques.
   - `sections/home/*` implementa contenido/bloques de Home.
-  - `sections/common/*` contiene navegación/footer compartidos.
-  - `components/ui/*` contiene primitives (`Button`, `Card`, `Container`).
-- SEO por página:
-  - `client/src/components/SEO.jsx` + `client/src/lib/seo.js`.
-  - Cada página inyecta `title`, `description`, `canonicalPath`, `hreflang`.
+- `sections/common/*` contiene navegación/footer compartidos.
+- `components/ui/*` contiene primitives (`Button`, `Card`, `Container`).
 
-## 7) Assets y estáticos
+## 7) Deployment flow
+
+- Production must come only from `main`.
+- Branches in progress must deploy as Vercel previews, not to the public domain.
+- Use pull requests to promote finished work into `main`.
+- If a stable pre-production URL is needed, use a separate `staging` branch or preview environment.
+
+## 8) SEO por página
+
+- `client/src/components/SEO.jsx` + `client/src/lib/seo.js`.
+- Cada página inyecta `title`, `description`, `canonicalPath`, `hreflang`.
+
+## 9) Assets y estáticos
 
 - Assets locales: `client/src/assets/**`.
 - Logo solicitado:
@@ -134,7 +143,7 @@ client/
 - Público estático:
   - `client/public/` (ej. `vite.svg`).
 
-## 8) Convenciones de código
+## 10) Convenciones de código
 
 - Extensiones activas reales: `.jsx` y `.js`.
 - Router y layout dentro de `src/app/`.

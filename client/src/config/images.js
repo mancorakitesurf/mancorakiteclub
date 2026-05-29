@@ -66,7 +66,6 @@ const imageRegistry = Object.freeze({
   "fotos clases/DSC05905.webp": new URL("../assets/fotos clases/DSC05905.webp", import.meta.url).href,
   "fotos clases/DSC05924.webp": new URL("../assets/fotos clases/DSC05924.webp", import.meta.url).href,
   "LOGOS KITE CLUB/95b03a84-2865-4eda-89ae-26b332f99bb5.webp": new URL("../assets/LOGOS KITE CLUB/95b03a84-2865-4eda-89ae-26b332f99bb5.webp", import.meta.url).href,
-  "HOSPEDAJE KITE HOUSE/main.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/main.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/cuartonazi.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/cuartonazi.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/habitacion.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/habitacion.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/image.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/image.webp", import.meta.url).href,
@@ -481,7 +480,6 @@ export const componentImages = Object.freeze({
     formDecorImg: image("fotos comunidad/DSC09085.webp"),
   }),
   "pages/StayPage.jsx": Object.freeze({
-    heroImg: image("HOSPEDAJE KITE HOUSE/main.webp"),
     img1: image("HOSPEDAJE KITE HOUSE/cuartonazi.webp"),
     img2: image("HOSPEDAJE KITE HOUSE/habitacion.webp"),
     img3: image("HOSPEDAJE KITE HOUSE/DSC09920.webp"),
@@ -492,7 +490,6 @@ export const componentImages = Object.freeze({
       image("HOSPEDAJE KITE HOUSE/DSC09732.webp"),
       image("HOSPEDAJE KITE HOUSE/DSC05185.webp"),
       image("HOSPEDAJE KITE HOUSE/DSC05137-HDR.webp"),
-      image("HOSPEDAJE KITE HOUSE/main.webp"),
       image("HOSPEDAJE KITE HOUSE/DSC05113-HDR.webp"),
       image("HOSPEDAJE KITE HOUSE/DSC05056.webp"),
       image("HOSPEDAJE KITE HOUSE/DSC04995.webp"),

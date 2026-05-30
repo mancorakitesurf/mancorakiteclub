@@ -41,97 +41,63 @@ function BuildPage() {
 
   const generarLinkWhatsApp = () => {
     const total = calcularPrecio(actividades, noches, extras, extrasQty, personas)
-    
+    const localeMap = { en: 'en-US', es: 'es-PE', fr: 'fr-FR' }
+    const locale = localeMap[currentLang] || 'es-PE'
+
     // Format check-in and check-out dates
     const checkInDate = fechaInicio ? new Date(fechaInicio + 'T12:00:00') : new Date()
     const checkOutDate = new Date(checkInDate)
     checkOutDate.setDate(checkInDate.getDate() + noches)
 
     const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }
-    const checkInFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkInDate)
-    const checkOutFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkOutDate)
+    const checkInFormatted = new Intl.DateTimeFormat(locale, dateOptions).format(checkInDate)
+    const checkOutFormatted = new Intl.DateTimeFormat(locale, dateOptions).format(checkOutDate)
 
-    const listActividades = Object.entries(actividades)
-      .map(([id, hrs]) => `* ${id}: ${hrs}h`)
-      .join('\n')
-    
-    const listExtras = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
-      .map((e) => `* ${t(e.labelKey)} (x${extrasQty[e.id] || 1})`)
-      .join('\n')
+    const currencyFormatted = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    }).format(total)
 
-    let mensaje = ''
+    const activitiesList = Object.entries(actividades).map(
+      ([id, hrs]) => `${id} (${hrs}${t('messages.build.hoursShort')})`,
+    )
+    const activitiesText = activitiesList.length > 0
+      ? activitiesList.join(', ')
+      : t('messages.build.noneActivities')
 
-    if (currentLang === 'fr') {
-      mensaje = `*MANCORA KITE CLUB*
-*Details du Package*
--------------------------------------
-* Client: ${datosUsuario.nombre || '-'}
-* Email: ${datosUsuario.email || '-'}
-* Personnes: ${personas}
+    const extrasList = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
+      .map((e) => `${t(e.labelKey)} x${extrasQty[e.id] || 1}`)
+    const extrasText = extrasList.length > 0
+      ? extrasList.join(', ')
+      : t('messages.build.noneExtras')
 
-* Sejour:
-- Arrivee (Check-in): ${checkInFormatted}
-- Depart (Check-out): ${checkOutFormatted}
-- Duree: ${noches} nuits
+    const stayText = noches > 0
+      ? `${noches} ${t('messages.build.nightsLabel')} (${checkInFormatted} - ${checkOutFormatted})`
+      : t('messages.build.noStay')
 
-* Activites:
-${listActividades || '  Aucune'}
+    const nameValue = datosUsuario.nombre?.trim() || t('messages.build.notProvided')
+    const emailValue = datosUsuario.email?.trim() || t('messages.build.notProvided')
+    const guestsLabel = personas === 1
+      ? t('messages.build.guestSingular')
+      : t('messages.build.guestPlural')
 
-* Extras:
-${listExtras || '  Aucun'}
+    const totalText = `${currencyFormatted} (${personas} ${guestsLabel})`
 
-=====================================
-* TOTAL ESTIME: $${total} USD
-=====================================
-_Bonjour! J'ai prepare mon package personnalise sur le site web et j'aimerais confirmer la disponibilite._`
-    } else if (currentLang === 'en') {
-      mensaje = `*MANCORA KITE CLUB*
-*Package Details*
--------------------------------------
-* Client: ${datosUsuario.nombre || '-'}
-* Email: ${datosUsuario.email || '-'}
-* Guests: ${personas}
+    const mensaje = `${t('messages.build.greeting')}
 
-* Stay:
-- Check-in: ${checkInFormatted}
-- Check-out: ${checkOutFormatted}
-- Duration: ${noches} nights
+${t('messages.build.sectionTrip')}
+• ${t('messages.build.labelActivities')} ${activitiesText}
+• ${t('messages.build.labelStay')} ${stayText}
+• ${t('messages.build.labelExtras')} ${extrasText}
 
-* Activities:
-${listActividades || '  None'}
+${t('messages.build.sectionContact')}
+• ${t('messages.build.labelName')} ${nameValue}
+• ${t('messages.build.labelEmail')} ${emailValue}
 
-* Extras:
-${listExtras || '  None'}
+${t('messages.build.sectionTotal')} ${totalText}
 
-=====================================
-* ESTIMATED TOTAL: $${total} USD
-=====================================
-_Hello! I have built my custom package on the website and would like to confirm availability._`
-    } else {
-      // Default to Spanish (es)
-      mensaje = `*MANCORA KITE CLUB*
-*Detalle de Paquete*
--------------------------------------
-* Cliente: ${datosUsuario.nombre || '-'}
-* Correo: ${datosUsuario.email || '-'}
-* Personas: ${personas}
-
-* Estadia:
-- Llegada (Check-in): ${checkInFormatted}
-- Salida (Check-out): ${checkOutFormatted}
-- Duracion: ${noches} noches
-
-* Actividades:
-${listActividades || '  Ninguna'}
-
-* Extras:
-${listExtras || '  Ninguno'}
-
-=====================================
-* TOTAL ESTIMADO: $${total} USD
-=====================================
-_Hola! He armado mi paquete personalizado en la web y me gustaria confirmar disponibilidad._`
-    }
+${t('messages.build.closing')}`
 
     return `https://wa.me/51996557689?text=${encodeURIComponent(mensaje)}`
   }

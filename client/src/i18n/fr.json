@@ -709,6 +709,33 @@
     "finalMessage": "Parfait ! Connectons-nous sur WhatsApp pour vous donner tous les détails et vous aider à réserver. Cliquez sur le bouton ! 🚀",
     "contactWhatsApp": "Contacter sur WhatsApp"
   },
+  "messages": {
+    "build": {
+      "greeting": "Bonjour ! Je prépare une expérience de kitesurf sur mesure à Máncora.",
+      "sectionTrip": "Mon Voyage",
+      "labelActivities": "Activités :",
+      "labelStay": "Hébergement :",
+      "labelExtras": "Extras :",
+      "sectionContact": "Contact",
+      "labelName": "Nom :",
+      "labelEmail": "Email :",
+      "sectionTotal": "Investissement Total :",
+      "closing": "J'ai hâte d'échanger sur les détails.",
+      "noneActivities": "Aucune activité sélectionnée",
+      "noneExtras": "Aucun extra sélectionné",
+      "noStay": "Aucun hébergement sélectionné",
+      "nightsLabel": "nuits",
+      "hoursShort": "h",
+      "notProvided": "Non renseigné",
+      "guestSingular": "personne",
+      "guestPlural": "personnes"
+    },
+    "contact": {
+      "greeting": "Bonjour équipe Máncora Kite Club, je m'appelle",
+      "introMessage": "Message :",
+      "closing": "Au plaisir d'échanger."
+    }
+  },
   "build": {
     "heroLabel": "Package Personnalisé",
     "heroTitle1": "Construisez",

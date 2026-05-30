@@ -82,7 +82,9 @@ function ContactPage() {
   const handleSendWhatsApp = (e) => {
     e.preventDefault()
     if (!formName.trim() || !formMessage.trim()) return
-    const texto = `Hola Kite Club!, te habla ${formName.trim()}, ${formMessage.trim()}`
+    const texto = `${t('messages.contact.greeting')} ${formName.trim()}.
+${t('messages.contact.introMessage')} ${formMessage.trim()}
+${t('messages.contact.closing')}`
     window.open(buildWhatsAppUrl(texto), '_blank', 'noopener,noreferrer')
   }
 

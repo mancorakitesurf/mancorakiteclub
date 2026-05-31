@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { WHATSAPP_NUMBER } from '../lib/whatsapp.js'
+import { arePackagesConflicting, getPackageById, getRentalPrice } from '../sections/build/buildData.js'
 
 // Step bounds for the trip builder
 const MIN_STEP = 1
@@ -19,7 +20,8 @@ const getTodayString = () => {
 
 const initialState = {
   paso: INITIAL_STEP,
-  actividades: {},
+  selectedPackages: [],
+  rentals: [],
   noches: 3,
   fechaInicio: getTodayString(),
   personas: 1,
@@ -34,23 +36,49 @@ const initialState = {
 export const useTripBuilderStore = create((set, get) => ({
   ...initialState,
 
-  toggleActividad: (id) =>
+  addPackage: (packageId, activityId) =>
     set((state) => {
-      const acts = { ...state.actividades }
-      if (id in acts) {
-        delete acts[id]
-      } else {
-        acts[id] = 3
+      if (state.selectedPackages.some((pkg) => pkg.packageId === packageId)) {
+        return state
       }
-      return { actividades: acts }
+      const pkg = getPackageById(packageId)
+      if (!pkg) return state
+      const nextPackages = state.selectedPackages.filter(
+        (existing) => !arePackagesConflicting(existing.packageId, packageId),
+      )
+      return {
+        selectedPackages: [
+          ...nextPackages,
+          { packageId, activityId: activityId || pkg.activityId },
+        ],
+      }
     }),
 
-  setActividadHoras: (id, horas) =>
+  removePackage: (packageId) =>
     set((state) => ({
-      actividades: {
-        ...state.actividades,
-        [id]: Math.max(0, Number(horas) || 0),
-      },
+      selectedPackages: state.selectedPackages.filter((pkg) => pkg.packageId !== packageId),
+    })),
+
+  setRentalDays: (rentalId, days) =>
+    set((state) => {
+      const normalizedDays = Number(days) || 0
+      if (normalizedDays <= 0) {
+        return { rentals: state.rentals.filter((rental) => rental.rentalId !== rentalId) }
+      }
+      const existing = state.rentals.find((rental) => rental.rentalId === rentalId)
+      if (existing) {
+        return {
+          rentals: state.rentals.map((rental) =>
+            rental.rentalId === rentalId ? { ...rental, days: normalizedDays } : rental,
+          ),
+        }
+      }
+      return { rentals: [...state.rentals, { rentalId, days: normalizedDays }] }
+    }),
+
+  removeRental: (rentalId) =>
+    set((state) => ({
+      rentals: state.rentals.filter((rental) => rental.rentalId !== rentalId),
     })),
 
   setNoches: (noches) => set({ noches }),
@@ -113,10 +141,27 @@ export const useTripBuilderStore = create((set, get) => ({
     set({ paso: Math.max(MIN_STEP, Math.min(MAX_STEP, paso)) }),
 
   generarLinkWhatsApp: () => {
-    const { actividades, noches, personas, extras, extrasQty, datosUsuario } = get()
+    const { selectedPackages, rentals, noches, personas, extras, extrasQty, datosUsuario } = get()
 
-    const actividadesDetalle = Object.entries(actividades)
-      .map(([id, hrs]) => `${id}: ${hrs}h`)
+    const formatLabel = (value) =>
+      value
+        .replace(/-/g, ' ')
+        .replace(/\b\w/g, (char) => char.toUpperCase())
+
+    const packagesDetalle = selectedPackages
+      .map((pkg) => {
+        const found = getPackageById(pkg.packageId)
+        if (!found) return pkg.packageId
+        return `${formatLabel(pkg.packageId)} (${found.duration}) - $${found.price}`
+      })
+      .join(', ')
+
+    const rentalsDetalle = rentals
+      .map((rental) => {
+        const price = getRentalPrice(rental.rentalId, rental.days)
+        const label = formatLabel(rental.rentalId)
+        return `${label} (${rental.days} dias) - $${price}`
+      })
       .join(', ')
 
     const extrasDetalle = extras
@@ -128,7 +173,8 @@ export const useTripBuilderStore = create((set, get) => ({
 
     const mensaje = `¡Hola Máncora Kite Club! 🏄
 Quiero armar mi paquete:
-🏋️ Actividades: ${actividadesDetalle || 'No seleccionada'}
+🏄 Paquetes: ${packagesDetalle || 'Sin paquetes'}
+🧰 Rentales: ${rentalsDetalle || 'Sin rental'}
 🌙 Noches: ${noches}
 👥 Personas: ${personas}
 ✨ Extras: ${extrasDetalle || 'Sin extras'}

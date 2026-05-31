@@ -1,16 +1,23 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
-import { calcularPrecio } from './buildData.js'
+import { ACTIVIDADES, calcularPrecio, getPackageById, getRentalById, getRentalPrice } from './buildData.js'
 import { useAnimatedNumber, StepHeading } from './BuildUI.jsx'
 
-export default function PasoResumen({ actividades, noches, personas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
+export default function PasoResumen({ selectedPackages, rentals, noches, personas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
   const { t } = useI18n()
-  const precioTotal = calcularPrecio(actividades, noches, extras, extrasQty, personas)
+  const precioTotal = calcularPrecio(selectedPackages, rentals, noches, extras, extrasQty, personas)
   const precioAnimado = useAnimatedNumber(precioTotal)
   const canSend = datosUsuario.nombre.trim() !== '' && datosUsuario.email.trim() !== ''
   const [shakeKey, setShakeKey] = useState(0)
-  const actEntries = Object.entries(actividades)
+  const packagesByActivity = ACTIVIDADES.map((activity) => {
+    const activityPackages = selectedPackages.filter((pkg) => pkg.activityId === activity.id)
+    if (!activityPackages.length) return null
+    return {
+      activity,
+      packages: activityPackages,
+    }
+  }).filter(Boolean)
 
   return (
     <div>
@@ -22,17 +29,42 @@ export default function PasoResumen({ actividades, noches, personas, extras, ext
             <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-white/40">{t('build.yourTrip')}</h3>
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
-                <span className="text-white/50">{t('build.activity')}</span>
+                <span className="text-white/50">{t('build.packagesLabel')}</span>
                 <span className="font-bold text-white">
-                  {actEntries.length ? actEntries.map(([id]) => id).join(', ') : '—'}
+                  {packagesByActivity.length ? packagesByActivity.map((item) => item.activity.label).join(', ') : '—'}
                 </span>
               </div>
-              {actEntries.map(([id, hrs]) => (
-                <div key={id} className="flex justify-between text-sm pl-4">
-                  <span className="text-white/40">{id}</span>
-                  <span className="font-bold text-white">{hrs} {t('build.hrs')}</span>
+              {packagesByActivity.map((item) => (
+                <div key={item.activity.id} className="space-y-2 pl-4">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-white/40">{item.activity.label}</span>
+                    <span className="text-xs text-white/30">{item.packages.length} {t('build.packagesSelected')}</span>
+                  </div>
+                  {item.packages.map((pkg) => {
+                    const info = getPackageById(pkg.packageId)
+                    return (
+                      <div key={pkg.packageId} className="flex justify-between text-sm pl-4">
+                        <span className="text-white/40">{info ? t(info.nameKey) : pkg.packageId}</span>
+                        <span className="font-bold text-white">${info?.price ?? 0}</span>
+                      </div>
+                    )
+                  })}
                 </div>
               ))}
+              <div className="flex justify-between text-sm">
+                <span className="text-white/50">{t('build.rentalsLabel')}</span>
+                <span className="font-bold text-white">{rentals.length || t('build.noneSelected')}</span>
+              </div>
+              {rentals.map((rental) => {
+                const info = getRentalById(rental.rentalId)
+                const price = getRentalPrice(rental.rentalId, rental.days)
+                return (
+                  <div key={rental.rentalId} className="flex justify-between text-sm pl-4">
+                    <span className="text-white/40">{info ? t(info.labelKey) : rental.rentalId}</span>
+                    <span className="font-bold text-white">{rental.days} {t('build.days')} · ${price}</span>
+                  </div>
+                )
+              })}
               <div className="flex justify-between text-sm">
                 <span className="text-white/50">{t('build.nights')}</span>
                 <span className="font-bold text-white">{noches} {t('build.nights')}</span>

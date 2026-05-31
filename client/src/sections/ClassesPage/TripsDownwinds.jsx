@@ -1,7 +1,9 @@
 import { motion } from "framer-motion"
 import { useI18n } from "../../app/providers/i18nContext"
+import { componentImages } from "../../config/images.js"
 
 const TRIP_KEYS = ["dayTrips", "downwinds"]
+const { downwindHero } = componentImages["sections/ClassesPage/TripsDownwinds.jsx"]
 
 function TripsDownwinds() {
   const { t } = useI18n()
@@ -9,7 +11,7 @@ function TripsDownwinds() {
   return (
     <section className="relative overflow-hidden bg-[#0A0F14] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       {/* Background Image / Overlay placeholder */}
-      <div className="absolute inset-0 opacity-20 bg-center bg-cover" style={{ backgroundImage: "url('/images/downwind-hero.jpg')" }}></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${downwindHero})` }} />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F14] via-[#0A0F14]/80 to-transparent" />
 
       <motion.div

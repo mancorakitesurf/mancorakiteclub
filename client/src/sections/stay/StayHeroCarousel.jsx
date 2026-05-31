@@ -13,14 +13,19 @@ function StayHeroCarousel() {
     desktop: horizontal,
     mobile: vertical,
   }
+  const slideCount = Math.max(carouselImages.desktop.length, carouselImages.mobile.length)
+  const slides = Array.from({ length: slideCount }, (_, index) => ({
+    desktop: carouselImages.desktop[index % carouselImages.desktop.length],
+    mobile: carouselImages.mobile[index % carouselImages.mobile.length],
+  }))
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselImages.desktop.length)
+    setCurrentSlide((prev) => (prev + 1) % slideCount)
     setIsAutoPlay(false)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselImages.desktop.length) % carouselImages.desktop.length)
+    setCurrentSlide((prev) => (prev - 1 + slideCount) % slideCount)
     setIsAutoPlay(false)
   }
 
@@ -29,75 +34,48 @@ function StayHeroCarousel() {
     if (!isAutoPlay) return
 
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.desktop.length)
+      setCurrentSlide((prev) => (prev + 1) % slideCount)
     }, 9000)
 
     return () => clearInterval(timer)
-  }, [isAutoPlay, carouselImages.desktop.length])
+  }, [isAutoPlay, slideCount])
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Desktop images */}
-      <div className="hidden md:flex h-full w-full">
-        {carouselImages.desktop.map((image, index) => (
-          <motion.div
-            key={`desktop-${index}`}
-            className="absolute inset-0 h-full w-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: currentSlide === index ? 1 : 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
+      {slides.map((slide, index) => (
+        <motion.div
+          key={`stay-hero-${index}`}
+          className="absolute inset-0 h-full w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: currentSlide === index ? 1 : 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+        >
+          <motion.picture
+            className="block h-full w-full"
+            animate={{
+              scale: currentSlide === index ? [1, 1.05] : 1,
+            }}
+            transition={{
+              duration: 9,
+              ease: "linear",
+              repeat: currentSlide === index ? Infinity : 0,
+            }}
           >
-            <motion.div
-              className="h-full w-full"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-              animate={{
-                scale: currentSlide === index ? [1, 1.05] : 1,
-              }}
-              transition={{
-                duration: 9,
-                ease: "linear",
-                repeat: currentSlide === index ? Infinity : 0,
-              }}
+            <source media="(min-width: 768px)" srcSet={slide.desktop} />
+            <img
+              src={slide.mobile}
+              alt=""
+              width="960"
+              height="1707"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={index === 0 ? "high" : "auto"}
+              className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/35" />
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Mobile images */}
-      <div className="flex md:hidden h-full w-full">
-        {carouselImages.mobile.map((image, index) => (
-          <motion.div
-            key={`mobile-${index}`}
-            className="absolute inset-0 h-full w-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: currentSlide === index ? 1 : 0 }}
-            transition={{ duration: 1.2, ease: "easeInOut" }}
-          >
-            <motion.div
-              className="h-full w-full"
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-              animate={{
-                scale: currentSlide === index ? [1, 1.05] : 1,
-              }}
-              transition={{
-                duration: 9,
-                ease: "linear",
-                repeat: currentSlide === index ? Infinity : 0,
-              }}
-            />
-            <div className="absolute inset-0 bg-black/35" />
-          </motion.div>
-        ))}
-      </div>
+          </motion.picture>
+          <div className="absolute inset-0 bg-black/35" />
+        </motion.div>
+      ))}
 
       {/* Navigation arrows */}
       <div className="absolute bottom-8 right-8 z-50 flex gap-3">
@@ -125,7 +103,7 @@ function StayHeroCarousel() {
 
       {/* Slide indicators */}
       <div className="absolute bottom-8 left-1/2 z-50 flex -translate-x-1/2 gap-2">
-        {carouselImages.desktop.map((_, index) => (
+        {slides.map((_, index) => (
           <motion.button
             key={index}
             onClick={() => {

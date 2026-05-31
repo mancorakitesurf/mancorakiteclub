@@ -1,15 +1,25 @@
 {
   "nav": {
-    "home": "Accueil",
-    "trips": "Voyages",
-    "stay": "Séjournez avec nous",
-    "build": "Créez votre voyage",
-    "classes": "Services",
-    "blog": "Blogs",
-    "contact": "Contact",
-    "reviews": "Avis",
-    "faq": "FAQ",
-    "bookNow": "Réserver maintenant"
+  "home": "Accueil",
+  "trips": "Voyages",
+  "stay": "Séjournez avec nous",
+  "build": "Créez votre voyage",
+  "classes": "Services",
+  "blog": "Blogs",
+  "contact": "Contact",
+  "reviews": "Avis",
+  "faq": "FAQ",
+  "bookNow": "Réserver maintenant"
+  },
+  "services": {
+    "title": "Services",
+    "kitesurf": "Cours de Kitesurf",
+    "wingfoil": "Cours de Wingfoil",
+    "rentals": "Locations",
+    "trips": "Trips & Downwinds",
+    "surf": "Cours de Surf",
+    "sup": "Cours de SUP / Paddle",
+    "waveCoaching": "Coaching Wave Riding"
   },
   "hero": {
     "title": "Mancora Kite Club",

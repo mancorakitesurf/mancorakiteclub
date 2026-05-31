@@ -106,9 +106,9 @@ export function MobilePriceBar({ paso, precioTotal }) {
 export function StepIndicator({ pasoActual }) {
   const { t } = useI18n()
   const pasos = [
-    { n: 1, label: t('build.stepActivity') },
-    { n: 2, label: t('build.stepNights') },
-    { n: 3, label: 'Rental' },
+    { n: 1, label: t('build.stepPackages') },
+    { n: 2, label: t('build.stepRental') },
+    { n: 3, label: t('build.stepStay') },
     { n: 4, label: t('build.stepExtras') },
     { n: 5, label: t('build.stepSummary') },
   ]

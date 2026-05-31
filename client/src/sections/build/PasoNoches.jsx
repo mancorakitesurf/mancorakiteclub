@@ -178,7 +178,7 @@ export default function PasoNoches({ noches, setNoches, personas, setPersonas })
 
   return (
     <div>
-      <StepHeading index={2} title={t('build.howManyNights')} subtitle={t('build.howManyNightsSub')} />
+      <StepHeading index={3} title={t('build.howManyNights')} subtitle={t('build.howManyNightsSub')} />
 
       {/* Guest selector */}
       <div className="mb-6 flex flex-wrap items-center gap-4">

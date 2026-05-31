@@ -758,6 +758,8 @@
       "greeting": "¡Hola! Estoy armando una experiencia de kitesurf a mi medida en Máncora.",
       "sectionTrip": "Mi Viaje",
       "labelActivities": "Actividades:",
+      "labelPackages": "Paquetes:",
+      "labelRentals": "Rentales:",
       "labelStay": "Hospedaje:",
       "labelExtras": "Extras:",
       "sectionContact": "Contacto",
@@ -766,9 +768,12 @@
       "sectionTotal": "Inversión Total:",
       "closing": "¡Me encantaría coordinar los detalles!",
       "noneActivities": "Sin actividades seleccionadas",
+      "nonePackages": "Sin paquetes seleccionados",
+      "noneRentals": "Sin rentales seleccionados",
       "noneExtras": "Sin extras seleccionados",
       "noStay": "Sin hospedaje seleccionado",
       "nightsLabel": "noches",
+      "daysLabel": "dias",
       "hoursShort": "h",
       "notProvided": "No indicado",
       "guestSingular": "persona",
@@ -786,6 +791,9 @@
     "heroTitle2": "Viaje",
     "heroSubtitle": "Crea tu experiencia perfecta de kitesurf. Combina hospedaje, clases, equipo y actividades en el paquete ideal.",
     "stepActivity": "Actividad",
+    "stepPackages": "Paquetes",
+    "stepRental": "Rental",
+    "stepStay": "Hospedaje",
     "stepNights": "Noches",
     "stepExtras": "Extras",
     "stepSummary": "Resumen",
@@ -794,6 +802,105 @@
     "reset": "Comenzar de nuevo",
     "chooseActivity": "Elige Tu Actividad",
     "chooseActivitySub": "Selecciona una o combina múltiples experiencias",
+    "choosePackages": "Selecciona tus Paquetes",
+    "choosePackagesSub": "Elige uno o combina varios paquetes por actividad",
+    "addPackage": "Agregar",
+    "removePackage": "Quitar",
+    "packagesSelected": "paquetes",
+    "packagesLabel": "Paquetes",
+    "rentalsLabel": "Rentales",
+    "rentalTitle": "Rental de Equipo",
+    "rentalSub": "Selecciona la duracion de tu rental",
+    "selectRentalDays": "Selecciona dias",
+    "removeRental": "Quitar rental",
+    "packageIncludes": "Incluye",
+    "maxParticipants": "Max participantes:",
+    "level": {
+      "beginner": "Principiante",
+      "intermediate": "Intermedio",
+      "advanced": "Avanzado"
+    },
+    "packages": {
+      "includes": {
+        "gear": "Equipo incluido",
+        "board": "Tabla incluida",
+        "instructor": "Instructor certificado",
+        "safety": "Seguridad y radio",
+        "progression": "Progresion guiada"
+      },
+      "kitesurf": {
+        "discovery": {
+          "name": "Kite Discovery",
+          "description": "Pruébalo y siente el primer despegue con coaching seguro."
+        },
+        "beginner": {
+          "name": "Curso para Principiantes",
+          "description": "Base técnica y control de cometa para iniciar con confianza."
+        },
+        "intensive": {
+          "name": "Curso Intensivo",
+          "description": "Más horas para progresar rápido y consolidar maniobras."
+        },
+        "full": {
+          "name": "Curso Completo",
+          "description": "Programa completo para dominar el kite en Máncora."
+        }
+      },
+      "wingfoil": {
+        "discovery": {
+          "name": "Wing Discovery",
+          "description": "Primeros despegues con wing y foil en un entorno seguro."
+        },
+        "beginner": {
+          "name": "Curso para Principiantes",
+          "description": "Aprende control, balance y navegación básica con wingfoil."
+        },
+        "intensive": {
+          "name": "Curso Intensivo",
+          "description": "Impulsa tu progreso con más horas y feedback técnico."
+        },
+        "full": {
+          "name": "Curso Completo",
+          "description": "Plan completo para volar estable y ganar confianza."
+        }
+      },
+      "surf": {
+        "intro": {
+          "name": "Surf Intro",
+          "description": "Tu primer take off con técnica básica y seguridad."
+        },
+        "progress": {
+          "name": "Surf Progresion",
+          "description": "Refuerza remada, postura y lectura de olas."
+        },
+        "intensive": {
+          "name": "Surf Intensivo",
+          "description": "Más agua para mejorar giros y control."
+        },
+        "full": {
+          "name": "Surf Completo",
+          "description": "Programa largo para riders que buscan progreso real."
+        }
+      },
+      "sup": {
+        "intro": {
+          "name": "SUP Intro",
+          "description": "Equilibrio, postura y las primeras rutas en tabla."
+        },
+        "explore": {
+          "name": "SUP Explorer",
+          "description": "Explora la bahia con tecnica y control."
+        },
+        "cruise": {
+          "name": "SUP Cruise",
+          "description": "Mas tiempo en el agua para dominar la remada."
+        },
+        "full": {
+          "name": "SUP Completo",
+          "description": "Plan extendido para perfeccionar equilibrio y ritmo."
+        }
+      }
+    },
     "kitesurfTagline": "Domina la cometa y cabalga las olas",
     "wingfoilTagline": "Vuela sobre el agua con wing y foil",
     "surfTagline": "Diversión clásica en olas",

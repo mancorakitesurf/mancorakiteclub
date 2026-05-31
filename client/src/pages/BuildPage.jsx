@@ -5,10 +5,17 @@ import { useI18n } from '../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { componentImages } from '../config/images.js'
 
-import { calcularPrecio, EXTRAS_OPTIONS } from '../sections/build/buildData.js'
+import {
+  ACTIVIDADES,
+  EXTRAS_OPTIONS,
+  calcularPrecio,
+  getPackageById,
+  getRentalById,
+  getRentalPrice,
+} from '../sections/build/buildData.js'
 import { StepIndicator, FloatingPrice, MobilePriceBar, stepVariants, stepTransition } from '../sections/build/BuildUI.jsx'
 
-import PasoActividad from '../sections/build/PasoActividad.jsx'
+import PasoPackages from '../sections/build/PasoPackages.jsx'
 import PasoNoches from '../sections/build/PasoNoches.jsx'
 import PasoRental from '../sections/build/PasoRental.jsx'
 import PasoExtras from '../sections/build/PasoExtras.jsx'
@@ -19,7 +26,8 @@ const { buildHeroBg } = componentImages["pages/BuildPage.jsx"]
 function BuildPage() {
   const { t, currentLang } = useI18n()
   const {
-    actividades, toggleActividad, setActividadHoras,
+    selectedPackages,
+    rentals, setRentalDays, removeRental,
     noches, setNoches,
     personas, setPersonas,
     extras, toggleExtra,
@@ -40,7 +48,7 @@ function BuildPage() {
   }
 
   const generarLinkWhatsApp = () => {
-    const total = calcularPrecio(actividades, noches, extras, extrasQty, personas)
+    const total = calcularPrecio(selectedPackages, rentals, noches, extras, extrasQty, personas)
     const localeMap = { en: 'en-US', es: 'es-PE', fr: 'fr-FR' }
     const locale = localeMap[currentLang] || 'es-PE'
 
@@ -59,12 +67,29 @@ function BuildPage() {
       maximumFractionDigits: 0,
     }).format(total)
 
-    const activitiesList = Object.entries(actividades).map(
-      ([id, hrs]) => `${id} (${hrs}${t('messages.build.hoursShort')})`,
-    )
-    const activitiesText = activitiesList.length > 0
-      ? activitiesList.join(', ')
-      : t('messages.build.noneActivities')
+    const packagesByActivity = ACTIVIDADES.map((activity) => {
+      const activityPackages = selectedPackages.filter((pkg) => pkg.activityId === activity.id)
+      if (!activityPackages.length) return null
+      const lines = activityPackages.map((pkg) => {
+        const info = getPackageById(pkg.packageId)
+        if (!info) return `• ${pkg.packageId}`
+        return `• ${t(info.nameKey)} (${info.duration}) — $${info.price}`
+      })
+      return `${activity.label}:\n${lines.join('\n')}`
+    }).filter(Boolean)
+
+    const packagesText = packagesByActivity.length > 0
+      ? packagesByActivity.join('\n')
+      : t('messages.build.nonePackages')
+
+    const rentalsList = rentals.map((rental) => {
+      const info = getRentalById(rental.rentalId)
+      const price = getRentalPrice(rental.rentalId, rental.days)
+      return `• ${info ? t(info.labelKey) : rental.rentalId} (${rental.days} ${t('messages.build.daysLabel')}) — $${price}`
+    })
+    const rentalsText = rentalsList.length > 0
+      ? rentalsList.join('\n')
+      : t('messages.build.noneRentals')
 
     const extrasList = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
       .map((e) => `${t(e.labelKey)} x${extrasQty[e.id] || 1}`)
@@ -86,23 +111,24 @@ function BuildPage() {
 
     const mensaje = `${t('messages.build.greeting')}
 
-${t('messages.build.sectionTrip')}
-• ${t('messages.build.labelActivities')} ${activitiesText}
-• ${t('messages.build.labelStay')} ${stayText}
-• ${t('messages.build.labelExtras')} ${extrasText}
+  ${t('messages.build.sectionTrip')}
+  • ${t('messages.build.labelPackages')}\n${packagesText}
+  • ${t('messages.build.labelRentals')} ${rentalsText}
+  • ${t('messages.build.labelStay')} ${stayText}
+  • ${t('messages.build.labelExtras')} ${extrasText}
 
-${t('messages.build.sectionContact')}
-• ${t('messages.build.labelName')} ${nameValue}
-• ${t('messages.build.labelEmail')} ${emailValue}
+  ${t('messages.build.sectionContact')}
+  • ${t('messages.build.labelName')} ${nameValue}
+  • ${t('messages.build.labelEmail')} ${emailValue}
 
-${t('messages.build.sectionTotal')} ${totalText}
+  ${t('messages.build.sectionTotal')} ${totalText}
 
-${t('messages.build.closing')}`
+  ${t('messages.build.closing')}`
 
     return `https://wa.me/51996557689?text=${encodeURIComponent(mensaje)}`
   }
 
-  const precioTotal = calcularPrecio(actividades, noches, extras, extrasQty, personas)
+  const precioTotal = calcularPrecio(selectedPackages, rentals, noches, extras, extrasQty, personas)
 
   return (
     <div className="min-h-screen bg-[#0e1b17]">
@@ -174,16 +200,15 @@ ${t('messages.build.closing')}`
               exit="exit"
               transition={stepTransition}
             >
-              {paso === 1 && <PasoActividad actividades={actividades} toggleActividad={toggleActividad} setActividadHoras={setActividadHoras} />}
-              {paso === 2 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
-              {paso === 3 && (
+              {paso === 1 && <PasoPackages />}
+              {paso === 2 && (
                 <PasoRental
-                  extras={extras}
-                  extrasQty={extrasQty}
-                  toggleExtra={toggleExtra}
-                  setExtraQty={setExtraQty}
+                  rentals={rentals}
+                  setRentalDays={setRentalDays}
+                  removeRental={removeRental}
                 />
               )}
+              {paso === 3 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
               {paso === 4 && (
                 <PasoExtras
                   extras={extras}
@@ -194,7 +219,8 @@ ${t('messages.build.closing')}`
               )}
               {paso === 5 && (
                 <PasoResumen
-                  actividades={actividades}
+                  selectedPackages={selectedPackages}
+                  rentals={rentals}
                   noches={noches}
                   personas={personas}
                   extras={extras}

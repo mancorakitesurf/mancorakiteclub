@@ -7,6 +7,7 @@ import StayAmenities from '../sections/stay/StayAmenities.jsx'
 import StayGallery from '../sections/stay/StayGallery.jsx'
 import StayLocation from '../sections/stay/StayLocation.jsx'
 import StayCTA from '../sections/stay/StayCTA.jsx'
+import TrustBadges from '../sections/common/TrustBadges.jsx'
 
 function StayPage() {
   const { currentLang } = useI18n()
@@ -24,6 +25,7 @@ function StayPage() {
 
       <StayHeroCarousel />
       <StayAbout />
+      <TrustBadges variant="compact" />
       <StayAmenities />
       <StayGallery />
       <StayLocation />

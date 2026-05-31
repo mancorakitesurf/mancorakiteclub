@@ -208,6 +208,40 @@
       }
     }
   },
+  "trustBadges": {
+    "aria": "Badges de confiance",
+    "ikoLogoAlt": "Logo de certification IKO",
+    "label": "Confiance et sécurité",
+    "title": "Des garanties claires avant d'aller sur l'eau",
+    "subtitle": "Des bénéfices concrets que vous pouvez vérifier avant de réserver, sans promesses exagérées.",
+    "badges": {
+      "ikoCertified": {
+        "tag": "IKO",
+        "label": "École de kitesurf certifiée IKO",
+        "description": "Le coaching kitesurf est encadré par des instructeurs certifiés IKO."
+      },
+      "studentCertification": {
+        "label": "Certification disponible pour les élèves",
+        "description": "Les élèves en kite peuvent accéder à la certification IKO après la progression requise."
+      },
+      "premiumGear": {
+        "label": "Matériel premium inclus",
+        "description": "Les cours incluent le matériel nécessaire à la session; les locations sont détaillées par service."
+      },
+      "waterSupport": {
+        "label": "Assistance sur l'eau et radio",
+        "description": "Certaines sessions accompagnées utilisent une surveillance rapprochée et une communication radio quand cela s'applique."
+      },
+      "safeSpots": {
+        "label": "Spots choisis selon les conditions",
+        "description": "Le spot est adapté au niveau, au vent et à l'état de la mer avant de partir."
+      },
+      "verifiedReviews": {
+        "label": "Avis Google et TripAdvisor",
+        "description": "Les avis publics d'élèves et de voyageurs aident à valider l'expérience."
+      }
+    }
+  },
   "team": {
     "instructors": {
       "label": "L'équipe",

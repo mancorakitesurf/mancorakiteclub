@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'

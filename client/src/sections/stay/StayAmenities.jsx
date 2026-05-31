@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { FaBed, FaUtensils, FaWifi, FaSwimmer, FaWineGlass, FaDumbbell } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'
 
@@ -51,9 +51,6 @@ function StayAmenities() {
   const { t } = useI18n()
   const amenitiesRef = useRef(null)
   
-  // We can keep useInView if we want to trigger animations based on this ref
-  // useInView(amenitiesRef, { once: true, margin: "-100px" })
-
   const amenities = [
     {
       icon: <FaBed className="text-xl" />,

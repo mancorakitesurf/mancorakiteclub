@@ -1064,5 +1064,129 @@
         "date": "5 décembre 2023"
       }
     }
+  },
+  "faqPage": {
+    "sections": {
+      "beginners": {
+        "category": "Doutes des Débutants",
+        "q1": {
+          "q": "Puis-je apprendre le kitesurf si je n'ai jamais fait de sports nautiques ?",
+          "a": "Absolument ! Vous n'avez besoin d'aucune expérience préalable en sports nautiques. Nos instructeurs certifiés IKO vous apprendront tout depuis le début, en commençant par le contrôle de l'aile sur la plage avant d'entrer dans l'eau."
+        },
+        "q2": {
+          "q": "De combien d'heures ai-je besoin pour commencer ?",
+          "a": "La plupart des débutants ont besoin de 9 à 12 heures pour devenir indépendants. Nous recommandons nos cours de 3 jours (6 heures) ou 5 jours (10+ heures) pour acquérir de bonnes bases et commencer à glisser sur la planche."
+        },
+        "q3": {
+          "q": "Est-il dangereux d'apprendre le kitesurf ?",
+          "a": "Avec un équipement moderne et un encadrement professionnel, le kitesurf est très sûr. Nous utilisons les derniers équipements de sécurité, enseignons dans des conditions sûres et nos instructeurs sont toujours à vos côtés."
+        },
+        "q4": {
+          "q": "Que se passe-t-il si j'ai peur ou si je ne progresse pas vite ?",
+          "a": "Il est tout à fait normal de se sentir nerveux ! Nos instructeurs s'adaptent à votre rythme. Si vous avez besoin de plus de temps sur le contrôle de l'aile avant d'aller dans l'eau, nous irons étape par étape jusqu'à ce que vous soyez confiant."
+        },
+        "q5": {
+          "q": "Quelle est la différence entre le kitesurf et le wingfoil ?",
+          "a": "Le kitesurf utilise une grande aile attachée à un harnais pour vous tracter sur une planche. Le wingfoil utilise une aile tenue à la main (non attachée au corps) et une planche avec un hydrofoil qui vous soulève au-dessus de l'eau. Les deux sont incroyablement amusants, mais le kitesurf est généralement plus facile à apprendre au début."
+        },
+        "q6": {
+          "q": "Dois-je apporter mon propre équipement ?",
+          "a": "Non, vous n'avez rien besoin d'apporter. Tous nos cours incluent un équipement premium (aile, planche, harnais, gilet d'impact, casque et combinaison). Apportez juste un maillot de bain, de la crème solaire et de la bonne humeur !"
+        },
+        "q7": {
+          "q": "Quel cours recommandez-vous pour les débutants ?",
+          "a": "Nous recommandons les cours Beginner (3 jours) ou Full Progression (5 jours). Ceux-ci vous donnent suffisamment de temps pour apprendre le contrôle de l'aile, la nage tractée et les premiers départs sur la planche (water start)."
+        },
+        "q8": {
+          "q": "Puis-je prendre des cours en couple ?",
+          "a": "Oui ! Nos cours Semi-Privés sont parfaits pour les couples ou les amis. Vous partagerez un instructeur et une aile entre deux étudiants, en vous relayant et en apprenant des progrès de l'autre."
+        },
+        "q9": {
+          "q": "Y a-t-il un âge minimum ?",
+          "a": "Nous enseignons aux élèves à partir de 12 ans, à condition qu'ils pèsent au moins 40 kg. Pour les jeunes enfants, veuillez nous contacter pour évaluer leur cas spécifique."
+        },
+        "q10": {
+          "q": "Quelles sont les conditions de vent idéales ?",
+          "a": "Máncora bénéficie de vents thermiques constants et réguliers presque toute l'année, généralement entre 15 et 25 nœuds. Ce sont des conditions idéales pour apprendre en toute sécurité et progresser rapidement."
+        },
+        "q11": {
+          "q": "Que signifie semi-privé ?",
+          "a": "Semi-privé signifie qu'un instructeur enseigne à deux étudiants qui partagent un équipement. C'est un excellent moyen de se reposer entre les essais et d'apprendre en observant son partenaire. Les prix sont par personne."
+        },
+        "q12": {
+          "q": "Puis-je combiner les cours avec l'hébergement et la location ?",
+          "a": "Oui ! Vous pouvez utiliser notre Créateur de Voyage pour concevoir votre forfait idéal, combinant cours de kitesurf, location de matériel et séjour dans notre Bali Lodge en bord de mer. <a href='/build' class='text-primary underline hover:text-white'>Construisez votre voyage ici</a>."
+        }
+      },
+      "about": {
+        "category": "À Propos de l'Apprentissage du Kitesurf",
+        "q1": {
+          "q": "Le Kitesurf est-il dangereux ?",
+          "a": "Avec le bon équipement, des instructeurs certifiés et des protocoles de sécurité, le kitesurf est un sport très sûr. Chez Mancora Kite Club, nous accordons la priorité à la sécurité à chaque session."
+        },
+        "q2": {
+          "q": "Ai-je besoin d'une expérience préalable ?",
+          "a": "Non. Nos cours sont conçus pour les débutants absolus ainsi que pour la progression avancée."
+        },
+        "q3": {
+          "q": "Est-ce que Máncora est un bon endroit pour apprendre ?",
+          "a": "Oui. Máncora offre un vent constant, de vastes étendues d'eau et des conditions idéales pour progresser rapidement."
+        },
+        "q4": {
+          "q": "Combien de temps faut-il pour apprendre ?",
+          "a": "Le temps d'apprentissage varie selon les individus, mais la plupart des gens peuvent apprendre les bases en 3 à 5 jours."
+        },
+        "q5": {
+          "q": "Quelle est la meilleure période pour apprendre ?",
+          "a": "La meilleure période pour apprendre est pendant la saison des vents."
+        }
+      },
+      "equipment": {
+        "category": "Équipement",
+        "q1": {
+          "q": "L'équipement est-il inclus dans le cours ?",
+          "a": "Oui. Tout l'équipement professionnel est inclus : aile, harnais, planche, casque et gilet d'impact."
+        },
+        "q2": {
+          "q": "Dois-je apporter mon propre équipement ?",
+          "a": "Non. Tout l'équipement professionnel est inclus dans le cours."
+        },
+        "q3": {
+          "q": "Quelles marques utilisez-vous ?",
+          "a": "Nous travaillons avec des marques premium reconnues internationalement."
+        },
+        "q4": {
+          "q": "Fournissez-vous des combinaisons ?",
+          "a": "Oui. Nous fournissons des combinaisons pour tous nos étudiants."
+        },
+        "q5": {
+          "q": "Fournissez-vous l'équipement de sécurité ?",
+          "a": "Oui. Nous fournissons l'équipement de sécurité pour tous nos étudiants."
+        }
+      },
+      "bookings": {
+        "category": "Réservations et Paiements",
+        "q1": {
+          "q": "Comment puis-je réserver ?",
+          "a": "Vous pouvez réserver directement sur notre site web ou nous contacter via WhatsApp."
+        },
+        "q2": {
+          "q": "Dois-je payer un acompte ?",
+          "a": "Oui. Nous demandons un acompte pour confirmer votre réservation."
+        },
+        "q3": {
+          "q": "Quelle est votre politique d'annulation ?",
+          "a": "Vous pouvez annuler votre réservation jusqu'à 24 heures avant le début du cours."
+        },
+        "q4": {
+          "q": "Quelle est votre politique de remboursement ?",
+          "a": "Si vous annulez votre réservation jusqu'à 24 heures avant le début du cours, vous recevrez un remboursement complet."
+        },
+        "q5": {
+          "q": "Quels moyens de paiement acceptez-vous ?",
+          "a": "Nous acceptons les cartes, les virements bancaires et les paiements internationaux."
+        }
+      }
+    }
   }
 }

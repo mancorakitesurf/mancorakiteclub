@@ -1067,5 +1067,129 @@
         "date": "5 de diciembre de 2023"
       }
     }
+  },
+  "faqPage": {
+    "sections": {
+      "beginners": {
+        "category": "Dudas de Principiantes",
+        "q1": {
+          "q": "¿Puedo aprender kitesurf si nunca hice deportes de agua?",
+          "a": "¡Absolutamente! No necesitas experiencia previa en deportes acuáticos. Nuestros instructores certificados IKO te enseñarán todo desde cero, comenzando con el control de la cometa en la arena antes de entrar al agua."
+        },
+        "q2": {
+          "q": "¿Cuántas horas necesito para empezar?",
+          "a": "La mayoría de principiantes necesitan entre 9 y 12 horas para ser independientes. Recomendamos nuestros cursos de 3 días (6 horas) o 5 días (10+ horas) para construir una base sólida y empezar a navegar en la tabla."
+        },
+        "q3": {
+          "q": "¿Es peligroso aprender kitesurf?",
+          "a": "Con equipos modernos y enseñanza profesional, el kitesurf es muy seguro. Usamos equipos de seguridad de última generación, enseñamos en condiciones seguras y nuestros instructores siempre están a tu lado."
+        },
+        "q4": {
+          "q": "¿Qué pasa si tengo miedo o no avanzo rápido?",
+          "a": "¡Es completamente normal sentirse nervioso! Nuestros instructores se adaptan a tu ritmo. Si necesitas más tiempo en el control del kite antes de entrar al agua, iremos paso a paso hasta que te sientas seguro."
+        },
+        "q5": {
+          "q": "¿Cuál es la diferencia entre kitesurf y wingfoil?",
+          "a": "El kitesurf usa una cometa grande unida a un arnés que te arrastra sobre una tabla. El wingfoil usa un ala de mano (no atada al cuerpo) y una tabla con un hydrofoil que te eleva sobre el agua. Ambos son muy divertidos, pero el kitesurf suele ser más fácil de aprender al principio."
+        },
+        "q6": {
+          "q": "¿Necesito llevar equipo?",
+          "a": "No, no necesitas traer nada. Todas nuestras clases incluyen equipo premium (kite, tabla, arnés, chaleco de impacto, casco y traje de neopreno). ¡Solo trae ropa de baño, bloqueador solar y buenas vibras!"
+        },
+        "q7": {
+          "q": "¿Qué curso recomiendan para principiantes?",
+          "a": "Recomendamos los cursos Beginner (3 días) o Full Progression (5 días). Estos te dan el tiempo suficiente para aprender el control del kite, el body drag y los primeros arranques en la tabla (water start)."
+        },
+        "q8": {
+          "q": "¿Puedo tomar clases en pareja?",
+          "a": "¡Sí! Nuestras clases Semi-Privadas son perfectas para parejas o amigos. Compartirán un instructor y un kite entre dos estudiantes, turnándose y aprendiendo del progreso del otro."
+        },
+        "q9": {
+          "q": "¿Hay edad mínima?",
+          "a": "Enseñamos a estudiantes a partir de los 12 años, siempre que pesen al menos 40 kg. Para niños más pequeños, contáctanos para evaluar su caso específico."
+        },
+        "q10": {
+          "q": "¿Qué condiciones de viento son ideales?",
+          "a": "Máncora está bendecida con vientos térmicos constantes casi todo el año, típicamente entre 15 y 25 nudos. Estas son condiciones ideales para aprender de forma segura y progresar rápidamente."
+        },
+        "q11": {
+          "q": "¿Qué significa semi-private?",
+          "a": "Semi-privado significa que un instructor enseña a dos estudiantes que comparten un equipo. Es una excelente manera de descansar entre intentos y aprender observando a tu compañero. Los precios son por persona."
+        },
+        "q12": {
+          "q": "¿Puedo combinar clases con hospedaje y rentals?",
+          "a": "¡Sí! Puedes usar nuestro Armador de Viajes para crear tu paquete ideal, combinando clases de kitesurf, alquiler de equipos y estadía en nuestro Bali Lodge frente al mar. <a href='/build' class='text-primary underline hover:text-white'>Arma tu viaje aquí</a>."
+        }
+      },
+      "about": {
+        "category": "Sobre Aprender Kitesurf",
+        "q1": {
+          "q": "¿Es peligroso el kitesurf?",
+          "a": "Con el equipo adecuado, instructores certificados y protocolos de seguridad, el kitesurf es un deporte muy seguro. En Mancora Kite Club priorizamos la seguridad en cada sesión."
+        },
+        "q2": {
+          "q": "¿Necesito experiencia previa?",
+          "a": "No. Nuestros cursos están diseñados para principiantes absolutos y también para progresión avanzada."
+        },
+        "q3": {
+          "q": "¿Es Máncora un buen lugar para aprender?",
+          "a": "Sí. Máncora ofrece viento constante, aguas amplias y condiciones ideales para progresar rápidamente."
+        },
+        "q4": {
+          "q": "¿Cuánto tiempo toma aprender?",
+          "a": "El tiempo de aprendizaje varía según cada persona, pero la mayoría puede aprender lo básico en 3 a 5 días."
+        },
+        "q5": {
+          "q": "¿Cuál es la mejor época para aprender?",
+          "a": "La mejor época para aprender es durante la temporada de viento."
+        }
+      },
+      "equipment": {
+        "category": "Equipamiento",
+        "q1": {
+          "q": "¿El equipo está incluido en el curso?",
+          "a": "Sí. Todo el equipo profesional está incluido: kite, arnés, tabla, casco y chaleco de impacto."
+        },
+        "q2": {
+          "q": "¿Necesito traer mi propio equipo?",
+          "a": "No. Todo el equipo profesional está incluido en el curso."
+        },
+        "q3": {
+          "q": "¿Qué marcas utilizan?",
+          "a": "Trabajamos con marcas premium reconocidas internacionalmente."
+        },
+        "q4": {
+          "q": "¿Proveen trajes de neopreno?",
+          "a": "Sí. Proveemos trajes de neopreno para todos nuestros estudiantes."
+        },
+        "q5": {
+          "q": "¿Proveen equipo de seguridad?",
+          "a": "Sí. Proveemos equipo de seguridad para todos nuestros estudiantes."
+        }
+      },
+      "bookings": {
+        "category": "Reservas y Pagos",
+        "q1": {
+          "q": "¿Cómo puedo reservar?",
+          "a": "Puedes reservar directamente en nuestro sitio web o contactarnos vía WhatsApp."
+        },
+        "q2": {
+          "q": "¿Necesito pagar un depósito?",
+          "a": "Sí. Requerimos un depósito para confirmar tu reserva."
+        },
+        "q3": {
+          "q": "¿Cuál es la política de cancelación?",
+          "a": "Puedes cancelar tu reserva hasta 24 horas antes del inicio de la clase."
+        },
+        "q4": {
+          "q": "¿Cuál es la política de reembolsos?",
+          "a": "Si cancelas tu reserva hasta 24 horas antes del inicio de la clase, recibirás un reembolso completo."
+        },
+        "q5": {
+          "q": "¿Qué métodos de pago aceptan?",
+          "a": "Aceptamos tarjetas, transferencias bancarias y pagos internacionales."
+        }
+      }
+    }
   }
 }

@@ -1068,5 +1068,129 @@
         "date": "December 5, 2023"
       }
     }
+  },
+  "faqPage": {
+    "sections": {
+      "beginners": {
+        "category": "Beginners FAQ",
+        "q1": {
+          "q": "Can I learn kitesurfing if I've never done water sports?",
+          "a": "Absolutely! You don't need any prior water sports experience. Our IKO certified instructors will teach you everything from scratch, starting with kite control on the beach before entering the water."
+        },
+        "q2": {
+          "q": "How many hours do I need to start?",
+          "a": "Most beginners need about 9 to 12 hours to become independent. We recommend our 3-day (6 hours) or 5-day (10+ hours) beginner courses to build a solid foundation and start riding the board."
+        },
+        "q3": {
+          "q": "Is it dangerous to learn kitesurfing?",
+          "a": "With modern equipment and professional instruction, kitesurfing is very safe. We use the latest safety gear, teach in safe conditions, and our instructors are always by your side."
+        },
+        "q4": {
+          "q": "What happens if I am afraid or don't progress fast?",
+          "a": "It's completely normal to feel nervous! Our instructors adapt to your pace. If you need more time on kite control before entering the water, we will take it step by step until you feel confident."
+        },
+        "q5": {
+          "q": "What is the difference between kitesurf and wingfoil?",
+          "a": "Kitesurfing uses a large kite attached to a harness to pull you on a twin-tip or surfboard. Wingfoiling uses a handheld wing (not attached to your body) and a board with a hydrofoil that lifts you above the water. Both are incredibly fun, but kitesurfing is usually easier to learn initially."
+        },
+        "q6": {
+          "q": "Do I need to bring my own equipment?",
+          "a": "No, you don't need to bring anything. All our classes include premium equipment (kite, board, harness, impact vest, helmet, and wetsuit). Just bring swimwear, sunscreen, and a good vibe!"
+        },
+        "q7": {
+          "q": "What course do you recommend for beginners?",
+          "a": "We recommend the Beginner (3 days) or Full Progression (5 days) courses. These give you enough time to learn kite control, body dragging, and water starts on the board."
+        },
+        "q8": {
+          "q": "Can I take classes as a couple?",
+          "a": "Yes! Our Semi-Private classes are perfect for couples or friends. You will share one instructor and one kite between two students, taking turns and learning from each other's progress."
+        },
+        "q9": {
+          "q": "Is there a minimum age?",
+          "a": "We teach students from 12 years old, provided they weigh at least 40kg (88 lbs). For younger children, please contact us to evaluate their specific case."
+        },
+        "q10": {
+          "q": "What wind conditions are ideal?",
+          "a": "Máncora is blessed with consistent, smooth thermal winds almost all year round, typically between 15 to 25 knots. These are ideal conditions for learning safely and progressing quickly."
+        },
+        "q11": {
+          "q": "What does semi-private mean?",
+          "a": "Semi-private means that one instructor teaches two students who share one set of equipment. It's a great way to rest between attempts and learn by watching your partner. Prices are per person."
+        },
+        "q12": {
+          "q": "Can I combine classes with accommodation and rentals?",
+          "a": "Yes! You can use our Custom Trip Builder to create your ideal package, mixing kitesurf classes, gear rental, and a stay at our beachfront Bali Lodge. <a href='/build' class='text-primary underline hover:text-white'>Build your trip here</a>."
+        }
+      },
+      "about": {
+        "category": "About Learning Kitesurfing",
+        "q1": {
+          "q": "Is Kitesurfing dangerous?",
+          "a": "With the right equipment, certified instructors, and safety protocols, kitesurfing is a very safe sport. At Mancora Kite Club, we prioritize safety in every session."
+        },
+        "q2": {
+          "q": "Do I need previous experience?",
+          "a": "No. Our courses are designed for absolute beginners and advanced progression."
+        },
+        "q3": {
+          "q": "Is Máncora a good place to learn?",
+          "a": "Yes. Máncora offers constant wind, wide waters, and ideal conditions to progress quickly."
+        },
+        "q4": {
+          "q": "How long does it take to learn?",
+          "a": "The time it takes to learn varies depending on the individual, but most people can learn the basics in 3-5 days."
+        },
+        "q5": {
+          "q": "What is the best time to learn?",
+          "a": "The best time to learn is during the windy season."
+        }
+      },
+      "equipment": {
+        "category": "Equipment",
+        "q1": {
+          "q": "Is equipment included in the course?",
+          "a": "Yes. All professional equipment is included: kite, harness, board, helmet, and impact vest."
+        },
+        "q2": {
+          "q": "Do I need to bring my own equipment?",
+          "a": "No. All professional equipment is included: kite, harness, board, helmet, and impact vest."
+        },
+        "q3": {
+          "q": "What brands do you use?",
+          "a": "We work with premium internationally recognized brands."
+        },
+        "q4": {
+          "q": "Do you provide wetsuits?",
+          "a": "Yes. We provide wetsuits for all our students."
+        },
+        "q5": {
+          "q": "Do you provide safety equipment?",
+          "a": "Yes. We provide safety equipment for all our students."
+        }
+      },
+      "bookings": {
+        "category": "Bookings and Payments",
+        "q1": {
+          "q": "How can I book?",
+          "a": "You can book directly on our website or contact us via WhatsApp."
+        },
+        "q2": {
+          "q": "Do I need to pay a deposit?",
+          "a": "Yes. We require a deposit to confirm your booking."
+        },
+        "q3": {
+          "q": "What is your cancellation policy?",
+          "a": "You can cancel your booking up to 24 hours before the lesson starts."
+        },
+        "q4": {
+          "q": "What is your refund policy?",
+          "a": "If you cancel your booking up to 24 hours before the lesson starts, you will receive a full refund."
+        },
+        "q5": {
+          "q": "What payment methods do you accept?",
+          "a": "We accept cards, bank transfers, and international payments."
+        }
+      }
+    }
   }
 }

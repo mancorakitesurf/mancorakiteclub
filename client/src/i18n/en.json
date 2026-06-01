@@ -1157,5 +1157,129 @@
         "date": "December 5, 2023"
       }
     }
+  },
+  "serviceCopy": {
+    "kitesurfLessons": {
+      "heroTagline": "Feel the pull. Learn the ocean. Ride your first wave.",
+      "introTitle": "Kitesurf Lessons",
+      "introText": "One-on-one coaching in shallow, warm water with IKO-certified instructors who have read this coastline for 15 years. From your first kite launch to riding waves, every session is built around your pace.",
+      "audience": "For first-timers, progressing riders, and anyone ready to feel the wind.",
+      "benefits": [
+        "Safe, shallow launch zone with consistent side-shore wind year-round.",
+        "Private or semi-private format — you set the rhythm, we guide the progression.",
+        "Professional photos and optional drone footage so you relive every session."
+      ],
+      "cta": "Book Your Lesson",
+      "builderNote": "Want to combine lessons with accommodation and extras? Build your custom trip.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "From $120 USD per person. Semi-private (1 instructor, 2 students) from $90 USD per person.",
+      "semiPrivateExplainer": "Semi-private means one dedicated instructor shared between two students — same quality coaching, lighter price."
+    },
+    "wingfoilLessons": {
+      "heroTagline": "Lift off the water. No lines, no limits — just wind and flight.",
+      "introTitle": "Wingfoil Lessons",
+      "introText": "Wingfoil is the fastest-growing water sport on the planet, and Máncora's steady Pacific wind makes it the ideal classroom. Our coaches break every maneuver into clear steps so you progress session by session.",
+      "audience": "For curious beginners, kite riders branching out, and anyone drawn to the feeling of flight.",
+      "benefits": [
+        "Consistent side-off wind and flat-water zones perfect for first flights.",
+        "Premium foil boards and wings updated each season for safe, stable learning.",
+        "Step-by-step video coaching so you see your progress and fix technique fast."
+      ],
+      "cta": "Book Your Lesson",
+      "builderNote": "Add accommodation and extras to shape a full wingfoil trip.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "From $120 USD per person. Semi-private (1 instructor, 2 students) from $90 USD per person.",
+      "semiPrivateExplainer": "Semi-private means one dedicated instructor shared between two students — same quality coaching, lighter price."
+    },
+    "surfSup": {
+      "heroTagline": "No wind? No problem. Máncora still delivers.",
+      "introTitle": "Surf & SUP",
+      "introText": "Clean, warm waves and calm morning bays — northern Peru is built for surfing and paddleboarding. Our coaches match the right break to your level so every session feels like progress.",
+      "audience": "For families, first-timers, and riders who want ocean time on calm days.",
+      "benefits": [
+        "Warm water year-round — no wetsuit stress, just board shorts and sunscreen.",
+        "Guided surf sessions at Máncora's best beginner and intermediate breaks.",
+        "SUP tours along the coastline with marine life sightings and sunset options."
+      ],
+      "cta": "Book a Session",
+      "builderNote": "Combine surf or SUP with kite lessons and accommodation in one trip.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "Surf lessons from $45 USD / 2 hours. SUP tours from $35 USD / 1.5 hours."
+    },
+    "tripsDownwinds": {
+      "heroTagline": "Leave Máncora behind. Chase the wind down the coast.",
+      "introTitle": "Trips & Downwinds",
+      "introText": "Guided expeditions along Peru's northern coastline — from single-day safaris to week-long coastal routes. We handle transport, spotting, safety, and drone coverage so you focus on riding.",
+      "audience": "For intermediate and advanced riders ready to explore beyond the home spot.",
+      "benefits": [
+        "4×4 support vehicles and boat safety on every downwind route.",
+        "Access to remote point breaks and secret spots most riders never see.",
+        "Professional photo and drone coverage included on multi-day trips."
+      ],
+      "cta": "Explore Trips",
+      "builderNote": "Add a trip to your stay and classes — build one itinerary, one price.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "Day trips from $50 USD. Multi-day coastal trips from $160 USD."
+    },
+    "rentGear": {
+      "heroTagline": "Premium gear, maintained daily. Just grab and ride.",
+      "introTitle": "Rent Gear",
+      "introText": "Top-brand kitesurf, wingfoil, surf, and SUP equipment checked and prepped every morning. Pick your setup, ride all day, and return it — no commitments, no storage hassle.",
+      "audience": "For traveling riders who want reliable gear without the baggage fees.",
+      "benefits": [
+        "Current-season kites, wings, foils, and boards from leading brands.",
+        "Daily safety checks — every bar, line, and leash inspected before you launch.",
+        "Flexible rental windows: hourly, daily, or weekly — scale to your trip."
+      ],
+      "cta": "See Rental Rates",
+      "builderNote": "Add gear rental to your trip alongside lessons and accommodation.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "Kitesurf gear from $30 USD/hr. Surfboards from $15 USD/day. Full rates on the pricing table."
+    },
+    "stayWithUs": {
+      "heroTagline": "Wake up 100 meters from the water. Sleep to the sound of waves.",
+      "introTitle": "Stay With Us",
+      "introText": "A calm beachfront base designed for riders, travelers, and slow coastal mornings. Private rooms, daily breakfast, pool recovery, and direct access to every kite and surf spot in Máncora.",
+      "audience": "For solo travelers, couples, and small groups who want comfort between sessions.",
+      "benefits": [
+        "Beachfront location — walk to the launch zone in under two minutes.",
+        "Daily breakfast, saltwater pool, and gear storage included in every stay.",
+        "Quiet rooms with AC and ocean views for proper rest between sessions."
+      ],
+      "cta": "Explore Accommodation",
+      "builderNote": "Pair your stay with lessons, rentals, and extras for the full experience.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "From $50 USD / night (solo) or $80 USD / night (double). Breakfast and gear storage included."
+    },
+    "waveRidingCoaching": {
+      "heroTagline": "You can ride. Now learn to read the wave.",
+      "introTitle": "Wave Riding Coaching",
+      "introText": "Advanced one-on-one sessions with local pros who know every break in northern Peru. We transport you to the best spot of the day and use video analysis to sharpen timing, positioning, and wave selection.",
+      "audience": "For intermediate to advanced riders who want to elevate their wave game.",
+      "benefits": [
+        "Transport to the best wave spot of the day based on live swell and wind data.",
+        "Frame-by-frame video review so you see exactly where to improve.",
+        "Personalized coaching from riders who have surfed this coast for over a decade."
+      ],
+      "cta": "Book Coaching",
+      "builderNote": "Add coaching sessions to your trip for structured progression all week.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "$80 USD per session. Includes transport to the day's best spot."
+    },
+    "extras": {
+      "heroTagline": "Shape the details. Make the trip yours.",
+      "introTitle": "Extras & Experiences",
+      "introText": "Add the finishing touches to your trip — from day excursions to other coastal spots, to massage recovery, airport transfers, and a professional photo-video pack of your sessions.",
+      "audience": "For anyone building a trip who wants more than lessons and a bed.",
+      "benefits": [
+        "Day trips to secret surf and kite spots along the northern coast.",
+        "Post-session massage and wellness options to recover between rides.",
+        "Airport transfers and professional photo-video packs for a seamless experience."
+      ],
+      "cta": "Add Extras",
+      "builderNote": "Extras are added in step 4 of the trip builder. Mix and match freely.",
+      "builderCta": "Build Your Trip",
+      "priceNote": "Day trips $55 USD. Massage $21 USD. Airport transfer $42 USD. Photo & video pack $40 USD."
+    }
   }
 }

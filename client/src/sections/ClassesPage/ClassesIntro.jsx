@@ -6,7 +6,7 @@ import { useI18n } from "../../app/providers/i18nContext.js"
 const { introHover } = componentImages["sections/ClassesPage/ClassesIntro.jsx"]
 function ClassesIntro() {
   const { t } = useI18n()
-  const title = t(CLASSES_INTRO.titleKey)
+  const title = t("serviceCopy.kitesurfLessons.introTitle")
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
@@ -25,7 +25,7 @@ function ClassesIntro() {
           </h2>
 
           <p className="text-center text-sm leading-relaxed text-slate-600 sm:text-base md:text-left">
-            {t(CLASSES_INTRO.textKey)}
+            {t("serviceCopy.kitesurfLessons.introText")}
           </p>
         </motion.div>
 

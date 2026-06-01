@@ -1154,5 +1154,129 @@
         "date": "5 décembre 2023"
       }
     }
+  },
+  "serviceCopy": {
+    "kitesurfLessons": {
+      "heroTagline": "Ressentez la traction. Apprenez l'océan. Surfez votre première vague.",
+      "introTitle": "Cours de Kitesurf",
+      "introText": "Coaching individuel dans des eaux chaudes et peu profondes avec des instructeurs certifiés IKO qui lisent cette côte depuis 15 ans. Du premier lancement au surf de vagues, chaque session est construite autour de votre rythme.",
+      "audience": "Pour les débutants, les riders en progression et tous ceux qui veulent sentir le vent.",
+      "benefits": [
+        "Zone de lancement sûre, peu profonde, avec un vent side-shore constant toute l'année.",
+        "Format privé ou semi-privé — vous fixez le rythme, nous guidons la progression.",
+        "Photos professionnelles et prises de drone optionnelles pour revivre chaque session."
+      ],
+      "cta": "Réserver un cours",
+      "builderNote": "Envie de combiner cours, hébergement et extras ? Créez votre voyage sur mesure.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "À partir de 120 $ USD par personne. Semi-privé (1 instructeur, 2 élèves) à partir de 90 $ USD par personne.",
+      "semiPrivateExplainer": "Semi-privé signifie un instructeur dédié partagé entre deux élèves — même qualité de coaching, prix plus léger."
+    },
+    "wingfoilLessons": {
+      "heroTagline": "Décollez de l'eau. Ni lignes, ni limites — juste le vent et le vol.",
+      "introTitle": "Cours de Wingfoil",
+      "introText": "Le wingfoil est le sport nautique qui connaît la croissance la plus rapide au monde, et le vent constant du Pacifique à Máncora en fait la salle de classe idéale. Nos coachs décomposent chaque manœuvre en étapes claires pour progresser session après session.",
+      "audience": "Pour les curieux, les kiteurs qui veulent essayer autre chose, et tous ceux attirés par la sensation de vol.",
+      "benefits": [
+        "Vent side-off constant et zones d'eau plate parfaites pour les premiers vols.",
+        "Planches de foil et wings premium, renouvelées chaque saison pour un apprentissage sûr et stable.",
+        "Coaching vidéo étape par étape pour visualiser vos progrès et corriger votre technique rapidement."
+      ],
+      "cta": "Réserver un cours",
+      "builderNote": "Ajoutez hébergement et extras pour construire un séjour wingfoil complet.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "À partir de 120 $ USD par personne. Semi-privé (1 instructeur, 2 élèves) à partir de 90 $ USD par personne.",
+      "semiPrivateExplainer": "Semi-privé signifie un instructeur dédié partagé entre deux élèves — même qualité de coaching, prix plus léger."
+    },
+    "surfSup": {
+      "heroTagline": "Pas de vent ? Pas de problème. Máncora assure toujours.",
+      "introTitle": "Surf & SUP",
+      "introText": "Des vagues propres et chaudes, des baies calmes le matin — le nord du Pérou est fait pour le surf et le paddleboard. Nos coachs choisissent le spot adapté à votre niveau pour que chaque session soit un progrès.",
+      "audience": "Pour les familles, les débutants et les riders qui veulent du temps en mer les jours calmes.",
+      "benefits": [
+        "Eau chaude toute l'année — pas de stress du combiné, juste un boardshort et de la crème solaire.",
+        "Sessions de surf guidées sur les meilleurs spots de Máncora pour débutants et intermédiaires.",
+        "Tours de SUP le long du littoral avec observation de la faune marine et options coucher de soleil."
+      ],
+      "cta": "Réserver une session",
+      "builderNote": "Combinez surf ou SUP avec des cours de kite et un hébergement en un seul voyage.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Surf à partir de 45 $ USD / 2 heures. SUP à partir de 35 $ USD / 1,5 heure."
+    },
+    "tripsDownwinds": {
+      "heroTagline": "Quittez Máncora. Suivez le vent le long de la côte.",
+      "introTitle": "Trips & Downwinds",
+      "introText": "Expéditions guidées le long de la côte nord du Pérou — des safaris d'une journée aux itinéraires côtiers d'une semaine. Nous gérons le transport, le repérage, la sécurité et la couverture drone pour que vous vous concentriez sur la navigation.",
+      "audience": "Pour les riders intermédiaires et avancés prêts à explorer au-delà du spot habituel.",
+      "benefits": [
+        "Véhicules 4×4 d'assistance et sécurité en bateau sur chaque itinéraire de downwind.",
+        "Accès à des point breaks isolés et des spots secrets que la plupart ne connaîtront jamais.",
+        "Couverture photo et drone professionnelle incluse dans les trips de plusieurs jours."
+      ],
+      "cta": "Explorer les trips",
+      "builderNote": "Ajoutez un trip à votre séjour et vos cours — un seul itinéraire, un seul prix.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Day trips à partir de 50 $ USD. Trips côtiers multi-jours à partir de 160 $ USD."
+    },
+    "rentGear": {
+      "heroTagline": "Équipement premium, vérifié chaque jour. Prenez et naviguez.",
+      "introTitle": "Location d'équipement",
+      "introText": "Équipement de kitesurf, wingfoil, surf et SUP de grandes marques, vérifié et préparé chaque matin. Choisissez votre setup, utilisez-le toute la journée et rendez-le — sans engagement, sans tracas.",
+      "audience": "Pour les riders voyageurs qui veulent du matériel fiable sans frais de bagages.",
+      "benefits": [
+        "Kites, wings, foils et planches de la saison en cours, de marques leaders.",
+        "Contrôles de sécurité quotidiens — chaque barre, ligne et leash inspectés avant le lancement.",
+        "Fenêtres de location flexibles : à l'heure, à la journée ou à la semaine — adaptez à votre voyage."
+      ],
+      "cta": "Voir les tarifs de location",
+      "builderNote": "Ajoutez la location de matériel à votre voyage avec cours et hébergement.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Équipement kitesurf à partir de 30 $ USD/h. Planches de surf à partir de 15 $ USD/jour. Tarifs complets dans le tableau."
+    },
+    "stayWithUs": {
+      "heroTagline": "Réveillez-vous à 100 mètres de l'eau. Endormez-vous au son des vagues.",
+      "introTitle": "Hébergement",
+      "introText": "Une base en bord de mer conçue pour les riders, les voyageurs et les matins côtiers sans hâte. Chambres privées, petit-déjeuner quotidien, récupération à la piscine et accès direct à chaque spot de kite et de surf à Máncora.",
+      "audience": "Pour les voyageurs solo, les couples et les petits groupes qui cherchent le confort entre les sessions.",
+      "benefits": [
+        "Emplacement en bord de mer — marchez jusqu'à la zone de lancement en moins de deux minutes.",
+        "Petit-déjeuner quotidien, piscine d'eau salée et stockage d'équipement inclus dans chaque séjour.",
+        "Chambres calmes avec climatisation et vue sur l'océan pour un vrai repos entre les sessions."
+      ],
+      "cta": "Explorer l'hébergement",
+      "builderNote": "Associez votre séjour à des cours, locations et extras pour l'expérience complète.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "À partir de 50 $ USD / nuit (solo) ou 80 $ USD / nuit (double). Petit-déjeuner et stockage d'équipement inclus."
+    },
+    "waveRidingCoaching": {
+      "heroTagline": "Vous savez naviguer. Apprenez maintenant à lire la vague.",
+      "introTitle": "Coaching Wave Riding",
+      "introText": "Sessions avancées en individuel avec des pros locaux qui connaissent chaque break du nord du Pérou. Nous vous transportons au meilleur spot du jour et utilisons l'analyse vidéo pour affiner le timing, le positionnement et le choix des vagues.",
+      "audience": "Pour les riders intermédiaires et avancés qui veulent élever leur niveau en vagues.",
+      "benefits": [
+        "Transport vers le meilleur spot de vagues du jour basé sur les données en direct de houle et de vent.",
+        "Revue vidéo image par image pour voir exactement où vous améliorer.",
+        "Coaching personnalisé par des riders qui surfent cette côte depuis plus d'une décennie."
+      ],
+      "cta": "Réserver un coaching",
+      "builderNote": "Ajoutez des sessions de coaching à votre voyage pour une progression structurée toute la semaine.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "80 $ USD par session. Transport vers le meilleur spot du jour inclus."
+    },
+    "extras": {
+      "heroTagline": "Peaufinez les détails. Faites le voyage à votre image.",
+      "introTitle": "Extras & Expériences",
+      "introText": "Ajoutez les touches finales à votre voyage — des excursions d'une journée vers d'autres spots côtiers, des massages de récupération, des transferts aéroport et un pack photo-vidéo professionnel de vos sessions.",
+      "audience": "Pour tous ceux qui construisent un voyage et veulent plus que des cours et un lit.",
+      "benefits": [
+        "Day trips vers des spots secrets de surf et de kite le long de la côte nord.",
+        "Massage et options bien-être post-session pour récupérer entre les navigations.",
+        "Transferts aéroport et packs photo-vidéo professionnels pour une expérience sans friction."
+      ],
+      "cta": "Ajouter des extras",
+      "builderNote": "Les extras sont ajoutés à l'étape 4 du constructeur de voyage. Mixez librement.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Day trips 55 $ USD. Massage 21 $ USD. Transfert aéroport 42 $ USD. Pack photo et vidéo 40 $ USD."
+    }
   }
 }

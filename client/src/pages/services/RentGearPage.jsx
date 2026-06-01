@@ -1,10 +1,33 @@
+import SEO from '../../components/SEO.jsx'
+import SchemaOrg from '../../components/SchemaOrg.jsx'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { localizePath } from '../../lib/routes.js'
-import { Navigate } from 'react-router-dom'
+
+import RentGear from '../../sections/ClassesPage/RentGear.jsx'
+
 function RentGearPage() {
   const { currentLang } = useI18n()
 
-  return <Navigate to={localizePath('/services', currentLang)} replace />
+  return (
+    <>
+      <SEO
+        titleKey="seo.rentGearTitle"
+        descKey="seo.rentGearDesc"
+        titleFallback="Kitesurf & Wingfoil Gear Rental in Máncora | Mancora Kite Club"
+        descFallback="Rent premium kitesurf, wingfoil, surf, and SUP equipment in Máncora, Peru. Top-brand gear maintained daily. Flexible hourly, daily, and weekly rates."
+        canonicalPath={localizePath('/services/rent-gear', currentLang)}
+        hreflang={{
+          en: '/services/rent-gear',
+          es: '/esp/services/rent-gear',
+          fr: '/fr/services/rent-gear',
+          default: '/services/rent-gear',
+        }}
+      />
+      <SchemaOrg type="Course" serviceKey="rentGear" />
+
+      <RentGear />
+    </>
+  )
 }
 
 export default RentGearPage

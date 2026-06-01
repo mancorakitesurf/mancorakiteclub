@@ -30,16 +30,16 @@ function WingfoilIntro() {
           viewport={{ once: true }}
           className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          {t("classes.wingfoil.intro.title")}
+          {t("serviceCopy.wingfoilLessons.introTitle")}
         </motion.h2>
         <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base md:text-lg md:text-left">
-          {t("classes.wingfoil.intro.text")}
+          {t("serviceCopy.wingfoilLessons.introText")}
         </p>
         <Link
           to="/build"
           className="mt-10 inline-flex min-h-12 w-full items-center justify-center rounded-full border border-cyan-400 px-6 py-3 text-cyan-400 transition hover:bg-cyan-400 hover:text-black sm:w-auto sm:px-8"
         >
-          {t("classes.wingfoil.intro.cta")}
+          {t("serviceCopy.wingfoilLessons.cta")}
         </Link>
       </div>
     </section>

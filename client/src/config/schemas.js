@@ -336,7 +336,7 @@ export function getBlogPostingSchema(lang = 'en', post) {
  * @param {string} lang - 'en', 'es', 'fr'
  * @param {Array<{name: string, path: string}>} items - List of names and paths relative to the domain (e.g. [{ name: 'Home', path: '/' }])
  */
-export function getBreadcrumbListSchema(lang = 'en', items = []) {
+export function getBreadcrumbListSchema(_lang = 'en', items = []) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',

@@ -1,7 +1,7 @@
 import { brandImages } from '../../config/images.js'
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { Link, useLocation } from 'react-router-dom'
+import { FaBars, FaChevronDown, FaTimes } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { buildWhatsAppUrl, defaultInquiryMessage } from '../../lib/whatsapp.js'
@@ -12,7 +12,48 @@ const clubLogo = brandImages.logoComplete
 
 const BASE_NAV_ITEMS = [
   { to: '/home', label: 'Home' },
-  { to: '/services', label: 'Services' },
+  {
+    to: '/services',
+    label: 'Services',
+    labelKey: 'nav.services',
+      submenu: [
+    {
+      labelKey: 'services.kitesurf',
+      fallbackLabel: 'Kitesurf Lessons',
+      path: '/services/kitesurf-lessons',
+    },
+    {
+      labelKey: 'services.wingfoil',
+      fallbackLabel: 'Wingfoil Lessons',
+      path: '/services/wingfoil-lessons',
+    },
+    {
+      labelKey: 'services.rentals',
+      fallbackLabel: 'Rentals',
+      path: '/services/rent-gear',
+    },
+    {
+      labelKey: 'services.trips',
+      fallbackLabel: 'Trips & Downwinds',
+      path: '/services/trips-downwinds',
+    },
+    {
+      labelKey: 'services.surf',
+      fallbackLabel: 'Surf Lessons',
+      path: '/services/surf-sup',
+    },
+    {
+      labelKey: 'services.sup',
+      fallbackLabel: 'SUP / Paddle Lessons',
+      path: '/services/surf-sup',
+    },
+    {
+      labelKey: 'services.waveCoaching',
+      fallbackLabel: 'Wave Riding Coaching',
+      path: '/services',
+    },
+  ],
+  },
   { to: '/stay', label: 'Stay With Us' },
   { to: '/build', label: 'Build Your Trip' },
   { to: '/reviews', label: 'Reviews' },
@@ -23,22 +64,37 @@ const BASE_NAV_ITEMS = [
 const MotionLink = motion.create(Link)
 
 function Header() {
+  const location = useLocation()
   const { isMobileMenuOpen, setIsMobileMenuOpen } = useUIStore()
 
   const [isLangOpen, setIsLangOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [activePath, setActivePath] = useState(
-    typeof window !== 'undefined' ? window.location.pathname : '/'
-  )
 
   const dropdownRef = useRef(null)
+  const servicesDropdownRef = useRef(null)
   const headerRef = useRef(null)
 
   const { changeLanguage, currentLang, t } = useI18n()
+  const activePath = location.pathname
+
+  const safeT = (key, fallback) => {
+    const value = t(key)
+    return value && value !== key ? value : fallback
+  }
 
   const NAV_ITEMS = BASE_NAV_ITEMS.map((item) => ({
     ...item,
     to: localizePath(item.to, currentLang),
+    label: item.labelKey ? safeT(item.labelKey, item.label) : item.label,
+    submenu: item.submenu
+      ? item.submenu.map((submenuItem) => ({
+          ...submenuItem,
+          to: localizePath(submenuItem.path, currentLang),
+          label: safeT(submenuItem.labelKey, submenuItem.fallbackLabel),
+        }))
+      : undefined,
   }))
 
   const homePath = localizePath('/home', currentLang)
@@ -68,6 +124,8 @@ function Header() {
       if (e.key === 'Escape') {
         setIsMobileMenuOpen(false)
         setIsLangOpen(false)
+        setIsServicesOpen(false)
+        setIsMobileServicesOpen(false)
       }
     }
 
@@ -81,6 +139,12 @@ function Header() {
     const handlePointerDown = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsLangOpen(false)
+      }
+      if (
+        servicesDropdownRef.current &&
+        !servicesDropdownRef.current.contains(event.target)
+      ) {
+        setIsServicesOpen(false)
       }
     }
 
@@ -104,8 +168,8 @@ function Header() {
   const currentLanguage = languages.find((l) => l.code === currentLang)
 
   const currentLanguageLabel = currentLanguage
-    ? t(currentLanguage.labelKey)
-    : t('header.language')
+    ? safeT(currentLanguage.labelKey, currentLanguage.code.toUpperCase())
+    : safeT('header.language', 'Language')
 
   const navTextClass = scrolled
     ? 'text-slate-700 dark:text-white/80'
@@ -115,9 +179,10 @@ function Header() {
     ? 'border-slate-200 bg-white/90 text-slate-900 shadow-sm hover:border-primary hover:bg-primary/10 dark:border-white/10 dark:bg-background-dark/80 dark:text-white'
     : 'border-white/20 bg-white/5 text-white hover:border-primary hover:bg-primary/10'
 
-  const handleNavClick = (path) => {
-    setActivePath(path)
+  const handleNavClick = () => {
     setIsMobileMenuOpen(false)
+    setIsServicesOpen(false)
+    setIsMobileServicesOpen(false)
   }
 
   // Animaciones Framer Motion
@@ -177,23 +242,86 @@ function Header() {
 
           {/* Nav desktop */}
           <nav className="hidden items-center gap-5 lg:flex xl:gap-8">
-            {NAV_ITEMS.map((item) => (
-              <MotionLink
-                key={item.to}
-                className={`group relative text-sm font-medium transition-colors ${navTextClass}`}
-                to={item.to}
-                onClick={() => handleNavClick(item.to)}
-                whileHover={{ y: -2 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-              >
-                <span className="relative z-10">{item.label}</span>
-                <motion.span
-                  className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary"
-                  whileHover={{ width: '100%' }}
-                  transition={{ duration: 0.3 }}
-                />
-              </MotionLink>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              if (item.submenu?.length) {
+                return (
+                  <div
+                    key={item.to}
+                    ref={servicesDropdownRef}
+                    className="relative"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <motion.button
+                      type="button"
+                      aria-haspopup="menu"
+                      aria-expanded={isServicesOpen}
+                      aria-controls="desktop-services-menu"
+                      className={`group relative inline-flex items-center gap-2 text-sm font-medium transition-colors ${navTextClass}`}
+                      onClick={() => setIsServicesOpen(true)}
+                      onFocus={() => setIsServicesOpen(true)}
+                      whileHover={{ y: -2 }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                    >
+                      <span className="relative z-10">{item.label}</span>
+                      <motion.span
+                        animate={{ rotate: isServicesOpen ? 180 : 0 }}
+                        className="relative z-10 text-[10px] text-primary"
+                      >
+                        <FaChevronDown />
+                      </motion.span>
+                      <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-hover:w-full" />
+                    </motion.button>
+
+                    <AnimatePresence>
+                      {isServicesOpen && (
+                        <motion.div
+                          id="desktop-services-menu"
+                          role="menu"
+                          initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.98 }}
+                          transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                          className="absolute left-0 top-full z-50 w-72 origin-top-left pt-4"
+                        >
+                          <div className="overflow-hidden rounded-2xl border border-white/10 bg-background-dark/95 p-2 shadow-2xl shadow-black/30 backdrop-blur-xl">
+                            {item.submenu.map((service) => (
+                              <Link
+                                key={`${service.path}-${service.labelKey}`}
+                                to={service.to}
+                                role="menuitem"
+                                onClick={handleNavClick}
+                                className="group flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-white/85 transition-all duration-200 hover:bg-primary/10 hover:text-white focus:bg-primary/10 focus:text-white focus:outline-none"
+                              >
+                                <span>{service.label}</span>
+                                <span className="h-1.5 w-1.5 rounded-full bg-transparent transition-colors group-hover:bg-primary group-focus:bg-primary" />
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )
+              }
+
+              return (
+                <MotionLink
+                  key={item.to}
+                  className={`group relative text-sm font-medium transition-colors ${navTextClass}`}
+                  to={item.to}
+                  onClick={handleNavClick}
+                  whileHover={{ y: -2 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  <motion.span
+                    className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary"
+                    whileHover={{ width: '100%' }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </MotionLink>
+              )})}
           </nav>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
@@ -231,6 +359,7 @@ function Header() {
                         onClick={() => {
                           changeLanguage(lang.code)
                           setIsLangOpen(false)
+                          setIsServicesOpen(false)
                         }}
                         className={`flex w-full items-center justify-between px-4 py-3 text-sm transition-all duration-200 first:rounded-t-2xl last:rounded-b-2xl ${
                           currentLang === lang.code
@@ -242,7 +371,7 @@ function Header() {
                           <span className="inline-flex min-w-8 items-center justify-center rounded-full border border-white/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em]">
                             {lang.code}
                           </span>
-                          <span>{t(lang.labelKey)}</span>
+                          <span>{safeT(lang.labelKey, lang.code.toUpperCase())}</span>
                         </span>
                       </button>
                     ))}
@@ -258,7 +387,14 @@ function Header() {
               type="button"
               className={`relative inline-flex h-11 w-11 items-center justify-center rounded-full border text-lg transition-all duration-300 lg:hidden ${controlClass}`}
               aria-label="Toggle menu"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => {
+                const nextIsOpen = !isMobileMenuOpen
+                setIsMobileMenuOpen(nextIsOpen)
+                setIsServicesOpen(false)
+                if (!nextIsOpen) {
+                  setIsMobileServicesOpen(false)
+                }
+              }}
             >
               <AnimatePresence mode="wait">
                 {isMobileMenuOpen ? (
@@ -329,13 +465,16 @@ function Header() {
               initial="closed"
               animate="open"
               exit="closed"
-              className="relative flex h-full flex-col"
+              className="relative flex h-full min-h-0 flex-col overflow-hidden"
             >
               {/* HEADER del menú: cerrar + logo */}
               <div className="flex items-center justify-between px-5 py-5">
                 <button
                   type="button"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    setIsMobileServicesOpen(false)
+                  }}
                   aria-label="Close menu"
                   className="text-3xl text-white/80 transition-all duration-300 hover:rotate-90 hover:text-primary"
                 >
@@ -344,7 +483,10 @@ function Header() {
 
                 <Link
                   to={homePath}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    setIsMobileServicesOpen(false)
+                  }}
                   className="flex items-center"
                 >
                   <img
@@ -356,9 +498,14 @@ function Header() {
               </div>
 
               {/* NAV centrado */}
-              <nav className="flex flex-1 flex-col items-center justify-center gap-1 px-6">
+              <nav className="flex min-h-0 flex-1 flex-col items-center justify-start gap-1 overflow-y-auto overflow-x-hidden px-6 py-3 pt-6">
                 {NAV_ITEMS.map((item) => {
-                  const isActive = activePath === item.to
+                  const isServicesActive =
+                    item.submenu?.length &&
+                    (activePath === item.to ||
+                      item.submenu.some((service) => activePath === service.to))
+
+                  const isActive = isServicesActive || activePath === item.to
 
                   return (
                     <motion.div
@@ -366,25 +513,87 @@ function Header() {
                       variants={itemVariants}
                       className="w-full text-center"
                     >
-                      <Link
-                        to={item.to}
-                        onClick={() => handleNavClick(item.to)}
-                        className={`group relative inline-block px-4 py-3 text-2xl font-semibold tracking-wide transition-all duration-500 sm:text-3xl ${
-                          isActive
-                            ? 'text-white'
-                            : 'text-white/85 hover:text-primary'
-                        }`}
-                      >
-                        <span className="relative">
-                          {item.label}
-                          <motion.span
-                            className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
-                            initial={{ width: isActive ? '100%' : '0%' }}
-                            whileHover={{ width: '100%' }}
-                            transition={{ duration: 0.3 }}
-                          />
-                        </span>
-                      </Link>
+                      {item.submenu?.length ? (
+                        <>
+                          <button
+                            type="button"
+                            aria-expanded={isMobileServicesOpen}
+                            aria-controls="mobile-services-menu"
+                            onClick={() => setIsMobileServicesOpen((prev) => !prev)}
+                            className={`group relative inline-flex items-center gap-3 px-4 py-3 text-2xl font-semibold tracking-wide transition-all duration-500 sm:text-3xl ${
+                              isActive
+                                ? 'text-white'
+                                : 'text-white/85 hover:text-primary'
+                            }`}
+                          >
+                            <span className="relative">
+                              {item.label}
+                              <motion.span
+                                className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
+                                initial={{ width: isActive ? '100%' : '0%' }}
+                                whileHover={{ width: '100%' }}
+                                transition={{ duration: 0.3 }}
+                              />
+                            </span>
+                            <motion.span
+                              animate={{ rotate: isMobileServicesOpen ? 180 : 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="text-base text-primary"
+                            >
+                              <FaChevronDown />
+                            </motion.span>
+                          </button>
+
+                          <AnimatePresence initial={false}>
+                            {isMobileServicesOpen && (
+                              <motion.div
+                                id="mobile-services-menu"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{
+                                  duration: 0.25,
+                                  ease: [0.16, 1, 0.3, 1],
+                                }}
+                                className="mx-auto w-full max-w-sm overflow-hidden px-2"
+                              >
+                                <div className="mx-auto mt-2 w-full max-w-xs rounded-2xl border border-white/10 bg-white/[0.04] p-2 backdrop-blur-md">
+                                  {item.submenu.map((service) => (
+                                    <Link
+                                      key={`${service.path}-${service.labelKey}`}
+                                      to={service.to}
+                                      onClick={handleNavClick}
+                                      className="block rounded-xl px-4 py-2.5 text-sm font-medium tracking-wide text-white/75 transition-all duration-200 hover:bg-primary/10 hover:text-white"
+                                    >
+                                      {service.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </>
+                      ) : (
+                        <Link
+                          to={item.to}
+                          onClick={handleNavClick}
+                          className={`group relative inline-block px-4 py-3 text-2xl font-semibold tracking-wide transition-all duration-500 sm:text-3xl ${
+                            isActive
+                              ? 'text-white'
+                              : 'text-white/85 hover:text-primary'
+                          }`}
+                        >
+                          <span className="relative">
+                            {item.label}
+                            <motion.span
+                              className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
+                              initial={{ width: isActive ? '100%' : '0%' }}
+                              whileHover={{ width: '100%' }}
+                              transition={{ duration: 0.3 }}
+                            />
+                          </span>
+                        </Link>
+                      )}
                     </motion.div>
                   )
                 })}
@@ -400,12 +609,17 @@ function Header() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    setIsMobileServicesOpen(false)
+                  }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white/95 px-10 py-3.5 text-sm font-bold uppercase tracking-[0.25em] text-background-dark shadow-xl transition-all duration-500 hover:bg-primary hover:text-white hover:shadow-primary/30"
                 >
-                  <span className="relative z-10">{t('common.bookNow')}</span>
+                  <span className="relative z-10">
+                    {safeT('common.bookNow', 'Book Now')}
+                  </span>
                 </motion.a>
 
                 {/* Selector de idioma minimal */}
@@ -417,6 +631,8 @@ function Header() {
                       onClick={() => {
                         changeLanguage(lang.code)
                         setIsMobileMenuOpen(false)
+                        setIsMobileServicesOpen(false)
+                        setIsServicesOpen(false)
                       }}
                       className="text-base font-semibold uppercase tracking-[0.2em] text-white/60 transition-colors duration-300"
                     >

@@ -12,6 +12,7 @@ import Team from '../sections/home/Team.jsx'
 import Trips from '../sections/home/Trips.jsx'
 import CommunityGallery from '../sections/home/CommunityGallery.jsx'
 import ContactPreview from '../sections/home/ContactPreview.jsx'
+import TrustBadges from '../sections/common/TrustBadges.jsx'
 
 function HomePage() {
   const { currentLang } = useI18n()
@@ -33,6 +34,7 @@ function HomePage() {
         breadcrumbs={[{ name: 'Home', path: '/' }]}
       />
       <Hero />
+      <TrustBadges variant="compact" />
       <CommunityGallery />
       <OurStory />
       <Team />

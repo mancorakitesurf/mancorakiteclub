@@ -140,7 +140,10 @@ function HeroMedia({ backgroundImage, backgroundAlt, imageClassName, slides, vid
         <img
           src={slide.mobileSrc || slide.desktopSrc}
           alt={slide.alt}
+          width="1920"
+          height="1080"
           loading={index === 0 ? 'eager' : 'lazy'}
+          decoding="async"
           fetchPriority={index === 0 ? 'high' : 'auto'}
           className={`${baseImageClassName} ${slide.imageClassName}`}
         />

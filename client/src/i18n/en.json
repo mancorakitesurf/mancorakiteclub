@@ -1,15 +1,26 @@
 {
-  "nav": {
-    "home": "Home",
-    "trips": "Trips",
-    "stay": "Stay With Us",
-    "build": "Build Your Trip",
-    "classes": "Services",
-    "blog": "Blogs",
-    "contact": "Contact",
-    "reviews": "Reviews",
-    "faq": "FAQ",
-    "bookNow": "Book Now"
+ "nav": {
+  "home": "Home",
+  "trips": "Trips",
+  "stay": "Stay With Us",
+  "build": "Build Your Trip",
+  "services": "Services",
+  "classes": "Services",
+  "blog": "Blogs",
+  "contact": "Contact",
+  "reviews": "Reviews",
+  "faq": "FAQ",
+  "bookNow": "Book Now"
+  },
+  "services": {
+    "title": "Services",
+    "kitesurf": "Kitesurf Lessons",
+    "wingfoil": "Wingfoil Lessons",
+    "rentals": "Rentals",
+    "trips": "Trips & Downwinds",
+    "surf": "Surf Lessons",
+    "sup": "SUP / Paddle Lessons",
+    "waveCoaching": "Wave Riding Coaching"
   },
   "hero": {
     "title": "Mancora Kite Club",
@@ -195,6 +206,40 @@
           "title": "Local guidance",
           "text": "Clear advice from the Mancora team."
         }
+      }
+    }
+  },
+  "trustBadges": {
+    "aria": "Trust badges",
+    "ikoLogoAlt": "IKO certification logo",
+    "label": "Trust and safety",
+    "title": "Clear credentials before you get on the water",
+    "subtitle": "Concrete benefits you can check before booking, without inflated promises.",
+    "badges": {
+      "ikoCertified": {
+        "tag": "IKO",
+        "label": "IKO certified kite school",
+        "description": "Kitesurf coaching is led by IKO-certified instructors."
+      },
+      "studentCertification": {
+        "label": "Student certification available",
+        "description": "Kite students can access IKO certification after completing the required progression."
+      },
+      "premiumGear": {
+        "label": "Premium gear included",
+        "description": "Lessons include the equipment needed for the session; rentals are listed by service."
+      },
+      "waterSupport": {
+        "label": "Water support and radio guidance",
+        "description": "Selected supported sessions use close water supervision and radio communication when applicable."
+      },
+      "safeSpots": {
+        "label": "Spots chosen for the conditions",
+        "description": "The spot is matched to level, wind and sea state before going out."
+      },
+      "verifiedReviews": {
+        "label": "Google and TripAdvisor reviews",
+        "description": "Public reviews from students and travelers help validate the experience."
       }
     }
   },

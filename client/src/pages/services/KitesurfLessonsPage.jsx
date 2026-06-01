@@ -10,6 +10,7 @@ import ClassesBenefits from '../../sections/ClassesPage/ClassesBenefits.jsx'
 import ClassesSteps from '../../sections/ClassesPage/ClassesSteps.jsx'
 import EquipmentKite from '../../sections/ClassesPage/equipment/EquipmentKite.jsx'
 import ClassesGallery from '../../sections/ClassesPage/ClassesGallery.jsx'
+import TrustBadges from '../../sections/common/TrustBadges.jsx'
 
 function KitesurfLessonsPage() {
   const { currentLang } = useI18n()
@@ -32,6 +33,7 @@ function KitesurfLessonsPage() {
       <SchemaOrg type="Course" serviceKey="kitesurfLessons" />
       
       <ClassesHero />
+      <TrustBadges variant="compact" showTitle />
       <ClassesIntro />
       <ClassesPricing />
       <ClassesBenefits />

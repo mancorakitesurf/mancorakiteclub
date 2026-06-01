@@ -1,0 +1,46 @@
+export const TRUST_BADGES = Object.freeze([
+  {
+    id: 'ikoCertified',
+    icon: 'shieldCheck',
+    tone: 'iko',
+    tagKey: 'trustBadges.badges.ikoCertified.tag',
+    labelKey: 'trustBadges.badges.ikoCertified.label',
+    descriptionKey: 'trustBadges.badges.ikoCertified.description',
+    priority: true,
+  },
+  {
+    id: 'studentCertification',
+    icon: 'badgeCheck',
+    tone: 'gold',
+    labelKey: 'trustBadges.badges.studentCertification.label',
+    descriptionKey: 'trustBadges.badges.studentCertification.description',
+  },
+  {
+    id: 'premiumGear',
+    icon: 'packageCheck',
+    tone: 'turquoise',
+    labelKey: 'trustBadges.badges.premiumGear.label',
+    descriptionKey: 'trustBadges.badges.premiumGear.description',
+  },
+  {
+    id: 'waterSupport',
+    icon: 'radio',
+    tone: 'cyan',
+    labelKey: 'trustBadges.badges.waterSupport.label',
+    descriptionKey: 'trustBadges.badges.waterSupport.description',
+  },
+  {
+    id: 'safeSpots',
+    icon: 'mapPinned',
+    tone: 'green',
+    labelKey: 'trustBadges.badges.safeSpots.label',
+    descriptionKey: 'trustBadges.badges.safeSpots.description',
+  },
+  {
+    id: 'verifiedReviews',
+    icon: 'star',
+    tone: 'amber',
+    labelKey: 'trustBadges.badges.verifiedReviews.label',
+    descriptionKey: 'trustBadges.badges.verifiedReviews.description',
+  },
+])

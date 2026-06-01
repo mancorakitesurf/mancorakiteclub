@@ -4,6 +4,7 @@ import { useI18n } from '../../app/providers/i18nContext.js'
 import { localizePath } from '../../lib/routes.js'
 
 import TripsDownwinds from '../../sections/ClassesPage/TripsDownwinds.jsx'
+import TrustBadges from '../../sections/common/TrustBadges.jsx'
 
 function TripsDownwindsPage() {
   const { currentLang } = useI18n()
@@ -26,6 +27,7 @@ function TripsDownwindsPage() {
       <SchemaOrg type="Course" serviceKey="tripsDownwinds" />
 
       <TripsDownwinds />
+      <TrustBadges variant="compact" />
     </>
   )
 }

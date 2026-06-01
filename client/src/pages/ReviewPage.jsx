@@ -5,6 +5,7 @@ import TestimoniosPlaceholder from '../sections/review/TestimoniosPlaceholder.js
 import VideoTestimonios from '../sections/review/VideoTestimonios.jsx'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { localizePath } from '../lib/routes.js'
+import TrustBadges from '../sections/common/TrustBadges.jsx'
 
 function ReviewPage() {
   const { currentLang, t } = useI18n()
@@ -19,6 +20,7 @@ function ReviewPage() {
       />
 
       <HeroReview />
+      <TrustBadges variant="compact" />
       <TestimoniosPlaceholder />
       <VideoTestimonios />
       <JoinTribeCTA />

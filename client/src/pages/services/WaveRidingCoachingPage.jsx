@@ -4,6 +4,7 @@ import { useI18n } from '../../app/providers/i18nContext.js'
 import { localizePath } from '../../lib/routes.js'
 
 import WaveRiding from '../../sections/ClassesPage/WaveRiding.jsx'
+import TrustBadges from '../../sections/common/TrustBadges.jsx'
 
 function WaveRidingCoachingPage() {
   const { currentLang } = useI18n()
@@ -26,6 +27,7 @@ function WaveRidingCoachingPage() {
       <SchemaOrg type="Course" serviceKey="waveRiding" />
 
       <WaveRiding />
+      <TrustBadges variant="compact" />
     </>
   )
 }

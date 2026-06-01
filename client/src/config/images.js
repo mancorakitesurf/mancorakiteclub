@@ -902,4 +902,13 @@ export const images = Object.freeze({
   component: componentImages,
 })
 
+export const getImage = (path) => {
+  const url = imageRegistry[path]
+  if (!url) {
+    console.warn(`[images.js] getImage: Asset not registered: ${path}`)
+    return path
+  }
+  return url
+}
+
 export default images

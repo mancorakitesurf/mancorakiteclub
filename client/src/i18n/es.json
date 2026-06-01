@@ -1191,5 +1191,122 @@
         }
       }
     }
+  },
+  "beginnersGuide": {
+    "hero": {
+      "eyebrow": "¿Tu Primera Vez Haciendo Kitesurf?",
+      "title": "Bienvenido al Viento",
+      "subtitle": "Descubre por qué Máncora es el lugar ideal para comenzar tu aventura en el kitesurf."
+    },
+    "intro": {
+      "title": "Más Fácil de lo que Parece",
+      "text": "Muchas personas piensan que el kitesurf requiere mucha fuerza en los brazos o experiencia previa en deportes extremos. ¿La verdad? Todo se trata de técnica y de entender el viento. Con nuestra metodología paso a paso y aguas seguras, cualquiera puede aprender a volar. El kitesurf es un deporte de bajo impacto donde tu arnés soporta toda la fuerza de la cometa, dejándote libre para dirigir con solo dos dedos.",
+      "imageAlt": "Estudiante principiante volando una cometa en la playa"
+    },
+    "whyMancora": {
+      "eyebrow": "El Lugar Perfecto",
+      "title": "¿Por Qué Aprender en Máncora?",
+      "subtitle": "Máncora ofrece condiciones únicas que lo convierten en uno de los mejores spots del mundo para aprender kitesurf.",
+      "reasons": {
+        "wind": {
+          "title": "Vientos Térmicos Constantes",
+          "desc": "15–25 nudos de viento cross-onshore estable casi todos los días del año. Sin rachas, sin sorpresas."
+        },
+        "water": {
+          "title": "Agua Plana y Baja",
+          "desc": "Agua hasta la cintura durante cientos de metros significa que siempre puedes ponerte de pie y sentirte seguro mientras aprendes."
+        },
+        "weather": {
+          "title": "Sol Todo el Año",
+          "desc": "Agua caliente (24°C), cielos despejados y sin necesidad de neopreno. Solo shorts y protector solar."
+        },
+        "certified": {
+          "title": "Escuela Certificada IKO",
+          "desc": "Nuestros instructores tienen certificaciones internacionales IKO. Tu seguridad y progreso son nuestra prioridad."
+        },
+        "community": {
+          "title": "Comunidad Kite Vibrante",
+          "desc": "Únete a una comunidad acogedora de riders de todo el mundo. Comparte sesiones, historias y atardeceres."
+        },
+        "stay": {
+          "title": "Quédate Justo en el Spot",
+          "desc": "Nuestro Bali Lodge está a pasos de la playa de kite. Despierta, desayuna y camina a tu clase."
+        }
+      }
+    },
+    "whatsIncluded": {
+      "eyebrow": "Todo lo que Necesitas",
+      "title": "¿Qué Incluye Tu Clase?",
+      "subtitle": "No necesitas traer nada. Nosotros proporcionamos todo el equipo premium y de seguridad.",
+      "items": {
+        "kite": "Cometas de entrenamiento y de última generación",
+        "board": "Tablas twin-tip para todos los tamaños y niveles",
+        "harness": "Arnés de cintura cómodo ajustado a tu cuerpo",
+        "helmet": "Casco de seguridad certificado CE",
+        "vest": "Chaleco de impacto para protección extra",
+        "wetsuit": "Rashguard / lycra (neopreno si es necesario)",
+        "radio": "Radio en casco para coaching en tiempo real",
+        "insurance": "Seguro completo durante la clase"
+      }
+    },
+    "learningPath": {
+      "title": "Tu Progresión Paso a Paso",
+      "subtitle": "Una forma estructurada, segura y divertida de aprender desde cero.",
+      "steps": {
+        "day1": {
+          "title": "Día 1: Control en la Playa",
+          "desc": "Aprende la teoría de la ventana de viento, los sistemas de seguridad y cómo controlar una cometa de entrenamiento en la arena antes de pasar a una cometa inflable real. Al final de la sesión, estarás volando con confianza en la arena."
+        },
+        "day2": {
+          "title": "Día 2: Body Dragging",
+          "desc": "¡Hora de mojarse! Aprenderás cómo usar la potencia de la cometa para arrastrarte por el agua sin la tabla. Esto es esencial para recuperar tu tabla y entender la verdadera fuerza del viento."
+        },
+        "day3": {
+          "title": "Día 3: El Water Start",
+          "desc": "La parte más emocionante. Combinarás el control de la cometa con la tabla e intentarás tus primeros arranques en el agua (water start). Nos enfocaremos en la posición del cuerpo, la alineación de la tabla y el manejo de potencia para lograr tus primeros metros navegando."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes para Principiantes",
+      "subtitle": "Todo lo que quieres saber antes de tu primera sesión.",
+      "items": {
+        "q1": {
+          "q": "¿Puedo aprender si nunca hice deportes acuáticos?",
+          "a": "¡Por supuesto! No se necesita experiencia previa. Enseñamos todo desde cero."
+        },
+        "q2": {
+          "q": "¿Cuántas horas necesito para empezar a navegar?",
+          "a": "La mayoría de principiantes necesitan 9–12 horas (3–5 días) para ser independientes en la tabla."
+        },
+        "q3": {
+          "q": "¿Es peligroso el kitesurf?",
+          "a": "Con equipo moderno e instrucción profesional, es muy seguro. Seguimos protocolos estrictos de seguridad."
+        },
+        "q4": {
+          "q": "¿Qué pasa si tengo miedo o no progreso rápido?",
+          "a": "¡Es totalmente normal! Nuestros instructores se adaptan a tu ritmo. No hay prisa, vamos paso a paso."
+        },
+        "q5": {
+          "q": "¿Necesito traer mi propio equipo?",
+          "a": "No. Todo el equipo premium está incluido en cada clase: cometa, tabla, arnés, casco y chaleco de impacto."
+        },
+        "q6": {
+          "q": "¿Hay edad mínima?",
+          "a": "Enseñamos a estudiantes desde los 12 años, con un peso mínimo de 40 kg."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "¿Listo para Volar?",
+      "title1": "Empieza Tu",
+      "title2": "Aventura Hoy",
+      "description": "Únete a nosotros en Máncora y vive la emoción del kitesurf con instructores certificados y equipo premium.",
+      "ctaButton": "Arma Tu Viaje"
+    },
+    "seo": {
+      "title": "Guía de Kitesurf para Principiantes en Máncora | Mancora Kite Club",
+      "description": "Todo lo que necesitas saber sobre cómo empezar a hacer kitesurf en Máncora. Aprende sobre la progresión, el equipo y por qué es más fácil de lo que parece."
+    }
   }
 }

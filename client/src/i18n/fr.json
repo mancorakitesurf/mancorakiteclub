@@ -1188,5 +1188,122 @@
         }
       }
     }
+  },
+  "beginnersGuide": {
+    "hero": {
+      "eyebrow": "Votre Première Fois en Kitesurf ?",
+      "title": "Bienvenue dans le Vent",
+      "subtitle": "Découvrez pourquoi Máncora est l'endroit idéal pour commencer votre aventure en kitesurf."
+    },
+    "intro": {
+      "title": "Plus Facile Qu'il N'y Paraît",
+      "text": "Beaucoup de gens pensent que le kitesurf nécessite une force extrême dans les bras ou une expérience préalable des sports extrêmes. La vérité ? Tout est question de technique et de compréhension du vent. Avec notre méthodologie étape par étape et des eaux sûres, tout le monde peut apprendre à voler. Le kitesurf est un sport à faible impact où votre harnais prend toute la puissance de l'aile, vous laissant libre de diriger avec seulement deux doigts.",
+      "imageAlt": "Étudiant débutant pilotant une aile sur la plage"
+    },
+    "whyMancora": {
+      "eyebrow": "L'Endroit Parfait",
+      "title": "Pourquoi Apprendre à Máncora ?",
+      "subtitle": "Máncora offre des conditions uniques qui en font l'un des meilleurs spots au monde pour apprendre le kitesurf.",
+      "reasons": {
+        "wind": {
+          "title": "Vents Thermiques Constants",
+          "desc": "15–25 nœuds de vent cross-onshore stable presque tous les jours de l'année. Pas de rafales, pas de surprises."
+        },
+        "water": {
+          "title": "Eau Plate et Peu Profonde",
+          "desc": "De l'eau jusqu'à la taille sur des centaines de mètres, vous pouvez toujours vous lever et vous sentir en sécurité."
+        },
+        "weather": {
+          "title": "Soleil Toute l'Année",
+          "desc": "Eau chaude (24°C), ciel bleu et pas besoin de combinaison. Juste un short et de la crème solaire."
+        },
+        "certified": {
+          "title": "École Certifiée IKO",
+          "desc": "Nos instructeurs détiennent des certifications IKO internationales. Votre sécurité et progression sont nos priorités."
+        },
+        "community": {
+          "title": "Communauté Kite Vibrante",
+          "desc": "Rejoignez une communauté accueillante de riders du monde entier. Partagez sessions, histoires et couchers de soleil."
+        },
+        "stay": {
+          "title": "Logez au Spot",
+          "desc": "Notre Bali Lodge est à quelques pas de la plage de kite. Réveillez-vous, petit-déjeunez et marchez jusqu'à votre cours."
+        }
+      }
+    },
+    "whatsIncluded": {
+      "eyebrow": "Tout Ce Dont Vous Avez Besoin",
+      "title": "Qu'est-ce Qui Est Inclus ?",
+      "subtitle": "Vous n'avez rien à apporter. Nous fournissons tout l'équipement premium et de sécurité.",
+      "items": {
+        "kite": "Ailes d'entraînement et de dernière génération",
+        "board": "Planches twin-tip pour toutes tailles et niveaux",
+        "harness": "Harnais de taille confortable ajusté à votre corps",
+        "helmet": "Casque de sécurité certifié CE",
+        "vest": "Gilet d'impact pour une protection supplémentaire",
+        "wetsuit": "Rashguard / lycra (combinaison si nécessaire)",
+        "radio": "Radio dans le casque pour coaching en temps réel",
+        "insurance": "Assurance complète pendant le cours"
+      }
+    },
+    "learningPath": {
+      "title": "Votre Progression Étape par Étape",
+      "subtitle": "Une méthode structurée, sûre et amusante pour apprendre de zéro.",
+      "steps": {
+        "day1": {
+          "title": "Jour 1 : Contrôle sur la Plage",
+          "desc": "Apprenez la théorie de la fenêtre de vent, les systèmes de sécurité et comment contrôler une aile d'entraînement sur la plage avant de passer à une vraie aile gonflable. À la fin de la session, vous volerez en toute confiance sur le sable."
+        },
+        "day2": {
+          "title": "Jour 2 : Body Dragging",
+          "desc": "Il est temps de se mouiller ! Vous apprendrez comment utiliser la puissance de l'aile pour vous tracter dans l'eau sans planche. C'est essentiel pour récupérer votre planche et comprendre la véritable force du vent."
+        },
+        "day3": {
+          "title": "Jour 3 : Le Water Start",
+          "desc": "La partie la plus excitante. Vous combinerez le contrôle de l'aile avec la planche et tenterez vos premiers départs dans l'eau. Nous nous concentrerons sur la position du corps, l'alignement de la planche et la gestion de la puissance pour vous permettre de glisser sur vos premiers mètres."
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes des Débutants",
+      "subtitle": "Tout ce que vous voulez savoir avant votre première session.",
+      "items": {
+        "q1": {
+          "q": "Puis-je apprendre si je n'ai jamais fait de sports nautiques ?",
+          "a": "Absolument ! Aucune expérience préalable n'est nécessaire. Nous enseignons tout depuis le début."
+        },
+        "q2": {
+          "q": "Combien d'heures faut-il pour commencer à naviguer ?",
+          "a": "La plupart des débutants ont besoin de 9 à 12 heures (3–5 jours) pour devenir indépendants sur la planche."
+        },
+        "q3": {
+          "q": "Le kitesurf est-il dangereux ?",
+          "a": "Avec un équipement moderne et une instruction professionnelle, c'est très sûr. Nous suivons des protocoles de sécurité stricts."
+        },
+        "q4": {
+          "q": "Et si j'ai peur ou que je ne progresse pas vite ?",
+          "a": "C'est tout à fait normal ! Nos instructeurs s'adaptent à votre rythme. Pas de pression, on avance étape par étape."
+        },
+        "q5": {
+          "q": "Dois-je apporter mon propre équipement ?",
+          "a": "Non. Tout l'équipement premium est inclus dans chaque cours : aile, planche, harnais, casque et gilet d'impact."
+        },
+        "q6": {
+          "q": "Y a-t-il un âge minimum ?",
+          "a": "Nous enseignons aux élèves à partir de 12 ans, avec un poids minimum de 40 kg."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Prêt à Voler ?",
+      "title1": "Commencez Votre",
+      "title2": "Aventure Aujourd'hui",
+      "description": "Rejoignez-nous à Máncora et vivez le frisson du kitesurf avec des instructeurs certifiés et un équipement premium.",
+      "ctaButton": "Construisez Votre Voyage"
+    },
+    "seo": {
+      "title": "Guide du Kitesurf pour Débutants à Máncora | Mancora Kite Club",
+      "description": "Tout ce que vous devez savoir pour débuter le kitesurf à Máncora. Découvrez la progression, le matériel et pourquoi c'est plus facile qu'il n'y paraît."
+    }
   }
 }

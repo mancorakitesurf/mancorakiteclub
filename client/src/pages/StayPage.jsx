@@ -1,4 +1,5 @@
 import SEO from '../components/SEO.jsx'
+import SchemaOrg from '../components/SchemaOrg.jsx'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { localizePath } from '../lib/routes.js'
 import StayHeroCarousel from '../sections/stay/StayHeroCarousel.jsx'
@@ -23,6 +24,7 @@ function StayPage() {
         canonicalPath={localizePath('/stay', currentLang)}
         hreflang={{ en: '/stay', es: '/esp/stay', fr: '/fr/stay', default: '/stay' }}
       />
+      <SchemaOrg type="LodgingBusiness" />
 
       <StayHeroCarousel />
       <StayAbout />

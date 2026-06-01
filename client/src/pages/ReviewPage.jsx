@@ -1,4 +1,5 @@
 import SEO from '../components/SEO.jsx'
+import SchemaOrg from '../components/SchemaOrg.jsx'
 import HeroReview from '../sections/review/HeroReview.jsx'
 import JoinTribeCTA from '../sections/review/JoinTribeCTA.jsx'
 import TestimoniosPlaceholder from '../sections/review/TestimoniosPlaceholder.jsx'
@@ -18,6 +19,7 @@ function ReviewPage() {
         canonicalPath={localizePath('/reviews', currentLang)}
         hreflang={{ en: '/reviews', es: '/esp/reviews', fr: '/fr/reviews', default: '/reviews' }}
       />
+      <SchemaOrg type="AggregateRating" />
 
       <HeroReview />
       <TrustBadges variant="compact" />

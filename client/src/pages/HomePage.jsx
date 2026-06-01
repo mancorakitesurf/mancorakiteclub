@@ -29,6 +29,7 @@ function HomePage() {
         hreflang={{ en: '/home', es: '/esp/home', fr: '/fr/home', default: '/home' }}
       />
       <SchemaOrg type="LocalBusiness" />
+      <SchemaOrg type="WebSite" />
       <SchemaOrg
         type="BreadcrumbList"
         breadcrumbs={[{ name: 'Home', path: '/' }]}

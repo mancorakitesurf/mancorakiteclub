@@ -63,9 +63,9 @@ function StayAbout() {
             {t('stay.introLabel') || "ACCOMMODATION"}
           </span>
 
-          <h2 className="mt-5 font-display text-4xl font-black uppercase tracking-tighter text-slate-950 sm:text-5xl lg:text-6xl dark:text-white leading-tight">
+          <h1 className="mt-5 font-display text-4xl font-black uppercase tracking-tighter text-slate-950 sm:text-5xl lg:text-6xl dark:text-white leading-tight">
             {t('stay.introTitle') || "Your Beachfront Sanctuary"}
-          </h2>
+          </h1>
 
           <div className="mt-8 space-y-6 text-sm sm:text-base leading-relaxed text-slate-650 dark:text-slate-350">
             <p>{t('stay.introP1')}</p>

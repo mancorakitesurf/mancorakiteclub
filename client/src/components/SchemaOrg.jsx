@@ -6,6 +6,9 @@ import {
   getFAQPageSchema,
   getBlogPostingSchema,
   getBreadcrumbListSchema,
+  getLodgingBusinessSchema,
+  getAggregateRatingSchema,
+  getWebSiteSchema
 } from '../config/schemas.js'
 
 /**
@@ -36,6 +39,15 @@ function SchemaOrg({ type, serviceKey, post, breadcrumbs, customSchema }) {
           break
         case 'BreadcrumbList':
           schemaObj = getBreadcrumbListSchema(currentLang, breadcrumbs)
+          break
+        case 'LodgingBusiness':
+          schemaObj = getLodgingBusinessSchema(currentLang)
+          break
+        case 'AggregateRating':
+          schemaObj = getAggregateRatingSchema(currentLang)
+          break
+        case 'WebSite':
+          schemaObj = getWebSiteSchema(currentLang)
           break
         default:
           break

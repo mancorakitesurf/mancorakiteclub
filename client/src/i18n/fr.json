@@ -970,6 +970,16 @@
     "people": "personnes"
   },
   "stay": {
+    "about": {
+      "spotTitle": "Face au Spot",
+      "spotDesc": "Situé directement sur la plage, sortez de votre lit et glissez sur l'eau.",
+      "storageTitle": "Stockage Sécurisé",
+      "storageDesc": "Casiers fermés individuels pour ailes, kites et planches avec bacs de rinçage.",
+      "poolTitle": "Piscine Salée",
+      "poolDesc": "Détendez-vous après vos sessions dans notre piscine d'eau salée avec vue sur l'océan.",
+      "vibeTitle": "Sunset Socials",
+      "vibeDesc": "Profitez de nos rencontres sur le toit terrasse avec des couchers de soleil inoubliables."
+    },
     "heroLabel": "Hébergement",
     "heroTitle": "Séjour au Bali Lodge",
     "heroDesc": "Paradis en bord de mer à Máncora. Bungalows privés, piscine, yoga et forfaits tout inclus.",
@@ -1025,11 +1035,37 @@
     "galleryExperience": "Votre maison plage",
     "locationLabel": "EMPLACEMENT",
     "locationTitle": "Trouvez-nous",
-    "locationAddress": "Centre d'accès estival s/n derrière l'hôtel The Point",
+    "locationAddress": "Centre d'accès estival s/n derrière l'hôtel The Point, Máncora",
     "locationDesc": "Situé au cœur de Máncora, à seulement 100m de la plage. Accès facile à tous les spots de kitesurf.",
+    "locationCoordinates": "COORDONNÉES",
+    "locationCoordinatesVal": "-4.1021° S, -81.0531° W",
+    "locationHowToGetThere": "Comment venir à Máncora",
+    "locationFlightTalara": "Via Talara (TYL) : 1 heure de taxi direct",
+    "locationFlightTumbes": "Via Tumbes (TBP) : 1,5 heures de taxi direct",
+    "locationFlightPiura": "Via Piura (PIU) : 2,5 heures de taxi direct",
+    "locationDistanceBeach": "À seulement 100 mètres du rivage de la plage",
+    "locationDistanceTown": "À 5 minutes à pied des meilleurs restaurants et commerces",
     "ctaTitle": "Prêt à Séjourner?",
     "ctaDesc": "Réservez votre séjour plage parfait. Cliquez ci-dessous pour nous envoyer un message!",
-    "whatsappMessage": "Salut! Je suis intéressé par la réservation d'hébergement au Bali Lodge. Pouvez-vous me donner plus d'info?"
+    "whatsappMessage": "Salut! Je suis intéressé par la réservation d'hébergement au Bali Lodge. Pouvez-vous me donner plus d'info?",
+    "selectRoom": "Réserver via Trip Builder",
+    "bookWhatsApp": "Demander par WhatsApp",
+    "rooms": {
+      "title": "Choisissez Votre Expérience d'Hébergement",
+      "solo": {
+        "name": "Chambre Privée Voyageur Solo",
+        "description": "Chambre privée confortable avec accès direct à la plage, lit simple, climatisation et eau chaude. Idéal pour les riders solos cherchant un repos calme entre les sessions."
+      },
+      "couple": {
+        "name": "Chambre Privée Double (Couple/Partagée)",
+        "description": "Chambre privée spacieuse disposant d'un lit double/king-size (ou de lits jumeaux sur demande), d'une vue sur le front de mer, d'une salle de bain privée et de la climatisation. Idéale pour les couples ou les amis partageant l'expérience."
+      },
+      "includes": {
+        "breakfast": "Délicieux petit-déjeuner quotidien inclus",
+        "storage": "Stockage sécurisé d'équipement de kite/surf inclus",
+        "facilities": "Accès à la piscine, deck en bord de mer et espaces communs"
+      }
+    }
   },
   "reviews": {
     "hero": {

@@ -281,6 +281,7 @@ const imageRegistry = Object.freeze({
   "HOSPEDAJE KITE HOUSE/DSC04807.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC04807.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/DSC04841.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC04841.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/DSC04842.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC04842.webp", import.meta.url).href,
+  "HOSPEDAJE KITE HOUSE/DSC04812.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC04812.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/DSC05230.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC05230.webp", import.meta.url).href,
   "HOSPEDAJE KITE HOUSE/DSC09920.webp": new URL("../assets/HOSPEDAJE KITE HOUSE/DSC09920.webp", import.meta.url).href,
   "LOGOS KITE CLUB/iko-logo-white.webp": new URL("../assets/LOGOS KITE CLUB/iko-logo-white.webp", import.meta.url).href
@@ -509,7 +510,7 @@ export const componentImages = Object.freeze({
   "pages/StayPage.jsx": Object.freeze({
     img1: image("HOSPEDAJE KITE HOUSE/cuartonazi.webp"),
     img2: image("HOSPEDAJE KITE HOUSE/habitacion.webp"),
-    img3: image("HOSPEDAJE KITE HOUSE/DSC09920.webp"),
+    img3: image("HOSPEDAJE KITE HOUSE/DSC04812.webp"),
     img4: image("HOSPEDAJE KITE HOUSE/DSC09916.webp"),
     img5: image("HOSPEDAJE KITE HOUSE/image.webp"),
     // New categorized sets

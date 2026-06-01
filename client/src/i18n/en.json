@@ -971,6 +971,16 @@
     "people": "people"
   },
   "stay": {
+    "about": {
+      "spotTitle": "Spot beachfront",
+      "spotDesc": "Located directly on the beach, step out of your bed and onto the water.",
+      "storageTitle": "Secure storage",
+      "storageDesc": "Individual locked storage for sails, kites, and boards with washing facilities.",
+      "poolTitle": "Saltwater pool",
+      "poolDesc": "Relax after long sessions in our ocean-view pool area.",
+      "vibeTitle": "Sunset socials",
+      "vibeDesc": "Enjoy community rooftop gatherings with standard-setting sunset views."
+    },
     "heroLabel": "Accommodation",
     "heroTitle": "Stay at Bali Lodge",
     "heroDesc": "Beachfront paradise in Máncora. Private bungalows, pool, yoga and all-inclusive packages.",
@@ -1026,11 +1036,37 @@
     "galleryExperience": "Your beach home",
     "locationLabel": "LOCATION",
     "locationTitle": "Find Us",
-    "locationAddress": "Summer access center s/n behind The Point Hotel",
+    "locationAddress": "Summer access center s/n behind The Point Hotel, Mancora",
     "locationDesc": "Located in the heart of Mancora, just 100m from the beach. Easy access to all kitesurf spots.",
+    "locationCoordinates": "COORDINATES",
+    "locationCoordinatesVal": "-4.1021° S, -81.0531° W",
+    "locationHowToGetThere": "How to Get Here",
+    "locationFlightTalara": "Via Talara (TYL): 1 hour taxi drive direct",
+    "locationFlightTumbes": "Via Tumbes (TBP): 1.5 hours taxi drive direct",
+    "locationFlightPiura": "Via Piura (PIU): 2.5 hours taxi drive direct",
+    "locationDistanceBeach": "Only 100 meters away from the ocean shoreline",
+    "locationDistanceTown": "5-minute walk to top local restaurants and shops",
     "ctaTitle": "Ready to Stay?",
     "ctaDesc": "Book your perfect beach getaway. Click below to send us a message!",
-    "whatsappMessage": "Hi! I'm interested in booking accommodation at Bali Lodge. Can you give me more info?"
+    "whatsappMessage": "Hi! I'm interested in booking accommodation at Bali Lodge. Can you give me more info?",
+    "selectRoom": "Book via Trip Builder",
+    "bookWhatsApp": "Inquire on WhatsApp",
+    "rooms": {
+      "title": "Choose Your Lodging Experience",
+      "solo": {
+        "name": "Solo Traveler Private Room",
+        "description": "Cozy private room with direct beach access, single bed, A/C, and hot water. Ideal for solo riders looking for quiet rests between sessions."
+      },
+      "couple": {
+        "name": "Double Private Room (Couple/Shared)",
+        "description": "Spacious private room featuring a double/king-size bed (or twin beds on request), beachfront view, private bathroom, and A/C. Perfect for couples or friends sharing the experience."
+      },
+      "includes": {
+        "breakfast": "Delicious Daily Breakfast Included",
+        "storage": "Safe Kitesurf/Surf Board Storage Included",
+        "facilities": "Access to pool, beachfront deck & social areas"
+      }
+    }
   },
   "reviews": {
     "hero": {

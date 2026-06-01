@@ -1,92 +1,49 @@
-export const FAQ_DATA = [
+export const FAQ_KEYS = [
   {
-    category: "About Learning Kitesurfing",
+    categoryKey: "faqPage.sections.beginners.category",
     questions: [
-      {
-        question: "Is Kitesurfing dangerous?",
-        answer:
-          "With the right equipment, certified instructors, and safety protocols, kitesurfing is a very safe sport. At Mancora Kite Club, we prioritize safety in every session."
-      },
-      {
-        question: "Do I need previous experience?",
-        answer:
-          "No. Our courses are designed for absolute beginners and advanced progression."
-      },
-      {
-        question: "Is Máncora a good place to learn?",
-        answer:
-          "Yes. Máncora offers constant wind, wide waters, and ideal conditions to progress quickly."
-      },
-      {
-        question: "How long does it take to learn?",
-        answer:
-          "The time it takes to learn varies depending on the individual, but most people can learn the basics in 3-5 days."
-      },
-      {
-        question: "What is the best time to learn?",
-        answer:
-          "The best time to learn is during the windy season."
-      }
+      { qKey: "faqPage.sections.beginners.q1.q", aKey: "faqPage.sections.beginners.q1.a" },
+      { qKey: "faqPage.sections.beginners.q2.q", aKey: "faqPage.sections.beginners.q2.a" },
+      { qKey: "faqPage.sections.beginners.q3.q", aKey: "faqPage.sections.beginners.q3.a" },
+      { qKey: "faqPage.sections.beginners.q4.q", aKey: "faqPage.sections.beginners.q4.a" },
+      { qKey: "faqPage.sections.beginners.q5.q", aKey: "faqPage.sections.beginners.q5.a" },
+      { qKey: "faqPage.sections.beginners.q6.q", aKey: "faqPage.sections.beginners.q6.a" },
+      { qKey: "faqPage.sections.beginners.q7.q", aKey: "faqPage.sections.beginners.q7.a" },
+      { qKey: "faqPage.sections.beginners.q8.q", aKey: "faqPage.sections.beginners.q8.a" },
+      { qKey: "faqPage.sections.beginners.q9.q", aKey: "faqPage.sections.beginners.q9.a" },
+      { qKey: "faqPage.sections.beginners.q10.q", aKey: "faqPage.sections.beginners.q10.a" },
+      { qKey: "faqPage.sections.beginners.q11.q", aKey: "faqPage.sections.beginners.q11.a" },
+      { qKey: "faqPage.sections.beginners.q12.q", aKey: "faqPage.sections.beginners.q12.a" }
     ]
   },
   {
-    category: "Equipment",
+    categoryKey: "faqPage.sections.about.category",
     questions: [
-      {
-        question: "Is equipment included in the course?",
-        answer:
-          "Yes. All professional equipment is included: kite, harness, board, helmet, and impact vest."
-      },
-      {
-        question: "Do I need to bring my own equipment?",
-        answer:
-          "No. All professional equipment is included: kite, harness, board, helmet, and impact vest."
-      },
-      {
-        question: "What brands do you use?",
-        answer:
-          "We work with premium internationally recognized brands."
-      },
-      {
-        question: "Do you provide wetsuits? ",
-        answer:
-          "Yes. We provide wetsuits for all our students."
-      },
-      {
-        question: "Do you provide safety equipment? ",
-        answer:
-          "Yes. We provide safety equipment for all our students."
-      },
+      { qKey: "faqPage.sections.about.q1.q", aKey: "faqPage.sections.about.q1.a" },
+      { qKey: "faqPage.sections.about.q2.q", aKey: "faqPage.sections.about.q2.a" },
+      { qKey: "faqPage.sections.about.q3.q", aKey: "faqPage.sections.about.q3.a" },
+      { qKey: "faqPage.sections.about.q4.q", aKey: "faqPage.sections.about.q4.a" },
+      { qKey: "faqPage.sections.about.q5.q", aKey: "faqPage.sections.about.q5.a" }
     ]
   },
   {
-    category: "Bookings and Payments",
+    categoryKey: "faqPage.sections.equipment.category",
     questions: [
-      {
-        question: "How can I book?",
-        answer:
-          "You can book directly on our website or contact us via WhatsApp."
-      },
-      {
-        question: "Do I need to pay a deposit?",
-        answer:
-          "Yes. We require a deposit to confirm your booking."
-      },
-      {
-        question: "What is your cancellation policy?",
-        answer:
-          "You can cancel your booking up to 24 hours before the lesson starts."
-      },
-      {
-        question: "What is your refund policy?",
-        answer:
-          "If you cancel your booking up to 24 hours before the lesson starts, you will receive a full refund."
-      },
-      {
-        question: "What payment methods do you accept?",
-        answer:
-          "We accept cards, bank transfers, and international payments."
-      },
+      { qKey: "faqPage.sections.equipment.q1.q", aKey: "faqPage.sections.equipment.q1.a" },
+      { qKey: "faqPage.sections.equipment.q2.q", aKey: "faqPage.sections.equipment.q2.a" },
+      { qKey: "faqPage.sections.equipment.q3.q", aKey: "faqPage.sections.equipment.q3.a" },
+      { qKey: "faqPage.sections.equipment.q4.q", aKey: "faqPage.sections.equipment.q4.a" },
+      { qKey: "faqPage.sections.equipment.q5.q", aKey: "faqPage.sections.equipment.q5.a" }
+    ]
+  },
+  {
+    categoryKey: "faqPage.sections.bookings.category",
+    questions: [
+      { qKey: "faqPage.sections.bookings.q1.q", aKey: "faqPage.sections.bookings.q1.a" },
+      { qKey: "faqPage.sections.bookings.q2.q", aKey: "faqPage.sections.bookings.q2.a" },
+      { qKey: "faqPage.sections.bookings.q3.q", aKey: "faqPage.sections.bookings.q3.a" },
+      { qKey: "faqPage.sections.bookings.q4.q", aKey: "faqPage.sections.bookings.q4.a" },
+      { qKey: "faqPage.sections.bookings.q5.q", aKey: "faqPage.sections.bookings.q5.a" }
     ]
   }
 ]

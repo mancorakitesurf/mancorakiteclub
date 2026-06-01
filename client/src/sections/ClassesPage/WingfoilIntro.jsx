@@ -3,20 +3,27 @@ import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { useI18n } from "../../app/providers/i18nContext"
 
-const { heroWingfoil } = componentImages["sections/ClassesPage/WingfoilIntro.jsx"]
+const { heroWingfoil, heroWingfoilMobile } = componentImages["sections/ClassesPage/WingfoilIntro.jsx"]
 function WingfoilIntro() {
   const { t } = useI18n()
 
   return (
     <section className="relative bg-[#0f1416] text-white overflow-hidden">
       {/* Imagen de fondo */}
-    <div className="absolute inset-0">
+      <picture className="absolute inset-0 block">
+        <source media="(max-width: 767px)" srcSet={heroWingfoilMobile} />
+        <source media="(min-width: 768px)" srcSet={heroWingfoil} />
         <img
-            src={heroWingfoil}
-            alt={t("classes.wingfoil.intro.imageAlt")}
-            className="w-full h-full object-cover opacity-40"
+          src={heroWingfoil}
+          alt={t("classes.wingfoil.intro.imageAlt")}
+          width="1200"
+          height="1801"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          className="h-full w-full object-cover opacity-40"
         />
-        </div>
+      </picture>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-transparent" />

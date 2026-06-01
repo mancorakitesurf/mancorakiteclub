@@ -4,33 +4,45 @@ const env = require('../config/env');
 const router = express.Router();
 
 const ROUTE_PATHS = [
-  '/',
-  '/learn/kitesurf',
-  '/learn/wingfoil',
-  '/kitesurfing',
-  '/wingfoil',
-  '/sup',
-  '/equipment-rental',
-  '/solo-surf',
-  '/hostel',
-  '/kite-club-hotel',
-  '/4-stars-hotel',
+  // CORE PAGES
+  '/home',
+  '/services',
+  '/services/kitesurf-lessons',
+  '/services/wingfoil-lessons',
+  '/services/wave-riding-coaching',
+  '/services/trips-downwinds',
+  '/services/rent-gear',
+  '/services/surf-sup',
+  '/trips',
+  '/trips/solo-surf',
+  '/stay',
+  '/build',
   '/faq',
   '/blog',
-  '/esp',
-  '/aprende/kitesurf/esp',
-  '/aprende/wingfoil/esp',
-  '/kitesurfing/esp',
-  '/wingfoil/esp',
-  '/sup/esp',
-  '/esp/services/rent-gear',
-  '/solo-surf/esp',
-  '/acommodation/hostal/esp',
-  '/acommodation/hotel-kite/esp',
-  '/acommodation/4-estrellas/esp',
-  '/faq/esp',
-  '/blog/esp',
+  '/contact',
+  '/reviews',
+  '/waves',
+  '/beginners',
+
+  // BLOG POSTS
+  '/blog/chicama-peru-surf-trip',
+  '/blog/pacasmayo-peru-the-ultimate-point-break-surf-guide',
+  '/blog/north-surf-trip-peru',
+  '/blog/paracas-vs-mancora-kitesurf-guide',
+  '/blog/peru-kitesurf-north-vs-south',
+  '/blog/mancora-vs-lobitos-kitesurf-comparison',
+  '/blog/learn-kitesurfing-in-peru-mancora-beginner-guide',
+  '/blog/kitesurf-vs-wingfoil-which-watersport-should-you-learn',
+  '/blog/iko-certified-kitesurfing-school-why-it-matters'
 ];
+
+// Generate localized paths
+const LOCALIZED_PATHS = [];
+ROUTE_PATHS.forEach(path => {
+  LOCALIZED_PATHS.push(path); // en
+  LOCALIZED_PATHS.push(`/esp${path}`); // es
+  LOCALIZED_PATHS.push(`/fr${path}`); // fr
+});
 
 function escapeXml(value) {
   return value
@@ -51,7 +63,7 @@ function buildBaseUrl(req) {
 
 router.get('/sitemap.xml', (req, res) => {
   const baseUrl = buildBaseUrl(req);
-  const urls = ROUTE_PATHS.map((routePath) => {
+  const urls = LOCALIZED_PATHS.map((routePath) => {
     const absoluteUrl = `${baseUrl}${routePath}`;
     return `  <url><loc>${escapeXml(absoluteUrl)}</loc></url>`;
   }).join('\n');
@@ -64,6 +76,19 @@ router.get('/sitemap.xml', (req, res) => {
   ].join('\n');
 
   res.type('application/xml').send(xml);
+});
+
+router.get('/robots.txt', (req, res) => {
+  const baseUrl = buildBaseUrl(req);
+  const robots = [
+    'User-agent: *',
+    'Allow: /',
+    'Disallow: /api/',
+    '',
+    `Sitemap: ${baseUrl}/sitemap.xml`
+  ].join('\n');
+
+  res.type('text/plain').send(robots);
 });
 
 module.exports = router;

@@ -35,6 +35,7 @@ export default [
        'no-console': ['warn', { allow: ['warn', 'error'] }],
        // For React 19+, we don't need to import React for JSX
        'react/react-in-jsx-scope': 'off',
+       'react/prop-types': 'off',
      },
   },
 ]

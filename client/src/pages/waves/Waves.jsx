@@ -1,4 +1,5 @@
 import SEO from '../../components/SEO.jsx'
+import SchemaOrg from '../../components/SchemaOrg.jsx'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { localizePath } from '../../lib/routes.js'
 import WavesHero from '../../sections/waves/WavesHero.jsx'
@@ -31,6 +32,7 @@ function WavesPage() {
         canonicalPath={resolvedCanonicalPath}
         hreflang={{ en: '/waves', es: '/esp/waves', fr: '/fr/waves', default: '/waves' }}
       />
+      <SchemaOrg type="LocalBusiness" />
 
       {/* ── Kitesurf block ── */}
       <WavesHero />

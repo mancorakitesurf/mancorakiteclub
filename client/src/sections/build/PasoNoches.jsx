@@ -4,6 +4,7 @@ import { useI18n } from '../../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../../store/useTripBuilderStore.js'
 import { NOCHES_OPTIONS, NOCHES_IMAGENES, NOCHES_COPY_KEYS, getPrecioNoche } from './buildData.js'
 import { StepHeading, staggerContainer, staggerItem } from './BuildUI.jsx'
+import { ROOM_OPTIONS } from '../../config/accommodation.js'
 
 function NightCard({ n, i, selected, onClick, precioNoche }) {
   const { t } = useI18n()
@@ -67,6 +68,7 @@ export default function PasoNoches({ noches, setNoches, personas, setPersonas })
   // Sync view date if store's fechaInicio changes externally
   useEffect(() => {
     if (fechaInicio) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setViewDate(new Date(fechaInicio + 'T12:00:00'))
     }
   }, [fechaInicio])
@@ -180,26 +182,72 @@ export default function PasoNoches({ noches, setNoches, personas, setPersonas })
     <div>
       <StepHeading index={3} title={t('build.howManyNights')} subtitle={t('build.howManyNightsSub')} />
 
-      {/* Guest selector */}
-      <div className="mb-6 flex flex-wrap items-center gap-4">
-        <span className="text-xs font-bold uppercase tracking-widest text-white/50">{t('build.guests') || 'Guests'}</span>
-        <div className="flex gap-2">
-          {[1, 2].map((p) => (
-            <button
-              key={p}
-              type="button"
-              onClick={() => setPersonas(p)}
-              className={`rounded-lg px-4 py-2 text-sm font-bold transition ${
-                personas === p
-                  ? 'bg-[#b7e28a] text-black'
-                  : 'bg-white/5 text-white/60 hover:bg-white/10'
-              }`}
-            >
-              {p} {p === 1 ? (t('build.person') || 'person') : (t('build.people') || 'people')}
-            </button>
-          ))}
+      {/* Room Selector Cards */}
+      <div className="mb-8">
+        <span className="mb-4 block text-xs font-bold uppercase tracking-widest text-white/50">
+          {t('stay.rooms.title') || 'Choose Your Lodging Experience'}
+        </span>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {ROOM_OPTIONS.map((room) => {
+            const isSelected = personas === room.capacity
+            return (
+              <motion.button
+                key={room.id}
+                type="button"
+                onClick={() => setPersonas(room.capacity)}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className={`relative flex flex-col overflow-hidden rounded-2xl border text-left transition-all duration-300 ${
+                  isSelected
+                    ? 'border-[#b7e28a] bg-gradient-to-b from-[#0e1b17] to-white/[0.02] shadow-[0_0_20px_rgba(183,226,138,0.15)]'
+                    : 'border-white/10 bg-white/3 hover:border-white/20'
+                }`}
+              >
+                {/* Visual room image wrapper */}
+                <div className="relative h-32 w-full">
+                  <img
+                    src={room.image}
+                    alt={t(room.nameKey)}
+                    className={`h-full w-full object-cover transition-opacity duration-300 ${
+                      isSelected ? 'opacity-85' : 'opacity-40 hover:opacity-60'
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e1b17] via-transparent to-transparent" />
+                  
+                  {/* Price Tag */}
+                  <div className="absolute bottom-2 left-3 z-10 flex items-baseline gap-1 rounded-md bg-black/60 px-2 py-0.5 backdrop-blur-sm border border-white/5">
+                    <span className="text-base font-black text-white">${room.pricePerNight}</span>
+                    <span className="text-[9px] font-bold text-white/60">USD/{t('build.night')}</span>
+                  </div>
+
+                  {/* Capacity badge */}
+                  <div className="absolute top-2 right-3 z-10 rounded-full bg-[#0e1b17]/80 px-2 py-0.5 text-[9px] font-bold text-[#b7e28a] border border-[#b7e28a]/20">
+                    {room.capacity} {room.capacity === 1 ? t('build.person') : t('build.people')}
+                  </div>
+                </div>
+
+                {/* Content info */}
+                <div className="p-4 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h4 className={`text-sm font-bold ${isSelected ? 'text-[#b7e28a]' : 'text-white'}`}>
+                      {t(room.nameKey)}
+                    </h4>
+                    <p className="mt-1.5 text-xs text-white/55 line-clamp-2 leading-relaxed">
+                      {t(room.descriptionKey)}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Checked mark indicator */}
+                {isSelected && (
+                  <div className="absolute top-2 left-3 z-10 flex h-5 w-5 items-center justify-center rounded-full bg-[#b7e28a] text-[10px] font-black text-[#0e1b17]">
+                    ✓
+                  </div>
+                )}
+              </motion.button>
+            )
+          })}
         </div>
-        <span className="text-xs text-white/30">${precioNoche} USD / {t('build.night') || 'night'}</span>
       </div>
 
       <motion.div

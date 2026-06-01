@@ -72,13 +72,16 @@ async function generateSitemap() {
 
   // 1. Add static & service pages from PAGE_SEO
   for (const [key, meta] of Object.entries(PAGE_SEO)) {
+    const paths = Array.isArray(meta.paths) ? meta.paths.filter(Boolean) : []
+    if (paths.length === 0) continue
+
     // Each page has multiple path versions (EN, ES, FR)
     // We want to generate a <url> entry for each language variant path
     const isHome = key === 'home'
-    const priority = isHome ? '1.0' : meta.paths[0].startsWith('/services/') ? '0.9' : '0.8'
+    const priority = isHome ? '1.0' : paths[0].startsWith('/services/') ? '0.9' : '0.8'
     const changefreq = isHome ? 'daily' : 'weekly'
 
-    for (const routePath of meta.paths) {
+    for (const routePath of paths) {
       const fullUrl = `${SITE_URL}${routePath}`
       
       xml += '  <url>\n'

@@ -8,6 +8,7 @@ import WingfoilWithUs from '../../sections/ClassesPage/WingfoilWithUs.jsx'
 import WingfoilClasses from '../../sections/ClassesPage/WingfoilClasses.jsx'
 import WingfoilBenefits from '../../sections/ClassesPage/WingfoilBenefits.jsx'
 import EquipmentWing from '../../sections/ClassesPage/equipment/EquipmentWing.jsx'
+import TrustBadges from '../../sections/common/TrustBadges.jsx'
 
 function WingfoilLessonsPage() {
   const { currentLang } = useI18n()
@@ -30,6 +31,7 @@ function WingfoilLessonsPage() {
       <SchemaOrg type="Course" serviceKey="wingfoilLessons" />
 
       <WingfoilIntro />
+      <TrustBadges variant="compact" />
       <WingfoilWithUs />
       <WingfoilClasses />
       <WingfoilBenefits />

@@ -1,15 +1,26 @@
 {
-  "nav": {
-    "home": "Home",
-    "trips": "Trips",
-    "stay": "Stay With Us",
-    "build": "Build Your Trip",
-    "classes": "Services",
-    "blog": "Blogs",
-    "contact": "Contact",
-    "reviews": "Reviews",
-    "faq": "FAQ",
-    "bookNow": "Book Now"
+ "nav": {
+  "home": "Home",
+  "trips": "Trips",
+  "stay": "Stay With Us",
+  "build": "Build Your Trip",
+  "services": "Services",
+  "classes": "Services",
+  "blog": "Blogs",
+  "contact": "Contact",
+  "reviews": "Reviews",
+  "faq": "FAQ",
+  "bookNow": "Book Now"
+  },
+  "services": {
+    "title": "Services",
+    "kitesurf": "Kitesurf Lessons",
+    "wingfoil": "Wingfoil Lessons",
+    "rentals": "Rentals",
+    "trips": "Trips & Downwinds",
+    "surf": "Surf Lessons",
+    "sup": "SUP / Paddle Lessons",
+    "waveCoaching": "Wave Riding Coaching"
   },
   "hero": {
     "title": "Mancora Kite Club",
@@ -195,6 +206,40 @@
           "title": "Local guidance",
           "text": "Clear advice from the Mancora team."
         }
+      }
+    }
+  },
+  "trustBadges": {
+    "aria": "Trust badges",
+    "ikoLogoAlt": "IKO certification logo",
+    "label": "Trust and safety",
+    "title": "Clear credentials before you get on the water",
+    "subtitle": "Concrete benefits you can check before booking, without inflated promises.",
+    "badges": {
+      "ikoCertified": {
+        "tag": "IKO",
+        "label": "IKO certified kite school",
+        "description": "Kitesurf coaching is led by IKO-certified instructors."
+      },
+      "studentCertification": {
+        "label": "Student certification available",
+        "description": "Kite students can access IKO certification after completing the required progression."
+      },
+      "premiumGear": {
+        "label": "Premium gear included",
+        "description": "Lessons include the equipment needed for the session; rentals are listed by service."
+      },
+      "waterSupport": {
+        "label": "Water support and radio guidance",
+        "description": "Selected supported sessions use close water supervision and radio communication when applicable."
+      },
+      "safeSpots": {
+        "label": "Spots chosen for the conditions",
+        "description": "The spot is matched to level, wind and sea state before going out."
+      },
+      "verifiedReviews": {
+        "label": "Google and TripAdvisor reviews",
+        "description": "Public reviews from students and travelers help validate the experience."
       }
     }
   },
@@ -926,6 +971,16 @@
     "people": "people"
   },
   "stay": {
+    "about": {
+      "spotTitle": "Spot beachfront",
+      "spotDesc": "Located directly on the beach, step out of your bed and onto the water.",
+      "storageTitle": "Secure storage",
+      "storageDesc": "Individual locked storage for sails, kites, and boards with washing facilities.",
+      "poolTitle": "Saltwater pool",
+      "poolDesc": "Relax after long sessions in our ocean-view pool area.",
+      "vibeTitle": "Sunset socials",
+      "vibeDesc": "Enjoy community rooftop gatherings with standard-setting sunset views."
+    },
     "heroLabel": "Accommodation",
     "heroTitle": "Stay at Bali Lodge",
     "heroDesc": "Beachfront paradise in Máncora. Private bungalows, pool, yoga and all-inclusive packages.",
@@ -981,11 +1036,37 @@
     "galleryExperience": "Your beach home",
     "locationLabel": "LOCATION",
     "locationTitle": "Find Us",
-    "locationAddress": "Summer access center s/n behind The Point Hotel",
+    "locationAddress": "Summer access center s/n behind The Point Hotel, Mancora",
     "locationDesc": "Located in the heart of Mancora, just 100m from the beach. Easy access to all kitesurf spots.",
+    "locationCoordinates": "COORDINATES",
+    "locationCoordinatesVal": "-4.1021° S, -81.0531° W",
+    "locationHowToGetThere": "How to Get Here",
+    "locationFlightTalara": "Via Talara (TYL): 1 hour taxi drive direct",
+    "locationFlightTumbes": "Via Tumbes (TBP): 1.5 hours taxi drive direct",
+    "locationFlightPiura": "Via Piura (PIU): 2.5 hours taxi drive direct",
+    "locationDistanceBeach": "Only 100 meters away from the ocean shoreline",
+    "locationDistanceTown": "5-minute walk to top local restaurants and shops",
     "ctaTitle": "Ready to Stay?",
     "ctaDesc": "Book your perfect beach getaway. Click below to send us a message!",
-    "whatsappMessage": "Hi! I'm interested in booking accommodation at Bali Lodge. Can you give me more info?"
+    "whatsappMessage": "Hi! I'm interested in booking accommodation at Bali Lodge. Can you give me more info?",
+    "selectRoom": "Book via Trip Builder",
+    "bookWhatsApp": "Inquire on WhatsApp",
+    "rooms": {
+      "title": "Choose Your Lodging Experience",
+      "solo": {
+        "name": "Solo Traveler Private Room",
+        "description": "Cozy private room with direct beach access, single bed, A/C, and hot water. Ideal for solo riders looking for quiet rests between sessions."
+      },
+      "couple": {
+        "name": "Double Private Room (Couple/Shared)",
+        "description": "Spacious private room featuring a double/king-size bed (or twin beds on request), beachfront view, private bathroom, and A/C. Perfect for couples or friends sharing the experience."
+      },
+      "includes": {
+        "breakfast": "Delicious Daily Breakfast Included",
+        "storage": "Safe Kitesurf/Surf Board Storage Included",
+        "facilities": "Access to pool, beachfront deck & social areas"
+      }
+    }
   },
   "reviews": {
     "hero": {
@@ -1280,6 +1361,247 @@
       "builderNote": "Extras are added in step 4 of the trip builder. Mix and match freely.",
       "builderCta": "Build Your Trip",
       "priceNote": "Day trips $55 USD. Massage $21 USD. Airport transfer $42 USD. Photo & video pack $40 USD."
+    }
+  },
+  "faqPage": {
+    "sections": {
+      "beginners": {
+        "category": "Beginners FAQ",
+        "q1": {
+          "q": "Can I learn kitesurfing if I've never done water sports?",
+          "a": "Absolutely! You don't need any prior water sports experience. Our IKO certified instructors will teach you everything from scratch, starting with kite control on the beach before entering the water."
+        },
+        "q2": {
+          "q": "How many hours do I need to start?",
+          "a": "Most beginners need about 9 to 12 hours to become independent. We recommend our 3-day (6 hours) or 5-day (10+ hours) beginner courses to build a solid foundation and start riding the board."
+        },
+        "q3": {
+          "q": "Is it dangerous to learn kitesurfing?",
+          "a": "With modern equipment and professional instruction, kitesurfing is very safe. We use the latest safety gear, teach in safe conditions, and our instructors are always by your side."
+        },
+        "q4": {
+          "q": "What happens if I am afraid or don't progress fast?",
+          "a": "It's completely normal to feel nervous! Our instructors adapt to your pace. If you need more time on kite control before entering the water, we will take it step by step until you feel confident."
+        },
+        "q5": {
+          "q": "What is the difference between kitesurf and wingfoil?",
+          "a": "Kitesurfing uses a large kite attached to a harness to pull you on a twin-tip or surfboard. Wingfoiling uses a handheld wing (not attached to your body) and a board with a hydrofoil that lifts you above the water. Both are incredibly fun, but kitesurfing is usually easier to learn initially."
+        },
+        "q6": {
+          "q": "Do I need to bring my own equipment?",
+          "a": "No, you don't need to bring anything. All our classes include premium equipment (kite, board, harness, impact vest, helmet, and wetsuit). Just bring swimwear, sunscreen, and a good vibe!"
+        },
+        "q7": {
+          "q": "What course do you recommend for beginners?",
+          "a": "We recommend the Beginner (3 days) or Full Progression (5 days) courses. These give you enough time to learn kite control, body dragging, and water starts on the board."
+        },
+        "q8": {
+          "q": "Can I take classes as a couple?",
+          "a": "Yes! Our Semi-Private classes are perfect for couples or friends. You will share one instructor and one kite between two students, taking turns and learning from each other's progress."
+        },
+        "q9": {
+          "q": "Is there a minimum age?",
+          "a": "We teach students from 12 years old, provided they weigh at least 40kg (88 lbs). For younger children, please contact us to evaluate their specific case."
+        },
+        "q10": {
+          "q": "What wind conditions are ideal?",
+          "a": "Máncora is blessed with consistent, smooth thermal winds almost all year round, typically between 15 to 25 knots. These are ideal conditions for learning safely and progressing quickly."
+        },
+        "q11": {
+          "q": "What does semi-private mean?",
+          "a": "Semi-private means that one instructor teaches two students who share one set of equipment. It's a great way to rest between attempts and learn by watching your partner. Prices are per person."
+        },
+        "q12": {
+          "q": "Can I combine classes with accommodation and rentals?",
+          "a": "Yes! You can use our Custom Trip Builder to create your ideal package, mixing kitesurf classes, gear rental, and a stay at our beachfront Bali Lodge. <a href='/build' class='text-primary underline hover:text-white'>Build your trip here</a>."
+        }
+      },
+      "about": {
+        "category": "About Learning Kitesurfing",
+        "q1": {
+          "q": "Is Kitesurfing dangerous?",
+          "a": "With the right equipment, certified instructors, and safety protocols, kitesurfing is a very safe sport. At Mancora Kite Club, we prioritize safety in every session."
+        },
+        "q2": {
+          "q": "Do I need previous experience?",
+          "a": "No. Our courses are designed for absolute beginners and advanced progression."
+        },
+        "q3": {
+          "q": "Is Máncora a good place to learn?",
+          "a": "Yes. Máncora offers constant wind, wide waters, and ideal conditions to progress quickly."
+        },
+        "q4": {
+          "q": "How long does it take to learn?",
+          "a": "The time it takes to learn varies depending on the individual, but most people can learn the basics in 3-5 days."
+        },
+        "q5": {
+          "q": "What is the best time to learn?",
+          "a": "The best time to learn is during the windy season."
+        }
+      },
+      "equipment": {
+        "category": "Equipment",
+        "q1": {
+          "q": "Is equipment included in the course?",
+          "a": "Yes. All professional equipment is included: kite, harness, board, helmet, and impact vest."
+        },
+        "q2": {
+          "q": "Do I need to bring my own equipment?",
+          "a": "No. All professional equipment is included: kite, harness, board, helmet, and impact vest."
+        },
+        "q3": {
+          "q": "What brands do you use?",
+          "a": "We work with premium internationally recognized brands."
+        },
+        "q4": {
+          "q": "Do you provide wetsuits?",
+          "a": "Yes. We provide wetsuits for all our students."
+        },
+        "q5": {
+          "q": "Do you provide safety equipment?",
+          "a": "Yes. We provide safety equipment for all our students."
+        }
+      },
+      "bookings": {
+        "category": "Bookings and Payments",
+        "q1": {
+          "q": "How can I book?",
+          "a": "You can book directly on our website or contact us via WhatsApp."
+        },
+        "q2": {
+          "q": "Do I need to pay a deposit?",
+          "a": "Yes. We require a deposit to confirm your booking."
+        },
+        "q3": {
+          "q": "What is your cancellation policy?",
+          "a": "You can cancel your booking up to 24 hours before the lesson starts."
+        },
+        "q4": {
+          "q": "What is your refund policy?",
+          "a": "If you cancel your booking up to 24 hours before the lesson starts, you will receive a full refund."
+        },
+        "q5": {
+          "q": "What payment methods do you accept?",
+          "a": "We accept cards, bank transfers, and international payments."
+        }
+      }
+    }
+  },
+  "beginnersGuide": {
+    "hero": {
+      "eyebrow": "Your First Time Kitesurfing?",
+      "title": "Welcome to the Wind",
+      "subtitle": "Discover why Máncora is the ideal place to start your kitesurfing journey."
+    },
+    "intro": {
+      "title": "Easier Than It Looks",
+      "text": "Many people think kitesurfing requires extreme upper body strength or prior experience in extreme sports. The truth? It's all about technique and understanding the wind. With our step-by-step methodology and safe, shallow waters, anyone can learn to fly. Kitesurfing is a low-impact sport where your harness takes all the power from the kite, leaving you free to steer with just two fingers.",
+      "imageAlt": "Beginner student flying a kite on the beach"
+    },
+    "whyMancora": {
+      "eyebrow": "The Perfect Spot",
+      "title": "Why Learn in Máncora?",
+      "subtitle": "Máncora offers unique conditions that make it one of the best spots in the world to learn kitesurfing.",
+      "reasons": {
+        "wind": {
+          "title": "Consistent Thermal Winds",
+          "desc": "15–25 knots of steady cross-onshore wind almost every day of the year. No gusts, no surprises."
+        },
+        "water": {
+          "title": "Flat, Shallow Water",
+          "desc": "Waist-deep water for hundreds of meters means you can always stand up and feel safe while learning."
+        },
+        "weather": {
+          "title": "Year-Round Sunshine",
+          "desc": "Warm water (24°C), blue skies, and no wetsuit needed. Just boardshorts and sunscreen."
+        },
+        "certified": {
+          "title": "IKO Certified School",
+          "desc": "Our instructors hold international IKO certifications. Your safety and progression are our top priorities."
+        },
+        "community": {
+          "title": "Vibrant Kite Community",
+          "desc": "Join a welcoming community of riders from around the world. Share sessions, stories, and sunsets."
+        },
+        "stay": {
+          "title": "Stay Right at the Spot",
+          "desc": "Our Bali Lodge is steps from the kite beach. Wake up, grab breakfast, and walk to your lesson."
+        }
+      }
+    },
+    "whatsIncluded": {
+      "eyebrow": "Everything You Need",
+      "title": "What's Included in Your Lesson?",
+      "subtitle": "You don't need to bring anything. We provide all the premium gear and safety equipment.",
+      "items": {
+        "kite": "Latest-generation training kites & full-size kites",
+        "board": "Twin-tip boards for all sizes and levels",
+        "harness": "Comfortable waist harness fitted to your body",
+        "helmet": "CE-certified safety helmet",
+        "vest": "Impact vest for extra protection",
+        "wetsuit": "Rashguard / lycra (wetsuit if needed)",
+        "radio": "Helmet-mounted radio for real-time coaching",
+        "insurance": "Full lesson insurance coverage"
+      }
+    },
+    "learningPath": {
+      "title": "Your Progression Step by Step",
+      "subtitle": "A structured, safe, and fun way to learn from scratch.",
+      "steps": {
+        "day1": {
+          "title": "Day 1: Beach Control",
+          "desc": "Learn the theory of wind windows, safety systems, and how to control a small trainer kite on the beach before moving to a real inflatable kite. By the end of the session, you'll be flying confidently on the sand."
+        },
+        "day2": {
+          "title": "Day 2: Body Dragging",
+          "desc": "Time to get wet! You'll learn how to use the power of the kite to pull yourself through the water without a board. This is essential for recovering your board and understanding the true power of the wind."
+        },
+        "day3": {
+          "title": "Day 3: The Water Start",
+          "desc": "The most exciting part. You'll combine kite control with the board and attempt your first water starts. We'll focus on body position, board alignment, and managing power to get you riding your first few meters."
+        }
+      }
+    },
+    "faq": {
+      "title": "Common Beginner Questions",
+      "subtitle": "Everything you want to know before your first session.",
+      "items": {
+        "q1": {
+          "q": "Can I learn if I've never done water sports?",
+          "a": "Absolutely! No prior experience is needed. We teach everything from scratch."
+        },
+        "q2": {
+          "q": "How many hours do I need to start riding?",
+          "a": "Most beginners need 9–12 hours (3–5 days) to become independent on the board."
+        },
+        "q3": {
+          "q": "Is kitesurfing dangerous?",
+          "a": "With modern equipment and professional instruction, it is very safe. We follow strict safety protocols."
+        },
+        "q4": {
+          "q": "What if I'm scared or I don't progress fast?",
+          "a": "Totally normal! Our instructors adapt to your pace. There's no rush—we go step by step."
+        },
+        "q5": {
+          "q": "Do I need to bring my own gear?",
+          "a": "No. All premium equipment is included in every lesson: kite, board, harness, helmet, and impact vest."
+        },
+        "q6": {
+          "q": "Is there a minimum age?",
+          "a": "We teach students from 12 years old, with a minimum weight of 40 kg."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Ready to Fly?",
+      "title1": "Start Your",
+      "title2": "Adventure Today",
+      "description": "Join us in Máncora and experience the thrill of kitesurfing with certified instructors and premium gear.",
+      "ctaButton": "Build Your Trip"
+    },
+    "seo": {
+      "title": "Beginners Guide to Kitesurfing in Máncora | Mancora Kite Club",
+      "description": "Everything you need to know about starting kitesurfing in Máncora. Learn about the progression, equipment, and why it's easier than it looks."
     }
   }
 }

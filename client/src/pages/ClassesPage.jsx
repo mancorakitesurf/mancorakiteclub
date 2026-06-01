@@ -19,6 +19,7 @@ import WaveRiding from "../sections/ClassesPage/WaveRiding.jsx"
 import TripsDownwinds from "../sections/ClassesPage/TripsDownwinds.jsx"
 import RentGear from "../sections/ClassesPage/RentGear.jsx"
 import SurfSup from "../sections/ClassesPage/SurfSup.jsx"
+import TrustBadges from "../sections/common/TrustBadges.jsx"
 
 function ClassesPage() {
   const { currentLang } = useI18n()
@@ -53,6 +54,7 @@ function ClassesPage() {
 
       {/* 1. Kitesurf Lessons (Servicio Principal) */}
       <ClassesHero />
+      <TrustBadges variant="compact" showTitle />
       <ClassesIntro />
       <ClassesPricing />
       <ClassesBenefits />

@@ -7,6 +7,9 @@ import ChicamaPage from "./ChicamaPage.jsx"
 import MancoraVsLobitosPage from "./MancoraVsLobitosPage.jsx"
 import PeruKitesurfPage from "./PeruKitesurfPage.jsx"
 import PacasmayoPage from "./PacasmayoPage.jsx"
+import MancoraBeginnerPage from "./MancoraBeginnerPage.jsx"
+import WingfoilComparisonPage from "./WingfoilComparisonPage.jsx"
+import IKOCertificationPage from "./IKOCertificationPage.jsx"
 import SEO from "../../components/SEO.jsx"
 import SchemaOrg from "../../components/SchemaOrg.jsx"
 
@@ -19,6 +22,9 @@ const STRUCTURED_PAGE_BY_SLUG = {
   "peru-kitesurf-north-vs-south-spots-seasons-wind": PeruKitesurfPage,
   "pacasmayo-peru-the-ultimate-point-break-surf-guide": PacasmayoPage,
   "pacasmayo-peru-point-break-guide": PacasmayoPage,
+  "learn-kitesurfing-in-peru-mancora-beginner-guide": MancoraBeginnerPage,
+  "kitesurf-vs-wingfoil-which-watersport-should-you-learn": WingfoilComparisonPage,
+  "iko-certified-kitesurfing-school-why-it-matters": IKOCertificationPage,
 }
 
 function BlogPostPage() {
@@ -80,7 +86,7 @@ function BlogPostPage() {
     )
   }
 
-  if (legacyPost) {
+  if (legacyPost && legacyPost.component) {
     const LegacyComponent = legacyPost.component
     return (
       <>

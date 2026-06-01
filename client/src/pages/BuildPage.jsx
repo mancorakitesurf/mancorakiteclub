@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import SEO from '../components/SEO.jsx'
+import SchemaOrg from '../components/SchemaOrg.jsx'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { componentImages } from '../config/images.js'
@@ -139,6 +140,7 @@ function BuildPage() {
         canonicalPath={currentLang === 'en' ? '/build' : `/${currentLang === 'fr' ? 'fr' : 'esp'}/build`}
         hreflang={{ en: '/build', es: '/esp/build', fr: '/fr/build', default: '/build' }}
       />
+      <SchemaOrg type="LocalBusiness" />
 
       <div className="relative overflow-hidden bg-background-dark py-32 sm:py-48 lg:py-56">
         <div className="absolute inset-0 z-0">

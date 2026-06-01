@@ -39,9 +39,10 @@ function FaqItem({ question, answer, isOpen, onToggle, index }) {
           }`}
         >
           <div className="pt-4 border-t border-white/10">
-            <p className="text-white/70 leading-relaxed">
-              {answer}
-            </p>
+            <p 
+              className="text-white/70 leading-relaxed" 
+              dangerouslySetInnerHTML={{ __html: answer }}
+            />
           </div>
         </div>
       </div>

@@ -14,6 +14,9 @@ import BlogPage12 from '../../../pages/blog/Whale-season-in-northern-Peru-what-i
 import BlogPage13 from '../../../pages/blog/Mancora-Whale-Season.jsx'
 import BlogPage14 from '../../../pages/blog/Wingfoil-vs-Kitesurf-Choosing-Your-Weapon.jsx'
 import BlogPage15 from '../../../pages/blog/Data-Strip-Safety.jsx'
+import MancoraBeginnerPage from '../../../pages/blog/MancoraBeginnerPage.jsx'
+import WingfoilComparisonPage from '../../../pages/blog/WingfoilComparisonPage.jsx'
+import IKOCertificationPage from '../../../pages/blog/IKOCertificationPage.jsx'
 
 const {
   blogHeroDesktop,
@@ -282,6 +285,51 @@ export const POSTS = [
     metaDescription: "Essential safety practices and technical drills to progress faster in kitesurfing. Reduce risk and improve performance.",
     readingTime: 4,
     tags: ["safety", "progression", "kitesurf technique", "drills", "gear"]
+  },
+  {
+    slug: "learn-kitesurfing-in-peru-mancora-beginner-guide",
+    category: "KITESURFING PERU",
+    title: "Learn Kitesurfing in Peru: The Complete Beginner's Guide to Mancora",
+    date: "June 1, 2026",
+    author: "Mancora Kite Club Editorial",
+    image: new URL("../../../assets/fotos clases/DSC05197.webp", import.meta.url).href,
+    desktopImage: new URL("../../../assets/fotos clases/DSC05197.webp", import.meta.url).href,
+    mobileImage: new URL("../../../assets/fotos clases/DSC07673.webp", import.meta.url).href,
+    component: MancoraBeginnerPage,
+    metaTitle: "Learn Kitesurfing in Peru | Ultimate Beginner's Guide to Mancora",
+    metaDescription: "Learn kitesurfing in Peru with our complete beginner's guide to Mancora. Explore the wind season, water conditions, safety standards, and lessons.",
+    readingTime: 12,
+    tags: ["kitesurf", "mancora", "beginner", "lessons", "peru", "safety"]
+  },
+  {
+    slug: "kitesurf-vs-wingfoil-which-watersport-should-you-learn",
+    category: "COMPARISONS",
+    title: "Kitesurf vs Wingfoil: Which Watersport Should You Learn?",
+    date: "June 1, 2026",
+    author: "Mancora Kite Club Editorial",
+    image: new URL("../../../assets/fotos wingfoil/DSC07146.webp", import.meta.url).href,
+    desktopImage: new URL("../../../assets/fotos wingfoil/DSC07146.webp", import.meta.url).href,
+    mobileImage: new URL("../../../assets/fotos wingfoil/DSC03425.webp", import.meta.url).href,
+    component: WingfoilComparisonPage,
+    metaTitle: "Kitesurf vs Wingfoil | Which Wind Watersport is Best for Beginners?",
+    metaDescription: "Compare kitesurfing vs wingfoiling on learning curve, physical requirements, safety, wind ranges, and find out which one is best to learn in Mancora.",
+    readingTime: 11,
+    tags: ["kitesurf", "wingfoil", "comparison", "lessons", "mancora", "beginner"]
+  },
+  {
+    slug: "iko-certified-kitesurfing-school-why-it-matters",
+    category: "KITESURFING PERU",
+    title: "IKO Certified Kitesurfing School: What It Means and Why It Matters",
+    date: "June 1, 2026",
+    author: "Mancora Kite Club Editorial",
+    image: new URL("../../../assets/fotos clases/DSC02331.webp", import.meta.url).href,
+    desktopImage: new URL("../../../assets/fotos clases/DSC02331.webp", import.meta.url).href,
+    mobileImage: new URL("../../../assets/fotos clases/DSC07692.webp", import.meta.url).href,
+    component: IKOCertificationPage,
+    metaTitle: "IKO Certified Kitesurfing School | Why It Matters for Your Safety",
+    metaDescription: "Learn why choosing an IKO certified kitesurfing school is essential for your safety and progression. Explore standard levels and the Global Rider Card.",
+    readingTime: 10,
+    tags: ["kitesurf", "iko certification", "safety", "lessons", "mancora", "instructor"]
   },
 ]
 

@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp, FaArrowRight } from 'react-icons/fa'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { buildWhatsAppUrl } from '../../lib/whatsapp.js'
 
@@ -13,62 +13,64 @@ function StayCTA() {
   return (
     <section 
       ref={ctaRef}
-      className="relative overflow-hidden bg-gradient-to-b from-slate-950 to-black px-6 py-24 text-center text-white sm:px-10 lg:px-16"
+      className="relative overflow-hidden bg-slate-950 px-6 py-28 text-white sm:px-10 lg:px-16"
     >
-      {/* Animated background blobs */}
-      <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-[#2A9D8F]/10 blur-3xl" />
-      <div className="absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-[#b7e28a]/10 blur-3xl" />
+      {/* Cinematic animated glowing backdrops */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#2A9D8F]/15 blur-[160px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#b7e28a]/12 blur-[160px] pointer-events-none animate-pulse-slow delay-1000" />
+
+      {/* Decorative subtle grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative mx-auto max-w-3xl"
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="relative mx-auto max-w-4xl rounded-[3rem] border border-white/10 bg-white/[0.02] backdrop-blur-md p-10 sm:p-16 lg:p-20 shadow-2xl text-center"
       >
         <div className="mb-6 inline-block">
-          <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="inline-flex items-center gap-3 rounded-full bg-[#2A9D8F]/20 px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#2A9D8F]"
-          >
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#2A9D8F]/20 to-[#b7e28a]/20 border border-[#2A9D8F]/30 text-[10px] font-black uppercase tracking-[0.3em] text-[#b7e28a] shadow-lg">
             ✨ Premium Experience
-          </motion.div>
+          </span>
         </div>
 
-        <h2 className="font-display text-5xl font-bold leading-tight sm:text-6xl">
+        <h2 className="font-display text-4xl sm:text-6xl font-black uppercase tracking-tighter leading-tight max-w-3xl mx-auto">
           {t('stay.ctaTitle')}
         </h2>
 
-        <p className="mt-6 text-lg leading-8 text-white/75">
+        <p className="mt-6 text-base sm:text-lg leading-relaxed text-slate-300 max-w-2xl mx-auto">
           {t('stay.ctaDesc')}
         </p>
 
         {/* CTA Buttons */}
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row">
           <motion.div
-            whileHover={{ scale: 1.05, boxShadow: "0 25px 50px rgba(42, 157, 143, 0.4)" }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="w-full sm:w-auto"
           >
             <Link
               to={`/build${currentLang === 'en' ? '' : currentLang === 'fr' ? '/fr' : '/esp'}`}
-              className="inline-flex min-h-14 items-center justify-center rounded-full bg-[#2A9D8F] px-8 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-[#2A9D8F]/90"
+              className="inline-flex min-h-14 w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-[#2A9D8F] to-[#2A9D8F]/90 px-10 text-xs font-black uppercase tracking-widest text-white shadow-xl shadow-[#2A9D8F]/20 transition-all duration-300 hover:shadow-2xl hover:shadow-[#2A9D8F]/35"
             >
+              <FaArrowRight className="text-[10px]" />
               {t('common.buildYourTrip')}
             </Link>
           </motion.div>
 
           <motion.div
-            whileHover={{ scale: 1.05, boxShadow: "0 25px 50px rgba(183, 226, 138, 0.3)" }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="w-full sm:w-auto"
           >
             <a
               href={buildWhatsAppUrl(stayMessage)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full border-2 border-[#b7e28a] px-8 text-sm font-bold uppercase tracking-wider text-[#b7e28a] transition hover:bg-[#b7e28a]/10"
+              className="inline-flex min-h-14 w-full sm:w-auto items-center justify-center gap-3 rounded-full border-2 border-[#b7e28a] px-10 text-xs font-black uppercase tracking-widest text-[#b7e28a] hover:bg-[#b7e28a]/10 hover:text-white transition-all duration-300"
             >
-              <FaWhatsapp className="text-lg" />
+              <FaWhatsapp className="text-sm" />
               {t('common.bookOnWhatsApp')}
             </a>
           </motion.div>

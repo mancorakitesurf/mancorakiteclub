@@ -348,3 +348,78 @@ export function getBreadcrumbListSchema(_lang = 'en', items = []) {
     })),
   }
 }
+
+/**
+ * Builds a LodgingBusiness schema
+ * @param {string} lang - 'en', 'es', 'fr'
+ */
+export function getLodgingBusinessSchema(lang = 'en') {
+  const descriptions = {
+    en: 'Premium beachfront accommodation at Mancora Kite Club. Ideal for kitesurfers and travelers.',
+    es: 'Hospedaje premium frente al mar en Mancora Kite Club. Ideal para kitesurfistas y viajeros.',
+    fr: 'Hébergement premium en bord de mer au Mancora Kite Club. Idéal pour les kitesurfeurs et voyageurs.',
+  }
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LodgingBusiness',
+    name: 'Mancora Kite Club Hotel',
+    description: descriptions[lang] || descriptions.en,
+    url: `${SITE_URL}/stay`,
+    telephone: '+51996557689',
+    email: 'kiteclub.mancora@gmail.com',
+    image: `${SITE_URL}/og/stay.webp`,
+    priceRange: '$$',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Av. Los Talleres 145',
+      addressLocality: 'Máncora',
+      addressRegion: 'Piura',
+      addressCountry: 'PE',
+    },
+    amenityFeature: [
+      { '@type': 'LocationFeatureSpecification', name: 'Beachfront', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Free Wi-Fi', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Kitesurf Gear Storage', value: true },
+    ]
+  }
+}
+
+/**
+ * Builds an AggregateRating schema for Reviews Page
+ * @param {string} lang - 'en', 'es', 'fr'
+ */
+export function getAggregateRatingSchema(lang = 'en') {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SportsActivityLocation',
+    name: 'Mancora Kite Club',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '150',
+    }
+  }
+}
+
+/**
+ * Builds a WebSite schema
+ * @param {string} lang - 'en', 'es', 'fr'
+ */
+export function getWebSiteSchema(lang = 'en') {
+  const names = {
+    en: 'Mancora Kite Club',
+    es: 'Mancora Kite Club',
+    fr: 'Mancora Kite Club',
+  }
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: names[lang] || names.en,
+    url: SITE_URL,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE_URL}/home?q={search_term_string}`,
+      'query-input': 'required name=search_term_string'
+    }
+  }
+}

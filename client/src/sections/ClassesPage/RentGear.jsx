@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 import { useI18n } from "../../app/providers/i18nContext"
 
 function RentGear() {
@@ -20,10 +21,13 @@ function RentGear() {
         className="mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          {t("classes.rentGear.title")}
+          {t("serviceCopy.rentGear.introTitle")}
         </h2>
+        <p className="mt-4 text-sm font-semibold tracking-widest uppercase text-[#DEFF9A]">
+          {t("serviceCopy.rentGear.heroTagline")}
+        </p>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          {t("classes.rentGear.subtitle")}
+          {t("serviceCopy.rentGear.introText")}
         </p>
       </motion.div>
 
@@ -60,6 +64,25 @@ function RentGear() {
           </table>
         </div>
       </div>
+
+      {/* Builder CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="mx-auto mt-16 max-w-2xl text-center"
+      >
+        <p className="mb-5 text-sm text-white/60 sm:text-base">
+          {t("serviceCopy.rentGear.builderNote")}
+        </p>
+        <Link
+          to="/build"
+          className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#DEFF9A] px-8 py-3 font-bold text-[#0A0F14] transition hover:bg-white"
+        >
+          {t("serviceCopy.rentGear.builderCta")}
+        </Link>
+      </motion.div>
     </section>
   )
 }

@@ -753,12 +753,47 @@
     "finalMessage": "Parfait ! Connectons-nous sur WhatsApp pour vous donner tous les détails et vous aider à réserver. Cliquez sur le bouton ! 🚀",
     "contactWhatsApp": "Contacter sur WhatsApp"
   },
+  "messages": {
+    "build": {
+      "greeting": "Bonjour ! Je prépare une expérience de kitesurf sur mesure à Máncora.",
+      "sectionTrip": "Mon Voyage",
+      "labelActivities": "Activités :",
+      "labelPackages": "Forfaits :",
+      "labelRentals": "Location :",
+      "labelStay": "Hébergement :",
+      "labelExtras": "Extras :",
+      "sectionContact": "Contact",
+      "labelName": "Nom :",
+      "labelEmail": "Email :",
+      "sectionTotal": "Investissement Total :",
+      "closing": "J'ai hâte d'échanger sur les détails.",
+      "noneActivities": "Aucune activité sélectionnée",
+      "nonePackages": "Aucun forfait sélectionné",
+      "noneRentals": "Aucune location sélectionnée",
+      "noneExtras": "Aucun extra sélectionné",
+      "noStay": "Aucun hébergement sélectionné",
+      "nightsLabel": "nuits",
+      "daysLabel": "jours",
+      "hoursShort": "h",
+      "notProvided": "Non renseigné",
+      "guestSingular": "personne",
+      "guestPlural": "personnes"
+    },
+    "contact": {
+      "greeting": "Bonjour équipe Máncora Kite Club, je m'appelle",
+      "introMessage": "Message :",
+      "closing": "Au plaisir d'échanger."
+    }
+  },
   "build": {
     "heroLabel": "Package Personnalisé",
     "heroTitle1": "Construisez",
     "heroTitle2": "Votre Voyage",
     "heroSubtitle": "Créez votre expérience de kitesurf parfaite. Combinez hébergement, cours, équipement et activités dans votre package idéal.",
     "stepActivity": "Activité",
+    "stepPackages": "Forfaits",
+    "stepRental": "Location",
+    "stepStay": "Séjour",
     "stepNights": "Nuits",
     "stepExtras": "Extras",
     "stepSummary": "Résumé",
@@ -767,6 +802,105 @@
     "reset": "Recommencer",
     "chooseActivity": "Choisissez Votre Activité",
     "chooseActivitySub": "Sélectionnez une ou combinez plusieurs expériences",
+    "choosePackages": "Sélectionnez vos forfaits",
+    "choosePackagesSub": "Choisissez un ou plusieurs forfaits par activité",
+    "addPackage": "Ajouter",
+    "removePackage": "Retirer",
+    "packagesSelected": "forfaits",
+    "packagesLabel": "Forfaits",
+    "rentalsLabel": "Location",
+    "rentalTitle": "Location de Matériel",
+    "rentalSub": "Choisissez la durée de location",
+    "selectRentalDays": "Choisir des jours",
+    "removeRental": "Retirer la location",
+    "packageIncludes": "Comprend",
+    "maxParticipants": "Max participants :",
+    "level": {
+      "beginner": "Débutant",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "packages": {
+      "includes": {
+        "gear": "Matériel inclus",
+        "board": "Planche incluse",
+        "instructor": "Instructeur certifié",
+        "safety": "Sécurité et radio",
+        "progression": "Progression guidée"
+      },
+      "kitesurf": {
+        "discovery": {
+          "name": "Kite Discovery",
+          "description": "Essayez et vivez votre premier décollage en sécurité."
+        },
+        "beginner": {
+          "name": "Cours Débutant",
+          "description": "Bases du contrôle de l'aile pour progresser sereinement."
+        },
+        "intensive": {
+          "name": "Cours Intensif",
+          "description": "Plus d'heures pour progresser rapidement."
+        },
+        "full": {
+          "name": "Cours Complet",
+          "description": "Programme complet pour maîtriser le kite à Mancora."
+        }
+      },
+      "wingfoil": {
+        "discovery": {
+          "name": "Wing Discovery",
+          "description": "Premiers vols en wingfoil avec accompagnement sûr."
+        },
+        "beginner": {
+          "name": "Cours Débutant",
+          "description": "Contrôle, équilibre et navigation de base."
+        },
+        "intensive": {
+          "name": "Cours Intensif",
+          "description": "Plus d'heures et feedback technique."
+        },
+        "full": {
+          "name": "Cours Complet",
+          "description": "Plan complet pour rider stable et confiant."
+        }
+      },
+      "surf": {
+        "intro": {
+          "name": "Surf Intro",
+          "description": "Premier take off avec technique et sécurité."
+        },
+        "progress": {
+          "name": "Surf Progression",
+          "description": "Améliorez rame, posture et lecture des vagues."
+        },
+        "intensive": {
+          "name": "Surf Intensif",
+          "description": "Plus d'eau pour affiner les turns et le contrôle."
+        },
+        "full": {
+          "name": "Surf Complet",
+          "description": "Programme long pour une vraie progression."
+        }
+      },
+      "sup": {
+        "intro": {
+          "name": "SUP Intro",
+          "description": "Équilibre, posture et premières sorties."
+        },
+        "explore": {
+          "name": "SUP Explorer",
+          "description": "Explorez la baie avec technique et contrôle."
+        },
+        "cruise": {
+          "name": "SUP Cruise",
+          "description": "Plus de temps sur l'eau pour maîtriser la rame."
+        },
+        "full": {
+          "name": "SUP Complet",
+          "description": "Plan étendu pour affiner équilibre et rythme."
+        }
+      }
+    },
     "kitesurfTagline": "Maîtrisez le cerf-volant et ridez les vagues",
     "wingfoilTagline": "Vollez au-dessus de l'eau avec wing et foil",
     "surfTagline": "Fun classique en vagues",
@@ -836,6 +970,16 @@
     "people": "personnes"
   },
   "stay": {
+    "about": {
+      "spotTitle": "Face au Spot",
+      "spotDesc": "Situé directement sur la plage, sortez de votre lit et glissez sur l'eau.",
+      "storageTitle": "Stockage Sécurisé",
+      "storageDesc": "Casiers fermés individuels pour ailes, kites et planches avec bacs de rinçage.",
+      "poolTitle": "Piscine Salée",
+      "poolDesc": "Détendez-vous après vos sessions dans notre piscine d'eau salée avec vue sur l'océan.",
+      "vibeTitle": "Sunset Socials",
+      "vibeDesc": "Profitez de nos rencontres sur le toit terrasse avec des couchers de soleil inoubliables."
+    },
     "heroLabel": "Hébergement",
     "heroTitle": "Séjour au Bali Lodge",
     "heroDesc": "Paradis en bord de mer à Máncora. Bungalows privés, piscine, yoga et forfaits tout inclus.",
@@ -891,11 +1035,37 @@
     "galleryExperience": "Votre maison plage",
     "locationLabel": "EMPLACEMENT",
     "locationTitle": "Trouvez-nous",
-    "locationAddress": "Centre d'accès estival s/n derrière l'hôtel The Point",
+    "locationAddress": "Centre d'accès estival s/n derrière l'hôtel The Point, Máncora",
     "locationDesc": "Situé au cœur de Máncora, à seulement 100m de la plage. Accès facile à tous les spots de kitesurf.",
+    "locationCoordinates": "COORDONNÉES",
+    "locationCoordinatesVal": "-4.1021° S, -81.0531° W",
+    "locationHowToGetThere": "Comment venir à Máncora",
+    "locationFlightTalara": "Via Talara (TYL) : 1 heure de taxi direct",
+    "locationFlightTumbes": "Via Tumbes (TBP) : 1,5 heures de taxi direct",
+    "locationFlightPiura": "Via Piura (PIU) : 2,5 heures de taxi direct",
+    "locationDistanceBeach": "À seulement 100 mètres du rivage de la plage",
+    "locationDistanceTown": "À 5 minutes à pied des meilleurs restaurants et commerces",
     "ctaTitle": "Prêt à Séjourner?",
     "ctaDesc": "Réservez votre séjour plage parfait. Cliquez ci-dessous pour nous envoyer un message!",
-    "whatsappMessage": "Salut! Je suis intéressé par la réservation d'hébergement au Bali Lodge. Pouvez-vous me donner plus d'info?"
+    "whatsappMessage": "Salut! Je suis intéressé par la réservation d'hébergement au Bali Lodge. Pouvez-vous me donner plus d'info?",
+    "selectRoom": "Réserver via Trip Builder",
+    "bookWhatsApp": "Demander par WhatsApp",
+    "rooms": {
+      "title": "Choisissez Votre Expérience d'Hébergement",
+      "solo": {
+        "name": "Chambre Privée Voyageur Solo",
+        "description": "Chambre privée confortable avec accès direct à la plage, lit simple, climatisation et eau chaude. Idéal pour les riders solos cherchant un repos calme entre les sessions."
+      },
+      "couple": {
+        "name": "Chambre Privée Double (Couple/Partagée)",
+        "description": "Chambre privée spacieuse disposant d'un lit double/king-size (ou de lits jumeaux sur demande), d'une vue sur le front de mer, d'une salle de bain privée et de la climatisation. Idéale pour les couples ou les amis partageant l'expérience."
+      },
+      "includes": {
+        "breakfast": "Délicieux petit-déjeuner quotidien inclus",
+        "storage": "Stockage sécurisé d'équipement de kite/surf inclus",
+        "facilities": "Accès à la piscine, deck en bord de mer et espaces communs"
+      }
+    }
   },
   "reviews": {
     "hero": {
@@ -1063,6 +1233,371 @@
         "category": "SÉCURITÉ",
         "date": "5 décembre 2023"
       }
+    }
+  },
+  "serviceCopy": {
+    "kitesurfLessons": {
+      "heroTagline": "Ressentez la traction. Apprenez l'océan. Surfez votre première vague.",
+      "introTitle": "Cours de Kitesurf",
+      "introText": "Coaching individuel dans des eaux chaudes et peu profondes avec des instructeurs certifiés IKO qui lisent cette côte depuis 15 ans. Du premier lancement au surf de vagues, chaque session est construite autour de votre rythme.",
+      "audience": "Pour les débutants, les riders en progression et tous ceux qui veulent sentir le vent.",
+      "benefits": [
+        "Zone de lancement sûre, peu profonde, avec un vent side-shore constant toute l'année.",
+        "Format privé ou semi-privé — vous fixez le rythme, nous guidons la progression.",
+        "Photos professionnelles et prises de drone optionnelles pour revivre chaque session."
+      ],
+      "cta": "Réserver un cours",
+      "builderNote": "Envie de combiner cours, hébergement et extras ? Créez votre voyage sur mesure.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "À partir de 120 $ USD par personne. Semi-privé (1 instructeur, 2 élèves) à partir de 90 $ USD par personne.",
+      "semiPrivateExplainer": "Semi-privé signifie un instructeur dédié partagé entre deux élèves — même qualité de coaching, prix plus léger."
+    },
+    "wingfoilLessons": {
+      "heroTagline": "Décollez de l'eau. Ni lignes, ni limites — juste le vent et le vol.",
+      "introTitle": "Cours de Wingfoil",
+      "introText": "Le wingfoil est le sport nautique qui connaît la croissance la plus rapide au monde, et le vent constant du Pacifique à Máncora en fait la salle de classe idéale. Nos coachs décomposent chaque manœuvre en étapes claires pour progresser session après session.",
+      "audience": "Pour les curieux, les kiteurs qui veulent essayer autre chose, et tous ceux attirés par la sensation de vol.",
+      "benefits": [
+        "Vent side-off constant et zones d'eau plate parfaites pour les premiers vols.",
+        "Planches de foil et wings premium, renouvelées chaque saison pour un apprentissage sûr et stable.",
+        "Coaching vidéo étape par étape pour visualiser vos progrès et corriger votre technique rapidement."
+      ],
+      "cta": "Réserver un cours",
+      "builderNote": "Ajoutez hébergement et extras pour construire un séjour wingfoil complet.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "À partir de 120 $ USD par personne. Semi-privé (1 instructeur, 2 élèves) à partir de 90 $ USD par personne.",
+      "semiPrivateExplainer": "Semi-privé signifie un instructeur dédié partagé entre deux élèves — même qualité de coaching, prix plus léger."
+    },
+    "surfSup": {
+      "heroTagline": "Pas de vent ? Pas de problème. Máncora assure toujours.",
+      "introTitle": "Surf & SUP",
+      "introText": "Des vagues propres et chaudes, des baies calmes le matin — le nord du Pérou est fait pour le surf et le paddleboard. Nos coachs choisissent le spot adapté à votre niveau pour que chaque session soit un progrès.",
+      "audience": "Pour les familles, les débutants et les riders qui veulent du temps en mer les jours calmes.",
+      "benefits": [
+        "Eau chaude toute l'année — pas de stress du combiné, juste un boardshort et de la crème solaire.",
+        "Sessions de surf guidées sur les meilleurs spots de Máncora pour débutants et intermédiaires.",
+        "Tours de SUP le long du littoral avec observation de la faune marine et options coucher de soleil."
+      ],
+      "cta": "Réserver une session",
+      "builderNote": "Combinez surf ou SUP avec des cours de kite et un hébergement en un seul voyage.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Surf à partir de 45 $ USD / 2 heures. SUP à partir de 35 $ USD / 1,5 heure."
+    },
+    "tripsDownwinds": {
+      "heroTagline": "Quittez Máncora. Suivez le vent le long de la côte.",
+      "introTitle": "Trips & Downwinds",
+      "introText": "Expéditions guidées le long de la côte nord du Pérou — des safaris d'une journée aux itinéraires côtiers d'une semaine. Nous gérons le transport, le repérage, la sécurité et la couverture drone pour que vous vous concentriez sur la navigation.",
+      "audience": "Pour les riders intermédiaires et avancés prêts à explorer au-delà du spot habituel.",
+      "benefits": [
+        "Véhicules 4×4 d'assistance et sécurité en bateau sur chaque itinéraire de downwind.",
+        "Accès à des point breaks isolés et des spots secrets que la plupart ne connaîtront jamais.",
+        "Couverture photo et drone professionnelle incluse dans les trips de plusieurs jours."
+      ],
+      "cta": "Explorer les trips",
+      "builderNote": "Ajoutez un trip à votre séjour et vos cours — un seul itinéraire, un seul prix.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Day trips à partir de 50 $ USD. Trips côtiers multi-jours à partir de 160 $ USD."
+    },
+    "rentGear": {
+      "heroTagline": "Équipement premium, vérifié chaque jour. Prenez et naviguez.",
+      "introTitle": "Location d'équipement",
+      "introText": "Équipement de kitesurf, wingfoil, surf et SUP de grandes marques, vérifié et préparé chaque matin. Choisissez votre setup, utilisez-le toute la journée et rendez-le — sans engagement, sans tracas.",
+      "audience": "Pour les riders voyageurs qui veulent du matériel fiable sans frais de bagages.",
+      "benefits": [
+        "Kites, wings, foils et planches de la saison en cours, de marques leaders.",
+        "Contrôles de sécurité quotidiens — chaque barre, ligne et leash inspectés avant le lancement.",
+        "Fenêtres de location flexibles : à l'heure, à la journée ou à la semaine — adaptez à votre voyage."
+      ],
+      "cta": "Voir les tarifs de location",
+      "builderNote": "Ajoutez la location de matériel à votre voyage avec cours et hébergement.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Équipement kitesurf à partir de 30 $ USD/h. Planches de surf à partir de 15 $ USD/jour. Tarifs complets dans le tableau."
+    },
+    "stayWithUs": {
+      "heroTagline": "Réveillez-vous à 100 mètres de l'eau. Endormez-vous au son des vagues.",
+      "introTitle": "Hébergement",
+      "introText": "Une base en bord de mer conçue pour les riders, les voyageurs et les matins côtiers sans hâte. Chambres privées, petit-déjeuner quotidien, récupération à la piscine et accès direct à chaque spot de kite et de surf à Máncora.",
+      "audience": "Pour les voyageurs solo, les couples et les petits groupes qui cherchent le confort entre les sessions.",
+      "benefits": [
+        "Emplacement en bord de mer — marchez jusqu'à la zone de lancement en moins de deux minutes.",
+        "Petit-déjeuner quotidien, piscine d'eau salée et stockage d'équipement inclus dans chaque séjour.",
+        "Chambres calmes avec climatisation et vue sur l'océan pour un vrai repos entre les sessions."
+      ],
+      "cta": "Explorer l'hébergement",
+      "builderNote": "Associez votre séjour à des cours, locations et extras pour l'expérience complète.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "À partir de 50 $ USD / nuit (solo) ou 80 $ USD / nuit (double). Petit-déjeuner et stockage d'équipement inclus."
+    },
+    "waveRidingCoaching": {
+      "heroTagline": "Vous savez naviguer. Apprenez maintenant à lire la vague.",
+      "introTitle": "Coaching Wave Riding",
+      "introText": "Sessions avancées en individuel avec des pros locaux qui connaissent chaque break du nord du Pérou. Nous vous transportons au meilleur spot du jour et utilisons l'analyse vidéo pour affiner le timing, le positionnement et le choix des vagues.",
+      "audience": "Pour les riders intermédiaires et avancés qui veulent élever leur niveau en vagues.",
+      "benefits": [
+        "Transport vers le meilleur spot de vagues du jour basé sur les données en direct de houle et de vent.",
+        "Revue vidéo image par image pour voir exactement où vous améliorer.",
+        "Coaching personnalisé par des riders qui surfent cette côte depuis plus d'une décennie."
+      ],
+      "cta": "Réserver un coaching",
+      "builderNote": "Ajoutez des sessions de coaching à votre voyage pour une progression structurée toute la semaine.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "80 $ USD par session. Transport vers le meilleur spot du jour inclus."
+    },
+    "extras": {
+      "heroTagline": "Peaufinez les détails. Faites le voyage à votre image.",
+      "introTitle": "Extras & Expériences",
+      "introText": "Ajoutez les touches finales à votre voyage — des excursions d'une journée vers d'autres spots côtiers, des massages de récupération, des transferts aéroport et un pack photo-vidéo professionnel de vos sessions.",
+      "audience": "Pour tous ceux qui construisent un voyage et veulent plus que des cours et un lit.",
+      "benefits": [
+        "Day trips vers des spots secrets de surf et de kite le long de la côte nord.",
+        "Massage et options bien-être post-session pour récupérer entre les navigations.",
+        "Transferts aéroport et packs photo-vidéo professionnels pour une expérience sans friction."
+      ],
+      "cta": "Ajouter des extras",
+      "builderNote": "Les extras sont ajoutés à l'étape 4 du constructeur de voyage. Mixez librement.",
+      "builderCta": "Créez votre voyage",
+      "priceNote": "Day trips 55 $ USD. Massage 21 $ USD. Transfert aéroport 42 $ USD. Pack photo et vidéo 40 $ USD."
+    }
+  },
+  "faqPage": {
+    "sections": {
+      "beginners": {
+        "category": "Doutes des Débutants",
+        "q1": {
+          "q": "Puis-je apprendre le kitesurf si je n'ai jamais fait de sports nautiques ?",
+          "a": "Absolument ! Vous n'avez besoin d'aucune expérience préalable en sports nautiques. Nos instructeurs certifiés IKO vous apprendront tout depuis le début, en commençant par le contrôle de l'aile sur la plage avant d'entrer dans l'eau."
+        },
+        "q2": {
+          "q": "De combien d'heures ai-je besoin pour commencer ?",
+          "a": "La plupart des débutants ont besoin de 9 à 12 heures pour devenir indépendants. Nous recommandons nos cours de 3 jours (6 heures) ou 5 jours (10+ heures) pour acquérir de bonnes bases et commencer à glisser sur la planche."
+        },
+        "q3": {
+          "q": "Est-il dangereux d'apprendre le kitesurf ?",
+          "a": "Avec un équipement moderne et un encadrement professionnel, le kitesurf est très sûr. Nous utilisons les derniers équipements de sécurité, enseignons dans des conditions sûres et nos instructeurs sont toujours à vos côtés."
+        },
+        "q4": {
+          "q": "Que se passe-t-il si j'ai peur ou si je ne progresse pas vite ?",
+          "a": "Il est tout à fait normal de se sentir nerveux ! Nos instructeurs s'adaptent à votre rythme. Si vous avez besoin de plus de temps sur le contrôle de l'aile avant d'aller dans l'eau, nous irons étape par étape jusqu'à ce que vous soyez confiant."
+        },
+        "q5": {
+          "q": "Quelle est la différence entre le kitesurf et le wingfoil ?",
+          "a": "Le kitesurf utilise une grande aile attachée à un harnais pour vous tracter sur une planche. Le wingfoil utilise une aile tenue à la main (non attachée au corps) et une planche avec un hydrofoil qui vous soulève au-dessus de l'eau. Les deux sont incroyablement amusants, mais le kitesurf est généralement plus facile à apprendre au début."
+        },
+        "q6": {
+          "q": "Dois-je apporter mon propre équipement ?",
+          "a": "Non, vous n'avez rien besoin d'apporter. Tous nos cours incluent un équipement premium (aile, planche, harnais, gilet d'impact, casque et combinaison). Apportez juste un maillot de bain, de la crème solaire et de la bonne humeur !"
+        },
+        "q7": {
+          "q": "Quel cours recommandez-vous pour les débutants ?",
+          "a": "Nous recommandons les cours Beginner (3 jours) ou Full Progression (5 jours). Ceux-ci vous donnent suffisamment de temps pour apprendre le contrôle de l'aile, la nage tractée et les premiers départs sur la planche (water start)."
+        },
+        "q8": {
+          "q": "Puis-je prendre des cours en couple ?",
+          "a": "Oui ! Nos cours Semi-Privés sont parfaits pour les couples ou les amis. Vous partagerez un instructeur et une aile entre deux étudiants, en vous relayant et en apprenant des progrès de l'autre."
+        },
+        "q9": {
+          "q": "Y a-t-il un âge minimum ?",
+          "a": "Nous enseignons aux élèves à partir de 12 ans, à condition qu'ils pèsent au moins 40 kg. Pour les jeunes enfants, veuillez nous contacter pour évaluer leur cas spécifique."
+        },
+        "q10": {
+          "q": "Quelles sont les conditions de vent idéales ?",
+          "a": "Máncora bénéficie de vents thermiques constants et réguliers presque toute l'année, généralement entre 15 et 25 nœuds. Ce sont des conditions idéales pour apprendre en toute sécurité et progresser rapidement."
+        },
+        "q11": {
+          "q": "Que signifie semi-privé ?",
+          "a": "Semi-privé signifie qu'un instructeur enseigne à deux étudiants qui partagent un équipement. C'est un excellent moyen de se reposer entre les essais et d'apprendre en observant son partenaire. Les prix sont par personne."
+        },
+        "q12": {
+          "q": "Puis-je combiner les cours avec l'hébergement et la location ?",
+          "a": "Oui ! Vous pouvez utiliser notre Créateur de Voyage pour concevoir votre forfait idéal, combinant cours de kitesurf, location de matériel et séjour dans notre Bali Lodge en bord de mer. <a href='/build' class='text-primary underline hover:text-white'>Construisez votre voyage ici</a>."
+        }
+      },
+      "about": {
+        "category": "À Propos de l'Apprentissage du Kitesurf",
+        "q1": {
+          "q": "Le Kitesurf est-il dangereux ?",
+          "a": "Avec le bon équipement, des instructeurs certifiés et des protocoles de sécurité, le kitesurf est un sport très sûr. Chez Mancora Kite Club, nous accordons la priorité à la sécurité à chaque session."
+        },
+        "q2": {
+          "q": "Ai-je besoin d'une expérience préalable ?",
+          "a": "Non. Nos cours sont conçus pour les débutants absolus ainsi que pour la progression avancée."
+        },
+        "q3": {
+          "q": "Est-ce que Máncora est un bon endroit pour apprendre ?",
+          "a": "Oui. Máncora offre un vent constant, de vastes étendues d'eau et des conditions idéales pour progresser rapidement."
+        },
+        "q4": {
+          "q": "Combien de temps faut-il pour apprendre ?",
+          "a": "Le temps d'apprentissage varie selon les individus, mais la plupart des gens peuvent apprendre les bases en 3 à 5 jours."
+        },
+        "q5": {
+          "q": "Quelle est la meilleure période pour apprendre ?",
+          "a": "La meilleure période pour apprendre est pendant la saison des vents."
+        }
+      },
+      "equipment": {
+        "category": "Équipement",
+        "q1": {
+          "q": "L'équipement est-il inclus dans le cours ?",
+          "a": "Oui. Tout l'équipement professionnel est inclus : aile, harnais, planche, casque et gilet d'impact."
+        },
+        "q2": {
+          "q": "Dois-je apporter mon propre équipement ?",
+          "a": "Non. Tout l'équipement professionnel est inclus dans le cours."
+        },
+        "q3": {
+          "q": "Quelles marques utilisez-vous ?",
+          "a": "Nous travaillons avec des marques premium reconnues internationalement."
+        },
+        "q4": {
+          "q": "Fournissez-vous des combinaisons ?",
+          "a": "Oui. Nous fournissons des combinaisons pour tous nos étudiants."
+        },
+        "q5": {
+          "q": "Fournissez-vous l'équipement de sécurité ?",
+          "a": "Oui. Nous fournissons l'équipement de sécurité pour tous nos étudiants."
+        }
+      },
+      "bookings": {
+        "category": "Réservations et Paiements",
+        "q1": {
+          "q": "Comment puis-je réserver ?",
+          "a": "Vous pouvez réserver directement sur notre site web ou nous contacter via WhatsApp."
+        },
+        "q2": {
+          "q": "Dois-je payer un acompte ?",
+          "a": "Oui. Nous demandons un acompte pour confirmer votre réservation."
+        },
+        "q3": {
+          "q": "Quelle est votre politique d'annulation ?",
+          "a": "Vous pouvez annuler votre réservation jusqu'à 24 heures avant le début du cours."
+        },
+        "q4": {
+          "q": "Quelle est votre politique de remboursement ?",
+          "a": "Si vous annulez votre réservation jusqu'à 24 heures avant le début du cours, vous recevrez un remboursement complet."
+        },
+        "q5": {
+          "q": "Quels moyens de paiement acceptez-vous ?",
+          "a": "Nous acceptons les cartes, les virements bancaires et les paiements internationaux."
+        }
+      }
+    }
+  },
+  "beginnersGuide": {
+    "hero": {
+      "eyebrow": "Votre Première Fois en Kitesurf ?",
+      "title": "Bienvenue dans le Vent",
+      "subtitle": "Découvrez pourquoi Máncora est l'endroit idéal pour commencer votre aventure en kitesurf."
+    },
+    "intro": {
+      "title": "Plus Facile Qu'il N'y Paraît",
+      "text": "Beaucoup de gens pensent que le kitesurf nécessite une force extrême dans les bras ou une expérience préalable des sports extrêmes. La vérité ? Tout est question de technique et de compréhension du vent. Avec notre méthodologie étape par étape et des eaux sûres, tout le monde peut apprendre à voler. Le kitesurf est un sport à faible impact où votre harnais prend toute la puissance de l'aile, vous laissant libre de diriger avec seulement deux doigts.",
+      "imageAlt": "Étudiant débutant pilotant une aile sur la plage"
+    },
+    "whyMancora": {
+      "eyebrow": "L'Endroit Parfait",
+      "title": "Pourquoi Apprendre à Máncora ?",
+      "subtitle": "Máncora offre des conditions uniques qui en font l'un des meilleurs spots au monde pour apprendre le kitesurf.",
+      "reasons": {
+        "wind": {
+          "title": "Vents Thermiques Constants",
+          "desc": "15–25 nœuds de vent cross-onshore stable presque tous les jours de l'année. Pas de rafales, pas de surprises."
+        },
+        "water": {
+          "title": "Eau Plate et Peu Profonde",
+          "desc": "De l'eau jusqu'à la taille sur des centaines de mètres, vous pouvez toujours vous lever et vous sentir en sécurité."
+        },
+        "weather": {
+          "title": "Soleil Toute l'Année",
+          "desc": "Eau chaude (24°C), ciel bleu et pas besoin de combinaison. Juste un short et de la crème solaire."
+        },
+        "certified": {
+          "title": "École Certifiée IKO",
+          "desc": "Nos instructeurs détiennent des certifications IKO internationales. Votre sécurité et progression sont nos priorités."
+        },
+        "community": {
+          "title": "Communauté Kite Vibrante",
+          "desc": "Rejoignez une communauté accueillante de riders du monde entier. Partagez sessions, histoires et couchers de soleil."
+        },
+        "stay": {
+          "title": "Logez au Spot",
+          "desc": "Notre Bali Lodge est à quelques pas de la plage de kite. Réveillez-vous, petit-déjeunez et marchez jusqu'à votre cours."
+        }
+      }
+    },
+    "whatsIncluded": {
+      "eyebrow": "Tout Ce Dont Vous Avez Besoin",
+      "title": "Qu'est-ce Qui Est Inclus ?",
+      "subtitle": "Vous n'avez rien à apporter. Nous fournissons tout l'équipement premium et de sécurité.",
+      "items": {
+        "kite": "Ailes d'entraînement et de dernière génération",
+        "board": "Planches twin-tip pour toutes tailles et niveaux",
+        "harness": "Harnais de taille confortable ajusté à votre corps",
+        "helmet": "Casque de sécurité certifié CE",
+        "vest": "Gilet d'impact pour une protection supplémentaire",
+        "wetsuit": "Rashguard / lycra (combinaison si nécessaire)",
+        "radio": "Radio dans le casque pour coaching en temps réel",
+        "insurance": "Assurance complète pendant le cours"
+      }
+    },
+    "learningPath": {
+      "title": "Votre Progression Étape par Étape",
+      "subtitle": "Une méthode structurée, sûre et amusante pour apprendre de zéro.",
+      "steps": {
+        "day1": {
+          "title": "Jour 1 : Contrôle sur la Plage",
+          "desc": "Apprenez la théorie de la fenêtre de vent, les systèmes de sécurité et comment contrôler une aile d'entraînement sur la plage avant de passer à une vraie aile gonflable. À la fin de la session, vous volerez en toute confiance sur le sable."
+        },
+        "day2": {
+          "title": "Jour 2 : Body Dragging",
+          "desc": "Il est temps de se mouiller ! Vous apprendrez comment utiliser la puissance de l'aile pour vous tracter dans l'eau sans planche. C'est essentiel pour récupérer votre planche et comprendre la véritable force du vent."
+        },
+        "day3": {
+          "title": "Jour 3 : Le Water Start",
+          "desc": "La partie la plus excitante. Vous combinerez le contrôle de l'aile avec la planche et tenterez vos premiers départs dans l'eau. Nous nous concentrerons sur la position du corps, l'alignement de la planche et la gestion de la puissance pour vous permettre de glisser sur vos premiers mètres."
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes des Débutants",
+      "subtitle": "Tout ce que vous voulez savoir avant votre première session.",
+      "items": {
+        "q1": {
+          "q": "Puis-je apprendre si je n'ai jamais fait de sports nautiques ?",
+          "a": "Absolument ! Aucune expérience préalable n'est nécessaire. Nous enseignons tout depuis le début."
+        },
+        "q2": {
+          "q": "Combien d'heures faut-il pour commencer à naviguer ?",
+          "a": "La plupart des débutants ont besoin de 9 à 12 heures (3–5 jours) pour devenir indépendants sur la planche."
+        },
+        "q3": {
+          "q": "Le kitesurf est-il dangereux ?",
+          "a": "Avec un équipement moderne et une instruction professionnelle, c'est très sûr. Nous suivons des protocoles de sécurité stricts."
+        },
+        "q4": {
+          "q": "Et si j'ai peur ou que je ne progresse pas vite ?",
+          "a": "C'est tout à fait normal ! Nos instructeurs s'adaptent à votre rythme. Pas de pression, on avance étape par étape."
+        },
+        "q5": {
+          "q": "Dois-je apporter mon propre équipement ?",
+          "a": "Non. Tout l'équipement premium est inclus dans chaque cours : aile, planche, harnais, casque et gilet d'impact."
+        },
+        "q6": {
+          "q": "Y a-t-il un âge minimum ?",
+          "a": "Nous enseignons aux élèves à partir de 12 ans, avec un poids minimum de 40 kg."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Prêt à Voler ?",
+      "title1": "Commencez Votre",
+      "title2": "Aventure Aujourd'hui",
+      "description": "Rejoignez-nous à Máncora et vivez le frisson du kitesurf avec des instructeurs certifiés et un équipement premium.",
+      "ctaButton": "Construisez Votre Voyage"
+    },
+    "seo": {
+      "title": "Guide du Kitesurf pour Débutants à Máncora | Mancora Kite Club",
+      "description": "Tout ce que vous devez savoir pour débuter le kitesurf à Máncora. Découvrez la progression, le matériel et pourquoi c'est plus facile qu'il n'y paraît."
     }
   }
 }

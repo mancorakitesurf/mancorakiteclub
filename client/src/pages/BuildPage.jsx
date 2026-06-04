@@ -1,14 +1,22 @@
 import { useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import SEO from '../components/SEO.jsx'
+import SchemaOrg from '../components/SchemaOrg.jsx'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../store/useTripBuilderStore.js'
 import { componentImages } from '../config/images.js'
 
-import { calcularPrecio, EXTRAS_OPTIONS } from '../sections/build/buildData.js'
+import {
+  ACTIVIDADES,
+  EXTRAS_OPTIONS,
+  calcularPrecio,
+  getPackageById,
+  getRentalById,
+  getRentalPrice,
+} from '../sections/build/buildData.js'
 import { StepIndicator, FloatingPrice, MobilePriceBar, stepVariants, stepTransition } from '../sections/build/BuildUI.jsx'
 
-import PasoActividad from '../sections/build/PasoActividad.jsx'
+import PasoPackages from '../sections/build/PasoPackages.jsx'
 import PasoNoches from '../sections/build/PasoNoches.jsx'
 import PasoRental from '../sections/build/PasoRental.jsx'
 import PasoExtras from '../sections/build/PasoExtras.jsx'
@@ -19,7 +27,8 @@ const { buildHeroBg } = componentImages["pages/BuildPage.jsx"]
 function BuildPage() {
   const { t, currentLang } = useI18n()
   const {
-    actividades, toggleActividad, setActividadHoras,
+    selectedPackages,
+    rentals, setRentalDays, removeRental,
     noches, setNoches,
     personas, setPersonas,
     extras, toggleExtra,
@@ -40,103 +49,87 @@ function BuildPage() {
   }
 
   const generarLinkWhatsApp = () => {
-    const total = calcularPrecio(actividades, noches, extras, extrasQty, personas)
-    
+    const total = calcularPrecio(selectedPackages, rentals, noches, extras, extrasQty, personas)
+    const localeMap = { en: 'en-US', es: 'es-PE', fr: 'fr-FR' }
+    const locale = localeMap[currentLang] || 'es-PE'
+
     // Format check-in and check-out dates
     const checkInDate = fechaInicio ? new Date(fechaInicio + 'T12:00:00') : new Date()
     const checkOutDate = new Date(checkInDate)
     checkOutDate.setDate(checkInDate.getDate() + noches)
 
     const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }
-    const checkInFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkInDate)
-    const checkOutFormatted = new Intl.DateTimeFormat(currentLang, dateOptions).format(checkOutDate)
+    const checkInFormatted = new Intl.DateTimeFormat(locale, dateOptions).format(checkInDate)
+    const checkOutFormatted = new Intl.DateTimeFormat(locale, dateOptions).format(checkOutDate)
 
-    const listActividades = Object.entries(actividades)
-      .map(([id, hrs]) => `* ${id}: ${hrs}h`)
-      .join('\n')
-    
-    const listExtras = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
-      .map((e) => `* ${t(e.labelKey)} (x${extrasQty[e.id] || 1})`)
-      .join('\n')
+    const currencyFormatted = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    }).format(total)
 
-    let mensaje = ''
+    const packagesByActivity = ACTIVIDADES.map((activity) => {
+      const activityPackages = selectedPackages.filter((pkg) => pkg.activityId === activity.id)
+      if (!activityPackages.length) return null
+      const lines = activityPackages.map((pkg) => {
+        const info = getPackageById(pkg.packageId)
+        if (!info) return `• ${pkg.packageId}`
+        return `• ${t(info.nameKey)} (${info.duration}) — $${info.price}`
+      })
+      return `${activity.label}:\n${lines.join('\n')}`
+    }).filter(Boolean)
 
-    if (currentLang === 'fr') {
-      mensaje = `*MANCORA KITE CLUB*
-*Details du Package*
--------------------------------------
-* Client: ${datosUsuario.nombre || '-'}
-* Email: ${datosUsuario.email || '-'}
-* Personnes: ${personas}
+    const packagesText = packagesByActivity.length > 0
+      ? packagesByActivity.join('\n')
+      : t('messages.build.nonePackages')
 
-* Sejour:
-- Arrivee (Check-in): ${checkInFormatted}
-- Depart (Check-out): ${checkOutFormatted}
-- Duree: ${noches} nuits
+    const rentalsList = rentals.map((rental) => {
+      const info = getRentalById(rental.rentalId)
+      const price = getRentalPrice(rental.rentalId, rental.days)
+      return `• ${info ? t(info.labelKey) : rental.rentalId} (${rental.days} ${t('messages.build.daysLabel')}) — $${price}`
+    })
+    const rentalsText = rentalsList.length > 0
+      ? rentalsList.join('\n')
+      : t('messages.build.noneRentals')
 
-* Activites:
-${listActividades || '  Aucune'}
+    const extrasList = EXTRAS_OPTIONS.filter((e) => extras.includes(e.id))
+      .map((e) => `${t(e.labelKey)} x${extrasQty[e.id] || 1}`)
+    const extrasText = extrasList.length > 0
+      ? extrasList.join(', ')
+      : t('messages.build.noneExtras')
 
-* Extras:
-${listExtras || '  Aucun'}
+    const stayText = noches > 0
+      ? `${noches} ${t('messages.build.nightsLabel')} (${checkInFormatted} - ${checkOutFormatted})`
+      : t('messages.build.noStay')
 
-=====================================
-* TOTAL ESTIME: $${total} USD
-=====================================
-_Bonjour! J'ai prepare mon package personnalise sur le site web et j'aimerais confirmer la disponibilite._`
-    } else if (currentLang === 'en') {
-      mensaje = `*MANCORA KITE CLUB*
-*Package Details*
--------------------------------------
-* Client: ${datosUsuario.nombre || '-'}
-* Email: ${datosUsuario.email || '-'}
-* Guests: ${personas}
+    const nameValue = datosUsuario.nombre?.trim() || t('messages.build.notProvided')
+    const emailValue = datosUsuario.email?.trim() || t('messages.build.notProvided')
+    const guestsLabel = personas === 1
+      ? t('messages.build.guestSingular')
+      : t('messages.build.guestPlural')
 
-* Stay:
-- Check-in: ${checkInFormatted}
-- Check-out: ${checkOutFormatted}
-- Duration: ${noches} nights
+    const totalText = `${currencyFormatted} (${personas} ${guestsLabel})`
 
-* Activities:
-${listActividades || '  None'}
+    const mensaje = `${t('messages.build.greeting')}
 
-* Extras:
-${listExtras || '  None'}
+  ${t('messages.build.sectionTrip')}
+  • ${t('messages.build.labelPackages')}\n${packagesText}
+  • ${t('messages.build.labelRentals')} ${rentalsText}
+  • ${t('messages.build.labelStay')} ${stayText}
+  • ${t('messages.build.labelExtras')} ${extrasText}
 
-=====================================
-* ESTIMATED TOTAL: $${total} USD
-=====================================
-_Hello! I have built my custom package on the website and would like to confirm availability._`
-    } else {
-      // Default to Spanish (es)
-      mensaje = `*MANCORA KITE CLUB*
-*Detalle de Paquete*
--------------------------------------
-* Cliente: ${datosUsuario.nombre || '-'}
-* Correo: ${datosUsuario.email || '-'}
-* Personas: ${personas}
+  ${t('messages.build.sectionContact')}
+  • ${t('messages.build.labelName')} ${nameValue}
+  • ${t('messages.build.labelEmail')} ${emailValue}
 
-* Estadia:
-- Llegada (Check-in): ${checkInFormatted}
-- Salida (Check-out): ${checkOutFormatted}
-- Duracion: ${noches} noches
+  ${t('messages.build.sectionTotal')} ${totalText}
 
-* Actividades:
-${listActividades || '  Ninguna'}
-
-* Extras:
-${listExtras || '  Ninguno'}
-
-=====================================
-* TOTAL ESTIMADO: $${total} USD
-=====================================
-_Hola! He armado mi paquete personalizado en la web y me gustaria confirmar disponibilidad._`
-    }
+  ${t('messages.build.closing')}`
 
     return `https://wa.me/51996557689?text=${encodeURIComponent(mensaje)}`
   }
 
-  const precioTotal = calcularPrecio(actividades, noches, extras, extrasQty, personas)
+  const precioTotal = calcularPrecio(selectedPackages, rentals, noches, extras, extrasQty, personas)
 
   return (
     <div className="min-h-screen bg-[#0e1b17]">
@@ -147,6 +140,7 @@ _Hola! He armado mi paquete personalizado en la web y me gustaria confirmar disp
         canonicalPath={currentLang === 'en' ? '/build' : `/${currentLang === 'fr' ? 'fr' : 'esp'}/build`}
         hreflang={{ en: '/build', es: '/esp/build', fr: '/fr/build', default: '/build' }}
       />
+      <SchemaOrg type="LocalBusiness" />
 
       <div className="relative overflow-hidden bg-background-dark py-32 sm:py-48 lg:py-56">
         <div className="absolute inset-0 z-0">
@@ -208,16 +202,15 @@ _Hola! He armado mi paquete personalizado en la web y me gustaria confirmar disp
               exit="exit"
               transition={stepTransition}
             >
-              {paso === 1 && <PasoActividad actividades={actividades} toggleActividad={toggleActividad} setActividadHoras={setActividadHoras} />}
-              {paso === 2 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
-              {paso === 3 && (
+              {paso === 1 && <PasoPackages />}
+              {paso === 2 && (
                 <PasoRental
-                  extras={extras}
-                  extrasQty={extrasQty}
-                  toggleExtra={toggleExtra}
-                  setExtraQty={setExtraQty}
+                  rentals={rentals}
+                  setRentalDays={setRentalDays}
+                  removeRental={removeRental}
                 />
               )}
+              {paso === 3 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
               {paso === 4 && (
                 <PasoExtras
                   extras={extras}
@@ -228,7 +221,8 @@ _Hola! He armado mi paquete personalizado en la web y me gustaria confirmar disp
               )}
               {paso === 5 && (
                 <PasoResumen
-                  actividades={actividades}
+                  selectedPackages={selectedPackages}
+                  rentals={rentals}
                   noches={noches}
                   personas={personas}
                   extras={extras}

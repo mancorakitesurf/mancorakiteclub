@@ -1,8 +1,10 @@
 import SEO from '../components/SEO.jsx'
+import SchemaOrg from '../components/SchemaOrg.jsx'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { localizePath } from '../lib/routes.js'
 import StayHeroCarousel from '../sections/stay/StayHeroCarousel.jsx'
 import StayAbout from '../sections/stay/StayAbout.jsx'
+import StayRooms from '../sections/stay/StayRooms.jsx'
 import StayAmenities from '../sections/stay/StayAmenities.jsx'
 import StayGallery from '../sections/stay/StayGallery.jsx'
 import StayLocation from '../sections/stay/StayLocation.jsx'
@@ -22,10 +24,12 @@ function StayPage() {
         canonicalPath={localizePath('/stay', currentLang)}
         hreflang={{ en: '/stay', es: '/esp/stay', fr: '/fr/stay', default: '/stay' }}
       />
+      <SchemaOrg type="LodgingBusiness" />
 
       <StayHeroCarousel />
       <StayAbout />
       <TrustBadges variant="compact" />
+      <StayRooms />
       <StayAmenities />
       <StayGallery />
       <StayLocation />

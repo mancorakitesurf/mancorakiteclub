@@ -23,6 +23,7 @@ const WingfoilLessonsPage = lazy(() => import('../pages/services/WingfoilLessons
 const WaveRidingCoachingPage = lazy(() => import('../pages/services/WaveRidingCoachingPage.jsx'))
 const TripsDownwindsPage = lazy(() => import('../pages/services/TripsDownwindsPage.jsx'))
 const SurfSupPage = lazy(() => import('../pages/services/SurfSupPage.jsx'))
+const BeginnersGuidePage = lazy(() => import('../pages/BeginnersGuidePage.jsx'))
 
 const SITE_ROUTES = [
   { path: 'home', element: <HomePage /> },
@@ -46,6 +47,7 @@ const SITE_ROUTES = [
   { path: 'contact', element: <ContactPage /> },
   { path: 'reviews', element: <ReviewsPage /> },
   { path: 'waves', element: <WavesPage /> },
+  { path: 'beginners', element: <BeginnersGuidePage /> },
   { path: 'services/kitesurf-lessons', element: <KitesurfLessonsPage /> },
   { path: 'services/wingfoil-lessons', element: <WingfoilLessonsPage /> },
   { path: 'services/wave-riding-coaching', element: <WaveRidingCoachingPage /> },

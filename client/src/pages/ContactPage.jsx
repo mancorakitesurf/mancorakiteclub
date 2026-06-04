@@ -5,6 +5,7 @@ import FullscreenHero from '../components/ui/FullscreenHero.jsx'
 import { createPresetHeroSlides } from '../lib/fullscreenHeroSlides.js'
 import { buildWhatsAppUrl } from '../lib/whatsapp.js'
 import SEO from '../components/SEO.jsx'
+import SchemaOrg from '../components/SchemaOrg.jsx'
 import { useI18n } from '../app/providers/i18nContext.js'
 import { localizePath } from '../lib/routes.js'
 
@@ -82,7 +83,9 @@ function ContactPage() {
   const handleSendWhatsApp = (e) => {
     e.preventDefault()
     if (!formName.trim() || !formMessage.trim()) return
-    const texto = `Hola Kite Club!, te habla ${formName.trim()}, ${formMessage.trim()}`
+    const texto = `${t('messages.contact.greeting')} ${formName.trim()}.
+${t('messages.contact.introMessage')} ${formMessage.trim()}
+${t('messages.contact.closing')}`
     window.open(buildWhatsAppUrl(texto), '_blank', 'noopener,noreferrer')
   }
 
@@ -96,6 +99,7 @@ function ContactPage() {
         canonicalPath={localizePath('/contact', currentLang)}
         hreflang={{ en: '/contact', es: '/esp/contact', fr: '/fr/contact', default: '/contact' }}
       />
+      <SchemaOrg type="LocalBusiness" />
 
       <div className="overflow-hidden bg-white dark:bg-surface-dark">
         {/* HERO */}

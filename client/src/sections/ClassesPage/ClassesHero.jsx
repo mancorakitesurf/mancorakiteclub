@@ -12,7 +12,7 @@ function ClassesHero() {
       as="section"
       eyebrow={t("classes.kitesurf.hero.eyebrow")}
       title={title}
-      subtitle={t(CLASSES_HERO.subtitleKey)}
+      subtitle={t("serviceCopy.kitesurfLessons.heroTagline")}
       slides={createPresetHeroSlides('lessons', {
         desktop: [CLASSES_HERO.image],
         alt: title,

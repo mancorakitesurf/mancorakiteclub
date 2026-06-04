@@ -1,5 +1,27 @@
 import { componentImages } from '../../config/images.js'
-const { mancoraImg, hawaiiImg } = componentImages["sections/blogPage1/destinationsData.js"]
+const {
+  mancoraImg,
+  acapulcoImg,
+  amalfiImg,
+  barcelonetaImg,
+  bondiImg,
+  cancunImg,
+  copacabanaImg,
+  dubrovnikImg,
+  hawaiiBlogImg,
+  ibizaImg,
+  kutaImg,
+  maldivesImg,
+  miamiImg,
+  monacoImg,
+  mykonosImg,
+  myrtleBeachImg,
+  niceImg,
+  patongImg,
+  santaMonicaImg,
+  santoriniImg,
+  veniceImg,
+} = componentImages["sections/blogPage1/destinationsData.js"]
 function toHalfStep(value) {
   return Math.round(value * 2) / 2
 }
@@ -57,7 +79,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Waikiki Shoreline - Hawaii",
-    image: mancoraImg,
+    image: hawaiiBlogImg,
     rating: 3.5,
     shortDescription:
       "Crowded swim zones, weak wind windows and messy shorebreak.",
@@ -72,7 +94,7 @@ export const DESTINATIONS = [
   },
   {
     name: "South Beach - Miami",
-    image: hawaiiImg,
+    image: miamiImg,
     rating: 4,
     shortDescription:
       "Soft waves, low consistency and heavy beach traffic.",
@@ -87,7 +109,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Copacabana City Beach - Brazil",
-    image: mancoraImg,
+    image: copacabanaImg,
     rating: 3.4,
     shortDescription:
       "Choppy water, gusty wind and constant crowd pressure.",
@@ -102,7 +124,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Barceloneta - Spain",
-    image: hawaiiImg,
+    image: barcelonetaImg,
     rating: 4.2,
     shortDescription:
       "Crowded urban beach with weak surf and unreliable wind.",
@@ -117,7 +139,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Venice Beach - California",
-    image: mancoraImg,
+    image: veniceImg,
     rating: 3,
     shortDescription:
       "Low-quality wind, beach obstacles and crowded nearshore water.",
@@ -132,7 +154,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Patong Beach - Phuket",
-    image: hawaiiImg,
+    image: patongImg,
     rating: 1.9,
     shortDescription:
       "Light wind, shorebreak clutter and chaotic tourist traffic.",
@@ -147,7 +169,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Kuta Beach - Bali",
-    image: mancoraImg,
+    image: kutaImg,
     rating: 2.3,
     shortDescription:
       "Messy surf, low wind quality and crowded beginner waters.",
@@ -162,7 +184,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Cancun Hotel Zone - Mexico",
-    image: hawaiiImg,
+    image: cancunImg,
     rating: 4.2,
     shortDescription:
       "Narrow launch areas, gusty side-on wind and weak wave shape.",
@@ -177,7 +199,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Amalfi Main Beach - Italy",
-    image: mancoraImg,
+    image: amalfiImg,
     rating: 2.8,
     shortDescription:
       "Low wind, rocky edges and almost no functional launch room.",
@@ -192,7 +214,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Nice Promenade Beach - France",
-    image: hawaiiImg,
+    image: niceImg,
     rating: 2.0,
     shortDescription:
       "Pebble shoreline, unstable breeze and poor wave quality.",
@@ -207,7 +229,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Dubrovnik Old Harbor Coast - Croatia",
-    image: mancoraImg,
+    image: dubrovnikImg,
     rating: 3.7,
     shortDescription:
       "Boat traffic, low wind reliability and dangerous nearshore access.",
@@ -222,7 +244,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Ibiza Town Beach - Spain",
-    image: hawaiiImg,
+    image: ibizaImg,
     rating: 4.5,
     shortDescription:
       "Crowded leisure beach with weak swell and erratic breeze.",
@@ -237,7 +259,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Mykonos Old Port Waterfront - Greece",
-    image: mancoraImg,
+    image: mykonosImg,
     rating: 2.7,
     shortDescription:
       "Harbor interference, rough gusts and unsafe launch logistics.",
@@ -252,7 +274,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Acapulco Bay - Mexico",
-    image: hawaiiImg,
+    image: acapulcoImg,
     rating: 4.3,
     shortDescription:
       "Weak usable wind, messy chop and strong tourist interference.",
@@ -267,7 +289,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Monaco Harbor Front - Monaco",
-    image: mancoraImg,
+    image: monacoImg,
     rating: 1.6,
     shortDescription:
       "Minimal ride space, constant obstacles and almost no safe setup.",
@@ -282,7 +304,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Myrtle Beach Central Strip - USA",
-    image: hawaiiImg,
+    image: myrtleBeachImg,
     rating: 2.4,
     shortDescription:
       "Onshore slop, average wind and overloaded public beach zones.",
@@ -297,7 +319,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Santorini Caldera Coast - Greece",
-    image: hawaiiImg,
+    image: santoriniImg,
     rating: 1.8,
     shortDescription:
       "Cliff-heavy access, poor launch options and inconsistent usable wind.",
@@ -312,7 +334,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Maldives Resort Lagoon - Maldives",
-    image: mancoraImg,
+    image: maldivesImg,
     rating: 3.7,
     shortDescription:
       "Beautiful water but weak waves, narrow wind windows and shallow hazards.",
@@ -327,7 +349,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Bondi Beach - Australia",
-    image: hawaiiImg,
+    image: bondiImg,
     rating: 2.3,
     shortDescription:
       "Crowded surf zone, restricted kite areas and inconsistent wind direction.",
@@ -342,7 +364,7 @@ export const DESTINATIONS = [
   },
   {
     name: "Santa Monica Beach - California",
-    image: mancoraImg,
+    image: santaMonicaImg,
     rating: 4.2,
     shortDescription:
       "Light wind, crowded shoreline and poor wave consistency.",

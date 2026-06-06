@@ -15,44 +15,36 @@ const BASE_NAV_ITEMS = [
   {
     to: '/services',
     label: 'Services',
-    labelKey: 'nav.services',
-      submenu: [
-    {
-      labelKey: 'services.kitesurf',
-      fallbackLabel: 'Kitesurf Lessons',
-      path: '/services/kitesurf-lessons',
-    },
-    {
-      labelKey: 'services.wingfoil',
-      fallbackLabel: 'Wingfoil Lessons',
-      path: '/services/wingfoil-lessons',
-    },
-    {
-      labelKey: 'services.rentals',
-      fallbackLabel: 'Rentals',
-      path: '/services/rent-gear',
-    },
-    {
-      labelKey: 'services.trips',
-      fallbackLabel: 'Trips & Downwinds',
-      path: '/services/trips-downwinds',
-    },
-    {
-      labelKey: 'services.surf',
-      fallbackLabel: 'Surf Lessons',
-      path: '/services/surf-sup',
-    },
-    {
-      labelKey: 'services.sup',
-      fallbackLabel: 'SUP / Paddle Lessons',
-      path: '/services/surf-sup',
-    },
-    {
-      labelKey: 'services.waveCoaching',
-      fallbackLabel: 'Wave Riding Coaching',
-      path: '/services',
-    },
-  ],
+    submenu: [
+      {
+        label: 'Kitesurf Lessons',
+        path: '/services/kitesurf-lessons',
+      },
+      {
+        label: 'Wingfoil Lessons',
+        path: '/services/wingfoil-lessons',
+      },
+      {
+        label: 'Rentals',
+        path: '/services/rent-gear',
+      },
+      {
+        label: 'Trips & Downwinds',
+        path: '/services/trips-downwinds',
+      },
+      {
+        label: 'Surf Lessons',
+        path: '/services/surf-sup',
+      },
+      {
+        label: 'SUP / Paddle Lessons',
+        path: '/services/surf-sup',
+      },
+      {
+        label: 'Wave Riding Coaching',
+        path: '/services',
+      },
+    ],
   },
   { to: '/stay', label: 'Stay With Us' },
   { to: '/build', label: 'Build Your Trip' },
@@ -76,23 +68,16 @@ function Header() {
   const servicesDropdownRef = useRef(null)
   const headerRef = useRef(null)
 
-  const { changeLanguage, currentLang, t } = useI18n()
+  const { changeLanguage, currentLang } = useI18n()
   const activePath = location.pathname
-
-  const safeT = (key, fallback) => {
-    const value = t(key)
-    return value && value !== key ? value : fallback
-  }
 
   const NAV_ITEMS = BASE_NAV_ITEMS.map((item) => ({
     ...item,
     to: localizePath(item.to, currentLang),
-    label: item.labelKey ? safeT(item.labelKey, item.label) : item.label,
     submenu: item.submenu
       ? item.submenu.map((submenuItem) => ({
           ...submenuItem,
           to: localizePath(submenuItem.path, currentLang),
-          label: safeT(submenuItem.labelKey, submenuItem.fallbackLabel),
         }))
       : undefined,
   }))
@@ -158,9 +143,9 @@ function Header() {
   }, [])
 
   const languages = [
-    { code: 'es', labelKey: 'header.spanish' },
-    { code: 'en', labelKey: 'header.english' },
-    { code: 'fr', labelKey: 'header.french' },
+    { code: 'es', label: 'Spanish' },
+    { code: 'en', label: 'English' },
+    { code: 'fr', label: 'French' },
   ]
 
   const otherLanguages = languages.filter((l) => l.code !== currentLang)
@@ -168,8 +153,8 @@ function Header() {
   const currentLanguage = languages.find((l) => l.code === currentLang)
 
   const currentLanguageLabel = currentLanguage
-    ? safeT(currentLanguage.labelKey, currentLanguage.code.toUpperCase())
-    : safeT('header.language', 'Language')
+    ? currentLanguage.label
+    : 'Language'
 
   const navTextClass = scrolled
     ? 'text-slate-700 dark:text-white/80'
@@ -287,7 +272,7 @@ function Header() {
                           <div className="overflow-hidden rounded-2xl border border-white/10 bg-background-dark/95 p-2 shadow-2xl shadow-black/30 backdrop-blur-xl">
                             {item.submenu.map((service) => (
                               <Link
-                                key={`${service.path}-${service.labelKey}`}
+                                key={`${service.path}-${service.label}`}
                                 to={service.to}
                                 role="menuitem"
                                 onClick={handleNavClick}
@@ -371,7 +356,7 @@ function Header() {
                           <span className="inline-flex min-w-8 items-center justify-center rounded-full border border-white/10 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.18em]">
                             {lang.code}
                           </span>
-                          <span>{safeT(lang.labelKey, lang.code.toUpperCase())}</span>
+                          <span>{lang.label}</span>
                         </span>
                       </button>
                     ))}
@@ -560,7 +545,7 @@ function Header() {
                                 <div className="mx-auto mt-2 w-full max-w-xs rounded-2xl border border-white/10 bg-white/[0.04] p-2 backdrop-blur-md">
                                   {item.submenu.map((service) => (
                                     <Link
-                                      key={`${service.path}-${service.labelKey}`}
+                                      key={`${service.path}-${service.label}`}
                                       to={service.to}
                                       onClick={handleNavClick}
                                       className="block rounded-xl px-4 py-2.5 text-sm font-medium tracking-wide text-white/75 transition-all duration-200 hover:bg-primary/10 hover:text-white"
@@ -618,7 +603,7 @@ function Header() {
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white/95 px-10 py-3.5 text-sm font-bold uppercase tracking-[0.25em] text-background-dark shadow-xl transition-all duration-500 hover:bg-primary hover:text-white hover:shadow-primary/30"
                 >
                   <span className="relative z-10">
-                    {safeT('common.bookNow', 'Book Now')}
+                    Book Now
                   </span>
                 </motion.a>
 

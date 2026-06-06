@@ -4,6 +4,7 @@ import { ArrowRight, BedDouble, Clock3, MessageCircle, Sparkles, Waves } from 'l
 import { trips } from '../../content/trips.js'
 import { resolveImage } from '../../config/images.js'
 import { useI18n } from '../../app/providers/i18nContext.js'
+import { localizePath } from '../../lib/routes.js'
 
 const FEATURED_TRIP = trips[0]
 const SUPPORT_TRIPS = trips.slice(1, 3)
@@ -49,7 +50,7 @@ const STEPS = [
 ]
 
 function BuilderPreview() {
-  const { t } = useI18n()
+  const { t, currentLang } = useI18n()
 
   const tripText = (trip, field) => {
     const key = `home.builderPreview.trips.${trip.slug}.${field}`
@@ -186,7 +187,7 @@ function BuilderPreview() {
                   {t('home.builderPreview.footerText')}
                 </p>
                 <Link
-                  to="/build"
+                  to={localizePath('/build', currentLang)}
                   className="inline-flex h-12 w-full items-center justify-center gap-3 rounded-full border border-primary/30 bg-primary px-7 text-sm font-bold text-white shadow-lg shadow-primary/30 transition-all hover:scale-[1.02] hover:bg-primary/90 hover:shadow-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/70 focus:ring-offset-2 focus:ring-offset-surface-dark sm:w-auto"
                 >
                   {t('home.builderPreview.cta')}

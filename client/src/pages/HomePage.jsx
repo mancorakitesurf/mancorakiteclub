@@ -35,7 +35,7 @@ function HomePage() {
         breadcrumbs={[{ name: 'Home', path: '/' }]}
       />
       <Hero />
-      <TrustBadges variant="compact" />
+      <TrustBadges variant="marquee" />
       <CommunityGallery />
       <OurStory />
       <Team />

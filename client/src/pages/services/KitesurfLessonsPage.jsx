@@ -33,7 +33,7 @@ function KitesurfLessonsPage() {
       <SchemaOrg type="Course" serviceKey="kitesurfLessons" />
       
       <ClassesHero />
-      <TrustBadges variant="compact" showTitle />
+      <TrustBadges variant="marquee" showTitle />
       <ClassesIntro />
       <ClassesPricing />
       <ClassesBenefits />

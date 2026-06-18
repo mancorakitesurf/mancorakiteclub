@@ -27,7 +27,7 @@ function WaveRidingCoachingPage() {
       <SchemaOrg type="Course" serviceKey="waveRiding" />
 
       <WaveRiding />
-      <TrustBadges variant="compact" />
+      <TrustBadges variant="marquee" />
     </>
   )
 }

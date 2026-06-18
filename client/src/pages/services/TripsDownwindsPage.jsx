@@ -27,7 +27,7 @@ function TripsDownwindsPage() {
       <SchemaOrg type="Course" serviceKey="tripsDownwinds" />
 
       <TripsDownwinds />
-      <TrustBadges variant="compact" />
+      <TrustBadges variant="marquee" />
     </>
   )
 }

@@ -54,7 +54,7 @@ function ClassesPage() {
 
       {/* 1. Kitesurf Lessons (Servicio Principal) */}
       <ClassesHero />
-      <TrustBadges variant="compact" showTitle />
+      <TrustBadges variant="marquee" showTitle />
       <ClassesIntro />
       <ClassesPricing />
       <ClassesBenefits />

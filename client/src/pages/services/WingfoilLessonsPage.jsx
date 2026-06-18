@@ -31,7 +31,7 @@ function WingfoilLessonsPage() {
       <SchemaOrg type="Course" serviceKey="wingfoilLessons" />
 
       <WingfoilIntro />
-      <TrustBadges variant="compact" />
+      <TrustBadges variant="marquee" />
       <WingfoilWithUs />
       <WingfoilClasses />
       <WingfoilBenefits />

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { BadgeCheck, MapPinned, PackageCheck, Radio, ShieldCheck, Star } from 'lucide-react'
 import { brandImages } from '../../config/images.js'
 import { TRUST_BADGES } from '../../data/trustBadges.js'
@@ -70,10 +69,79 @@ function TrustBadges({
 }) {
   const { t } = useI18n()
   const isFull = variant === 'full'
+  const isMarquee = variant === 'marquee'
   const badges = getBadges(limit)
 
   if (!badges.length) {
     return null
+  }
+
+  if (isMarquee) {
+    const marqueeBadges = [...badges, ...badges]
+
+    return (
+      <section
+        aria-label={t('trustBadges.aria')}
+        className={cx('relative overflow-hidden bg-[#1e3130] py-5 text-white sm:py-6', className)}
+      >
+        <style>
+          {`
+            @keyframes trust-badges-scroll {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+
+            .trust-badges-marquee {
+              animation: trust-badges-scroll 34s linear infinite;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+              .trust-badges-marquee {
+                animation-duration: 80s;
+              }
+            }
+          `}
+        </style>
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#1e3130] to-transparent sm:w-28" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#1e3130] to-transparent sm:w-28" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#38E0C8]/35 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#C19B6C]/30 to-transparent" aria-hidden="true" />
+
+        <div className="overflow-hidden whitespace-nowrap">
+          <ul className="trust-badges-marquee flex w-max items-center gap-12 pr-12 sm:gap-16 sm:pr-16 lg:gap-20 lg:pr-20">
+            {marqueeBadges.map((badge, index) => {
+              const Icon = ICONS[badge.icon] || ShieldCheck
+              const isFeatured = featured && badge.priority
+              const tone = TONES[badge.tone] || TONES.turquoise
+
+              return (
+                <li
+                  key={`${badge.id}-${index}`}
+                  className="flex shrink-0 items-center gap-3 sm:gap-4"
+                  aria-hidden={index >= badges.length ? 'true' : undefined}
+                >
+                  <span className={cx('flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border sm:h-14 sm:w-14', tone.icon)}>
+                    {isFeatured && ikoLogo ? (
+                      <img
+                        src={ikoLogo}
+                        alt={t('trustBadges.ikoLogoAlt')}
+                        loading="lazy"
+                        className="max-h-8 w-auto object-contain"
+                      />
+                    ) : (
+                      <Icon size={22} strokeWidth={1.8} aria-hidden="true" />
+                    )}
+                  </span>
+                  <span className="font-display text-xl font-black uppercase tracking-[0.16em] text-white sm:text-2xl">
+                    {t(badge.labelKey)}
+                  </span>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </section>
+    )
   }
 
   return (

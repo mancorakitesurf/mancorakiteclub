@@ -28,7 +28,7 @@ function StayPage() {
 
       <StayHeroCarousel />
       <StayAbout />
-      <TrustBadges variant="compact" />
+      <TrustBadges variant="marquee" />
       <StayRooms />
       <StayAmenities />
       <StayGallery />

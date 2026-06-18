@@ -22,7 +22,7 @@ function ReviewPage() {
       <SchemaOrg type="AggregateRating" />
 
       <HeroReview />
-      <TrustBadges variant="compact" />
+      <TrustBadges variant="marquee" />
       <TestimoniosPlaceholder />
       <VideoTestimonios />
       <JoinTribeCTA />

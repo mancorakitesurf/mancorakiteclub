@@ -11,46 +11,46 @@ import { useUIStore } from '../../store/useUIStore.js'
 const clubLogo = brandImages.logoComplete
 
 const BASE_NAV_ITEMS = [
-  { to: '/home', label: 'Home' },
+  { to: '/home', labelKey: 'nav.home' },
   {
     to: '/services',
-    label: 'Services',
+    labelKey: 'nav.services',
     submenu: [
       {
-        label: 'Kitesurf Lessons',
+        labelKey: 'servicesNav.kitesurfLessons',
         path: '/services/kitesurf-lessons',
       },
       {
-        label: 'Wingfoil Lessons',
+        labelKey: 'servicesNav.wingfoilLessons',
         path: '/services/wingfoil-lessons',
       },
       {
-        label: 'Rentals',
+        labelKey: 'servicesNav.rentals',
         path: '/services/rent-gear',
       },
       {
-        label: 'Trips & Downwinds',
+        labelKey: 'servicesNav.tripsDownwinds',
         path: '/services/trips-downwinds',
       },
       {
-        label: 'Surf Lessons',
+        labelKey: 'servicesNav.surfLessons',
         path: '/services/surf-sup',
       },
       {
-        label: 'SUP / Paddle Lessons',
+        labelKey: 'servicesNav.supPaddleLessons',
         path: '/services/surf-sup',
       },
       {
-        label: 'Wave Riding Coaching',
+        labelKey: 'servicesNav.waveRidingCoaching',
         path: '/services',
       },
     ],
   },
-  { to: '/stay', label: 'Stay With Us' },
-  { to: '/build', label: 'Build Your Trip' },
-  { to: '/reviews', label: 'Reviews' },
-  { to: '/contact', label: 'Contact' },
-  { to: '/blog', label: 'Blog' },
+  { to: '/stay', labelKey: 'nav.stayWithUs' },
+  { to: '/build', labelKey: 'nav.buildYourTrip' },
+  { to: '/reviews', labelKey: 'nav.reviews' },
+  { to: '/contact', labelKey: 'nav.contact' },
+  { to: '/blog', labelKey: 'nav.blog' },
 ]
 
 const MotionLink = motion.create(Link)
@@ -68,7 +68,7 @@ function Header() {
   const servicesDropdownRef = useRef(null)
   const headerRef = useRef(null)
 
-  const { changeLanguage, currentLang } = useI18n()
+  const { changeLanguage, currentLang, t } = useI18n()
   const activePath = location.pathname
 
   const NAV_ITEMS = BASE_NAV_ITEMS.map((item) => ({
@@ -102,6 +102,12 @@ function Header() {
       document.body.style.overflow = ''
     }
   }, [isMobileMenuOpen])
+
+  useEffect(() => {
+    setIsLangOpen(false)
+    setIsServicesOpen(false)
+    setIsMobileServicesOpen(false)
+  }, [currentLang])
 
   // Cerrar con tecla ESC
   useEffect(() => {
@@ -143,9 +149,9 @@ function Header() {
   }, [])
 
   const languages = [
-    { code: 'es', label: 'Spanish' },
-    { code: 'en', label: 'English' },
-    { code: 'fr', label: 'French' },
+    { code: 'es', label: t('header.spanish') },
+    { code: 'en', label: t('header.english') },
+    { code: 'fr', label: t('header.french') },
   ]
 
   const otherLanguages = languages.filter((l) => l.code !== currentLang)
@@ -154,15 +160,17 @@ function Header() {
 
   const currentLanguageLabel = currentLanguage
     ? currentLanguage.label
-    : 'Language'
+    : t('header.language')
+
+  const navTypographyClass = 'text-[15px] font-semibold tracking-[0.01em]'
 
   const navTextClass = scrolled
-    ? 'text-slate-700 dark:text-white/80'
-    : 'text-white/80'
+    ? 'text-slate-700 dark:text-white/85'
+    : 'text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.45)]'
 
   const controlClass = scrolled
     ? 'border-slate-200 bg-white/90 text-slate-900 shadow-sm hover:border-primary hover:bg-primary/10 dark:border-white/10 dark:bg-background-dark/80 dark:text-white'
-    : 'border-white/20 bg-white/5 text-white hover:border-primary hover:bg-primary/10'
+    : 'border-white/30 bg-white/10 text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.4)] hover:border-primary hover:bg-primary/10'
 
   const handleNavClick = () => {
     setIsMobileMenuOpen(false)
@@ -208,7 +216,14 @@ function Header() {
             : 'border-transparent bg-transparent'
         }`}
       >
-        <div className="mx-auto flex min-h-20 w-full max-w-7xl items-center gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
+        <div
+          aria-hidden="true"
+          className={`pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/55 via-black/20 to-transparent transition-opacity duration-500 ${
+            scrolled ? 'opacity-0' : 'opacity-100'
+          }`}
+        />
+
+        <div className="relative mx-auto flex min-h-20 w-full max-w-7xl items-center gap-3 px-4 py-3 sm:gap-4 sm:px-6 lg:px-8">
           <MotionLink
             to={homePath}
             className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3"
@@ -221,7 +236,11 @@ function Header() {
             <img
               src={clubLogo}
               alt="THE CLUB logo"
-              className="h-8 w-auto shrink-0 sm:h-9 lg:h-10"
+              className={`w-auto shrink-0 transition-all duration-500 ${
+                scrolled
+                  ? 'h-8 sm:h-9 lg:h-10'
+                  : 'h-9 drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)] sm:h-11 lg:h-12'
+              }`}
             />
           </MotionLink>
 
@@ -242,13 +261,13 @@ function Header() {
                       aria-haspopup="menu"
                       aria-expanded={isServicesOpen}
                       aria-controls="desktop-services-menu"
-                      className={`group relative inline-flex items-center gap-2 text-sm font-medium transition-colors ${navTextClass}`}
+                      className={`group relative inline-flex items-center gap-2 transition-colors ${navTypographyClass} ${navTextClass}`}
                       onClick={() => setIsServicesOpen(true)}
                       onFocus={() => setIsServicesOpen(true)}
                       whileHover={{ y: -2 }}
                       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                     >
-                      <span className="relative z-10">{item.label}</span>
+                      <span className="relative z-10">{t(item.labelKey)}</span>
                       <motion.span
                         animate={{ rotate: isServicesOpen ? 180 : 0 }}
                         className="relative z-10 text-[10px] text-primary"
@@ -272,13 +291,13 @@ function Header() {
                           <div className="overflow-hidden rounded-2xl border border-white/10 bg-background-dark/95 p-2 shadow-2xl shadow-black/30 backdrop-blur-xl">
                             {item.submenu.map((service) => (
                               <Link
-                                key={`${service.path}-${service.label}`}
+                                key={`${service.path}-${service.labelKey}`}
                                 to={service.to}
                                 role="menuitem"
                                 onClick={handleNavClick}
                                 className="group flex items-center justify-between rounded-xl px-4 py-3 text-sm font-medium text-white/85 transition-all duration-200 hover:bg-primary/10 hover:text-white focus:bg-primary/10 focus:text-white focus:outline-none"
                               >
-                                <span>{service.label}</span>
+                                <span>{t(service.labelKey)}</span>
                                 <span className="h-1.5 w-1.5 rounded-full bg-transparent transition-colors group-hover:bg-primary group-focus:bg-primary" />
                               </Link>
                             ))}
@@ -293,13 +312,13 @@ function Header() {
               return (
                 <MotionLink
                   key={item.to}
-                  className={`group relative text-sm font-medium transition-colors ${navTextClass}`}
+                  className={`group relative transition-colors ${navTypographyClass} ${navTextClass}`}
                   to={item.to}
                   onClick={handleNavClick}
                   whileHover={{ y: -2 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 10 }}
                 >
-                  <span className="relative z-10">{item.label}</span>
+                  <span className="relative z-10">{t(item.labelKey)}</span>
                   <motion.span
                     className="absolute -bottom-1 left-0 h-0.5 w-0 bg-primary"
                     whileHover={{ width: '100%' }}
@@ -316,9 +335,10 @@ function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="button"
+                aria-label={t('header.selectLanguage')}
                 aria-expanded={isLangOpen}
                 onClick={() => setIsLangOpen((prev) => !prev)}
-                className={`flex h-10 items-center gap-2 rounded-full border px-3 text-xs font-medium backdrop-blur-md transition-all duration-300 sm:h-11 sm:px-4 sm:text-sm ${controlClass}`}
+                className={`flex h-10 items-center gap-2 rounded-full border px-3 text-[13px] font-semibold backdrop-blur-md transition-all duration-300 sm:h-11 sm:px-4 sm:text-[15px] ${controlClass}`}
               >
                 <span>{currentLanguageLabel}</span>
                 <motion.span
@@ -371,7 +391,8 @@ function Header() {
               whileTap={{ scale: 0.9 }}
               type="button"
               className={`relative inline-flex h-11 w-11 items-center justify-center rounded-full border text-lg transition-all duration-300 lg:hidden ${controlClass}`}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? t('header.closeMenu') : t('header.openMenu')}
+              aria-expanded={isMobileMenuOpen}
               onClick={() => {
                 const nextIsOpen = !isMobileMenuOpen
                 setIsMobileMenuOpen(nextIsOpen)
@@ -460,7 +481,7 @@ function Header() {
                     setIsMobileMenuOpen(false)
                     setIsMobileServicesOpen(false)
                   }}
-                  aria-label="Close menu"
+                  aria-label={t('header.closeMenu')}
                   className="text-3xl text-white/80 transition-all duration-300 hover:rotate-90 hover:text-primary"
                 >
                   <FaTimes />
@@ -512,7 +533,7 @@ function Header() {
                             }`}
                           >
                             <span className="relative">
-                              {item.label}
+                              {t(item.labelKey)}
                               <motion.span
                                 className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
                                 initial={{ width: isActive ? '100%' : '0%' }}
@@ -545,12 +566,12 @@ function Header() {
                                 <div className="mx-auto mt-2 w-full max-w-xs rounded-2xl border border-white/10 bg-white/[0.04] p-2 backdrop-blur-md">
                                   {item.submenu.map((service) => (
                                     <Link
-                                      key={`${service.path}-${service.label}`}
+                                      key={`${service.path}-${service.labelKey}`}
                                       to={service.to}
                                       onClick={handleNavClick}
                                       className="block rounded-xl px-4 py-2.5 text-sm font-medium tracking-wide text-white/75 transition-all duration-200 hover:bg-primary/10 hover:text-white"
                                     >
-                                      {service.label}
+                                      {t(service.labelKey)}
                                     </Link>
                                   ))}
                                 </div>
@@ -569,7 +590,7 @@ function Header() {
                           }`}
                         >
                           <span className="relative">
-                            {item.label}
+                            {t(item.labelKey)}
                             <motion.span
                               className="absolute -bottom-1 left-1/2 h-[3px] -translate-x-1/2 rounded-full bg-primary"
                               initial={{ width: isActive ? '100%' : '0%' }}
@@ -603,7 +624,7 @@ function Header() {
                   className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white/95 px-10 py-3.5 text-sm font-bold uppercase tracking-[0.25em] text-background-dark shadow-xl transition-all duration-500 hover:bg-primary hover:text-white hover:shadow-primary/30"
                 >
                   <span className="relative z-10">
-                    Book Now
+                    {t('nav.bookNow')}
                   </span>
                 </motion.a>
 

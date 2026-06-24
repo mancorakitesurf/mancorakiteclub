@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
-import { PRIVATE_CLASSES, translateClassItem } from "./classesData"
+import { KITESURF_CONFIG, translateClassItem } from "./classesData"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 import { useI18n } from "../../app/providers/i18nContext"
 
-function ClassesSteps() {
+function ClassesSteps({ config = KITESURF_CONFIG }) {
   const { t } = useI18n()
-  const privateClasses = PRIVATE_CLASSES.map((item) => translateClassItem(item, t))
+  const privateClasses = config.privateClasses.map((item) => translateClassItem(item, t))
 
   return (
     <section className="relative bg-[#0f1416] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -19,10 +19,10 @@ function ClassesSteps() {
         className="mx-auto mb-16 max-w-4xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
-          {t("classes.kitesurf.steps.title")}
+          {t(`${config.classesNs}.steps.title`)}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-gray-400 sm:text-base md:text-lg">
-          {t("classes.kitesurf.steps.subtitle")}
+          {t(`${config.classesNs}.steps.subtitle`)}
         </p>
       </motion.div>
 

@@ -1,12 +1,16 @@
 import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
-import { CLASSES_INTRO } from "./classesData"
+import { KITESURF_CONFIG } from "./classesData"
 import { useI18n } from "../../app/providers/i18nContext.js"
 
 const { introHover } = componentImages["sections/ClassesPage/ClassesIntro.jsx"]
-function ClassesIntro() {
+function ClassesIntro({ config = KITESURF_CONFIG }) {
   const { t } = useI18n()
-  const title = t("serviceCopy.kitesurfLessons.introTitle")
+  const title = t(`${config.copyNs}.introTitle`)
+  const text = t(`${config.copyNs}.introText`)
+  const hoverImage = config.intro.hoverImage || introHover
+  const hoverAlt = t(`${config.classesNs}.intro.hoverAlt`)
+  const safeHoverAlt = typeof hoverAlt === 'string' ? hoverAlt : title
 
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
@@ -25,7 +29,7 @@ function ClassesIntro() {
           </h2>
 
           <p className="text-center text-sm leading-relaxed text-slate-600 sm:text-base md:text-left">
-            {t("serviceCopy.kitesurfLessons.introText")}
+            {text}
           </p>
         </motion.div>
 
@@ -39,15 +43,15 @@ function ClassesIntro() {
         >
           {/* Imagen base */}
           <img
-            src={CLASSES_INTRO.image}
+            src={config.intro.image}
             alt={title}
             className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700 group-hover:opacity-0"
           />
 
           {/* Imagen hover */}
           <img
-            src={introHover}
-            alt={t("classes.kitesurf.intro.hoverAlt")}
+            src={hoverImage}
+            alt={safeHoverAlt}
             className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
           />
 

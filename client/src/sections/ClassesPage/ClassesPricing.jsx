@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { PRIVATE_CLASSES, SEMI_PRIVATE_CLASSES, translateClassItem } from "./classesData"
+import { KITESURF_CONFIG, translateClassItem } from "./classesData"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 import { useI18n } from "../../app/providers/i18nContext"
 
@@ -70,10 +70,10 @@ function ClassCard({ item, index }) {
   )
 }
 
-function ClassesPricing() {
+function ClassesPricing({ config = KITESURF_CONFIG }) {
   const { t } = useI18n()
-  const privateClasses = PRIVATE_CLASSES.map((item) => translateClassItem(item, t))
-  const semiPrivateClasses = SEMI_PRIVATE_CLASSES.map((item) => translateClassItem(item, t))
+  const privateClasses = config.privateClasses.map((item) => translateClassItem(item, t))
+  const semiPrivateClasses = config.semiPrivateClasses.map((item) => translateClassItem(item, t))
 
   return (
     <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -87,10 +87,10 @@ function ClassesPricing() {
         className="mx-auto mb-16 max-w-3xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          {t("classes.kitesurf.pricing.privateTitle")}
+          {t(`${config.classesNs}.pricing.privateTitle`)}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          {t("classes.kitesurf.pricing.privateDescription")}
+          {t(`${config.classesNs}.pricing.privateDescription`)}
         </p>
       </motion.div>
 
@@ -109,10 +109,10 @@ function ClassesPricing() {
         className="mx-auto mt-24 mb-16 max-w-3xl text-center sm:mb-20"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] sm:text-3xl md:text-4xl lg:text-5xl">
-          {t("classes.kitesurf.pricing.semiPrivateTitle")}
+          {t(`${config.classesNs}.pricing.semiPrivateTitle`)}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          {t("classes.kitesurf.pricing.semiPrivateDescription")}
+          {t(`${config.classesNs}.pricing.semiPrivateDescription`)}
         </p>
       </motion.div>
 

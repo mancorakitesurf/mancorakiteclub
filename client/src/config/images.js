@@ -672,6 +672,84 @@ export const componentImages = Object.freeze({
     gallery10: image("fotos comunidad/DSC06099.webp"),
     gallery11: image("fotos clases/DSC07692.webp"),
     gallery12: image("fotos trip/DSC00506.webp"),
+
+    // WINGFOIL — hero + intro (template reuse)
+    heroWingfoilImg: image("fotos wingfoil/DSC05417.webp"),
+    introWingfoilImg: image("fotos wingfoil/DSC09936.webp"),
+    introWingfoilHover: image("fotos wingfoil/DSC07146.webp"),
+
+    // WINGFOIL — private classes
+    wingPrivateDiscovery: image("fotos wingfoil/DSC09936.webp"),
+    wingPrivateDiscoveryHover: image("fotos wingfoil/DSC09982.webp"),
+    wingPrivateBeginner: image("fotos wingfoil/DSC07146.webp"),
+    wingPrivateBeginnerHover: image("fotos wingfoil/DSC07130.webp"),
+    wingPrivateIntensive: image("fotos wingfoil/DSC05634.webp"),
+    wingPrivateIntensiveHover: image("fotos wingfoil/DSC00360.webp"),
+    wingPrivateFull: image("fotos wingfoil/DSC05417.webp"),
+    wingPrivateFullHover: image("fotos wingfoil/DSC00036.webp"),
+
+    // WINGFOIL — semi-private classes
+    wingSemiDiscovery: image("fotos wingfoil/DSC03295.webp"),
+    wingSemiDiscoveryHover: image("fotos wingfoil/DSC00021.webp"),
+    wingSemiBeginner: image("fotos wingfoil/DSC03425.webp"),
+    wingSemiBeginnerHover: image("fotos wingfoil/DSC00008.webp"),
+    wingSemiIntensive: image("fotos wingfoil/DSC05369.webp"),
+    wingSemiIntensiveHover: image("fotos wingfoil/DSC09982.webp"),
+    wingSemiFull: image("fotos wingfoil/DSC05362.webp"),
+    wingSemiFullHover: image("fotos wingfoil/DSC07130.webp"),
+
+    // WINGFOIL — gallery (12)
+    wingGallery1: image("fotos wingfoil/DSC09936.webp"),
+    wingGallery2: image("fotos wingfoil/DSC07146.webp"),
+    wingGallery3: image("fotos wingfoil/DSC05634.webp"),
+    wingGallery4: image("fotos wingfoil/DSC05417.webp"),
+    wingGallery5: image("fotos wingfoil/DSC05369.webp"),
+    wingGallery6: image("fotos wingfoil/DSC05362.webp"),
+    wingGallery7: image("fotos wingfoil/DSC03295.webp"),
+    wingGallery8: image("fotos wingfoil/DSC03425.webp"),
+    wingGallery9: image("fotos wingfoil/DSC09982.webp"),
+    wingGallery10: image("fotos wingfoil/DSC07130.webp"),
+    wingGallery11: image("fotos wingfoil/DSC00036.webp"),
+    wingGallery12: image("fotos wingfoil/DSC00360.webp"),
+
+    // SURF & SUP — hero + intro
+    heroSurfSup: image("fotos paquetes surf y hotel/DSC04263.webp"),
+    introSurfSup: image("fotos paquetes surf y hotel/DSC01088.webp"),
+    introSurfSupHover: image("fotos paquetes surf y hotel/DSC01003.webp"),
+
+    // SURF & SUP — private classes
+    surfSupPrivateDiscovery: image("fotos paquetes surf y hotel/DSC04263.webp"),
+    surfSupPrivateDiscoveryHover: image("fotos paquetes surf y hotel/DSC01088.webp"),
+    surfSupPrivateBeginner: image("fotos paquetes surf y hotel/IMG_6558.webp"),
+    surfSupPrivateBeginnerHover: image("fotos mancora y mas/DSC02156.webp"),
+    surfSupPrivateIntensive: image("fotos mancora y mas/IMG_3603.webp"),
+    surfSupPrivateIntensiveHover: image("fotos mancora y mas/IMG_3893.webp"),
+    surfSupPrivateFull: image("fotos mancora y mas/IMG_7170.webp"),
+    surfSupPrivateFullHover: image("fotos mancora y mas/DSC02158.webp"),
+
+    // SURF & SUP — semi-private classes
+    surfSupSemiDiscovery: image("fotos mancora y mas/DSC03684.webp"),
+    surfSupSemiDiscoveryHover: image("fotos mancora y mas/DSC03686.webp"),
+    surfSupSemiBeginner: image("fotos mancora y mas/DSC03697.webp"),
+    surfSupSemiBeginnerHover: image("fotos mancora y mas/DSC03698.webp"),
+    surfSupSemiIntensive: image("fotos paquetes surf y hotel/DSC01003.webp"),
+    surfSupSemiIntensiveHover: image("fotos paquetes surf y hotel/IMG_6558.webp"),
+    surfSupSemiFull: image("fotos mancora y mas/IMG_5443.webp"),
+    surfSupSemiFullHover: image("fotos mancora y mas/DSC02141.webp"),
+
+    // SURF & SUP — gallery (12)
+    surfSupGallery1: image("fotos paquetes surf y hotel/DSC04263.webp"),
+    surfSupGallery2: image("fotos mancora y mas/DSC02156.webp"),
+    surfSupGallery3: image("fotos paquetes surf y hotel/DSC01088.webp"),
+    surfSupGallery4: image("fotos mancora y mas/IMG_3603.webp"),
+    surfSupGallery5: image("fotos paquetes surf y hotel/DSC01003.webp"),
+    surfSupGallery6: image("fotos mancora y mas/DSC03684.webp"),
+    surfSupGallery7: image("fotos paquetes surf y hotel/IMG_6558.webp"),
+    surfSupGallery8: image("fotos mancora y mas/DSC03697.webp"),
+    surfSupGallery9: image("fotos mancora y mas/IMG_7170.webp"),
+    surfSupGallery10: image("fotos mancora y mas/DSC02158.webp"),
+    surfSupGallery11: image("fotos mancora y mas/IMG_3893.webp"),
+    surfSupGallery12: image("fotos mancora y mas/IMG_5443.webp"),
   }),
   "sections/ClassesPage/equipment/classesContent.js": Object.freeze({
     kiteImage: image("fotos trip/DSC08247.webp"),

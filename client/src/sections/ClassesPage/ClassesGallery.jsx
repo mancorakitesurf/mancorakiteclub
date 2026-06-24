@@ -1,4 +1,4 @@
-import { CLASSES_GALLERY } from "./classesData"
+import { KITESURF_CONFIG } from "./classesData"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { useI18n } from "../../app/providers/i18nContext"
@@ -19,10 +19,10 @@ const GALLERY_LABEL_KEYS = [
   "rideTogether",
 ]
 
-function ClassesGallery() {
+function ClassesGallery({ config = KITESURF_CONFIG }) {
   const { t } = useI18n()
 
-  const galleryItems = CLASSES_GALLERY.map((image, index) => ({
+  const galleryItems = config.gallery.map((image, index) => ({
     image,
     label: GALLERY_LABEL_KEYS[index]
       ? t(`classes.gallery.items.${GALLERY_LABEL_KEYS[index]}`)

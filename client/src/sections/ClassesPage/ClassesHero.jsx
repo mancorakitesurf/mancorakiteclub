@@ -1,22 +1,24 @@
 import FullscreenHero from "../../components/ui/FullscreenHero.jsx"
 import { createPresetHeroSlides } from "../../lib/fullscreenHeroSlides.js"
-import { CLASSES_HERO } from "./classesData"
+import { KITESURF_CONFIG } from "./classesData"
 import { useI18n } from "../../app/providers/i18nContext.js"
 
-function ClassesHero() {
+function ClassesHero({ config = KITESURF_CONFIG }) {
   const { t } = useI18n()
-  const title = t(CLASSES_HERO.titleKey)
+  const title = t(config.hero.titleKey)
+  const eyebrow = config.hero.eyebrowKey ? t(config.hero.eyebrowKey) : undefined
+  const subtitle = t(`${config.copyNs}.heroTagline`)
 
   return (
     <FullscreenHero
       as="section"
-      eyebrow={t("classes.kitesurf.hero.eyebrow")}
+      eyebrow={eyebrow}
       title={title}
-      subtitle={t("serviceCopy.kitesurfLessons.heroTagline")}
-      slides={createPresetHeroSlides('lessons', {
-        desktop: [CLASSES_HERO.image],
+      subtitle={subtitle}
+      slides={createPresetHeroSlides(config.heroPreset || 'lessons', {
+        desktop: [config.hero.image].filter(Boolean),
         alt: title,
-        imageClassName: 'object-[58%_center] md:object-center',
+        imageClassName: config.hero.imageClassName || 'object-center',
       })}
     />
   )

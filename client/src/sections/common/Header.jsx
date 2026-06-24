@@ -33,11 +33,7 @@ const BASE_NAV_ITEMS = [
         path: '/services/trips-downwinds',
       },
       {
-        labelKey: 'servicesNav.surfLessons',
-        path: '/services/surf-sup',
-      },
-      {
-        labelKey: 'servicesNav.supPaddleLessons',
+        labelKey: 'servicesNav.surfSupLessons',
         path: '/services/surf-sup',
       },
       {

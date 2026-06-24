@@ -1,99 +1,10 @@
-import { componentImages } from '../../config/images.js'
 import { motion } from "framer-motion"
 import { buildClassInquiryMessage, buildWhatsAppUrl } from "../../lib/whatsapp"
 import { useI18n } from "../../app/providers/i18nContext"
-
-const { wingIntro, wingIntroHover, wingFundamental, wingFundamentalHover, wingAdvanced, wingAdvancedHover, wingMaster, wingMasterHover, wingIntroSemi, wingIntroSemiHover, wingFundamentalSemi, wingFundamentalSemiHover, wingAdvancedSemi, wingAdvancedSemiHover, wingMasterSemi, wingMasterSemiHover } = componentImages["sections/ClassesPage/WingfoilClasses.jsx"]
-const WINGFOIL_PRIVATE_CLASSES = [
-  {
-    id: "discovery",
-    titleKey: "classes.wingfoil.private.discovery.title",
-    durationKey: "classes.wingfoil.private.discovery.duration",
-    priceKey: "classes.wingfoil.private.discovery.price",
-    image: wingIntro,
-    hoverImage: wingIntroHover,
-    featuresKey: "classes.wingfoil.private.discovery.features"
-  },
-  {
-    id: "beginner",
-    titleKey: "classes.wingfoil.private.beginner.title",
-    durationKey: "classes.wingfoil.private.beginner.duration",
-    priceKey: "classes.wingfoil.private.beginner.price",
-    image: wingFundamental,
-    hoverImage: wingFundamentalHover,
-    featuresKey: "classes.wingfoil.private.beginner.features"
-  },
-  {
-    id: "intensive",
-    titleKey: "classes.wingfoil.private.intensive.title",
-    durationKey: "classes.wingfoil.private.intensive.duration",
-    priceKey: "classes.wingfoil.private.intensive.price",
-    image: wingAdvanced,
-    hoverImage: wingAdvancedHover,
-    featuresKey: "classes.wingfoil.private.intensive.features"
-  },
-  {
-    id: "full-progression",
-    titleKey: "classes.wingfoil.private.fullProgression.title",
-    durationKey: "classes.wingfoil.private.fullProgression.duration",
-    priceKey: "classes.wingfoil.private.fullProgression.price",
-    image: wingMaster,
-    hoverImage: wingMasterHover,
-    featured: true,
-    featuresKey: "classes.wingfoil.private.fullProgression.features"
-  }
-]
-
-const WINGFOIL_SEMI_PRIVATE_CLASSES = [
-  {
-    id: "discovery-semi",
-    titleKey: "classes.wingfoil.semiPrivate.discovery.title",
-    durationKey: "classes.wingfoil.semiPrivate.discovery.duration",
-    priceKey: "classes.wingfoil.semiPrivate.discovery.price",
-    image: wingIntroSemi,
-    hoverImage: wingIntroSemiHover,
-    featuresKey: "classes.wingfoil.semiPrivate.discovery.features"
-  },
-  {
-    id: "beginner-semi",
-    titleKey: "classes.wingfoil.semiPrivate.beginner.title",
-    durationKey: "classes.wingfoil.semiPrivate.beginner.duration",
-    priceKey: "classes.wingfoil.semiPrivate.beginner.price",
-    image: wingFundamentalSemi,
-    hoverImage: wingFundamentalSemiHover,
-    featuresKey: "classes.wingfoil.semiPrivate.beginner.features"
-  },
-  {
-    id: "intensive-semi",
-    titleKey: "classes.wingfoil.semiPrivate.intensive.title",
-    durationKey: "classes.wingfoil.semiPrivate.intensive.duration",
-    priceKey: "classes.wingfoil.semiPrivate.intensive.price",
-    image: wingAdvancedSemi,
-    hoverImage: wingAdvancedSemiHover,
-    featuresKey: "classes.wingfoil.semiPrivate.intensive.features"
-  },
-  {
-    id: "full-progression-semi",
-    titleKey: "classes.wingfoil.semiPrivate.fullProgression.title",
-    durationKey: "classes.wingfoil.semiPrivate.fullProgression.duration",
-    priceKey: "classes.wingfoil.semiPrivate.fullProgression.price",
-    image: wingMasterSemi,
-    hoverImage: wingMasterSemiHover,
-    featured: true,
-    featuresKey: "classes.wingfoil.semiPrivate.fullProgression.features"
-  }
-]
+import { WINGFOIL_PRIVATE_CLASSES, WINGFOIL_SEMI_PRIVATE_CLASSES, translateClassItem } from "./classesData"
 
 function translateWingfoilClassItem(item, t) {
-  const features = t(item.featuresKey)
-
-  return {
-    ...item,
-    title: t(item.titleKey),
-    duration: t(item.durationKey),
-    price: t(item.priceKey),
-    features: Array.isArray(features) ? features : [],
-  }
+  return translateClassItem(item, t)
 }
 
 function WingfoilClassCard({ item, index }) {

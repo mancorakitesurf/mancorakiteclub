@@ -19,8 +19,7 @@
     "wingfoilLessons": "Cours de wingfoil",
     "rentals": "Location de matériel",
     "tripsDownwinds": "Voyages et downwinds",
-    "surfLessons": "Cours de surf",
-    "supPaddleLessons": "Cours de SUP / Paddle",
+    "surfSupLessons": "Cours de Surf & SUP / Paddle",
     "waveRidingCoaching": "Coaching wave riding"
   },
   "services": {
@@ -471,11 +470,16 @@
       }
     },
     "wingfoil": {
+      "hero": {
+        "eyebrow": "Máncora, Pérou",
+        "title": "Wingfoil au Club"
+      },
       "intro": {
         "title": "À propos du Wingfoil",
         "text": "La première fois que l'on a vu quelqu'un pratiquer le wingfoil, c'était en 2019, lorsque Robby Naish est apparu à Hawaï sur une planche avec un foil, en tenant une wing. Ces images ont suscité tellement d'enthousiasme qu'en quelques mois, des vidéos et photos de différents types de wings et de pratiquants ont commencé à circuler sur tous les réseaux sociaux.",
         "cta": "Rejoindre The Club",
-        "imageAlt": "Hero Wingfoil"
+        "imageAlt": "Hero Wingfoil",
+        "hoverAlt": "Session de Wingfoil en action"
       },
       "withUs": {
         "title": "Nous avons amené le Wingfoil dans le nord",
@@ -567,6 +571,10 @@
           "memories": "Souvenirs inoubliables : contenu visuel professionnel.",
           "flexibility": "Flexibilité totale : programmes adaptés à vos besoins."
         }
+      },
+      "steps": {
+        "title": "Votre parcours Wingfoil",
+        "subtitle": "Progression étape par étape avec des coachs certifiés et du matériel foil premium."
       }
     },
     "equipment": {
@@ -679,6 +687,79 @@
     "surfSup": {
       "title": "Surf & SUP",
       "subtitle": "Pas de vent ? Aucun problème. Profitez des vagues préservées de Máncora avec nos sessions de Surf et Stand Up Paddle.",
+      "hero": {
+        "eyebrow": "Máncora, Pérou",
+        "title": "Surf & SUP / Paddle au Club"
+      },
+      "intro": {
+        "hoverAlt": "Session de surf et SUP à Máncora"
+      },
+      "pricing": {
+        "privateTitle": "Cours privés de Surf et SUP",
+        "privateDescription": "Coaching 100 % personnalisé avec des instructeurs locaux expérimentés et des planches premium.",
+        "semiPrivateTitle": "Cours semi-privés de Surf et SUP",
+        "semiPrivateDescription": "Partagez l'expérience : 1 instructeur pour 2 élèves. Tarifs par personne."
+      },
+      "private": {
+        "discovery": {
+          "title": "Discovery",
+          "duration": "1 jour | 2 heures/jour",
+          "price": "45 USD / personne",
+          "features": ["Première expérience idéale de surf ou SUP", "Coaching personnalisé", "Planche et leash inclus", "Briefing sécurité sur la plage"]
+        },
+        "beginner": {
+          "title": "Beginner",
+          "duration": "3 jours | 2 heures/jour",
+          "price": "120 USD / personne",
+          "features": ["Bases solides de rame et take-off", "Instructeur local adapté à votre niveau", "Planches et leash inclus", "Session SUP initiale en eaux calmes"]
+        },
+        "intensive": {
+          "title": "Intensive",
+          "duration": "3 jours | 3 heures/jour",
+          "price": "180 USD / personne",
+          "features": ["Lecture des vagues et placement", "Technique mixte surf et SUP", "Conseils vidéo de votre coach", "Planches premium pour tous niveaux"]
+        },
+        "fullProgression": {
+          "title": "Full Progression",
+          "duration": "5 jours | Horaire flexible",
+          "price": "280 USD / personne",
+          "features": ["Programme complet surf + SUP", "Rotation de spots sur les meilleures vagues", "Analyse technique détaillée", "Tour SUP final sur la côte"]
+        }
+      },
+      "semiPrivate": {
+        "discovery": {
+          "title": "Discovery",
+          "duration": "1 jour | 2 heures/jour",
+          "price": "35 USD / personne",
+          "features": ["Excellent premier contact à prix plus léger", "1 instructeur pour 2 élèves", "Planche et leash inclus", "Briefing sécurité sur la plage"]
+        },
+        "beginner": {
+          "title": "Beginner",
+          "duration": "3 jours | 2 heures/jour",
+          "price": "90 USD / personne",
+          "features": ["Bases solides de rame et take-off", "1 instructeur pour 2 élèves", "Planches et leash inclus", "Session SUP initiale en eaux calmes"]
+        },
+        "intensive": {
+          "title": "Intensive",
+          "duration": "3 jours | 3 heures/jour",
+          "price": "135 USD / personne",
+          "features": ["Lecture des vagues et placement", "1 instructeur pour 2 élèves", "Mélange technique surf et SUP", "Planches premium pour tous niveaux"]
+        },
+        "fullProgression": {
+          "title": "Full Progression",
+          "duration": "5 jours | Horaire flexible",
+          "price": "210 USD / personne",
+          "features": ["Programme complet surf + SUP", "1 instructeur pour 2 élèves", "Rotation de spots sur les meilleures vagues", "Tour SUP final sur la côte"]
+        }
+      },
+      "benefits": {
+        "title": "Avantages",
+        "subtitle": "Tout ce qu'il faut pour profiter des vagues propres et des baies calmes de Máncora."
+      },
+      "steps": {
+        "title": "Votre parcours Surf et SUP",
+        "subtitle": "Progression étape par étape sur les meilleurs spots débutants et intermédiaires du nord du Pérou."
+      },
       "surf": {
         "title": "Cours de surf",
         "description": "Parfait pour débutants et intermédiaires. Apprenez les bases de la rame, du take-off et du surf sur les belles vagues du nord du Pérou.",

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { useI18n } from "../../app/providers/i18nContext"
+import { KITESURF_CONFIG } from "./classesData"
 
-function ClassesBenefits() {
+function ClassesBenefits({ config = KITESURF_CONFIG }) {
   const { t } = useI18n()
-  const benefits = t("serviceCopy.kitesurfLessons.benefits")
+  const benefits = t(`${config.copyNs}.benefits`)
 
   return (
     <section className="relative bg-gradient-to-b from-[#0f2e2c] to-[#071a19] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -18,10 +19,10 @@ function ClassesBenefits() {
         className="mx-auto mb-16 max-w-3xl text-center"
       >
         <h2 className="text-2xl font-bold tracking-[0.2em] text-white sm:text-3xl md:text-4xl lg:text-5xl">
-          {t("classes.kitesurf.benefits.title")}
+          {t(`${config.classesNs}.benefits.title`)}
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-white/70 sm:text-base md:text-lg">
-          {t("classes.kitesurf.benefits.subtitle")}
+          {t(`${config.classesNs}.benefits.subtitle`)}
         </p>
       </motion.div>
 
@@ -55,13 +56,13 @@ function ClassesBenefits() {
         className="mx-auto mt-16 max-w-2xl text-center"
       >
         <p className="mb-5 text-sm text-white/60 sm:text-base">
-          {t("serviceCopy.kitesurfLessons.builderNote")}
+          {t(`${config.copyNs}.builderNote`)}
         </p>
         <Link
           to="/build"
           className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#DEFF9A] px-8 py-3 font-bold text-[#0A0F14] transition hover:bg-white"
         >
-          {t("serviceCopy.kitesurfLessons.builderCta")}
+          {t(`${config.copyNs}.builderCta`)}
         </Link>
       </motion.div>
 

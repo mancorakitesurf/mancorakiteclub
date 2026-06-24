@@ -3,14 +3,25 @@
   "home": "Home",
   "trips": "Trips",
   "stay": "Stay With Us",
+  "stayWithUs": "Stay With Us",
   "build": "Build Your Trip",
+  "buildYourTrip": "Build Your Trip",
   "services": "Services",
   "classes": "Services",
-  "blog": "Blogs",
+  "blog": "Blog",
   "contact": "Contact",
   "reviews": "Reviews",
   "faq": "FAQ",
   "bookNow": "Book Now"
+  },
+  "servicesNav": {
+    "kitesurfLessons": "Kitesurf Lessons",
+    "wingfoilLessons": "Wingfoil Lessons",
+    "rentals": "Rentals",
+    "tripsDownwinds": "Trips & Downwinds",
+    "surfLessons": "Surf Lessons",
+    "supPaddleLessons": "SUP / Paddle Lessons",
+    "waveRidingCoaching": "Wave Riding Coaching"
   },
   "services": {
     "title": "Services",
@@ -263,6 +274,9 @@
   },
   "header": {
     "language": "Language",
+    "selectLanguage": "Select language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
     "english": "English",
     "spanish": "Español",
     "french": "Français"

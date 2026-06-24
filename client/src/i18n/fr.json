@@ -3,13 +3,25 @@
   "home": "Accueil",
   "trips": "Voyages",
   "stay": "Séjournez avec nous",
+  "stayWithUs": "Séjournez avec nous",
   "build": "Créez votre voyage",
+  "buildYourTrip": "Créez votre voyage",
+  "services": "Services",
   "classes": "Services",
-  "blog": "Blogs",
+  "blog": "Blog",
   "contact": "Contact",
   "reviews": "Avis",
   "faq": "FAQ",
   "bookNow": "Réserver maintenant"
+  },
+  "servicesNav": {
+    "kitesurfLessons": "Cours de kitesurf",
+    "wingfoilLessons": "Cours de wingfoil",
+    "rentals": "Location de matériel",
+    "tripsDownwinds": "Voyages et downwinds",
+    "surfLessons": "Cours de surf",
+    "supPaddleLessons": "Cours de SUP / Paddle",
+    "waveRidingCoaching": "Coaching wave riding"
   },
   "services": {
     "title": "Services",
@@ -262,6 +274,9 @@
   },
   "header": {
     "language": "Langue",
+    "selectLanguage": "Choisir la langue",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
     "english": "English",
     "spanish": "Español",
     "french": "Français"

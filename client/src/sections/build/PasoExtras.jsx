@@ -4,13 +4,13 @@ import { useI18n } from '../../app/providers/i18nContext.js'
 import { NON_RENTAL_EXTRAS, NON_RENTAL_CATEGORIES } from './buildData.js'
 import { StepHeading, staggerItem } from './BuildUI.jsx'
 
-const { buildHeroBg, DSC05231, surfCarousel, kiteCarousel } = componentImages["pages/BuildPage.jsx"]
+const { buildHeroBg, DSC05231, surfCarousel, kiteCarousel, dayTripImg, airportTransferImg } = componentImages["pages/BuildPage.jsx"]
 
 const extraImages = {
-  'Day trip to other spots': kiteCarousel[3],
+  'Day trip to other spots': dayTripImg,
   'Water supervision': surfCarousel[1],
   Massage: DSC05231,
-  'Airport transfer': buildHeroBg.mobile,
+  'Airport transfer': airportTransferImg,
   'Photo & video pack': kiteCarousel[1],
 }
 
@@ -57,11 +57,11 @@ export default function PasoExtras({ headingIndex = 4, extras, extrasQty, toggle
                         : 'border-white/8 bg-[#152720] hover:border-white/16'
                         }`}
                     >
-                      <div className="relative h-32 overflow-hidden">
+                      <div className="relative w-full aspect-[16/10] overflow-hidden">
                         <img
                           src={extraImages[e.id]}
                           alt=""
-                          className={`h-full w-full object-cover transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-50 hover:opacity-65'}`}
+                          className={`h-full w-full object-cover object-center transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-50 hover:opacity-65'}`}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/30 to-transparent" />
                         <div className="absolute bottom-3 right-3 rounded-full bg-black/55 px-3 py-1 text-[11px] font-black text-[#b7e28a] backdrop-blur">

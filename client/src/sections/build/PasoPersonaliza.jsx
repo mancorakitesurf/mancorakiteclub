@@ -6,7 +6,7 @@ import PasoRental from './PasoRental.jsx'
 import PasoExtras from './PasoExtras.jsx'
 import PasoResumen from './PasoResumen.jsx'
 
-const { buildHeroBg, DSC05120HDR } = componentImages["pages/BuildPage.jsx"]
+const { buildHeroBg, DSC05120HDR, finalTouchImg, stayCardImg } = componentImages["pages/BuildPage.jsx"]
 
 export default function PasoPersonaliza({
   selectedPackages,
@@ -36,7 +36,7 @@ export default function PasoPersonaliza({
         <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="relative min-h-[160px] overflow-hidden lg:min-h-[260px]">
             <img
-              src={buildHeroBg.desktop}
+              src={finalTouchImg}
               alt=""
               className="absolute inset-0 h-full w-full object-cover opacity-75"
             />
@@ -65,11 +65,14 @@ export default function PasoPersonaliza({
               </p>
             </motion.div>
             <div className="grid grid-cols-2 gap-3">
-              <div className="rounded-xl border border-white/8 bg-white/[0.04] p-3">
-                <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/35">
-                  {t('build.stay')}
-                </p>
-                <p className="mt-1.5 text-sm font-black text-white">{noches} {t('build.nights')}</p>
+              <div className="relative overflow-hidden rounded-xl border border-white/8 bg-white/[0.04] p-3">
+                <img src={stayCardImg} alt="" className="absolute inset-0 h-full w-full object-cover opacity-15" />
+                <div className="relative">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/35">
+                    {t('build.stay')}
+                  </p>
+                  <p className="mt-1.5 text-sm font-black text-white">{noches} {t('build.nights')}</p>
+                </div>
               </div>
               <div className="relative overflow-hidden rounded-xl border border-white/8 bg-white/[0.04] p-3">
                 <img src={DSC05120HDR} alt="" className="absolute inset-0 h-full w-full object-cover opacity-15" />

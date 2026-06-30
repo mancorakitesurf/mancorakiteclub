@@ -239,11 +239,11 @@ export default function PasoNoches({ noches, setNoches, personas, setPersonas })
                 }`}
               >
                 {/* Visual room image wrapper */}
-                <div className="relative h-32 w-full">
+                <div className="relative w-full aspect-[16/10] overflow-hidden">
                   <img
                     src={room.image}
                     alt={t(room.nameKey)}
-                    className={`h-full w-full object-cover transition-opacity duration-300 ${
+                    className={`h-full w-full object-cover object-center transition-opacity duration-300 ${
                       isSelected ? 'opacity-85' : 'opacity-40 hover:opacity-60'
                     }`}
                   />

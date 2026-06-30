@@ -9,12 +9,14 @@ const {
   wingCarousel,
   surfCarousel,
   supCarousel,
+  kiteGearImg,
+  surfGearImg,
 } = componentImages["pages/BuildPage.jsx"]
 
 const rentalImages = {
-  'kite-gear-rental': kiteCarousel[2],
+  'kite-gear-rental': kiteGearImg,
   'wingfoil-gear-rental': wingCarousel[0],
-  'surfboard-rental': surfCarousel[0],
+  'surfboard-rental': surfGearImg,
   'sup-rental': supCarousel[0],
 }
 
@@ -43,11 +45,11 @@ export default function PasoRental({ headingIndex = 2, rentals, setRentalDays, r
                 : 'border-white/8 bg-[#152720] hover:border-white/16'
                 }`}
             >
-              <div className="relative h-32 overflow-hidden">
+              <div className="relative w-full aspect-[16/10] overflow-hidden">
                 <img
                   src={rentalImages[rental.id]}
                   alt=""
-                  className={`h-full w-full object-cover transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-50 hover:opacity-65'}`}
+                  className={`h-full w-full object-cover object-center transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-50 hover:opacity-65'}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/35 to-transparent" />
                 <div className={`absolute left-3 top-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#b7e28a] text-black' : 'bg-black/45 text-white'}`}>

@@ -12,11 +12,11 @@ import {
 } from './BuildIcons.jsx'
 
 const {
-  nightcaption,
-  DSC05231,
-  buildHeroBg,
-  DSC05120HDR,
-  DSC05085HDR,
+  noche1,
+  noche2,
+  noche3,
+  noche4,
+  noche5,
   kiteCarousel,
   wingCarousel,
   surfCarousel,
@@ -226,7 +226,7 @@ export const ACTIVIDAD_CAROUSELS = {
 }
 
 export const NOCHES_OPTIONS = [3, 5, 7, 10, 14]
-export const NOCHES_IMAGENES = [nightcaption, DSC05231, buildHeroBg.desktop, DSC05120HDR, DSC05085HDR]
+export const NOCHES_IMAGENES = [noche1, noche2, noche3, noche4, noche5]
 export const NOCHES_COPY_KEYS = {
   3: 'build.fastEscape',
   5: 'build.balancedTrip',

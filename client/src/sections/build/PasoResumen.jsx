@@ -6,7 +6,7 @@ import { ACTIVIDADES, calcularPrecio, getPackageById, getRentalById, getRentalPr
 import { SlotNumber, StepHeading } from './BuildUI.jsx'
 import { useTripBuilderStore } from '../../store/useTripBuilderStore.js'
 
-const { buildHeroBg } = componentImages["pages/BuildPage.jsx"]
+const { buildHeroBg, resumenHeroImg } = componentImages["pages/BuildPage.jsx"]
 
 export default function PasoResumen({ headingIndex = 5, selectedPackages, rentals, noches, personas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
   const { t, currentLang } = useI18n()
@@ -44,7 +44,7 @@ export default function PasoResumen({ headingIndex = 5, selectedPackages, rental
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-sm">
             {/* Ticket Header Image & Route */}
             <div className="relative h-44 overflow-hidden">
-              <img src={buildHeroBg.mobile} alt="" className="h-full w-full object-cover opacity-60" />
+              <img src={resumenHeroImg} alt="" className="h-full w-full object-cover opacity-60" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0e1b17] via-[#0e1b17]/40 to-transparent" />
               
               <div className="absolute top-4 left-5 right-5 flex justify-between items-center text-white/40 text-[9px] font-black tracking-[0.3em]">

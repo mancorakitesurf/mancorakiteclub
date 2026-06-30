@@ -5,9 +5,9 @@ import { useTripBuilderStore } from '../../store/useTripBuilderStore.js'
 import { ACTIVIDADES, ACTIVIDAD_CAROUSELS, getPackageById } from './buildData.js'
 import { StepHeading, staggerItem, AddedCheckBurst } from './BuildUI.jsx'
 
-function PackageCard({ pkg, selected, onAdd, onRemove, t, images }) {
+function PackageCard({ pkg, selected, onAdd, onRemove, t, images, startIdx }) {
   const [burstKey, setBurstKey] = useState(null)
-  const [photoIdx, setPhotoIdx] = useState(0)
+  const [photoIdx, setPhotoIdx] = useState(() => (startIdx || 0) % (images.length || 1))
   const intervalRef = useRef(null)
 
   // Auto-rotate photos every 2.5 s while card is visible
@@ -35,7 +35,7 @@ function PackageCard({ pkg, selected, onAdd, onRemove, t, images }) {
         }`}
     >
       {/* Photo with crossfade */}
-      <div className="relative h-36 overflow-hidden">
+      <div className="relative w-full aspect-[16/10] overflow-hidden">
         <AnimatePresence mode="sync">
           <motion.img
             key={photoIdx}
@@ -45,10 +45,11 @@ function PackageCard({ pkg, selected, onAdd, onRemove, t, images }) {
             animate={{ opacity: selected ? 0.8 : 0.55 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.7 }}
-            className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${selected ? 'scale-[1.03]' : ''}`}
+            className={`absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 ${selected ? 'scale-[1.03]' : ''}`}
           />
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/20 to-transparent" />
+
 
         {/* Photo dot indicators */}
         {images?.length > 1 && (
@@ -227,11 +228,12 @@ export default function PasoPackages() {
                       variants={{ hidden: {}, show: { transition: { staggerChildren: 0.06 } } }}
                       className="grid grid-cols-1 gap-3 lg:grid-cols-2"
                     >
-                      {activity.packages.map((pkg) => (
+                      {activity.packages.map((pkg, idx) => (
                         <PackageCard
                           key={pkg.id}
                           pkg={pkg}
                           images={ACTIVIDAD_CAROUSELS[activity.id] ?? []}
+                          startIdx={idx}
                           selected={selectedIds.has(pkg.id)}
                           onAdd={() => addPackage(pkg.id, activity.id)}
                           onRemove={() => removePackage(pkg.id)}

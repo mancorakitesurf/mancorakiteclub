@@ -75,8 +75,8 @@ function ActionHub() {
     },
   ]
 
-  // Hide the hub if the mobile menu is open
-  if (isMobileMenuOpen) return null
+  // Hide the hub if the mobile menu is open or we are on the build page
+  if (isMobileMenuOpen || location.pathname.endsWith('/build')) return null
 
   return (
     <>

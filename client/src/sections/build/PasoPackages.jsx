@@ -1,86 +1,140 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../../store/useTripBuilderStore.js'
 import { ACTIVIDADES, ACTIVIDAD_CAROUSELS, getPackageById } from './buildData.js'
-import { StepHeading, staggerItem } from './BuildUI.jsx'
+import { StepHeading, staggerItem, AddedCheckBurst } from './BuildUI.jsx'
 
-function PackageCard({ pkg, selected, onAdd, onRemove, t, image }) {
+function PackageCard({ pkg, selected, onAdd, onRemove, t, images }) {
+  const [burstKey, setBurstKey] = useState(null)
+  const [photoIdx, setPhotoIdx] = useState(0)
+  const intervalRef = useRef(null)
+
+  // Auto-rotate photos every 2.5 s while card is visible
+  useEffect(() => {
+    if (!images || images.length <= 1) return
+    intervalRef.current = setInterval(() => {
+      setPhotoIdx((prev) => (prev + 1) % images.length)
+    }, 2500)
+    return () => clearInterval(intervalRef.current)
+  }, [images])
+
+  const handleAdd = () => {
+    onAdd()
+    setBurstKey(Date.now())
+  }
+
+  const currentImage = images?.[photoIdx] ?? images?.[0]
+
   return (
     <motion.div
       variants={staggerItem}
-      className={`overflow-hidden rounded-2xl border transition-all ${selected
-        ? 'border-[#b7e28a]/40 bg-[#b7e28a]/5 shadow-[inset_0_0_0_1px_rgba(183,226,138,0.2)]'
+      className={`relative overflow-hidden rounded-2xl border transition-all ${selected
+        ? 'border-[#b7e28a]/40 bg-[#b7e28a]/5 shadow-[inset_0_0_0_1px_rgba(183,226,138,0.2),0_0_24px_rgba(183,226,138,0.08)]'
         : 'border-white/8 bg-[#152720] hover:border-white/16'
         }`}
     >
+      {/* Photo with crossfade */}
       <div className="relative h-36 overflow-hidden">
-        <img
-          src={image}
-          alt=""
-          className={`h-full w-full object-cover transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-55 hover:opacity-70'}`}
-        />
+        <AnimatePresence mode="sync">
+          <motion.img
+            key={photoIdx}
+            src={currentImage}
+            alt=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: selected ? 0.8 : 0.55 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 ${selected ? 'scale-[1.03]' : ''}`}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/20 to-transparent" />
-        <span className="absolute bottom-3 right-3 rounded-full bg-[#b7e28a] px-3 py-1 text-[11px] font-black text-black">
+
+        {/* Photo dot indicators */}
+        {images?.length > 1 && (
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+            {images.map((_, i) => (
+              <span key={i} className={`h-1 rounded-full transition-all ${i === photoIdx ? 'w-3 bg-[#b7e28a]' : 'w-1 bg-white/30'}`} />
+            ))}
+          </div>
+        )}
+
+        <span className="absolute top-3 right-3 rounded-full bg-[#b7e28a] px-3 py-1 text-[11px] font-black text-black">
           ${pkg.price} USD
         </span>
+
+        {/* Selected glow indicator */}
+        {selected && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="absolute top-3 left-3 flex h-6 w-6 items-center justify-center rounded-full bg-[#b7e28a]"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0e1b17" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          </motion.div>
+        )}
       </div>
 
       <div className="p-4">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="text-sm font-black uppercase tracking-wider text-white">
-            {t(pkg.nameKey)}
-          </p>
-          <p className="mt-1 text-[11px] text-white/50">{pkg.duration}</p>
-        </div>
-        <div className="flex items-center gap-2">
-          {pkg.levelKey && (
-            <span className="rounded-full border border-white/15 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-white/60">
-              {t(pkg.levelKey)}
-            </span>
-          )}
-        </div>
-      </div>
-
-      <p className="mt-3 text-sm text-white/65">{t(pkg.descriptionKey)}</p>
-
-      {pkg.includesKeys?.length > 0 && (
-        <div className="mt-4">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
-            {t('build.packageIncludes')}
-          </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {pkg.includesKeys.map((key) => (
-              <span
-                key={key}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold text-white/60"
-              >
-                {t(key)}
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0">
+            <p className="text-sm font-black uppercase tracking-wider text-white">
+              {t(pkg.nameKey)}
+            </p>
+            <p className="mt-1 text-[11px] text-white/50">{pkg.duration}</p>
+          </div>
+          <div className="flex items-center gap-2">
+            {pkg.levelKey && (
+              <span className="rounded-full border border-white/15 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-white/60">
+                {t(pkg.levelKey)}
               </span>
-            ))}
+            )}
           </div>
         </div>
-      )}
 
-      {pkg.maxParticipants && (
-        <p className="mt-3 text-[11px] text-white/40">
-          {t('build.maxParticipants')} {pkg.maxParticipants}
-        </p>
-      )}
+        <p className="mt-3 text-sm text-white/65">{t(pkg.descriptionKey)}</p>
 
-      <div className="mt-4 flex items-center justify-end">
-        <button
-          type="button"
-          onClick={selected ? onRemove : onAdd}
-          className={`rounded-full px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] transition ${selected
-            ? 'bg-white/10 text-white/70 hover:bg-white/15'
-            : 'bg-[#b7e28a] text-black hover:scale-[1.02]'
-            }`}
-        >
-          {selected ? t('build.removePackage') : t('build.addPackage')}
-        </button>
-      </div>
+        {pkg.includesKeys?.length > 0 && (
+          <div className="mt-4">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
+              {t('build.packageIncludes')}
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {pkg.includesKeys.map((key) => (
+                <span
+                  key={key}
+                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold text-white/60"
+                >
+                  {t(key)}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {pkg.maxParticipants && (
+          <p className="mt-3 text-[11px] text-white/40">
+            {t('build.maxParticipants')} {pkg.maxParticipants}
+          </p>
+        )}
+
+        <div className="mt-4 flex items-center justify-end">
+          <div className="relative">
+            <button
+              type="button"
+              onClick={selected ? onRemove : handleAdd}
+              className={`relative overflow-hidden rounded-full px-4 py-2 text-[11px] font-black uppercase tracking-[0.2em] transition ${selected
+                ? 'bg-white/10 text-white/70 hover:bg-white/15'
+                : 'bg-[#b7e28a] text-black hover:scale-[1.02]'
+                }`}
+            >
+              {selected ? t('build.removePackage') : t('build.addPackage')}
+              <AddedCheckBurst trigger={burstKey} />
+            </button>
+          </div>
+        </div>
       </div>
     </motion.div>
   )
@@ -89,6 +143,7 @@ function PackageCard({ pkg, selected, onAdd, onRemove, t, image }) {
 export default function PasoPackages() {
   const { t } = useI18n()
   const { selectedPackages, addPackage, removePackage } = useTripBuilderStore()
+
   const [openActivities, setOpenActivities] = useState(() => new Set([ACTIVIDADES[0]?.id]))
 
   const selectedIds = useMemo(
@@ -115,6 +170,7 @@ export default function PasoPackages() {
       return next
     })
   }
+
 
   return (
     <div>
@@ -175,7 +231,7 @@ export default function PasoPackages() {
                         <PackageCard
                           key={pkg.id}
                           pkg={pkg}
-                          image={ACTIVIDAD_CAROUSELS[activity.id]?.[activity.packages.indexOf(pkg) % ACTIVIDAD_CAROUSELS[activity.id].length]}
+                          images={ACTIVIDAD_CAROUSELS[activity.id] ?? []}
                           selected={selectedIds.has(pkg.id)}
                           onAdd={() => addPackage(pkg.id, activity.id)}
                           onRemove={() => removePackage(pkg.id)}

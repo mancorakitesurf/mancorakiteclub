@@ -30,6 +30,9 @@ const initialState = {
   datosUsuario: {
     nombre: '',
     email: '',
+    telefono: '',
+    nivel: '',
+    notas: '',
   },
 }
 

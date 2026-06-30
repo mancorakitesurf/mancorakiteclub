@@ -187,6 +187,41 @@ export default function PasoNoches({ noches, setNoches, personas, setPersonas })
         <span className="mb-4 block text-xs font-bold uppercase tracking-widest text-white/50">
           {t('stay.rooms.title') || 'Choose Your Lodging Experience'}
         </span>
+
+        {/* Animated rider avatars */}
+        <div className="mb-5 flex items-end gap-2 h-12">
+          {Array.from({ length: 4 }).map((_, i) => {
+            const active = i < personas
+            return (
+              <motion.div
+                key={i}
+                initial={false}
+                animate={{ opacity: active ? 1 : 0.15, y: active ? 0 : 6, scale: active ? 1 : 0.85 }}
+                transition={{ type: 'spring', stiffness: 320, damping: 22, delay: i * 0.04 }}
+                className="flex flex-col items-center gap-1"
+              >
+                {/* Rider silhouette SVG */}
+                <svg viewBox="0 0 24 36" fill="none" className={`h-10 w-6 transition-colors duration-300 ${active ? 'text-[#b7e28a]' : 'text-white/15'}`}>
+                  <circle cx="12" cy="5" r="4.5" fill="currentColor" />
+                  <path d="M6 14c0-3.3 2.7-6 6-6s6 2.7 6 6v10H6V14z" fill="currentColor" />
+                  <rect x="7" y="24" width="4" height="10" rx="2" fill="currentColor" opacity="0.8" />
+                  <rect x="13" y="24" width="4" height="10" rx="2" fill="currentColor" opacity="0.8" />
+                </svg>
+                {active && (
+                  <motion.span
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    className="h-px w-5 rounded-full bg-[#b7e28a]/60"
+                  />
+                )}
+              </motion.div>
+            )
+          })}
+          <span className="ml-2 text-sm font-black text-white tabular-nums">
+            {personas} {personas === 1 ? t('build.person') : t('build.people')}
+          </span>
+        </div>
+
         <div className="grid gap-4 sm:grid-cols-2">
           {ROOM_OPTIONS.map((room) => {
             const isSelected = personas === room.capacity

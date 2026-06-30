@@ -14,7 +14,7 @@ import {
   getRentalById,
   getRentalPrice,
 } from '../sections/build/buildData.js'
-import { StepIndicator, FloatingPrice, MobilePriceBar, stepVariants, stepTransition } from '../sections/build/BuildUI.jsx'
+import { StepIndicator, FloatingPrice, MobileBuilderNav, LiveSummaryPanel, stepVariants, stepTransition } from '../sections/build/BuildUI.jsx'
 
 import PasoPackages from '../sections/build/PasoPackages.jsx'
 import PasoNoches from '../sections/build/PasoNoches.jsx'
@@ -38,6 +38,7 @@ function BuildPage() {
   } = useTripBuilderStore()
 
   const [direction, setDirection] = useState(0)
+  const [activeTab, setActiveTab] = useState('options')
   const containerRef = useRef(null)
 
   const cambiarPaso = (nuevoPaso) => {
@@ -102,6 +103,8 @@ function BuildPage() {
 
     const nameValue = datosUsuario.nombre?.trim() || t('messages.build.notProvided')
     const emailValue = datosUsuario.email?.trim() || t('messages.build.notProvided')
+    const levelValue = datosUsuario.nivel ? t(`build.level.${datosUsuario.nivel}`) : t('messages.build.notProvided')
+    const notesValue = datosUsuario.notas?.trim() || t('messages.build.notProvided')
     const guestsLabel = personas === 1
       ? t('messages.build.guestSingular')
       : t('messages.build.guestPlural')
@@ -119,6 +122,8 @@ function BuildPage() {
   ${t('messages.build.sectionContact')}
   • ${t('messages.build.labelName')} ${nameValue}
   • ${t('messages.build.labelEmail')} ${emailValue}
+  • ${t('build.riderLevel')} ${levelValue}
+  • ${t('build.notes')} ${notesValue}
 
   ${t('messages.build.sectionTotal')} ${totalText}
 
@@ -186,7 +191,7 @@ function BuildPage() {
         </div>
       </div>
 
-      <main className="relative z-10 mx-auto max-w-5xl px-4 pb-24 sm:px-6 lg:px-8" ref={containerRef}>
+      <main className="relative z-10 mx-auto max-w-5xl px-4 pb-36 sm:px-6 lg:px-8 lg:pb-24" ref={containerRef}>
         <StepIndicator pasoActual={paso} />
 
         <div className="relative min-h-[500px]">
@@ -200,7 +205,14 @@ function BuildPage() {
               exit="exit"
               transition={stepTransition}
             >
-              {paso === 1 && <PasoPackages />}
+              {paso === 1 && (
+                <div className="flex gap-8 items-start">
+                  <div className="flex-1 min-w-0">
+                    <PasoPackages />
+                  </div>
+                  <LiveSummaryPanel selectedPackages={selectedPackages} precioTotal={precioTotal} />
+                </div>
+              )}
               {paso === 2 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
               {paso === 3 && (
                 <PasoPersonaliza
@@ -217,6 +229,8 @@ function BuildPage() {
                   datosUsuario={datosUsuario}
                   setDatosUsuario={setDatosUsuario}
                   generarLinkWhatsApp={generarLinkWhatsApp}
+                  activeTab={activeTab}
+                  setActiveTab={setActiveTab}
                 />
               )}
             </motion.div>
@@ -250,7 +264,14 @@ function BuildPage() {
       </main>
 
       <FloatingPrice paso={paso} precioTotal={precioTotal} />
-      <MobilePriceBar paso={paso} precioTotal={precioTotal} />
+      <MobileBuilderNav
+        paso={paso}
+        precioTotal={precioTotal}
+        onBack={() => cambiarPaso(paso - 1)}
+        onNext={() => cambiarPaso(paso + 1)}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
     </div>
   )
 }

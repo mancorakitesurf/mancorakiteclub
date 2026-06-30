@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { componentImages } from '../../config/images.js'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { ACTIVIDADES, calcularPrecio, getPackageById, getRentalById, getRentalPrice } from './buildData.js'
 import { useAnimatedNumber, StepHeading } from './BuildUI.jsx'
 
-export default function PasoResumen({ selectedPackages, rentals, noches, personas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
+const { buildHeroBg } = componentImages["pages/BuildPage.jsx"]
+
+export default function PasoResumen({ headingIndex = 5, selectedPackages, rentals, noches, personas, extras, extrasQty, datosUsuario, setDatosUsuario, generarLinkWhatsApp }) {
   const { t } = useI18n()
   const precioTotal = calcularPrecio(selectedPackages, rentals, noches, extras, extrasQty, personas)
   const precioAnimado = useAnimatedNumber(precioTotal)
@@ -21,11 +24,29 @@ export default function PasoResumen({ selectedPackages, rentals, noches, persona
 
   return (
     <div>
-      <StepHeading index={5} title={t('build.tripSummary')} subtitle={t('build.tripSummarySub')} />
+      <StepHeading index={headingIndex} title={t('build.tripSummary')} subtitle={t('build.tripSummarySub')} />
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="space-y-4">
-          <div className="rounded-2xl border border-white/8 bg-white/[0.02] p-6">
+          <div className="overflow-hidden rounded-2xl border border-white/8 bg-white/[0.02]">
+            <div className="relative h-44">
+              <img src={buildHeroBg.mobile} alt="" className="h-full w-full object-cover opacity-75" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0e1b17] via-[#0e1b17]/30 to-transparent" />
+              <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-4">
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-[#b7e28a]">
+                    {t('build.readyToSend')}
+                  </p>
+                  <p className="mt-1 text-lg font-black uppercase tracking-[0.08em] text-white">
+                    {t('build.yourTrip')}
+                  </p>
+                </div>
+                <div className="rounded-full bg-[#b7e28a] px-3 py-1 text-[11px] font-black text-black">
+                  {personas} {personas === 1 ? t('messages.build.guestSingular') : t('messages.build.guestPlural')}
+                </div>
+              </div>
+            </div>
+            <div className="p-6">
             <h3 className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-white/40">{t('build.yourTrip')}</h3>
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
@@ -84,6 +105,7 @@ export default function PasoResumen({ selectedPackages, rentals, noches, persona
                 </div>
                 <p className="mt-2 text-[10px] text-white/30 italic">*{t('build.finalPriceNote')}</p>
               </div>
+            </div>
             </div>
           </div>
 

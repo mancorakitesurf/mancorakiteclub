@@ -67,7 +67,7 @@ export function FloatingPrice({ paso, precioTotal }) {
   const { t } = useI18n()
   return (
     <AnimatePresence>
-      {paso >= 2 && paso < 5 && (
+      {paso >= 2 && paso <= 3 && (
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -87,7 +87,7 @@ export function MobilePriceBar({ paso, precioTotal }) {
   const { t } = useI18n()
   return (
     <AnimatePresence>
-      {paso >= 2 && paso < 5 && (
+      {paso >= 2 && paso <= 3 && (
         <motion.div
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -106,34 +106,32 @@ export function MobilePriceBar({ paso, precioTotal }) {
 export function StepIndicator({ pasoActual }) {
   const { t } = useI18n()
   const pasos = [
-    { n: 1, label: t('build.stepPackages') },
-    { n: 2, label: t('build.stepRental') },
-    { n: 3, label: t('build.stepStay') },
-    { n: 4, label: t('build.stepExtras') },
-    { n: 5, label: t('build.stepSummary') },
+    { n: 1, label: t('build.stepExperience') },
+    { n: 2, label: t('build.stepStay') },
+    { n: 3, label: t('build.stepSend') },
   ]
 
   return (
-    <div className="mb-10 flex w-full items-center justify-center gap-0 overflow-x-auto px-2">
+    <div className="mb-8 flex w-full items-center justify-center gap-0 overflow-x-auto px-1 sm:mb-10 sm:px-2">
       {pasos.map((p, i) => {
         const completado = pasoActual > p.n
         const actual = pasoActual === p.n
 
         return (
           <div key={p.n} className="flex items-center">
-            <div className="flex flex-col items-center px-2 sm:px-3">
+            <div className="flex flex-col items-center px-2 sm:px-5">
               <div className="flex items-center gap-1.5">
                 <motion.span
                   animate={actual ? { opacity: [0.5, 1, 0.5] } : {}}
                   transition={actual ? { repeat: Infinity, duration: 2 } : {}}
-                  className={`text-[10px] font-black tabular-nums transition-colors sm:text-[11px] ${completado
+                  className={`flex h-8 w-8 items-center justify-center rounded-full border text-[10px] font-black tabular-nums transition-colors sm:h-9 sm:w-9 sm:text-[11px] ${completado
                     ? 'text-[#b7e28a]'
                     : actual
                       ? 'text-[#b7e28a]'
                       : 'text-white/20'
-                    }`}
+                    } ${actual || completado ? 'border-[#b7e28a]/40 bg-[#b7e28a]/10' : 'border-white/10 bg-white/5'}`}
                 >
-                  {String(p.n).padStart(2, '0')}
+                  {p.n}
                 </motion.span>
 
                 {completado && (
@@ -156,7 +154,7 @@ export function StepIndicator({ pasoActual }) {
               </div>
 
               <span
-                className={`mt-1 hidden text-[9px] font-semibold uppercase tracking-[0.18em] transition-colors sm:block ${actual ? 'text-white/70' : completado ? 'text-[#b7e28a]/60' : 'text-white/20'
+                className={`mt-2 text-[9px] font-semibold uppercase tracking-[0.16em] transition-colors sm:text-[10px] ${actual ? 'text-white/70' : completado ? 'text-[#b7e28a]/60' : 'text-white/20'
                   }`}
               >
                 {p.label}
@@ -171,7 +169,7 @@ export function StepIndicator({ pasoActual }) {
             </div>
 
             {i < pasos.length - 1 && (
-              <div className="relative mx-0 h-px w-6 overflow-hidden bg-white/8 sm:w-10">
+              <div className="relative mx-0 h-px w-8 overflow-hidden bg-white/8 sm:w-16">
                 <motion.div
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: completado ? 1 : 0 }}

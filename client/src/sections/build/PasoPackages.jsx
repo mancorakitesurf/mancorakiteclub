@@ -2,18 +2,31 @@ import { useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { useTripBuilderStore } from '../../store/useTripBuilderStore.js'
-import { ACTIVIDADES, getPackageById } from './buildData.js'
+import { ACTIVIDADES, ACTIVIDAD_CAROUSELS, getPackageById } from './buildData.js'
 import { StepHeading, staggerItem } from './BuildUI.jsx'
 
-function PackageCard({ pkg, selected, onAdd, onRemove, t }) {
+function PackageCard({ pkg, selected, onAdd, onRemove, t, image }) {
   return (
     <motion.div
       variants={staggerItem}
-      className={`rounded-2xl border p-4 transition-all ${selected
+      className={`overflow-hidden rounded-2xl border transition-all ${selected
         ? 'border-[#b7e28a]/40 bg-[#b7e28a]/5 shadow-[inset_0_0_0_1px_rgba(183,226,138,0.2)]'
         : 'border-white/8 bg-[#152720] hover:border-white/16'
         }`}
     >
+      <div className="relative h-36 overflow-hidden">
+        <img
+          src={image}
+          alt=""
+          className={`h-full w-full object-cover transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-55 hover:opacity-70'}`}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/20 to-transparent" />
+        <span className="absolute bottom-3 right-3 rounded-full bg-[#b7e28a] px-3 py-1 text-[11px] font-black text-black">
+          ${pkg.price} USD
+        </span>
+      </div>
+
+      <div className="p-4">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-sm font-black uppercase tracking-wider text-white">
@@ -27,9 +40,6 @@ function PackageCard({ pkg, selected, onAdd, onRemove, t }) {
               {t(pkg.levelKey)}
             </span>
           )}
-          <span className="rounded-full bg-[#b7e28a] px-3 py-1 text-[11px] font-black text-black">
-            ${pkg.price} USD
-          </span>
         </div>
       </div>
 
@@ -70,6 +80,7 @@ function PackageCard({ pkg, selected, onAdd, onRemove, t }) {
         >
           {selected ? t('build.removePackage') : t('build.addPackage')}
         </button>
+      </div>
       </div>
     </motion.div>
   )
@@ -121,8 +132,14 @@ export default function PasoPackages() {
                 className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
               >
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-[#b7e28a]">
-                    <activity.Icon className="h-5 w-5" />
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-white/5 text-[#b7e28a]">
+                    <img
+                      src={ACTIVIDAD_CAROUSELS[activity.id]?.[0]}
+                      alt=""
+                      className="absolute inset-0 h-full w-full object-cover opacity-70"
+                    />
+                    <div className="absolute inset-0 bg-black/30" />
+                    <activity.Icon className="absolute left-1/2 top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2" />
                   </div>
                   <div>
                     <p className="text-sm font-black uppercase tracking-wider text-white">{activity.label}</p>
@@ -158,6 +175,7 @@ export default function PasoPackages() {
                         <PackageCard
                           key={pkg.id}
                           pkg={pkg}
+                          image={ACTIVIDAD_CAROUSELS[activity.id]?.[activity.packages.indexOf(pkg) % ACTIVIDAD_CAROUSELS[activity.id].length]}
                           selected={selectedIds.has(pkg.id)}
                           onAdd={() => addPackage(pkg.id, activity.id)}
                           onRemove={() => removePackage(pkg.id)}

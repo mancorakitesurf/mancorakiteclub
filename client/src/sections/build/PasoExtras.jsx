@@ -1,9 +1,20 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import { componentImages } from '../../config/images.js'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { NON_RENTAL_EXTRAS, NON_RENTAL_CATEGORIES } from './buildData.js'
 import { StepHeading, staggerItem } from './BuildUI.jsx'
 
-export default function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty }) {
+const { buildHeroBg, DSC05231, surfCarousel, kiteCarousel } = componentImages["pages/BuildPage.jsx"]
+
+const extraImages = {
+  'Day trip to other spots': kiteCarousel[3],
+  'Water supervision': surfCarousel[1],
+  Massage: DSC05231,
+  'Airport transfer': buildHeroBg.mobile,
+  'Photo & video pack': kiteCarousel[1],
+}
+
+export default function PasoExtras({ headingIndex = 4, extras, extrasQty, toggleExtra, setExtraQty }) {
   const { t } = useI18n()
   const extrasSubtotal = extras.reduce((sum, extraId) => {
     const found = NON_RENTAL_EXTRAS.find((e) => e.id === extraId)
@@ -14,7 +25,7 @@ export default function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty
 
   return (
     <div>
-      <StepHeading index={4} title={t('build.addExtras')} subtitle={t('build.addExtrasSub')} />
+      <StepHeading index={headingIndex} title={t('build.addExtras')} subtitle={t('build.addExtrasOptionalSub')} />
 
       <div className="space-y-8">
         {NON_RENTAL_CATEGORIES.map((cat) => {
@@ -46,6 +57,18 @@ export default function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty
                         : 'border-white/8 bg-[#152720] hover:border-white/16'
                         }`}
                     >
+                      <div className="relative h-32 overflow-hidden">
+                        <img
+                          src={extraImages[e.id]}
+                          alt=""
+                          className={`h-full w-full object-cover transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-50 hover:opacity-65'}`}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/30 to-transparent" />
+                        <div className="absolute bottom-3 right-3 rounded-full bg-black/55 px-3 py-1 text-[11px] font-black text-[#b7e28a] backdrop-blur">
+                          ${e.precio} USD{e.unit ? ` ${e.unit}` : ''}
+                        </div>
+                      </div>
+
                       <motion.button
                         type="button"
                         onClick={() => toggleExtra(e.id)}
@@ -66,9 +89,6 @@ export default function PasoExtras({ extras, extrasQty, toggleExtra, setExtraQty
 
                         <div className="min-w-0 flex-1">
                           <p className="text-sm font-semibold leading-tight text-white">{t(e.labelKey)}</p>
-                          <p className="mt-1.5 text-[11px] font-black text-[#b7e28a]">
-                            ${e.precio} USD{e.unit ? ` ${e.unit}` : ''}
-                          </p>
                         </div>
 
                         <div className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-all ${selected ? 'border-[#b7e28a] bg-[#b7e28a]' : 'border-white/20'

@@ -1,15 +1,30 @@
 import { motion } from 'framer-motion'
+import { componentImages } from '../../config/images.js'
 import { useI18n } from '../../app/providers/i18nContext.js'
 import { RENTAL_OPTIONS, getRentalPrice } from './buildData.js'
 import { StepHeading, staggerItem } from './BuildUI.jsx'
 
-export default function PasoRental({ rentals, setRentalDays, removeRental }) {
+const {
+  kiteCarousel,
+  wingCarousel,
+  surfCarousel,
+  supCarousel,
+} = componentImages["pages/BuildPage.jsx"]
+
+const rentalImages = {
+  'kite-gear-rental': kiteCarousel[2],
+  'wingfoil-gear-rental': wingCarousel[0],
+  'surfboard-rental': surfCarousel[0],
+  'sup-rental': supCarousel[0],
+}
+
+export default function PasoRental({ headingIndex = 2, rentals, setRentalDays, removeRental }) {
   const { t } = useI18n()
   const rentalSubtotal = rentals.reduce((sum, rental) => sum + getRentalPrice(rental.rentalId, rental.days), 0)
 
   return (
     <div>
-      <StepHeading index={2} title={t('build.rentalTitle')} subtitle={t('build.rentalSub')} />
+      <StepHeading index={headingIndex} title={t('build.rentalTitle')} subtitle={t('build.rentalOptionalSub')} />
       <motion.div
         initial="hidden"
         animate="show"
@@ -28,10 +43,19 @@ export default function PasoRental({ rentals, setRentalDays, removeRental }) {
                 : 'border-white/8 bg-[#152720] hover:border-white/16'
                 }`}
             >
-              <div className="flex w-full items-start gap-3 p-4 text-left">
-                <div className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#b7e28a] text-black' : 'bg-white/5 text-white/60'}`}>
+              <div className="relative h-32 overflow-hidden">
+                <img
+                  src={rentalImages[rental.id]}
+                  alt=""
+                  className={`h-full w-full object-cover transition duration-500 ${selected ? 'opacity-80 scale-[1.03]' : 'opacity-50 hover:opacity-65'}`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#152720] via-[#152720]/35 to-transparent" />
+                <div className={`absolute left-3 top-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${selected ? 'bg-[#b7e28a] text-black' : 'bg-black/45 text-white'}`}>
                   <rental.Icon className="h-5 w-5" />
                 </div>
+              </div>
+
+              <div className="flex w-full items-start gap-3 p-4 text-left">
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-semibold leading-tight text-white">{t(rental.labelKey)}</p>
                   <div className="mt-2 flex flex-wrap gap-2">

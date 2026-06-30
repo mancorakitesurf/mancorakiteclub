@@ -4,7 +4,7 @@ import { arePackagesConflicting, getPackageById, getRentalPrice } from '../secti
 
 // Step bounds for the trip builder
 const MIN_STEP = 1
-const MAX_STEP = 5
+const MAX_STEP = 3
 const INITIAL_STEP = 1
 
 // Minimum quantity for extras

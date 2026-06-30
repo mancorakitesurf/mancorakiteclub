@@ -18,9 +18,7 @@ import { StepIndicator, FloatingPrice, MobilePriceBar, stepVariants, stepTransit
 
 import PasoPackages from '../sections/build/PasoPackages.jsx'
 import PasoNoches from '../sections/build/PasoNoches.jsx'
-import PasoRental from '../sections/build/PasoRental.jsx'
-import PasoExtras from '../sections/build/PasoExtras.jsx'
-import PasoResumen from '../sections/build/PasoResumen.jsx'
+import PasoPersonaliza from '../sections/build/PasoPersonaliza.jsx'
 
 const { buildHeroBg } = componentImages["pages/BuildPage.jsx"]
 
@@ -203,30 +201,19 @@ function BuildPage() {
               transition={stepTransition}
             >
               {paso === 1 && <PasoPackages />}
-              {paso === 2 && (
-                <PasoRental
+              {paso === 2 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
+              {paso === 3 && (
+                <PasoPersonaliza
+                  selectedPackages={selectedPackages}
                   rentals={rentals}
                   setRentalDays={setRentalDays}
                   removeRental={removeRental}
-                />
-              )}
-              {paso === 3 && <PasoNoches noches={noches} setNoches={setNoches} personas={personas} setPersonas={setPersonas} />}
-              {paso === 4 && (
-                <PasoExtras
-                  extras={extras}
-                  extrasQty={extrasQty}
-                  toggleExtra={toggleExtra}
-                  setExtraQty={setExtraQty}
-                />
-              )}
-              {paso === 5 && (
-                <PasoResumen
-                  selectedPackages={selectedPackages}
-                  rentals={rentals}
                   noches={noches}
                   personas={personas}
                   extras={extras}
                   extrasQty={extrasQty}
+                  toggleExtra={toggleExtra}
+                  setExtraQty={setExtraQty}
                   datosUsuario={datosUsuario}
                   setDatosUsuario={setDatosUsuario}
                   generarLinkWhatsApp={generarLinkWhatsApp}
@@ -245,7 +232,7 @@ function BuildPage() {
             {paso === 1 ? t('build.reset') : t('build.back')}
           </button>
 
-          {paso < 5 && (
+          {paso < 3 && (
             <button
               type="button"
               onClick={() => cambiarPaso(paso + 1)}
